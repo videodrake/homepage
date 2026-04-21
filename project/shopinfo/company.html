@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brand — Onroad · 러너의 기준에서 시작된 브랜드</title>
+<meta name="description" content="매일 달리는 러너를 위한 건강기능식품 브랜드, 온로드(Onroad)의 원칙·파트너·연혁.">
+<link rel="stylesheet" href="../main.css">
+<style>
+  /* ─── BRAND HERO · sticky full-bleed ───────── */
+  .bh-shell { position: relative; height: 150vh; background: var(--c-dark); }
+  .bh { position: sticky; top: 0; height: 100vh; min-height: 680px; background: var(--c-dark); color: var(--c-cream); overflow: hidden; }
+  .bh__media { position: absolute; inset: 0; background: radial-gradient(ellipse at 70% 60%, rgba(200,50,30,0.22) 0%, transparent 60%), linear-gradient(160deg, #1a1714 0%, #0a0908 70%); transform: scale(var(--bh-zoom, 1.02)); will-change: transform; transition: transform 0.1s linear; }
+  .bh__media::before { content: ""; position: absolute; inset: 0; opacity: 0.14; mix-blend-mode: overlay; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.55'/></svg>"); }
+  .bh__bgword { position: absolute; right: -4vw; bottom: -0.15em; font-family: var(--font-serif); font-style: italic; font-weight: 300; font-size: clamp(240px, 38vw, 640px); line-height: 0.78; color: rgba(244,239,230,0.05); letter-spacing: -0.04em; white-space: nowrap; font-variation-settings: "opsz" 144, "SOFT" 100; z-index: 1; transform: translateX(var(--bh-x, 0px)); will-change: transform; }
+  .bh__frame { position: absolute; inset: calc(var(--header-h) + 24px) var(--s-8) var(--s-8); pointer-events: none; border: 1px solid rgba(244,239,230,0.1); z-index: 2; }
+  .bh__inner { position: relative; z-index: 3; max-width: var(--container); margin: 0 auto; padding: calc(var(--header-h) + 56px) var(--s-12) var(--s-16); height: 100%; display: grid; grid-template-rows: auto 1fr auto; gap: var(--s-10); }
+  .bh__top { display: flex; justify-content: space-between; align-items: flex-start; gap: var(--s-8); font-family: var(--font-mono); font-size: 11px; color: rgba(244,239,230,0.6); text-transform: uppercase; letter-spacing: 0.14em; }
+  .bh__top .l { display: flex; align-items: center; gap: var(--s-4); }
+  .bh__top .l::before { content: ""; width: 6px; height: 6px; background: var(--c-signal); }
+  .bh__top em { font-style: normal; color: rgba(244,239,230,0.4); }
+  .bh__top .r { text-align: right; line-height: 1.8; color: rgba(244,239,230,0.5); }
+  .bh__top .r b { color: var(--c-cream); font-weight: 500; }
+  .bh__mid { display: flex; align-items: flex-end; }
+  .bh__title { font-family: var(--font-serif); font-weight: 300; font-size: clamp(52px, 9vw, 152px); line-height: 0.9; letter-spacing: -0.028em; margin: 0; max-width: 16ch; font-variation-settings: "opsz" 144; color: var(--c-cream); }
+  .bh__title .word { display: inline-block; overflow: hidden; vertical-align: bottom; }
+  .bh__title .word > span { display: inline-block; transform: translateY(110%); transition: transform 1s cubic-bezier(0.22, 1, 0.36, 1); transition-delay: calc(var(--i, 0) * 90ms); }
+  .bh__title.is-in .word > span { transform: translateY(0); }
+  .bh__title .italic { font-style: italic; color: var(--c-signal); font-variation-settings: "opsz" 144, "SOFT" 100; }
+  .bh__foot { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: var(--s-10); border-top: 1px solid rgba(244,239,230,0.14); padding-top: var(--s-6); align-items: end; }
+  .bh__foot .k { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(244,239,230,0.5); margin-bottom: var(--s-3); }
+  .bh__foot .v { font-family: var(--font-serif); font-weight: 300; font-size: clamp(18px, 1.8vw, 24px); line-height: 1.2; font-variation-settings: "opsz" 36; letter-spacing: -0.01em; }
+  .bh__foot .v em { font-style: italic; color: var(--c-signal); font-variation-settings: "opsz" 36, "SOFT" 100; }
+  .bh__foot .mission { max-width: 36ch; color: rgba(244,239,230,0.88); }
+  @media (max-width: 920px) {
+    .bh-shell { height: auto; }
+    .bh { position: relative; height: auto; min-height: 92vh; }
+    .bh__inner { padding: calc(var(--header-h) + 32px) var(--s-5) var(--s-12); }
+    .bh__frame { inset: calc(var(--header-h) + 16px) var(--s-5) var(--s-5); }
+    .bh__foot { grid-template-columns: 1fr; gap: var(--s-5); }
+  }
+
+  /* ─── MISSION MANIFESTO ──────────────────── */
+  .manifesto { background: var(--c-cream); padding: clamp(80px, 10vw, 140px) 0; }
+  .manifesto__inner { max-width: var(--container); margin: 0 auto; padding: 0 var(--s-12); display: grid; grid-template-columns: 200px 1fr; gap: var(--s-16); align-items: start; }
+  .manifesto__chap { font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.14em; padding-top: 14px; border-top: 1px solid var(--c-ink); line-height: 1.9; color: var(--c-ink); }
+  .manifesto__chap em { font-style: normal; color: var(--c-signal); }
+  .manifesto__body { display: flex; flex-direction: column; gap: var(--s-10); }
+  .manifesto__lede { font-family: var(--font-serif); font-weight: 300; font-size: clamp(28px, 4vw, 52px); line-height: 1.14; letter-spacing: -0.022em; margin: 0; max-width: 22ch; font-variation-settings: "opsz" 72; color: var(--c-ink); }
+  .manifesto__lede .italic { font-style: italic; color: var(--c-signal); font-variation-settings: "opsz" 72, "SOFT" 100; }
+  .manifesto__body p { color: var(--c-char); line-height: 1.75; max-width: 64ch; margin: 0; font-size: 16px; }
+  .manifesto__sig { margin-top: var(--s-8); padding-top: var(--s-5); border-top: 1px solid var(--c-line); display: grid; grid-template-columns: repeat(2, auto); gap: var(--s-10); align-items: baseline; }
+  .manifesto__sig-name { font-family: var(--font-serif); font-style: italic; font-weight: 300; font-size: 22px; font-variation-settings: "opsz" 36, "SOFT" 100; color: var(--c-ink); }
+  .manifesto__sig-role { font-family: var(--font-mono); font-size: 10px; color: var(--c-meta); letter-spacing: 0.14em; text-transform: uppercase; }
+  @media (max-width: 920px) { .manifesto__inner { grid-template-columns: 1fr; gap: var(--s-8); padding: 0 var(--s-5); } }
+
+  /* ─── PRINCIPLES · 5 ─────────────────────── */
+  .principles { background: var(--c-paper); border-top: 1px solid var(--c-line); border-bottom: 1px solid var(--c-line); }
+  .principles__head { max-width: var(--container); margin: 0 auto; padding: clamp(64px, 8vw, 100px) var(--s-12) var(--s-12); display: grid; grid-template-columns: 200px 1fr; gap: var(--s-16); align-items: end; }
+  .principles__head .chap { font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.14em; padding-top: 14px; border-top: 1px solid var(--c-ink); color: var(--c-ink); line-height: 1.9; }
+  .principles__head .chap em { font-style: normal; color: var(--c-signal); }
+  .principles__head h2 { font-family: var(--font-serif); font-weight: 300; font-size: clamp(36px, 5vw, 68px); line-height: 1.04; letter-spacing: -0.022em; margin: 0; font-variation-settings: "opsz" 96; max-width: 18ch; }
+  .principles__head h2 .italic { font-style: italic; color: var(--c-signal); font-variation-settings: "opsz" 96, "SOFT" 100; }
+  .principles__list { max-width: var(--container); margin: 0 auto; padding: 0 var(--s-12) clamp(64px, 8vw, 100px); border-top: 1px solid var(--c-ink); }
+  .principle-row { display: grid; grid-template-columns: 120px 1.2fr 2fr; gap: var(--s-10); padding: var(--s-10) 0; border-bottom: 1px solid var(--c-line); align-items: start; transition: background 0.3s ease; position: relative; }
+  .principle-row:last-child { border-bottom: 0; }
+  .principle-row:hover { background: var(--c-cream); }
+  .principle-row__ord { font-family: var(--font-mono); font-size: 11px; color: var(--c-signal); letter-spacing: 0.16em; text-transform: uppercase; padding-top: 12px; border-top: 2px solid var(--c-signal); max-width: 60px; }
+  .principle-row__name { font-family: var(--font-serif); font-weight: 300; font-size: clamp(22px, 2.4vw, 36px); line-height: 1.1; letter-spacing: -0.018em; font-variation-settings: "opsz" 48; margin: 0; }
+  .principle-row__name em { font-style: italic; color: var(--c-signal); font-variation-settings: "opsz" 48, "SOFT" 100; }
+  .principle-row__body { color: var(--c-char); font-size: 15px; line-height: 1.7; max-width: 54ch; }
+  .principle-row__body b { color: var(--c-ink); font-weight: 600; }
+  @media (max-width: 920px) {
+    .principles__head { grid-template-columns: 1fr; padding: 64px var(--s-5) var(--s-8); gap: var(--s-5); }
+    .principles__list { padding: 0 var(--s-5) 64px; }
+    .principle-row { grid-template-columns: 1fr; gap: var(--s-3); padding: var(--s-6) 0; }
+    .principle-row__ord { border-top: 0; padding-top: 0; }
+  }
+
+  /* ─── PARTNERS · FACTORY · CERT ──────────── */
+  .pf { background: var(--c-dark); color: var(--c-cream); padding: clamp(80px, 10vw, 140px) 0; }
+  .pf__head { max-width: var(--container); margin: 0 auto; padding: 0 var(--s-12) var(--s-12); display: grid; grid-template-columns: 200px 1fr; gap: var(--s-16); align-items: end; }
+  .pf__head .chap { font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.14em; padding-top: 14px; border-top: 1px solid var(--c-cream); color: rgba(244,239,230,0.7); line-height: 1.9; }
+  .pf__head .chap em { font-style: normal; color: var(--c-signal); }
+  .pf__head h2 { font-family: var(--font-serif); font-weight: 300; font-size: clamp(36px, 5vw, 68px); line-height: 1.04; letter-spacing: -0.022em; margin: 0; font-variation-settings: "opsz" 96; max-width: 18ch; color: var(--c-cream); }
+  .pf__head h2 .italic { font-style: italic; color: var(--c-signal); font-variation-settings: "opsz" 96, "SOFT" 100; }
+  .pf__head p { color: rgba(244,239,230,0.7); margin: var(--s-4) 0 0; font-size: 15px; line-height: 1.7; max-width: 56ch; }
+  .pf__grid { max-width: var(--container); margin: 0 auto; padding: 0 var(--s-12); display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid rgba(244,239,230,0.2); }
+  .pf-card { padding: var(--s-10) var(--s-6) var(--s-8); border-right: 1px solid rgba(244,239,230,0.1); border-bottom: 1px solid rgba(244,239,230,0.1); display: flex; flex-direction: column; gap: var(--s-4); min-height: 400px; position: relative; }
+  .pf-card:last-child { border-right: 0; }
+  .pf-card__ord { font-family: var(--font-mono); font-size: 10px; color: var(--c-signal); letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: var(--s-6); }
+  .pf-card__title { font-family: var(--font-serif); font-weight: 300; font-size: clamp(24px, 2.6vw, 34px); line-height: 1.1; letter-spacing: -0.018em; font-variation-settings: "opsz" 48; margin: 0; }
+  .pf-card__title em { font-style: italic; color: var(--c-signal); font-variation-settings: "opsz" 48, "SOFT" 100; }
+  .pf-card__body { color: rgba(244,239,230,0.72); font-size: 14px; line-height: 1.7; }
+  .pf-card__list { margin: var(--s-5) 0 0; padding: 0; list-style: none; }
+  .pf-card__list li { display: grid; grid-template-columns: 90px 1fr; gap: var(--s-4); padding: 10px 0; border-top: 1px solid rgba(244,239,230,0.1); font-size: 13px; align-items: baseline; }
+  .pf-card__list li:first-child { border-top: 0; }
+  .pf-card__list .k { font-family: var(--font-mono); font-size: 10px; color: rgba(244,239,230,0.45); letter-spacing: 0.12em; text-transform: uppercase; }
+  .pf-card__list .v { font-family: var(--font-serif); font-weight: 300; font-size: 14px; font-variation-settings: "opsz" 24; color: var(--c-cream); line-height: 1.4; }
+  .pf-card__list .v em { font-style: italic; color: var(--c-signal); font-variation-settings: "opsz" 24, "SOFT" 100; }
+  .pf-card__foot { margin-top: auto; padding-top: var(--s-5); border-top: 1px solid rgba(244,239,230,0.1); font-family: var(--font-mono); font-size: 10px; color: rgba(244,239,230,0.5); letter-spacing: 0.14em; text-transform: uppercase; }
+  .pf-card__foot em { font-style: normal; color: var(--c-signal); }
+  @media (max-width: 920px) {
+    .pf__head, .pf__grid { padding-left: var(--s-5); padding-right: var(--s-5); }
+    .pf__head { grid-template-columns: 1fr; gap: var(--s-5); }
+    .pf__grid { grid-template-columns: 1fr; }
+    .pf-card { border-right: 0; min-height: auto; }
+  }
+
+  /* ─── TIMELINE ──────────────────────────── */
+  .tl { background: var(--c-cream); padding: clamp(80px, 10vw, 140px) 0; }
+  .tl__head { max-width: var(--container); margin: 0 auto; padding: 0 var(--s-12) var(--s-12); display: grid; grid-template-columns: 200px 1fr; gap: var(--s-16); align-items: end; }
+  .tl__head .chap { font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.14em; padding-top: 14px; border-top: 1px solid var(--c-ink); line-height: 1.9; color: var(--c-ink); }
+  .tl__head .chap em { font-style: normal; color: var(--c-signal); }
+  .tl__head h2 { font-family: var(--font-serif); font-weight: 300; font-size: clamp(36px, 5vw, 68px); line-height: 1.04; letter-spacing: -0.022em; margin: 0; font-variation-settings: "opsz" 96; max-width: 14ch; }
+  .tl__head h2 .italic { font-style: italic; color: var(--c-signal); font-variation-settings: "opsz" 96, "SOFT" 100; }
+  .tl__list { max-width: var(--container); margin: 0 auto; padding: 0 var(--s-12); }
+  .tl-row { display: grid; grid-template-columns: 180px 1fr 1fr; gap: var(--s-10); padding: var(--s-8) 0; border-bottom: 1px solid var(--c-line); align-items: start; }
+  .tl-row:first-child { border-top: 1px solid var(--c-ink); }
+  .tl-row__y { font-family: var(--font-mono); font-size: 11px; color: var(--c-signal); letter-spacing: 0.14em; text-transform: uppercase; padding-top: var(--s-3); }
+  .tl-row__title { font-family: var(--font-serif); font-weight: 300; font-size: clamp(22px, 2.2vw, 32px); line-height: 1.15; letter-spacing: -0.015em; font-variation-settings: "opsz" 40; margin: 0; }
+  .tl-row__title em { font-style: italic; color: var(--c-signal); font-variation-settings: "opsz" 40, "SOFT" 100; }
+  .tl-row__body { color: var(--c-meta); font-size: 14px; line-height: 1.7; max-width: 54ch; }
+  @media (max-width: 920px) {
+    .tl__head, .tl__list { padding-left: var(--s-5); padding-right: var(--s-5); }
+    .tl__head { grid-template-columns: 1fr; gap: var(--s-5); }
+    .tl-row { grid-template-columns: 1fr; gap: var(--s-3); }
+  }
+
+  /* ─── CORP INFO ─────────────────────────── */
+  .corp { background: var(--c-paper); border-top: 1px solid var(--c-line); }
+  .corp__inner { max-width: var(--container); margin: 0 auto; padding: clamp(64px, 8vw, 100px) var(--s-12); display: grid; grid-template-columns: 200px 1fr; gap: var(--s-16); }
+  .corp__chap { font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.14em; padding-top: 14px; border-top: 1px solid var(--c-ink); line-height: 1.9; color: var(--c-ink); }
+  .corp__chap em { font-style: normal; color: var(--c-signal); }
+  .corp__body { display: flex; flex-direction: column; gap: var(--s-6); }
+  .corp__body h3 { font-family: var(--font-serif); font-weight: 300; font-size: clamp(26px, 3vw, 40px); line-height: 1.08; letter-spacing: -0.02em; font-variation-settings: "opsz" 48; margin: 0; max-width: 16ch; }
+  .corp__body h3 em { font-style: italic; color: var(--c-signal); font-variation-settings: "opsz" 48, "SOFT" 100; }
+  .corp__table { width: 100%; border-collapse: collapse; }
+  .corp__table tr { border-top: 1px solid var(--c-line); }
+  .corp__table tr:last-child { border-bottom: 1px solid var(--c-line); }
+  .corp__table th, .corp__table td { text-align: left; padding: var(--s-4) var(--s-5); font-size: 14px; vertical-align: baseline; }
+  .corp__table th { font-family: var(--font-mono); font-size: 10px; color: var(--c-meta); letter-spacing: 0.14em; text-transform: uppercase; width: 220px; font-weight: 400; }
+  .corp__table td { font-family: var(--font-serif); font-size: 15px; font-weight: 300; font-variation-settings: "opsz" 24; color: var(--c-ink); line-height: 1.5; }
+  .corp__table td em { font-style: italic; color: var(--c-signal); font-variation-settings: "opsz" 24, "SOFT" 100; }
+  .corp__table td a { color: var(--c-signal); border-bottom: 1px solid currentColor; padding-bottom: 2px; }
+  @media (max-width: 720px) {
+    .corp__inner { grid-template-columns: 1fr; gap: var(--s-6); padding: 64px var(--s-5); }
+    .corp__table th, .corp__table td { display: block; width: auto; padding: 4px var(--s-3); }
+    .corp__table th { padding-top: var(--s-3); }
+    .corp__table tr { display: block; padding: 6px 0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="scroll-progress" aria-hidden="true"><div class="scroll-progress__bar" id="scrollBar"></div></div>
+
+<header class="site-header" id="siteHeader">
+  <div class="site-header__inner">
+    <a href="/index.html" class="site-header__brand"><span class="site-header__brand-mark"></span><span>Onroad</span><em>EST · 2026</em></a>
+    <nav class="site-header__nav" id="siteNav">
+      <a href="/shopinfo/endurance-core.html">Endurance Core</a>
+      <a href="/product/detail.html?product_no=11">Product</a>
+      <a href="/shopinfo/company.html">Brand</a>
+      <a href="/shopinfo/ingredient-science.html">Journal</a>
+      <a href="/shopinfo/runner-reviews.html">Runners</a>
+    </nav>
+    <div class="site-header__actions">
+      <a href="/member/login.html" class="site-header__icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></a>
+      <a href="/order/basket.html" class="site-header__icon" module="Layout_orderBasketcount"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 5h3l2.5 11.5a2 2 0 0 0 2 1.5h7.5a2 2 0 0 0 2-1.5L22 8H6"/><circle cx="10" cy="21" r="1.2"/><circle cx="18" cy="21" r="1.2"/></svg><span class="count">{$basket_count}</span></a>
+      <button class="site-header__burger" id="navBurger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- ─── HERO (sticky) ─── -->
+<div class="bh-shell" id="bhShell">
+  <section class="bh">
+    <div class="bh__media" id="bhMedia"></div>
+    <div class="bh__bgword" id="bhBgWord" aria-hidden="true">onroad</div>
+    <div class="bh__frame" aria-hidden="true"></div>
+    <div class="bh__inner">
+      <div class="bh__top">
+        <div class="l"><span>Brand · Onroad</span><em>— Chapter 00 / Who we are</em></div>
+        <div class="r">
+          <div>EST · <b>2026</b> · Seoul</div>
+          <div>문서 · <b>Brand Overview / Rev.04</b></div>
+        </div>
+      </div>
+      <div class="bh__mid">
+        <h1 class="bh__title" id="bhTitle">
+          <span class="word" style="--i:0"><span>러너의</span></span>
+          <span class="word" style="--i:1"><span class="italic">기준</span></span><span class="word" style="--i:2"><span>에서</span></span><br>
+          <span class="word" style="--i:3"><span>시작된</span></span>
+          <span class="word" style="--i:4"><span class="italic">브랜드</span></span><span class="word" style="--i:5"><span>.</span></span>
+        </h1>
+      </div>
+      <div class="bh__foot">
+        <div>
+          <div class="k">[ Mission ]</div>
+          <div class="v mission">매일 달리는 사람의 <em>일상</em>에<br>신뢰할 수 있는 건강기능식품의<br>기준을 만듭니다.</div>
+        </div>
+        <div><div class="k">[ Category ]</div><div class="v">건강기능식품</div></div>
+        <div><div class="k">[ First Product ]</div><div class="v"><em>Endurance</em> Core</div></div>
+        <div><div class="k">[ Made for ]</div><div class="v">Runners · <em>매일</em></div></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ─── MISSION MANIFESTO ─── -->
+<section class="manifesto">
+  <div class="manifesto__inner">
+    <div class="manifesto__chap reveal">Chapter 01<br><em>— Manifesto</em></div>
+    <div class="manifesto__body">
+      <p class="manifesto__lede reveal">
+        우리는 러너의 <span class="italic">매일</span>을 위해<br>만듭니다.
+      </p>
+      <p class="reveal">러닝은 단 한 번의 이벤트가 아니라 매일 반복되는 습관입니다. 대회 전의 특별한 보조제가 아닌, 훈련과 일상에 자연스럽게 녹아드는 기본 — 온로드는 그 자리를 채우기 위해 시작되었습니다.</p>
+      <p class="reveal">브랜드의 언어는 과장되지 않습니다. 성분과 함량, 제조 기준, 섭취 방법을 있는 그대로 공개합니다. 러너가 스스로 판단할 수 있도록, 필요한 모든 근거를 투명하게 보여주는 것이 우리의 방식입니다.</p>
+      <p class="reveal">러너를 위한 기준은 러너의 언어로 만들어져야 한다고 믿습니다. 우리는 매주 60km를 달리는 사람, 꾸준함을 지키는 사람, 자신의 루틴을 신뢰하는 사람을 위해 — 오늘도 한 정의 기준을 설계합니다.</p>
+
+      <div class="manifesto__sig reveal">
+        <div>
+          <div class="manifesto__sig-name">K. Lee</div>
+          <div class="manifesto__sig-role">Founder · Onroad</div>
+        </div>
+        <div>
+          <div class="manifesto__sig-name">J. Cho</div>
+          <div class="manifesto__sig-role">Head of Product</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── PRINCIPLES ─── -->
+<section class="principles">
+  <div class="principles__head">
+    <div class="chap reveal">Chapter 02<br><em>— Principles</em></div>
+    <h2 class="reveal">온로드가<br>지키는 <span class="italic">다섯 가지</span>.</h2>
+  </div>
+  <div class="principles__list">
+    <article class="principle-row reveal">
+      <div class="principle-row__ord">№ 01</div>
+      <h3 class="principle-row__name"><em>러너</em>의 루틴이<br>기준입니다.</h3>
+      <p class="principle-row__body">1일 1정, 작고 가벼운 정제, 챙기기 쉬운 패키지. 매일 달리는 사람의 일상에 자연스럽게 붙도록 <b>섭취 편의성부터 설계</b>합니다. 복약을 잊지 않는 러너가 꾸준함을 유지할 수 있도록 — 그것이 모든 결정의 출발점입니다.</p>
+    </article>
+    <article class="principle-row reveal">
+      <div class="principle-row__ord">№ 02</div>
+      <h3 class="principle-row__name"><em>원료</em>와 함량,<br>있는 그대로 공개합니다.</h3>
+      <p class="principle-row__body">옥타코사놀 40mg, 비타민 B군, 부원료, 알레르기 유발 물질, 원산지까지. <b>라벨에 표기할 수 있는 것은 모두 표기</b>합니다. 소비자가 스스로 판단할 근거를 투명하게 제공하는 것이 건강기능식품 브랜드의 기본 의무라고 믿습니다.</p>
+    </article>
+    <article class="principle-row reveal">
+      <div class="principle-row__ord">№ 03</div>
+      <h3 class="principle-row__name"><em>기능성</em>의 범위 안에서만<br>이야기합니다.</h3>
+      <p class="principle-row__body">기록 향상이나 완주 보장 같은 표현은 사용하지 않습니다. 식약처가 인정한 <b>기능성 표시사항의 정확한 언어</b>만 사용하며, 허위·과장 없는 커뮤니케이션을 지향합니다.</p>
+    </article>
+    <article class="principle-row reveal">
+      <div class="principle-row__ord">№ 04</div>
+      <h3 class="principle-row__name"><em>GMP 인증</em> 공장에서만<br>제조합니다.</h3>
+      <p class="principle-row__body">우수건강기능식품제조기준(GMP)을 통과한 국내 공장과만 협업합니다. 모든 배치는 <b>원료 이력 추적이 가능</b>하며, 제조·포장·유통 단계마다 품질 기록이 남습니다.</p>
+    </article>
+    <article class="principle-row reveal">
+      <div class="principle-row__ord">№ 05</div>
+      <h3 class="principle-row__name"><em>러너의 피드백</em>이<br>제품을 완성합니다.</h3>
+      <p class="principle-row__body">출시 전 120명 러너의 30일 필드 테스트, 출시 후 정기 후기 수집. <b>실제 러너의 섭취 경험</b>이 다음 배치와 다음 제품을 만듭니다. 우리는 완성된 제품이 아닌, 계속 다듬어지는 기준을 만듭니다.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ─── PARTNERS · FACTORY · CERT ─── -->
+<section class="pf">
+  <div class="pf__head">
+    <div class="chap reveal">Chapter 03<br><em>— Partners</em></div>
+    <div>
+      <h2 class="reveal">신뢰할 수 있는 파트너,<br><span class="italic">검증된</span> 기준.</h2>
+      <p class="reveal">원료 공급부터 제조·품질관리까지 — 각 단계에서 검증된 파트너와만 협업합니다. 보여줄 수 있는 모든 기준을 그대로 공개합니다.</p>
+    </div>
+  </div>
+
+  <div class="pf__grid">
+    <!-- Partner 01 -->
+    <article class="pf-card reveal">
+      <div class="pf-card__ord">№ 01 · Ingredient Partner</div>
+      <h3 class="pf-card__title">옥타코사놀 <em>원료</em> 공급.</h3>
+      <p class="pf-card__body">식약처 기능성 인정 원료인 옥타코사놀을 밀배아(Wheat germ) 유래로 공급하는 국내 원료사와 장기 공급 계약을 체결했습니다.</p>
+      <ul class="pf-card__list">
+        <li><span class="k">Partner</span><span class="v">(주)원료연구소 <em>KR-Ingred</em></span></li>
+        <li><span class="k">Origin</span><span class="v">밀배아 유래 / 국내 가공</span></li>
+        <li><span class="k">Spec</span><span class="v">Octacosanol <em>99.0%+</em></span></li>
+        <li><span class="k">Audit</span><span class="v">연 2회 공급사 감사</span></li>
+      </ul>
+      <div class="pf-card__foot"><em>→</em> 원료 이력 추적 가능</div>
+    </article>
+
+    <!-- Partner 02 -->
+    <article class="pf-card reveal">
+      <div class="pf-card__ord">№ 02 · Manufacturing</div>
+      <h3 class="pf-card__title"><em>GMP 인증</em> 공장에서 생산.</h3>
+      <p class="pf-card__body">우수건강기능식품제조기준(GMP) 지정 국내 공장에서 전 공정을 진행합니다. 제조·포장·출고 기록이 모든 배치마다 보존됩니다.</p>
+      <ul class="pf-card__list">
+        <li><span class="k">Factory</span><span class="v">충북 음성군 소재</span></li>
+        <li><span class="k">Cert.</span><span class="v">건강기능식품 <em>GMP</em></span></li>
+        <li><span class="k">Line</span><span class="v">정제 라인 · Dedicated</span></li>
+        <li><span class="k">Batch QC</span><span class="v">원료 · 중간 · 완제품 <em>3단계</em></span></li>
+      </ul>
+      <div class="pf-card__foot"><em>→</em> 배치별 시험성적서 보관</div>
+    </article>
+
+    <!-- Partner 03 -->
+    <article class="pf-card reveal">
+      <div class="pf-card__ord">№ 03 · Certification</div>
+      <h3 class="pf-card__title">공인 기관의 <em>검증</em>.</h3>
+      <p class="pf-card__body">식품의약품안전처 건강기능식품 품목 신고, 기능성 표시 인정, 제3자 시험성적서를 모두 보유합니다. 요청 시 관련 문서 열람이 가능합니다.</p>
+      <ul class="pf-card__list">
+        <li><span class="k">Category</span><span class="v">건강기능식품 <em>품목</em></span></li>
+        <li><span class="k">Claim</span><span class="v">지구력 증진 도움 (고시형)</span></li>
+        <li><span class="k">Tested by</span><span class="v">KTR · 한국건설생활환경시험연구원</span></li>
+        <li><span class="k">Reg.</span><span class="v">EC—01 · <em>2026A</em></span></li>
+      </ul>
+      <div class="pf-card__foot"><em>→</em> 시험성적서 열람 가능</div>
+    </article>
+  </div>
+</section>
+
+<!-- ─── TIMELINE ─── -->
+<section class="tl">
+  <div class="tl__head">
+    <div class="chap reveal">Chapter 04<br><em>— Timeline</em></div>
+    <h2 class="reveal">온로드의<br><span class="italic">기록</span>.</h2>
+  </div>
+  <div class="tl__list">
+    <div class="tl-row reveal">
+      <div class="tl-row__y">2024 · Q2</div>
+      <h3 class="tl-row__title"><em>프로젝트</em> 시작</h3>
+      <p class="tl-row__body">장거리 러너 4인의 피드백으로 시작된 내부 프로젝트. "러너를 위해 만들어진 건기식이 없다"는 문제 정의에서 출발했습니다.</p>
+    </div>
+    <div class="tl-row reveal">
+      <div class="tl-row__y">2024 · Q4</div>
+      <h3 class="tl-row__title">원료 선정 · 옥타코사놀 <em>40mg</em></h3>
+      <p class="tl-row__body">식약처 기능성 인정 원료 중 지구력 증진에 도움을 줄 수 있는 옥타코사놀을 채택. 하루 기준 최대 수준인 40mg 함량을 확정했습니다.</p>
+    </div>
+    <div class="tl-row reveal">
+      <div class="tl-row__y">2025 · Q2</div>
+      <h3 class="tl-row__title">GMP 공장 <em>파트너십</em></h3>
+      <p class="tl-row__body">우수건강기능식품제조기준(GMP) 지정 국내 공장과 파트너십을 체결했습니다. 전용 라인과 배치별 품질 기록 체계를 구축했습니다.</p>
+    </div>
+    <div class="tl-row reveal">
+      <div class="tl-row__y">2025 · Q4</div>
+      <h3 class="tl-row__title">필드 테스트 · 러너 <em>120명</em></h3>
+      <p class="tl-row__body">30일 섭취 필드 테스트를 실시했습니다. 체감도·복약 편의성·루틴 연결성을 기준으로 정제 사이즈와 섭취 타이밍 가이드를 최종 조정했습니다.</p>
+    </div>
+    <div class="tl-row reveal">
+      <div class="tl-row__y">2026 · Q1</div>
+      <h3 class="tl-row__title">Endurance Core <em>정식 출시</em></h3>
+      <p class="tl-row__body">온로드의 첫 제품, 지구력코어를 공식 런칭했습니다. 초도 러너 대상 First Order 10% 프로그램을 운영하고 있습니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CORP INFO ─── -->
+<section class="corp">
+  <div class="corp__inner">
+    <div class="corp__chap reveal">Chapter 05<br><em>— Corporate</em></div>
+    <div class="corp__body">
+      <h3 class="reveal">회사 <span class="italic">공식</span> 정보.</h3>
+      <table class="corp__table reveal">
+        <tr><th>상호</th><td>(주)온로드 · <em>ONROAD Inc.</em></td></tr>
+        <tr><th>대표자</th><td>이경준 · K. Lee</td></tr>
+        <tr><th>사업자등록번호</th><td>123-45-67890</td></tr>
+        <tr><th>통신판매업 신고</th><td>제 2026-서울마포-0001 호</td></tr>
+        <tr><th>소재지</th><td>서울특별시 마포구 와우산로 00길 00, 0층</td></tr>
+        <tr><th>설립일</th><td>2026년 1월 · Seoul</td></tr>
+        <tr><th>사업 영역</th><td>건강기능식품 기획·유통 · <em>Runner-first</em> 브랜드</td></tr>
+        <tr><th>개인정보 보호책임자</th><td>이경준 · privacy@onroad.co.kr</td></tr>
+        <tr><th>고객 상담</th><td><a href="mailto:hello@onroad.co.kr">hello@onroad.co.kr</a> · 평일 10:00–18:00</td></tr>
+        <tr><th>Press / Partnership</th><td><a href="mailto:press@onroad.co.kr">press@onroad.co.kr</a></td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FINAL CTA ─── -->
+<section class="final-cta">
+  <div class="final-cta__bg" aria-hidden="true"></div>
+  <div class="final-cta__bgword" aria-hidden="true">onroad</div>
+  <div class="final-cta__inner">
+    <div class="eyebrow eyebrow--light reveal" style="margin-bottom:28px;">[ Endurance Core · First Order ]</div>
+    <h2 class="final-cta__title reveal">러너의 <span class="italic">기준</span>,<br>오늘부터 시작하세요.</h2>
+    <div class="final-cta__ctas reveal">
+      <a href="/product/detail.html?product_no=11" class="btn btn--primary btn--lg">지금 구매하기 <span class="btn__arrow"></span></a>
+      <a href="/shopinfo/ingredient-science.html" class="btn btn--ghost-light btn--lg">성분 자세히 <span class="btn__arrow"></span></a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="site-footer__monogram" aria-hidden="true"><div class="site-footer__monogram-text">Onroad<sup>EST · 2026</sup></div></div>
+  <div class="site-footer__top">
+    <div><div class="site-footer__brand">Onroad</div><p class="site-footer__tagline">매일 달리는 러너를 위한 지구력 부스터.</p></div>
+    <div class="site-footer__col"><h4>[ Product ]</h4><ul><li><a href="/product/detail.html?product_no=11">Endurance Core</a></li><li><a href="/shopinfo/endurance-core.html">Campaign</a></li><li><a href="/shopinfo/intake-guide.html">Intake Guide</a></li></ul></div>
+    <div class="site-footer__col"><h4>[ Brand ]</h4><ul><li><a href="/shopinfo/company.html">Brand Story</a></li><li><a href="/shopinfo/ingredient-science.html">Ingredient Journal</a></li><li><a href="/shopinfo/runner-reviews.html">Runners</a></li></ul></div>
+    <div class="site-footer__col"><h4>[ Support ]</h4><ul><li><a href="/shopinfo/health-functional.html">표시사항</a></li><li><a href="/board/notice/list.html">Notice</a></li><li><a href="/member/login.html">Account</a></li></ul></div>
+  </div>
+  <div class="site-footer__bottom"><div class="site-footer__legal">© 2026 Onroad. 본 제품은 질병의 예방 및 치료를 위한 의약품이 아닙니다.</div><div>Made for Runners · Seoul</div></div>
+</footer>
+
+<script>
+(function(){
+  var burger = document.getElementById('navBurger'), nav = document.getElementById('siteNav');
+  burger && burger.addEventListener('click', function(){ nav.classList.toggle('site-header__nav--open'); });
+
+  var header = document.getElementById('siteHeader'), bar = document.getElementById('scrollBar');
+  var bhShell = document.getElementById('bhShell'), bhMedia = document.getElementById('bhMedia'), bhBg = document.getElementById('bhBgWord');
+
+  function onScroll(){
+    var y = window.scrollY;
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    if (bar) bar.style.width = (h > 0 ? y/h*100 : 0) + '%';
+    header.classList.toggle('is-scrolled', y > 40);
+
+    // light-bg inversion for header
+    var lights = document.querySelectorAll('.manifesto, .principles, .tl, .corp');
+    var inv = false; var probe = y + header.offsetHeight + 20;
+    lights.forEach(function(s){ if (probe >= s.offsetTop && probe < s.offsetTop + s.offsetHeight) inv = true; });
+    header.classList.toggle('is-inverted', inv);
+
+    // hero zoom + bg word slide
+    if (bhShell && bhMedia) {
+      var rect = bhShell.getBoundingClientRect();
+      var total = bhShell.offsetHeight - window.innerHeight;
+      var scrolled = Math.min(Math.max(-rect.top, 0), total);
+      var t = total > 0 ? scrolled/total : 0;
+      bhMedia.style.transform = 'scale(' + (1.02 + t * 0.12).toFixed(3) + ')';
+      if (bhBg) bhBg.style.setProperty('--bh-x', (-t * 1200) + 'px');
+    }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  // hero title reveal
+  var t = document.getElementById('bhTitle');
+  if (t) setTimeout(function(){ t.classList.add('is-in'); }, 200);
+
+  // reveal observer
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); } });
+  }, { rootMargin: '0px 0px -10% 0px', threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>

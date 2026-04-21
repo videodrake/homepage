@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="/layout/basic/css/main.css">
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="/index.html" class="site-header__brand"><span class="site-header__brand-mark">O</span><span>ONROAD</span></a>
+    <nav class="site-header__nav" id="siteNav">
+      <a href="/shopinfo/endurance-core.html">지구력코어</a>
+      <a href="/product/detail.html?product_no=11">제품</a>
+      <a href="/shopinfo/company.html">브랜드</a>
+      <a href="/shopinfo/ingredient-science.html">러닝 인사이트</a>
+      <a href="/shopinfo/runner-reviews.html">포토리뷰</a>
+    </nav>
+    <div class="site-header__actions">
+      <a href="/member/login.html" class="site-header__icon" aria-label="로그인">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+      </a>
+      <a href="/order/basket.html" class="site-header__icon" aria-label="장바구니" module="Layout_orderBasketcount">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 5h3l2.5 11.5a2 2 0 0 0 2 1.5h7.5a2 2 0 0 0 2-1.5L22 8H6"/><circle cx="10" cy="21" r="1.2"/><circle cx="18" cy="21" r="1.2"/></svg>
+        <span class="count">{$basket_count}</span>
+      </a>
+      <button class="site-header__burger" id="navBurger" aria-label="메뉴">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+<script>
+(function(){var b=document.getElementById('navBurger'),n=document.getElementById('siteNav');if(b&&n)b.addEventListener('click',function(){n.classList.toggle('site-header__nav--open');});})();
+</script>
