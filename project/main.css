@@ -96,7 +96,7 @@ input, textarea, select { font-family: inherit; }
 .container { width: 100%; max-width: var(--container); margin: 0 auto; padding: 0 var(--s-8); }
 @media (max-width: 720px) { .container { padding: 0 var(--s-5); } }
 
-.section { padding: clamp(64px, 8vw, 120px) 0; }
+.section { padding: clamp(72px, 9.5vw, 140px) 0; }
 .section--dark { background: var(--c-dark); color: var(--c-cream); }
 .section--cream { background: var(--c-cream); color: var(--c-text); }
 .section--paper { background: var(--c-paper); color: var(--c-text); }
@@ -229,7 +229,7 @@ input, textarea, select { font-family: inherit; }
 .btn--block { width: 100%; justify-content: center; }
 
 /* =================== HERO =================== */
-.hero-shell { position: relative; height: 135vh; background: var(--c-dark); }
+.hero-shell { position: relative; height: 168vh; background: var(--c-dark); }
 .hero {
   position: sticky; top: 0;
   height: 100vh; min-height: 680px;
@@ -448,7 +448,7 @@ input, textarea, select { font-family: inherit; }
   display: grid;
   grid-template-columns: 200px 1fr;
   gap: var(--s-16);
-  margin-bottom: var(--s-12);
+  margin-bottom: var(--s-16);
   align-items: start;
 }
 .sec-head__chap {
@@ -486,7 +486,7 @@ input, textarea, select { font-family: inherit; }
 .reveal--up { transform: translateY(80px); }
 
 /* =================== PINNED STATEMENT =================== */
-.pin-stage { position: relative; height: 180vh; background: var(--c-cream); }
+.pin-stage { position: relative; height: 240vh; background: var(--c-cream); }
 .pin-stage__inner {
   position: sticky; top: 0;
   height: 100vh;
@@ -551,7 +551,7 @@ input, textarea, select { font-family: inherit; }
   padding: var(--s-8) var(--s-6) var(--s-6);
   border-right: 1px solid var(--c-line);
   border-bottom: 1px solid var(--c-ink);
-  min-height: 360px;
+  min-height: 400px;
   display: flex; flex-direction: column; justify-content: space-between;
   background: var(--c-cream);
   position: relative; overflow: hidden;
@@ -591,7 +591,7 @@ input, textarea, select { font-family: inherit; }
 @media (max-width: 920px) { .empathy-grid { grid-template-columns: 1fr; } .empathy-cell { min-height: 360px; border-right: 0; } }
 
 /* =================== SPLIT =================== */
-.split { display: grid; grid-template-columns: 1fr 1fr; gap: 0; min-height: 560px; }
+.split { display: grid; grid-template-columns: 1fr 1fr; gap: 0; min-height: 640px; }
 .split__media {
   background: #141210 center/cover no-repeat;
   min-height: 460px;
@@ -707,7 +707,7 @@ input, textarea, select { font-family: inherit; }
 .showcase__caption em { font-style: normal; color: var(--c-signal); }
 .showcase__steps { display: flex; flex-direction: column; }
 .showcase__step {
-  min-height: 78vh;
+  min-height: 89vh;
   padding: clamp(48px, 7vw, 100px) clamp(40px, 6vw, 96px);
   display: flex; flex-direction: column; justify-content: center;
   border-bottom: 1px solid var(--c-line);
@@ -834,7 +834,7 @@ input, textarea, select { font-family: inherit; }
 /* =================== FINAL CTA =================== */
 .final-cta {
   background: var(--c-dark); color: var(--c-cream);
-  padding: clamp(72px, 10vw, 150px) 0;
+  padding: clamp(84px, 13vw, 185px) 0;
   position: relative; overflow: hidden;
 }
 .final-cta__inner { max-width: var(--container); margin: 0 auto; padding: 0 var(--s-12); position: relative; z-index: 2; }
