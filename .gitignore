@@ -1,0 +1,6 @@
+# WSL / Windows interop metadata
+*:Zone.Identifier
+
+# OS
+.DS_Store
+Thumbs.db

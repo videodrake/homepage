@@ -1,0 +1,30 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div class="section path">
+    <span>현재 위치</span>
+    <ol>
+        <li><a href="/">홈</a></li>
+        <li title="현재 위치"><strong>이용약관</strong></li>
+    </ol>
+</div>
+
+<main module="mall_term" class="section gInnerMargin jg-info-page jg-mall-agreement-page">
+    <div class="jg-info-hero">
+        <p class="jg-kicker">Terms of Use</p>
+        <h2>이용약관</h2>
+        <p>쇼핑몰 이용, 회원 서비스, 주문 및 거래 기준에 관한 약관을 확인할 수 있습니다. 아래 내용은 쇼핑몰 이용에 적용되는 공식 운영 기준입니다.</p>
+    </div>
+
+    <section class="jg-info-band jg-mall-agreement-document">
+        <h3>쇼핑몰 이용 기준</h3>
+        <div class="ec-base-box typeThin jg-mall-agreement-box">
+        <div class="agree">
+            {$mall_agreement}
+        </div>
+        </div>
+    </section>
+
+    <div class="jg-info-actions">
+        <a class="jg-btn jg-btn-primary" href="/member/privacy.html">개인정보처리방침</a>
+        <a class="jg-btn jg-btn-outline" href="/shopinfo/guide.html">이용안내 보기</a>
+    </div>
+</main>

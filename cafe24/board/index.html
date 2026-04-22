@@ -1,0 +1,395 @@
+<!--@layout(/layout/basic/layout.html)-->
+<div class="section path">
+    <span>현재 위치</span>
+    <ol>
+        <li><a href="/">홈</a></li>
+        <li title="현재 위치"><strong>러너 커뮤니티</strong></li>
+    </ol>
+</div>
+
+<div class="section titleArea jg-board-index-title">
+    <h2>러너 커뮤니티</h2>
+</div>
+<div class="section jg-sub-brief jg-board-index-brief">
+    <strong>게시판 안내 및 이동 허브</strong>
+    <p>공지, 제품 Q&A, 포토리뷰, 성분 자료를 목적에 맞게 고를 수 있습니다. 제품과 섭취 안내는 기능성 표현 기준 안에서 정확하게 운영합니다.</p>
+    <div class="jg-page-links">
+        <a href="/board/free/list.html?board_no=1">공지사항</a>
+        <a href="/board/free/list.html?board_no=5">제품 Q&A</a>
+        <a href="/shopinfo/runner-reviews.html">포토리뷰</a>
+        <a href="/board/gallery/list.html?board_no=8">성분 과학</a>
+    </div>
+</div>
+
+<section class="section jg-info-band jg-board-index-nav">
+    <div class="jg-board-index-heading">
+        <h3>게시판 바로가기</h3>
+        <p>확인하려는 내용에 맞는 게시판으로 이동하세요. 주문과 계정 관리는 마이페이지, 제품 구매는 상품 목록에서 이어갈 수 있습니다.</p>
+    </div>
+    <div class="jg-board-index-grid">
+        <a class="jg-board-index-card jg-board-index-card-primary" href="/board/free/list.html?board_no=1">
+            <span>Notice</span>
+            <strong>공지사항</strong>
+            <p>운영 공지, 배송 안내, 쇼핑몰 주요 변경 사항을 확인합니다.</p>
+        </a>
+        <a class="jg-board-index-card jg-board-index-card-primary" href="/board/free/list.html?board_no=5">
+            <span>Q&amp;A</span>
+            <strong>제품 Q&amp;A</strong>
+            <p>제품 선택, 섭취 방법, 구매 전 확인이 필요한 질문을 남깁니다.</p>
+        </a>
+        <a class="jg-board-index-card jg-board-index-card-primary" href="/shopinfo/runner-reviews.html">
+            <span>Photo Review</span>
+            <strong>포토리뷰</strong>
+            <p>고객 사용 장면을 사진과 짧은 코멘트로 확인합니다.</p>
+        </a>
+        <a class="jg-board-index-card" href="/board/free/list.html?board_no=2">
+            <span>News</span>
+            <strong>러닝 소식</strong>
+            <p>러너에게 필요한 콘텐츠와 쇼핑몰 소식을 확인합니다.</p>
+        </a>
+        <a class="jg-board-index-card" href="/board/free/list.html?board_no=3">
+            <span>Guide</span>
+            <strong>섭취 및 구매 안내</strong>
+            <p>섭취 타이밍, 주문 전 확인 사항, 기본 이용 안내를 살핍니다.</p>
+        </a>
+        <a class="jg-board-index-card" href="/board/free/list.html?board_no=7">
+            <span>Archive</span>
+            <strong>성분 자료</strong>
+            <p>원료와 기능성 기준을 텍스트 자료로 정리해 둔 게시판입니다.</p>
+        </a>
+        <a class="jg-board-index-card" href="/board/gallery/list.html?board_no=8">
+            <span>Gallery</span>
+            <strong>성분 과학</strong>
+            <p>옥타코사놀과 원료 정보를 이미지형 자료로 확인합니다.</p>
+        </a>
+    </div>
+</section>
+
+<section class="section jg-board-index-section">
+    <div class="jg-board-index-heading">
+        <h3>최근 게시물</h3>
+        <p>각 게시판의 최신 글을 한 화면에서 훑어보고 필요한 게시판으로 이동할 수 있습니다.</p>
+    </div>
+
+<div class="boardMain jg-board-index-best">
+    <div class="leftArea">
+        <div class="board" module="board_MainHit">
+            <!--
+                $count = 5
+                $subject_cut = 25
+             -->
+            <h3><span>조회수 베스트</span></h3>
+            <div class="ec-base-table typeList gLine">
+                <table border="1" >
+                <caption>러너 고객센터 목록</caption>
+                <colgroup>
+                    <col style="width:auto;" />
+                    <col style="width:100px;" />
+                </colgroup>
+                <thead class="blind">
+                    <tr>
+                        <th scope="col">제목</th>
+                        <th scope="col">작성일</th>
+                    </tr>
+                </thead>
+                <tbody class="top">
+					<tr class="{$block_target_class}" {$block_data_attr}>
+                        <td class="title"><a href="{$board_read_url}" class="{$block_content_class}">{$subject}</a></td>
+                        <td class="right">{$write_date}</td>
+                    </tr>
+					<tr class="{$block_target_class}" {$block_data_attr}>
+                        <td class="title"><a href="{$board_read_url}" class="{$block_content_class}">{$subject}</a></td>
+                        <td class="right">{$write_date}</td>
+                    </tr>
+                </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="rightArea">
+        <div class="board" module="board_MainRecommend">
+            <!--
+                $count = 5
+                $subject_cut = 25
+             -->
+            <h3><span>추천수 베스트</span></h3>
+            <div class="ec-base-table typeList gLine">
+                <table border="1" >
+                <caption>러너 고객센터 목록</caption>
+                <colgroup>
+                    <col style="width:auto;" />
+                    <col style="width:100px;" />
+                </colgroup>
+                <thead class="blind">
+                    <tr>
+                        <th scope="col">제목</th>
+                        <th scope="col">작성일</th>
+                    </tr>
+                </thead>
+                <tbody class="top">
+					<tr class="{$block_target_class}" {$block_data_attr}>
+                        <td class="title"><a href="{$board_read_url}" class="{$block_content_class}">{$subject}</a></td>
+                        <td class="right">{$write_date}</td>
+                    </tr>
+					<tr class="{$block_target_class}" {$block_data_attr}>
+                        <td class="title"><a href="{$board_read_url}" class="{$block_content_class}">{$subject}</a></td>
+                        <td class="right">{$write_date}</td>
+                    </tr>
+                </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="boardMain">
+    <div class="leftArea">
+        <div class="board" module="board_listpackage_1">
+            <h3 module="board_title_1">{$home_title}</h3>
+            <div class="ec-base-table typeList gLine">
+                <table border="1" >
+                <caption>러너 공지 목록</caption>
+                <colgroup>
+                    <col style="width:auto;" />
+                    <col style="width:100px;" />
+                </colgroup>
+                <thead module="board_listheader_1" class="blind">
+                    <tr>
+                        <th scope="col">제목</th>
+                        <th scope="col">작성일</th>
+                    </tr>
+                </thead>
+                <tbody module="board_list_1" class="top">
+                    <!--
+                        $count = 5
+                        $main_list = yes
+                        $subject_cut = 25
+                        $main_list_reply_view = no
+                     -->
+                    <tr class="{$block_target_class}" {$block_data_attr}>
+                        <td class="title"><a href="{$link_board_detail}" class="{$block_content_class}">{$subject}</a> {$icon_new}{$icon_hit}{$icon_file}{$comment_count}</td>
+                        <td class="right {$date_display|display}">{$write_date}</td>
+                    </tr>
+                    <tr class="{$block_target_class}" {$block_data_attr}>
+                        <td class="title"><a href="{$link_board_detail}" class="{$block_content_class}">{$subject}</a> {$icon_new}{$icon_hit}{$icon_file}{$comment_count}</td>
+                        <td class="right {$date_display|display}">{$write_date}</td>
+                    </tr>
+                </tbody>
+                </table>
+            </div>
+            <a href="/board/free/list.html?board_no=1" class="btnLink">공지 더보기</a>
+        </div>
+    </div>
+
+    <div class="rightArea">
+        <div class="board" module="board_listpackage_2">
+            <h3 module="board_title_2">{$home_title}</h3>
+            <div class="ec-base-table typeList gLine">
+                <table border="1" >
+                <caption>러닝 소식 목록</caption>
+                <colgroup>
+                    <col style="width:auto;" />
+                    <col style="width:100px;" />
+                </colgroup>
+                <thead module="board_listheader_2" class="blind">
+                    <tr>
+                        <th scope="col">제목</th>
+                        <th scope="col">작성일</th>
+                    </tr>
+                </thead>
+                <tbody module="board_list_2" class="top">
+                    <!--
+                        $count = 5
+                        $main_list = yes
+                        $subject_cut = 25
+                        $main_list_reply_view = no
+                     -->
+                    <tr class="{$block_target_class}" {$block_data_attr}>
+                        <td class="title"><a href="{$link_board_detail}" class="{$block_content_class}">{$subject}</a> {$icon_new}{$icon_hit}{$icon_file}{$comment_count}</td>
+                        <td class="right {$date_display|display}">{$write_date}</td>
+                    </tr>
+                    <tr class="{$block_target_class}" {$block_data_attr}>
+                        <td class="title"><a href="{$link_board_detail}" class="{$block_content_class}">{$subject}</a> {$icon_new}{$icon_hit}{$icon_file}{$comment_count}</td>
+                        <td class="right {$date_display|display}">{$write_date}</td>
+                    </tr>
+                </tbody>
+                </table>
+            </div>
+            <a href="/board/free/list.html?board_no=2" class="btnLink">소식 더보기</a>
+        </div>
+    </div>
+</div>
+
+<div class="boardMain jg-board-index-wide">
+    <div class="board" module="board_listpackage_5">
+        <h3 module="board_title_5">{$home_title}</h3>
+        <div class="ec-base-table typeList gLine">
+            <table border="1" >
+            <caption>러너 Q&A 목록</caption>
+            <colgroup>
+                <col style="width:auto;" />
+                <col style="width:100px;" />
+            </colgroup>
+            <thead module="board_listheader_5" class="blind">
+                <tr>
+                    <th scope="col">제목</th>
+                    <th scope="col">작성일</th>
+                </tr>
+            </thead>
+            <tbody module="board_list_5" class="top">
+                <!--
+                    $count = 5
+                    $main_list = yes
+                    $subject_cut = 25
+                    $main_list_reply_view = no
+                 -->
+                <tr class="{$block_target_class}" {$block_data_attr}>
+                    <td class="title"><a href="{$link_board_detail}" class="{$block_content_class}">{$subject|cut:45,...}</a> {$icon_new}{$icon_hit}{$icon_file}{$comment_count}</td>
+                    <td class="right {$date_display|display}">{$write_date}</td>
+                </tr>
+                <tr class="{$block_target_class}" {$block_data_attr}>
+                    <td class="title"><a href="{$link_board_detail}" class="{$block_content_class}">{$subject|cut:45,...}</a> {$icon_new}{$icon_hit}{$icon_file}{$comment_count}</td>
+                    <td class="right {$date_display|display}">{$write_date}</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+        <a href="/board/free/list.html?board_no=5" class="btnLink">Q&A 더보기</a>
+    </div>
+</div>
+
+<div class="boardMain">
+    <div class="leftArea">
+        <div class="board" module="board_listpackage_3">
+            <h3 module="board_title_3">{$home_title}</h3>
+            <div class="ec-base-table typeList gLine">
+                <table border="1" >
+                <caption>섭취 및 구매 안내 목록</caption>
+                <colgroup>
+                    <col style="width:auto;" />
+                    <col style="width:100px;" />
+                </colgroup>
+                <thead module="board_listheader_3" class="blind">
+                    <tr>
+                        <th scope="col">제목</th>
+                        <th scope="col">작성일</th>
+                    </tr>
+                </thead>
+                <tbody module="board_list_3" class="top">
+                    <!--
+                        $count = 5
+                        $main_list = yes
+                        $subject_cut = 25
+                        $main_list_reply_view = no
+                     -->
+                    <tr class="{$block_target_class}" {$block_data_attr}>
+                        <td class="title"><a href="{$link_board_detail}" class="{$block_content_class}">{$subject}</a> {$icon_new}{$icon_hit}{$icon_file}{$comment_count}</td>
+                        <td class="right {$date_display|display}">{$write_date}</td>
+                    </tr>
+                    <tr class="{$block_target_class}" {$block_data_attr}>
+                        <td class="title"><a href="{$link_board_detail}" class="{$block_content_class}">{$subject}</a> {$icon_new}{$icon_hit}{$icon_file}{$comment_count}</td>
+                        <td class="right {$date_display|display}">{$write_date}</td>
+                    </tr>
+                </tbody>
+                </table>
+            </div>
+            <a href="/board/free/list.html?board_no=3" class="btnLink">안내 더보기</a>
+        </div>
+    </div>
+
+    <div class="rightArea">
+        <div class="board" module="board_listpackage_7">
+            <h3 module="board_title_7">{$home_title}</h3>
+            <div class="ec-base-table typeList gLine">
+                <table border="1" >
+                <caption>성분 자료 목록</caption>
+                <colgroup>
+                    <col style="width:auto;" />
+                    <col style="width:100px;" />
+                </colgroup>
+                <thead module="board_listheader_7" class="blind">
+                    <tr>
+                        <th scope="col">제목</th>
+                        <th scope="col">작성일</th>
+                    </tr>
+                </thead>
+                <tbody module="board_list_7" class="top">
+                    <!--
+                        $count = 5
+                        $main_list = yes
+                        $subject_cut = 25
+                        $main_list_reply_view = no
+                     -->
+                    <tr>
+                        <td class="title"><a href="{$link_board_detail}" class="{$block_content_class}">{$subject}</a> {$icon_new}{$icon_hit}{$icon_file}{$comment_count}</td>
+                        <td class="right {$date_display|display}">{$write_date}</td>
+                    </tr>
+                    <tr>
+                        <td class="title"><a href="{$link_board_detail}" class="{$block_content_class}">{$subject}</a> {$icon_new}{$icon_hit}{$icon_file}{$comment_count}</td>
+                        <td class="right {$date_display|display}">{$write_date}</td>
+                    </tr>
+                </tbody>
+                </table>
+            </div>
+            <a href="/board/free/list.html?board_no=7" class="btnLink">자료 더보기</a>
+        </div>
+    </div>
+</div>
+
+<div class="boardMain">
+    <div class="leftArea">
+        <div class="board" module="board_listpackage_6">
+            <h3 module="board_title_6">{$home_title}</h3>
+            <div class="galleryList" module="board_list_6">
+                <!--
+                    $count = 5
+                    $main_list = yes
+                    $subject_cut = 25
+                -->
+                <ul>
+                    <li class="{$block_target_class}" {$block_data_attr}>
+                        <a href="{$link_board_detail}" class="imgLink {$block_content_class}">{$product_img}{$subject} {$comment_count}</a>
+                        <span>{$write_date}</span>
+                    </li>
+                    <li class="{$block_target_class}" {$block_data_attr}>
+                        <a href="{$link_board_detail}" class="imgLink {$block_content_class}">{$product_img}{$subject} {$comment_count}</a>
+                        <span>{$write_date}</span>
+                    </li>
+                </ul>
+            </div>
+            <a href="/shopinfo/runner-reviews.html" class="btnLink">포토리뷰 보기</a>
+        </div>
+    </div>
+
+    <div class="rightArea">
+        <div class="board" module="board_listpackage_8">
+            <h3 module="board_title_8">{$home_title}</h3>
+            <div class="galleryList" module="board_list_8">
+                <!--
+                    $count = 5
+                    $main_list = yes
+                    $subject_cut = 25
+                -->
+                <ul>
+                    <li class="{$block_target_class}" {$block_data_attr}>
+                        <a href="{$link_board_detail}" class="imgLink {$block_content_class}"><img src="{$img_src}" alt="" />{$subject} {$comment_count}</a>
+                        <span>{$write_date}</span>
+                    </li>
+                    <li class="{$block_target_class}" {$block_data_attr}>
+                        <a href="{$link_board_detail}" class="imgLink {$block_content_class}"><img src="{$img_src}" alt="" />{$subject} {$comment_count}</a>
+                        <span>{$write_date}</span>
+                    </li>
+                </ul>
+            </div>
+            <a href="/board/gallery/list.html?board_no=8" class="btnLink">성분 과학 보기</a>
+        </div>
+    </div>
+</div>
+
+    <div class="jg-board-index-support">
+        <a class="jg-btn jg-btn-outline" href="/shopinfo/guide.html">이용안내</a>
+        <a class="jg-btn jg-btn-outline" href="/product/detail.html?product_no=11">제품 상세</a>
+        <a class="jg-btn jg-btn-outline" href="/myshop/index.html">마이페이지</a>
+    </div>
+</section>
