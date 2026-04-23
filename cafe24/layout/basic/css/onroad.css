@@ -1993,6 +1993,88 @@ body.onroad-page #wrap { overflow-x: clip; overflow-y: visible; }
 .onroad-page .jg-product-detail-page .wish { font-size: 0; position: absolute; top: var(--s-3); right: var(--s-3); width: 44px; height: 44px; background: var(--c-cream); border: 1px solid var(--c-line); display: inline-flex; align-items: center; justify-content: center; }
 .onroad-page .jg-product-detail-page .imgArea .thumbnail { position: relative; }
 
+/* ---- Quantity stepper: comfortable sizing across all contexts (option rows, totals, etc.) ---- */
+.onroad-page .jg-product-detail-page .quantity,
+.onroad-page .jg-product-detail-page span.quantity {
+  display: inline-flex !important;
+  align-items: stretch !important;
+  border: 1px solid var(--c-line) !important;
+  background: var(--c-cream) !important;
+  height: 44px !important;
+  width: auto !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+  vertical-align: middle;
+  float: none !important;
+}
+.onroad-page .jg-product-detail-page .quantity input[type="text"],
+.onroad-page .jg-product-detail-page .quantity input.quantity_opt,
+.onroad-page .jg-product-detail-page span.quantity input[type="text"],
+.onroad-page .jg-product-detail-page span.quantity input.quantity_opt {
+  width: 64px !important;
+  height: 100% !important;
+  border: 0 !important;
+  outline: 0 !important;
+  background: transparent !important;
+  font-family: var(--font-mono) !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  text-align: center !important;
+  color: var(--c-ink) !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  order: 2 !important;
+  box-sizing: border-box !important;
+}
+.onroad-page .jg-product-detail-page .quantity a,
+.onroad-page .jg-product-detail-page span.quantity a {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 44px !important;
+  min-width: 44px !important;
+  height: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  background: transparent !important;
+  color: var(--c-ink) !important;
+  border: 0 !important;
+  font-size: 0 !important;
+  line-height: 1 !important;
+  text-decoration: none !important;
+  cursor: pointer;
+  flex-shrink: 0;
+  box-sizing: border-box !important;
+}
+.onroad-page .jg-product-detail-page .quantity a.up,
+.onroad-page .jg-product-detail-page span.quantity a.up { order: 3 !important; border-left: 1px solid var(--c-line) !important; }
+.onroad-page .jg-product-detail-page .quantity a.down,
+.onroad-page .jg-product-detail-page span.quantity a.down { order: 1 !important; border-right: 1px solid var(--c-line) !important; }
+.onroad-page .jg-product-detail-page .quantity a img,
+.onroad-page .jg-product-detail-page span.quantity a img { display: none !important; }
+.onroad-page .jg-product-detail-page .quantity a::before,
+.onroad-page .jg-product-detail-page span.quantity a::before {
+  font-family: var(--font-mono);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--c-ink);
+  content: "";
+}
+.onroad-page .jg-product-detail-page .quantity a.up::before,
+.onroad-page .jg-product-detail-page span.quantity a.up::before { content: "+"; }
+.onroad-page .jg-product-detail-page .quantity a.down::before,
+.onroad-page .jg-product-detail-page span.quantity a.down::before { content: "−"; }
+.onroad-page .jg-product-detail-page .quantity a:hover,
+.onroad-page .jg-product-detail-page span.quantity a:hover { background: var(--c-ink) !important; }
+.onroad-page .jg-product-detail-page .quantity a:hover::before,
+.onroad-page .jg-product-detail-page span.quantity a:hover::before { color: var(--c-cream); }
+
+/* give the option-row td breathing room so the stepper sits cleanly */
+.onroad-page .jg-product-detail-page .infoArea td:has(> .quantity),
+.onroad-page .jg-product-detail-page .infoArea td:has(> span.quantity) { padding: var(--s-3) var(--s-4) !important; vertical-align: middle !important; }
+
 /* ---- Side-docked purchase panel (PC): sticks from .jg-product-additional-page onward ---- */
 @media (min-width: 1024px) {
   .onroad-page .jg-product-detail-page .infoArea.is-docked {
