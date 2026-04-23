@@ -2053,23 +2053,43 @@ body.onroad-page #wrap { overflow-x: clip; overflow-y: visible; }
 .onroad-page .jg-product-detail-page span.quantity a.down { order: 1 !important; border-right: 1px solid var(--c-line) !important; }
 .onroad-page .jg-product-detail-page .quantity a img,
 .onroad-page .jg-product-detail-page span.quantity a img { display: none !important; }
+/* Neutralize Cafe24 base icon pseudo-elements (9×1 bars + 1×9 tick) */
+.onroad-page .jg-product-detail-page .quantity a::before,
+.onroad-page .jg-product-detail-page .quantity a::after,
+.onroad-page .jg-product-detail-page span.quantity a::before,
+.onroad-page .jg-product-detail-page span.quantity a::after {
+  position: static !important;
+  top: auto !important; left: auto !important; right: auto !important; bottom: auto !important;
+  width: auto !important; height: auto !important;
+  margin: 0 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+}
+.onroad-page .jg-product-detail-page .quantity a.up::after,
+.onroad-page .jg-product-detail-page .quantity a.down::after,
+.onroad-page .jg-product-detail-page span.quantity a.up::after,
+.onroad-page .jg-product-detail-page span.quantity a.down::after {
+  content: none !important;
+}
 .onroad-page .jg-product-detail-page .quantity a::before,
 .onroad-page .jg-product-detail-page span.quantity a::before {
-  font-family: var(--font-mono);
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1;
-  color: var(--c-ink);
-  content: "";
+  font-family: var(--font-sans) !important;
+  font-size: 18px !important;
+  font-weight: 400 !important;
+  line-height: 1 !important;
+  color: var(--c-ink) !important;
+  content: "" !important;
+  text-indent: 0 !important;
+  display: inline-block !important;
 }
 .onroad-page .jg-product-detail-page .quantity a.up::before,
-.onroad-page .jg-product-detail-page span.quantity a.up::before { content: "+"; }
+.onroad-page .jg-product-detail-page span.quantity a.up::before { content: "+" !important; }
 .onroad-page .jg-product-detail-page .quantity a.down::before,
-.onroad-page .jg-product-detail-page span.quantity a.down::before { content: "−"; }
+.onroad-page .jg-product-detail-page span.quantity a.down::before { content: "-" !important; }
 .onroad-page .jg-product-detail-page .quantity a:hover,
 .onroad-page .jg-product-detail-page span.quantity a:hover { background: var(--c-ink) !important; }
 .onroad-page .jg-product-detail-page .quantity a:hover::before,
-.onroad-page .jg-product-detail-page span.quantity a:hover::before { color: var(--c-cream); }
+.onroad-page .jg-product-detail-page span.quantity a:hover::before { color: var(--c-cream) !important; }
 
 /* give the option-row td breathing room so the stepper sits cleanly */
 .onroad-page .jg-product-detail-page .infoArea td:has(> .quantity),
@@ -3570,7 +3590,7 @@ body#userStyle .resultArea { margin-bottom: var(--s-10); }
 }
 .onroad-page .jg-product-detail-page #totalProducts span.quantity input[type="text"],
 .onroad-page .jg-product-detail-page #totalProducts span.quantity input.quantity_opt {
-    width: 160px !important;
+    width: 100px !important;
     height: 100% !important;
     border: 0 !important;
     outline: 0 !important;
@@ -3612,16 +3632,33 @@ body#userStyle .resultArea { margin-bottom: var(--s-10); }
 .onroad-page .jg-product-detail-page #totalProducts span.quantity a.up { order: 3 !important; border-left: 1px solid var(--c-ink) !important; }
 .onroad-page .jg-product-detail-page #totalProducts span.quantity a.down { order: 1 !important; border-right: 1px solid var(--c-ink) !important; }
 .onroad-page .jg-product-detail-page #totalProducts span.quantity a img { display: none !important; }
-.onroad-page .jg-product-detail-page #totalProducts span.quantity a::before {
-    font-family: var(--font-sans);
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 1;
-    color: var(--c-ink);
-    content: "";
+/* Override Cafe24 base icon bars (bg rectangles) — reset all positional/paint props,
+   then draw a clean "+"/"-" text glyph in the sans face. */
+.onroad-page .jg-product-detail-page #totalProducts span.quantity a::before,
+.onroad-page .jg-product-detail-page #totalProducts span.quantity a::after {
+    position: static !important;
+    top: auto !important; left: auto !important; right: auto !important; bottom: auto !important;
+    width: auto !important; height: auto !important;
+    margin: 0 !important;
+    background: transparent !important;
+    background-color: transparent !important;
 }
-.onroad-page .jg-product-detail-page #totalProducts span.quantity a.up::before { content: "+"; }
-.onroad-page .jg-product-detail-page #totalProducts span.quantity a.down::before { content: "-"; }
+.onroad-page .jg-product-detail-page #totalProducts span.quantity a.up::after,
+.onroad-page .jg-product-detail-page #totalProducts span.quantity a.down::after {
+    content: none !important;
+}
+.onroad-page .jg-product-detail-page #totalProducts span.quantity a::before {
+    font-family: var(--font-sans) !important;
+    font-size: 18px !important;
+    font-weight: 400 !important;
+    line-height: 1 !important;
+    color: var(--c-ink) !important;
+    content: "" !important;
+    text-indent: 0 !important;
+    display: inline-block !important;
+}
+.onroad-page .jg-product-detail-page #totalProducts span.quantity a.up::before { content: "+" !important; }
+.onroad-page .jg-product-detail-page #totalProducts span.quantity a.down::before { content: "-" !important; }
 .onroad-page .jg-product-detail-page #totalProducts span.quantity a:hover {
     background: var(--c-ink) !important;
     color: var(--c-cream) !important;
