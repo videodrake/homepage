@@ -2027,6 +2027,119 @@ body.onroad-page #wrap { overflow-x: clip; overflow-y: visible; }
 .onroad-page .jg-product-detail-page .ec-base-button.gColumn a,
 .onroad-page .jg-product-detail-page .xans-product-action a,
 .onroad-page .jg-product-detail-page .xans-product-action button { flex: 1 1 calc(50% - var(--s-3)); min-height: 60px; font-size: 13px; }
+
+/* ---------- Buy-section CTAs — match the sans voice, drop mono/uppercase ---------- */
+.onroad-page .jg-product-detail-page .infoArea .action_button,
+.onroad-page .jg-product-detail-page .infoArea .ec-base-button.soldout {
+  display: flex; gap: var(--s-2); flex-wrap: wrap;
+  margin: var(--s-4) 0 var(--s-3);
+}
+.onroad-page .jg-product-detail-page .infoArea .action_button > a,
+.onroad-page .jg-product-detail-page .infoArea .action_button > button,
+.onroad-page .jg-product-detail-page .infoArea .ec-base-button.soldout > button,
+.onroad-page .jg-product-detail-page .infoArea .ec-base-button.soldout > a {
+  flex: 1 1 0;
+  min-width: 0;
+}
+.onroad-page .jg-product-detail-page .infoArea a.btnSubmit,
+.onroad-page .jg-product-detail-page .infoArea button.btnSubmit,
+.onroad-page .jg-product-detail-page .infoArea a.btnNormal,
+.onroad-page .jg-product-detail-page .infoArea button.btnNormal,
+.onroad-page .jg-product-detail-page .infoArea a.btnStrong,
+.onroad-page .jg-product-detail-page .infoArea button.btnStrong,
+.onroad-page .jg-product-detail-page .infoArea a.btnBasic,
+.onroad-page .jg-product-detail-page .infoArea button.btnBasic {
+  font-family: var(--font-sans) !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  min-height: 52px !important;
+  padding: 0 var(--s-5) !important;
+  transition: background-color .2s ease, color .2s ease, border-color .2s ease !important;
+}
+/* Primary CTA (바로 구매 / 장바구니 결제) — signal red */
+.onroad-page .jg-product-detail-page .infoArea a.btnSubmit,
+.onroad-page .jg-product-detail-page .infoArea button.btnSubmit {
+  background: var(--c-signal) !important;
+  color: var(--c-cream) !important;
+  border: 1px solid var(--c-signal) !important;
+}
+.onroad-page .jg-product-detail-page .infoArea a.btnSubmit:hover,
+.onroad-page .jg-product-detail-page .infoArea button.btnSubmit:hover {
+  background: var(--c-signal-2) !important;
+  border-color: var(--c-signal-2) !important;
+  color: var(--c-cream) !important;
+}
+/* Secondary CTAs (장바구니 / 찜하기 / 대량구매문의) — outlined */
+.onroad-page .jg-product-detail-page .infoArea a.btnNormal,
+.onroad-page .jg-product-detail-page .infoArea button.btnNormal {
+  background: transparent !important;
+  color: var(--c-ink) !important;
+  border: 1px solid var(--c-ink) !important;
+}
+.onroad-page .jg-product-detail-page .infoArea a.btnNormal:hover,
+.onroad-page .jg-product-detail-page .infoArea button.btnNormal:hover {
+  background: transparent !important;
+  color: var(--c-signal) !important;
+  border-color: var(--c-signal) !important;
+}
+/* Soldout 품절 button — muted, non-CTA look */
+.onroad-page .jg-product-detail-page .infoArea .ec-base-button.soldout .btnSubmit,
+.onroad-page .jg-product-detail-page .infoArea .ec-base-button.soldout button.btnSubmit {
+  background: var(--c-meta) !important;
+  color: var(--c-cream) !important;
+  border-color: var(--c-meta) !important;
+  cursor: not-allowed !important;
+}
+.onroad-page .jg-product-detail-page .infoArea .ec-base-button.soldout .btnSubmit:hover,
+.onroad-page .jg-product-detail-page .infoArea .ec-base-button.soldout button.btnSubmit:hover {
+  background: var(--c-meta) !important;
+  border-color: var(--c-meta) !important;
+  color: var(--c-cream) !important;
+}
+/* sub_sold status label (the small "품절" tag above buttons) */
+.onroad-page .jg-product-detail-page .infoArea .sub_sold {
+  display: inline-block;
+  font-family: var(--font-sans) !important;
+  font-size: 11px; font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--c-signal);
+  padding: 4px 10px;
+  border: 1px solid var(--c-signal);
+  margin-bottom: var(--s-3);
+}
+/* Wishlist heart glyph on 찜하기 buttons */
+.onroad-page .jg-product-detail-page .infoArea #actionWish::before,
+.onroad-page .jg-product-detail-page .infoArea #actionWishSoldout::before,
+.onroad-page .jg-product-detail-page .infoArea button.actionWish::before {
+  content: "♡";
+  display: inline-block;
+  margin-right: 6px;
+  font-size: 15px;
+  line-height: 1;
+  vertical-align: -1px;
+}
+.onroad-page .jg-product-detail-page .infoArea #actionWish:hover::before,
+.onroad-page .jg-product-detail-page .infoArea #actionWishSoldout:hover::before,
+.onroad-page .jg-product-detail-page .infoArea button.actionWish:hover::before {
+  content: "♥";
+  color: var(--c-signal);
+}
+/* 대량구매문의 — keep outlined but tighten top spacing when it stacks full-width */
+.onroad-page .jg-product-detail-page .infoArea a.btnNormal.mrt10 {
+  margin-top: var(--s-3);
+  flex-basis: 100%;
+}
+/* In the docked panel, keep the button row compact */
+.onroad-page .jg-product-detail-page .infoArea.is-docked a.btnSubmit,
+.onroad-page .jg-product-detail-page .infoArea.is-docked button.btnSubmit,
+.onroad-page .jg-product-detail-page .infoArea.is-docked a.btnNormal,
+.onroad-page .jg-product-detail-page .infoArea.is-docked button.btnNormal {
+  min-height: 48px !important;
+  font-size: 13px !important;
+  padding: 0 var(--s-4) !important;
+}
 .onroad-page .jg-product-detail-page .description,
 .onroad-page .jg-product-detail-page #prdDetail { padding: clamp(64px, 8vw, 120px) 0; border-top: 1px solid var(--c-ink); }
 .onroad-page .jg-product-detail-page #prdDetail img { max-width: 100%; height: auto; display: block; margin: 0 auto; }
