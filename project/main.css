@@ -501,11 +501,7 @@ input, textarea, select { font-family: inherit; }
   .sec-head__chap { padding-top: 10px; }
 }
 
-/* =================== REVEAL =================== */
-.reveal { opacity: 0; transform: translateY(40px); transition: opacity 1s cubic-bezier(0.22, 1, 0.36, 1), transform 1s cubic-bezier(0.22, 1, 0.36, 1); }
-.reveal.is-in { opacity: 1; transform: translateY(0); }
-.reveal[data-stagger] { transition-delay: calc(var(--i, 0) * 100ms); }
-.reveal--up { transform: translateY(80px); }
+/* =================== REVEAL (migrated to AOS) =================== */
 
 /* =================== PINNED STATEMENT =================== */
 .pin-stage { position: relative; height: 240vh; background: var(--c-cream); }
