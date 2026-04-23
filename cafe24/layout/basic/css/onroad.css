@@ -2183,16 +2183,39 @@ body.onroad-page #wrap { overflow-x: clip; overflow-y: visible; }
   .onroad-page .jg-product-detail-page.xans-product-detail .infoArea.is-docked,
   .onroad-page .jg-product-detail-page .infoArea.is-docked {
     position: fixed !important; top: 120px !important;
-    right: 10vw !important;
+    right: 12vw !important;
     left: auto !important; bottom: auto !important;
     width: clamp(280px, 26vw, 440px) !important;
     max-height: calc(100vh - 140px);
     overflow-y: auto; overflow-x: hidden;
     z-index: 30;
-    background: var(--c-cream);
-    border: 1px solid var(--c-ink);
-    padding: var(--s-6) var(--s-5);
+    background: var(--c-cream) !important;
+    border: 1px solid var(--c-ink) !important;
+    padding: var(--s-6) var(--s-5) !important;
     box-shadow: none;
+  }
+  /* Docked panel — compact the totalProducts row so price doesn't clip */
+  .onroad-page .jg-product-detail-page .infoArea.is-docked #totalProducts > table { table-layout: auto !important; width: 100% !important; }
+  .onroad-page .jg-product-detail-page .infoArea.is-docked #totalProducts td:first-child {
+    max-width: 120px !important;
+    word-break: keep-all !important;
+    overflow-wrap: anywhere !important;
+    font-size: 12px !important;
+    padding-right: var(--s-2) !important;
+  }
+  .onroad-page .jg-product-detail-page .infoArea.is-docked #totalProducts td.right {
+    white-space: nowrap !important;
+    font-size: 13px !important;
+  }
+  .onroad-page .jg-product-detail-page .infoArea.is-docked #totalProducts span.quantity {
+    height: 44px !important;
+  }
+  .onroad-page .jg-product-detail-page .infoArea.is-docked #totalProducts span.quantity input[type="text"],
+  .onroad-page .jg-product-detail-page .infoArea.is-docked #totalProducts span.quantity input.quantity_opt {
+    width: 48px !important;
+  }
+  .onroad-page .jg-product-detail-page .infoArea.is-docked #totalProducts span.quantity a {
+    width: 36px !important; min-width: 36px !important;
   }
   .onroad-page .jg-product-detail-page .infoArea.is-docked .headingArea h1,
   .onroad-page .jg-product-detail-page .infoArea.is-docked .headingArea h2,
