@@ -2087,9 +2087,9 @@ body.onroad-page #wrap { overflow-x: clip; overflow-y: visible; }
 .onroad-page .jg-product-detail-page .quantity a.down::before,
 .onroad-page .jg-product-detail-page span.quantity a.down::before { content: "-" !important; }
 .onroad-page .jg-product-detail-page .quantity a:hover,
-.onroad-page .jg-product-detail-page span.quantity a:hover { background: var(--c-ink) !important; }
+.onroad-page .jg-product-detail-page span.quantity a:hover { background: transparent !important; }
 .onroad-page .jg-product-detail-page .quantity a:hover::before,
-.onroad-page .jg-product-detail-page span.quantity a:hover::before { color: var(--c-cream) !important; }
+.onroad-page .jg-product-detail-page span.quantity a:hover::before { color: var(--c-signal) !important; }
 
 /* give the option-row td breathing room so the stepper sits cleanly */
 .onroad-page .jg-product-detail-page .infoArea td:has(> .quantity),
@@ -2972,7 +2972,8 @@ body#userStyle .resultArea { margin-bottom: var(--s-10); }
 }
 .onroad-page #totalProducts td .quantity a.up::before { content: "+"; font-size: 18px; font-family: var(--font-sans); }
 .onroad-page #totalProducts td .quantity a.down::before { content: "-"; font-size: 18px; font-family: var(--font-sans); }
-.onroad-page #totalProducts td .quantity a:hover { background: var(--c-ink); color: var(--c-cream); }
+.onroad-page #totalProducts td .quantity a:hover { background: transparent; color: var(--c-signal); }
+.onroad-page #totalProducts td .quantity a:hover::before { color: var(--c-signal); }
 .onroad-page #totalProducts td.right {
     text-align: right;
     font-family: var(--font-sans);
@@ -3003,7 +3004,7 @@ body#userStyle .resultArea { margin-bottom: var(--s-10); }
     border: 1px solid var(--c-ink); background: transparent; color: var(--c-ink);
     text-decoration: none;
 }
-.onroad-page .jg-product-detail-page table.xans-product-option .selectButton a:hover { background: var(--c-ink); color: var(--c-cream); }
+.onroad-page .jg-product-detail-page table.xans-product-option .selectButton a:hover { background: transparent; color: var(--c-signal); border-color: var(--c-signal); }
 
 /* ---------- Total price row: simple line, serif amount ---------- */
 .onroad-page .jg-product-detail-page .totalPrice {
@@ -3018,39 +3019,39 @@ body#userStyle .resultArea { margin-bottom: var(--s-10); }
 }
 .onroad-page .jg-product-detail-page .totalPrice > .title,
 .onroad-page .jg-product-detail-page .totalPrice strong.title {
-    font-family: var(--font-mono);
+    font-family: var(--font-sans);
     font-weight: 500;
-    font-size: 10px;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: var(--c-meta);
+    font-size: 15px;
+    letter-spacing: 0;
+    text-transform: none;
+    color: var(--c-ink);
     margin: 0;
     display: inline-flex; align-items: baseline; gap: 6px;
 }
 .onroad-page .jg-product-detail-page .totalPrice .qty {
-    font-size: 9px; opacity: 0.65; font-weight: 400;
+    font-size: 12px; opacity: 0.7; font-weight: 400;
+    color: var(--c-meta);
 }
 .onroad-page .jg-product-detail-page .totalPrice > span {
     display: inline-flex; align-items: baseline; gap: 6px;
     white-space: nowrap;
 }
 .onroad-page .jg-product-detail-page .totalPrice strong:not(.title) {
-    font-family: var(--font-serif);
-    font-weight: 300;
-    font-size: clamp(22px, 2.4vw, 30px);
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: clamp(22px, 2.4vw, 28px);
     line-height: 1;
     color: var(--c-ink);
-    letter-spacing: -0.015em;
-    font-variation-settings: "opsz" 32;
+    letter-spacing: -0.01em;
 }
 .onroad-page .jg-product-detail-page .totalPrice strong em {
-    font-style: italic;
+    font-style: normal;
     color: var(--c-signal);
-    font-variation-settings: "opsz" 32, "SOFT" 100;
+    font-weight: 600;
 }
 .onroad-page .jg-product-detail-page .totalPrice > span > :nth-child(2) {
-    font-family: var(--font-mono); font-size: 10px;
-    color: var(--c-meta); letter-spacing: 0.04em;
+    font-family: var(--font-sans); font-size: 12px;
+    color: var(--c-meta); letter-spacing: 0;
     font-weight: 400;
 }
 
@@ -3590,7 +3591,7 @@ body#userStyle .resultArea { margin-bottom: var(--s-10); }
 }
 .onroad-page .jg-product-detail-page #totalProducts span.quantity input[type="text"],
 .onroad-page .jg-product-detail-page #totalProducts span.quantity input.quantity_opt {
-    width: 100px !important;
+    width: 72px !important;
     height: 100% !important;
     border: 0 !important;
     outline: 0 !important;
@@ -3663,7 +3664,18 @@ body#userStyle .resultArea { margin-bottom: var(--s-10); }
     background: var(--c-ink) !important;
     color: var(--c-cream) !important;
 }
-.onroad-page .jg-product-detail-page #totalProducts span.quantity a:hover::before { color: var(--c-cream); }
+.onroad-page .jg-product-detail-page #totalProducts span.quantity a:hover { background: transparent !important; }
+.onroad-page .jg-product-detail-page #totalProducts span.quantity a:hover::before { color: var(--c-signal) !important; }
+
+/* User asked: no more black-hover anywhere on product detail page.
+   Neutralize any generic .btnBasic / .ec-base-qty button hover that leaked in. */
+.onroad-page .jg-product-detail-page .btnBasic:hover,
+.onroad-page .jg-product-detail-page .ec-base-qty button:hover,
+.onroad-page .jg-product-detail-page .ec-base-qty a:hover {
+  background: transparent !important;
+  color: var(--c-signal) !important;
+  border-color: var(--c-signal) !important;
+}
 
 /* Center the quantity td content */
 .onroad-page .jg-product-detail-page #totalProducts td:nth-child(2) {
