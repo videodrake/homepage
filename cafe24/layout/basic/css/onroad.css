@@ -2091,17 +2091,14 @@ body.onroad-page #wrap { overflow-x: clip; overflow-y: visible; }
     padding: var(--s-5) var(--s-5) var(--s-6);
     box-shadow: 0 24px 60px rgba(0,0,0,0.18), 0 2px 0 var(--c-signal);
   }
-  /* Push flow content to the left so it doesn't sit under the docked panel */
-  body.onroad-page.has-docked-info .jg-product-additional-page,
-  body.onroad-page.has-docked-info .jg-product-additional-page .pd-flow,
-  body.onroad-page.has-docked-info .jg-product-additional-page .jg-detail-accordion-list {
+  /* Always reserve the right lane for the buy panel — review/detail
+     flow sticks to the left from the start so nothing shifts mid-scroll */
+  body.onroad-page .jg-product-additional-page,
+  body.onroad-page .jg-product-additional-page .pd-flow,
+  body.onroad-page .jg-product-additional-page .jg-detail-accordion-list,
+  body.onroad-page .jg-product-detail-page #prdDetail,
+  body.onroad-page .jg-product-detail-page .description {
     padding-right: 440px !important;
-    transition: padding-right 0.25s ease;
-  }
-  body.onroad-page.has-docked-info .jg-product-detail-page #prdDetail,
-  body.onroad-page.has-docked-info .jg-product-detail-page .description {
-    padding-right: 440px !important;
-    transition: padding-right 0.25s ease;
   }
   .onroad-page .jg-product-detail-page .infoArea.is-docked .headingArea h1,
   .onroad-page .jg-product-detail-page .infoArea.is-docked .headingArea h2,
