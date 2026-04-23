@@ -1956,6 +1956,7 @@ body.onroad-page #wrap { overflow-x: clip; overflow-y: visible; }
 .onroad-page .jg-product-detail-page .headingArea,
 .onroad-page .jg-product-detail-page .optionArea,
 .onroad-page .jg-product-detail-page .xans-product-detaildesign { font-family: var(--font-sans); color: var(--c-text); }
+.onroad-page .jg-product-detail-page .headingArea { border-top: 0; padding-top: 0; margin-top: 0; }
 .onroad-page .jg-product-detail-page .headingArea h2,
 .onroad-page .jg-product-detail-page .headingArea h3,
 .onroad-page .jg-product-detail-page .infoArea .name,
@@ -1991,6 +1992,30 @@ body.onroad-page #wrap { overflow-x: clip; overflow-y: visible; }
 .onroad-page .jg-product-detail-page .guideArea h3 { font-family: var(--font-serif); font-weight: 300; font-size: clamp(28px, 3vw, 42px); margin: 0 0 var(--s-5); color: var(--c-ink); }
 .onroad-page .jg-product-detail-page .wish { font-size: 0; position: absolute; top: var(--s-3); right: var(--s-3); width: 44px; height: 44px; background: var(--c-cream); border: 1px solid var(--c-line); display: inline-flex; align-items: center; justify-content: center; }
 .onroad-page .jg-product-detail-page .imgArea .thumbnail { position: relative; }
+
+/* ---- Side-docked purchase panel (PC): sticks from .jg-product-additional-page onward ---- */
+@media (min-width: 1024px) {
+  .onroad-page .jg-product-detail-page .infoArea.is-docked {
+    position: fixed; top: 110px;
+    right: max(24px, calc((100vw - var(--container)) / 2 + var(--s-8)));
+    width: 380px;
+    max-height: calc(100vh - 140px);
+    overflow-y: auto; overflow-x: hidden;
+    z-index: 30;
+    background: var(--c-cream);
+    border: 1px solid var(--c-ink);
+    padding: var(--s-5) var(--s-5) var(--s-6);
+    box-shadow: 0 18px 48px rgba(0,0,0,0.12);
+  }
+  .onroad-page .jg-product-detail-page .infoArea.is-docked .headingArea h1,
+  .onroad-page .jg-product-detail-page .infoArea.is-docked .headingArea h2,
+  .onroad-page .jg-product-detail-page .infoArea.is-docked .headingArea .name { font-size: clamp(20px, 1.8vw, 28px); margin-bottom: var(--s-3); }
+  .onroad-page .jg-product-detail-page .infoArea.is-docked .pd-lede,
+  .onroad-page .jg-product-detail-page .infoArea.is-docked .pd-eyebrow,
+  .onroad-page .jg-product-detail-page .infoArea.is-docked .pd-spec-block,
+  .onroad-page .jg-product-detail-page .infoArea.is-docked .guideArea,
+  .onroad-page .jg-product-detail-page .infoArea.is-docked .icon { display: none; }
+}
 
 /* ---------- Product list / search grids ---------- */
 .onroad-page .prdList,

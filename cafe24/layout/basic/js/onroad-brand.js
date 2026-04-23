@@ -31,6 +31,10 @@
     var showcase = document.querySelector('.showcase');
     var bottle = document.getElementById('showcaseBottle');
 
+    var pdInfoArea = document.querySelector('.jg-product-detail-page .infoArea');
+    var pdAdditional = document.querySelector('.jg-product-additional-page');
+    var pdFooter = document.querySelector('.site-footer') || document.querySelector('footer');
+
     var lightSections = [];
     function collectLightSections() {
       lightSections = [].slice.call(document.querySelectorAll(
@@ -102,6 +106,18 @@
         var sT = sTotal > 0 ? sScrolled / sTotal : 0;
         bottle.style.setProperty('--showcase-rot', (sT * 18 - 4).toFixed(2));
         bottle.style.setProperty('--showcase-y', (Math.sin(sT * Math.PI) * -10).toFixed(1));
+      }
+
+      if (pdInfoArea && pdAdditional) {
+        if (window.matchMedia('(min-width: 1024px)').matches) {
+          var addTop = pdAdditional.getBoundingClientRect().top + y;
+          var footTop = pdFooter ? (pdFooter.getBoundingClientRect().top + y) : Infinity;
+          var past = y + 100 > addTop;
+          var nearBottom = pdFooter ? (footTop - y < 300) : false;
+          pdInfoArea.classList.toggle('is-docked', past && !nearBottom);
+        } else {
+          pdInfoArea.classList.remove('is-docked');
+        }
       }
 
       revealInViewport();
