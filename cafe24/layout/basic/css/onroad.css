@@ -2092,14 +2092,15 @@ body.onroad-page #wrap { overflow-x: clip; overflow-y: visible; }
     box-shadow: 0 24px 60px rgba(0,0,0,0.18), 0 2px 0 var(--c-signal);
   }
   /* Push flow content to the left so it doesn't sit under the docked panel */
-  .onroad-page body.has-docked-info .jg-product-additional-page,
-  body.onroad-page.has-docked-info .jg-product-additional-page {
-    padding-right: 440px;
+  body.onroad-page.has-docked-info .jg-product-additional-page,
+  body.onroad-page.has-docked-info .jg-product-additional-page .pd-flow,
+  body.onroad-page.has-docked-info .jg-product-additional-page .jg-detail-accordion-list {
+    padding-right: 440px !important;
     transition: padding-right 0.25s ease;
   }
-  .onroad-page body.has-docked-info .jg-product-detail-page #prdDetail,
-  body.onroad-page.has-docked-info .jg-product-detail-page #prdDetail {
-    padding-right: 440px;
+  body.onroad-page.has-docked-info .jg-product-detail-page #prdDetail,
+  body.onroad-page.has-docked-info .jg-product-detail-page .description {
+    padding-right: 440px !important;
     transition: padding-right 0.25s ease;
   }
   .onroad-page .jg-product-detail-page .infoArea.is-docked .headingArea h1,
