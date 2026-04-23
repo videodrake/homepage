@@ -98,6 +98,53 @@
 
   .pd-actions { display: grid; grid-template-columns: 1fr 1.4fr; gap: var(--s-2); margin-bottom: var(--s-4); }
   .pd-actions .btn { justify-content: center; padding: 18px; font-size: 15px; }
+  .onroad-bubble-wrap { position: relative; display: flex; }
+  .onroad-bubble-wrap .btn { width: 100%; }
+
+  /* ── PULSE BUBBLES ────────────────────────── */
+  .onroad-bubble {
+    font-family: var(--font-mono); font-weight: 700;
+    font-size: 11px; letter-spacing: 0.08em;
+    padding: 5px 12px;
+    background: var(--c-cream);
+    color: var(--c-signal);
+    border: 1px solid var(--c-signal);
+    white-space: nowrap;
+  }
+  .onroad-bubble--count {
+    display: inline-flex; align-items: center; gap: 4px;
+    align-self: flex-start;
+    margin-bottom: var(--s-3);
+    animation: onroad-bubble-bounce 1.6s ease-in-out infinite;
+  }
+  .onroad-bubble--count .js-view-count { color: var(--c-signal); font-family: var(--font-serif); font-weight: 600; font-size: 14px; font-variation-settings: "opsz" 24; }
+  .onroad-bubble--count em { font-style: normal; color: var(--c-char); }
+  .onroad-bubble--ship {
+    position: absolute; top: -28px; left: 50%;
+    transform: translate(-50%, 0);
+    animation: onroad-bubble-bounce-centered 1.6s ease-in-out infinite;
+    z-index: 2;
+  }
+  .onroad-bubble--ship::after {
+    content: ""; position: absolute; bottom: -5px; left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent; border-top-color: var(--c-signal);
+  }
+  .onroad-bubble--ship::before {
+    content: ""; position: absolute; bottom: -4px; left: 50%;
+    transform: translateX(-50%);
+    border: 4px solid transparent; border-top-color: var(--c-cream);
+    z-index: 1;
+  }
+  @keyframes onroad-bubble-bounce {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-4px); }
+  }
+  @keyframes onroad-bubble-bounce-centered {
+    0%, 100% { transform: translate(-50%, 0); }
+    50%      { transform: translate(-50%, -4px); }
+  }
+  .pd-info.is-docked .onroad-bubble--count { display: none; }
 
   .pd-benefits { padding: var(--s-4); background: var(--c-paper); border: 1px solid var(--c-line); display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s-3); }
   .pd-benefit { font-family: var(--font-mono); font-size: 10px; color: var(--c-meta); letter-spacing: 0.1em; text-transform: uppercase; line-height: 1.5; }
@@ -261,7 +308,7 @@
         </div>
         <div class="pd-urgency__row" style="border-top:1px solid rgba(244,239,230,0.15);padding-top:8px;margin-top:4px;">
           <span class="pd-urgency__stock">남은 수량 <b id="stockLeft">27</b>개</span>
-          <span>오늘 <em>143</em>명 구매</span>
+          <span>[ LIMITED TODAY ]</span>
         </div>
       </div>
 
@@ -302,6 +349,7 @@
         <a href="#tab-reviews" class="pd-rating__count">리뷰 2,694건</a>
       </div>
 
+      <div class="onroad-bubble onroad-bubble--count">오늘 <strong class="js-view-count">143</strong>명이 <em>구매했어요</em></div>
       <h1 class="pd-name">지구력<span class="italic">코어</span></h1>
       <p class="pd-caption">매일 달리는 러너를 위한 지구력 부스터.<br>식약처가 인정한 기능성 원료 옥타코사놀 40mg을 하루 한 정에.</p>
 
@@ -348,7 +396,10 @@
 
       <div class="pd-actions">
         <a href="/order/basket.html" class="btn btn--solid-ink">장바구니 담기 <span class="btn__arrow"></span></a>
-        <a href="/order/orderform.html" class="btn btn--primary">지금 구매하기 <span class="btn__arrow"></span></a>
+        <div class="onroad-bubble-wrap">
+          <span class="onroad-bubble onroad-bubble--ship">+ 무료배송</span>
+          <a href="/order/orderform.html" class="btn btn--primary">지금 구매하기 <span class="btn__arrow"></span></a>
+        </div>
       </div>
 
       <div class="pd-benefits">
