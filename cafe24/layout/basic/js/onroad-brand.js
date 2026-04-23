@@ -34,9 +34,12 @@
     var pdInfoArea = document.querySelector('.jg-product-detail-page .infoArea');
     var pdAdditional = document.querySelector('.jg-product-additional-page');
     var pdReview = document.querySelector('.pd-flow--review') || document.getElementById('prdReview') || document.getElementById('review');
+    var pdQnA = document.querySelector('.pd-flow--qna') || document.getElementById('prdQnA') || document.getElementById('qna');
+    var pdNoticeBlock = document.getElementById('prdInfo') || document.querySelector('.detail_guide');
     var pdFooter = document.querySelector('.site-footer') || document.querySelector('footer');
     var pdDetailArea = pdInfoArea ? pdInfoArea.parentElement : null;
     var pdDockRef = pdReview || pdAdditional;
+    var pdDockReleaseRef = pdNoticeBlock || pdQnA || pdFooter;
 
     // Lock the detailArea grid to its pre-dock infoArea height so docking
     // (which pulls .infoArea out of flow) doesn't collapse the layout and
@@ -129,14 +132,17 @@
       if (pdInfoArea && pdDockRef) {
         var dock = false;
         if (window.matchMedia('(min-width: 1024px)').matches) {
-          // Fire when the review/additional reference crosses into the top
-          // half of the viewport — earlier than entry, tied to where the
-          // user is actually reading rather than a hard page boundary.
+          // Engage when review heading reaches top half of viewport.
+          // Release when the bottom notice block (#prdInfo, which follows
+          // Q&A) starts entering the viewport — Q&A is the last section
+          // where the buy panel is still useful.
           var refTop = pdDockRef.getBoundingClientRect().top + y;
-          var footTop = pdFooter ? (pdFooter.getBoundingClientRect().top + y) : Infinity;
           var past = y > refTop - window.innerHeight * 0.5;
-          var nearBottom = pdFooter ? (footTop - y < 300) : false;
-          dock = past && !nearBottom;
+          var releaseAt = pdDockReleaseRef
+            ? (pdDockReleaseRef.getBoundingClientRect().top + y)
+            : Infinity;
+          var reachedRelease = y + window.innerHeight * 0.25 > releaseAt;
+          dock = past && !reachedRelease;
         }
         pdInfoArea.classList.toggle('is-docked', dock);
         document.body.classList.toggle('has-docked-info', dock);

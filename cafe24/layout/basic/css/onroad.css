@@ -1430,7 +1430,9 @@ body.onroad-page #wrap { overflow-x: clip; overflow-y: visible; }
 .onroad-page .ec-base-button a:hover,
 .onroad-page .ec-base-button button:hover,
 .onroad-page a.btnNormal:hover,
-.onroad-page a.btnBasic:hover { background: var(--c-ink); color: var(--c-cream); }
+.onroad-page button.btnNormal:hover,
+.onroad-page a.btnBasic:hover,
+.onroad-page button.btnBasic:hover { background: transparent; color: var(--c-signal); border-color: var(--c-signal); }
 
 /* primary variants: btnSubmit / btnStrong / btnSubmitFix */
 .onroad-page a.btnSubmit,
@@ -1466,7 +1468,7 @@ body.onroad-page #wrap { overflow-x: clip; overflow-y: visible; }
 .onroad-page .ec-base-qty a:first-child,
 .onroad-page .ec-base-qty button:first-child { border-left: 0; border-right: 1px solid var(--c-line); }
 .onroad-page .ec-base-qty a:hover,
-.onroad-page .ec-base-qty button:hover { background: var(--c-ink); color: var(--c-cream); }
+.onroad-page .ec-base-qty button:hover { background: transparent; color: var(--c-signal); }
 
 /* ---------- ec-base-prdInfo ---------- */
 .onroad-page .ec-base-prdInfo { background: var(--c-paper); border: 1px solid var(--c-line); padding: var(--s-8); margin-bottom: var(--s-8); }
@@ -1480,21 +1482,61 @@ body.onroad-page #wrap { overflow-x: clip; overflow-y: visible; }
 .onroad-page .ec-base-prdInfo .information .price { list-style: none; margin: 0; padding: 0; font-family: var(--font-sans); font-size: 13px; color: var(--c-meta); line-height: 1.7; }
 .onroad-page .ec-base-prdInfo .information .price strong { color: var(--c-signal); font-weight: 600; font-family: var(--font-mono); font-size: 16px; }
 
-/* ---------- ec-base-fold (theme1) ---------- */
+/* ---------- ec-base-fold (theme1) — modernized notice accordion ---------- */
 .onroad-page .ec-base-fold { background: transparent; border: 0; margin: 0; }
 .onroad-page .ec-base-fold .title { padding: var(--s-5) 0; border-bottom: 1px solid var(--c-line); cursor: pointer; position: relative; }
+.onroad-page .ec-base-fold .title h2,
 .onroad-page .ec-base-fold .title h3,
-.onroad-page .ec-base-fold .title strong { font-family: var(--font-serif); font-weight: 400; font-size: clamp(18px, 1.6vw, 22px); color: var(--c-ink); margin: 0; padding-right: 40px; }
-.onroad-page .ec-base-fold .title::after { content: "+"; position: absolute; right: 0; top: 50%; transform: translateY(-50%); font-family: var(--font-mono); font-size: 22px; color: var(--c-signal); font-weight: 300; transition: transform .3s ease; }
-.onroad-page .ec-base-fold.selected .title::after { content: "−"; }
+.onroad-page .ec-base-fold .title strong {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: clamp(15px, 1.2vw, 17px);
+  color: var(--c-ink);
+  margin: 0; padding-right: 40px;
+  letter-spacing: 0;
+  line-height: 1.3;
+}
+.onroad-page .ec-base-fold .title::after {
+  content: "+"; position: absolute; right: 0; top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--font-sans);
+  font-size: 20px;
+  color: var(--c-ink);
+  font-weight: 400;
+  transition: transform .2s ease, color .2s ease;
+}
+.onroad-page .ec-base-fold.selected .title::after { content: "-"; color: var(--c-signal); }
+.onroad-page .ec-base-fold .title:hover h2,
+.onroad-page .ec-base-fold .title:hover h3,
+.onroad-page .ec-base-fold .title:hover strong,
+.onroad-page .ec-base-fold .title:hover::after { color: var(--c-signal); }
 .onroad-page .ec-base-fold.theme1 { border-top: 0; }
 .onroad-page .ec-base-fold.gBottomLine { border-bottom: 0; }
-.onroad-page .ec-base-fold .contents { padding: var(--s-6) 0 var(--s-8); border-bottom: 1px solid var(--c-line); color: var(--c-text); font-family: var(--font-sans); font-size: 14px; line-height: 1.75; }
+.onroad-page .ec-base-fold .contents {
+  padding: var(--s-5) 0 var(--s-6);
+  border-bottom: 1px solid var(--c-line);
+  color: var(--c-text);
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 1.75;
+}
 .onroad-page .ec-base-fold .contents p { margin: 0 0 var(--s-3); }
 .onroad-page .ec-base-fold .contents ul,
-.onroad-page .ec-base-fold .contents ol { padding-left: 20px; margin: 0 0 var(--s-3); }
-.onroad-page .ec-base-fold .contents li { margin-bottom: var(--s-2); }
-.onroad-page .ec-base-fold .contents strong { color: var(--c-ink); font-weight: 500; }
+.onroad-page .ec-base-fold .contents ol { padding-left: 18px; margin: 0 0 var(--s-3); }
+.onroad-page .ec-base-fold .contents li { margin-bottom: var(--s-1); }
+.onroad-page .ec-base-fold .contents strong { color: var(--c-ink); font-weight: 600; }
+
+/* #prdInfo (bottom notice block) framing */
+.onroad-page #prdInfo {
+  margin-top: var(--s-16);
+  padding-top: var(--s-6);
+  border-top: 1px solid var(--c-ink);
+}
+.onroad-page #prdInfo .detail_guide { background: transparent; border: 0; padding: 0; }
+.onroad-page #prdInfo .detail_guide .ec-base-fold { border-top: 0; }
+.onroad-page #prdInfo .detail_guide .ec-base-fold:last-child .contents { border-bottom: 0; }
+.onroad-page #prdInfo .info.delivery { list-style: none; margin: 0; padding: 0; }
+.onroad-page #prdInfo .info.delivery li { padding: 6px 0; font-size: 13px; color: var(--c-text); }
 
 /* ---------- ec-base-help ---------- */
 .onroad-page .ec-base-help { background: var(--c-paper); border: 1px solid var(--c-line); border-left: 3px solid var(--c-signal); padding: var(--s-5) var(--s-6); margin: var(--s-5) 0; font-family: var(--font-sans); font-size: 13px; line-height: 1.7; color: var(--c-text); }
@@ -1525,7 +1567,7 @@ body.onroad-page #wrap { overflow-x: clip; overflow-y: visible; }
 .onroad-page .ec-base-paginate a,
 .onroad-page .ec-base-paginate span,
 .onroad-page .ec-base-paginate strong { display: inline-flex; align-items: center; justify-content: center; min-width: 40px; height: 40px; padding: 0 10px; border: 1px solid var(--c-line); color: var(--c-ink); text-decoration: none; font-size: 12px; letter-spacing: 0.04em; background: transparent; }
-.onroad-page .ec-base-paginate a:hover { background: var(--c-ink); color: var(--c-cream); border-color: var(--c-ink); }
+.onroad-page .ec-base-paginate a:hover { background: transparent; color: var(--c-signal); border-color: var(--c-signal); }
 .onroad-page .ec-base-paginate .this,
 .onroad-page .ec-base-paginate strong,
 .onroad-page .ec-base-paginate .selected { background: var(--c-signal); color: var(--c-cream); border-color: var(--c-signal); }
@@ -3251,8 +3293,9 @@ body#userStyle .resultArea { margin-bottom: var(--s-10); }
 }
 .onroad-page a.btnNormalFix:hover,
 .onroad-page .btnNormalFix:hover {
-    border-color: var(--c-ink);
-    background: var(--c-ink); color: var(--c-cream);
+    border-color: var(--c-signal);
+    background: transparent;
+    color: var(--c-signal);
 }
 
 /* Review/Q&A table */
