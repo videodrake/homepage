@@ -249,7 +249,7 @@ body.onroad-page #wrap { overflow-x: clip; overflow-y: visible; }
   position: sticky; top: 0;
   height: 100vh; min-height: 680px;
   background: var(--c-dark); color: var(--c-cream);
-  overflow: hidden;
+  overflow: clip;
 }
 .onroad-page .hero__media {
   position: absolute; inset: 0;
@@ -287,8 +287,8 @@ body.onroad-page #wrap { overflow-x: clip; overflow-y: visible; }
   position: relative; z-index: 3;
   max-width: var(--container); width: 100%;
   margin: 0 auto;
-  padding: calc(var(--header-h) + 56px) var(--s-12) calc(var(--s-16) + 72px);
-  display: grid; grid-template-rows: auto 1fr auto;
+  padding: calc(var(--header-h) + 56px) var(--s-12) calc(var(--s-16) + 48px);
+  display: grid; grid-template-rows: auto 1fr;
   gap: var(--s-10);
   height: 100%;
 }
@@ -321,9 +321,10 @@ body.onroad-page #wrap { overflow-x: clip; overflow-y: visible; }
   font-family: var(--font-serif);
   font-weight: 300;
   font-size: clamp(52px, 11vw, 168px);
-  line-height: 0.88;
+  line-height: 0.92;
   letter-spacing: -0.03em;
   margin: 0;
+  padding-right: 0.08em;
   font-optical-sizing: auto;
   font-variation-settings: "opsz" 144;
   color: var(--c-cream);
@@ -332,7 +333,9 @@ body.onroad-page #wrap { overflow-x: clip; overflow-y: visible; }
   display: inline-block;
   overflow: hidden;
   vertical-align: bottom;
+  padding-right: 0.08em;
   padding-bottom: 0.18em;
+  margin-right: -0.04em;
   margin-bottom: -0.1em;
 }
 .onroad-page .hero__title .word > span {
@@ -343,16 +346,28 @@ body.onroad-page #wrap { overflow-x: clip; overflow-y: visible; }
   padding-bottom: 0.05em;
 }
 .onroad-page .hero__title.is-in .word > span { transform: translateY(0); }
-.onroad-page .hero__title .italic { font-style: italic; font-variation-settings: "opsz" 144, "SOFT" 100; color: var(--c-signal); }
+.onroad-page .hero__title .italic {
+  display: inline-block;
+  padding-right: 0.04em;
+  font-style: italic;
+  font-variation-settings: "opsz" 144, "SOFT" 100;
+  color: var(--c-signal);
+}
 .onroad-page .hero__title .amp { font-family: var(--font-serif); font-style: italic; font-weight: 300; color: rgba(244,239,230,0.4); }
 
 .onroad-page .hero__bottom {
+  background: var(--c-dark);
+  color: var(--c-cream);
+  border-top: 1px solid rgba(244,239,230,0.14);
+}
+.onroad-page .hero__bottom-inner {
+  max-width: var(--container); width: 100%;
+  margin: 0 auto;
+  padding: var(--s-12) var(--s-12);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: var(--s-10);
-  align-items: end;
-  border-top: 1px solid rgba(244,239,230,0.14);
-  padding-top: var(--s-8);
+  align-items: start;
 }
 .onroad-page .hero__bottom .eyebrow { color: rgba(244,239,230,0.5); margin-bottom: var(--s-3); }
 .onroad-page .hero__sub {
@@ -398,11 +413,11 @@ body.onroad-page #wrap { overflow-x: clip; overflow-y: visible; }
 @keyframes onroad-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
 @media (max-width: 920px) {
-  .onroad-page .hero-shell { height: auto; }
-  .onroad-page .hero { position: relative; height: auto; min-height: 100vh; padding-bottom: 120px; }
-  .onroad-page .hero__inner { padding: calc(var(--header-h) + 32px) var(--s-5) calc(var(--s-12) + 56px); }
+  .onroad-page .hero-shell { height: 140vh; }
+  .onroad-page .hero { min-height: 100vh; }
+  .onroad-page .hero__inner { padding: calc(var(--header-h) + 32px) var(--s-5) calc(var(--s-12) + 48px); }
   .onroad-page .hero__frame-lines { inset: calc(var(--header-h) + 16px) var(--s-5) var(--s-5); }
-  .onroad-page .hero__bottom { grid-template-columns: 1fr; gap: var(--s-6); }
+  .onroad-page .hero__bottom-inner { padding: var(--s-10) var(--s-5); grid-template-columns: 1fr; gap: var(--s-6); }
   .onroad-page .hero__ctas { flex-direction: row; flex-wrap: wrap; }
 }
 
@@ -878,6 +893,7 @@ body.onroad-page #wrap { overflow-x: clip; overflow-y: visible; }
   line-height: 0.92; letter-spacing: -0.03em;
   margin: 0 0 var(--s-10); max-width: 16ch;
   font-variation-settings: "opsz" 144;
+  color: var(--c-white);
 }
 .onroad-page .final-cta__title .italic { font-style: italic; color: var(--c-signal); font-variation-settings: "opsz" 144, "SOFT" 100; }
 .onroad-page .final-cta__ctas { display: inline-flex; gap: var(--s-3); flex-wrap: wrap; }
@@ -1045,7 +1061,7 @@ body.onroad-page #wrap { overflow-x: clip; overflow-y: visible; }
 
 /* BRAND HERO */
 .onroad-company .bh-shell { position: relative; height: 150vh; background: var(--c-dark); }
-.onroad-company .bh { position: sticky; top: 0; height: 100vh; min-height: 680px; background: var(--c-dark); color: var(--c-cream); overflow: hidden; }
+.onroad-company .bh { position: sticky; top: 0; height: 100vh; min-height: 680px; background: var(--c-dark); color: var(--c-cream); overflow: clip; }
 .onroad-company .bh__media { position: absolute; inset: 0; background: radial-gradient(ellipse at 70% 60%, rgba(200,50,30,0.22) 0%, transparent 60%), linear-gradient(160deg, #1a1714 0%, #0a0908 70%); transform: scale(var(--bh-zoom, 1.02)); will-change: transform; transition: transform 0.1s linear; }
 .onroad-company .bh__media::before { content: ""; position: absolute; inset: 0; opacity: 0.14; mix-blend-mode: overlay; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.55'/></svg>"); }
 .onroad-company .bh__bgword { position: absolute; right: -4vw; bottom: -0.15em; font-family: var(--font-serif); font-style: italic; font-weight: 300; font-size: clamp(240px, 38vw, 640px); line-height: 0.78; color: rgba(244,239,230,0.05); letter-spacing: -0.04em; white-space: nowrap; font-variation-settings: "opsz" 144, "SOFT" 100; z-index: 1; transform: translateX(var(--bh-x, 0px)); will-change: transform; }
@@ -2371,4 +2387,1283 @@ body#userStyle .resultArea { margin-bottom: var(--s-10); }
     .onroad-page [class*="jg-board-"] .ec-base-table.typeList thead { display: none; }
     .onroad-page [class*="jg-board-"] .ec-base-table.typeList tbody tr { display: grid; grid-template-columns: 1fr auto; gap: var(--s-2); padding: var(--s-4) 0; border-bottom: 1px solid var(--c-line); }
     .onroad-page [class*="jg-board-"] .ec-base-table.typeList tbody td { border: 0; padding: 0 var(--s-3); }
+}
+
+/* ============================================================================
+   Product detail — minimal editorial polish
+   Scope: .jg-product-detail-page (infoArea) + .jg-product-additional-page
+   Approach: thin ink underlines, serif hierarchy, mono eyebrows, no heavy
+   paper/cream boxes. Trust content-led whitespace over borders.
+   ============================================================================ */
+
+/* ---------- infoArea shell: match page bg, kill the boxed border ----------
+   Cafe24 main.css 2663-2674 wraps .infoArea in a white-card + 1px border.
+   Our page background is var(--c-cream) so that card visibly floats. Override
+   to transparent bg, no border, retain sticky behavior. */
+.onroad-page .jg-product-detail-page.xans-product-detail .infoArea,
+.onroad-page .jg-product-detail-page .infoArea {
+    background: transparent !important;
+    border: 0 !important;
+    padding: 0 !important;
+    font-size: inherit;
+    line-height: inherit;
+}
+/* keep sticky — but let the content breathe a bit from the left without a box */
+@media (min-width: 921px) {
+    .onroad-page .jg-product-detail-page.xans-product-detail .infoArea {
+        padding-left: var(--s-6) !important;
+    }
+}
+
+/* ---------- headingArea: title + status badge ---------- */
+.onroad-page .jg-product-detail-page .headingArea {
+    padding: 0 0 var(--s-4);
+    border-bottom: 0 !important;
+}
+.onroad-page .jg-product-detail-page .headingArea .icon {
+    display: inline-flex; flex-wrap: wrap; gap: 6px;
+    margin: 0 0 var(--s-3);
+    min-height: 0;
+}
+.onroad-page .jg-product-detail-page .headingArea .icon:empty { display: none; margin: 0; }
+.onroad-page .jg-product-detail-page .headingArea .icon img {
+    max-height: 18px; width: auto;
+}
+@supports selector(:has(*)) {
+    .onroad-page .jg-product-detail-page .headingArea .icon img { display: none; }
+    .onroad-page .jg-product-detail-page .headingArea .icon::before { content: ""; display: none; }
+    .onroad-page .jg-product-detail-page .headingArea .icon:has(img[alt*="품절"])::before,
+    .onroad-page .jg-product-detail-page .headingArea .icon:has(img[src*="soldout"])::before {
+        content: "SOLD OUT";
+        display: inline-flex; align-items: center;
+        padding: 3px 8px;
+        font-family: var(--font-mono); font-size: 10px;
+        letter-spacing: 0.16em;
+        color: var(--c-signal);
+        border: 1px solid var(--c-signal);
+        background: transparent;
+    }
+}
+/* Small brand/category eyebrow above the title */
+.onroad-page .jg-product-detail-page .headingArea .pd-eyebrow {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--c-signal);
+    margin: 0 0 var(--s-3);
+}
+/* Product name — compact sans, not the Fraunces display face */
+.onroad-page .jg-product-detail-page .headingArea h1 {
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 1.35;
+    letter-spacing: -0.005em;
+    color: var(--c-ink);
+    margin: 0 0 var(--s-3);
+    max-width: 34ch;
+    font-variation-settings: normal;
+}
+/* 3-line lede below title — smaller meta blurb */
+.onroad-page .jg-product-detail-page .headingArea .pd-lede {
+    font-family: var(--font-sans);
+    font-weight: 400;
+    font-size: 12.5px;
+    line-height: 1.65;
+    color: var(--c-meta);
+    margin: 0 0 var(--s-3);
+    max-width: 40ch;
+    letter-spacing: 0;
+}
+.onroad-page .jg-product-detail-page .headingArea .pd-lede br { display: inline; }
+.onroad-page .jg-product-detail-page .headingArea .delivery {
+    font-family: var(--font-mono); font-size: 10px;
+    letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--c-meta);
+    display: inline-block; margin-top: 0;
+}
+
+/* ---------- Spec block (replaces product accordion) ---------- */
+.onroad-page .jg-product-detail-page .pd-spec-block {
+    margin: var(--s-4) 0;
+    padding: 0;
+    border-top: 0;
+}
+.onroad-page .jg-product-detail-page .pd-spec-block .topLogo:empty,
+.onroad-page .jg-product-detail-page .pd-spec-block .topLogo.displaynone { display: none; }
+
+/* ---------- Disclaimer footnote (below action buttons) ---------- */
+.onroad-page .jg-product-detail-page .pd-disclaim {
+    font-family: var(--font-sans);
+    font-size: 11px;
+    line-height: 1.5;
+    color: var(--c-meta);
+    margin: var(--s-3) 0 0;
+    padding: 0;
+    letter-spacing: 0;
+}
+
+/* ---------- Accordion (제품 정보 / 리뷰 / Q&A / 상세 설명) ----------
+   Flat rows with ink underlines. No boxed containers. */
+.onroad-page .jg-detail-accordion-list { display: block; }
+.onroad-page .jg-detail-accordion-section {
+    background: transparent;
+    border: 0;
+    border-top: 1px solid var(--c-line);
+    padding: 0;
+    margin: 0;
+}
+.onroad-page .jg-detail-accordion-section:last-of-type { border-bottom: 1px solid var(--c-line); }
+.onroad-page .jg-detail-accordion-section--product {
+    border: 0;
+    border-top: 1px solid var(--c-ink);
+    border-bottom: 1px solid var(--c-line);
+    background: transparent;
+    margin: var(--s-5) 0 var(--s-6);
+}
+.onroad-page .jg-detail-accordion-summary {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: var(--s-4);
+    padding: var(--s-4) 0;
+    cursor: pointer;
+    list-style: none;
+    position: relative;
+}
+.onroad-page .jg-detail-accordion-summary::-webkit-details-marker { display: none; }
+.onroad-page .jg-detail-accordion-summary::after {
+    content: ""; width: 10px; height: 10px;
+    flex-shrink: 0;
+    border-right: 1px solid var(--c-ink);
+    border-bottom: 1px solid var(--c-ink);
+    transform: rotate(45deg) translate(-2px, -2px);
+    transition: transform 0.25s ease;
+    margin-left: auto;
+}
+.onroad-page .jg-detail-accordion-section[open] > .jg-detail-accordion-summary::after {
+    transform: rotate(-135deg) translate(-2px, -2px);
+}
+.onroad-page .jg-detail-accordion-summary > span:first-child {
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.3;
+    color: var(--c-ink);
+    letter-spacing: 0;
+}
+.onroad-page .jg-detail-accordion-summary em {
+    font-style: normal;
+    font-family: var(--font-mono); font-size: 11px;
+    letter-spacing: 0.12em;
+    color: var(--c-meta);
+    margin-left: auto;
+    padding-right: var(--s-3);
+}
+.onroad-page .jg-detail-accordion-section--review .jg-detail-accordion-summary em,
+.onroad-page .jg-detail-accordion-section--qna .jg-detail-accordion-summary em {
+    color: var(--c-signal);
+    font-size: 12px;
+    letter-spacing: 0.04em;
+}
+.onroad-page .jg-detail-accordion-body {
+    padding: var(--s-2) 0 var(--s-6);
+}
+
+/* ---------- jg-detail-trust: inline dotted tag row ---------- */
+.onroad-page .jg-detail-trust {
+    display: flex; flex-wrap: wrap; gap: 0;
+    margin: 0 0 var(--s-5);
+    font-family: var(--font-mono); font-size: 10px;
+    letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--c-meta);
+}
+.onroad-page .jg-detail-trust span {
+    padding: 0;
+    background: transparent;
+    border: 0;
+    display: inline-flex; align-items: center;
+}
+.onroad-page .jg-detail-trust span + span::before {
+    content: "·"; margin: 0 10px; color: var(--c-line);
+}
+
+/* ---------- jg-detail-summary: lede copy ---------- */
+.onroad-page .jg-detail-summary {
+    margin: 0 0 var(--s-5);
+    padding: 0 0 var(--s-5);
+    border-bottom: 1px solid var(--c-line);
+}
+.onroad-page .jg-detail-summary strong {
+    display: block;
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: clamp(17px, 1.6vw, 20px);
+    line-height: 1.3;
+    color: var(--c-ink);
+    margin: 0 0 var(--s-2);
+    letter-spacing: -0.01em;
+    font-variation-settings: "opsz" 24;
+}
+.onroad-page .jg-detail-summary p {
+    margin: 0;
+    font-family: var(--font-sans);
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--c-text);
+    max-width: 62ch;
+}
+
+/* ---------- jg-detail-keypoints: 4-col mono list, no boxes ---------- */
+.onroad-page .jg-detail-keypoints {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--s-5);
+    margin: 0 0 var(--s-4);
+    padding: 0;
+    border: 0;
+}
+.onroad-page .jg-detail-keypoints > div {
+    padding: 0;
+    background: transparent;
+    border: 0;
+    display: flex; flex-direction: column; gap: 4px;
+}
+.onroad-page .jg-detail-keypoints > div strong {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.25;
+    color: var(--c-ink);
+    letter-spacing: -0.005em;
+    font-variation-settings: "opsz" 24;
+}
+.onroad-page .jg-detail-keypoints > div span {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: var(--c-meta);
+    text-transform: uppercase;
+}
+@media (max-width: 720px) {
+    .onroad-page .jg-detail-keypoints { grid-template-columns: repeat(2, 1fr); gap: var(--s-4); }
+}
+@media (max-width: 420px) {
+    .onroad-page .jg-detail-keypoints { grid-template-columns: 1fr; }
+}
+
+/* ---------- Spec table (inside .pd-spec-block OR accordion body) ---------- */
+.onroad-page .pd-spec-block table[border="1"],
+.onroad-page .jg-detail-accordion-body table[border="1"] {
+    width: 100%; border-collapse: collapse; border: 0;
+    margin: 0;
+    border-top: 0;
+}
+.onroad-page .pd-spec-block table[border="1"] caption,
+.onroad-page .jg-detail-accordion-body table[border="1"] caption { display: none; }
+.onroad-page .pd-spec-block table[border="1"] th,
+.onroad-page .pd-spec-block table[border="1"] td,
+.onroad-page .jg-detail-accordion-body table[border="1"] th,
+.onroad-page .jg-detail-accordion-body table[border="1"] td {
+    padding: 10px 0;
+    border: 0;
+    border-bottom: 1px solid var(--c-line);
+    vertical-align: baseline;
+    text-align: left;
+    line-height: 1.5;
+}
+.onroad-page .pd-spec-block table[border="1"] th,
+.onroad-page .jg-detail-accordion-body table[border="1"] th {
+    width: 120px;
+    font-family: var(--font-mono) !important;
+    font-size: 10px !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.14em !important;
+    text-transform: uppercase;
+    color: var(--c-meta) !important;
+    background: transparent !important;
+    padding-right: var(--s-4);
+}
+.onroad-page .pd-spec-block table[border="1"] th span,
+.onroad-page .jg-detail-accordion-body table[border="1"] th span {
+    font-family: inherit !important; font-size: inherit !important;
+    font-weight: inherit !important; color: inherit !important;
+}
+.onroad-page .pd-spec-block table[border="1"] td,
+.onroad-page .jg-detail-accordion-body table[border="1"] td {
+    font-family: var(--font-sans);
+    font-size: 13px;
+    color: var(--c-ink);
+}
+.onroad-page .pd-spec-block table[border="1"] td span,
+.onroad-page .jg-detail-accordion-body table[border="1"] td span {
+    font-family: inherit !important; font-size: inherit !important; color: inherit !important;
+}
+.onroad-page .pd-spec-block table[border="1"] td strike,
+.onroad-page .pd-spec-block table[border="1"] td s,
+.onroad-page .jg-detail-accordion-body table[border="1"] td strike,
+.onroad-page .jg-detail-accordion-body table[border="1"] td s {
+    color: var(--c-meta) !important;
+    text-decoration: line-through;
+}
+.onroad-page .pd-spec-block table[border="1"] td strong,
+.onroad-page .jg-detail-accordion-body table[border="1"] td strong {
+    font-family: var(--font-sans) !important;
+    font-weight: 500 !important;
+    font-size: 14px !important;
+    color: var(--c-ink) !important;
+    letter-spacing: 0;
+}
+
+/* ---------- Guide area (최소주문수량) ---------- */
+.onroad-page .jg-product-detail-page .guideArea {
+    padding: var(--s-3) 0 var(--s-2);
+    border-top: 0;
+    font-family: var(--font-mono);
+    font-size: 10px; letter-spacing: 0.14em;
+    color: var(--c-meta);
+    text-transform: uppercase;
+}
+.onroad-page .jg-product-detail-page .guideArea p { margin: 0; }
+.onroad-page .jg-product-detail-page .guideArea h3,
+.onroad-page .jg-product-detail-page .guideArea .sizeGuide.displaynone { display: none; }
+
+/* ---------- totalProducts: clean single-row line ---------- */
+.onroad-page .jg-product-detail-page #totalProducts {
+    background: transparent;
+    border: 0;
+    border-top: 1px solid var(--c-line);
+    padding: 0;
+    margin: var(--s-4) 0 0;
+    font-family: var(--font-sans);
+}
+.onroad-page #totalProducts > table { width: 100%; border-collapse: collapse; border: 0; }
+.onroad-page #totalProducts > table caption,
+.onroad-page #totalProducts > table thead { display: none; }
+.onroad-page #totalProducts > table td {
+    padding: var(--s-4) 0;
+    border: 0; border-bottom: 1px solid var(--c-line);
+    vertical-align: middle;
+    color: var(--c-ink);
+}
+.onroad-page #totalProducts > table tbody tr:last-child td { border-bottom: 0; }
+.onroad-page #totalProducts td:first-child {
+    font-family: var(--font-serif); font-weight: 400;
+    font-size: 14px; line-height: 1.4;
+    color: var(--c-ink);
+    letter-spacing: -0.005em;
+    padding-right: var(--s-3);
+    font-variation-settings: "opsz" 24;
+}
+.onroad-page #totalProducts td .quantity {
+    display: inline-flex; align-items: stretch;
+    border: 1px solid var(--c-line);
+    background: transparent;
+    height: 32px;
+}
+.onroad-page #totalProducts td .quantity input[type="text"] {
+    width: 36px; text-align: center;
+    border: 0 !important; background: transparent;
+    font-family: var(--font-mono); font-size: 13px; color: var(--c-ink);
+    padding: 0;
+}
+.onroad-page #totalProducts td .quantity a {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 28px; min-width: 28px; padding: 0;
+    background: transparent;
+    color: var(--c-ink);
+    text-decoration: none;
+    border: 0;
+    border-left: 1px solid var(--c-line);
+    font-size: 0; cursor: pointer;
+}
+.onroad-page #totalProducts td .quantity a:first-of-type {
+    border-left: 0; border-right: 1px solid var(--c-line);
+}
+.onroad-page #totalProducts td .quantity a.up::before { content: "+"; font-size: 15px; font-family: var(--font-mono); }
+.onroad-page #totalProducts td .quantity a.down::before { content: "−"; font-size: 15px; font-family: var(--font-mono); }
+.onroad-page #totalProducts td .quantity a:hover { background: var(--c-ink); color: var(--c-cream); }
+.onroad-page #totalProducts td.right {
+    text-align: right;
+    font-family: var(--font-mono);
+    font-weight: 400;
+    font-size: 13px;
+    color: var(--c-ink);
+}
+.onroad-page #totalProducts td.right .quantity_price { font-weight: 500; }
+.onroad-page #totalProducts td.right .mileage { font-size: 10px; color: var(--c-meta); margin-left: 6px; }
+.onroad-page #totalProducts tr.option td.middle { padding: 0; border-top: 1px dashed var(--c-line); }
+.onroad-page #totalProducts tr.option table { width: 100%; }
+.onroad-page #totalProducts tr.option table th,
+.onroad-page #totalProducts tr.option table td {
+    padding: 8px 0;
+    border: 0;
+    font-size: 11px;
+    color: var(--c-meta);
+}
+.onroad-page #totalProducts tr.option table tbody:empty { display: none; }
+
+/* ---------- Option table hide when empty ---------- */
+.onroad-page .jg-product-detail-page table.xans-product-option tbody:empty { display: none; }
+.onroad-page .jg-product-detail-page table.xans-product-option .selectButton a {
+    display: inline-flex; align-items: center; justify-content: center;
+    min-height: 36px; padding: 0 14px;
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border: 1px solid var(--c-ink); background: transparent; color: var(--c-ink);
+    text-decoration: none;
+}
+.onroad-page .jg-product-detail-page table.xans-product-option .selectButton a:hover { background: var(--c-ink); color: var(--c-cream); }
+
+/* ---------- Total price row: simple line, serif amount ---------- */
+.onroad-page .jg-product-detail-page .totalPrice {
+    display: flex; align-items: baseline; justify-content: space-between;
+    gap: var(--s-4); flex-wrap: nowrap;
+    padding: var(--s-4) 0;
+    margin: var(--s-3) 0 var(--s-4);
+    background: transparent;
+    border: 0;
+    border-top: 1px solid var(--c-line);
+    border-bottom: 0;
+}
+.onroad-page .jg-product-detail-page .totalPrice > .title,
+.onroad-page .jg-product-detail-page .totalPrice strong.title {
+    font-family: var(--font-mono);
+    font-weight: 500;
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--c-meta);
+    margin: 0;
+    display: inline-flex; align-items: baseline; gap: 6px;
+}
+.onroad-page .jg-product-detail-page .totalPrice .qty {
+    font-size: 9px; opacity: 0.65; font-weight: 400;
+}
+.onroad-page .jg-product-detail-page .totalPrice > span {
+    display: inline-flex; align-items: baseline; gap: 6px;
+    white-space: nowrap;
+}
+.onroad-page .jg-product-detail-page .totalPrice strong:not(.title) {
+    font-family: var(--font-serif);
+    font-weight: 300;
+    font-size: clamp(22px, 2.4vw, 30px);
+    line-height: 1;
+    color: var(--c-ink);
+    letter-spacing: -0.015em;
+    font-variation-settings: "opsz" 32;
+}
+.onroad-page .jg-product-detail-page .totalPrice strong em {
+    font-style: italic;
+    color: var(--c-signal);
+    font-variation-settings: "opsz" 32, "SOFT" 100;
+}
+.onroad-page .jg-product-detail-page .totalPrice > span > :nth-child(2) {
+    font-family: var(--font-mono); font-size: 10px;
+    color: var(--c-meta); letter-spacing: 0.04em;
+    font-weight: 400;
+}
+
+/* ---------- Purchase notice: inline list, no box ---------- */
+.onroad-page .jg-purchase-notice {
+    margin: var(--s-3) 0 var(--s-5);
+    padding: 0;
+    background: transparent;
+    border: 0;
+}
+.onroad-page .jg-purchase-notice strong {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--c-ink);
+    margin: 0 0 var(--s-2);
+}
+.onroad-page .jg-purchase-notice ul {
+    list-style: none; padding: 0; margin: 0;
+    font-family: var(--font-sans);
+    font-size: 12px;
+    line-height: 1.6;
+    color: var(--c-meta);
+}
+.onroad-page .jg-purchase-notice ul li {
+    position: relative;
+    padding-left: 12px;
+    margin-bottom: 4px;
+}
+.onroad-page .jg-purchase-notice ul li::before {
+    content: ""; position: absolute; left: 0; top: 8px;
+    width: 4px; height: 1px; background: var(--c-meta);
+}
+
+/* ---------- Page links: mono caption row ---------- */
+.onroad-page .jg-page-links.jg-detail-links {
+    display: flex; gap: var(--s-5); flex-wrap: wrap;
+    margin: 0 0 var(--s-6);
+    padding: var(--s-3) 0;
+    border-bottom: 1px solid var(--c-line);
+}
+.onroad-page .jg-page-links.jg-detail-links a {
+    flex: 0 0 auto;
+    padding: 0;
+    font-family: var(--font-mono); font-size: 10px;
+    letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--c-ink);
+    background: transparent;
+    border: 0;
+    text-decoration: none;
+    border-bottom: 1px solid var(--c-line);
+    padding-bottom: 3px;
+    transition: border-color 0.2s ease, color 0.2s ease;
+    min-height: 0;
+}
+.onroad-page .jg-page-links.jg-detail-links a:hover {
+    color: var(--c-signal);
+    border-bottom-color: var(--c-signal);
+}
+
+/* ---------- Action buttons: compact ---------- */
+.onroad-page .jg-product-detail-page .productAction { margin: var(--s-3) 0 0; }
+.onroad-page .jg-product-detail-page .productAction .action_button {
+    display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: var(--s-2);
+    margin: 0 0 var(--s-3);
+}
+@media (max-width: 720px) {
+    .onroad-page .jg-product-detail-page .productAction .action_button {
+        grid-template-columns: 1fr 1fr;
+    }
+    .onroad-page .jg-product-detail-page .productAction .action_button .btnSubmit { grid-column: 1 / -1; }
+}
+.onroad-page .jg-product-detail-page .productAction .action_button [class^='btn'] {
+    min-height: 48px; height: auto; padding: 0 var(--s-4);
+    border-radius: 0 !important;
+    font-family: var(--font-mono) !important;
+    font-size: 11px !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    line-height: 1 !important;
+    transition: all 0.15s ease;
+}
+.onroad-page .jg-product-detail-page .productAction .action_button .btnSubmit {
+    background: var(--c-signal) !important;
+    color: var(--c-cream) !important;
+    border: 1px solid var(--c-signal) !important;
+}
+.onroad-page .jg-product-detail-page .productAction .action_button .btnSubmit:hover {
+    background: var(--c-signal-2) !important; border-color: var(--c-signal-2) !important;
+}
+.onroad-page .jg-product-detail-page .productAction .action_button .btnNormal {
+    background: transparent !important;
+    color: var(--c-ink) !important;
+    border: 1px solid var(--c-ink) !important;
+}
+.onroad-page .jg-product-detail-page .productAction .action_button .btnNormal:hover {
+    background: var(--c-ink) !important; color: var(--c-cream) !important;
+}
+
+/* Soldout row */
+.onroad-page .jg-product-detail-page .productAction .ec-base-button.soldout {
+    display: grid; grid-template-columns: 1.4fr 1fr; gap: var(--s-2);
+    margin: 0 0 var(--s-3);
+}
+.onroad-page .jg-product-detail-page .productAction .ec-base-button.soldout [class^='btn'] {
+    min-height: 48px; border-radius: 0 !important;
+    font-family: var(--font-mono) !important;
+    font-size: 11px !important;
+    letter-spacing: 0.16em; text-transform: uppercase;
+    font-weight: 500 !important;
+}
+.onroad-page .jg-product-detail-page .productAction .ec-base-button.soldout .btnSubmit {
+    background: transparent !important; color: var(--c-meta) !important;
+    border: 1px solid var(--c-line) !important;
+    cursor: not-allowed;
+}
+.onroad-page .jg-product-detail-page .productAction .ec-base-button.soldout .btnNormal {
+    background: transparent !important; color: var(--c-ink) !important;
+    border: 1px solid var(--c-ink) !important;
+}
+
+/* Fixed bottom bar */
+.onroad-page #orderFixArea.gFixed {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    padding: var(--s-2) var(--s-4);
+    background: rgba(15,13,11,0.97);
+    border-top: 1px solid rgba(244,239,230,0.12);
+    backdrop-filter: blur(12px);
+    z-index: 50;
+}
+.onroad-page #orderFixArea.gFixed .ec-base-button.gColumn {
+    display: flex; gap: var(--s-2); margin: 0;
+    max-width: var(--container); margin: 0 auto;
+}
+.onroad-page #orderFixArea.gFixed .ec-base-button.gColumn > * {
+    flex: 1; min-height: 44px;
+    border-radius: 0 !important;
+    font-family: var(--font-mono) !important;
+    font-size: 11px !important;
+    letter-spacing: 0.14em !important;
+    text-transform: uppercase;
+    font-weight: 500 !important;
+}
+
+/* Collapse empty sections */
+.onroad-page .jg-product-detail-page .productSet:empty,
+.onroad-page .jg-product-detail-page .regularDelivery:empty,
+.onroad-page .jg-product-detail-page table.displaynone,
+.onroad-page .jg-product-detail-page .regularDelivery.displaynone { display: none !important; }
+
+/* ============================================================================
+   Additional section — review / Q&A / detail / relation (minimal)
+   ============================================================================ */
+.onroad-page .jg-product-additional-page {
+    padding: clamp(32px, 5vw, 64px) 0 clamp(48px, 6vw, 96px);
+    border-top: 0;
+    max-width: var(--container);
+    margin: clamp(48px, 6vw, 80px) auto 0;
+}
+.onroad-page .jg-product-additional-page > .jg-detail-accordion-list {
+    padding: 0 var(--s-5);
+}
+.onroad-page .jg-product-additional-page .jg-detail-accordion-section {
+    border-top: 1px solid var(--c-line);
+}
+.onroad-page .jg-product-additional-page .jg-detail-accordion-section:last-of-type {
+    border-bottom: 1px solid var(--c-line);
+}
+
+/* Review/Q&A board heading (REVIEW / Q&A) inside accordion body
+   — hide the h2 label (redundant with accordion summary), keep only the
+   목록/작성 action buttons aligned to the right. */
+.onroad-page .board_title {
+    display: flex; align-items: center; justify-content: flex-end;
+    gap: var(--s-4); flex-wrap: wrap;
+    padding: var(--s-3) 0 var(--s-3);
+    margin: 0 0 var(--s-3);
+    border-bottom: 0;
+}
+.onroad-page .board_title h2 { display: none; }
+.onroad-page .board_title .ec-base-button {
+    display: inline-flex; gap: var(--s-2); margin: 0;
+}
+.onroad-page a.btnNormalFix,
+.onroad-page .btnNormalFix {
+    display: inline-flex; align-items: center; justify-content: center;
+    min-height: 32px; padding: 0 var(--s-3);
+    font-family: var(--font-mono); font-size: 10px;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    border: 1px solid var(--c-line); background: transparent; color: var(--c-ink);
+    border-radius: 0 !important;
+    text-decoration: none;
+    transition: all 0.15s ease;
+}
+.onroad-page a.btnNormalFix:hover,
+.onroad-page .btnNormalFix:hover {
+    border-color: var(--c-ink);
+    background: var(--c-ink); color: var(--c-cream);
+}
+
+/* Review/Q&A table */
+.onroad-page .jg-product-additional-page .ec-base-table.typeList {
+    margin: 0 0 var(--s-3);
+    border-top: 0;
+}
+.onroad-page .jg-product-additional-page .ec-base-table.typeList table {
+    width: 100%; border-collapse: collapse; border: 0;
+}
+.onroad-page .jg-product-additional-page .ec-base-table.typeList caption { display: none; }
+.onroad-page .jg-product-additional-page .ec-base-table.typeList th,
+.onroad-page .jg-product-additional-page .ec-base-table.typeList td {
+    padding: 12px 10px;
+    border: 0;
+    border-bottom: 1px solid var(--c-line);
+    vertical-align: middle;
+    text-align: left;
+    background: transparent;
+}
+.onroad-page .jg-product-additional-page .ec-base-table.typeList thead th {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--c-meta);
+    border-bottom: 1px solid var(--c-line);
+    padding-top: 10px; padding-bottom: 10px;
+}
+.onroad-page .jg-product-additional-page .ec-base-table.typeList tbody td {
+    font-family: var(--font-sans);
+    font-size: 12px;
+    color: var(--c-ink);
+}
+.onroad-page .jg-product-additional-page .ec-base-table.typeList .subject a {
+    color: var(--c-ink); text-decoration: none;
+    font-family: var(--font-serif); font-size: 14px;
+    font-variation-settings: "opsz" 24;
+    letter-spacing: -0.005em;
+}
+.onroad-page .jg-product-additional-page .ec-base-table.typeList .subject a:hover { color: var(--c-signal); }
+.onroad-page .jg-product-additional-page .ec-base-table.typeList .RW {
+    color: var(--c-meta); font-family: var(--font-mono); font-size: 10px;
+}
+.onroad-page .jg-product-additional-page .ec-base-table.typeList tr:hover td {
+    background: rgba(244,239,230,0.3);
+}
+
+/* Review/Q&A minor (성인인증) / no-access */
+.onroad-page .jg-product-additional-page .contents .minor,
+.onroad-page .jg-product-additional-page .contents .noAccess {
+    padding: var(--s-6) 0;
+    background: transparent;
+    border: 0;
+    text-align: center;
+    font-family: var(--font-serif); font-size: 14px;
+    font-style: italic;
+    color: var(--c-meta);
+}
+
+/* 상세 설명 body */
+.onroad-page .jg-detail-accordion-section--detail .jg-detail-accordion-body {
+    padding: 0;
+}
+.onroad-page .jg-detail-accordion-section--detail .productDetail {
+    padding: var(--s-5) 0 var(--s-8);
+    font-family: var(--font-sans);
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--c-text);
+}
+.onroad-page .jg-detail-accordion-section--detail .productDetail img {
+    max-width: 100%; height: auto; display: block; margin: var(--s-4) auto;
+}
+
+/* Relation slider */
+.onroad-page .relation {
+    margin-top: var(--s-10);
+    padding-top: var(--s-6);
+    border-top: 1px solid var(--c-line);
+}
+.onroad-page .relation_title {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: clamp(16px, 1.6vw, 20px);
+    letter-spacing: -0.005em;
+    color: var(--c-ink);
+    margin: 0 0 var(--s-5);
+    display: flex; align-items: baseline; flex-wrap: wrap; gap: var(--s-3);
+    font-variation-settings: "opsz" 24;
+}
+.onroad-page .relation_title span {
+    font-family: var(--font-mono); font-size: 10px;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--c-meta);
+    font-weight: 400;
+}
+.onroad-page .relation_slide { position: relative; }
+.onroad-page .relation_slide .prdList {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: var(--s-5);
+    list-style: none; margin: 0; padding: 0;
+}
+.onroad-page .relation_slide .prdList__item {
+    display: flex; flex-direction: column; gap: var(--s-2);
+}
+.onroad-page .relation_slide .thumbnail { background: var(--c-paper); border: 0; overflow: hidden; }
+.onroad-page .relation_slide .thumbnail img {
+    width: 100%; aspect-ratio: 3/4; object-fit: cover;
+    border: 0;
+    transition: transform 0.6s ease;
+}
+.onroad-page .relation_slide .thumbnail:hover img { transform: scale(1.03); }
+.onroad-page .relation_slide .description { padding: 0; }
+.onroad-page .relation_slide .name a {
+    font-family: var(--font-serif); font-weight: 400; font-size: 14px;
+    color: var(--c-ink); text-decoration: none; line-height: 1.3;
+    font-variation-settings: "opsz" 24;
+    letter-spacing: -0.005em;
+}
+.onroad-page .relation_slide .name a:hover { color: var(--c-signal); }
+.onroad-page .relation_slide .price {
+    margin-top: 2px;
+    font-family: var(--font-mono); font-size: 11px;
+    color: var(--c-ink);
+    display: flex; gap: var(--s-2); align-items: baseline;
+}
+.onroad-page .relation_slide .salePrice { color: var(--c-signal); font-weight: 500; }
+.onroad-page .relation_slide .prdPrice { color: var(--c-meta); text-decoration: line-through; font-size: 10px; }
+.onroad-page .relation_slide .swiper-button-prev,
+.onroad-page .relation_slide .swiper-button-next {
+    width: 32px; height: 32px;
+    background: transparent; border: 1px solid var(--c-line);
+    color: var(--c-ink);
+    top: 40%;
+    border-radius: 0;
+}
+.onroad-page .relation_slide .swiper-scrollbar { margin-top: var(--s-3); }
+
+/* prdInfo bottom folds — compact, flat */
+.onroad-page #prdInfo {
+    margin-top: var(--s-10);
+    padding: clamp(32px, 4vw, 56px) 0;
+    background: transparent;
+    border-top: 1px solid var(--c-line);
+    border-bottom: 0;
+}
+.onroad-page #prdInfo .detail_guide {
+    max-width: var(--container); margin: 0 auto;
+    padding: 0 var(--s-5);
+    display: grid; grid-template-columns: 1fr 1fr; gap: 0 var(--s-8);
+}
+.onroad-page #prdInfo .detail_guide .ec-base-fold { padding: 0; }
+.onroad-page #prdInfo .detail_guide .ec-base-fold .title {
+    border-bottom: 1px solid var(--c-line);
+    padding: 0;
+}
+.onroad-page #prdInfo .detail_guide .ec-base-fold .title h2 {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--c-ink);
+    margin: 0;
+    padding: var(--s-3) 30px var(--s-3) 0;
+    letter-spacing: -0.005em;
+    font-variation-settings: "opsz" 24;
+}
+.onroad-page #prdInfo .detail_guide .ec-base-fold .contents {
+    padding: var(--s-3) 0 var(--s-5);
+    border-bottom: 1px solid var(--c-line);
+    color: var(--c-text);
+    font-size: 12px;
+    line-height: 1.7;
+}
+.onroad-page #prdInfo .detail_guide .ec-base-fold .contents strong { color: var(--c-ink); font-weight: 500; }
+@media (max-width: 720px) {
+    .onroad-page #prdInfo .detail_guide { grid-template-columns: 1fr; gap: 0; padding: 0 var(--s-4); }
+}
+
+/* Modal (boardReport) hidden by default */
+.onroad-page .boardReport.displaynone { display: none !important; }
+
+/* Mobile consolidation */
+@media (max-width: 720px) {
+    .onroad-page .jg-product-additional-page { padding: var(--s-8) 0; margin-top: var(--s-8); }
+    .onroad-page .jg-product-additional-page > .jg-detail-accordion-list { padding: 0 var(--s-4); }
+    .onroad-page #totalProducts td { padding: var(--s-3) 0; }
+    .onroad-page .jg-product-additional-page .ec-base-table.typeList thead { display: none; }
+    .onroad-page .jg-product-additional-page .ec-base-table.typeList tbody tr {
+        display: grid; grid-template-columns: 1fr auto; gap: 4px;
+        padding: var(--s-3) 0;
+    }
+    .onroad-page .jg-product-additional-page .ec-base-table.typeList tbody td {
+        border: 0; padding: 0; font-size: 12px;
+    }
+    .onroad-page .jg-product-additional-page .ec-base-table.typeList tbody td.subject {
+        grid-column: 1 / -1;
+    }
+}
+
+/* ============================================================================
+   Product detail — issue fixes (sticky off, dark borders, quantity box, total)
+   Appended to ensure highest precedence within this file.
+   ============================================================================ */
+
+/* 1) Kill sticky → both columns scroll together (static layout) */
+.onroad-page .jg-product-detail-page.xans-product-detail .infoArea,
+.onroad-page .jg-product-detail-page .infoArea {
+    position: static !important;
+    top: auto !important;
+    background: transparent !important;
+    border: 0 !important;
+    padding: 0 !important;
+}
+@media (min-width: 921px) {
+    .onroad-page .jg-product-detail-page.xans-product-detail .infoArea {
+        padding-left: var(--s-6) !important;
+    }
+}
+
+/* 2) Breadcrumb (.section.path) — make visible above the product area
+   Cafe24 default floats it right + 12px font; we want a quiet mono caption
+   anchored right, padded away from the fixed header. */
+.onroad-page .section.path {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: calc(var(--header-h) + 24px) var(--s-5) var(--s-3);
+    overflow: visible;
+    height: auto;
+    line-height: 1.4;
+}
+.onroad-page .section.path ol {
+    float: none;
+    display: flex; justify-content: flex-end; flex-wrap: wrap;
+    gap: 4px;
+    margin: 0; padding: 0; list-style: none;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--c-meta);
+}
+.onroad-page .section.path li { display: inline-flex; align-items: center; }
+.onroad-page .section.path li a,
+.onroad-page .section.path li strong a {
+    color: var(--c-meta);
+    text-decoration: none;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 400;
+}
+.onroad-page .section.path li:hover a { color: var(--c-signal); }
+.onroad-page .section.path li strong,
+.onroad-page .section.path li strong a { color: var(--c-ink); font-weight: 500; }
+.onroad-page .section.path li:not(:first-child)::before {
+    content: "/"; margin: 0 8px 0 6px; color: var(--c-line); font-weight: 300;
+}
+.onroad-page .section.path li:first-child::before { content: none; }
+.onroad-page .section.path > span { display: none; } /* hide the "현재 위치" label */
+
+/* 3) Kill dark black lines inside buy section
+   cafe24 main.css 2820 (#totalProducts border-top black) and
+   cafe24 main.css 2836-2843 (#totalPrice black border + white bg). */
+.onroad-page .jg-product-detail-page #totalProducts {
+    border-top: 1px solid var(--c-line) !important;
+    background: transparent !important;
+    margin-top: var(--s-3) !important;
+}
+.onroad-page .jg-product-detail-page #totalProducts,
+.onroad-page .jg-product-detail-page #totalProducts table,
+.onroad-page .jg-product-detail-page #totalProducts > table > tbody > tr:first-child > td {
+    border-color: var(--c-line) !important;
+}
+.onroad-page .jg-product-detail-page #totalPrice,
+.onroad-page .jg-product-detail-page .totalPrice {
+    margin: var(--s-3) 0 var(--s-3) !important;
+    padding: var(--s-3) 0 !important;
+    border-top: 1px solid var(--c-line) !important;
+    border-bottom: 0 !important;
+    background: transparent !important;
+    color: var(--c-ink) !important;
+}
+
+/* 4) 배송비 아래 여백 줄이기 — 빈 섹션/테이블 강제 제거 */
+.onroad-page .jg-product-detail-page table[module^="product_option"]:has(tbody:empty + tbody),
+.onroad-page .jg-product-detail-page table[class*="xans-product-option"]:has(tbody:empty + tbody) {
+    display: none !important;
+}
+/* Fallback for browsers without :has — hide empty option table via selectors */
+.onroad-page .jg-product-detail-page .pd-spec-block ~ table.xans-product-option {
+    margin: 0 !important;
+}
+.onroad-page .jg-product-detail-page .pd-spec-block ~ table.xans-product-option tbody { padding: 0; }
+.onroad-page .jg-product-detail-page .pd-spec-block ~ table.xans-product-option tbody:empty { display: none !important; }
+.onroad-page .jg-product-detail-page .productSet,
+.onroad-page .jg-product-detail-page .regularDelivery,
+.onroad-page .jg-product-detail-page table[summary]:not([module]) {
+    display: none !important;
+}
+/* naver mileage notice hidden when displaynone */
+.onroad-page .jg-product-detail-page > p.displaynone,
+.onroad-page .jg-product-detail-page .infoArea > p.displaynone { display: none !important; }
+/* Ensure guideArea is compact */
+.onroad-page .jg-product-detail-page .guideArea {
+    padding: 0 !important;
+    margin: var(--s-3) 0 0 !important;
+}
+/* Tighten pd-spec-block bottom margin */
+.onroad-page .jg-product-detail-page .pd-spec-block {
+    margin: var(--s-3) 0 0 !important;
+}
+
+/* 5) Quantity box rebuild — ensure inline-flex renders properly
+   cafe24 renders <span class="quantity"><input><a class="up"><a class="down"></span>
+   Where up anchor may contain <img> arrow. Override hard. */
+.onroad-page .jg-product-detail-page #totalProducts td {
+    padding: var(--s-3) 0 !important;
+    font-size: 13px !important;
+    font-weight: 400 !important;
+    line-height: 1.45 !important;
+    color: var(--c-ink) !important;
+}
+.onroad-page .jg-product-detail-page #totalProducts span.quantity {
+    display: inline-flex !important;
+    align-items: stretch !important;
+    border: 1px solid var(--c-line) !important;
+    background: transparent !important;
+    height: 34px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    vertical-align: middle;
+    width: auto !important;
+    float: none !important;
+}
+.onroad-page .jg-product-detail-page #totalProducts span.quantity input[type="text"],
+.onroad-page .jg-product-detail-page #totalProducts span.quantity input.quantity_opt {
+    width: 40px !important;
+    height: 100% !important;
+    border: 0 !important;
+    outline: 0 !important;
+    background: transparent !important;
+    font-family: var(--font-mono) !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    text-align: center !important;
+    color: var(--c-ink) !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    order: 2 !important;
+    box-sizing: border-box !important;
+}
+.onroad-page .jg-product-detail-page #totalProducts span.quantity a {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 30px !important;
+    min-width: 30px !important;
+    height: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+    color: var(--c-ink) !important;
+    border: 0 !important;
+    border-left: 1px solid var(--c-line) !important;
+    font-size: 0 !important;
+    line-height: 1 !important;
+    text-decoration: none !important;
+    cursor: pointer;
+    flex-shrink: 0;
+    box-sizing: border-box !important;
+}
+.onroad-page .jg-product-detail-page #totalProducts span.quantity a.up { order: 3 !important; border-left: 1px solid var(--c-line) !important; }
+.onroad-page .jg-product-detail-page #totalProducts span.quantity a.down { order: 1 !important; border-left: 0 !important; border-right: 1px solid var(--c-line) !important; }
+.onroad-page .jg-product-detail-page #totalProducts span.quantity a img { display: none !important; }
+.onroad-page .jg-product-detail-page #totalProducts span.quantity a::before {
+    font-family: var(--font-mono);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+    color: var(--c-ink);
+    content: "";
+}
+.onroad-page .jg-product-detail-page #totalProducts span.quantity a.up::before { content: "+"; }
+.onroad-page .jg-product-detail-page #totalProducts span.quantity a.down::before { content: "−"; }
+.onroad-page .jg-product-detail-page #totalProducts span.quantity a:hover {
+    background: var(--c-ink) !important;
+    color: var(--c-cream) !important;
+}
+.onroad-page .jg-product-detail-page #totalProducts span.quantity a:hover::before { color: var(--c-cream); }
+
+/* Center the quantity td content */
+.onroad-page .jg-product-detail-page #totalProducts td:nth-child(2) {
+    text-align: center;
+    vertical-align: middle !important;
+}
+/* Price column */
+.onroad-page .jg-product-detail-page #totalProducts td.right {
+    text-align: right !important;
+    font-family: var(--font-mono) !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    color: var(--c-ink) !important;
+    padding-right: 0 !important;
+}
+.onroad-page .jg-product-detail-page #totalProducts td.right .quantity_price {
+    font-family: var(--font-mono) !important;
+    font-weight: 500 !important;
+}
+
+/* 6) totalPrice — proper Onroad typography (beats cafe24 #totalPrice ID) */
+.onroad-page .jg-product-detail-page #totalPrice,
+.onroad-page .jg-product-detail-page .totalPrice {
+    display: flex !important;
+    align-items: baseline !important;
+    justify-content: space-between !important;
+    gap: var(--s-4) !important;
+    flex-wrap: nowrap !important;
+}
+.onroad-page .jg-product-detail-page #totalPrice .title,
+.onroad-page .jg-product-detail-page .totalPrice > strong.title {
+    font-family: var(--font-mono) !important;
+    font-weight: 500 !important;
+    font-size: 10px !important;
+    letter-spacing: 0.16em !important;
+    text-transform: uppercase !important;
+    color: var(--c-meta) !important;
+    margin: 0 !important;
+    display: inline-flex !important;
+    align-items: baseline !important;
+    gap: 6px !important;
+}
+.onroad-page .jg-product-detail-page #totalPrice .title .qty,
+.onroad-page .jg-product-detail-page .totalPrice .title .qty {
+    font-size: 9px !important;
+    opacity: 0.65 !important;
+    font-weight: 400 !important;
+}
+.onroad-page .jg-product-detail-page #totalPrice .total,
+.onroad-page .jg-product-detail-page #totalPrice > span,
+.onroad-page .jg-product-detail-page .totalPrice > span {
+    display: inline-flex !important;
+    align-items: baseline !important;
+    gap: 6px !important;
+    white-space: nowrap !important;
+}
+.onroad-page .jg-product-detail-page #totalPrice .total strong,
+.onroad-page .jg-product-detail-page #totalPrice > span > strong,
+.onroad-page .jg-product-detail-page .totalPrice > span > strong {
+    font-family: var(--font-serif) !important;
+    font-weight: 300 !important;
+    font-size: clamp(22px, 2.4vw, 30px) !important;
+    line-height: 1 !important;
+    color: var(--c-ink) !important;
+    letter-spacing: -0.015em !important;
+    font-variation-settings: "opsz" 32 !important;
+}
+.onroad-page .jg-product-detail-page #totalPrice .total em,
+.onroad-page .jg-product-detail-page #totalPrice strong em,
+.onroad-page .jg-product-detail-page .totalPrice strong em {
+    font-style: italic !important;
+    color: var(--c-signal) !important;
+    font-variation-settings: "opsz" 32, "SOFT" 100 !important;
+    font-family: var(--font-serif) !important;
+    font-weight: 300 !important;
+    font-size: inherit !important;
+}
+/* The "(0개)" count suffix beside the amount */
+.onroad-page .jg-product-detail-page #totalPrice > span > :nth-child(2),
+.onroad-page .jg-product-detail-page .totalPrice > span > :nth-child(2) {
+    font-family: var(--font-mono) !important;
+    font-size: 10px !important;
+    color: var(--c-meta) !important;
+    letter-spacing: 0.04em !important;
+    font-weight: 400 !important;
+}
+/* Hide the exclusive-purchase warning p when displaynone */
+.onroad-page .jg-product-detail-page .totalPrice .ec-base-help.displaynone,
+.onroad-page .jg-product-detail-page #totalPrice .ec-base-help.displaynone { display: none !important; }
+
+/* ============================================================================
+   Additional section — flat continuous flow (no accordions, no borders)
+   HTML restructured: <section class="pd-flow pd-flow--review|detail|qna">
+   Order: Review → Detail → Q&A → prdInfo
+   ============================================================================ */
+
+.onroad-page .jg-product-additional-page {
+    padding: 0 !important;
+    border: 0 !important;
+    margin: clamp(64px, 8vw, 120px) auto 0 !important;
+    max-width: var(--container);
+}
+.onroad-page .jg-product-additional-page > .jg-detail-accordion-list { padding: 0; }
+
+/* pd-flow: flat sections */
+.onroad-page .jg-product-additional-page .pd-flow {
+    padding: clamp(48px, 6vw, 88px) var(--s-5);
+    border: 0 !important;
+    margin: 0 !important;
+    background: transparent;
+}
+.onroad-page .jg-product-additional-page .pd-flow:first-of-type { padding-top: 0; }
+/* Detail goes full-bleed — admin-uploaded product images often expect no padding */
+.onroad-page .jg-product-additional-page .pd-flow--detail {
+    padding-left: 0;
+    padding-right: 0;
+}
+.onroad-page .jg-product-additional-page .pd-flow--detail .productDetail > div:first-child {
+    padding: 0;
+    margin: 0 auto;
+    max-width: 100%;
+}
+.onroad-page .jg-product-additional-page .pd-flow--detail .relation {
+    padding: clamp(32px, 4vw, 64px) var(--s-5) 0;
+    margin-top: clamp(32px, 4vw, 64px);
+    border-top: 0;
+}
+
+/* board_title: restore subtle heading (we hid earlier, now un-hide) */
+.onroad-page .jg-product-additional-page .board_title {
+    display: flex !important;
+    align-items: baseline !important;
+    justify-content: space-between !important;
+    gap: var(--s-4);
+    padding: 0 0 var(--s-4) !important;
+    margin: 0 0 var(--s-4) !important;
+    border-bottom: 0 !important;
+    flex-wrap: wrap;
+}
+.onroad-page .jg-product-additional-page .board_title h2 {
+    display: block !important;
+    font-family: var(--font-sans) !important;
+    font-weight: 500 !important;
+    font-size: 15px !important;
+    letter-spacing: 0 !important;
+    color: var(--c-ink) !important;
+    margin: 0 !important;
+    text-transform: none !important;
+    font-variation-settings: normal !important;
+}
+
+/* Kill any residual accordion section border (dead code safety) */
+.onroad-page .jg-product-additional-page .jg-detail-accordion-section,
+.onroad-page .jg-product-additional-page .jg-detail-accordion-section:last-of-type,
+.onroad-page .jg-product-additional-page .jg-detail-accordion-summary {
+    border: 0 !important;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+}
+.onroad-page .jg-product-additional-page .jg-detail-accordion-summary::after { display: none; }
+
+/* prdInfo — also flatten, no border */
+.onroad-page #prdInfo {
+    margin: 0 !important;
+    padding: clamp(48px, 6vw, 96px) var(--s-5) clamp(32px, 5vw, 64px) !important;
+    background: transparent !important;
+    border: 0 !important;
+    border-top: 1px solid var(--c-line) !important;
+}
+/* Hide the guide anchors */
+.onroad-page #prdInfo #guide,
+.onroad-page .jg-product-additional-page #review,
+.onroad-page .jg-product-additional-page #qna,
+.onroad-page .jg-product-additional-page #detail { padding: 0; height: 0; margin: 0; }
+
+/* Review / Q&A table — remove the inner border that creates visible boundary */
+.onroad-page .jg-product-additional-page .ec-base-table.typeList {
+    border-top: 0 !important;
+    margin: 0 !important;
+}
+
+/* Remove relation top border — let it flow */
+.onroad-page .relation { border-top: 0 !important; }
+
+/* Pagination spacing inside flat sections */
+.onroad-page .jg-product-additional-page .ec-base-paginate.typeList {
+    margin: var(--s-6) 0 0 !important;
+    padding: 0;
+}
+
+/* ============================================================================
+   Company / brand page — kill the 1240px centered-card layout
+   cafe24 main.css:868 gives .jg-info-page a width:min(100%-64px, 1240px) +
+   white bg. That makes the company page look like a narrow card floating in
+   cream space. Override to full-bleed; inner sections keep their own
+   max-width via .bh__inner / .manifesto__inner / etc.
+   ============================================================================ */
+.onroad-page.onroad-company,
+main.jg-info-page.jg-company-page,
+main.jg-info-page.onroad-company,
+main.jg-info-page {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+}
+/* Ensure the section.path breadcrumb still sits above the content without
+   inheriting the old narrow frame */
+.onroad-page.onroad-company + .section.path,
+body.onroad-page .section.path {
+    background: transparent;
 }
