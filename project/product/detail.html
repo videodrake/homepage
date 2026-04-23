@@ -103,6 +103,34 @@
   .pd-benefit { font-family: var(--font-mono); font-size: 10px; color: var(--c-meta); letter-spacing: 0.1em; text-transform: uppercase; line-height: 1.5; }
   .pd-benefit em { font-style: normal; color: var(--c-signal); display: block; font-size: 11px; margin-bottom: 2px; font-weight: 600; }
 
+  /* ── SIDE-DOCKED BUY PANEL (PC) ──────────── */
+  @media (min-width: 1024px) {
+    .pd-info.is-docked {
+      position: fixed; top: 92px;
+      right: max(24px, calc((100vw - 1200px) / 2));
+      width: 380px; max-height: calc(100vh - 120px);
+      overflow-y: auto; overflow-x: hidden;
+      z-index: 30;
+      background: var(--c-cream);
+      border: 1px solid var(--c-ink);
+      padding: var(--s-5);
+      box-shadow: 0 18px 48px rgba(0,0,0,0.12);
+    }
+    .pd-info.is-docked .pd-info__eyebrow,
+    .pd-info.is-docked .pd-rating,
+    .pd-info.is-docked .pd-caption,
+    .pd-info.is-docked .pd-bullets,
+    .pd-info.is-docked .pd-meta-list,
+    .pd-info.is-docked .pd-benefits { display: none; }
+    .pd-info.is-docked .pd-name { font-size: clamp(20px, 2vw, 28px); margin-bottom: var(--s-3); }
+    .pd-info.is-docked .pd-price-block { padding: var(--s-4); margin-bottom: var(--s-4); }
+    .pd-info.is-docked .pd-price-block__now { font-size: 32px; }
+    .pd-info.is-docked .pd-actions { margin-top: var(--s-4); }
+    body.has-docked-info .pd-sticky.is-on { display: none; }
+    .pd-buy-placeholder { display: none; background: var(--c-cream); }
+    .pd-info.is-docked + .pd-buy-placeholder { display: block; }
+  }
+
   @media (max-width: 920px) {
     .pd-grid { grid-template-columns: 1fr; padding: 0 var(--s-4); }
     .pd-media { border-right: 0; border-bottom: 1px solid var(--c-ink); min-height: 520px; }
@@ -503,6 +531,20 @@
   var bar = document.getElementById('scrollBar');
   var hero = document.getElementById('pdHero');
   var sticky = document.getElementById('pdSticky');
+  var info = document.querySelector('.pd-info');
+  var reviewRow = document.querySelector('.pd-review-row');
+  var footer = document.querySelector('.site-footer');
+  var isPC = function(){ return window.matchMedia('(min-width: 1024px)').matches; };
+
+  var placeholder = document.createElement('div');
+  placeholder.className = 'pd-buy-placeholder';
+  if (info && info.parentNode) info.parentNode.insertBefore(placeholder, info.nextSibling);
+  function syncPlaceholderSize() {
+    if (!info.classList.contains('is-docked')) placeholder.style.height = info.offsetHeight + 'px';
+  }
+  syncPlaceholderSize();
+  window.addEventListener('resize', syncPlaceholderSize);
+
   function onScroll() {
     var y = window.scrollY;
     var h = document.documentElement.scrollHeight - window.innerHeight;
@@ -511,6 +553,17 @@
     // Show sticky bar once user scrolls past the hero price block
     var trigger = hero.offsetTop + hero.offsetHeight * 0.55;
     sticky.classList.toggle('is-on', y > trigger && y + window.innerHeight < document.documentElement.scrollHeight - 200);
+
+    // Dock the .pd-info panel to the right once the review row is reached (PC only)
+    if (info && reviewRow) {
+      var reviewTop = reviewRow.getBoundingClientRect().top + y;
+      var footerTop = footer ? footer.getBoundingClientRect().top + y : Infinity;
+      var past = y > reviewTop - 200;
+      var nearBottom = footerTop - y < 300;
+      var dock = isPC() && past && !nearBottom;
+      info.classList.toggle('is-docked', dock);
+      document.body.classList.toggle('has-docked-info', dock);
+    }
   }
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
