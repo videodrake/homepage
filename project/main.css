@@ -1008,3 +1008,58 @@ input, textarea, select { font-family: inherit; }
   .reveal { opacity: 1 !important; transform: none !important; }
   .hero__title .word > span { transform: none !important; }
 }
+
+/* =================== ONROAD PARALLAX (window-behind-image) =================== */
+.onroad-parallax {
+  position: relative;
+  background: var(--c-ink);
+  color: var(--c-cream);
+}
+.onroad-parallax__bg {
+  position: sticky; top: 0;
+  height: 100vh;
+  margin-bottom: -100vh;
+  background-image: linear-gradient(rgba(10,8,6,0.55), rgba(10,8,6,0.55)),
+                    url('/SkinImg/img/jg_parallax_pc.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+.onroad-parallax__content {
+  position: relative; z-index: 1;
+  max-width: var(--container); margin: 0 auto;
+  padding: 50vh var(--s-12) 35vh;
+  display: flex; flex-direction: column; gap: var(--s-6);
+  align-items: flex-start;
+}
+.onroad-parallax__eyebrow {
+  font-family: var(--font-mono); font-size: 11px;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: rgba(244,239,230,0.72);
+  margin: 0;
+}
+.onroad-parallax__headline {
+  font-family: var(--font-serif); font-weight: 300;
+  font-size: clamp(40px, 6vw, 96px); letter-spacing: -0.025em;
+  line-height: 1.05;
+  font-variation-settings: "opsz" 96;
+  color: var(--c-cream);
+  margin: 0;
+  text-wrap: balance;
+}
+.onroad-parallax__headline .italic {
+  font-style: italic; color: var(--c-signal);
+  font-variation-settings: "opsz" 96, "SOFT" 50;
+}
+.onroad-parallax__lead {
+  max-width: 52ch;
+  font-size: 17px; line-height: 1.65;
+  color: rgba(244,239,230,0.82);
+  margin: 0;
+}
+@media (max-width: 768px) {
+  .onroad-parallax__content {
+    padding: 40vh var(--s-5) 20vh;
+  }
+}
