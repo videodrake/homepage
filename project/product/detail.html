@@ -118,9 +118,9 @@
   .pd-tab.is-active { color: var(--c-ink); }
   .pd-tab.is-active::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; background: var(--c-signal); }
   .pd-tab__num { color: var(--c-signal); margin-right: 6px; }
-  .pd-panels { max-width: var(--container); margin: 0 auto; padding: var(--s-16) var(--s-8); }
-  .pd-panel { display: none; }
-  .pd-panel.is-active { display: block; }
+  .pd-panels { max-width: var(--container); margin: 0 auto; padding: var(--s-16) var(--s-8); display: flex; flex-direction: column; gap: var(--s-16); }
+  .pd-panel { display: block; scroll-margin-top: 100px; }
+  .pd-panel + .pd-panel { border-top: 1px solid var(--c-line); padding-top: var(--s-16); }
   .pd-panel h2 { font-family: var(--font-serif); font-weight: 300; font-size: clamp(28px, 3.6vw, 48px); letter-spacing: -0.02em; line-height: 1.1; margin: 0 0 var(--s-8); font-variation-settings: "opsz" 72; max-width: 20ch; }
   .pd-panel h2 .italic { font-style: italic; color: var(--c-signal); font-variation-settings: "opsz" 72, "SOFT" 100; }
   .pd-panel p { color: var(--c-char); line-height: 1.7; max-width: 62ch; margin: 0 0 var(--s-5); }
@@ -341,7 +341,7 @@
 
   <section class="pd-panels">
     <!-- TAB 01 -->
-    <div class="pd-panel is-active" data-panel="01">
+    <div class="pd-panel" data-panel="01" id="panel-01">
       <h2>한 정에 담긴<br><span class="italic">하루의 기준</span>.</h2>
       <p>지구력코어는 매일 달리는 러너의 일상을 위해 설계된 건강기능식품입니다. 식약처가 인정한 기능성 원료 옥타코사놀 40mg에 비타민 B군을 더해, 작고 가벼운 정제 한 알로 매일의 섭취를 간편하게 이어갈 수 있도록 만들었습니다.</p>
 
@@ -369,7 +369,7 @@
     </div>
 
     <!-- TAB 02 -->
-    <div class="pd-panel" data-panel="02">
+    <div class="pd-panel" data-panel="02" id="panel-02">
       <h2>투명하게 공개하는<br><span class="italic">원료표</span>.</h2>
       <p>함량·원산지·부원료·알레르기 유발 물질까지 모두 표기합니다. 허위·과장 없이, 기능성 범위 안의 표현만 사용합니다.</p>
       <table class="spec-table">
@@ -387,7 +387,7 @@
     </div>
 
     <!-- TAB 03 -->
-    <div class="pd-panel" data-panel="03">
+    <div class="pd-panel" data-panel="03" id="panel-03">
       <h2>하루 한 정,<br><span class="italic">언제든 괜찮습니다</span>.</h2>
       <p>섭취 시점은 자유롭지만, 매일 같은 시간에 이어가는 루틴을 권장합니다. 훈련 전 · 후 · 아침 등 본인의 일상 리듬에 맞춰 선택하세요.</p>
       <div class="pd-highlight">
@@ -406,7 +406,7 @@
     </div>
 
     <!-- TAB 04 REVIEWS -->
-    <div class="pd-panel" data-panel="04">
+    <div class="pd-panel" data-panel="04" id="panel-04">
       <h2>러너들의<br><span class="italic">한 달 이후</span>.</h2>
       <p>실제 구매 고객의 30일 후기입니다. 개인 차이가 있을 수 있습니다.</p>
       <div class="pd-review-row">
@@ -424,7 +424,7 @@
     </div>
 
     <!-- TAB 05 -->
-    <div class="pd-panel" data-panel="05">
+    <div class="pd-panel" data-panel="05" id="panel-05">
       <h2>배송·교환·환불<br><span class="italic">안내</span>.</h2>
       <table class="spec-table">
         <tr><th>배송 방법</th><td>CJ 대한통운 택배</td></tr>
@@ -524,16 +524,26 @@
   document.querySelector('[data-qty-inc]').addEventListener('click', function(){ qty.value = parseInt(qty.value,10)+1; upd(); });
   document.querySelector('[data-qty-dec]').addEventListener('click', function(){ var v = parseInt(qty.value,10); if(v>1){ qty.value = v-1; upd(); }});
 
-  // Tabs — click scrolls to panels area
+  // Tabs — smooth scroll to panel, scroll-spy updates active state
   var tabs = document.querySelectorAll('.pd-tab');
   var panels = document.querySelectorAll('.pd-panel');
   tabs.forEach(function(t){
     t.addEventListener('click', function(){
       var id = t.getAttribute('data-tab');
-      tabs.forEach(function(x){ x.classList.toggle('is-active', x===t); });
-      panels.forEach(function(p){ p.classList.toggle('is-active', p.getAttribute('data-panel')===id); });
+      var panel = document.getElementById('panel-' + id);
+      if (panel) panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   });
+  if (panels.length && 'IntersectionObserver' in window) {
+    var spy = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (!e.isIntersecting) return;
+        var id = e.target.getAttribute('data-panel');
+        tabs.forEach(function(x){ x.classList.toggle('is-active', x.getAttribute('data-tab') === id); });
+      });
+    }, { rootMargin: '-120px 0px -60% 0px', threshold: 0 });
+    panels.forEach(function(p){ spy.observe(p); });
+  }
 
   document.querySelectorAll('.pd-media__thumb').forEach(function(th){
     th.addEventListener('click', function(){
