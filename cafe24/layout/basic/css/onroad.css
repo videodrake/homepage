@@ -2077,12 +2077,14 @@ body.onroad-page #wrap { overflow-x: clip; overflow-y: visible; }
 
 /* ---- Side-docked purchase panel (PC): sticks from .jg-product-additional-page onward ---- */
 @media (min-width: 1024px) {
+  /* Layout ratio (PC ≥1024px):  10% gutter | 50% content | 30% panel | 10% gutter = 100vw
+     Panel uses viewport-relative width so it scales smoothly on any monitor. */
   .onroad-page .jg-product-detail-page.xans-product-detail .infoArea.is-docked,
   .onroad-page .jg-product-detail-page .infoArea.is-docked {
     position: fixed !important; top: 110px !important;
-    right: max(24px, calc((100vw - var(--container)) / 2 + var(--s-8))) !important;
+    right: max(24px, 10vw) !important;
     left: auto !important; bottom: auto !important;
-    width: 380px !important;
+    width: clamp(320px, 30vw, 560px) !important;
     max-height: calc(100vh - 140px);
     overflow-y: auto; overflow-x: hidden;
     z-index: 30;
@@ -2091,14 +2093,18 @@ body.onroad-page #wrap { overflow-x: clip; overflow-y: visible; }
     padding: var(--s-5) var(--s-5) var(--s-6);
     box-shadow: 0 24px 60px rgba(0,0,0,0.18), 0 2px 0 var(--c-signal);
   }
-  /* Always reserve the right lane for the buy panel — review/detail
-     flow sticks to the left from the start so nothing shifts mid-scroll */
+  /* Review / detail flow lives in the left 50% lane from the start —
+     right 40vw (panel 30% + gutter 10%) always reserved, left 10% gutter. */
   body.onroad-page .jg-product-additional-page,
   body.onroad-page .jg-product-additional-page .pd-flow,
   body.onroad-page .jg-product-additional-page .jg-detail-accordion-list,
   body.onroad-page .jg-product-detail-page #prdDetail,
   body.onroad-page .jg-product-detail-page .description {
-    padding-right: 440px !important;
+    max-width: none !important;
+    padding-left: max(24px, 10vw) !important;
+    padding-right: max(calc(24px + clamp(320px, 30vw, 560px) + 24px), calc(42vw)) !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
   .onroad-page .jg-product-detail-page .infoArea.is-docked .headingArea h1,
   .onroad-page .jg-product-detail-page .infoArea.is-docked .headingArea h2,
