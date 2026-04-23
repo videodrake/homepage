@@ -34,6 +34,22 @@
     var pdInfoArea = document.querySelector('.jg-product-detail-page .infoArea');
     var pdAdditional = document.querySelector('.jg-product-additional-page');
     var pdFooter = document.querySelector('.site-footer') || document.querySelector('footer');
+    var pdDetailArea = pdInfoArea ? pdInfoArea.parentElement : null;
+
+    // Lock the detailArea grid to its pre-dock infoArea height so docking
+    // (which pulls .infoArea out of flow) doesn't collapse the layout and
+    // yank the scroll position. Keeps the transition silent — no animation.
+    function lockDetailAreaHeight() {
+      if (!pdInfoArea || !pdDetailArea) return;
+      if (pdInfoArea.classList.contains('is-docked')) return;
+      var h = pdInfoArea.offsetHeight;
+      if (h > 0) pdDetailArea.style.minHeight = h + 'px';
+    }
+    lockDetailAreaHeight();
+    if ('ResizeObserver' in window) {
+      try { new ResizeObserver(lockDetailAreaHeight).observe(pdInfoArea); } catch(e) {}
+    }
+    window.addEventListener('load', lockDetailAreaHeight);
 
     var lightSections = [];
     function collectLightSections() {

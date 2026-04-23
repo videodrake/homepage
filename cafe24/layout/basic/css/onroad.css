@@ -2117,20 +2117,20 @@ body.onroad-page #wrap { overflow-x: clip; overflow-y: visible; }
     display: block !important;
     margin: 0 auto !important;
   }
-  /* Buy panel sits in the right 30vw lane (with a 10vw gutter from the edge) */
+  /* Buy panel: thin black border, taller vertical coverage, no flashy accents. */
   .onroad-page .jg-product-detail-page.xans-product-detail .infoArea.is-docked,
   .onroad-page .jg-product-detail-page .infoArea.is-docked {
-    position: fixed !important; top: 110px !important;
+    position: fixed !important; top: 90px !important;
     right: 10vw !important;
     left: auto !important; bottom: auto !important;
     width: clamp(300px, 30vw, 540px) !important;
-    max-height: calc(100vh - 140px);
+    max-height: calc(100vh - 110px);
     overflow-y: auto; overflow-x: hidden;
     z-index: 30;
     background: var(--c-cream);
-    border: 2px solid var(--c-ink);
-    padding: var(--s-5) var(--s-5) var(--s-6);
-    box-shadow: 0 24px 60px rgba(0,0,0,0.18), 0 2px 0 var(--c-signal);
+    border: 1px solid var(--c-ink);
+    padding: var(--s-6) var(--s-5);
+    box-shadow: none;
   }
   .onroad-page .jg-product-detail-page .infoArea.is-docked .headingArea h1,
   .onroad-page .jg-product-detail-page .infoArea.is-docked .headingArea h2,
