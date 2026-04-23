@@ -2077,10 +2077,12 @@ body.onroad-page #wrap { overflow-x: clip; overflow-y: visible; }
 
 /* ---- Side-docked purchase panel (PC): sticks from .jg-product-additional-page onward ---- */
 @media (min-width: 1024px) {
+  .onroad-page .jg-product-detail-page.xans-product-detail .infoArea.is-docked,
   .onroad-page .jg-product-detail-page .infoArea.is-docked {
-    position: fixed; top: 110px;
-    right: max(24px, calc((100vw - var(--container)) / 2 + var(--s-8)));
-    width: 380px;
+    position: fixed !important; top: 110px !important;
+    right: max(24px, calc((100vw - var(--container)) / 2 + var(--s-8))) !important;
+    left: auto !important; bottom: auto !important;
+    width: 380px !important;
     max-height: calc(100vh - 140px);
     overflow-y: auto; overflow-x: hidden;
     z-index: 30;
