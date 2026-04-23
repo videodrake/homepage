@@ -2635,11 +2635,32 @@ body#userStyle .resultArea { margin-bottom: var(--s-10); }
     display: inline-block; margin-top: 0;
 }
 
+/* ---------- Font unification inside buy section — single sans voice ---------- */
+.onroad-page .jg-product-detail-page .infoArea,
+.onroad-page .jg-product-detail-page .infoArea * {
+    font-family: var(--font-sans) !important;
+}
+/* Hide noisy Cafe24 icon row and inline delivery tag in the heading */
+.onroad-page .jg-product-detail-page .headingArea > .icon,
+.onroad-page .jg-product-detail-page .headingArea > .icon:empty,
+.onroad-page .jg-product-detail-page .headingArea .delivery {
+    display: none !important;
+}
+
 /* ---------- Spec block (replaces product accordion) ---------- */
 .onroad-page .jg-product-detail-page .pd-spec-block {
-    margin: var(--s-4) 0;
-    padding: 0;
-    border-top: 0;
+    margin: var(--s-6) 0 var(--s-5);
+    padding: var(--s-5) 0 0;
+    border-top: 1px solid var(--c-line);
+}
+.onroad-page .jg-product-detail-page .pd-spec-block::before {
+    content: "[ Product Info ]";
+    display: block;
+    font-family: var(--font-sans);
+    font-size: 10px; font-weight: 500;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--c-signal);
+    margin-bottom: var(--s-4);
 }
 .onroad-page .jg-product-detail-page .pd-spec-block .topLogo:empty,
 .onroad-page .jg-product-detail-page .pd-spec-block .topLogo.displaynone { display: none; }
@@ -3538,9 +3559,9 @@ body#userStyle .resultArea { margin-bottom: var(--s-10); }
 .onroad-page .jg-product-detail-page #totalProducts span.quantity {
     display: inline-flex !important;
     align-items: stretch !important;
-    border: 1px solid var(--c-line) !important;
+    border: 1px solid var(--c-ink) !important;
     background: var(--c-cream) !important;
-    height: 44px !important;
+    height: 48px !important;
     padding: 0 !important;
     margin: 0 !important;
     box-sizing: border-box !important;
@@ -3550,13 +3571,13 @@ body#userStyle .resultArea { margin-bottom: var(--s-10); }
 }
 .onroad-page .jg-product-detail-page #totalProducts span.quantity input[type="text"],
 .onroad-page .jg-product-detail-page #totalProducts span.quantity input.quantity_opt {
-    width: 64px !important;
+    width: 96px !important;
     height: 100% !important;
     border: 0 !important;
     outline: 0 !important;
     background: transparent !important;
-    font-family: var(--font-mono) !important;
-    font-size: 15px !important;
+    font-family: var(--font-sans) !important;
+    font-size: 16px !important;
     font-weight: 500 !important;
     text-align: center !important;
     color: var(--c-ink) !important;
@@ -3569,8 +3590,8 @@ body#userStyle .resultArea { margin-bottom: var(--s-10); }
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    width: 44px !important;
-    min-width: 44px !important;
+    width: 60px !important;
+    min-width: 60px !important;
     height: 100% !important;
     padding: 0 !important;
     margin: 0 !important;
@@ -3589,8 +3610,8 @@ body#userStyle .resultArea { margin-bottom: var(--s-10); }
 .onroad-page .jg-product-detail-page #totalProducts span.quantity a.down { order: 1 !important; border-left: 0 !important; border-right: 1px solid var(--c-line) !important; }
 .onroad-page .jg-product-detail-page #totalProducts span.quantity a img { display: none !important; }
 .onroad-page .jg-product-detail-page #totalProducts span.quantity a::before {
-    font-family: var(--font-mono);
-    font-size: 18px;
+    font-family: var(--font-sans);
+    font-size: 20px;
     font-weight: 400;
     line-height: 1;
     color: var(--c-ink);
