@@ -33,8 +33,10 @@
 
     var pdInfoArea = document.querySelector('.jg-product-detail-page .infoArea');
     var pdAdditional = document.querySelector('.jg-product-additional-page');
+    var pdReview = document.querySelector('.pd-flow--review') || document.getElementById('prdReview') || document.getElementById('review');
     var pdFooter = document.querySelector('.site-footer') || document.querySelector('footer');
     var pdDetailArea = pdInfoArea ? pdInfoArea.parentElement : null;
+    var pdDockRef = pdReview || pdAdditional;
 
     // Lock the detailArea grid to its pre-dock infoArea height so docking
     // (which pulls .infoArea out of flow) doesn't collapse the layout and
@@ -124,12 +126,15 @@
         bottle.style.setProperty('--showcase-y', (Math.sin(sT * Math.PI) * -10).toFixed(1));
       }
 
-      if (pdInfoArea && pdAdditional) {
+      if (pdInfoArea && pdDockRef) {
         var dock = false;
         if (window.matchMedia('(min-width: 1024px)').matches) {
-          var addTop = pdAdditional.getBoundingClientRect().top + y;
+          // Fire when the review/additional reference crosses into the top
+          // half of the viewport — earlier than entry, tied to where the
+          // user is actually reading rather than a hard page boundary.
+          var refTop = pdDockRef.getBoundingClientRect().top + y;
           var footTop = pdFooter ? (pdFooter.getBoundingClientRect().top + y) : Infinity;
-          var past = y + 100 > addTop;
+          var past = y > refTop - window.innerHeight * 0.5;
           var nearBottom = pdFooter ? (footTop - y < 300) : false;
           dock = past && !nearBottom;
         }

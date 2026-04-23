@@ -2117,14 +2117,14 @@ body.onroad-page #wrap { overflow-x: clip; overflow-y: visible; }
     display: block !important;
     margin: 0 auto !important;
   }
-  /* Buy panel: thin black border, taller vertical coverage, no flashy accents. */
+  /* Buy panel: thin black border, narrower, seated a bit lower. */
   .onroad-page .jg-product-detail-page.xans-product-detail .infoArea.is-docked,
   .onroad-page .jg-product-detail-page .infoArea.is-docked {
-    position: fixed !important; top: 90px !important;
+    position: fixed !important; top: 120px !important;
     right: 10vw !important;
     left: auto !important; bottom: auto !important;
-    width: clamp(300px, 30vw, 540px) !important;
-    max-height: calc(100vh - 110px);
+    width: clamp(280px, 26vw, 440px) !important;
+    max-height: calc(100vh - 140px);
     overflow-y: auto; overflow-x: hidden;
     z-index: 30;
     background: var(--c-cream);
