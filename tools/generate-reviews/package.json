@@ -1,0 +1,14 @@
+{
+  "name": "generate-reviews",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "sample": "node generate.js --mode=sample",
+    "full": "node generate.js --mode=full"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.65.0",
+    "dotenv": "^16.4.5"
+  }
+}
