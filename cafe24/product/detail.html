@@ -70,68 +70,36 @@
         <div class="infoArea" data-ez-role="ez-discount-tag">
             <div class="headingArea">
 				<div class="icon">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$today_arrival_icon} {$pickup_icon} {$benefit_icons} {$regular_delivery_icon} {$cultural_tax_icon}</div>
+                <div class="pd-eyebrow">Onroad · Endurance Core</div>
                 <h1>{$name}</h1>
+                <p class="pd-lede">러너의 매일을 위해 설계한 기준 한 정.<br>옥타코사놀 40mg과 엄선한 부원료가<br>지구력 증진에 도움을 줄 수 있도록 담겼습니다.</p>
                 <span class="delivery {$delvtype_display|display}">(해외배송 가능상품)</span>
             </div>
-            <details id="prdProductInfo" class="jg-detail-accordion-section jg-detail-accordion-section--product jg-detail-product-info-anchor" open>
-                <summary class="jg-detail-accordion-summary">
-                    <span>제품 정보</span>
-                    <em>표시사항 · 섭취 기준 · 기본 정보</em>
-                </summary>
-                <div class="jg-detail-accordion-body">
-                    <div class="jg-detail-trust">
-                        <span>표시사항 확인</span>
-                        <span>섭취 기준 확인</span>
-                        <span>주의사항 확인</span>
-                        <span>제품 정보 확인</span>
-                    </div>
-                    <div class="jg-detail-summary">
-                        <strong>1일 1정으로 챙기는 지구력 관리</strong>
-                        <p>옥타코사놀 40mg 기준의 건강기능식품으로 지구력 증진에 도움을 줄 수 있습니다. 구매 전 섭취량, 섭취방법, 주의사항, 소비기한은 상세 정보와 제품 표시사항을 함께 확인하세요.</p>
-                    </div>
-                    <div class="jg-detail-keypoints">
-                        <div>
-                            <strong>옥타코사놀 40mg</strong>
-                            <span>제품 기준 함량 확인</span>
-                        </div>
-                        <div>
-                            <strong>1일 1정</strong>
-                            <span>챙기기 쉬운 섭취 흐름</span>
-                        </div>
-                        <div>
-                            <strong>지구력 관리</strong>
-                            <span>기능성 내용 확인</span>
-                        </div>
-                        <div>
-                            <strong>표시사항</strong>
-                            <span>주의사항까지 확인</span>
-                        </div>
-                    </div>
-                    <div class="topLogo {$supply_link_display|display}">
-                        <span>{$supply_top_logo}</span>
-                        <a href="#none" onclick="{$supply_go_action}"><img src="{$supply_go_img}" alt="공급사 바로가기"></a>
-                    </div>
-                    <div module="product_detaildesign">
-                        <!--
-                            출력 갯수 지정 변수, 없으면 설정된 전체가 나옵니다.
-                            count = 10
-                        -->
-                        <table border="1">
-                            <caption>{$name} 기본 정보</caption>
-                            <tbody>
-                                <tr class="{$item_display|display}">
-                                    <th scope="row">{$item_title}</th>
-                                    <td>{$item_content}</td>
-                                </tr>
-                                <tr class="{$item_display|display}">
-                                    <th scope="row">{$item_title}</th>
-                                    <td>{$item_content}</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+            <div class="pd-spec-block">
+                <div class="topLogo {$supply_link_display|display}">
+                    <span>{$supply_top_logo}</span>
+                    <a href="#none" onclick="{$supply_go_action}"><img src="{$supply_go_img}" alt="공급사 바로가기"></a>
                 </div>
-            </details>
+                <div module="product_detaildesign">
+                    <!--
+                        출력 갯수 지정 변수, 없으면 설정된 전체가 나옵니다.
+                        count = 10
+                    -->
+                    <table border="1">
+                        <caption>{$name} 기본 정보</caption>
+                        <tbody>
+                            <tr class="{$item_display|display}">
+                                <th scope="row">{$item_title}</th>
+                                <td>{$item_content}</td>
+                            </tr>
+                            <tr class="{$item_display|display}">
+                                <th scope="row">{$item_title}</th>
+                                <td>{$item_content}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
 
             <!--- 렌탈서비스 -->
             <table border="1" summary class="{$rental_information_display|display}">
@@ -604,20 +572,6 @@
                 <strong class="title">총 결제 예정 금액 <span class="qty">(수량)</span></strong><span class="{$total.total_cnt}"><strong><em>0</em></strong> (0개)</span>
             </div>
             <p class="ec-base-help {$price_warning_class}">할인가가 적용된 최종 결제예정금액은 주문 시 확인할 수 있습니다.</p>
-            <div class="jg-purchase-notice">
-                <strong>구매 전 확인</strong>
-                <ul>
-                    <li>기능성: 지구력 증진에 도움을 줄 수 있음</li>
-                    <li>본 제품은 질병의 예방 및 치료를 위한 의약품이 아닙니다.</li>
-                    <li>섭취량, 섭취방법, 섭취 시 주의사항, 소비기한, 보관방법은 상품 상세 및 제품 표시사항을 확인해 주세요.</li>
-                    <li>광고 심의번호는 상품 이미지와 상세 페이지의 표시를 기준으로 확인해 주세요.</li>
-                </ul>
-            </div>
-            <div class="jg-page-links jg-detail-links">
-                <a href="/shopinfo/endurance-core.html">제품 기준 보기</a>
-                <a href="/shopinfo/ingredient-science.html">성분 과학</a>
-                <a href="/shopinfo/intake-guide.html">섭취 가이드</a>
-            </div>
 
             <div module="product_action" id="{$fixed_action_button}" class="productAction">
 				<div id="ec-product-price-info" class="displaynone" ec-data-custom="{$disp_product_custom}" ec-data-price="{$product_price}"></div>
@@ -648,6 +602,7 @@
                 </div>
 				<div class="eventArea {$common_event_b|display}">{$common_event_b}</div>
             </div>
+            <p class="pd-disclaim">본 제품은 질병의 예방 및 치료를 위한 의약품이 아닙니다.</p>
             <div module="product_action" class="ec-base-button gFixed" id="orderFixArea">
                 <div class="ec-base-button gColumn {$action_display|display}">
 					<a href="#none" class="btnSubmit sizeM {$buy_display|display}" onclick="{$action_buy}"><span id="{$btn_buy_mobile_id}">바로 구매</span><span class="{$btn_reserve_class|display}" id="{$btn_reserve_mobile_id}">예약주문</span><span id="{$btn_regular_delivery_id}" class="{$btn_regular_delivery|display}">정기배송 신청</span></a>
@@ -670,18 +625,13 @@
     <!--@css(/css/module/product/additional.css)-->
 	<!--@import(/board/report_popup.html)-->
 	<div id="detail" class="cboth"></div>
-	<div class="jg-detail-accordion-list">
-	<details id="prdReview" class="jg-detail-accordion-section jg-detail-accordion-section--review" open>
-		<summary class="jg-detail-accordion-summary">
-			<span>리뷰</span>
-			<em>{$review_count}</em>
-		</summary>
-		<div class="jg-detail-accordion-body">
+
+	<section id="prdReview" class="pd-flow pd-flow--review">
 		<div id="review" class="pdt150 cboth"></div>
 
 		<div class="{$review_display|display}">
 			<div class="board_title">
-				<h2>REVIEW</h2>
+				<h2>리뷰</h2>
 				<div class="ec-base-button">
 					<a href="{$review_list}" class="btnNormalFix">목록</a>
 					<a href="{$review_write}" class="btnNormalFix">작성</a>
@@ -753,15 +703,51 @@
 				</div>
 			</div>
 		</div><!-- //상품리뷰 -->
-		</div>
-	</details><!-- //prdReview -->
+	</section><!-- //prdReview -->
 
-	<details id="prdQnA" class="jg-detail-accordion-section jg-detail-accordion-section--qna">
-		<summary class="jg-detail-accordion-summary">
-			<span>Q&amp;A</span>
-			<em>{$qna_count}</em>
-		</summary>
-		<div class="jg-detail-accordion-body">
+	<section id="prdDetail" class="pd-flow pd-flow--detail">
+		<div class="productDetail">
+			<div>{$product_detail}</div>
+
+			<div module="product_relation">
+				<div class="relation">
+					<div class="relation_title">함께 보면 좋은 제품<span>러닝 루틴에 맞춰 함께 확인해 보세요.</span></div>
+
+					<div module="product_relationlist" class="ec-base-product swiper-container relation_slide">
+						<ul class="swiper-wrapper prdList">
+							<li class="swiper-slide">
+								<div class="prdList__item">
+									<div class="thumbnail">
+										<a href="{$link_product_detail}"><img src="{$img_medium}" alt="{$seo_alt_tag}"></a>
+									</div>
+									<div class="description">
+										<div class="name"><a href="{$link_product_detail}">{$name}</a></div>
+										<div class="price"><span class="salePrice {$sale_price_display|display}">{$disp_sale_price}</span><span class="prdPrice {$product_sale_strike}">{$disp_product_price}{$product_tax_type_text}</span></div>
+									</div>
+								</div>
+							</li>
+							<li class="swiper-slide">
+								<div class="prdList__item">
+									<div class="thumbnail">
+										<a href="{$link_product_detail}"><img src="{$img_medium}" alt="{$seo_alt_tag}"></a>
+									</div>
+									<div class="description">
+										<div class="name"><a href="{$link_product_detail}">{$name}</a></div>
+										<div class="price"><span class="salePrice {$sale_price_display|display}">{$disp_sale_price}</span><span class="prdPrice {$product_sale_strike}">{$disp_product_price}{$product_tax_type_text}</span></div>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<div class="swiper-scrollbar"></div>
+					</div>
+					<div class="swiper-button-next swiper-next-relation"></div>
+					<div class="swiper-button-prev swiper-prev-relation"></div>
+				</div>
+			</div><!-- //product_relation -->
+		</div>
+	</section><!-- //prdDetail -->
+
+	<section id="prdQnA" class="pd-flow pd-flow--qna">
 		<div id="qna" class="pdt150 cboth"></div>
 
 		<div class="{$qna_display|display}">
@@ -838,57 +824,7 @@
 				</div>
 			</div>
 		</div><!-- //제품 문의 -->
-		</div>
-	</details><!-- //prdQnA -->
-
-	<details id="prdDetail" class="jg-detail-accordion-section jg-detail-accordion-section--detail">
-		<summary class="jg-detail-accordion-summary">
-			<span>상세 설명</span>
-			<em>제품 상세 콘텐츠</em>
-		</summary>
-		<div class="jg-detail-accordion-body">
-		<div class="productDetail">
-			<div>{$product_detail}</div>
-
-			<div module="product_relation">
-				<div class="relation">
-					<div class="relation_title">함께 보면 좋은 제품<span>러닝 루틴에 맞춰 함께 확인해 보세요.</span></div>
-
-					<div module="product_relationlist" class="ec-base-product swiper-container relation_slide">
-						<ul class="swiper-wrapper prdList">
-							<li class="swiper-slide">
-								<div class="prdList__item">
-									<div class="thumbnail">
-										<a href="{$link_product_detail}"><img src="{$img_medium}" alt="{$seo_alt_tag}"></a>
-									</div>
-									<div class="description">
-										<div class="name"><a href="{$link_product_detail}">{$name}</a></div>
-										<div class="price"><span class="salePrice {$sale_price_display|display}">{$disp_sale_price}</span><span class="prdPrice {$product_sale_strike}">{$disp_product_price}{$product_tax_type_text}</span></div>
-									</div>
-								</div>
-							</li>
-							<li class="swiper-slide">
-								<div class="prdList__item">
-									<div class="thumbnail">
-										<a href="{$link_product_detail}"><img src="{$img_medium}" alt="{$seo_alt_tag}"></a>
-									</div>
-									<div class="description">
-										<div class="name"><a href="{$link_product_detail}">{$name}</a></div>
-										<div class="price"><span class="salePrice {$sale_price_display|display}">{$disp_sale_price}</span><span class="prdPrice {$product_sale_strike}">{$disp_product_price}{$product_tax_type_text}</span></div>
-									</div>
-								</div>
-							</li>
-						</ul>
-						<div class="swiper-scrollbar"></div>
-					</div>
-					<div class="swiper-button-next swiper-next-relation"></div>
-					<div class="swiper-button-prev swiper-prev-relation"></div>
-				</div>
-			</div><!-- //product_relation -->
-		</div>
-		</div>
-	</details><!-- //prdDetail -->
-	</div>
+	</section><!-- //prdQnA -->
 
 	<div id="prdInfo">
 		<div id="guide" class="pdt150 cboth"></div>

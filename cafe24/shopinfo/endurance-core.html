@@ -7,185 +7,357 @@
 	</ol>
 </div>
 
+<style>
+	/* Page-specific polish — scoped to .onroad-endurance */
+	.onroad-endurance .ec-hero__media-fallback {
+		position: absolute; inset: 0;
+		background:
+			radial-gradient(ellipse at 30% 30%, rgba(200,50,30,0.18) 0%, transparent 55%),
+			radial-gradient(ellipse at 75% 70%, rgba(100,80,60,0.22) 0%, transparent 55%),
+			linear-gradient(160deg, #1a1714 0%, #0a0908 60%, #060504 100%);
+	}
+	.onroad-endurance .ec-split__media-fallback {
+		position: absolute; inset: 0;
+		background:
+			radial-gradient(ellipse at 60% 40%, rgba(200,50,30,0.12) 0%, transparent 60%),
+			linear-gradient(140deg, #1f1a16 0%, #120f0c 70%);
+	}
+	.onroad-endurance .ec-split__media-fallback::after {
+		content: ""; position: absolute; inset: 0;
+		background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.45'/></svg>");
+		opacity: 0.14; mix-blend-mode: overlay;
+	}
+	.onroad-endurance .ec-product-card {
+		position: relative; background: var(--c-ink);
+		display: grid; place-items: center;
+		aspect-ratio: 3 / 4;
+		overflow: hidden;
+	}
+	.onroad-endurance .ec-product-card::before {
+		content: ""; position: absolute; inset: 0;
+		background:
+			radial-gradient(ellipse at 50% 30%, rgba(200,50,30,0.10) 0%, transparent 60%),
+			linear-gradient(180deg, #1a1714 0%, #0a0908 100%);
+	}
+	.onroad-endurance .ec-product-card svg { position: relative; z-index: 1; width: 55%; max-width: 240px; }
+	.onroad-endurance .ec-empathy { position: relative; }
+	.onroad-endurance .ec-empathy::before {
+		content: attr(data-ord);
+		position: absolute; top: var(--s-6); right: var(--s-6);
+		font-family: var(--font-mono); font-size: 11px;
+		color: rgba(20,18,16,0.25);
+		letter-spacing: 0.18em; text-transform: uppercase;
+	}
+	.onroad-endurance .ec-empathy:hover::before { color: rgba(244,239,230,0.3); }
+	.onroad-endurance .ec-trust-grid {
+		display: grid; grid-template-columns: repeat(4, 1fr);
+		border-top: 1px solid rgba(255,255,255,0.18);
+		border-left: 1px solid rgba(255,255,255,0.18);
+		margin-top: var(--s-12);
+	}
+	.onroad-endurance .ec-trust-cell {
+		padding: var(--s-10) var(--s-6);
+		border-right: 1px solid rgba(255,255,255,0.18);
+		border-bottom: 1px solid rgba(255,255,255,0.18);
+		display: flex; flex-direction: column; gap: var(--s-3);
+	}
+	.onroad-endurance .ec-trust-cell__ord {
+		font-family: var(--font-mono); font-size: 11px;
+		color: rgba(244,239,230,0.4);
+		letter-spacing: 0.18em; text-transform: uppercase;
+	}
+	.onroad-endurance .ec-trust-cell__title {
+		font-family: var(--font-serif); font-weight: 400;
+		font-size: 22px; line-height: 1.25;
+		color: var(--c-cream); margin: 0;
+		font-variation-settings: "opsz" 32;
+	}
+	.onroad-endurance .ec-trust-cell__title .italic { font-style: italic; color: var(--c-signal); }
+	.onroad-endurance .ec-trust-cell__body {
+		color: rgba(244,239,230,0.68);
+		font-size: 13px; line-height: 1.65;
+		margin: 0;
+	}
+	@media (max-width: 920px) {
+		.onroad-endurance .ec-trust-grid { grid-template-columns: repeat(2, 1fr); }
+	}
+	@media (max-width: 560px) {
+		.onroad-endurance .ec-trust-grid { grid-template-columns: 1fr; }
+	}
+
+	.onroad-endurance .ec-product-grid {
+		display: grid; grid-template-columns: 1fr 1.1fr;
+		border: 1px solid var(--c-ink);
+		background: var(--c-cream);
+	}
+	.onroad-endurance .ec-product-grid > :first-child { border-right: 1px solid var(--c-ink); }
+	.onroad-endurance .ec-product-copy {
+		padding: clamp(32px, 4vw, 64px);
+		display: flex; flex-direction: column; justify-content: center;
+	}
+	@media (max-width: 920px) {
+		.onroad-endurance .ec-product-grid { grid-template-columns: 1fr; }
+		.onroad-endurance .ec-product-grid > :first-child { border-right: 0; border-bottom: 1px solid var(--c-ink); }
+		.onroad-endurance .ec-product-card { aspect-ratio: 4 / 3; }
+	}
+</style>
+
 <main class="onroad-page onroad-endurance has-mobile-cta">
-	<section class="hero" data-header-light>
-		<div class="hero__media ph" style="background-image:url('/SkinImg/img/jg_hero_pc.jpg');">
-			<span class="ph__label" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);">HERO · 새벽 도로 러너<br>/SkinImg/img/jg_hero_pc.jpg</span>
-		</div>
-		<div class="hero__overlay"></div>
-		<div class="hero__inner">
-			<div>
-				<div class="eyebrow eyebrow--light" style="margin-bottom:24px;">LANDING · ENDURANCE CORE</div>
-				<h1 class="hero__title">달리는 습관에 맞는<br><strong>기준</strong>이 필요하다면.</h1>
-				<p class="hero__sub">옥타코사놀 40mg 함유 · 지구력 증진에 도움을 줄 수 있는 건강기능식품<br>러닝 루틴에 맞춘 1일 1정.</p>
-				<div class="hero__ctas">
-					<a href="/product/detail.html?product_no=11" class="btn btn--primary btn--lg">제품 확인하기</a>
-					<a href="#ingredient" class="btn btn--ghost-light btn--lg">성분·기능성 보기</a>
-				</div>
-				<p class="mono-caption" style="margin-top:32px;color:rgba(255,255,255,0.5);">본 제품은 질병의 예방 및 치료를 위한 의약품이 아닙니다.</p>
+
+	<div class="scroll-progress" aria-hidden="true"><div class="scroll-progress__bar" id="scrollBar"></div></div>
+
+	<!-- HERO -->
+	<div class="hero-shell" id="heroShell">
+		<section class="hero" id="hero">
+			<div class="hero__media" id="heroMedia" style="background-image:url('/SkinImg/img/jg_hero_pc.jpg');">
+				<div class="ec-hero__media-fallback" aria-hidden="true"></div>
 			</div>
-			<dl class="hero__meta">
-				<div><dt>기능성 원료</dt><dd>옥타코사놀 40mg</dd></div>
-				<div><dt>기능성</dt><dd>지구력 증진에 도움</dd></div>
-				<div><dt>섭취 기준</dt><dd>러닝 루틴에 맞춘 1일 1정</dd></div>
-			</dl>
+			<div class="hero__vignette"></div>
+			<div class="hero__grain" aria-hidden="true"></div>
+			<div class="hero__frame-lines" aria-hidden="true"></div>
+
+			<div class="hero__inner">
+				<div class="hero__top">
+					<div class="hero__crest">
+						<span>Onroad · Endurance Core</span>
+						<em>— Landing · Vol. 01</em>
+					</div>
+					<div class="hero__telemetry">
+						<div>옥타코사놀 <b>40 mg</b> / TAB</div>
+						<div>1 TAB · <em>DAILY</em></div>
+						<div>지구력 증진에 도움</div>
+					</div>
+				</div>
+
+				<div class="hero__mid">
+					<h1 class="hero__title" id="heroTitle">
+						<span class="word" style="--i:0"><span>달리는</span></span>
+						<span class="word" style="--i:1"><span>습관에</span></span>
+						<span class="word" style="--i:2"><span>맞는</span></span>
+						<br>
+						<span class="word" style="--i:3"><span class="italic">기준</span></span><span class="word" style="--i:4"><span>이</span></span>
+						<span class="word" style="--i:5"><span>필요하다면.</span></span>
+					</h1>
+				</div>
+			</div>
+
+			<div class="hero__ticker" aria-hidden="true">
+				<div class="hero__ticker-track">
+					<span>Octacosanol 40mg</span><span>Endurance Support</span><span>One Tab · Daily Standard</span><span>건강기능식품</span><span>Made for Long-Distance Runners</span><span>Since 2026</span>
+					<span>Octacosanol 40mg</span><span>Endurance Support</span><span>One Tab · Daily Standard</span><span>건강기능식품</span><span>Made for Long-Distance Runners</span><span>Since 2026</span>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<!-- HERO BOTTOM STRIP -->
+	<section class="hero__bottom" aria-label="지구력코어 한 줄 요약">
+		<div class="hero__bottom-inner">
+			<div>
+				<div class="eyebrow">[ Brief · 지구력코어 ]</div>
+				<p class="hero__sub">옥타코사놀 40mg, 하루 한 정. <em>러닝 루틴</em>에 맞춘 건강기능식품 — 지구력 증진에 도움을 줄 수 있습니다.</p>
+			</div>
+			<div>
+				<div class="eyebrow">[ Specification ]</div>
+				<div class="hero__specs">
+					<div><span>기능성 원료</span><b>Octacosanol 40mg</b></div>
+					<div><span>기능성</span><b>지구력 증진에 도움</b></div>
+					<div><span>섭취 기준</span><b>1 Tab / Day</b></div>
+				</div>
+			</div>
+			<div>
+				<div class="eyebrow">[ Action ]</div>
+				<div class="hero__ctas">
+					<a href="/product/detail.html?product_no=11" class="btn btn--primary js-ad-cta" data-cta-id="hero_primary" data-cta-position="hero" data-event-name="landing_cta_click">제품 확인하기 <span class="btn__arrow"></span></a>
+					<a href="#ingredient" class="btn btn--ghost-light js-ad-cta" data-cta-id="hero_secondary" data-cta-position="hero" data-event-name="landing_cta_click">성분·기능성 보기 <span class="btn__arrow"></span></a>
+				</div>
+			</div>
 		</div>
 	</section>
 
-	<section class="ad-info-bar">
-		<div class="ad-info-bar__inner">
-			<div class="ad-info-cell"><div class="k">01 / 기능성 원료</div><div class="v"><strong>옥타코사놀</strong> 40mg</div></div>
-			<div class="ad-info-cell"><div class="k">02 / 기능성</div><div class="v">지구력 증진에 도움</div></div>
-			<div class="ad-info-cell"><div class="k">03 / 러닝 루틴</div><div class="v"><strong>1일 1정</strong></div></div>
-			<div class="ad-info-cell"><div class="k">04 / 구성 기준</div><div class="v">챙기기 쉬운 구성</div></div>
+	<!-- TRUST BAR -->
+	<section class="trust-bar" aria-label="제품 기준">
+		<div class="trust-bar__inner">
+			<div class="trust-bar__cell"><div class="k">[01] 기능성 원료</div><div class="v"><em>Octacosanol</em> · 40mg</div></div>
+			<div class="trust-bar__cell"><div class="k">[02] 기능성</div><div class="v">지구력 증진에 도움</div></div>
+			<div class="trust-bar__cell"><div class="k">[03] 러닝 루틴</div><div class="v"><em>1일 1정</em></div></div>
+			<div class="trust-bar__cell"><div class="k">[04] 구성</div><div class="v">60정 / 60일</div></div>
 		</div>
 	</section>
 
-	<section class="section section--light">
+	<!-- RUNNER CONTEXT -->
+	<section class="section section--cream" data-header-light>
 		<div class="container">
 			<div class="sec-head">
-				<div class="sec-head__num">01 / RUNNER CONTEXT</div>
+				<div class="sec-head__chap reveal">
+					Chapter 01<br><em>Runner's Context</em><br>— 러너의 순간
+				</div>
 				<div>
-					<h2 class="sec-head__title">이런 순간을 고려한<br><strong>섭취 기준</strong>.</h2>
-					<p class="sec-head__sub">러너들이 매일 마주하는 장면에서 출발했습니다. 결과를 약속하지 않고, 기준을 제안합니다.</p>
+					<h2 class="sec-head__title reveal">이런 순간을 고려한<br><span class="italic">섭취 기준</span>.</h2>
+					<p class="sec-head__sub reveal">러너들이 매일 마주하는 장면에서 출발했습니다. 결과를 약속하지 않고, 기준을 제안합니다.</p>
 				</div>
 			</div>
+
 			<div class="empathy-grid">
-				<div class="empathy-cell reveal">
-					<div class="empathy-cell__num">01 · 15KM AFTER</div>
+				<div class="empathy-cell ec-empathy reveal" style="--i:0;" data-stagger data-ord="No. 01 / 15km">
+					<div class="empathy-cell__head"><span>Moment 01</span><em>— 15KM AFTER</em></div>
 					<div>
-						<h3 class="empathy-cell__title"><strong>15km</strong> 이후<br>흐름이 신경 쓰일 때</h3>
-						<p class="empathy-cell__body">중장거리 구간에서 자연스레 체감되는 흐름. 루틴을 다시 점검하는 러너들이 살피는 순간.</p>
+						<h3 class="empathy-cell__title"><span class="italic">15km</span> 이후,<br>흐름이 신경 쓰일 때</h3>
+						<p class="empathy-cell__body">중장거리 구간에서 자연스레 체감되는 흐름. 루틴을 다시 점검하는 러너들이 살피는 순간입니다.</p>
 					</div>
+					<div class="empathy-cell__foot">러닝 루틴 점검</div>
 				</div>
-				<div class="empathy-cell reveal">
-					<div class="empathy-cell__num">02 · RACE PREP</div>
+				<div class="empathy-cell ec-empathy reveal" style="--i:1;" data-stagger data-ord="No. 02 / Race">
+					<div class="empathy-cell__head"><span>Moment 02</span><em>— RACE PREP</em></div>
 					<div>
-						<h3 class="empathy-cell__title"><strong>대회 준비 기간</strong>이<br>길어질수록 루틴이 중요할 때</h3>
+						<h3 class="empathy-cell__title"><span class="italic">대회 준비</span> 기간이<br>길어질수록</h3>
 						<p class="empathy-cell__body">훈련량과 회복량이 동시에 늘어나는 시기. 러너가 꾸준히 챙길 수 있는 기준을 정리합니다.</p>
 					</div>
+					<div class="empathy-cell__foot">장기 루틴 설계</div>
 				</div>
-				<div class="empathy-cell reveal">
-					<div class="empathy-cell__num">03 · STANDARD</div>
+				<div class="empathy-cell ec-empathy reveal" style="--i:2;" data-stagger data-ord="No. 03 / Std.">
+					<div class="empathy-cell__head"><span>Moment 03</span><em>— STANDARD</em></div>
 					<div>
-						<h3 class="empathy-cell__title">먹는 것까지<br><strong>기준</strong>을 세우고 싶을 때</h3>
-						<p class="empathy-cell__body">식사, 수면, 수분에 이어 건강기능식품 기준까지 정리하는 러너를 위한 구성.</p>
+						<h3 class="empathy-cell__title">먹는 것까지<br><span class="italic">기준</span>을 세울 때</h3>
+						<p class="empathy-cell__body">식사, 수면, 수분에 이어 건강기능식품 기준까지 정리하는 러너를 위한 구성입니다.</p>
 					</div>
+					<div class="empathy-cell__foot">기준의 일관성</div>
 				</div>
 			</div>
 		</div>
 	</section>
 
+	<!-- INGREDIENT SPLIT -->
 	<section class="section section--bleed" id="ingredient">
-		<div class="split">
-			<div class="split__media ph" style="background-image:url('/SkinImg/img/jg_banner_science_pc.jpg');">
-				<span class="ph__label" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);">INGREDIENT · 실험실 원료 확인<br>/SkinImg/img/jg_banner_science_pc.jpg</span>
+		<div class="split split--cream">
+			<div class="split__media" style="background-image:url('/SkinImg/img/jg_banner_science_pc.jpg');background-size:cover;background-position:center;">
+				<div class="ec-split__media-fallback" aria-hidden="true"></div>
+				<span class="split__badge">Ingredient · Octacosanol</span>
 			</div>
-			<div class="split__content" style="background:#ffffff;color:var(--c-text);">
-				<div class="eyebrow">02 / INGREDIENT</div>
-				<h2 class="display-md" style="margin:16px 0 24px;font-weight:300;">옥타코사놀 <strong>40mg</strong>,<br>기능성 범위 안에서.</h2>
-				<p class="body" style="color:var(--c-meta);max-width:48ch;">식약처가 인정한 기능성 원료의 함량과 섭취 기준을 그대로 표기합니다. 과장 없이, 법적 허용 범위 안에서만 설명합니다.</p>
-				<ul class="data-list" style="color:var(--c-text);">
-					<li class="data-list__item"><span class="data-list__k">기능성 원료</span><span class="data-list__v"><strong style="font-weight:700;">옥타코사놀 40mg</strong> · 1정 기준</span></li>
+			<div class="split__content">
+				<div class="eyebrow">Chapter 02 — 원료·기능성</div>
+				<h2 class="display-md" style="margin:16px 0 24px;font-weight:300;">옥타코사놀 <span class="italic">40 mg</span>,<br>기능성 범위 안에서.</h2>
+				<p style="color:var(--c-meta);max-width:48ch;line-height:1.7;">식약처가 인정한 기능성 원료의 함량과 섭취 기준을 그대로 표기합니다. 과장 없이, 법적 허용 범위 안에서만 설명합니다.</p>
+				<ul class="data-list">
+					<li class="data-list__item"><span class="data-list__k">기능성 원료</span><span class="data-list__v"><strong>옥타코사놀 40mg</strong> · 1정 기준</span></li>
 					<li class="data-list__item"><span class="data-list__k">인정 기능성</span><span class="data-list__v">지구력 증진에 도움을 줄 수 있음</span></li>
 					<li class="data-list__item"><span class="data-list__k">부원료</span><span class="data-list__v">비타민 B군, 엄선한 부원료</span></li>
 					<li class="data-list__item"><span class="data-list__k">표시사항</span><span class="data-list__v">제품 패키지 및 본 페이지에서 확인 가능</span></li>
 				</ul>
-				<div style="margin-top:40px;"><a href="/shopinfo/ingredient-science.html" class="btn btn--ghost-dark">원료 과학 자세히</a></div>
+				<div style="margin-top:40px;display:flex;gap:12px;flex-wrap:wrap;">
+					<a href="/shopinfo/ingredient-science.html" class="btn btn--ghost-dark">원료 과학 자세히 <span class="btn__arrow"></span></a>
+				</div>
 			</div>
 		</div>
 	</section>
 
-	<section class="section section--light">
+	<!-- PRODUCT · INTAKE -->
+	<section class="section section--cream" data-header-light>
 		<div class="container">
 			<div class="sec-head">
-				<div class="sec-head__num">03 / PRODUCT · INTAKE</div>
+				<div class="sec-head__chap reveal">
+					Chapter 03<br><em>Product · Intake</em><br>— 제품과 섭취 정보
+				</div>
 				<div>
-					<h2 class="sec-head__title"><strong>제품</strong>과 <strong>섭취 정보</strong>.</h2>
-					<p class="sec-head__sub">패키지, 표시사항, 정제 크기, 섭취량과 섭취 방법을 한 화면에서 확인할 수 있습니다.</p>
+					<h2 class="sec-head__title reveal"><span class="italic">제품</span>과 섭취,<br>한 화면에 정리.</h2>
+					<p class="sec-head__sub reveal">패키지, 표시사항, 정제 크기, 섭취량과 섭취 방법을 한 곳에서 확인할 수 있습니다.</p>
 				</div>
 			</div>
 
-			<div class="grid-2" style="gap:0;border:1px solid var(--c-ink);">
-				<div class="ph ph--product" style="min-height:480px;border-right:1px solid var(--c-ink);">
-					<svg viewBox="0 0 300 400" width="55%" aria-hidden="true">
-						<rect x="110" y="30" width="80" height="30" fill="#111"/>
-						<rect x="80" y="60" width="140" height="300" fill="#1a1a1a"/>
-						<text x="150" y="200" text-anchor="middle" fill="#fff" font-family="Helvetica Neue" font-weight="900" font-size="22" letter-spacing="1">ONROAD</text>
-						<text x="150" y="222" text-anchor="middle" fill="#888" font-family="Helvetica Neue" font-size="11" letter-spacing="2">ENDURANCE CORE</text>
-						<line x1="95" y1="240" x2="205" y2="240" stroke="#1c69d4" stroke-width="1"/>
-						<text x="150" y="265" text-anchor="middle" fill="#ccc" font-family="Helvetica Neue" font-weight="300" font-size="28">40<tspan font-size="14">mg</tspan></text>
-						<text x="150" y="284" text-anchor="middle" fill="#666" font-family="Helvetica Neue" font-size="9" letter-spacing="2">OCTACOSANOL</text>
+			<div class="ec-product-grid reveal">
+				<div class="ec-product-card" aria-hidden="true">
+					<svg viewBox="0 0 300 400" aria-hidden="true">
+						<rect x="110" y="28" width="80" height="22" fill="#2a2622"/>
+						<rect x="80" y="50" width="140" height="320" fill="#f4efe6"/>
+						<rect x="80" y="50" width="140" height="60" fill="#0f0d0b"/>
+						<text x="150" y="86" text-anchor="middle" fill="#f4efe6" font-family="serif" font-weight="300" font-size="16" letter-spacing="2">ONROAD</text>
+						<text x="150" y="150" text-anchor="middle" fill="#2a2622" font-family="serif" font-weight="300" font-size="13" letter-spacing="3">ENDURANCE</text>
+						<text x="150" y="170" text-anchor="middle" fill="#2a2622" font-family="serif" font-weight="300" font-size="13" letter-spacing="3">CORE</text>
+						<line x1="110" y1="195" x2="190" y2="195" stroke="#c8321e" stroke-width="1"/>
+						<text x="150" y="240" text-anchor="middle" fill="#0f0d0b" font-family="serif" font-style="italic" font-weight="300" font-size="54">40<tspan font-family="sans-serif" font-style="normal" font-size="18" dx="4">mg</tspan></text>
+						<text x="150" y="268" text-anchor="middle" fill="#8a847c" font-family="monospace" font-size="9" letter-spacing="3">OCTACOSANOL · 1 TAB</text>
+						<line x1="110" y1="290" x2="190" y2="290" stroke="#d8d0c2" stroke-width="1"/>
+						<text x="150" y="315" text-anchor="middle" fill="#8a847c" font-family="monospace" font-size="9" letter-spacing="2">60 TAB / 60 DAYS</text>
+						<text x="150" y="335" text-anchor="middle" fill="#8a847c" font-family="monospace" font-size="9" letter-spacing="2">건강기능식품</text>
 					</svg>
 				</div>
-				<div style="padding:clamp(32px,4vw,56px);display:flex;flex-direction:column;justify-content:center;">
-					<div class="eyebrow">SPEC</div>
-					<h3 style="font-weight:300;font-size:clamp(28px,3vw,40px);margin:16px 0 32px;line-height:1.1;"><strong style="font-weight:900;">지구력코어</strong></h3>
+				<div class="ec-product-copy">
+					<div class="eyebrow">Spec</div>
+					<h3 style="font-weight:300;font-size:clamp(28px,3vw,42px);margin:16px 0 32px;line-height:1.1;font-family:var(--font-serif);font-variation-settings:'opsz' 48;"><span class="italic">지구력코어</span></h3>
 					<table class="spec-table">
 						<tr><th>기능성 원료</th><td>옥타코사놀 40mg / 1정</td></tr>
 						<tr><th>기능성</th><td>지구력 증진에 도움을 줄 수 있음</td></tr>
 						<tr><th>섭취량</th><td>1일 1정 · 물과 함께</td></tr>
 						<tr><th>섭취 방법</th><td>러닝 루틴에 맞춰 매일 같은 시간대 권장</td></tr>
 						<tr><th>정제</th><td>작은 크기 · 챙기기 쉬운 구성</td></tr>
-						<tr><th>구성</th><td>30정 / 30일</td></tr>
+						<tr><th>구성</th><td>60정 / 60일 · 두 달 구성</td></tr>
 					</table>
 					<div style="margin-top:32px;display:flex;gap:12px;flex-wrap:wrap;">
-						<a href="/product/detail.html?product_no=11" class="btn btn--primary">제품 자세히 보기</a>
-						<a href="/shopinfo/intake-guide.html" class="btn btn--ghost-dark">섭취 가이드</a>
+						<a href="/product/detail.html?product_no=11" class="btn btn--primary js-ad-cta" data-cta-id="product_primary" data-cta-position="product" data-event-name="landing_cta_click">제품 자세히 보기 <span class="btn__arrow"></span></a>
+						<a href="/shopinfo/intake-guide.html" class="btn btn--ghost-dark">섭취 가이드 <span class="btn__arrow"></span></a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 
+	<!-- TRUST -->
 	<section class="section section--dark">
 		<div class="container">
 			<div class="sec-head">
-				<div class="sec-head__num">04 / TRUST</div>
+				<div class="sec-head__chap reveal" style="color:rgba(244,239,230,0.65);border-top-color:rgba(244,239,230,0.3);">
+					Chapter 04<br><em>Trust · 기준 표기</em>
+				</div>
 				<div>
-					<h2 class="sec-head__title">기준을 <strong>표기</strong>합니다.<br>확인하고 선택할 수 있도록.</h2>
-					<p class="sec-head__sub">건강기능식품 표시 기준, 기능성 원료 및 함량, 섭취 시 주의사항, 제조 및 품질 기준을 정리했습니다.</p>
+					<h2 class="sec-head__title reveal" style="color:var(--c-cream);">기준을 <span class="italic">표기</span>합니다.<br>확인하고 선택할 수 있도록.</h2>
+					<p class="sec-head__sub reveal" style="color:rgba(244,239,230,0.7);">건강기능식품 표시 기준, 기능성 원료 및 함량, 섭취 시 주의사항, 제조 및 품질 기준을 정리했습니다.</p>
 				</div>
 			</div>
-			<div class="grid-4" style="border-top:1px solid rgba(255,255,255,0.2);border-left:1px solid rgba(255,255,255,0.2);gap:0;">
-				<div style="padding:32px 24px;border-right:1px solid rgba(255,255,255,0.2);border-bottom:1px solid rgba(255,255,255,0.2);">
-					<div class="mono-caption" style="color:rgba(255,255,255,0.5);">01</div>
-					<div style="font-size:20px;font-weight:400;margin-top:16px;line-height:1.3;">건강기능식품 표시</div>
-					<p style="color:rgba(255,255,255,0.65);font-size:13px;margin-top:12px;line-height:1.5;">식약처 표시 기준에 따른 마크·표시사항을 패키지 및 상세에서 확인할 수 있습니다.</p>
+			<div class="ec-trust-grid reveal">
+				<div class="ec-trust-cell">
+					<div class="ec-trust-cell__ord">No. 01 / Label</div>
+					<h3 class="ec-trust-cell__title"><span class="italic">건강기능식품</span> 표시</h3>
+					<p class="ec-trust-cell__body">식약처 표시 기준에 따른 마크·표시사항을 패키지 및 상세 페이지에서 확인할 수 있습니다.</p>
 				</div>
-				<div style="padding:32px 24px;border-right:1px solid rgba(255,255,255,0.2);border-bottom:1px solid rgba(255,255,255,0.2);">
-					<div class="mono-caption" style="color:rgba(255,255,255,0.5);">02</div>
-					<div style="font-size:20px;font-weight:400;margin-top:16px;line-height:1.3;">기능성 원료 · 함량</div>
-					<p style="color:rgba(255,255,255,0.65);font-size:13px;margin-top:12px;line-height:1.5;">옥타코사놀 40mg / 1정. 인정 기능성 문구 그대로 표기합니다.</p>
+				<div class="ec-trust-cell">
+					<div class="ec-trust-cell__ord">No. 02 / Dosage</div>
+					<h3 class="ec-trust-cell__title">기능성 원료 · <span class="italic">함량</span></h3>
+					<p class="ec-trust-cell__body">옥타코사놀 40mg / 1정. 인정 기능성 문구를 과장 없이 그대로 표기합니다.</p>
 				</div>
-				<div style="padding:32px 24px;border-right:1px solid rgba(255,255,255,0.2);border-bottom:1px solid rgba(255,255,255,0.2);">
-					<div class="mono-caption" style="color:rgba(255,255,255,0.5);">03</div>
-					<div style="font-size:20px;font-weight:400;margin-top:16px;line-height:1.3;">섭취 시 주의사항</div>
-					<p style="color:rgba(255,255,255,0.65);font-size:13px;margin-top:12px;line-height:1.5;">알레르기 체질, 임산부·수유부, 어린이, 질환 보유자는 섭취 전 확인이 필요합니다.</p>
+				<div class="ec-trust-cell">
+					<div class="ec-trust-cell__ord">No. 03 / Caution</div>
+					<h3 class="ec-trust-cell__title">섭취 <span class="italic">주의사항</span></h3>
+					<p class="ec-trust-cell__body">알레르기 체질, 임산부·수유부, 어린이, 질환 보유자는 섭취 전 확인이 필요합니다.</p>
 				</div>
-				<div style="padding:32px 24px;border-right:1px solid rgba(255,255,255,0.2);border-bottom:1px solid rgba(255,255,255,0.2);">
-					<div class="mono-caption" style="color:rgba(255,255,255,0.5);">04</div>
-					<div style="font-size:20px;font-weight:400;margin-top:16px;line-height:1.3;">제조 · 품질 기준</div>
-					<p style="color:rgba(255,255,255,0.65);font-size:13px;margin-top:12px;line-height:1.5;">GMP 인증 제조시설에서 생산. 원료와 완제품 규격을 각각 관리합니다.</p>
+				<div class="ec-trust-cell">
+					<div class="ec-trust-cell__ord">No. 04 / GMP</div>
+					<h3 class="ec-trust-cell__title">제조 · <span class="italic">품질</span></h3>
+					<p class="ec-trust-cell__body">GMP 인증 제조시설에서 생산하며, 원료와 완제품 규격을 각각 관리합니다.</p>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<section class="section section--light">
+	<!-- FAQ -->
+	<section class="section section--cream" data-header-light>
 		<div class="container" style="max-width:960px;">
 			<div class="sec-head">
-				<div class="sec-head__num">05 / FAQ</div>
-				<div><h2 class="sec-head__title">자주 묻는 질문.</h2></div>
+				<div class="sec-head__chap reveal">
+					Chapter 05<br><em>FAQ · 자주 묻는 질문</em>
+				</div>
+				<div>
+					<h2 class="sec-head__title reveal">자주 묻는 <span class="italic">질문</span>.</h2>
+					<p class="sec-head__sub reveal">구매 전 가장 많이 받는 질문을 모았습니다. 표시사항은 제품 상세와 별도 페이지에서 전부 확인 가능합니다.</p>
+				</div>
 			</div>
-			<div class="faq-list">
+			<div class="faq-list reveal">
 				<details class="faq-item" open>
 					<summary class="faq-item__q">섭취만으로 러닝 결과를 약속하는 제품인가요?</summary>
-					<div class="faq-item__a">아닙니다. 본 제품은 건강기능식품으로 <strong>지구력 증진에 도움을 줄 수 있음</strong> 범위 안에서 설계되었습니다. 기록, 완주, 퍼포먼스를 보장하지 않습니다.</div>
+					<div class="faq-item__a">아닙니다. 본 제품은 건강기능식품으로 <span class="italic" style="font-style:italic;color:var(--c-signal);">지구력 증진에 도움을 줄 수 있음</span> 범위 안에서 설계되었습니다. 기록, 완주, 퍼포먼스를 보장하지 않습니다.</div>
 				</details>
 				<details class="faq-item">
 					<summary class="faq-item__q">왜 1일 1정인가요?</summary>
-					<div class="faq-item__a">옥타코사놀 일일 섭취 기준에 맞춰 1정에 40mg을 담았습니다. 러닝 루틴에 맞춰 매일 같은 시간대에 챙기기 쉽도록 구성했습니다.</div>
+					<div class="faq-item__a">옥타코사놀 일일 섭취 기준에 맞춰 1정에 <span class="italic" style="font-style:italic;color:var(--c-signal);">40mg</span>을 담았습니다. 러닝 루틴에 맞춰 매일 같은 시간대에 챙기기 쉽도록 구성했습니다.</div>
 				</details>
 				<details class="faq-item">
 					<summary class="faq-item__q">정제 크기는 어떤 편인가요?</summary>
@@ -193,7 +365,7 @@
 				</details>
 				<details class="faq-item">
 					<summary class="faq-item__q">옥타코사놀은 얼마나 들어 있나요?</summary>
-					<div class="faq-item__a">1정당 <strong>옥타코사놀 40mg</strong>이 함유되어 있으며, 이는 식약처가 인정한 기능성 원료의 일일 섭취 기준 안에서 설계한 함량입니다.</div>
+					<div class="faq-item__a">1정당 <span class="italic" style="font-style:italic;color:var(--c-signal);">옥타코사놀 40mg</span>이 함유되어 있으며, 이는 식약처가 인정한 기능성 원료의 일일 섭취 기준 안에서 설계한 함량입니다.</div>
 				</details>
 				<details class="faq-item">
 					<summary class="faq-item__q">어떤 러너에게 맞나요?</summary>
@@ -207,20 +379,82 @@
 		</div>
 	</section>
 
+	<!-- FINAL CTA -->
 	<section class="final-cta">
+		<div class="final-cta__bg" aria-hidden="true"></div>
+		<div class="final-cta__bgword" aria-hidden="true">endurance</div>
 		<div class="final-cta__inner">
-			<div class="eyebrow eyebrow--light" style="margin-bottom:24px;">FINAL</div>
-			<h2 class="final-cta__title">기준을 확인했다면,<br>이제 <strong>제품</strong>으로.</h2>
-			<div class="final-cta__ctas">
-				<a href="/product/detail.html?product_no=11" class="btn btn--primary btn--lg">제품 자세히 보기</a>
-				<a href="/shopinfo/health-functional.html" class="btn btn--ghost-light btn--lg">표시사항 확인</a>
+			<div class="eyebrow eyebrow--light reveal" style="margin-bottom:28px;">[ Final · 기준을 확인했다면 ]</div>
+			<h2 class="final-cta__title reveal">기준을 확인했다면,<br>이제 <span class="italic">제품</span>으로.</h2>
+			<div class="final-cta__ctas reveal">
+				<a href="/product/detail.html?product_no=11" class="btn btn--primary btn--lg js-ad-cta" data-cta-id="final_primary" data-cta-position="final" data-event-name="landing_cta_click">제품 자세히 보기 <span class="btn__arrow"></span></a>
+				<a href="/shopinfo/health-functional.html" class="btn btn--ghost-light btn--lg">표시사항 확인 <span class="btn__arrow"></span></a>
 			</div>
-			<p class="mono-caption" style="margin-top:40px;color:rgba(255,255,255,0.4);">본 제품은 질병의 예방 및 치료를 위한 의약품이 아닙니다.</p>
+			<p class="mono-caption reveal" style="margin-top:48px;color:rgba(244,239,230,0.35);">본 제품은 질병의 예방 및 치료를 위한 의약품이 아닙니다.</p>
 		</div>
 	</section>
 
+	<!-- MOBILE STICKY CTA -->
 	<div class="mobile-cta-bar">
 		<a href="/shopinfo/health-functional.html" class="btn btn--ghost-light">표시사항</a>
-		<a href="/product/detail.html?product_no=11" class="btn btn--primary">제품 보기</a>
+		<a href="/product/detail.html?product_no=11" class="btn btn--primary js-ad-cta" data-cta-id="mobile_sticky" data-cta-position="mobile_sticky" data-event-name="landing_cta_click">제품 보기</a>
 	</div>
+
 </main>
+
+<script>
+(function(){
+	var header = document.querySelector('.en-header, .site-header, header');
+	var bar = document.getElementById('scrollBar');
+	var heroShell = document.getElementById('heroShell');
+	var heroMedia = document.getElementById('heroMedia');
+
+	var lightSections = [];
+	function collectLightSections() {
+		lightSections = [].slice.call(document.querySelectorAll('[data-header-light], .section--cream, .section--paper'));
+	}
+	collectLightSections();
+
+	function onScroll() {
+		var y = window.scrollY || window.pageYOffset;
+		var h = document.documentElement.scrollHeight - window.innerHeight;
+		var p = h > 0 ? (y / h) : 0;
+		if (bar) bar.style.width = (p * 100) + '%';
+		if (header) {
+			if (y > 40) header.classList.add('is-scrolled'); else header.classList.remove('is-scrolled');
+			var headerH = header.offsetHeight || 72;
+			var probeY = y + headerH + 20;
+			var overLight = false;
+			for (var i = 0; i < lightSections.length; i++) {
+				var s = lightSections[i];
+				var top = s.offsetTop, bot = top + s.offsetHeight;
+				if (probeY >= top && probeY < bot) { overLight = true; break; }
+			}
+			header.classList.toggle('is-inverted', overLight);
+		}
+
+		if (heroShell && heroMedia) {
+			var rect = heroShell.getBoundingClientRect();
+			var total = heroShell.offsetHeight - window.innerHeight;
+			var scrolled = Math.min(Math.max(-rect.top, 0), total);
+			var t = total > 0 ? scrolled / total : 0;
+			var zoom = 1.04 + t * 0.2;
+			var translate = t * -6;
+			heroMedia.style.transform = 'scale(' + zoom.toFixed(3) + ') translateY(' + translate.toFixed(1) + '%)';
+		}
+	}
+	window.addEventListener('scroll', onScroll, { passive: true });
+	window.addEventListener('resize', function(){ collectLightSections(); onScroll(); });
+	onScroll();
+
+	var heroTitle = document.getElementById('heroTitle');
+	if (heroTitle) { setTimeout(function(){ heroTitle.classList.add('is-in'); }, 200); }
+
+	var io = new IntersectionObserver(function(entries){
+		entries.forEach(function(e){
+			if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+		});
+	}, { rootMargin: '0px 0px -10% 0px', threshold: 0.12 });
+	document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+})();
+</script>
