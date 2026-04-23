@@ -109,15 +109,16 @@
       }
 
       if (pdInfoArea && pdAdditional) {
+        var dock = false;
         if (window.matchMedia('(min-width: 1024px)').matches) {
           var addTop = pdAdditional.getBoundingClientRect().top + y;
           var footTop = pdFooter ? (pdFooter.getBoundingClientRect().top + y) : Infinity;
           var past = y + 100 > addTop;
           var nearBottom = pdFooter ? (footTop - y < 300) : false;
-          pdInfoArea.classList.toggle('is-docked', past && !nearBottom);
-        } else {
-          pdInfoArea.classList.remove('is-docked');
+          dock = past && !nearBottom;
         }
+        pdInfoArea.classList.toggle('is-docked', dock);
+        document.body.classList.toggle('has-docked-info', dock);
       }
 
       revealInViewport();
