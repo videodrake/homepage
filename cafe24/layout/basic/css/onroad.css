@@ -13474,46 +13474,56 @@ body.onroad-page .jg-signup-start .ec-base-button.gBottom.jg-signup-start__actio
 }
 
 /* ════════════════════════════════════════════════════════════════════
-   AGREEMENT v2 — full single-stack rebuild
+   AGREEMENT v2 — single-stack rebuild (ID-scoped, conflict-proof)
    ════════════════════════════════════════════════════════════════════
-   .jg-agree-v2 추가 클래스로 활성. specificity = body + .jg-agreement-page
-   + .jg-agree-v2 (0,3,1)이 기존 .onroad-page .jg-agreement-page (0,2,1)
-   룰을 모두 이김. !important로 ec-base 시스템 룰까지 잠금.
+   왜 #jgAgreeV2#jgAgreeV2 ID prefix?
 
-   레이아웃: 4-row 단일 세로 stack
-     Row 1: 전체 동의 (full-width 다크 button-like bar)
-     Row 2~3: 필수 그룹 (이용약관 + 개인정보)
-     Row 4~N: 선택 그룹 (개인정보 선택·제3자·위탁·마케팅·쇼핑정보·user_defined 1~10)
-     Row N+1: CTA (동의하고 정보 입력으로) + back link
+   onroad.css에는 .agreeArea/.agreeAll/.btnToggle/.icoArrowBottom/
+   .ec-base-chk 룰이 5~10번씩 중복돼 누적돼 있다 (lines 2693, 2816,
+   9006, 9129, 9814, 9930, 9960, 10116, 10133, 12774, 12812, 13263…).
+   매 iteration마다 직접 수정 대신 끝에 append한 결과 — 같은 selector
+   가 다른 값을 박아 cascade 결과가 indeterministic.
 
-   카페24 hooks 보존: module="member_join", {$sAgreeAllChecked},
-   {$form.*_check}, {$*_desc}, {$display_*|display}, all input id/name,
-   onclick="checkAgreement('/member/join.html')". join_agreement.js
-   selectors (#sAgreeAllChecked, .agreeArea, .btnToggle, .contents) 그대로.
+   class-only 셀렉터로는 이 중 일부 (예: ".agreeArea > .title h3 >
+   input[type=checkbox].ec-base-chk" 0,6,3) 를 못 이김. ID 셀렉터는
+   specificity (1,X,Y)로 무조건 이김.
+
+   같이 해결한 시각 버그:
+   - cafe24 {$form.*_check} 매크로가 자동 삽입하는 <label>동의함</label>
+     숨김 → flex 정렬 회복
+   - .icoArrowBottom width/height에 min/max 모두 박아 기존 룰의
+     min-width:32px !important로 인한 width 클램핑 차단
+   - input[type=checkbox]:checked에 signal red bg + svg checkmark 강제
+   - <label class="check"> 안의 <em>필수/선택</em> 배지 색 일치
+
+   장기 정리 TODO: 위 중복 블록들 제거 — .jg-join-page와 entangled
+   되어 있어 별도 PR로. 지금은 #jgAgreeV2로 안전하게 override.
    ──────────────────────────────────────────────────────────────────── */
 
-body.onroad-page .jg-agreement-page.jg-agree-v2 {
+#jgAgreeV2#jgAgreeV2 {
+    display: block !important;
     max-width: 720px !important;
     margin: 0 auto var(--s-16) !important;
     padding: 0 var(--s-5) !important;
     background: var(--c-paper) !important;
 }
-
-/* 옛 2-column wrapper(.jg-signup-start__layout/__consents/.agreeInner) 제거 */
-body.onroad-page .jg-agreement-page.jg-agree-v2 .agreeInner,
-body.onroad-page .jg-agreement-page.jg-agree-v2 .agreeInner > .left,
-body.onroad-page .jg-agreement-page.jg-agree-v2 .agreeInner > .right {
+#jgAgreeV2#jgAgreeV2 .jg-signup-start__layout,
+#jgAgreeV2#jgAgreeV2 .jg-signup-start__consents,
+#jgAgreeV2#jgAgreeV2 .agreeInner,
+#jgAgreeV2#jgAgreeV2 .agreeInner > .left,
+#jgAgreeV2#jgAgreeV2 .agreeInner > .right {
     display: contents !important;
 }
-
-body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__stack {
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__stack {
     display: flex !important;
     flex-direction: column !important;
     gap: var(--s-5) !important;
+    padding: 0 !important;
+    margin: 0 !important;
 }
 
 /* ─── Row 1: 전체 동의 (다크 button-like bar) ─── */
-body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__all {
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__all {
     display: flex !important;
     flex-direction: row !important;
     align-items: center !important;
@@ -13527,43 +13537,57 @@ body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__all {
     grid-template-columns: none !important;
     grid-template-areas: none !important;
     box-shadow: none !important;
+    position: relative !important;
 }
-body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__all::before { content: none !important; }
-body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__all h3 { display: none !important; }
-body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__all .agreeAll__copy { display: none !important; }
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__all::before,
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__all::after { content: none !important; }
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__all h3 { display: none !important; }
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__all .agreeAll__copy { display: none !important; }
 
-body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__all-text {
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__all-text {
     display: flex !important;
     flex-direction: column !important;
     gap: 6px !important;
     flex: 1 1 auto !important;
     min-width: 0 !important;
     padding: 0 !important;
+    margin: 0 !important;
     grid-column: auto !important;
 }
-body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__all-eyebrow {
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__all-eyebrow {
+    display: inline-block !important;
     font-family: var(--font-mono) !important;
     font-size: 10px !important;
+    line-height: 1 !important;
     letter-spacing: 0.18em !important;
     color: var(--c-signal) !important;
     text-transform: uppercase !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
-body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__all-text strong {
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__all-text strong {
+    display: block !important;
     font-family: var(--font-serif) !important;
     font-weight: 300 !important;
     font-size: clamp(20px, 2.4vw, 28px) !important;
     line-height: 1.15 !important;
     color: var(--c-cream) !important;
     letter-spacing: -0.01em !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
-body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__all-desc {
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__all-desc {
+    display: block !important;
     font-family: var(--font-sans) !important;
     font-size: 13px !important;
     line-height: 1.55 !important;
     color: rgba(244,239,230,0.7) !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
-body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__all-checkbox {
+/* 전체 동의 체크박스 — 32x32, signal red when checked */
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__all-checkbox {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -13571,43 +13595,68 @@ body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__all-checkbox {
     padding: 0 !important;
     flex: 0 0 auto !important;
     grid-column: auto !important;
+    background: none !important;
+    border: 0 !important;
+    width: auto !important;
+    height: auto !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
 }
-body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__all-checkbox input[type="checkbox"] {
+#jgAgreeV2#jgAgreeV2 #sAgreeAllChecked {
     appearance: none !important;
     -webkit-appearance: none !important;
+    -moz-appearance: none !important;
     width: 32px !important;
-    height: 32px !important;
     min-width: 32px !important;
+    max-width: 32px !important;
+    height: 32px !important;
+    min-height: 32px !important;
+    max-height: 32px !important;
     margin: 0 !important;
     padding: 0 !important;
-    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: 18px 18px !important;
     border: 1.5px solid var(--c-cream) !important;
     border-radius: 0 !important;
     cursor: pointer !important;
     position: relative !important;
+    inset: auto !important;
+    top: auto !important; left: auto !important; right: auto !important; bottom: auto !important;
     z-index: 2 !important;
     pointer-events: auto !important;
-    flex-shrink: 0 !important;
+    flex: 0 0 32px !important;
     box-sizing: border-box !important;
     opacity: 1 !important;
+    visibility: visible !important;
+    display: inline-block !important;
     transition: background-color .15s ease, border-color .15s ease !important;
 }
-body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__all-checkbox input[type="checkbox"]:checked {
-    background: var(--c-signal) url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 9.5L7.5 13L14 6' stroke='%23f4efe6' stroke-width='2.2' stroke-linecap='square' stroke-linejoin='miter'/%3E%3C/svg%3E") center / 18px 18px no-repeat !important;
+#jgAgreeV2#jgAgreeV2 #sAgreeAllChecked:checked {
+    background-color: var(--c-signal) !important;
+    background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='18'%20height='18'%20viewBox='0%200%2018%2018'%3E%3Cpath%20d='M4%209.5L7.5%2013L14%206'%20stroke='%23f4efe6'%20stroke-width='2.2'%20stroke-linecap='square'%20stroke-linejoin='miter'%20fill='none'/%3E%3C/svg%3E") !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: 18px 18px !important;
     border-color: var(--c-signal) !important;
 }
-body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__all-checkbox label {
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__all-checkbox label[for="sAgreeAllChecked"] {
     position: absolute !important;
-    width: 1px !important; height: 1px !important;
+    width: 1px !important;
+    height: 1px !important;
     overflow: hidden !important;
     clip: rect(0 0 0 0) !important;
-    padding: 0 !important; margin: -1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
     white-space: nowrap !important;
     display: block !important;
+    border: 0 !important;
 }
 
-/* ─── 그룹 컨테이너 (REQUIRED / OPTIONAL) ─── */
-body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__group {
+/* ─── 그룹 헤더 ─── */
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__group {
     display: block !important;
     background: var(--c-cream) !important;
     border: 1px solid var(--c-line) !important;
@@ -13615,34 +13664,37 @@ body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__group {
     padding: 0 !important;
     overflow: hidden !important;
 }
-body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__group-head {
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__group-head {
     display: flex !important;
     align-items: baseline !important;
     gap: var(--s-3) !important;
     padding: var(--s-4) var(--s-5) !important;
     border-bottom: 1px solid var(--c-line) !important;
     background: var(--c-paper) !important;
+    margin: 0 !important;
 }
-body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__group-eyebrow {
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__group-eyebrow {
     font-family: var(--font-mono) !important;
     font-size: 10px !important;
     letter-spacing: 0.18em !important;
     color: var(--c-signal) !important;
     text-transform: uppercase !important;
+    line-height: 1 !important;
 }
-body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__group--optional .jg-agree-v2__group-eyebrow {
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__group--optional .jg-agree-v2__group-eyebrow {
     color: var(--c-meta) !important;
 }
-body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__group-title {
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__group-title {
     font-family: var(--font-sans) !important;
     font-size: 14px !important;
     font-weight: 500 !important;
     color: var(--c-ink) !important;
     letter-spacing: -0.005em !important;
+    line-height: 1.2 !important;
 }
 
 /* ─── 개별 약관 카드 ─── */
-body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__card {
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__card {
     display: block !important;
     margin: 0 !important;
     padding: 0 !important;
@@ -13650,23 +13702,25 @@ body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__card {
     border: 0 !important;
     border-top: 1px solid var(--c-line) !important;
     box-shadow: none !important;
-    /* hide cards that admin disabled (.displaynone runtime class) */
+    position: static !important;
+    overflow: visible !important;
 }
-body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__group .jg-agree-v2__card:first-of-type {
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__group .jg-agree-v2__card:first-of-type {
     border-top: 0 !important;
 }
-body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__card.displaynone {
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__card.displaynone {
     display: none !important;
 }
-
-body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__card .title {
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__card .title {
     display: block !important;
     margin: 0 !important;
     padding: 0 !important;
     background: none !important;
     border: 0 !important;
+    width: auto !important;
+    min-height: 0 !important;
 }
-body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__card .title h3 {
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__card .title h3 {
     display: flex !important;
     align-items: center !important;
     gap: var(--s-3) !important;
@@ -13680,37 +13734,78 @@ body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__card .title h3 {
     background: transparent !important;
     width: auto !important;
     height: auto !important;
+    min-height: 0 !important;
     border: 0 !important;
+    line-height: 1.2 !important;
+    text-transform: none !important;
+    letter-spacing: 0 !important;
 }
 
-/* checkbox visual */
-body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__card input[type="checkbox"] {
-    appearance: none !important;
-    -webkit-appearance: none !important;
-    width: 20px !important;
-    height: 20px !important;
-    min-width: 20px !important;
+/* ★ cafe24 자동 삽입 <label>동의함</label> 숨김 (모든 카드 + additional li 안) */
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__card .title h3 > label:not(.check),
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__card .additional > li > label:not(.check) {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
     margin: 0 !important;
     padding: 0 !important;
-    background: var(--c-paper) !important;
+}
+
+/* checkbox 시각 — longhand만 사용해 shorthand cascade 함정 회피.
+   width/min/max 모두 박아 기존 min-width 클램핑 차단.
+   inset/position 풀어 overlay 형태 방지 (기존 .ec-base-chk input rule이
+   position:absolute; inset:0; opacity:0으로 input을 안 보이게 만듦). */
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__card input[type="checkbox"],
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__card input[type="checkbox"].ec-base-chk,
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__card .agreeArea input[type="checkbox"],
+#jgAgreeV2#jgAgreeV2 .agreeArea > .title h3 > input[type="checkbox"].ec-base-chk {
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    width: 20px !important;
+    min-width: 20px !important;
+    max-width: 20px !important;
+    height: 20px !important;
+    min-height: 20px !important;
+    max-height: 20px !important;
+    flex: 0 0 20px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: var(--c-paper) !important;
+    background-image: none !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: 12px 12px !important;
     border: 1px solid var(--c-ink) !important;
     border-radius: 0 !important;
     cursor: pointer !important;
     position: relative !important;
+    inset: auto !important;
+    top: auto !important; left: auto !important; right: auto !important; bottom: auto !important;
     z-index: 2 !important;
     pointer-events: auto !important;
     flex-shrink: 0 !important;
     vertical-align: middle !important;
     box-sizing: border-box !important;
     opacity: 1 !important;
+    visibility: visible !important;
+    display: inline-block !important;
     transition: background-color .15s ease, border-color .15s ease !important;
 }
-body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__card input[type="checkbox"]:checked {
-    background: var(--c-signal) url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3 7.2L5.7 10L11 4' stroke='%23f4efe6' stroke-width='2' stroke-linecap='square' stroke-linejoin='miter'/%3E%3C/svg%3E") center / 12px 12px no-repeat !important;
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__card input[type="checkbox"]:checked,
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__card input[type="checkbox"].ec-base-chk:checked,
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__card .agreeArea input[type="checkbox"]:checked,
+#jgAgreeV2#jgAgreeV2 .agreeArea > .title h3 > input[type="checkbox"].ec-base-chk:checked {
+    background-color: var(--c-signal) !important;
+    background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='14'%20height='14'%20viewBox='0%200%2014%2014'%3E%3Cpath%20d='M3%207.2L5.7%2010L11%204'%20stroke='%23f4efe6'%20stroke-width='2'%20stroke-linecap='square'%20stroke-linejoin='miter'%20fill='none'/%3E%3C/svg%3E") !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: 12px 12px !important;
     border-color: var(--c-signal) !important;
 }
 
-body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__card label.check {
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__card label.check {
     flex: 1 1 auto !important;
     min-width: 0 !important;
     color: var(--c-ink) !important;
@@ -13724,8 +13819,10 @@ body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__card label.check {
     padding: 0 !important;
     background: none !important;
     line-height: 1.5 !important;
+    text-transform: none !important;
+    letter-spacing: 0 !important;
 }
-body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__card label.check em {
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__card label.check em {
     font-family: var(--font-mono) !important;
     font-style: normal !important;
     font-weight: 500 !important;
@@ -13735,21 +13832,27 @@ body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__card label.check e
     padding: 3px 7px !important;
     border: 1px solid currentColor !important;
     line-height: 1 !important;
+    background: none !important;
+    color: inherit !important;
 }
-body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__card--required label.check em {
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__card--required label.check em {
     color: var(--c-signal) !important;
     border-color: var(--c-signal) !important;
 }
-body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__card:not(.jg-agree-v2__card--required) label.check em {
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__card:not(.jg-agree-v2__card--required) label.check em {
     color: var(--c-meta) !important;
     border-color: var(--c-line) !important;
 }
 
-/* toggle 화살표 */
-body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__card .btnToggle {
+/* ─── 토글 화살표 — 28x28 컨테이너에 8x8 chevron span ─── */
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__card .btnToggle {
     flex: 0 0 auto !important;
     width: 28px !important;
+    min-width: 28px !important;
+    max-width: 28px !important;
     height: 28px !important;
+    min-height: 28px !important;
+    max-height: 28px !important;
     display: grid !important;
     place-items: center !important;
     background: none !important;
@@ -13760,28 +13863,51 @@ body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__card .btnToggle {
     color: var(--c-ink) !important;
     position: relative !important;
     transform: none !important;
+    overflow: visible !important;
+    font-size: 0 !important;
+    box-sizing: border-box !important;
 }
-body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__card .btnToggle::before,
-body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__card .btnToggle::after {
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__card .btnToggle::before,
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__card .btnToggle::after {
     content: none !important;
+    display: none !important;
+    background: none !important;
+    border: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
 }
-body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__card .icoArrowBottom {
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__card .icoArrowBottom {
     display: block !important;
     width: 8px !important;
+    min-width: 8px !important;
+    max-width: 8px !important;
     height: 8px !important;
+    min-height: 8px !important;
+    max-height: 8px !important;
     border: 0 !important;
     border-right: 1.5px solid var(--c-ink) !important;
     border-bottom: 1.5px solid var(--c-ink) !important;
     background: none !important;
+    background-image: none !important;
     transform: rotate(45deg) translateY(-2px) !important;
     transition: transform 0.2s ease !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: relative !important;
+    box-sizing: border-box !important;
+    font-size: 0 !important;
 }
-body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__card.on .icoArrowBottom {
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__card .icoArrowBottom::before,
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__card .icoArrowBottom::after {
+    content: none !important;
+    display: none !important;
+}
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__card.on .icoArrowBottom {
     transform: rotate(-135deg) translateY(-2px) !important;
 }
 
-/* contents (펼침) */
-body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__card .contents {
+/* ─── contents 영역 (펼침) ─── */
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__card .contents {
     display: none !important;
     padding: 0 var(--s-5) var(--s-4) !important;
     margin: 0 !important;
@@ -13795,17 +13921,17 @@ body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__card .contents {
     border: 0 !important;
     border-top: 1px solid var(--c-line) !important;
 }
-body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__card.on .contents {
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__card.on .contents {
     display: block !important;
     padding: var(--s-4) var(--s-5) !important;
 }
-body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__card .contents p,
-body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__card .contents div {
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__card .contents p,
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__card .contents div {
     margin: 0 0 8px !important;
 }
 
-/* additional list (쇼핑정보 수신 하위 옵션) */
-body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__card .additional {
+/* ─── 추가 옵션 리스트 ─── */
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__card .additional {
     list-style: none !important;
     margin: 0 !important;
     padding: var(--s-3) var(--s-5) var(--s-4) !important;
@@ -13815,7 +13941,7 @@ body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__card .additional {
     border-top: 1px solid var(--c-line) !important;
     background: rgba(20, 18, 16, 0.015) !important;
 }
-body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__card .additional li {
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__card .additional li {
     display: flex !important;
     align-items: center !important;
     gap: 8px !important;
@@ -13826,22 +13952,27 @@ body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__card .additional l
     background: none !important;
     border: 0 !important;
 }
-body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__card .additional li.displaynone {
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__card .additional li.displaynone {
     display: none !important;
 }
-body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__card .additional li input[type="checkbox"] {
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__card .additional li input[type="checkbox"],
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__card .additional li input[type="checkbox"].ec-base-chk {
     width: 16px !important;
-    height: 16px !important;
     min-width: 16px !important;
+    max-width: 16px !important;
+    height: 16px !important;
+    min-height: 16px !important;
+    max-height: 16px !important;
+    flex: 0 0 16px !important;
 }
-body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__card .additional li label.check {
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__card .additional li label.check {
     font-size: 13px !important;
     font-weight: 400 !important;
     color: var(--c-char) !important;
 }
 
 /* ─── 하단 액션 ─── */
-body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__actions {
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__actions {
     display: flex !important;
     flex-direction: column !important;
     gap: var(--s-3) !important;
@@ -13850,13 +13981,16 @@ body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__actions {
     background: none !important;
     border: 0 !important;
     text-align: center !important;
+    width: 100% !important;
+    max-width: none !important;
 }
-body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__cta {
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__cta {
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
     gap: var(--s-3) !important;
     width: 100% !important;
+    max-width: none !important;
     padding: 18px var(--s-5) !important;
     background: var(--c-signal) !important;
     color: var(--c-cream) !important;
@@ -13872,17 +14006,18 @@ body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__cta {
     transition: background 0.18s ease, border-color 0.18s ease !important;
     text-decoration: none !important;
 }
-body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__cta:hover,
-body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__cta:focus-visible {
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__cta:hover,
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__cta:focus-visible {
     background: var(--c-signal-2) !important;
     border-color: var(--c-signal-2) !important;
     color: var(--c-cream) !important;
 }
-body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__back {
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__back {
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
     width: 100% !important;
+    max-width: none !important;
     padding: 14px var(--s-5) !important;
     background: var(--c-cream) !important;
     color: var(--c-ink) !important;
@@ -13896,8 +14031,8 @@ body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__back {
     line-height: 1 !important;
     transition: border-color 0.18s ease, color 0.18s ease !important;
 }
-body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__back:hover,
-body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__back:focus-visible {
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__back:hover,
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__back:focus-visible {
     border-color: var(--c-ink) !important;
     color: var(--c-ink) !important;
     background: var(--c-cream) !important;
@@ -13905,38 +14040,50 @@ body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__back:focus-visible
 
 /* ─── 모바일 ≤720px ─── */
 @media (max-width: 720px) {
-    body.onroad-page .jg-agreement-page.jg-agree-v2 {
+    #jgAgreeV2#jgAgreeV2 {
         padding: 0 var(--s-4) !important;
     }
-    body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__all {
-        padding: var(--s-4) var(--s-4) !important;
+    #jgAgreeV2#jgAgreeV2 .jg-agree-v2__all {
+        padding: var(--s-4) !important;
         gap: var(--s-4) !important;
     }
-    body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__all-text strong {
+    #jgAgreeV2#jgAgreeV2 .jg-agree-v2__all-text strong {
         font-size: 18px !important;
     }
-    body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__all-desc {
+    #jgAgreeV2#jgAgreeV2 .jg-agree-v2__all-desc {
         font-size: 12px !important;
     }
-    body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__all-checkbox input[type="checkbox"] {
+    #jgAgreeV2#jgAgreeV2 #sAgreeAllChecked {
         width: 28px !important;
-        height: 28px !important;
         min-width: 28px !important;
+        max-width: 28px !important;
+        height: 28px !important;
+        min-height: 28px !important;
+        max-height: 28px !important;
+        flex: 0 0 28px !important;
     }
-    body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__group-head {
+    #jgAgreeV2#jgAgreeV2 .jg-agree-v2__group-head {
         padding: var(--s-3) var(--s-4) !important;
     }
-    body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__card .title h3 {
+    #jgAgreeV2#jgAgreeV2 .jg-agree-v2__card .title h3 {
         padding: var(--s-3) var(--s-4) !important;
         font-size: 13px !important;
     }
-    body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__card label.check {
+    #jgAgreeV2#jgAgreeV2 .jg-agree-v2__card label.check {
         font-size: 13px !important;
     }
-    body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__card .contents {
+    #jgAgreeV2#jgAgreeV2 .jg-agree-v2__card .contents {
         font-size: 11px !important;
+        padding: 0 var(--s-4) var(--s-3) !important;
     }
-    body.onroad-page .jg-agreement-page.jg-agree-v2 .jg-agree-v2__cta {
+    #jgAgreeV2#jgAgreeV2 .jg-agree-v2__card.on .contents {
+        padding: var(--s-3) var(--s-4) !important;
+    }
+    #jgAgreeV2#jgAgreeV2 .jg-agree-v2__card .additional {
+        padding: var(--s-3) var(--s-4) !important;
+        gap: var(--s-4) !important;
+    }
+    #jgAgreeV2#jgAgreeV2 .jg-agree-v2__cta {
         font-size: 14px !important;
         padding: 16px var(--s-4) !important;
     }
