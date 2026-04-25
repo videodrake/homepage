@@ -2052,15 +2052,18 @@ body.onroad-page .jg-product-detail-page .detailArea.pd-grid {
         "urgency info"
         "image   info" !important;
     column-gap: clamp(40px, 5vw, 96px) !important;
-    row-gap: clamp(20px, 2.5vw, 36px) !important;
+    row-gap: 0 !important;          /* urgency 박스와 imgArea를 직접 붙임 */
     align-items: start !important;
     padding: var(--s-8) 0 var(--s-16) !important;
 }
 body.onroad-page .jg-product-detail-page .detailArea.pd-grid > .pd-urgency {
     grid-area: urgency !important;
+    margin-bottom: 0 !important;
+    border-bottom: 0 !important;    /* image 윗변과 매끄럽게 이어지도록 dark 박스 하단선 제거 */
 }
 body.onroad-page .jg-product-detail-page .detailArea.pd-grid > .imgArea {
     grid-area: image !important;
+    margin-top: 0 !important;
 }
 body.onroad-page .jg-product-detail-page .detailArea.pd-grid > .infoArea {
     grid-area: info !important;
@@ -2069,10 +2072,13 @@ body.onroad-page .jg-product-detail-page .detailArea.pd-grid > .infoArea {
     body.onroad-page .jg-product-detail-page .detailArea.pd-grid {
         grid-template-columns: 1fr !important;
         grid-template-areas: "urgency" "image" "info" !important;
-        row-gap: var(--s-5) !important;
+        row-gap: 0 !important;      /* urgency↔image 붙임. info와의 간격은 아래 margin-top으로 보존 */
     }
     body.onroad-page .jg-product-detail-page .detailArea.pd-grid > .imgArea {
         position: relative !important; top: auto !important;
+    }
+    body.onroad-page .jg-product-detail-page .detailArea.pd-grid > .infoArea {
+        margin-top: var(--s-5) !important;
     }
 }
 
