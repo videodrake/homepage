@@ -25,7 +25,14 @@
 15. [코드 변경 체크리스트 (전·후)](#15-체크리스트)
 16. [사고 사례 백서](#16-사고-사례-백서)
 17. [강제 구조와 디자인 제약 (Constraints)](#17-강제-구조와-디자인-제약)
-18. [용어집](#18-용어집)
+18. [JS 런타임 해체분석 — 매 페이지 로드 시 일어나는 일](#18-js-런타임-해체분석)
+19. [EZ 시스템 — 두 번째 모듈 레이어](#19-ez-시스템)
+20. [`ec-base-*.css` suite 해체분석](#20-ec-base-css-suite-해체분석)
+21. [모듈 391개 분류와 케이스 함정](#21-모듈-분류와-케이스-함정)
+22. [서버 런타임 주입 카탈로그](#22-서버-런타임-주입-카탈로그)
+23. [예약된 클래스/ID — 우리가 건드리면 안 되는 이름들](#23-예약된-이름)
+24. [자체 점검 노트 — 1차 문서의 약점](#24-자체-점검-노트)
+25. [용어집](#25-용어집)
 
 ---
 
@@ -34,8 +41,8 @@
 이 다섯 가지만 지켜도 사고 90% 예방.
 
 1. **`<!--@css(...)-->` 디렉티브에 쿼리 스트링 절대 금지** (`?v=`, `?t=` 모두). 옵티마이저가 다른 파일로 인식해 번들에서 통째 누락 → 라이브가 raw HTML로 렌더됨. 카페24가 자동으로 `?t=<timestamp>` 붙여주므로 수동 버전 불필요.
-2. **`module="..."` / `{$변수}` / `<!--@layout|css|js|import(...)-->` 는 절대 삭제·이름변경 금지.** 이 hook들은 서버가 런타임에 데이터를 주입하는 자리. 디자인 번들 HTML로 통째 대체하면 결제/장바구니/회원/가격이 모두 깨짐.
-3. **`.site-header`는 `position: fixed; top: 0; z-index: 50`이다.** 그 위에 띄울 요소는 `position: fixed; top: 0; z-index > 50` + `:has()` 스코프로 헤더와 `#wrap`을 promo 높이만큼 밀어내야 한다 (§10 참조).
+2. **`module="..."` / `{$변수}` / `<!--@layout|css|js|import(...)-->` 는 절대 삭제·이름변경 금지. 케이스도 1글자 변경 금지** (`Myshop_main` ≠ `myshop_main`, §21.2). 이 hook들은 서버가 런타임에 데이터를 주입하는 자리. 디자인 번들 HTML로 통째 대체하면 결제/장바구니/회원/가격이 모두 깨짐.
+3. **`.site-header`는 `position: fixed; top: 0; z-index: 50`이다.** 그 위에 띄울 요소는 `position: fixed; top: 0; z-index > 50` + `:has()` 스코프로 헤더와 `#wrap`을 promo 높이만큼 밀어내야 한다 (§10). 추가로 layout.js의 `fixedHeader()`가 스크롤 시 `#contents`에 `margin-top: 72px` 인라인 박는 사실도 인지 (§18.3) — 두 padding/margin 누적 가능.
 4. **시각 변경은 1 commit = 1 visual element.** promo + urgency + tabs + sticky를 한 커밋에 묶지 말 것. 깨졌을 때 어디 때문인지 분리 불가능 → 전체 revert만 가능.
 5. **카페24 어드민 "디자인 편집" / "스마트디자인 편집" 페이지를 절대 열지 말 것.** DB의 옛 버전이 FTP 파일을 덮어써 작업이 통째로 사라진다.
 
@@ -1090,7 +1097,671 @@ layout.html이 `#contents` 첫 자식으로 강제 삽입:
 
 ---
 
-## 18. 용어집
+## 18. JS 런타임 해체분석
+
+> **이 섹션의 가치**: 우리 onroad-brand.js가 실행될 때 이미 어떤 카페24 핸들러가 같은 element에 등록되어 있는지, 또 우리 CSS와 카페24 JS가 어떻게 충돌하는지 파악. 1차 문서의 §17.7은 추상적이었고 정확하지 않은 부분이 있었음.
+
+### 18.1 페이지가 로드되면 실행되는 카페24 JS 인벤토리
+
+**`layout.html` `<head>` / `<body>`에서 자동 등록 (이 순서로):**
+
+| 파일 | 줄수 | 역할 |
+|---|---|---|
+| `swiper-bundle.min.js` | 12 | Swiper 라이브러리 글로벌 등록 (`Swiper`) |
+| `js/module/product/sale_price.js` | — | 할인가 표시 모듈 |
+| `layout/basic/js/basic.js` | 88 | DOM 헬퍼 + `.eTooltip`, `.eToggle div` 핸들러 |
+| `layout/basic/js/layout.js` | 524 | 헤더 sticky · 검색 오버레이 · slide aside · 카테고리 · MutationObserver · jQuery 의존 · 쿠키 |
+| `js/common.js` | 69 | `winPop`, `getQueryString`, `globalBuyBtnScrollFunc` |
+| `ez/init.js` | 177 | EZST 컴포넌트 lifecycle, `ez-view-type-mobile` 클래스 토글 |
+| `layout/basic/js/onroad-brand.js` | 274 | **우리 커스텀** (이게 마지막 — 위 것들 다 끝나고 init) |
+
+**`main.html` 추가 등록:**
+- `layout/basic/js/main.js` (132줄) — 홈 swiper, 탭 카테고리, EZST.register('image-gallery/2', …)
+
+**팝업 (`popup.html`)에서:**
+- `layout/basic/js/popup.js` (48줄) — `setResizePopup()` (window.resizeBy로 팝업 크기 자동 조정), `detectMobileDevice()`
+
+**`/layout/basic/js/common.js`** — 256줄. 이건 layout.html에서 **import 안 됨** (이름 충돌, /js/common.js만 등록됨). 대신 일부 페이지가 직접 또는 모듈 JS가 끌어다 쓸 가능성. 실제 라이브에서 영향은 grep 추가 필요.
+
+**모듈 JS (`/js/module/<area>/*.js`)** — 카페24가 자동으로 페이지에 필요한 만큼 로드. 우리가 직접 등록 안 함.
+
+### 18.2 글로벌로 노출되는 함수·객체
+
+페이지 어디서나 호출 가능하므로 우리 JS가 같은 이름 쓰면 충돌:
+
+- **jQuery / `$`** — basic.js·layout.js·common.js 모두 jQuery 기반. jQuery 글로벌 노출.
+- **`Swiper`** — swiper 인스턴스 생성자.
+- **`EZST`** — EZ 시스템 (init.js + main.html `<script>`에서 `window.EZST = {q:[],register}` 박음).
+- **`hasClass(el, name)`**, **`toggleClassAll(...)`**, **`findElements(...)`**, **`setAttributeAll(...)`** — basic.js 글로벌 함수.
+- **`fixedHeader()`**, **`bottomNav()`**, **`bottomScroll()`**, **`searchLayer()`**, **`handleNav()`**, **`handleDimmed()`**, **`getOffset()`**, **`getQuickPosition()`**, **`getMainQuickPosition()`**, **`getSubQuickPosition()`**, **`setQuickScrollEvent()`**, **`quickGoTop()`**, **`topBanner()`**, **`getCurrentScrollPercentage()`** — layout.js 글로벌.
+- **`setCookiem()`**, **`getCookiem()`**, **`delCookiem()`** — layout.js 쿠키 헬퍼 (jQuery 기반).
+- **`top_category()`**, **`observeTopCategory()`**, **`ifmore()`** — layout.js 글로벌.
+- **`winPop()`**, **`getQueryString()`**, **`globalBuyBtnScrollFunc()`** — js/common.js 글로벌.
+- **`window.call_eTab`** — 페이지가 정의하면 common.js가 호출 (extension point).
+- **`detectMobileDevice()`** — popup.js 글로벌.
+- **`aCategory`** — slide_menu.js가 박는 글로벌 배열 (카테고리 트리).
+
+**우리 onroad-brand.js 작성 시 금지 이름**: 위 모두. 우리는 IIFE 안에 변수 선언, 외부에 아무것도 박지 말 것.
+
+### 18.3 layout.js × 우리 CSS 충돌 — `fixedHeader()` 함정 ⚠️
+
+이건 1차 문서가 빠뜨린 매우 중요한 충돌.
+
+**layout.js:48–58** (`fixedHeader()`):
+```js
+function fixedHeader() {
+    var header = document.getElementById("header");
+    var fixed_margin = document.getElementById("contents");
+    var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+    var header_height = document.getElementById("header").scrollHeight + 'px';
+
+    if (scrollY > header.offsetTop) {
+        header.classList.add("fixed");
+        fixed_margin.style.marginTop = header_height;   // ← 여기
+    } else {
+        header.classList.remove("fixed");
+        fixed_margin.style.marginTop = '0px';
+    }
+}
+```
+
+`window.addEventListener('scroll', ...)` 안에서 호출 → **스크롤할 때마다 `#contents.style.marginTop = '72px'` 인라인 박힘.**
+
+**우리 onroad.css:124** 는 `.site-header`를 **처음부터** `position: fixed; top: 0`으로 만듦. 그래서:
+
+- 페이지 처음 로드 (scrollY=0): `header.offsetTop`도 0 → `if` 조건 통과 → `#contents.style.marginTop = '72px'` 즉시 박힘 (그러나 `window.addEventListener('load')`에서만 호출하니 페이지 로드 직후에는 한 번만)
+- 사용자 스크롤 → `requestAnimationFrame` 안에서 매번 `fixedHeader()` 호출 → 같은 인라인 스타일 계속 덮어씀.
+
+**결과**:
+- 우리 `:has(.pd-promo) #wrap { padding-top: 36px }`은 `#wrap`에 적용 (BLOCK 1).
+- layout.js는 `#contents.style.marginTop` 인라인으로 72px 추가 (BLOCK 2).
+- 두 padding/margin이 **누적**되어 #contents가 36 + 72 = 108px 아래로 밀림.
+- 페이지 첫 화면이 헤더+promo 아래로 너무 많이 밀려있을 수 있음.
+
+**대응**:
+- 우리 onroad.css에 `body.onroad-page #contents { margin-top: 0 !important }` 추가하면 layout.js의 인라인 스타일 무시 가능 (inline `!important`만 inline 이김).
+- 더 깔끔한 대안: `body.onroad-page #header { position: static; }`으로 fixed 풀고, layout.js의 fixedHeader 결과를 그대로 받음. 단 우리 디자인 기대(처음부터 floating)와 다름.
+- 또는 layout.js의 `fixedHeader` 함수 자체를 onroad-brand.js에서 redefinition (`window.fixedHeader = function(){}` no-op으로) — 가장 확실하지만 다른 의존이 깨질 수 있어 신중.
+
+**현재 상태**: 우리는 둘 다 한다는 사실을 모르고 디자인했음. 라이브 검증 시 `getComputedStyle(document.querySelector('#contents')).marginTop`을 찍어볼 것.
+
+### 18.4 layout.js의 jQuery 후속 동작 (DOMContentLoaded)
+
+276줄 이하 `jQuery(document).ready(...)` 안에서 일어나는 일들:
+
+- **최상단 배너 쿠키** — `top_banner_cookie` 1일 hide. `.main_top_banner` 요소가 있고 `data-ez-display="visible"`이면 slideDown.
+- **로그인 placeholder 주입** — `.xans-member-login` 보이면 `#member_passwd`에 placeholder "비밀번호" 주입.
+- **비회원 주문조회 placeholder** — `.xans-myshop-orderhistorynologin` 보이면 100ms 후 placeholder 박음.
+- **검색 인풋 클리어** — `#ec-product-searchdata-keyword` 삭제 버튼.
+- **`#order_by` 정렬 셀렉트** — 첫 옵션 텍스트 "- 정렬방식 -"로 강제.
+- **`.xans-layout-multishoplist` 1개일 때 hide** — 다국어 사용 안 하면 자동 숨김.
+- **푸터 에스크로** — `.bt_escrow` `data-ez-escrow` 값으로 `data-ez-escrow-id` 매칭하여 표시.
+- **로그인 SNS** — `.wrap_sns_log a` 중 `displaynone` 아닌 게 있으면 `.login__sns` display:block.
+- **기획전 헤더 위치 조정** — `.xans-project-list h3 span` top을 `-header_height + 30`으로.
+- **`#shoppQbtn`** — 모바일 상세검색 토글.
+- **마이페이지 게시글 empty 메시지** — `.xans-myshop-boardpackage` 안에 board가 없으면 `.myshop_boardlist_empty` 표시.
+- **`.btnMore` 더보기** — 클릭 시 `ifmore()` 600ms 후 호출 → 위시 아이콘·장바구니·옵션 미리보기 클래스 재처리.
+- **`top_category()` + `observeTopCategory()`** — 헤더 카테고리 hover. `MutationObserver`가 `#header .xans-layout-category > ul` 자식 변동 감지 → `top_category()` 재실행. 카페24가 카테고리를 lazy load할 때 대비.
+
+**우리에 미치는 영향**:
+- 우리는 `.xans-member-login`, `.xans-myshop-orderhistorynologin` 같은 cafe24 클래스 selector를 onroad.css에서 직접 쓰는 경우가 있음. 그 안에 placeholder 주입은 `<input>` 텍스트 attribute라서 visual에 영향 없지만, 빈 `<input>`을 selector로 잡으려 하면 잡히지 않을 수 있음.
+- `setTimeout(100ms)` 로 박는 placeholder는 page load 직후 100ms 안에 select하면 못 잡음 → Playwright `await page.waitForTimeout(150)` 후 검증.
+- `ifmore()`에서 `.btnMore` 클릭마다 600ms 후 wish 아이콘 재처리 → 우리 Custom 클릭 핸들러가 이전에 박혔으면 살아남지만, 새로운 `.wish` 요소(예: 더보기로 추가된 상품)에는 우리 핸들러가 없음. delegated event listener (이벤트 위임) 필요.
+
+### 18.5 popup.js 동작
+
+```js
+function setResizePopup() {
+  var ePopup = document.querySelector('#popup');
+  // ...
+  window.resizeBy(iWrapWidth - iWindowWidth, iWrapHeight - iWindowHeight);
+  if (isMobile) popup.style.width = '100%';
+}
+```
+
+- 팝업 layout이 사용되는 페이지(수령인 변경, 환불 신청 등)는 `<div id="popup">` 첫 자식으로 콘텐츠 박음.
+- popup.js가 페이지 콘텐츠 크기에 맞춰 window 자체를 resize. 모바일은 width 100%.
+- **결과**: 팝업 디자인 시 `#popup` size가 사용자 화면을 좌우. CSS로 `min-width`, `max-height` 신중하게.
+
+### 18.6 common.js (`/js/common.js`) 동작
+
+- **`globalBuyBtnScrollFunc()`** — `#orderFixArea` 떠있는 구매 버튼 핸들러. `#orderFixItem` 또는 `#fixedActionButton`을 reference로 fadeIn/hide.
+  - 우리 onroad.css line 4311 `.onroad-page #orderFixArea.gFixed { ... }` 참조 — `.gFixed` 클래스를 cafe24가 토글.
+- **`getQueryString(key)`** — URL 쿼리 파싱. 다른 모듈 JS가 의지.
+- **`winPop(url)`** — 300x300 팝업 윈도우.
+- **`window.call_eTab`** — 페이지가 정의하면 common.js가 호출. 탭 시스템 진입점.
+- **`$.eTab(ul)`** — `.selected` 클래스 토글로 탭.
+
+### 18.7 basic.js × `.eTooltip` / `.eToggle`
+
+- `.eTooltip` 안에 `<input>` 두면 focus시 다음 형제 요소를 display:block, blur시 display:none.
+- `div.eToggle .title` 클릭하면 부모 `div.eToggle`에 `.selected` 토글.
+
+**금지**: 우리 디자인에서 `.eTooltip`, `.eToggle` 클래스 그냥 쓰지 말 것. 의도치 않게 카페24 핸들러 발동.
+
+### 18.8 EZST × main.js — EZ 컴포넌트 등록 패턴
+
+main.js 56줄~131줄:
+```js
+EZST.register('image-gallery/2', function () {
+  return {
+    connect: connect,  // 섹션 추가/페이지 로드 시 호출
+    change: change,    // 섹션 설정 변경 시 호출
+  };
+  function connect(section, type) { _reset(section, type); }
+  function change(section, type) { _reset(section, type); }
+  function _reset(section, type) {
+    // 이 섹션 전용 초기화 로직
+  }
+});
+```
+
+- `data-ez-module="image-gallery/2"` 속성이 박힌 element가 페이지에 있으면 carousel/slider 자동 init.
+- DOMContentLoaded 시 또는 register 호출 시 init.
+- **`change`** 호출은 어드민에서 EZ 에디터로 컴포넌트 설정 바꿨을 때 (live preview용). 라이브에선 거의 안 일어남.
+
+### 18.9 글로벌 클래스 토글 — `<body>` / `<html>`
+
+| 클래스 | 위치 | 누가 박나 | 의미 |
+|---|---|---|---|
+| `theme01`~`theme04` | `<body>` | 서버 EZ 시스템 | 활성 테마 |
+| `en-layout` / `jg-layout` | `<body>` | 우리 (layout.html / main.html에서 직접 박음) | 레이아웃 종류 |
+| `onroad-page` | `<body>` | 우리 | 우리 스킨 활성 마커 |
+| `onroad-home`, `onroad-detail`, … | `<body>` | 우리 (페이지별) | 페이지 모디파이어 |
+| `expand` | `<body>` | layout.js | slide aside 메뉴 열림 |
+| `searchExpand` | `<body>` | layout.js | 검색 오버레이 열림 |
+| `button--fixed` | `<body>` | layout.js | `#orderFixArea` 활성 |
+| `has-docked-info` | `<body>` | onroad-brand.js (우리) | 우리 도킹 패널 활성 |
+| `ez-view-type-mobile` | `<html>` | ez/init.js | 뷰포트 ≤1024px |
+
+`<html>`의 `ez-view-type-mobile`은 매우 중요 — **카페24의 "이 사용자는 모바일이다" 판정**. 우리 미디어 쿼리 대신 `html.ez-view-type-mobile .x { ... }` 같이 사용 가능 (단, 1024px 기준이라 우리 720px 기준과 다를 수 있음 — 혼용 시 주의).
+
+---
+
+## 19. EZ 시스템
+
+> 1차 문서가 EZ 시스템을 "테마 스위치"로 단순화했음. 실제로는 카페24의 두 번째 모듈 레이어 — 클라이언트 사이드 컴포넌트 시스템.
+
+### 19.1 두 가지 모듈 레이어 비교
+
+| | `module="..."` (서버) | `data-ez-module="..."` (클라이언트) |
+|---|---|---|
+| 처리 | 서버 사이드 PHP | 클라이언트 사이드 JS (EZST) |
+| 시점 | 서버 렌더 시 | DOMContentLoaded 후 |
+| 역할 | DB 데이터 바인딩, `{$변수}` 치환, `xans-*` 클래스 주입 | 컴포넌트 lifecycle (init/connect/change/disconnect) |
+| 인스턴스화 | 페이지에 selector 일치 → 자동 | `data-ez-module="name/version"` element 발견 → register된 핸들러 실행 |
+| 우리가 등록 | 서버 카페24 framework — 우리 수정 불가 | **`EZST.register('name', { connect, change })` — 우리도 추가 가능** |
+
+같은 element에 둘 다 붙을 수 있음:
+```html
+<div module="product_image" data-ez-module="image-gallery/2">
+```
+→ 서버: 이미지 데이터·줌 자식 마크업 채움. 클라이언트: EZST 핸들러로 carousel init.
+
+### 19.2 EZ 선언 태그 (`<ez-prop>` 패밀리)
+
+`layout.html` `<head>` 끝부분에 `<script type="text/ez-prop">` 안에 박혀있음:
+
+```html
+<ez-prop data-version="1.0.0">
+  <ez-var data-prop="theme" data-namespace="ez.layout.theme" data-type="array">
+    <ez-item data-id="theme01" data-name="온로드" data-desc="..." data-font="..."
+             data-background-color="#FFFFFF" override-value="html"
+             data-font-css="https://fonts.googleapis.com/...">
+      온로드 공식몰 디자인
+    </ez-item>
+    <ez-item data-id="theme02" .../>
+    ...
+  </ez-var>
+</ez-prop>
+```
+
+- `<ez-prop>` — 루트 prop 선언
+- `<ez-var data-prop="..." data-namespace="..." data-type="...">` — 변수 정의
+- `<ez-item data-id="...">` — 변수의 한 옵션
+- `<ez-list>` — 리스트 형식
+- `<ez-hash>` — 해시(딕셔너리) 형식
+- `override-value="html"` — HTML inline override 허용
+
+**중요**: `init.js`의 `_cleanup()`이 DOMContentLoaded 후 모든 `<ez-prop>`과 `<script type="text/ez-prop">`를 DOM에서 제거. 즉 라이브 `view-source:`에서는 보이지만 `document.body.innerHTML`에는 없음.
+
+### 19.3 `data-ez-*` 속성 78종 카탈로그
+
+조회된 모든 `data-ez-*` 속성을 의미별로 분류:
+
+**섹션 정체 (identity):**
+- `data-ez="contents-enduriz-header-1"` — 섹션 고유 ID. 어드민이 인식.
+- `data-ez="layout-enduriz-container-1"` — 컨테이너 식별
+- `data-ez="contents-102lhyg-1"` — auto-generated ID
+- `data-ez-module="product-list-slide/2"` — EZ 컴포넌트 타입/버전 (주의: 슬래시 + 숫자가 버전)
+- `data-ez-name="메인롱배너"` — 섹션 표시명 (어드민용)
+- `data-ez-group="top-util-menu"` — 그룹핑
+
+**역할 (role):**
+- `data-ez-role="list"` — 이 element는 리스트 컨테이너
+- `data-ez-role="content-list"`, `"content-item"` — 컨텐츠 리스트 구조
+- `data-ez-role="title"`, `"subtitle"`, `"desc"`, `"name"`, `"address"`, `"a"` — semantic 마커
+- `data-ez-role="image-list ez-column"` (공백 구분 다중) — 이미지 리스트 + ez-column 적용
+- `data-ez-role="image-item ez-align"` — 정렬 가능 이미지
+- `data-ez-role="layout"`, `"layout ez-discount-tag"` — 레이아웃 마커
+- `data-ez-role="ez-mobile-layout"`, `"ez-align"`, `"ez-discount-tag"` — 동작 옵트인
+- `data-ez-role="img-pc"`, `"img-mobile"` — 디바이스별 이미지
+- `data-ez-role="style.background"` — 스타일 바인드
+- `data-ez-role="tab-list"`, `"tab-item"`, `"video"` — 컴포넌트 내부 마커
+
+**레이아웃 옵션:**
+- `data-ez-layout="grid3"`, `"grid4"`, `"grid5_slide"` — 그리드 변형
+- `data-ez-mobile-layout="slide"` — 모바일에서 슬라이드로 전환
+- `data-ez-layoutsize="fit"`, `"full"` — 전체 폭 / 컨테이너 fit
+- `data-ez-column="3"` — 컬럼 수 (최대치)
+- `data-ez-item-length="3"` — 등록된 아이템 수 (실제)
+- `data-ez-textsize="medium"` — 텍스트 크기 변형
+- `data-ez-align="left"`, `"center"` — 정렬
+
+**이미지 사이즈:**
+- `data-ez-size-pc="1230 500"` — PC 권장 사이즈 (px, 공백 구분)
+- `data-ez-size-mobile="720 500"`, `"720 767"` — 모바일 권장
+- `data-ez-rawsrc=""` — 원본 src URL
+
+**상태:**
+- `data-ez-display="hidden"`, `"visible"` — 노출 토글
+- `data-ez-theme="theme01"` — 활성 테마
+
+**아이템 모음 (top-util-menu):**
+- `data-ez-item="join"`, `"login"`, `"logout"`, `"modify"`, `"mypage"`, `"order"`, `"recent"` — 회원 메뉴 7항목 식별
+
+**기타:**
+- `data-ez-holder="product_list"`, `"product_listmain"` — placeholder 식별
+- `data-ez-escrow-id="+ bt_escrow +"` — 에스크로 마크 (jQuery concat 결과)
+
+### 19.4 HTML 루트의 `ez-view-type-mobile` 클래스
+
+`init.js:114`:
+```js
+function _changeViewType(mq) {
+  document.documentElement.classList.toggle('ez-view-type-mobile', mq.matches);
+}
+```
+
+- `(max-width: 1024px)` 매치되면 `<html class="ez-view-type-mobile">`.
+- `mq.addEventListener('change', ...)`로 resize에도 반응.
+- **카페24 모바일 판정 단일 진실**. 미디어 쿼리 + class selector 조합으로 모바일 전용 룰 작성 가능:
+  ```css
+  html.ez-view-type-mobile .onroad-page .pd-grid { ... }
+  ```
+- 우리 디자인 미디어 쿼리는 보통 720px 기준이지만 EZ는 1024px 기준 — 720~1024 구간에선 둘이 다른 뷰를 줌. 디자인 시 의도적 결정 필요.
+
+### 19.5 EZ 시스템과 우리 작업의 접점
+
+대부분의 `data-ez-*`는 카페24가 어드민 에디터로 박는 거라 **우리는 손대지 않는다**. 하지만 우리가 접하는 곳:
+
+- 우리 page-level 모디파이어 추가 시 기존 `data-ez="..."` 보존
+- 사이드바 `data-ez-item="..."` 메뉴 항목은 삭제하지 말 것 (어드민에서 회원 7개 메뉴를 토글 가능 — 우리가 임의로 제거하면 어드민 설정 안 먹음)
+- 컴포넌트 자체를 우리가 추가하려면 `EZST.register('name/version', { connect, change })` 패턴 따르기
+
+### 19.6 EZ가 우리를 묶는 함정
+
+- 어드민에서 사용자가 EZ로 컴포넌트 추가 → 우리 onroad.css 룰이 `data-ez-module="..."` 컴포넌트의 자식에 의도치 않게 흘러갈 수 있음
+- 어드민에서 컴포넌트 삭제 → 우리가 의지하던 클래스가 사라짐
+- `data-ez-display="hidden"`으로 에디터가 끈 섹션 → CSS에선 보이지만 우리 JS가 그걸 못 본 척하면 사용자가 어드민에서 켰을 때 무반응
+- 컴포넌트 instance가 여러 개 박힘 → 같은 selector로 잡으면 모두 영향
+- **방어**: 우리 selector는 `.onroad-` 또는 `.pd-` prefix 우선. cafe24/EZ 클래스 잡을 땐 항상 페이지 modifier (`.onroad-detail` 등)로 좁힘.
+
+---
+
+## 20. `ec-base-*.css` suite 해체분석
+
+> 1차 문서는 "ec-base-*는 시스템 CSS, 편집 금지"라고만 적었음. 어떤 룰이 어디에 박혀있는지 모르면 specificity 싸움에서 진다. 13개 파일 1146줄 분석.
+
+### 20.1 파일별 owner 영역
+
+| 파일 | 줄수 | 주된 selector | 우리가 자주 부딪치는 영역 |
+|---|---|---|---|
+| `ec-base-button.css` | 112 | `[class^='btnNormal']`, `[class^='btnSubmit']`, `[class^='btnEm']` | 모든 버튼. 검은 배경 흰 글자 default. |
+| `ec-base-fold.css` | 42 | `.ec-base-fold > .title / .contents`, `:after` 화살표 | accordion (안내·약관·FAQ). 화살표 transition 0.3s. |
+| `ec-base-layer.css` | 64 | `.ec-base-layer`, `.typeModal`, `.typeLayer`, `.typeSide`, `.btnClose` | 모든 모달·레이어. z-index 1001. fixed center. |
+| `ec-base-table.css` | 167 | `.ec-base-table table`, `.ec-base-table th/td`, `.ec-base-tbl` | 주문/마이페이지 표. |
+| `ec-base-product.css` | 134 | `.ec-base-product .prdList`, `.title`, `.thumbnail` | 상품 그리드/리스트. |
+| `ec-base-prdInfo.css` | 127 | 상품 spec 정보 표시 패턴 | 상세페이지 spec 박스. |
+| `ec-base-tab.css` | 63 | `.ec-base-tab .menu`, `.option` | 탭 네비. |
+| `ec-base-tooltip.css` | 81 | `.ec-base-tooltip` | 툴팁 박스. |
+| `ec-base-ui.css` | 221 | `.txtInfo`, `.txtList`, `.txt11~18`, `.gBlank*`, `.titleArea h2` | **유틸리티 — 가장 광범위 충돌**. |
+| `ec-base-box.css` | 52 | `.ec-base-box` | 박스 래퍼. |
+| `ec-base-desc.css` | 33 | `.ec-base-desc` | 설명 블록. |
+| `ec-base-help.css` | 27 | `.ec-base-help` | 도움말 박스. |
+| `ec-base-paginate.css` | 23 | `.ec-base-paginate` | 페이징. |
+
+### 20.2 `ec-base-button.css` 주요 룰
+
+```css
+[class^='btnNormal'], a[class^='btnNormal']     { ... color:#000; background-color:#fff; border:1px solid #bcbcbc; }
+[class^='btnSubmit'], a[class^='btnSubmit']     { ... color:#fff; background-color:#000; }
+[class^='btnNormal']:not(.disabled):hover       { border-color:#000; }
+[class^='btnSubmit']:not(.disabled):hover       { ... }
+[class^='btnNormal'].disabled                   { border-color:#e3e3e3; color:#999; }
+```
+
+- `[class^='btnNormal']` attribute selector — `.btnNormal`, `.btnNormalUI`, `.btnNormalRed` 등 모든 prefix 매치.
+- specificity (0,1,1) — class 룰이지만 attribute selector 라 우리 `.btn { ... }`로는 못 이김.
+- **이김**: `.onroad-page [class^='btnNormal'] { ... }` 또는 `.onroad-page .btnNormalRed { ... }`.
+
+### 20.3 `ec-base-layer.css` 주요 룰
+
+```css
+.ec-base-layer-area     { position:fixed; top:0;right:0;bottom:0;left:0; background:rgba(0,0,0,0.3); z-index:1000; }
+.ec-base-layer          { z-index:1001; border:1px solid #000; background:#fff; }
+.ec-base-layer.typeModal { position:fixed; top:50%; left:0;right:0; transform:translateY(calc(-50% + 0.5px)); margin:0 auto; }
+.ec-base-layer.typeSide  { position:fixed; display:flex; flex-direction:column; height:100%; border:0; }
+.ec-base-layer .btnClose { position:absolute; right:7px; top:7px; transform:rotate(45deg); }
+```
+
+- z-index 1000(dimm) / 1001(layer) — 우리 z-index 50~60 위에 있음.
+- 모달은 viewport center.
+- typeSide는 풀높이 사이드 패널.
+- `.btnClose`는 X 모양 (45도 회전 + ::before/::after 라인).
+
+### 20.4 `ec-base-ui.css` 가장 위험한 utility
+
+`.txt11`, `.txt12`, ..., `.txt18` — 폰트 크기 클래스. 카페24가 `<span class="txt12">` 같이 박는 곳 있음.
+`.txtInfo`, `.txtList`, `.txtWarn`, `.txtEm`, `.txtSecondary`, `.txtSuccess` — 안내 텍스트 변형.
+`.titleArea h2 { font-weight: normal }` — `.titleArea` 안 h2에 무조건 normal 적용.
+`.gBlank5`, `.gBlank10`, ..., `.gBlank20` — 마진 유틸.
+
+**우리가 받은 영향**:
+- 우리 디자인 H2는 보통 700이지만 `.titleArea h2`는 normal로 강제됨 → `body.onroad-page .titleArea h2 { font-weight: 700 }` 같은 override 필요.
+- `<span class="txt14">`가 카페24가 자동 박은 거면 우리 디자인 폰트 크기 system 따라가게 `.onroad-page .txt14 { font-size: var(--fs-base) }` 같이 override 가능.
+
+### 20.5 cascade 위치
+
+`layout.html`:
+1. `<head>`에 13개 ec-base-*.css `@css`로 등록 (앞)
+2. `<body>` 끝에 `sub_style.css`, `sub_theme.css`, `add_theme0[1-4].css`, `add_layout.css`, `main.css`, **`onroad.css`** (뒤)
+
+→ ec-base-* < onroad.css. 동일 specificity면 onroad.css가 source order로 이김. 그러나 ID selector나 더 specific class chain 박힌 ec-base 룰은 source order만으로 못 이김.
+
+---
+
+## 21. 모듈 분류와 케이스 함정
+
+> 1차 문서는 "391개 module 종류" 라고만 적었음. 실제 분류·이름 케이스 분석 누락.
+
+### 21.1 namespace 그룹별 모듈 수 (392 unique values)
+
+```
+product_*       235  (lowercase) — 상품 영역
+Myshop_*        158  (PascalCase!)
+Layout_*         98  (PascalCase) — 레이아웃 chrome
+Order_*          91  (PascalCase) — 주문/결제
+myshop_*         71  (lowercase)
+member_*         34  (lowercase)
+MyShop_*         20  (MixedCase!)
+Product_*        17  (PascalCase)
+Mall_*           14  (PascalCase)
+Coupon_*         11  (PascalCase)
+attend_*         11  (lowercase)
+board_*          11  (lowercase)
+gift_*            9  (lowercase)
+Estimate_*        6  (PascalCase)
+project_*         5  (lowercase)
+search_*          4  (lowercase)
+Search_*          4  (PascalCase)
+Member_*          4  (PascalCase)
+coupon_*          3  (lowercase)
+mall_*            4  (lowercase)
+```
+
+### 21.2 케이스 함정 ⚠️
+
+**같은 기능 영역의 module 이름이 PascalCase / camelCase / MixedCase로 섞여있다.**
+
+- 마이페이지: `Myshop_*` (158) AND `myshop_*` (71) AND `MyShop_*` (20) **세 가지 케이스 동시 사용**
+- 회원: `Member_*` (4) AND `member_*` (34)
+- 쇼핑몰: `Mall_*` (14) AND `mall_*` (4)
+- 검색: `Search_*` (4) AND `search_*` (4)
+- 상품: `Product_*` (17) AND `product_*` (235)
+- 쿠폰: `Coupon_*` (11) AND `coupon_*` (3)
+
+**왜 위험한가**:
+- 우리가 `module="myshop_main"` 만들고 `module="Myshop_main"`로 바꾸면 카페24가 못 알아볼 가능성. 카페24 framework가 case-insensitive인지 case-sensitive인지 비공개.
+- 디자인 번들 적용 시 grep으로 `module="myshop_*"` 만 찾으면 158개 `Myshop_*`을 놓침.
+- 메모리에서 module 이름을 적을 때 정확한 케이스를 보존해야 함.
+
+**대응**: 어떤 module이든 **원본 그대로 복사**. 이름 추측 금지. grep할 때는 case-insensitive (`grep -i`) 또는 와일드카드 (`module="[mM]yshop_main"`).
+
+### 21.3 자주 쓰는 module 의미별 분류
+
+**상품 표시:**
+- `product_detail` — 상세 페이지 최상위
+- `product_image` — 메인 이미지 + 줌 (자식 마크업 일부 카페24 채움)
+- `product_addimage` — 추가 이미지 리스트 (자식 `<li>` 카페24 채움)
+- `product_listnormal`, `product_listnew`, `product_listrecommend` — 리스트
+- `product_relation`, `product_relationlist` — 관련 상품
+- `product_recentlist`, `product_recentlistpaging` — 최근 본
+- `product_normalpackage`, `product_normalpaging`, `product_normalmenu` — 일반 페이지
+
+**상품 인터랙션:**
+- `product_action` — 구매·장바구니·찜 버튼
+- `product_quantity` — 수량 +/-
+- `product_option`, `product_mainoption`, `product_addoption`, `product_fileoption` — 옵션
+- `product_FirstSelect`, `product_SecondSelect`, `product_Colorchip` — 옵션 선택
+- `product_Imagestyle` — 아이콘 스타일
+- `product_zoom` — 줌
+
+**상품 메타:**
+- `product_review`, `product_reviewpaging` — 리뷰
+- `product_qna`, `product_qnapaging` — 문의
+- `product_headcategory`, `product_displaycategory`, `product_displaysubcategory` — 카테고리/breadcrumb
+- `product_hashtag`, `product_categoryHashtag` — 해시태그
+- `product_searchdata`, `product_searchOrderby`, `product_SearchFilterList`, `product_HotKeyword`, `product_RelateKeyword` — 검색
+- `product_request`, `product_setproduct`, `product_addproduct` — 요청·세트·연관
+
+**상품 특수:**
+- `product_regularDiscount` — 정기배송 할인
+- `product_rental` — 렌탈
+- `product_stocklayer` — 재고 레이어
+- `product_customsns` — SNS 공유
+- `product_filterform` — 필터 폼
+- `product_projectcategory` — 기획전 카테고리
+
+**레이아웃 chrome:**
+- `Layout_orderBasketcount` — 카트 카운트
+- `Layout_statelogon`, `Layout_statelogoff`, `Layout_stateLogon` (대소문자 혼합!), `Layout_stateLogon` — 로그인 상태
+- `Layout_login` — 로그인 폼 (사이드)
+- `Layout_SearchHeader`, `Layout_SearchSide` — 검색
+- `Layout_LogoTop`, `Layout_LogoBottom` — 로고
+- `Layout_category` — 카테고리 (헤더)
+- `Layout_MobileAction` — 모바일 액션 (RTMB 뒤로가기)
+- `Layout_Myshop` — 마이페이지 위젯
+- `Layout_footer`, `Layout_Info`, `Layout_shoppingInfo` — 푸터·정보
+- `Layout_multishopShipping`, `Layout_multishopList`, `Layout_multishopListitem` — 다국어
+- `Layout_productRecent` — 최근 본
+- `Layout_orderBasketcount` — 카트 카운트
+- `Layout_calendarBanner`, `Layout_attendBanner`, `Layout_couponzoneBanner`, `Layout_giftBanner`, `Layout_opdiaryBanner`, `Layout_sosBanner` — 배너들
+- `Layout_Poll`, `Layout_bookmark`, `Layout_shortcut`, `Layout_conversionPc` — 기타
+- `Layout_Second`, `Layout_Third`, `Layout_Fourth`, `Layout_Fifth` — 자유 위젯 슬롯 1~5
+- `Layout_CategorySupplyList`, `Layout_project` — 추가 콘텐츠
+- `layout_slidePackage` (lowercase) — 사이드 슬라이드
+
+**회원/마이페이지** — `Myshop_*` (158)이 너무 많아 별도 큰 그룹. `myshop_main`, `myshop_summary`, `myshop_orderstate`, `myshop_asyncbankbook`, `myshop_likeit*`, `myshop_wishlist*`, `myshop_unavail*`, `myshop_history*`, …
+
+**주문/결제** — `Order_*` (91), 우리는 `order/` 폴더 자체에 손 안 댐.
+
+**기타**:
+- `attend_*` — 출석 체크 시스템
+- `board_*` — 게시판
+- `Mall_Urgencycall`, `Mall_UrgencycallOrdHeader`, `Mall_UrgencycallOrdLogout`, `Mall_SupplyInfo`, `Mall_SupplyMainimage`, `Mall_SupplySearch` — 쇼핑몰 광역 모듈
+- `Coupon_*` — 쿠폰
+- `Estimate_*` — 견적
+- `gift_*`, `Gift_*` — 사은품
+- `project_*` — 기획전
+- `Intro_memberPackage` — 인트로 페이지
+
+### 21.4 module 이름 작업 시 안전 규칙
+
+1. **이름 절대 임의 변경 금지** — 케이스 단 1글자도.
+2. 새 module 추가하려면 카페24 어드민에서 모듈 활성 후 cafe24가 표준 이름을 박아줌. 우리가 임의 이름 박지 말 것.
+3. module wrapper outer를 새 wrapper로 감쌀 때 outer module 속성 보존. inner도 보존.
+4. module 이름을 selector로 쓸 때 case-insensitive selector는 없으므로 정확히 일치 (또는 `xans-*` 런타임 클래스 사용).
+
+---
+
+## 22. 서버 런타임 주입 카탈로그
+
+> 우리 스킨 파일에는 **없는데** 라이브에서 추가되는 것들 종합. 1차 문서 §7은 일부만 다뤘음.
+
+### 22.1 클래스
+
+| 무엇 | 어디에 | 언제 박나 |
+|---|---|---|
+| `xans-element-` + `xans-{group}` + `xans-{group}-{subtype}` | `module="..."` 요소 | 모든 module 요소 (소문자로) |
+| `displaynone` / `displayblock` | `class="{$xxx_display|display}"` 자리 | 조건부 |
+| `selected`, `disabled`, `active` 등 상태 클래스 | 다양 | 상품 상태·옵션 선택·탭 활성에 따라 |
+| `fixed` | `#header` | layout.js가 스크롤 시 |
+| `is-hidden-top` | `.site-header` | 우리 onroad-brand.js |
+| `gFixed` | `#orderFixArea` | common.js (globalBuyBtnScrollFunc) |
+| 위시 `on` | `.icon__box .wish` | layout.js (ifmore) — `icon_status` attribute에 따라 |
+
+### 22.2 inline style (JS가 박는 거)
+
+| 무엇 | 어디에 | 언제 |
+|---|---|---|
+| `margin-top: <header_height>px` | `#contents` | layout.js의 `fixedHeader()` — 스크롤 시 |
+| `top: <px>` | `#quick`, `.xans-project-list h3 span` | layout.js |
+| `display: block` | `.xans-member-login .login__sns` | layout.js (DOMReady) |
+| `display: flex` | `#footer .bt_escrow` | layout.js (DOMReady) |
+| `display: none/block` (toggle) | 슬라이드 메뉴 자식 | slide_menu.js |
+| placeholder 속성 | `#member_passwd`, `#order_*` | layout.js (100ms 후) |
+| `data-is_closed` | `.xans-product-listmain h2` | common.js (`/layout/basic/js/common.js` — 만약 로드되면) |
+
+**우리의 fight**: inline style은 specificity 가장 높음 (1,0,0,0). CSS로 못 이김 → `!important`만이 inline을 이김 (그것도 매번은 아님).
+
+### 22.3 meta 태그 자동 주입
+
+`view-source:`에 보이지만 우리 스킨 파일에는 없는 것:
+
+- `<meta name="path_role" content="MAIN|SUB">` — 카페24가 페이지 종류 박음. layout.js 의지.
+- `<meta name="csrf-token" content="...">` — CSRF 토큰 가능성 (확인 필요).
+- 어드민 SEO 설정한 페이지: `<title>` / `<meta name="description">` 자동 덮어쓰기 가능.
+
+**우리의 활용**: `meta[name="path_role"]`로 페이지 분기 가능 — 단 `MAIN/SUB` 두 값만.
+
+### 22.4 응답 헤더
+
+라이브 응답에 박히는 것 (서버):
+- `Cache-Control: no-cache`, `Expires: 0`, `Pragma: no-cache` — `<meta>`로도 박혀있음. PG 호환.
+- 세션 쿠키들 (CFCK, OEDP, …) — 카페24 세션 추적
+- CSRF token 쿠키 가능
+
+**우리의 영향**: 캐시 정책 우리가 못 바꿈. 모든 페이지 매번 fresh fetch.
+
+### 22.5 동적 자식 마크업
+
+서버가 `module=` outer 안에 채우는 것:
+- `product_addimage` → `<ul class="list">` 안 `<li>`들 (실제 추가 이미지 개수만큼)
+- `product_review` → 리뷰 카드들
+- `product_qna` → Q&A 행들
+- `product_listnormal` → 상품 카드들 (페이지당 N개)
+- `Layout_orderBasketcount` → `{$basket_count}` 변수 치환만 (자식 마크업은 우리가 박음)
+- `Layout_multishopShipping` → 다국어 셀렉터의 `<option>`들
+
+**우리의 한계**: 자식 개수·구조 모름. CSS는 `:nth-child`, `:first-child` 사용 시 카페24 자동 채움 자식들에도 적용됨. flex/grid 자유 배치는 카페24가 박는 자식 패턴이 우리 의도와 일치할 때만.
+
+---
+
+## 23. 예약된 이름
+
+> 우리가 새 클래스/ID 만들 때 **금지** 이름들. 카페24 시스템이 의지하므로 의도치 않게 동작 가로챔.
+
+### 23.1 ID — 카페24 시스템 사용
+
+`#header`, `#wrap`, `#container`, `#contents`, `#footer`, `#aside`, `#quick`, `#popup`, `#progressPaybar`, `#progressPaybarBackground`, `#progressPaybarView`, `#layoutDimmed`, `#layer_shadow`, `#skipNavigation`, `#orderFixArea`, `#orderFixItem`, `#fixedActionButton`, `#totalPrice`, `#totalProducts`, `#topBanner`, `#siteNav`, `#aside`, `#dimmedSlider`, `#topBanner`, `#zoom_wrap`, `#searchContent`, `#shoppQbtn`, `#keyword`, `#member_passwd`, `#member_id`, `#order_id`, `#order_password`, `#order_name`, `#order_by`, `#slideCateList`, `#slide_add_category`, `#top_banner_box_cloase`, `#prdDetail`, `#prdInfo`, `#prdQnA`, `#ec-product-searchdata-keyword`, `#ec-product-searchdata-searchkeyword_form`, `#ec-searchdata-area`
+
+### 23.2 클래스 — JS 핸들러 매개
+
+- `.eToggle`, `.eTooltip`, `.eSearch`, `.eNavFold`, `.eForm` — basic.js / layout.js / common.js가 자동 핸들러 등록
+- `.btnClose`, `.btnSubmit*`, `.btnNormal*`, `.btnEm*`, `.btnDelete`, `.btnSearch` — base button + JS 트리거
+- `.btnMore` — layout.js의 ifmore 트리거
+- `.fixed`, `.expand`, `.searchExpand`, `.button--fixed` — 토글 상태 클래스
+- `.gFixed` — 구매 버튼 fixed 상태
+- `.bottom-nav__top`, `.bottom-nav--hide`, `.bottom-nav__top--show` — 하단 네비
+- `.dimmed`, `.layer_shadow`, `.layerProgress` — 백드롭
+- `.displaynone`, `.displayblock` — 서버 토글
+- `.RTMB`, `.display_tablet_only` — 모바일 전용 표시
+- `.ec-base-*` — 시스템 컴포넌트 prefix
+- `.xans-*` — 서버 런타임 주입
+- `.main_top_banner`, `.top_banner_close` — 상단 배너 (쿠키 시스템)
+
+### 23.3 우리가 만든 prefix (충돌 없음 보장)
+
+- `.onroad-*` — 우리 글로벌 컴포넌트
+- `.pd-*` — 제품상세 전용
+- `.my-*` — 마이페이지 전용
+- `.jg-*` — 인증 페이지 전용 (`jg-auth-*`, `jg-pending-*`, `jg-info-page`, `jg-product-detail-page`, …)
+
+### 23.4 `data-` 속성 예약
+
+- `data-ez="..."`, `data-ez-*` — 78종 EZ 시스템 (§19.3)
+- `data-ez-theme` — 테마
+- `data-version` — 버전 마커
+- `data-aos*` — AOS 라이브러리 (홈에서만 사용)
+- `data-id` — `<ez-item>`이 사용
+
+### 23.5 `data-aos` 등 외부 라이브러리
+
+홈 페이지가 AOS 2.3.4 사용. CDN으로 등록. `data-aos="fade-up"`, `data-aos-delay="200"`, `data-aos-duration="1000"`. 이 속성들은 외부 라이브러리 소유 — 형식 따라가면 자동.
+
+---
+
+## 24. 자체 점검 노트
+
+> 1차 문서(§1~17)에서 부정확하거나 보강이 필요했던 부분을 명시. 다음 작업 시 이 노트로 확인.
+
+### 24.1 부정확했던 클레임
+
+| 위치 | 1차 클레임 | 정정 |
+|---|---|---|
+| §3 | "옵티마이저 빌드 트리거 비공개" | 정확하지만 CSS 내용 변경이 빌드 자동 트리거. 타이밍이 비공개일 뿐. |
+| §10 | ".site-header는 position:fixed; z-index:50" | **추가 충돌**: layout.js의 `fixedHeader()`가 `#contents.style.marginTop = '72px'` 인라인 박음. 우리 `:has()` padding과 누적 (§18.3). |
+| §17.5 | "테마 시스템 = 단순 테마 스위치" | EZ 시스템은 테마 + 클라이언트 컴포넌트 lifecycle 시스템. 더 광범위 (§19). |
+| §17.7 | "carepe24 시스템 JS는 click 가로챈다" | 정확하지만 구체화 부족. 18.1~18.8 참조. |
+| §17.20 | "title 어드민 덮음 가능 — 확인 필요" | 어드민 SEO 설정이 페이지별로 덮음 가능. 그러나 layout.html `<title>`이 default. 확인 완료. |
+| §22.3 | (1차 문서 없음) | 새로 추가: meta 태그 자동 주입 — `path_role`, CSRF 토큰 등. |
+
+### 24.2 1차 문서가 빠뜨린 영역 (이번에 추가)
+
+- **JS 런타임 분석**: §18 신설. 우리 onroad-brand.js가 실행될 때 이미 어떤 핸들러가 박혀있는지.
+- **EZ 시스템 깊이**: §19 신설. `data-ez-*` 78종 카탈로그, EZST API.
+- **layout.js × 우리 CSS 충돌**: §18.3에 명시. 실제 사고 가능성 있음.
+- **ec-base-*.css 내용**: §20 신설. 13개 파일 1146줄 owner 영역.
+- **모듈 이름 케이스 함정**: §21.2. 같은 영역에 PascalCase + camelCase + MixedCase 섞임.
+- **예약 이름 카탈로그**: §23 신설. 우리가 만들면 안 되는 ID/클래스/data-*.
+- **`<html class="ez-view-type-mobile">`**: §18.9 / §19.4. 카페24의 단일 모바일 진실.
+- **`<meta name="path_role">` 서버 주입**: §22.3.
+
+### 24.3 아직 미검증 영역 (다음 세션 우선순위)
+
+1. **CSRF 토큰** — 카페24가 토큰을 어떻게 박는지, AJAX 요청에 어떻게 첨부하는지. 검증 필요.
+2. **세션 쿠키 이름** — 어떤 쿠키가 어떤 의미인지. 라이브 inspect로 카탈로그.
+3. **`<meta name="csrf-token">` 존재 여부** — view-source 직접 확인.
+4. **`/exec/front/*` AJAX 엔드포인트 전체 목록** — 모듈 JS 안에 박혀있을 것.
+5. **카페24 모바일 스킨 분기** — `skin_mobile_basic`이 별도 존재하는지. 우리는 단일 반응형이지만 카페24가 자동 분기할 가능성.
+6. **`module`이 case-sensitive인가 case-insensitive인가** — 라이브에서 의도적 케이스 변경 테스트.
+7. **`data-ez-mobile-layout="slide"` 등 EZ 모바일 옵션이 실제 렌더에 어떻게 영향** — 라이브 비교.
+8. **`layout/basic/js/common.js`** (256줄) — 등록 안 됐지만 어디서 끌어 쓰는지. 삭제 가능한지.
+9. **slide_menu.js의 `/exec/front/Product/SubCategory` 응답 구조** — 카테고리 트리 변환 로직.
+10. **`<meta name="msapplication-*">`, `<meta name="theme-color">` 외 자동 주입 메타** — 추가 확인.
+
+### 24.4 문서 체계 자체에 대한 메모
+
+- **§1 TL;DR 5개**가 제일 중요 — 작업 전 무조건 확인. 새로운 사고 발생 시 갱신.
+- **§15 체크리스트**는 실용 — 작업 흐름 진입점.
+- **§16 사고 사례**는 시간 지나면 길어짐 — 주제별 그룹핑 또는 과거 1년+ 사례는 archive.md로 분리 고려.
+- **§17 강제 구조**와 **§18~23 깊이 분석**은 reference — 처음부터 읽지 않음. TOC + 검색으로 진입.
+- 새 사고/발견 시: §16 사례 + §1 TL;DR + 해당 깊이 섹션 동시 갱신.
+
+---
+
+## 25. 용어집
 
 - **스킨 (skin)**: 카페24 쇼핑몰의 HTML/CSS/JS 템플릿 셋. 우리 `cafe24/` 폴더가 그것.
 - **디자인 보관함 (Design Library)**: 카페24 어드민의 스킨 관리 영역. *디자인 편집* 기능은 §13의 사고 위험.
