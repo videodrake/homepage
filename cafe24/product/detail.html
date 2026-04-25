@@ -1,4 +1,17 @@
 <!--@layout(/layout/basic/layout.html)-->
+
+<!-- ▼ Onroad: top promo strip with daily countdown (in-flow, scrolls with page).
+     Position is relative so we don't fight site-header's sticky/fixed positioning. -->
+<div class="pd-promo" role="banner">
+    <span><b>⚑</b> First Order <b>10% OFF</b></span>
+    <span class="sep hide-sm">·</span>
+    <span class="hide-sm">2개 이상 <b>무료배송</b></span>
+    <span class="sep">·</span>
+    <span>마감까지</span>
+    <span class="pd-promo__count" id="pdPromoCount">23:59:59</span>
+</div>
+<!-- ▲ /promo -->
+
 <div class="section path" module="product_headcategory" data-ez-module="product-head-breadcrumb/1">
     <span>현재 위치</span>
     <ol>
@@ -18,7 +31,28 @@
     <!--
 		$coupon_download_page = /coupon/coupon_productdetail.html
     -->
-     <div class="detailArea">
+     <div class="detailArea pd-grid">
+
+        <!-- ▼ Onroad: urgency panel sits in left column above the imgArea.
+             Grid-template-areas in CSS keeps imgArea / infoArea in their
+             original cafe24 positions so product modules render unchanged. -->
+        <div class="pd-urgency" aria-hidden="true">
+            <div class="pd-urgency__row">
+                <span><b>⚑</b> <em>오늘 할인 마감까지</em></span>
+                <span>[ SPEC · EC—01 ]</span>
+            </div>
+            <div class="pd-urgency__timer">
+                <div class="pd-timer-box" id="pdHeroTimer">
+                    <span id="pdHrH">23</span><span class="sep">:</span><span id="pdHrM">59</span><span class="sep">:</span><span id="pdHrS">59</span>
+                </div>
+            </div>
+            <div class="pd-urgency__row pd-urgency__row--meta">
+                <span class="pd-urgency__stock">남은 수량 <b>27</b>개</span>
+                <span>오늘 <em>143</em>명 구매</span>
+            </div>
+        </div>
+        <!-- ▲ /urgency -->
+
         <div class="imgArea" module="product_image">
             <!--@js(/js/module/product/product_image.js)-->
 
@@ -887,17 +921,17 @@
 </div>
 
 <script>
-/* Capture purchase intent for login-page context card.
-   When user clicks 바로구매 / 장바구니, store product info in sessionStorage so the
-   login page (if cafe24 redirects there) can show "currently purchasing" context. */
 (function(){
+  /* Capture purchase intent for login-page context card.
+     When user clicks 바로구매 / 장바구니, store product info in sessionStorage so the
+     login page (if cafe24 redirects there) can show "currently purchasing" context. */
   var meta = document.getElementById('onroadProductMeta');
-  if (!meta) return;
   function getQty(){
     var q = document.querySelector('input[name^="quantity_name"]');
     return q && q.value ? q.value : '1';
   }
   function save(intent){
+    if (!meta) return;
     try {
       sessionStorage.setItem('onroad_pending_purchase', JSON.stringify({
         no: meta.getAttribute('data-product-no') || '',
@@ -915,6 +949,27 @@
     if (!btn) return;
     save(btn.getAttribute('data-onroad-action'));
   }, true);
+
+  /* Daily countdown for promo strip + hero urgency timer. Resets at local midnight. */
+  function pad(n){ return n < 10 ? '0' + n : '' + n; }
+  function tickPromo(){
+    var now = new Date();
+    var end = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 0, 0, 0);
+    var d = Math.max(0, Math.floor((end - now) / 1000));
+    var hrs = Math.floor(d / 3600);
+    var mins = Math.floor((d % 3600) / 60);
+    var secs = d % 60;
+    var promo = document.getElementById('pdPromoCount');
+    if (promo) promo.textContent = pad(hrs) + ':' + pad(mins) + ':' + pad(secs);
+    var H = document.getElementById('pdHrH'), M = document.getElementById('pdHrM'), S = document.getElementById('pdHrS');
+    if (H) H.textContent = pad(hrs);
+    if (M) M.textContent = pad(mins);
+    if (S) S.textContent = pad(secs);
+  }
+  if (document.getElementById('pdPromoCount') || document.getElementById('pdHeroTimer')) {
+    tickPromo();
+    setInterval(tickPromo, 1000);
+  }
 })();
 </script>
 <!--@define(cmc_log)-->

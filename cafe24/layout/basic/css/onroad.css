@@ -1997,6 +1997,123 @@ body.onroad-page #wrap { overflow-x: clip; overflow-y: visible; }
     gap: clamp(40px, 5vw, 96px); align-items: start;
     padding: var(--s-8) 0 var(--s-16);
 }
+
+/* ▼ Onroad design polish — promo strip + urgency panel.
+   Sits alongside cafe24's existing module markup, never replaces it.
+   See feedback_cafe24_design_bridging memory for the rule. */
+
+/* Top promo strip — in-flow above the breadcrumb on the detail page.
+   Position: relative so we don't fight site-header's sticky positioning. */
+.onroad-page .pd-promo {
+    background: var(--c-signal);
+    color: var(--c-cream);
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 10px var(--s-4);
+    display: flex; justify-content: center; align-items: center;
+    gap: var(--s-4);
+    position: relative; z-index: 1;
+}
+.onroad-page .pd-promo b { font-weight: 700; }
+.onroad-page .pd-promo .sep { opacity: 0.5; }
+.onroad-page .pd-promo__count {
+    font-family: var(--font-mono); font-size: 12px;
+    color: #fff; background: rgba(0,0,0,0.24);
+    padding: 4px 8px; letter-spacing: 0.16em;
+    font-variant-numeric: tabular-nums;
+}
+@media (max-width: 720px) {
+    .onroad-page .pd-promo { font-size: 10px; padding: 8px 12px; gap: var(--s-2); }
+    .onroad-page .pd-promo .hide-sm { display: none; }
+}
+
+/* pd-grid — overrides detailArea grid to slot urgency above imgArea, infoArea spans rows.
+   !important is required because cafe24 emits stacked rules for .imgArea / .infoArea
+   that previously stole grid placement and flipped the columns. */
+body.onroad-page .jg-product-detail-page .detailArea.pd-grid {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr) !important;
+    grid-template-rows: auto auto !important;
+    grid-template-areas:
+        "urgency info"
+        "image   info" !important;
+    column-gap: clamp(40px, 5vw, 96px) !important;
+    row-gap: clamp(20px, 2.5vw, 36px) !important;
+    align-items: start !important;
+    padding: var(--s-8) 0 var(--s-16) !important;
+}
+body.onroad-page .jg-product-detail-page .detailArea.pd-grid > .pd-urgency {
+    grid-area: urgency !important;
+}
+body.onroad-page .jg-product-detail-page .detailArea.pd-grid > .imgArea {
+    grid-area: image !important;
+}
+body.onroad-page .jg-product-detail-page .detailArea.pd-grid > .infoArea {
+    grid-area: info !important;
+}
+@media (max-width: 920px) {
+    body.onroad-page .jg-product-detail-page .detailArea.pd-grid {
+        grid-template-columns: 1fr !important;
+        grid-template-areas: "urgency" "image" "info" !important;
+        row-gap: var(--s-5) !important;
+    }
+    body.onroad-page .jg-product-detail-page .detailArea.pd-grid > .imgArea {
+        position: relative !important; top: auto !important;
+    }
+}
+
+/* Urgency panel: dark ink box with countdown timer + stock + buyers count */
+.onroad-page .pd-urgency {
+    background: var(--c-ink);
+    color: var(--c-cream);
+    padding: var(--s-4) var(--s-5);
+    display: flex; flex-direction: column; gap: 10px;
+    border: 1px solid var(--c-ink);
+    align-self: start;
+}
+.onroad-page .pd-urgency__row {
+    display: flex; justify-content: space-between; align-items: center;
+    font-family: var(--font-mono); font-size: 11px;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: rgba(244,239,230,0.7); gap: var(--s-3); flex-wrap: wrap;
+}
+.onroad-page .pd-urgency__row em { font-style: normal; color: var(--c-signal); }
+.onroad-page .pd-urgency__row b { color: var(--c-cream); font-weight: 500; }
+.onroad-page .pd-urgency__row--meta {
+    border-top: 1px solid rgba(244,239,230,0.15);
+    padding-top: 8px; margin-top: 4px;
+}
+.onroad-page .pd-urgency__timer {
+    display: flex; align-items: center; gap: var(--s-3);
+    justify-content: center;
+}
+.onroad-page .pd-timer-box {
+    display: flex; gap: 6px;
+    font-family: var(--font-mono); font-variant-numeric: tabular-nums;
+}
+.onroad-page .pd-timer-box span {
+    background: rgba(244,239,230,0.1);
+    padding: 4px 8px; font-size: 14px;
+    color: var(--c-cream);
+    min-width: 32px; text-align: center;
+    letter-spacing: 0.12em;
+}
+.onroad-page .pd-timer-box .sep {
+    background: none; padding: 4px 0;
+    color: rgba(244,239,230,0.4); min-width: 8px;
+}
+.onroad-page .pd-urgency__stock { color: var(--c-cream); }
+.onroad-page .pd-urgency__stock b {
+    color: var(--c-signal);
+    font-family: var(--font-serif); font-weight: 300;
+    font-size: 20px; font-variation-settings: "opsz" 24;
+    font-variant-numeric: tabular-nums; margin: 0 4px;
+}
+/* ▲ /pd polish */
+
 .onroad-page .jg-product-detail-page .imgArea { position: sticky; top: 110px; }
 .onroad-page .jg-product-detail-page .imgArea .prdImg { background: var(--c-cream); border: 1px solid var(--c-line); overflow: hidden; }
 .onroad-page .jg-product-detail-page .imgArea .prdImg img { display: block; width: 100%; height: auto; transition: transform .6s ease; }
