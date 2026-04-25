@@ -10,19 +10,44 @@
     <h2>로그인</h2>
     <p>주문 내역과 찜한 제품을 이어서 확인하세요.</p>
 </div>
+
+<!-- Pending purchase context (populated via JS when user came from buy/cart action) -->
+<aside class="jg-pending-purchase" id="pendingPurchase" hidden>
+    <div class="jg-pending-purchase__head">
+        <span class="k">[ Resume · 구매 진행 중 ]</span>
+        <em>로그인하면 결제로 이어집니다</em>
+    </div>
+    <a class="jg-pending-purchase__product" id="ppLink" href="#none">
+        <div class="jg-pending-purchase__thumb"><img id="ppImage" alt="" loading="lazy"></div>
+        <div class="jg-pending-purchase__info">
+            <strong id="ppName"></strong>
+            <span class="meta">
+                <span id="ppPrice"></span>
+                <span class="dot">·</span>
+                <span id="ppIntent"></span>
+                <span class="dot">·</span>
+                <span id="ppQty"></span>
+            </span>
+        </div>
+        <span class="jg-pending-purchase__arrow" aria-hidden="true">→</span>
+    </a>
+</aside>
+
 <div class="section jg-auth-stage jg-login-shell">
-    <div module="member_login" id="{$member_login_module_id}" class="jg-login-page jg-login-member jg-auth-card">
+    <div module="member_login" id="{$member_login_module_id}" class="jg-login-page jg-login-member jg-auth-stack">
         <!--@css(/css/module/member/login.css)-->
         <!--@js(/js/module/member/login.js)-->
         <!--
             $defaultReturnUrl = /index.html
             $forbidIpUrl = member/adminFail.html
         -->
-        <fieldset class="form">
+
+        <!-- Card 1: Member login (equal-weight to guest) -->
+        <fieldset class="form jg-auth-card jg-auth-card--member">
             <legend>회원로그인</legend>
             <div class="jg-auth-card__head">
-                <strong>로그인</strong>
-                <p>아이디와 비밀번호만 입력하면 바로 이용할 수 있습니다.</p>
+                <strong>회원으로 로그인</strong>
+                <p>주문 내역, 적립금, 찜 목록을 이어서 확인하세요.</p>
             </div>
             <div class="login">
                 <label class="id ePlaceholder" title="{$login_id_type_text}">{$form.member_id}</label>
@@ -39,47 +64,114 @@
             </div>
             <div class="login__button">
                 <a href="#none" class="btnSubmit gFull sizeL" onclick="{$action_func_login}">로그인</a>
-                <a href="{$returnUrl}" onclick="{$action_nomember_order}" class="btnNormal gFull sizeL jg-guest-purchase {$display_nomember|display}">비회원 구매</a>
-            </div>
-            <div class="wrap_find">
-                <div><a href="/member/id/find_id.html">아이디 찾기</a></div>
-                <div><a href="/member/passwd/find_passwd_info.html">비밀번호 찾기</a></div>
-                <div><a href="/member/agreement.html">회원가입</a></div>
             </div>
             <div class="login__sns">
                 <div class="sns_h">SNS 로그인</div>
                 <div class="wrap_sns_log">
+                    <!-- Primary: Kakao / Naver / Google — covers ~95% of Korean users -->
                     <a href="#none" class="btnKakao {$display_kakao|display}" onclick="{$kakao_func_login}">카카오 로그인</a>
                     <a href="#none" class="btnNaver {$display_naver|display}" onclick="{$naver_func_login}">네이버 로그인</a>
-                    <a href="#none" class="btnFacebook {$display_facebook|display}" onclick="{$facebook_func_login}">페이스북 로그인</a>
-                    <a href="#none" class="btnLine {$display_line|display}" onclick="{$line_func_login}">라인 로그인</a>
                     <a href="#none" class="btnGoogle {$display_google|display}" onclick="{$google_func_login}">구글 로그인</a>
-                    <a href="#none" class="btnApple {$display_apple|display}" onclick="{$apple_func_login}">Apple로 로그인</a>
-                    <a href="#none" class="yahoojp {$display_yahoojp|display}" onclick="{$yahoojp_func_login}">Yahoo! JAPAN<br>ID로 로그인</a>
+
+                    <!-- Secondary: collapsed behind toggle (Facebook / Line / Apple / Yahoo JP) -->
+                    <details class="wrap_sns_log__more">
+                        <summary>다른 방법으로 로그인</summary>
+                        <a href="#none" class="btnFacebook {$display_facebook|display}" onclick="{$facebook_func_login}">페이스북 로그인</a>
+                        <a href="#none" class="btnLine {$display_line|display}" onclick="{$line_func_login}">라인 로그인</a>
+                        <a href="#none" class="btnApple {$display_apple|display}" onclick="{$apple_func_login}">Apple로 로그인</a>
+                        <a href="#none" class="yahoojp {$display_yahoojp|display}" onclick="{$yahoojp_func_login}">Yahoo! JAPAN<br>ID로 로그인</a>
+                    </details>
                 </div>
             </div>
+            <div class="wrap_find">
+                <div><a href="/member/id/find_id.html">아이디 찾기</a></div>
+                <div><a href="/member/passwd/find_passwd_info.html">비밀번호 찾기</a></div>
+            </div>
         </fieldset>
-        <div class="jg-auth-switch">
-            <span>아직 회원이 아니신가요?</span>
-            <a href="/member/agreement.html">회원가입하고 시작하기</a>
+
+        <!-- Card 2: Guest purchase (equal-weight, dedicated card) -->
+        <div class="jg-auth-card jg-auth-card--guest {$display_nomember|display}">
+            <div class="jg-auth-card__head">
+                <strong>비회원으로 구매</strong>
+                <p>가입 없이 빠르게 결제만 진행합니다.</p>
+            </div>
+            <ul class="jg-auth-card__perks">
+                <li>회원가입 절차 없이 <em>즉시 결제</em></li>
+                <li>주문번호 + 비밀번호로 <em>주문 조회</em></li>
+                <li>적립금·등급 혜택은 <em>회원에게만</em> 제공</li>
+            </ul>
+            <a href="{$returnUrl}" onclick="{$action_nomember_order}" class="btnSubmit gFull sizeL jg-guest-purchase">비회원으로 결제하기</a>
         </div>
+
+        <!-- Bottom: signup incentive card (still inside member_login for consistent styling) -->
+        <aside class="jg-auth-switch jg-auth-incentive">
+            <div class="jg-auth-incentive__head">
+                <span class="jg-auth-incentive__badge">FIRST · 10% OFF</span>
+                <strong class="jg-auth-incentive__title">처음이라면,<br>회원으로 시작하세요.</strong>
+            </div>
+            <ul class="jg-auth-incentive__perks">
+                <li><em>10%</em><span>첫 구매 즉시 적용되는 <b>할인 쿠폰</b></span></li>
+                <li><em>1%</em><span>모든 주문에 <b>적립금 자동 적립</b></span></li>
+                <li><em>등급</em><span>등급별 추가 혜택 + <b>후기 작성</b> 가능</span></li>
+            </ul>
+            <a href="/member/agreement.html" class="jg-auth-incentive__cta">회원가입하고 10% 받기 <span class="jg-auth-incentive__arrow" aria-hidden="true">→</span></a>
+        </aside>
     </div>
 </div>
 
-<div module="MyShop_OrderHistoryNologin" id="order_history_nologin_id" class="section jg-login-page jg-login-guest">
-    <!--@css(/css/module/myshop/orderHistoryNologin.css)-->
-    <!--
-        $orderDetailUrl = /myshop/order/list.html
-    -->
-    <div class="login">
-		<div class="txt_nonmem_check">비회원 주문조회</div>
-        <div class="form">
-        	{$form.order_name}
-            {$form.order_id}
-            {$form.order_password}
-            <div class="login__button">
-            	<button type="submit" class="btnSubmit gFull sizeL">확인</button>
+<script>
+/* Hydrate pending-purchase context card from sessionStorage.
+   sessionStorage is set by /product/detail.html when user clicks 바로구매/장바구니.
+   Card stays hidden if no pending purchase or older than 1 hour. */
+(function(){
+    try {
+        var raw = sessionStorage.getItem('onroad_pending_purchase');
+        if (!raw) return;
+        var data = JSON.parse(raw);
+        if (!data || !data.no) return;
+        if (data.ts && Date.now() - data.ts > 60 * 60 * 1000) {
+            sessionStorage.removeItem('onroad_pending_purchase');
+            return;
+        }
+        var card = document.getElementById('pendingPurchase');
+        var product = card.querySelector('.jg-pending-purchase__product');
+        var img = document.getElementById('ppImage');
+        if (data.image) {
+            img.src = data.image;
+        } else {
+            product.classList.add('has-no-image');
+        }
+        document.getElementById('ppName').textContent = data.name || '';
+        document.getElementById('ppPrice').textContent = data.price || '';
+        document.getElementById('ppIntent').textContent = data.intent === 'cart' ? '장바구니' : '바로구매';
+        document.getElementById('ppQty').textContent = (data.qty || '1') + '개';
+        document.getElementById('ppLink').href = '/product/detail.html?product_no=' + encodeURIComponent(data.no);
+        card.hidden = false;
+    } catch(e){}
+})();
+</script>
+
+<details class="jg-guest-lookup">
+    <summary class="jg-guest-lookup__summary">
+        <span class="jg-guest-lookup__label">이미 비회원으로 주문하셨나요?</span>
+        <span class="jg-guest-lookup__cta">주문번호로 조회</span>
+        <span class="jg-guest-lookup__chevron" aria-hidden="true">▾</span>
+    </summary>
+    <div module="MyShop_OrderHistoryNologin" id="order_history_nologin_id" class="jg-login-guest jg-guest-lookup__body">
+        <!--@css(/css/module/myshop/orderHistoryNologin.css)-->
+        <!--
+            $orderDetailUrl = /myshop/order/list.html
+        -->
+        <div class="login">
+            <div class="txt_nonmem_check">비회원 주문조회</div>
+            <div class="form">
+                {$form.order_name}
+                {$form.order_id}
+                {$form.order_password}
+                <div class="login__button">
+                    <button type="submit" class="btnSubmit gFull sizeL">확인</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</details>

@@ -575,10 +575,11 @@
 
             <div module="product_action" id="{$fixed_action_button}" class="productAction">
 				<div id="ec-product-price-info" class="displaynone" ec-data-custom="{$disp_product_custom}" ec-data-price="{$product_price}"></div>
+				<div id="onroadProductMeta" data-product-no="{$product_no}" data-product-name="{$name}" data-product-image="{$big_img}" data-product-price="{$product_price}" hidden></div>
                 <div class="{$action_display|display} action_button">
 					<span class="sub_sold {$soldout_display|display}">품절</span>
-                    <a href="#none" class="btnSubmit sizeL {$buy_display|display}" onclick="{$action_buy}"><span id="{$btn_buy_mobile_id}">바로 구매</span><span class="{$btn_reserve_class|display}" id="{$btn_reserve_mobile_id}">예약주문</span><span id="{$btn_regular_delivery_id}" class="{$btn_regular_delivery|display}">정기배송 신청</span></a>
-					<button type="button" class="btnNormal sizeL actionCart {$basket_display|display}" onclick="{$action_basket}" id="actionCart">장바구니</button>
+                    <a href="#none" class="btnSubmit sizeL {$buy_display|display}" onclick="{$action_buy}" data-onroad-action="buy"><span id="{$btn_buy_mobile_id}">바로 구매</span><span class="{$btn_reserve_class|display}" id="{$btn_reserve_mobile_id}">예약주문</span><span id="{$btn_regular_delivery_id}" class="{$btn_regular_delivery|display}">정기배송 신청</span></a>
+					<button type="button" class="btnNormal sizeL actionCart {$basket_display|display}" onclick="{$action_basket}" id="actionCart" data-onroad-action="cart">장바구니</button>
 					<button type="button" class="btnNormal sizeL actionWish {$wishlist_display|display}" onclick="{$action_wishlist}" id="actionWish">찜하기</button>
                 </div>
                 <div class="ec-base-button soldout {$action_soldout_display|display}">
@@ -605,8 +606,8 @@
             <p class="pd-disclaim">본 제품은 질병의 예방 및 치료를 위한 의약품이 아닙니다.</p>
             <div module="product_action" class="ec-base-button gFixed" id="orderFixArea">
                 <div class="ec-base-button gColumn {$action_display|display}">
-					<a href="#none" class="btnSubmit sizeM {$buy_display|display}" onclick="{$action_buy}"><span id="{$btn_buy_mobile_id}">바로 구매</span><span class="{$btn_reserve_class|display}" id="{$btn_reserve_mobile_id}">예약주문</span><span id="{$btn_regular_delivery_id}" class="{$btn_regular_delivery|display}">정기배송 신청</span></a>
-                    <button type="button" class="btnNormal sizeM actionCart {$basket_display|display}" onclick="{$action_basket}">장바구니</button>
+					<a href="#none" class="btnSubmit sizeM {$buy_display|display}" onclick="{$action_buy}" data-onroad-action="buy"><span id="{$btn_buy_mobile_id}">바로 구매</span><span class="{$btn_reserve_class|display}" id="{$btn_reserve_mobile_id}">예약주문</span><span id="{$btn_regular_delivery_id}" class="{$btn_regular_delivery|display}">정기배송 신청</span></a>
+                    <button type="button" class="btnNormal sizeM actionCart {$basket_display|display}" onclick="{$action_basket}" data-onroad-action="cart">장바구니</button>
                 </div>
                 <div class="ec-base-button gColumn {$action_soldout_display|display}">
                     <button type="button" class="btnSubmit sizeM {$soldout_display|display}">품절</button>
@@ -884,4 +885,36 @@
 		</div><!-- //detail_guide -->
 	</div><!-- //prdInfo -->
 </div>
+
+<script>
+/* Capture purchase intent for login-page context card.
+   When user clicks 바로구매 / 장바구니, store product info in sessionStorage so the
+   login page (if cafe24 redirects there) can show "currently purchasing" context. */
+(function(){
+  var meta = document.getElementById('onroadProductMeta');
+  if (!meta) return;
+  function getQty(){
+    var q = document.querySelector('input[name^="quantity_name"]');
+    return q && q.value ? q.value : '1';
+  }
+  function save(intent){
+    try {
+      sessionStorage.setItem('onroad_pending_purchase', JSON.stringify({
+        no: meta.getAttribute('data-product-no') || '',
+        name: meta.getAttribute('data-product-name') || '',
+        image: meta.getAttribute('data-product-image') || '',
+        price: meta.getAttribute('data-product-price') || '',
+        qty: getQty(),
+        intent: intent,
+        ts: Date.now()
+      }));
+    } catch(e){}
+  }
+  document.addEventListener('click', function(e){
+    var btn = e.target.closest('[data-onroad-action]');
+    if (!btn) return;
+    save(btn.getAttribute('data-onroad-action'));
+  }, true);
+})();
+</script>
 <!--@define(cmc_log)-->

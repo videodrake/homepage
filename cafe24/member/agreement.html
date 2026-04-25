@@ -6,21 +6,21 @@
         <li title="현재 위치"><strong>회원 가입</strong></li>
     </ol>
 </div>
+
 <div class="section titleArea jg-join-title jg-agreement-title">
     <h2>회원 가입</h2>
+    <p>전체 동의 한 번이면 30초 안에 가입을 마칠 수 있습니다.</p>
 </div>
-<div class="section ec-base-step jg-join-step jg-agreement-step">
+
+<div class="section ec-base-step jg-join-step jg-agreement-step jg-agreement-step--compact">
     <ol class="step">
         <li class="selected">1. 약관동의</li>
         <li>2. 정보입력</li>
         <li>3. 가입완료</li>
     </ol>
 </div>
-<div class="section jg-sub-brief jg-join-brief jg-agreement-brief">
-    <strong>회원가입 전 약관 확인</strong>
-    <p>필수 약관을 확인하고 동의하면 다음 단계로 이동할 수 있습니다. 선택 동의는 필요에 따라 결정할 수 있습니다.</p>
-</div>
-<div module="member_join" class="section jg-agreement-page">
+
+<div module="member_join" class="section jg-agreement-page jg-signup-start jg-signup-start--solo">
     <!--@js(/js/module/member/join_agreement.js)-->
     <!--@css(/css/module/member/join_agreement.css)-->
     <!--
@@ -28,88 +28,188 @@
         $joinPageUrl = /member/join.html
     -->
 
-    <div class="agreeAll">
-        <h3>전체 약관에 동의합니다.</h3>
-        <div class="agreeAll__copy">
-            <strong>전체 약관에 모두 동의합니다.</strong>
-            <span>선택 항목 포함</span>
-            <p class="desc">필수와 선택 약관 모두에 동의하면 한 번에 가입할 수 있습니다.</p>
-        </div>
-        <p class="agreeAll__control">
-            {$sAgreeAllChecked}
-            <label for="sAgreeAllChecked">전체 동의</label>
-        </p>
-    </div>
+    <div class="jg-signup-start__layout">
+        <div class="jg-signup-start__consents">
+            <div class="agreeAll jg-consent-all">
+                <div class="agreeAll__copy">
+                    <span>전체 동의</span>
+                    <strong>모든 약관에 한 번에 동의합니다.</strong>
+                    <p class="desc">선택 항목까지 포함됩니다. 개별 항목은 아래에서 따로 변경할 수 있습니다.</p>
+                </div>
+                <p class="agreeAll__control">
+                    {$sAgreeAllChecked}
+                    <label for="sAgreeAllChecked">전체 약관 동의</label>
+                </p>
+            </div>
 
-    <div class="agreeInner">
-        <div class="left">
-            <div class="agreeArea on" id="agree_service_chk_box0">
-                <div class="title">
-                    <h3>{$form.agree_service_check}<label class="check" for="agree_service_check0">{$service_title}</label><a href="#none" class="btnToggle"><span class="icoArrowBottom">{$service_arrow_text}</span></a></h3>
-                </div>
-                <div class="contents">
-                    {$service_desc}
-                </div>
-            </div>
-            <div class="agreeArea on {$privacy_collection_terms_display|display}" id="agree_service_chk_box2">
-                <div class="title">
-                    <h3>{$form.agree_privacy_collection_terms_check}<label class="check" for="agree_privacy_collection_terms_check2">{$privacy_collection_terms_title}</label><a href="#none" class="btnToggle"><span class="icoArrowBottom">{$privacy_collection_terms_arrow_text}</span></a></h3>
-                </div>
-                <div class="contents">
-                    {$privacy_collection_terms_desc}
-                </div>
-            </div>
-            <div class="agreeArea on {$display_member_age|display}" id="agree_service_chk_box6">
-                <div class="title">
-                    <h3>{$form.agree_member_age_check}<label class="check" for="agree_member_age_check6">{$member_age_title}</label><a href="#none" class="btnToggle"><span class="icoArrowBottom">{$member_age_arrow_text}</span></a></h3>
-                </div>
-                <div class="contents">
-                    {$member_age_desc}
-                </div>
-            </div>
-        </div>
-        <div class="right">
-            <div class="agreeArea on {$privacy_indication_terms_display|display}" id="agree_service_chk_box1">
-                <div class="title">
-                    <h3>{$form.agree_privacy_indication_terms_check}<label class="check" for="agree_privacy_indication_terms_check1">{$privacy_indication_terms_title}</label><a href="#none" class="btnToggle"><span class="icoArrowBottom">{$privacy_indication_terms_arrow_text}</span></a></h3>
-                </div>
-                <div class="contents">
-                    {$privacy_indication_terms_desc}
-                </div>
-            </div>
-            <div class="agreeArea on {$privacy_third_party_terms_display|display}" id="agree_service_chk_box3">
-                <div class="title">
-                    <h3>{$form.agree_privacy_third_party_terms_check}<label class="check" for="agree_privacy_third_party_terms_check3">{$privacy_third_party_terms_title}</label><a href="#none" class="btnToggle"><span class="icoArrowBottom">{$privacy_third_party_terms_arrow_text}</span></a></h3>
-                </div>
-                <div class="contents">
-                    {$privacy_third_party_terms_desc}
-                </div>
-            </div>
-            <div class="agreeArea on {$privacy_consignment_terms_display|display}" id="agree_service_chk_box4">
-                <div class="title">
-                    <h3>{$form.agree_privacy_consignment_terms_check}<label class="check" for="agree_privacy_consignment_terms_check4">{$privacy_consignment_terms_title}</label><a href="#none" class="btnToggle"><span class="icoArrowBottom">{$privacy_consignment_terms_arrow_text}</span></a></h3>
-                </div>
-                <div class="contents">
-                    {$privacy_consignment_terms_desc}
-                </div>
-            </div>
-            <div class="agreeArea on {$marketing_terms_display|display}" id="agree_service_chk_box5">
-                <div class="title">
-                    <h3>{$form.agree_marketing_terms_check}<label class="check" for="agree_marketing_terms_check5">{$marketing_terms_title}</label><a href="#none" class="btnToggle"><span class="icoArrowBottom">{$marketing_terms_arrow_text}</span></a></h3>
-                </div>
-                <div class="contents">
-                    {$marketing_terms_desc}
-                </div>
-                <ul class="additional {$marketing_terms_display|display}">
-                    <li>{$form.agree_marketing_sms} <label class="check" for="agree_marketing_sms">{$marketing_sms_text}</label></li>
-                    <li>{$form.agree_marketing_email} <label class="check" for="agree_marketing_email">{$marketing_email_text}</label></li>
-                </ul>
-            </div>
-        </div>
-    </div>
+            <div class="agreeInner">
+                <div class="left">
+                    <div class="agreeArea on jg-consent-card jg-consent-card--required" id="agree_service_chk_box0">
+                        <div class="title">
+                            <h3>
+                                {$form.agree_service_check}
+                                <label class="check" for="agree_service_check0">이용약관 동의 <em>필수</em></label>
+                                <button type="button" class="btnToggle" aria-label="이용약관 내용 열기/닫기"><span class="icoArrowBottom"></span></button>
+                            </h3>
+                        </div>
+                        <div class="contents">
+                            {$service_desc}
+                        </div>
+                    </div>
 
-    <div class="ec-base-button gBottom">
-        <a href="/member/login.html" class="btnNormalFix sizeL">취소</a>
-        <a href="#none" class="btnSubmitFix sizeL" onclick="{$agreementSubmit}">다음</a>
+                    <div class="agreeArea on jg-consent-card jg-consent-card--required {$display_privacy_agreement|display}" id="agree_privacy_chk_box0">
+                        <div class="title">
+                            <h3>
+                                {$form.agree_privacy_check}
+                                <label class="check" for="agree_privacy_check0">개인정보 수집 및 이용 동의 <em>필수</em></label>
+                                <button type="button" class="btnToggle" aria-label="개인정보 필수 약관 열기/닫기"><span class="icoArrowBottom"></span></button>
+                            </h3>
+                        </div>
+                        <div class="contents">
+                            {$privacy_desc}
+                        </div>
+                    </div>
+
+                    <div class="agreeArea jg-consent-card {$display_privacy_optional|display}" id="agree_privacy_optional_chk_box0">
+                        <div class="title">
+                            <h3>
+                                {$form.agree_privacy_optional_check}
+                                <label class="check" for="agree_privacy_optional_check0">개인정보 수집 및 이용 동의 <em>선택</em></label>
+                                <button type="button" class="btnToggle" aria-label="개인정보 선택 약관 열기/닫기"><span class="icoArrowBottom"></span></button>
+                            </h3>
+                        </div>
+                        <div class="contents">
+                            {$privacy_optional_desc}
+                        </div>
+                    </div>
+
+                    <div class="agreeArea jg-consent-card {$display_information|display}" id="agree_information_chk_box0">
+                        <div class="title">
+                            <h3>
+                                {$form.agree_information_check}
+                                <label class="check" for="agree_information_check0">개인정보 제3자 제공 동의 <em>선택</em></label>
+                                <button type="button" class="btnToggle" aria-label="제3자 제공 약관 열기/닫기"><span class="icoArrowBottom"></span></button>
+                            </h3>
+                        </div>
+                        <div class="contents">
+                            {$information_desc}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="right">
+                    <div class="agreeArea jg-consent-card {$display_consignment|display}" id="agree_consignment_chk_box0">
+                        <div class="title">
+                            <h3>
+                                {$form.agree_consignment_check}
+                                <label class="check" for="agree_consignment_check0">개인정보 처리 위탁 동의 <em>선택</em></label>
+                                <button type="button" class="btnToggle" aria-label="처리 위탁 약관 열기/닫기"><span class="icoArrowBottom"></span></button>
+                            </h3>
+                        </div>
+                        <div class="contents">
+                            {$consignment_desc}
+                        </div>
+                    </div>
+
+                    <div class="agreeArea jg-consent-card {$display_marketing_consent|display}" id="marketing_consent_chk_box0">
+                        <div class="title">
+                            <h3>
+                                {$form.marketing_consent_check}
+                                <label for="marketing_consent_check0">동의함</label>
+                                <label class="check" for="marketing_consent_check0">마케팅 활용 동의 <em>선택</em></label>
+                                <button type="button" class="btnToggle" aria-label="마케팅 활용 약관 열기/닫기"><span class="icoArrowBottom"></span></button>
+                            </h3>
+                        </div>
+                        <div class="contents">
+                            <div class="fr-view fr-view-privacy-optional">{$desc_marketing_consent}</div>
+                        </div>
+                    </div>
+
+                    <div class="agreeArea jg-consent-card {$display_marketing|display}" id="marketing_receive_chk_box0">
+                        <div class="title">
+                            <h3>
+                                {$sMarketingAgreeAllChecked}
+                                <label class="check" for="sMarketingAgreeAllChecked">쇼핑정보 수신 동의 <em>선택</em></label>
+                                <button type="button" class="btnToggle" aria-label="쇼핑정보 수신 약관 열기/닫기"><span class="icoArrowBottom"></span></button>
+                            </h3>
+                            <ul class="additional">
+                                <li class="{$display_is_sms|display}">{$form.is_sms}<label class="check" for="is_sms0">모바일 메시지 수신</label></li>
+                                <li class="{$display_is_news_mail|display}">{$form.is_news_mail}<label class="check" for="is_news_mail0">이메일 수신</label></li>
+                            </ul>
+                        </div>
+                        <div class="contents">
+                            <p>할인쿠폰, 이벤트, 제품 소식을 모바일 메시지나 이메일로 받을 수 있습니다.</p>
+                            <p>선택 약관에 동의하지 않아도 회원가입은 가능하며, 가입 후 회원정보수정에서 언제든지 변경할 수 있습니다.</p>
+                        </div>
+                    </div>
+
+                    <div class="agreeArea jg-consent-card {$display_user_defined_1|display}">
+                        <div class="title">
+                            <h3>{$form.check_user_defined_1}<label for="{$name_user_defined_1}">동의함</label><label class="check" for="{$name_user_defined_1}">{$title_user_defined_1}</label><button type="button" class="btnToggle" aria-label="추가 약관 열기/닫기"><span class="icoArrowBottom"></span></button></h3>
+                        </div>
+                        <div class="contents"><div class="fr-view fr-view-privacy-optional">{$desc_user_defined_1}</div></div>
+                    </div>
+                    <div class="agreeArea jg-consent-card {$display_user_defined_2|display}">
+                        <div class="title">
+                            <h3>{$form.check_user_defined_2}<label for="{$name_user_defined_2}">동의함</label><label class="check" for="{$name_user_defined_2}">{$title_user_defined_2}</label><button type="button" class="btnToggle" aria-label="추가 약관 열기/닫기"><span class="icoArrowBottom"></span></button></h3>
+                        </div>
+                        <div class="contents"><div class="fr-view fr-view-privacy-optional">{$desc_user_defined_2}</div></div>
+                    </div>
+                    <div class="agreeArea jg-consent-card {$display_user_defined_3|display}">
+                        <div class="title">
+                            <h3>{$form.check_user_defined_3}<label for="{$name_user_defined_3}">동의함</label><label class="check" for="{$name_user_defined_3}">{$title_user_defined_3}</label><button type="button" class="btnToggle" aria-label="추가 약관 열기/닫기"><span class="icoArrowBottom"></span></button></h3>
+                        </div>
+                        <div class="contents"><div class="fr-view fr-view-privacy-optional">{$desc_user_defined_3}</div></div>
+                    </div>
+                    <div class="agreeArea jg-consent-card {$display_user_defined_4|display}">
+                        <div class="title">
+                            <h3>{$form.check_user_defined_4}<label for="{$name_user_defined_4}">동의함</label><label class="check" for="{$name_user_defined_4}">{$title_user_defined_4}</label><button type="button" class="btnToggle" aria-label="추가 약관 열기/닫기"><span class="icoArrowBottom"></span></button></h3>
+                        </div>
+                        <div class="contents"><div class="fr-view fr-view-privacy-optional">{$desc_user_defined_4}</div></div>
+                    </div>
+                    <div class="agreeArea jg-consent-card {$display_user_defined_5|display}">
+                        <div class="title">
+                            <h3>{$form.check_user_defined_5}<label for="{$name_user_defined_5}">동의함</label><label class="check" for="{$name_user_defined_5}">{$title_user_defined_5}</label><button type="button" class="btnToggle" aria-label="추가 약관 열기/닫기"><span class="icoArrowBottom"></span></button></h3>
+                        </div>
+                        <div class="contents"><div class="fr-view fr-view-privacy-optional">{$desc_user_defined_5}</div></div>
+                    </div>
+                    <div class="agreeArea jg-consent-card {$display_user_defined_6|display}">
+                        <div class="title">
+                            <h3>{$form.check_user_defined_6}<label for="{$name_user_defined_6}">동의함</label><label class="check" for="{$name_user_defined_6}">{$title_user_defined_6}</label><button type="button" class="btnToggle" aria-label="추가 약관 열기/닫기"><span class="icoArrowBottom"></span></button></h3>
+                        </div>
+                        <div class="contents"><div class="fr-view fr-view-privacy-optional">{$desc_user_defined_6}</div></div>
+                    </div>
+                    <div class="agreeArea jg-consent-card {$display_user_defined_7|display}">
+                        <div class="title">
+                            <h3>{$form.check_user_defined_7}<label for="{$name_user_defined_7}">동의함</label><label class="check" for="{$name_user_defined_7}">{$title_user_defined_7}</label><button type="button" class="btnToggle" aria-label="추가 약관 열기/닫기"><span class="icoArrowBottom"></span></button></h3>
+                        </div>
+                        <div class="contents"><div class="fr-view fr-view-privacy-optional">{$desc_user_defined_7}</div></div>
+                    </div>
+                    <div class="agreeArea jg-consent-card {$display_user_defined_8|display}">
+                        <div class="title">
+                            <h3>{$form.check_user_defined_8}<label for="{$name_user_defined_8}">동의함</label><label class="check" for="{$name_user_defined_8}">{$title_user_defined_8}</label><button type="button" class="btnToggle" aria-label="추가 약관 열기/닫기"><span class="icoArrowBottom"></span></button></h3>
+                        </div>
+                        <div class="contents"><div class="fr-view fr-view-privacy-optional">{$desc_user_defined_8}</div></div>
+                    </div>
+                    <div class="agreeArea jg-consent-card {$display_user_defined_9|display}">
+                        <div class="title">
+                            <h3>{$form.check_user_defined_9}<label for="{$name_user_defined_9}">동의함</label><label class="check" for="{$name_user_defined_9}">{$title_user_defined_9}</label><button type="button" class="btnToggle" aria-label="추가 약관 열기/닫기"><span class="icoArrowBottom"></span></button></h3>
+                        </div>
+                        <div class="contents"><div class="fr-view fr-view-privacy-optional">{$desc_user_defined_9}</div></div>
+                    </div>
+                    <div class="agreeArea jg-consent-card {$display_user_defined_10|display}">
+                        <div class="title">
+                            <h3>{$form.check_user_defined_10}<label for="{$name_user_defined_10}">동의함</label><label class="check" for="{$name_user_defined_10}">{$title_user_defined_10}</label><button type="button" class="btnToggle" aria-label="추가 약관 열기/닫기"><span class="icoArrowBottom"></span></button></h3>
+                        </div>
+                        <div class="contents"><div class="fr-view fr-view-privacy-optional">{$desc_user_defined_10}</div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ec-base-button gBottom jg-signup-start__actions jg-signup-start__actions--solo">
+                <button type="button" class="btnSubmitFix sizeL jg-signup-start__cta" onclick="checkAgreement('/member/join.html');">동의하고 정보 입력으로 <span class="jg-signup-start__cta-arrow" aria-hidden="true">→</span></button>
+                <a href="/member/login.html" class="btnNormalFix sizeM jg-signup-start__back">로그인으로 돌아가기</a>
+            </div>
+        </div>
     </div>
 </div>
