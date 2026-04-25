@@ -1,4 +1,16 @@
 <!--@layout(/layout/basic/layout.html)-->
+
+<!-- ▼ Onroad: top promo strip with daily countdown (static, decorative) -->
+<div class="pd-promo" role="banner">
+    <span><b>⚑</b> First Order <b>10% OFF</b></span>
+    <span class="sep hide-sm">·</span>
+    <span class="hide-sm">2개 이상 <b>무료배송</b></span>
+    <span class="sep">·</span>
+    <span>마감까지</span>
+    <span class="pd-promo__count" id="pdPromoCount">23:59:59</span>
+</div>
+<!-- ▲ /promo -->
+
 <div class="section path" module="product_headcategory" data-ez-module="product-head-breadcrumb/1">
     <span>현재 위치</span>
     <ol>
@@ -18,7 +30,26 @@
     <!--
 		$coupon_download_page = /coupon/coupon_productdetail.html
     -->
-     <div class="detailArea">
+     <div class="detailArea pd-grid">
+
+        <!-- ▼ Onroad: urgency panel — overlays the image area on desktop, stacks above on mobile -->
+        <div class="pd-urgency" aria-hidden="true">
+            <div class="pd-urgency__row">
+                <span><b>⚑</b> <em>오늘 할인 마감까지</em></span>
+                <span>[ SPEC · EC—01 ]</span>
+            </div>
+            <div class="pd-urgency__timer">
+                <div class="pd-timer-box" id="pdHeroTimer">
+                    <span id="pdHrH">23</span><span class="sep">:</span><span id="pdHrM">59</span><span class="sep">:</span><span id="pdHrS">59</span>
+                </div>
+            </div>
+            <div class="pd-urgency__row pd-urgency__row--meta">
+                <span class="pd-urgency__stock">남은 수량 <b id="pdStockLeft">27</b>개</span>
+                <span>오늘 <em>143</em>명 구매</span>
+            </div>
+        </div>
+        <!-- ▲ /urgency -->
+
         <div class="imgArea" module="product_image">
             <!--@js(/js/module/product/product_image.js)-->
 
@@ -627,6 +658,16 @@
 	<!--@import(/board/report_popup.html)-->
 	<div id="detail" class="cboth"></div>
 
+	<!-- ▼ Onroad: tab nav anchoring to the existing review/detail/qna sections -->
+	<nav class="pd-tabs" role="tablist" aria-label="제품 정보 섹션">
+		<a class="pd-tab" href="#prdInfo" data-tab-target="prdInfo"><span class="pd-tab__num">01</span>Product</a>
+		<a class="pd-tab" href="#prdDetail" data-tab-target="prdDetail"><span class="pd-tab__num">02</span>Detail</a>
+		<a class="pd-tab" href="#prdReview" data-tab-target="prdReview"><span class="pd-tab__num">03</span>Reviews</a>
+		<a class="pd-tab" href="#prdQnA" data-tab-target="prdQnA"><span class="pd-tab__num">04</span>Q&A</a>
+		<a class="pd-tab" href="#guideArea" data-tab-target="guideArea"><span class="pd-tab__num">05</span>Notice</a>
+	</nav>
+	<!-- ▲ /tabs -->
+
 	<section id="prdReview" class="pd-flow pd-flow--review">
 		<div id="review" class="pdt150 cboth"></div>
 
@@ -886,35 +927,126 @@
 	</div><!-- //prdInfo -->
 </div>
 
+<!-- ▼ Onroad: sticky bottom buy bar. Reveals after user scrolls past the hero/price area.
+     Reuses cafe24's product_action module so {$action_buy}/{$action_basket} fire the same
+     server-side flow as the in-page buttons. -->
+<div class="pd-sticky" id="pdSticky" aria-hidden="true">
+	<div class="pd-sticky__inner" module="product_detail">
+		<div class="pd-sticky__info">
+			<strong class="pd-sticky__name">{$name}</strong>
+			<span class="pd-sticky__meta">옥타코사놀 40mg · 60정 · 2개월분</span>
+		</div>
+		<div class="pd-sticky__price">
+			<span class="now">{$product_price}{$product_tax_type_text}</span>
+		</div>
+		<div class="pd-sticky__ctas" module="product_action">
+			<a href="#none" class="btn btn--solid-ink {$basket_display|display}" onclick="{$action_basket}" data-onroad-action="cart">장바구니</a>
+			<a href="#none" class="btn btn--primary {$buy_display|display}" onclick="{$action_buy}" data-onroad-action="buy">바로 구매</a>
+		</div>
+	</div>
+</div>
+<!-- ▲ /sticky -->
+
 <script>
-/* Capture purchase intent for login-page context card.
-   When user clicks 바로구매 / 장바구니, store product info in sessionStorage so the
-   login page (if cafe24 redirects there) can show "currently purchasing" context. */
 (function(){
-  var meta = document.getElementById('onroadProductMeta');
-  if (!meta) return;
-  function getQty(){
-    var q = document.querySelector('input[name^="quantity_name"]');
-    return q && q.value ? q.value : '1';
-  }
-  function save(intent){
-    try {
-      sessionStorage.setItem('onroad_pending_purchase', JSON.stringify({
-        no: meta.getAttribute('data-product-no') || '',
-        name: meta.getAttribute('data-product-name') || '',
-        image: meta.getAttribute('data-product-image') || '',
-        price: meta.getAttribute('data-product-price') || '',
-        qty: getQty(),
-        intent: intent,
-        ts: Date.now()
-      }));
-    } catch(e){}
-  }
-  document.addEventListener('click', function(e){
-    var btn = e.target.closest('[data-onroad-action]');
-    if (!btn) return;
-    save(btn.getAttribute('data-onroad-action'));
-  }, true);
+	/* Capture purchase intent for login-page context card.
+	   When user clicks 바로구매 / 장바구니, store product info in sessionStorage so the
+	   login page (if cafe24 redirects there) can show "currently purchasing" context. */
+	var meta = document.getElementById('onroadProductMeta');
+	function getQty(){
+		var q = document.querySelector('input[name^="quantity_name"]');
+		return q && q.value ? q.value : '1';
+	}
+	function save(intent){
+		if (!meta) return;
+		try {
+			sessionStorage.setItem('onroad_pending_purchase', JSON.stringify({
+				no: meta.getAttribute('data-product-no') || '',
+				name: meta.getAttribute('data-product-name') || '',
+				image: meta.getAttribute('data-product-image') || '',
+				price: meta.getAttribute('data-product-price') || '',
+				qty: getQty(),
+				intent: intent,
+				ts: Date.now()
+			}));
+		} catch(e){}
+	}
+	document.addEventListener('click', function(e){
+		var btn = e.target.closest('[data-onroad-action]');
+		if (!btn) return;
+		save(btn.getAttribute('data-onroad-action'));
+	}, true);
+
+	/* Daily countdown for promo strip + hero urgency timer. Resets at local midnight. */
+	function pad(n){ return n < 10 ? '0' + n : '' + n; }
+	function tickPromo(){
+		var now = new Date();
+		var end = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 0, 0, 0);
+		var d = Math.max(0, Math.floor((end - now) / 1000));
+		var hrs = Math.floor(d / 3600);
+		var mins = Math.floor((d % 3600) / 60);
+		var secs = d % 60;
+		var promo = document.getElementById('pdPromoCount');
+		if (promo) promo.textContent = pad(hrs) + ':' + pad(mins) + ':' + pad(secs);
+		var H = document.getElementById('pdHrH'), M = document.getElementById('pdHrM'), S = document.getElementById('pdHrS');
+		if (H) H.textContent = pad(hrs);
+		if (M) M.textContent = pad(mins);
+		if (S) S.textContent = pad(secs);
+	}
+	if (document.getElementById('pdPromoCount') || document.getElementById('pdHeroTimer')) {
+		tickPromo();
+		setInterval(tickPromo, 1000);
+	}
+
+	/* Sticky bottom buy bar — show after user scrolls past the in-page price block. */
+	var sticky = document.getElementById('pdSticky');
+	var hero = document.querySelector('.jg-product-detail-page .detailArea');
+	if (sticky && hero) {
+		var lastY = 0;
+		function onScroll(){
+			var y = window.scrollY || window.pageYOffset;
+			var trigger = hero.offsetTop + hero.offsetHeight * 0.55;
+			var docBottom = document.documentElement.scrollHeight - 200;
+			sticky.classList.toggle('is-on', y > trigger && (y + window.innerHeight) < docBottom);
+			lastY = y;
+		}
+		window.addEventListener('scroll', onScroll, { passive: true });
+		onScroll();
+	}
+
+	/* Tab nav: smooth-scroll to anchored sections + visual active state. */
+	var tabs = document.querySelectorAll('.pd-tabs .pd-tab');
+	if (tabs.length) {
+		tabs.forEach(function(t){
+			t.addEventListener('click', function(e){
+				e.preventDefault();
+				var id = t.getAttribute('data-tab-target');
+				var el = id ? document.getElementById(id) : null;
+				if (!el) return;
+				tabs.forEach(function(x){ x.classList.toggle('is-active', x === t); });
+				var hdr = document.querySelector('.site-header');
+				var offset = (hdr ? hdr.offsetHeight : 72) + 16;
+				var top = el.getBoundingClientRect().top + window.pageYOffset - offset;
+				window.scrollTo({ top: top, behavior: 'smooth' });
+			});
+		});
+
+		/* Sync active tab to current scroll position. */
+		var sections = Array.prototype.map.call(tabs, function(t){
+			var id = t.getAttribute('data-tab-target');
+			return id ? document.getElementById(id) : null;
+		}).filter(Boolean);
+		function updateActiveTab(){
+			var probe = window.scrollY + 200;
+			var active = -1;
+			for (var i = 0; i < sections.length; i++) {
+				if (sections[i].offsetTop <= probe) active = i;
+			}
+			tabs.forEach(function(x, i){ x.classList.toggle('is-active', i === active); });
+		}
+		window.addEventListener('scroll', updateActiveTab, { passive: true });
+		updateActiveTab();
+	}
 })();
 </script>
 <!--@define(cmc_log)-->
