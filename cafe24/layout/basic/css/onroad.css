@@ -2041,12 +2041,21 @@ body.onroad-page #wrap { overflow-x: clip; overflow-y: visible; }
     .onroad-page:has(.pd-promo) #wrap { padding-top: 30px; }
 }
 
-/* pd-grid — 2-column grid: .pd-media (urgency + imgArea stacked) | .infoArea.
-   pd-media 래퍼가 좌측을 단일 셀로 만들어 infoArea가 row를 span하지 않게 함.
-   이전엔 grid-template-areas로 info가 2행을 span해서 grid가 row 1·2를
-   info 높이에 맞춰 늘렸고 결과적으로 urgency↔image 사이에 ~110px 빈 공간.
-   !important는 카페24 기본 .detailArea / .imgArea / .infoArea stacked 룰
-   극복용. */
+/* pd-grid — defensive 2-state layout.
+   라이브 HTML이 .pd-media 래퍼를 가졌는지(new) 안 가졌는지(old)에 따라
+   분기 처리. 어느 상태든 urgency↔image 직접 붙음.
+   ---
+   왜 분기가 필요한가:
+   - 옛 HTML: .pd-grid > [.pd-urgency, .imgArea, .infoArea] 직접 자식 3개.
+     grid-template-areas로 info가 2행 span. info 높이가 urgency+image
+     합보다 크면 grid가 row 1·2를 늘려 110px 갭이 생김.
+   - 새 HTML: .pd-grid > [.pd-media[.pd-urgency + .imgArea], .infoArea].
+     좌측이 단일 셀이므로 row span 문제 없음.
+   ---
+   :has() / :not(:has()) 분기로 두 상태 모두 커버 → FTP 업로드 타이밍에
+   상관없이 즉시 효과. */
+
+/* ===== 공통: 2-column grid ===== */
 body.onroad-page .jg-product-detail-page .detailArea.pd-grid {
     display: grid !important;
     grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr) !important;
@@ -2054,34 +2063,83 @@ body.onroad-page .jg-product-detail-page .detailArea.pd-grid {
     align-items: start !important;
     padding: var(--s-8) 0 var(--s-16) !important;
 }
+
+/* ===== STATE A: 새 HTML (.pd-media 래퍼 있음) — 단순 2-column ===== */
+body.onroad-page .jg-product-detail-page .detailArea.pd-grid:has(> .pd-media) {
+    grid-template-areas: none !important;
+    grid-template-rows: auto !important;
+    row-gap: 0 !important;
+}
 body.onroad-page .jg-product-detail-page .detailArea.pd-grid > .pd-media {
     grid-column: 1 !important;
-    display: block !important;      /* urgency + imgArea가 자연스럽게 위아래로 쌓임 */
-}
-body.onroad-page .jg-product-detail-page .detailArea.pd-grid > .pd-media > .pd-urgency {
+    display: block !important;
     margin: 0 !important;
+}
+body.onroad-page .pd-media > .pd-urgency,
+body.onroad-page .pd-media > .imgArea {
+    margin: 0 !important;
+}
+body.onroad-page .pd-media > .pd-urgency {
     border-bottom: 0 !important;    /* image 윗변과 매끄럽게 이어지도록 */
 }
-body.onroad-page .jg-product-detail-page .detailArea.pd-grid > .pd-media > .imgArea {
-    margin: 0 !important;
-}
-body.onroad-page .jg-product-detail-page .detailArea.pd-grid > .infoArea {
+body.onroad-page .jg-product-detail-page .detailArea.pd-grid:has(> .pd-media) > .infoArea {
     grid-column: 2 !important;
     align-self: start !important;
 }
+
+/* ===== STATE B: 옛 HTML (.pd-media 없음, urgency/imgArea 직접 자식) =====
+   기존 grid-template-areas 유지. info span으로 row 1·2가 늘어나는 건
+   바꿀 수 없으니 (info 자체 높이가 forcing factor),
+   대신 urgency를 row 1의 BOTTOM으로 정렬해 image top과 직접 만나게 함.
+   align-self: end가 핵심. row-gap 0과 결합해 urgency.bottom = image.top. */
+body.onroad-page .jg-product-detail-page .detailArea.pd-grid:not(:has(> .pd-media)) {
+    grid-template-rows: auto auto !important;
+    grid-template-areas:
+        "urgency info"
+        "image   info" !important;
+    row-gap: 0 !important;
+}
+body.onroad-page .jg-product-detail-page .detailArea.pd-grid:not(:has(> .pd-media)) > .pd-urgency {
+    grid-area: urgency !important;
+    align-self: end !important;     /* ← row 1 하단으로 정렬해서 image와 만남 */
+    margin: 0 !important;
+    border-bottom: 0 !important;
+}
+body.onroad-page .jg-product-detail-page .detailArea.pd-grid:not(:has(> .pd-media)) > .imgArea {
+    grid-area: image !important;
+    align-self: start !important;   /* row 2 상단 (default 유지, 명시) */
+    margin-top: 0 !important;
+}
+body.onroad-page .jg-product-detail-page .detailArea.pd-grid:not(:has(> .pd-media)) > .infoArea {
+    grid-area: info !important;
+    align-self: start !important;
+}
+
+/* ===== 모바일 ≤920px — 단일 컬럼 ===== */
 @media (max-width: 920px) {
     body.onroad-page .jg-product-detail-page .detailArea.pd-grid {
         grid-template-columns: 1fr !important;
         row-gap: 0 !important;
     }
-    body.onroad-page .jg-product-detail-page .detailArea.pd-grid > .pd-media {
+    /* STATE A 모바일 */
+    body.onroad-page .jg-product-detail-page .detailArea.pd-grid:has(> .pd-media) > .pd-media {
         grid-column: 1 !important;
     }
-    body.onroad-page .jg-product-detail-page .detailArea.pd-grid > .pd-media > .imgArea {
+    body.onroad-page .jg-product-detail-page .detailArea.pd-grid:has(> .pd-media) > .infoArea {
+        grid-column: 1 !important;
+        margin-top: var(--s-5) !important;
+    }
+    /* STATE B 모바일 — single column으로 자연 stack, urgency align-self는 무의미 */
+    body.onroad-page .jg-product-detail-page .detailArea.pd-grid:not(:has(> .pd-media)) {
+        grid-template-areas: "urgency" "image" "info" !important;
+    }
+    body.onroad-page .jg-product-detail-page .detailArea.pd-grid:not(:has(> .pd-media)) > .pd-urgency {
+        align-self: stretch !important;   /* 모바일에선 단일 컬럼이라 align 무의미하나 명시 */
+    }
+    body.onroad-page .jg-product-detail-page .detailArea.pd-grid > .imgArea {
         position: relative !important; top: auto !important;
     }
-    body.onroad-page .jg-product-detail-page .detailArea.pd-grid > .infoArea {
-        grid-column: 1 !important;
+    body.onroad-page .jg-product-detail-page .detailArea.pd-grid:not(:has(> .pd-media)) > .infoArea {
         margin-top: var(--s-5) !important;
     }
 }
