@@ -125,9 +125,10 @@ body.onroad-page #wrap { overflow-x: clip; overflow-y: visible; }
   z-index: 50;
   background: transparent;
   color: var(--c-cream);
-  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, backdrop-filter 0.4s ease;
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, backdrop-filter 0.4s ease, transform 0.32s cubic-bezier(.22,.61,.36,1);
   border-bottom: 1px solid transparent;
 }
+.onroad-page .site-header.is-hidden-top { transform: translateY(-100%); }
 .onroad-page.site-header.is-scrolled,
 .onroad-page .site-header.is-scrolled {
   background: rgba(15,13,11,0.82);
@@ -1240,7 +1241,8 @@ body.onroad-page #wrap { overflow-x: clip; overflow-y: visible; }
 .onroad-journal .jr-hero__crest { font-family: var(--font-mono); font-size: 11px; color: rgba(244,239,230,0.6); letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: var(--s-10); display: flex; align-items: center; gap: var(--s-4); }
 .onroad-journal .jr-hero__crest::before { content: ""; width: 6px; height: 6px; background: var(--c-signal); }
 .onroad-journal .jr-hero__crest em { font-style: normal; color: rgba(244,239,230,0.4); }
-.onroad-journal .jr-hero__title { font-family: var(--font-serif); font-weight: 300; font-size: clamp(56px, 10vw, 160px); line-height: 0.92; letter-spacing: -0.03em; margin: 0 0 var(--s-10); max-width: 14ch; font-variation-settings: "opsz" 144; color: var(--c-cream); }
+.onroad-journal .jr-hero__title { font-family: var(--font-serif); font-weight: 300; font-size: clamp(36px, 9vw, 160px); line-height: 1.0; letter-spacing: -0.03em; margin: 0 0 var(--s-10); max-width: 14ch; font-variation-settings: "opsz" 144; color: var(--c-cream); word-break: keep-all; }
+@media (max-width: 720px) { .onroad-journal .jr-hero__title { max-width: none; } }
 .onroad-journal .jr-hero__title .italic { font-style: italic; color: var(--c-signal); font-variation-settings: "opsz" 144, "SOFT" 100; }
 .onroad-journal .jr-hero__sub { max-width: 56ch; color: rgba(244,239,230,0.7); font-size: 17px; line-height: 1.6; font-family: var(--font-serif); font-weight: 300; font-variation-settings: "opsz" 20; }
 .onroad-journal .jr-hero__meta { margin-top: var(--s-10); display: grid; grid-template-columns: repeat(4, auto); gap: var(--s-8); padding-top: var(--s-5); border-top: 1px solid rgba(244,239,230,0.14); font-family: var(--font-mono); font-size: 11px; color: rgba(244,239,230,0.6); letter-spacing: 0.12em; text-transform: uppercase; }
@@ -1303,7 +1305,8 @@ body.onroad-page #wrap { overflow-x: clip; overflow-y: visible; }
 .onroad-runners .rn-hero__crest { font-family: var(--font-mono); font-size: 11px; color: rgba(244,239,230,0.6); letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: var(--s-10); display: flex; align-items: center; gap: var(--s-4); }
 .onroad-runners .rn-hero__crest::before { content: ""; width: 6px; height: 6px; background: var(--c-signal); }
 .onroad-runners .rn-hero__crest em { font-style: normal; color: rgba(244,239,230,0.4); }
-.onroad-runners .rn-hero__title { font-family: var(--font-serif); font-weight: 300; font-size: clamp(56px, 10vw, 160px); line-height: 0.92; letter-spacing: -0.03em; margin: 0 0 var(--s-10); max-width: 14ch; font-variation-settings: "opsz" 144; color: var(--c-cream); }
+.onroad-runners .rn-hero__title { font-family: var(--font-serif); font-weight: 300; font-size: clamp(36px, 9vw, 160px); line-height: 1.0; letter-spacing: -0.03em; margin: 0 0 var(--s-10); max-width: 14ch; font-variation-settings: "opsz" 144; color: var(--c-cream); word-break: keep-all; }
+@media (max-width: 720px) { .onroad-runners .rn-hero__title { max-width: none; } }
 .onroad-runners .rn-hero__title .italic { font-style: italic; color: var(--c-signal); font-variation-settings: "opsz" 144, "SOFT" 100; }
 .onroad-runners .rn-hero__sub { max-width: 56ch; color: rgba(244,239,230,0.7); font-size: 17px; line-height: 1.6; font-family: var(--font-serif); font-weight: 300; font-variation-settings: "opsz" 20; }
 

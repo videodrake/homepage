@@ -32,6 +32,10 @@
     var bottle = document.getElementById('showcaseBottle');
 
     var pdInfoArea = document.querySelector('.jg-product-detail-page .infoArea');
+
+    // Smart-header: hide on scroll-down past threshold, reveal on scroll-up, always show near top
+    var lastScrollY = 0;
+    var smartHeaderThreshold = 80;
     var pdAdditional = document.querySelector('.jg-product-additional-page');
     var pdReview = document.querySelector('.pd-flow--review') || document.getElementById('prdReview') || document.getElementById('review');
     var pdQnA = document.querySelector('.pd-flow--qna') || document.getElementById('prdQnA') || document.getElementById('qna');
@@ -74,6 +78,19 @@
       if (bar) bar.style.width = (p * 100) + '%';
 
       if (header) header.classList.toggle('is-scrolled', y > 40);
+
+      // Smart-header slide
+      if (header) {
+        var dy = y - lastScrollY;
+        if (y < smartHeaderThreshold) {
+          header.classList.remove('is-hidden-top');
+        } else if (dy > 4) {
+          header.classList.add('is-hidden-top');
+        } else if (dy < -4) {
+          header.classList.remove('is-hidden-top');
+        }
+        lastScrollY = y;
+      }
 
       if (header && lightSections.length) {
         var probe = y + header.offsetHeight + 20;
