@@ -1,5 +1,5 @@
 <!--@layout(/layout/basic/layout.html)-->
-<div class="section path">
+<div class="section path jg-auth-path">
     <span>현재 위치</span>
     <ol>
         <li><a href="/">홈</a></li>
@@ -21,10 +21,9 @@
 
 <div class="section jg-sub-brief jg-join-brief jg-join-result-brief">
     <strong>계정 생성이 완료되었습니다</strong>
-    <p>가입 정보와 안내 사항을 확인한 뒤 로그인하거나 쇼핑을 계속 진행할 수 있습니다.</p>
+    <p>이제 로그인해서 주문 내역과 찜한 제품을 한 곳에서 관리할 수 있습니다.</p>
     <div class="jg-page-links">
         <a href="/member/login.html">로그인하기</a>
-        <a href="/product/detail.html?product_no=11">제품 보러가기</a>
     </div>
 </div>
 
@@ -40,7 +39,7 @@
             <p><strong>{$member_name} 님</strong>은 <strong>[{$group_name}]</strong> 회원이십니다.</p>
             <ul>
             	<li class="{$display_no_benefit|display}"><strong>{$dc_pay} {$dc_min_price}</strong> 구매시 <strong class="price">{$dc_price}{$dc_type}</strong>을 {$use_dc} 받으실 수 있습니다. {$dc_max_percent}</li>
-                <li class="{$display_with_all|display}"><strong>{$dc_pay} {$dc_min_price_mileage}</strong> 구매시 <spstrongan class="price">{$dc_price_mileage}{$dc_type_mileage}</strong>을 {$use_dc_mileage} 받으실 수 있습니다. {$dc_max_mileage_percent}</li>
+                <li class="{$display_with_all|display}"><strong>{$dc_pay} {$dc_min_price_mileage}</strong> 구매시 <strong class="price">{$dc_price_mileage}{$dc_type_mileage}</strong>을 {$use_dc_mileage} 받으실 수 있습니다. {$dc_max_mileage_percent}</li>
             </ul>
         </div>
         <div class="ec-base-box typeMember gMessage">
@@ -60,7 +59,7 @@
         </p>
     </div>
     <div class="ec-base-button gBottom">
-        <a href="{$redirect_function}" class="btnNormalFix sizeM">메인으로 이동</a>
+        <a href="/product/detail.html?product_no=11" class="btnNormalFix sizeM">제품 보러가기</a>
         <a href="/member/login.html" class="btnSubmitFix sizeM {$display_login_chk|display}">로그인</a>
     </div>
 </div>
