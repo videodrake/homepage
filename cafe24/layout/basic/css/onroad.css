@@ -2041,43 +2041,47 @@ body.onroad-page #wrap { overflow-x: clip; overflow-y: visible; }
     .onroad-page:has(.pd-promo) #wrap { padding-top: 30px; }
 }
 
-/* pd-grid — overrides detailArea grid to slot urgency above imgArea, infoArea spans rows.
-   !important is required because cafe24 emits stacked rules for .imgArea / .infoArea
-   that previously stole grid placement and flipped the columns. */
+/* pd-grid — 2-column grid: .pd-media (urgency + imgArea stacked) | .infoArea.
+   pd-media 래퍼가 좌측을 단일 셀로 만들어 infoArea가 row를 span하지 않게 함.
+   이전엔 grid-template-areas로 info가 2행을 span해서 grid가 row 1·2를
+   info 높이에 맞춰 늘렸고 결과적으로 urgency↔image 사이에 ~110px 빈 공간.
+   !important는 카페24 기본 .detailArea / .imgArea / .infoArea stacked 룰
+   극복용. */
 body.onroad-page .jg-product-detail-page .detailArea.pd-grid {
     display: grid !important;
     grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr) !important;
-    grid-template-rows: auto auto !important;
-    grid-template-areas:
-        "urgency info"
-        "image   info" !important;
     column-gap: clamp(40px, 5vw, 96px) !important;
-    row-gap: 0 !important;          /* urgency 박스와 imgArea를 직접 붙임 */
     align-items: start !important;
     padding: var(--s-8) 0 var(--s-16) !important;
 }
-body.onroad-page .jg-product-detail-page .detailArea.pd-grid > .pd-urgency {
-    grid-area: urgency !important;
-    margin-bottom: 0 !important;
-    border-bottom: 0 !important;    /* image 윗변과 매끄럽게 이어지도록 dark 박스 하단선 제거 */
+body.onroad-page .jg-product-detail-page .detailArea.pd-grid > .pd-media {
+    grid-column: 1 !important;
+    display: block !important;      /* urgency + imgArea가 자연스럽게 위아래로 쌓임 */
 }
-body.onroad-page .jg-product-detail-page .detailArea.pd-grid > .imgArea {
-    grid-area: image !important;
-    margin-top: 0 !important;
+body.onroad-page .jg-product-detail-page .detailArea.pd-grid > .pd-media > .pd-urgency {
+    margin: 0 !important;
+    border-bottom: 0 !important;    /* image 윗변과 매끄럽게 이어지도록 */
+}
+body.onroad-page .jg-product-detail-page .detailArea.pd-grid > .pd-media > .imgArea {
+    margin: 0 !important;
 }
 body.onroad-page .jg-product-detail-page .detailArea.pd-grid > .infoArea {
-    grid-area: info !important;
+    grid-column: 2 !important;
+    align-self: start !important;
 }
 @media (max-width: 920px) {
     body.onroad-page .jg-product-detail-page .detailArea.pd-grid {
         grid-template-columns: 1fr !important;
-        grid-template-areas: "urgency" "image" "info" !important;
-        row-gap: 0 !important;      /* urgency↔image 붙임. info와의 간격은 아래 margin-top으로 보존 */
+        row-gap: 0 !important;
     }
-    body.onroad-page .jg-product-detail-page .detailArea.pd-grid > .imgArea {
+    body.onroad-page .jg-product-detail-page .detailArea.pd-grid > .pd-media {
+        grid-column: 1 !important;
+    }
+    body.onroad-page .jg-product-detail-page .detailArea.pd-grid > .pd-media > .imgArea {
         position: relative !important; top: auto !important;
     }
     body.onroad-page .jg-product-detail-page .detailArea.pd-grid > .infoArea {
+        grid-column: 1 !important;
         margin-top: var(--s-5) !important;
     }
 }

@@ -33,9 +33,13 @@
     -->
      <div class="detailArea pd-grid">
 
-        <!-- ▼ Onroad: urgency panel sits in left column above the imgArea.
-             Grid-template-areas in CSS keeps imgArea / infoArea in their
-             original cafe24 positions so product modules render unchanged. -->
+        <!-- ▼ Onroad: urgency panel + imgArea live together in the left column.
+             Wrapping them in .pd-media keeps the left column as a SINGLE grid
+             cell so .infoArea (right column) doesn't span 2 rows and stretch
+             them, which previously injected ~110px of empty space between the
+             dark urgency box and the product photo on desktop.
+             module="product_image" attribute is preserved unchanged. -->
+        <div class="pd-media">
         <div class="pd-urgency" aria-hidden="true">
             <div class="pd-urgency__row">
                 <span><b>⚑</b> <em>오늘 할인 마감까지</em></span>
@@ -100,6 +104,8 @@
                 </div>
             </div>
         </div>
+        </div>
+        <!-- ▲ /pd-media -->
 
         <div class="infoArea" data-ez-role="ez-discount-tag">
             <div class="headingArea">
