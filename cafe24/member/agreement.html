@@ -1,129 +1,4 @@
 <!--@layout(/layout/basic/layout.html)-->
-<style>
-/* Agreement page — inline overrides (loaded last, guaranteed to win) */
-body.onroad-page .jg-agreement-page .agreeArea .title h3 input[type="checkbox"] {
-    appearance: none !important;
-    -webkit-appearance: none !important;
-    width: 20px !important;
-    height: 20px !important;
-    min-width: 20px !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    background: var(--c-cream) !important;
-    border: 1px solid var(--c-ink) !important;
-    border-radius: 0 !important;
-    cursor: pointer !important;
-    position: relative !important;
-    flex-shrink: 0 !important;
-    vertical-align: middle !important;
-    box-sizing: border-box !important;
-    transition: background-color .15s ease, border-color .15s ease !important;
-}
-body.onroad-page .jg-agreement-page .agreeArea .title h3 input[type="checkbox"]:checked {
-    background: var(--c-signal) url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3 7.2L5.7 10L11 4' stroke='%23f4efe6' stroke-width='2' stroke-linecap='square' stroke-linejoin='miter'/%3E%3C/svg%3E") center / 12px 12px no-repeat !important;
-    border-color: var(--c-signal) !important;
-}
-body.onroad-page .jg-agreement-page .agreeArea .additional li > input[type="checkbox"] {
-    appearance: none !important;
-    -webkit-appearance: none !important;
-    width: 16px !important;
-    height: 16px !important;
-    min-width: 16px !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    background: var(--c-cream) !important;
-    border: 1px solid var(--c-ink) !important;
-    border-radius: 0 !important;
-    cursor: pointer !important;
-    position: relative !important;
-    flex-shrink: 0 !important;
-}
-body.onroad-page .jg-agreement-page .agreeArea .additional li > input[type="checkbox"]:checked {
-    background: var(--c-signal) url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3 7.2L5.7 10L11 4' stroke='%23f4efe6' stroke-width='2' stroke-linecap='square' stroke-linejoin='miter'/%3E%3C/svg%3E") center / 10px 10px no-repeat !important;
-    border-color: var(--c-signal) !important;
-}
-body.onroad-page .jg-agreement-page .agreeArea .btnToggle,
-body.onroad-page .jg-agreement-page .agreeArea .icoArrowBottom {
-    width: 32px !important;
-    height: 32px !important;
-    min-width: 32px !important;
-    margin-left: auto !important;
-    padding: 0 !important;
-    border: 0 !important;
-    background: transparent !important;
-    background-image: none !important;
-    overflow: visible !important;
-    position: relative !important;
-    cursor: pointer !important;
-    flex-shrink: 0 !important;
-    justify-self: end !important;
-    font-size: 0 !important;
-    color: transparent !important;
-}
-body.onroad-page .jg-agreement-page .agreeArea .btnToggle::before,
-body.onroad-page .jg-agreement-page .agreeArea .icoArrowBottom::before {
-    content: none !important;
-    display: none !important;
-    background: none !important;
-    border: 0 !important;
-}
-body.onroad-page .jg-agreement-page .agreeArea .btnToggle::after,
-body.onroad-page .jg-agreement-page .agreeArea .icoArrowBottom::after {
-    content: "" !important;
-    position: absolute !important;
-    top: 9px !important;
-    left: 10px !important;
-    width: 10px !important;
-    height: 10px !important;
-    background: transparent !important;
-    border: 0 !important;
-    border-right: 1.5px solid var(--c-ink) !important;
-    border-bottom: 1.5px solid var(--c-ink) !important;
-    transform: rotate(45deg) !important;
-    transition: transform .18s ease, top .18s ease !important;
-    box-sizing: content-box !important;
-}
-body.onroad-page .jg-agreement-page .agreeAll {
-    display: flex !important;
-    align-items: center !important;
-    flex-wrap: wrap !important;
-    gap: var(--s-3) !important;
-    margin: 0 auto var(--s-3) !important;
-    max-width: var(--container) !important;
-    padding: var(--s-4) var(--s-5) !important;
-    border: 1px solid var(--c-ink) !important;
-    background: var(--c-cream) !important;
-    color: var(--c-ink) !important;
-    box-shadow: none !important;
-    position: relative !important;
-    grid-template-columns: none !important;
-}
-body.onroad-page .jg-agreement-page .agreeAll h3 {
-    display: none !important;
-}
-body.onroad-page .jg-agreement-page .agreeAll > p {
-    display: flex !important;
-    align-items: center !important;
-    gap: var(--s-3) !important;
-    margin: 0 !important;
-    flex: 1 1 auto !important;
-    min-width: 200px !important;
-    font-family: var(--font-sans) !important;
-    font-size: 14px !important;
-    font-weight: 500 !important;
-    color: var(--c-ink) !important;
-}
-body.onroad-page .jg-agreement-page .agreeAll .desc {
-    margin: 0 0 0 auto !important;
-    font-family: var(--font-sans) !important;
-    font-size: 12px !important;
-    color: var(--c-meta) !important;
-    letter-spacing: 0 !important;
-    line-height: 1.5 !important;
-    text-align: right !important;
-    flex: 0 1 auto !important;
-}
-</style>
 <div class="section path jg-auth-path">
     <span>현재 위치</span>
     <ol>
@@ -148,164 +23,93 @@ body.onroad-page .jg-agreement-page .agreeAll .desc {
 <div module="member_join" class="section jg-agreement-page">
     <!--@js(/js/module/member/join_agreement.js)-->
     <!--@css(/css/module/member/join_agreement.css)-->
-    <div class="agreeAll jg-agree-all">
+    <!--
+        $loginPageUrl = /member/login.html
+        $joinPageUrl = /member/join.html
+    -->
+
+    <div class="agreeAll">
+        <h3>전체 약관에 동의합니다.</h3>
         <div class="agreeAll__copy">
-            <span>약관 확인</span>
-            <strong>필수 약관을 확인하고 가입을 진행하세요.</strong>
-            <p class="desc">선택 동의는 가입 후에도 언제든지 변경할 수 있습니다.</p>
+            <strong>전체 약관에 모두 동의합니다.</strong>
+            <span>선택 항목 포함</span>
+            <p class="desc">필수와 선택 약관 모두에 동의하면 한 번에 가입할 수 있습니다.</p>
         </div>
-        <div class="agreeAll__control">
+        <p class="agreeAll__control">
             {$sAgreeAllChecked}
-            <label for="sAgreeAllChecked">
-                <strong>{$sAgreeAllMsgTitle}</strong>
-                <span>{$sAgreeAllMsgSubTitle}</span>
-            </label>
-        </div>
+            <label for="sAgreeAllChecked">전체 동의</label>
+        </p>
     </div>
+
     <div class="agreeInner">
         <div class="left">
-            <div class="agreeArea terms jg-agreement-required">
+            <div class="agreeArea on" id="agree_service_chk_box0">
                 <div class="title">
-                    <h3>{$form.agree_service_check}<label for="agree_service_check0" class="check">이용약관 동의 (필수)</label><i aria-hidden="true" class="icon icoArrowBottom btnToggle"></i></h3>
+                    <h3>{$form.agree_service_check}<label class="check" for="agree_service_check0">{$service_title}</label><a href="#none" class="btnToggle"><span class="icoArrowBottom">{$service_arrow_text}</span></a></h3>
                 </div>
-                <div class="contents">{$service_desc}</div>
+                <div class="contents">
+                    {$service_desc}
+                </div>
+            </div>
+            <div class="agreeArea on {$privacy_collection_terms_display|display}" id="agree_service_chk_box2">
+                <div class="title">
+                    <h3>{$form.agree_privacy_collection_terms_check}<label class="check" for="agree_privacy_collection_terms_check2">{$privacy_collection_terms_title}</label><a href="#none" class="btnToggle"><span class="icoArrowBottom">{$privacy_collection_terms_arrow_text}</span></a></h3>
+                </div>
+                <div class="contents">
+                    {$privacy_collection_terms_desc}
+                </div>
+            </div>
+            <div class="agreeArea on {$display_member_age|display}" id="agree_service_chk_box6">
+                <div class="title">
+                    <h3>{$form.agree_member_age_check}<label class="check" for="agree_member_age_check6">{$member_age_title}</label><a href="#none" class="btnToggle"><span class="icoArrowBottom">{$member_age_arrow_text}</span></a></h3>
+                </div>
+                <div class="contents">
+                    {$member_age_desc}
+                </div>
             </div>
         </div>
         <div class="right">
-            <div class="{$display_privacy_agreement|display} agreeArea jg-agreement-required">
+            <div class="agreeArea on {$privacy_indication_terms_display|display}" id="agree_service_chk_box1">
                 <div class="title">
-                    <h3>{$form.agree_privacy_check}<label for="agree_privacy_check0" class="check">개인정보 수집 및 이용 동의 (필수)</label><i aria-hidden="true" class="icon icoArrowBottom btnToggle"></i></h3>
-                </div>
-                <div class="contents">{$privacy_desc}</div>
-            </div>
-            <div class="{$display_privacy_optional|display} agreeArea jg-agreement-optional">
-                <div class="title">
-                    <h3>{$form.agree_privacy_optional_check}<label for="agree_privacy_optional_check0" class="check">개인정보 수집 및 이용 동의 (선택)</label><i aria-hidden="true" class="icon icoArrowBottom btnToggle"></i></h3>
+                    <h3>{$form.agree_privacy_indication_terms_check}<label class="check" for="agree_privacy_indication_terms_check1">{$privacy_indication_terms_title}</label><a href="#none" class="btnToggle"><span class="icoArrowBottom">{$privacy_indication_terms_arrow_text}</span></a></h3>
                 </div>
                 <div class="contents">
-                    {$privacy_optional_desc}
+                    {$privacy_indication_terms_desc}
                 </div>
             </div>
-            <div class="{$display_information|display} agreeArea jg-agreement-optional">
+            <div class="agreeArea on {$privacy_third_party_terms_display|display}" id="agree_service_chk_box3">
                 <div class="title">
-                    <h3>{$form.agree_information_check}<label for="agree_information_check0" class="check">개인정보 제3자 제공 동의 (선택)</label><i aria-hidden="true" class="icon icoArrowBottom btnToggle"></i></h3>
-                </div>
-                <div class="contents">{$information_desc}</div>
-            </div>
-            <div class="{$display_consignment|display} agreeArea jg-agreement-optional">
-                <div class="title">
-                    <h3>{$form.agree_consignment_check}<label for="agree_consignment_check0" class="check">개인정보 처리 위탁 동의 (선택)</label><i aria-hidden="true" class="icon icoArrowBottom btnToggle"></i></h3>
-                </div>
-                <div class="contents">{$consignment_desc}</div>
-            </div>
-
-            <div class="{$display_user_defined_1|display} agreeArea">
-                <div class="title">
-                    <h3>{$form.check_user_defined_1}<label for="{$name_user_defined_1}" class="check">{$title_user_defined_1}</label><i aria-hidden="true" class="icon icoArrowBottom btnToggle"></i></h3>
+                    <h3>{$form.agree_privacy_third_party_terms_check}<label class="check" for="agree_privacy_third_party_terms_check3">{$privacy_third_party_terms_title}</label><a href="#none" class="btnToggle"><span class="icoArrowBottom">{$privacy_third_party_terms_arrow_text}</span></a></h3>
                 </div>
                 <div class="contents">
-                    <div class="fr-view fr-view-privacy-optional">{$desc_user_defined_1}</div>
+                    {$privacy_third_party_terms_desc}
                 </div>
             </div>
-            <div class="{$display_user_defined_2|display} agreeArea">
+            <div class="agreeArea on {$privacy_consignment_terms_display|display}" id="agree_service_chk_box4">
                 <div class="title">
-                    <h3>{$form.check_user_defined_2}<label for="{$name_user_defined_2}" class="check">{$title_user_defined_2}</label><i aria-hidden="true" class="icon icoArrowBottom btnToggle"></i></h3>
+                    <h3>{$form.agree_privacy_consignment_terms_check}<label class="check" for="agree_privacy_consignment_terms_check4">{$privacy_consignment_terms_title}</label><a href="#none" class="btnToggle"><span class="icoArrowBottom">{$privacy_consignment_terms_arrow_text}</span></a></h3>
                 </div>
                 <div class="contents">
-                    <div class="fr-view fr-view-privacy-optional">{$desc_user_defined_2}</div>
+                    {$privacy_consignment_terms_desc}
                 </div>
             </div>
-            <div class="{$display_user_defined_3|display} agreeArea">
+            <div class="agreeArea on {$marketing_terms_display|display}" id="agree_service_chk_box5">
                 <div class="title">
-                    <h3>{$form.check_user_defined_3}<label for="{$name_user_defined_3}" class="check">{$title_user_defined_3}</label><i aria-hidden="true" class="icon icoArrowBottom btnToggle"></i></h3>
+                    <h3>{$form.agree_marketing_terms_check}<label class="check" for="agree_marketing_terms_check5">{$marketing_terms_title}</label><a href="#none" class="btnToggle"><span class="icoArrowBottom">{$marketing_terms_arrow_text}</span></a></h3>
                 </div>
                 <div class="contents">
-                    <div class="fr-view fr-view-privacy-optional">{$desc_user_defined_3}</div>
+                    {$marketing_terms_desc}
                 </div>
-            </div>
-            <div class="{$display_user_defined_4|display} agreeArea">
-                <div class="title">
-                    <h3>{$form.check_user_defined_4}<label for="{$name_user_defined_4}" class="check">{$title_user_defined_4}</label><i aria-hidden="true" class="icon icoArrowBottom btnToggle"></i></h3>
-                </div>
-                <div class="contents">
-                    <div class="fr-view fr-view-privacy-optional">{$desc_user_defined_4}</div>
-                </div>
-            </div>
-            <div class="{$display_user_defined_5|display} agreeArea">
-                <div class="title">
-                    <h3>{$form.check_user_defined_5}<label for="{$name_user_defined_5}" class="check">{$title_user_defined_5}</label><i aria-hidden="true" class="icon icoArrowBottom btnToggle"></i></h3>
-                </div>
-                <div class="contents">
-                    <div class="fr-view fr-view-privacy-optional">{$desc_user_defined_5}</div>
-                </div>
-            </div>
-            <div class="{$display_user_defined_6|display} agreeArea">
-                <div class="title">
-                    <h3>{$form.check_user_defined_6}<label for="{$name_user_defined_6}" class="check">{$title_user_defined_6}</label><i aria-hidden="true" class="icon icoArrowBottom btnToggle"></i></h3>
-                </div>
-                <div class="contents">
-                    <div class="fr-view fr-view-privacy-optional">{$desc_user_defined_6}</div>
-                </div>
-            </div>
-            <div class="{$display_user_defined_7|display} agreeArea">
-                <div class="title">
-                    <h3>{$form.check_user_defined_7}<label for="{$name_user_defined_7}" class="check">{$title_user_defined_7}</label><i aria-hidden="true" class="icon icoArrowBottom btnToggle"></i></h3>
-                </div>
-                <div class="contents">
-                    <div class="fr-view fr-view-privacy-optional">{$desc_user_defined_7}</div>
-                </div>
-            </div>
-            <div class="{$display_user_defined_8|display} agreeArea">
-                <div class="title">
-                    <h3>{$form.check_user_defined_8}<label for="{$name_user_defined_8}" class="check">{$title_user_defined_8}</label><i aria-hidden="true" class="icon icoArrowBottom btnToggle"></i></h3>
-                </div>
-                <div class="contents">
-                    <div class="fr-view fr-view-privacy-optional">{$desc_user_defined_8}</div>
-                </div>
-            </div>
-            <div class="{$display_user_defined_9|display} agreeArea">
-                <div class="title">
-                    <h3>{$form.check_user_defined_9}<label for="{$name_user_defined_9}" class="check">{$title_user_defined_9}</label><i aria-hidden="true" class="icon icoArrowBottom btnToggle"></i></h3>
-                </div>
-                <div class="contents">
-                    <div class="fr-view fr-view-privacy-optional">{$desc_user_defined_9}</div>
-                </div>
-            </div>
-            <div class="{$display_user_defined_10|display} agreeArea">
-                <div class="title">
-                    <h3>{$form.check_user_defined_10}<label for="{$name_user_defined_10}" class="check">{$title_user_defined_10}</label><i aria-hidden="true" class="icon icoArrowBottom btnToggle"></i></h3>
-                </div>
-                <div class="contents">
-                    <div class="fr-view fr-view-privacy-optional">{$desc_user_defined_10}</div>
-                </div>
-            </div>
-            <div class="{$display_marketing_consent|display} agreeArea jg-agreement-optional">
-                <div class="title">
-                    <h3>{$form.marketing_consent_check}<label for="marketing_consent_check0">동의함</label><label for="marketing_consent_check0" class="check">{$title_marketing_consent}</label><i aria-hidden="true" class="icon icoArrowBottom btnToggle"></i></h3>
-                </div>
-                <div class="contents">
-                    <div class="fr-view fr-view-privacy-optional">{$desc_marketing_consent}</div>
-                </div>
-            </div>
-
-            <div class="agreeArea {$display_marketing|display} jg-agreement-optional">
-                <div class="title">
-                    <h3>{$sMarketingAgreeAllChecked}<label for="sMarketingAgreeAllChecked" class="check">쇼핑정보 수신 동의 (선택)</label><i aria-hidden="true" class="icon icoArrowBottom btnToggle"></i></h3>
-                    <ul class="additional">
-                        <li class="{$display_is_sms|display}">{$form.is_sms}<label for="is_sms0" class="check">모바일 메시지 수신 동의 (선택)</label></li>
-                        <li class="{$display_is_news_mail|display}">{$form.is_news_mail}<label for="is_news_mail0" class="check">이메일 수신 동의 (선택)</label></li>
-                    </ul>
-                </div>
-                <div class="contents">
-                    <p>할인쿠폰 및 혜택, 이벤트, 제품 소식 등 쇼핑몰에서 제공하는 유익한 쇼핑정보를 모바일 메시지나 이메일로 받아보실 수 있습니다. 단, 주문/거래 정보 및 주요 정책과 관련된 내용은 수신동의 여부와 관계없이 발송됩니다.</p>
-                    <p>선택 약관에 동의하지 않으셔도 회원가입은 가능하며, 회원가입 후 회원정보수정 페이지에서 언제든지 수신여부를 변경하실 수 있습니다.</p>
-                </div>
+                <ul class="additional {$marketing_terms_display|display}">
+                    <li>{$form.agree_marketing_sms} <label class="check" for="agree_marketing_sms">{$marketing_sms_text}</label></li>
+                    <li>{$form.agree_marketing_email} <label class="check" for="agree_marketing_email">{$marketing_email_text}</label></li>
+                </ul>
             </div>
         </div>
-    </div><!-- //agreeInner -->
+    </div>
 
     <div class="ec-base-button gBottom">
-        <a href="/member/login.html" class="btnNormalFix sizeM">로그인</a>
-        <button type="button" class="btnSubmitFix sizeM" onclick="checkAgreement('/member/join.html');">다음</button>
+        <a href="/member/login.html" class="btnNormalFix sizeL">취소</a>
+        <a href="#none" class="btnSubmitFix sizeL" onclick="{$agreementSubmit}">다음</a>
     </div>
 </div>

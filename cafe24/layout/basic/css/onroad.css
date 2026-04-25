@@ -2479,21 +2479,188 @@ body#userStyle .resultArea .message { background: var(--c-paper); border: 1px so
 body#userStyle .resultArea .message strong { font-family: var(--font-serif); font-weight: 300; font-size: clamp(36px, 4vw, 56px); line-height: 1.2; color: var(--c-ink); display: block; letter-spacing: -0.02em; }
 body#userStyle .resultArea { margin-bottom: var(--s-10); }
 
-/* ---------- Agreement page ---------- */
-.onroad-page .jg-agreement-page { max-width: 980px; margin: 0 auto var(--s-16); padding: 0 var(--s-8); }
-.onroad-page .jg-agreement-page .agreeAll { background: var(--c-ink); color: var(--c-cream); padding: var(--s-6) var(--s-8); margin-bottom: var(--s-6); }
-.onroad-page .jg-agreement-page .agreeAll h3 { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--c-cream); margin: 0 0 var(--s-2); font-weight: 500; }
-.onroad-page .jg-agreement-page .agreeAll label strong { color: var(--c-cream); font-family: var(--font-serif); font-weight: 400; font-size: 18px; }
-.onroad-page .jg-agreement-page .agreeAll .desc { color: var(--c-cream); opacity: .7; font-size: 13px; margin: var(--s-2) 0 0; }
-.onroad-page .jg-agreement-page .agreeInner { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--s-6); }
-.onroad-page .jg-agreement-page .agreeArea { background: var(--c-paper); border: 1px solid var(--c-line); margin-bottom: var(--s-4); }
-.onroad-page .jg-agreement-page .agreeArea .title { padding: var(--s-4) var(--s-5); border-bottom: 1px solid var(--c-line); background: transparent; }
-.onroad-page .jg-agreement-page .agreeArea .title h3 { font-family: var(--font-serif); font-weight: 400; font-size: 17px; color: var(--c-ink); margin: 0; display: flex; align-items: center; gap: var(--s-2); }
-.onroad-page .jg-agreement-page .agreeArea .title .check { font-family: var(--font-sans); font-size: 14px; color: var(--c-text); font-weight: 400; cursor: pointer; }
+/* ---------- Agreement page — unified consent UI ----------
+   Single source of truth for the signup-agreement screen. */
+.onroad-page .jg-agreement-page { max-width: 1100px; margin: 0 auto var(--s-16); padding: 0 var(--s-8); }
+
+.onroad-page .jg-agreement-page input[type="checkbox"] {
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    width: 20px !important;
+    height: 20px !important;
+    min-width: 20px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: var(--c-paper) !important;
+    border: 1px solid var(--c-ink) !important;
+    border-radius: 0 !important;
+    cursor: pointer !important;
+    position: relative !important;
+    z-index: 2 !important;
+    pointer-events: auto !important;
+    flex-shrink: 0 !important;
+    vertical-align: middle !important;
+    box-sizing: border-box !important;
+    transition: background-color .15s ease, border-color .15s ease !important;
+}
+.onroad-page .jg-agreement-page input[type="checkbox"]:checked {
+    background: var(--c-signal) url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3 7.2L5.7 10L11 4' stroke='%23f4efe6' stroke-width='2' stroke-linecap='square' stroke-linejoin='miter'/%3E%3C/svg%3E") center / 12px 12px no-repeat !important;
+    border-color: var(--c-signal) !important;
+}
+
+.onroad-page .jg-agreement-page .agreeAll {
+    display: grid !important;
+    grid-template-columns: auto 1fr !important;
+    gap: var(--s-5) !important;
+    align-items: center !important;
+    margin: 0 auto var(--s-6) !important;
+    padding: var(--s-6) var(--s-7) !important;
+    background: var(--c-cream) !important;
+    color: var(--c-ink) !important;
+    border: 1px solid var(--c-ink) !important;
+    box-shadow: none !important;
+    position: relative !important;
+}
+.onroad-page .jg-agreement-page .agreeAll::before {
+    content: "모두 동의 · ALL CONSENT";
+    position: absolute;
+    top: 14px;
+    left: var(--s-7);
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    color: var(--c-signal);
+}
+.onroad-page .jg-agreement-page .agreeAll h3 { display: none !important; }
+.onroad-page .jg-agreement-page .agreeAll__control {
+    grid-column: 1;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding-top: var(--s-4);
+}
+.onroad-page .jg-agreement-page .agreeAll__control input[type="checkbox"] {
+    width: 24px !important;
+    height: 24px !important;
+    min-width: 24px !important;
+}
+.onroad-page .jg-agreement-page .agreeAll__control input[type="checkbox"]:checked {
+    background-size: 14px 14px !important;
+}
+.onroad-page .jg-agreement-page .agreeAll__control label { display: none !important; }
+.onroad-page .jg-agreement-page .agreeAll__copy {
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding-top: var(--s-4);
+}
+.onroad-page .jg-agreement-page .agreeAll__copy > span { display: none; }
+.onroad-page .jg-agreement-page .agreeAll__copy > strong {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: clamp(18px, 2vw, 22px);
+    color: var(--c-ink);
+    letter-spacing: -0.01em;
+}
+.onroad-page .jg-agreement-page .agreeAll__copy .desc {
+    font-family: var(--font-sans);
+    font-size: 13px;
+    color: var(--c-meta);
+    line-height: 1.6;
+    letter-spacing: 0;
+    margin: 0;
+}
+
+.onroad-page .jg-agreement-page .agreeInner { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--s-6); align-items: start; }
+.onroad-page .jg-agreement-page .left,
+.onroad-page .jg-agreement-page .right { display: flex; flex-direction: column; gap: var(--s-4); min-width: 0; }
+
+.onroad-page .jg-agreement-page .agreeArea { background: var(--c-paper); border: 1px solid var(--c-line); margin: 0; }
+.onroad-page .jg-agreement-page .agreeArea .title { padding: var(--s-4) var(--s-5); border-bottom: 1px solid var(--c-line); background: transparent; position: relative; }
+.onroad-page .jg-agreement-page .agreeArea .title h3 {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--c-ink);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: var(--s-3);
+}
+.onroad-page .jg-agreement-page .agreeArea .title .check {
+    font-family: var(--font-sans);
+    font-size: 14px;
+    color: var(--c-text);
+    font-weight: 400;
+    cursor: pointer;
+    display: inline-block !important;
+    flex: 1 1 auto;
+    min-width: 0;
+}
 .onroad-page .jg-agreement-page .agreeArea .contents { padding: var(--s-5); max-height: 240px; overflow-y: auto; font-size: 13px; line-height: 1.7; color: var(--c-text); background: var(--c-cream); }
 .onroad-page .jg-agreement-page .agreeArea .contents::-webkit-scrollbar { width: 6px; }
 .onroad-page .jg-agreement-page .agreeArea .contents::-webkit-scrollbar-thumb { background: var(--c-line); }
-.onroad-page .jg-agreement-page .agreeArea .btnToggle { margin-left: auto; color: var(--c-meta); cursor: pointer; }
+
+.onroad-page .jg-agreement-page .agreeArea .additional { display: flex; flex-wrap: wrap; gap: var(--s-4); margin: var(--s-3) 0 0; padding: 0 0 0 calc(20px + var(--s-3)); list-style: none; border: 0; }
+.onroad-page .jg-agreement-page .agreeArea .additional li { display: flex; align-items: center; gap: var(--s-2); margin: 0; }
+.onroad-page .jg-agreement-page .agreeArea .additional li > label.check { font-family: var(--font-sans); font-size: 13px; color: var(--c-text); letter-spacing: 0; text-transform: none; cursor: pointer; display: inline-block !important; }
+
+.onroad-page .jg-agreement-page .btnToggle,
+.onroad-page .jg-agreement-page .icoArrowBottom {
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+    margin-left: auto !important;
+    padding: 0 !important;
+    background: transparent !important;
+    background-image: none !important;
+    border: 0 !important;
+    position: relative !important;
+    overflow: visible !important;
+    font-size: 0 !important;
+    color: transparent !important;
+    cursor: pointer !important;
+    z-index: 1 !important;
+    flex-shrink: 0 !important;
+    justify-self: end !important;
+    box-sizing: border-box !important;
+    transform: none !important;
+}
+.onroad-page .jg-agreement-page .btnToggle::before,
+.onroad-page .jg-agreement-page .icoArrowBottom::before {
+    content: none !important;
+    display: none !important;
+    background: none !important;
+    border: 0 !important;
+    transform: none !important;
+}
+.onroad-page .jg-agreement-page .btnToggle::after,
+.onroad-page .jg-agreement-page .icoArrowBottom::after {
+    content: "" !important;
+    position: absolute !important;
+    top: 9px !important;
+    left: 10px !important;
+    width: 10px !important;
+    height: 10px !important;
+    background: transparent !important;
+    border: 0 !important;
+    border-right: 1.5px solid var(--c-ink) !important;
+    border-bottom: 1.5px solid var(--c-ink) !important;
+    transform: rotate(45deg) !important;
+    transition: transform .2s ease, top .2s ease !important;
+    box-sizing: content-box !important;
+}
+.onroad-page .jg-agreement-page .agreeArea.on .btnToggle,
+.onroad-page .jg-agreement-page .agreeArea.on .icoArrowBottom {
+    transform: none !important;
+}
+.onroad-page .jg-agreement-page .agreeArea.on .btnToggle::after,
+.onroad-page .jg-agreement-page .agreeArea.on .icoArrowBottom::after {
+    transform: rotate(-135deg) !important;
+    top: 13px !important;
+}
+
 .onroad-page .jg-agreement-page .ec-base-button.gBottom { margin-top: var(--s-10); display: flex; gap: var(--s-3); justify-content: center; padding-top: var(--s-6); border-top: 1px solid var(--c-line); }
 .onroad-page .jg-agreement-page .ec-base-button.gBottom .btnNormalFix,
 .onroad-page .jg-agreement-page .ec-base-button.gBottom .btnSubmitFix { min-width: 200px; min-height: 60px; font-size: 13px; }
@@ -2510,7 +2677,67 @@ body#userStyle .resultArea { margin-bottom: var(--s-10); }
 
 /* ---------- Login page ---------- */
 .onroad-page .jg-login-page { max-width: 480px; margin: 0 auto var(--s-10); padding: clamp(40px, 5vw, 64px); background: var(--c-cream); border: 1px solid var(--c-line); }
-.onroad-page .jg-login-guest { max-width: 480px; margin: var(--s-8) auto var(--s-16); padding: clamp(32px, 4vw, 48px); background: var(--c-paper); border: 1px solid var(--c-line); }
+
+/* Guest purchase button — ghost-ink with eyebrow */
+.onroad-page .login__button .jg-guest-purchase {
+    position: relative;
+    padding-top: 20px !important;
+    min-height: 60px !important;
+    background: transparent;
+    color: var(--c-ink);
+    border: 1px solid var(--c-ink);
+}
+.onroad-page .login__button .jg-guest-purchase::before {
+    content: "GUEST CHECKOUT";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    color: var(--c-signal);
+}
+.onroad-page .login__button .jg-guest-purchase:hover {
+    background: var(--c-ink);
+    color: var(--c-paper);
+    border-color: var(--c-ink);
+}
+.onroad-page .login__button .jg-guest-purchase:hover::before { color: var(--c-cream); }
+
+/* 비회원 주문조회 — cream paper card with mono eyebrow */
+.onroad-page .jg-login-guest {
+    max-width: 480px;
+    margin: var(--s-8) auto var(--s-16);
+    padding: clamp(36px, 4.5vw, 56px) clamp(32px, 4vw, 48px);
+    background: var(--c-paper);
+    border: 1px solid var(--c-line);
+    position: relative;
+}
+.onroad-page .jg-login-guest::before {
+    content: "GUEST ORDER LOOKUP";
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    color: var(--c-signal);
+    margin-bottom: var(--s-3);
+}
+.onroad-page .jg-login-guest .txt_nonmem_check {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: clamp(22px, 2.4vw, 28px);
+    color: var(--c-ink);
+    margin: 0 0 var(--s-5);
+    letter-spacing: -0.01em;
+}
+.onroad-page .jg-login-guest .form { display: flex; flex-direction: column; gap: var(--s-3); }
+.onroad-page .jg-login-guest .form > label,
+.onroad-page .jg-login-guest .form > p { margin: 0; }
+.onroad-page .jg-login-guest .login__button { margin-top: var(--s-4); }
+.onroad-page .jg-login-guest input[type="text"],
+.onroad-page .jg-login-guest input[type="password"] { width: 100%; }
 
 /* ---------- Redirect page helpers (noscript) ---------- */
 .onroad-page .jg-product-list-redirect { max-width: 680px; margin: clamp(80px, 10vw, 160px) auto; }
@@ -2682,6 +2909,72 @@ body#userStyle .resultArea { margin-bottom: var(--s-10); }
 /* ---------- Address list ---------- */
 .onroad-page .jg-addr-page .ec-base-table tbody td { font-family: var(--font-sans); font-size: 14px; color: var(--c-ink); line-height: 1.7; }
 
+/* ============================================================
+   STAGE 8.5 — MyShop sub-pages (Onroad tone polish)
+   Fills gaps in Stage 8 for Cafe24 system markup that only exists
+   on specific sub-pages: order filters, coupon serial, empty
+   states, center CTAs, info lists. Pure CSS — no HTML edits.
+   ============================================================ */
+
+/* Order history filter head */
+.onroad-page .myshopArea fieldset.form { display: grid; grid-template-columns: 1fr; gap: var(--s-3); margin: 0 0 var(--s-5); padding: clamp(20px, 2.4vw, 28px); background: var(--c-paper); border: 1px solid var(--c-line); }
+.onroad-page .myshopArea fieldset.form .stateSelect,
+.onroad-page .myshopArea fieldset.form .period,
+.onroad-page .myshopArea fieldset.form .date { display: flex; flex-wrap: wrap; gap: var(--s-2); align-items: center; }
+.onroad-page .myshopArea fieldset.form .period a.btnNormal { min-height: 38px; padding: 0 14px; font-size: 11px; }
+.onroad-page .myshopArea fieldset.form .period a.btnNormal.today,
+.onroad-page .myshopArea fieldset.form .period a.btnNormal.selected,
+.onroad-page .myshopArea fieldset.form .period a.btnNormal.on { background: var(--c-ink); color: var(--c-paper); border-color: var(--c-ink); }
+.onroad-page .myshopArea fieldset.form .date .datepicker input { max-width: 140px; }
+.onroad-page .myshopArea fieldset.form .date .btnSubmit { min-height: 38px; padding: 0 18px; }
+
+/* Info line lists */
+.onroad-page .myshopArea .txtList { list-style: none; margin: 0 0 var(--s-6); padding: var(--s-4) 0 var(--s-4) var(--s-5); border-left: 1px solid var(--c-line); font-family: var(--font-sans); font-size: 13px; color: var(--c-meta); line-height: 1.7; }
+.onroad-page .myshopArea .txtList li { margin: 0; }
+.onroad-page .myshopArea .txtList a { color: var(--c-ink); border-bottom: 1px solid var(--c-line); text-decoration: none; }
+.onroad-page .myshopArea .txtList a:hover { color: var(--c-signal); border-bottom-color: var(--c-signal); }
+
+/* Coupon code register form */
+.onroad-page .myshopArea .couponSerial { padding: clamp(24px, 3vw, 36px); background: var(--c-cream); border: 1px solid var(--c-line); margin: 0 0 var(--s-6); }
+.onroad-page .myshopArea .couponSerial fieldset { display: flex; flex-wrap: wrap; gap: var(--s-3); align-items: center; }
+.onroad-page .myshopArea .couponSerial fieldset > input[type="text"],
+.onroad-page .myshopArea .couponSerial fieldset > label > input[type="text"] { flex: 1 1 280px; }
+.onroad-page .myshopArea .couponSerial fieldset .btnSubmitFix { min-height: 48px; padding: 0 var(--s-5); }
+.onroad-page .myshopArea .couponSerial .txtInfo { flex: 1 1 100%; font-family: var(--font-sans); font-size: 12px; color: var(--c-meta); line-height: 1.6; margin: var(--s-2) 0 0; }
+
+/* Coupon list — card-style rows */
+.onroad-page .myshopArea .couponList .ec-base-table { border: 1px solid var(--c-line); background: var(--c-paper); }
+.onroad-page .myshopArea .couponList .ec-base-table tbody { border-top: 1px solid var(--c-line); }
+.onroad-page .myshopArea .couponList .ec-base-table tbody + tbody { border-top: 1px solid var(--c-line); }
+.onroad-page .myshopArea .couponList .ec-base-table .coupon_name { font-family: var(--font-serif); font-size: 16px; color: var(--c-ink); }
+.onroad-page .myshopArea .couponList .ec-base-table tbody .contents { background: var(--c-cream); }
+.onroad-page .myshopArea .couponList .ec-base-table tbody .contents ul { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--s-2) var(--s-5); }
+.onroad-page .myshopArea .couponList .ec-base-table tbody .contents li { display: flex; gap: var(--s-3); font-family: var(--font-sans); font-size: 13px; color: var(--c-text); }
+.onroad-page .myshopArea .couponList .ec-base-table tbody .contents li strong { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--c-meta); min-width: 100px; flex-shrink: 0; }
+
+/* Empty states */
+.onroad-page .myshopArea .ec-base-prdEmpty,
+.onroad-page .myshopArea .listNone,
+.onroad-page .myshopArea .empty { padding: clamp(56px, 7vw, 96px) var(--s-6); text-align: center; font-family: var(--font-sans); font-size: 14px; color: var(--c-meta); background: var(--c-cream); border: 1px dashed var(--c-line); position: relative; }
+.onroad-page .myshopArea .ec-base-prdEmpty::before { content: "EMPTY"; display: block; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.2em; color: var(--c-signal); margin-bottom: var(--s-3); }
+.onroad-page .myshopArea .ec-base-prdEmpty svg,
+.onroad-page .myshopArea .ec-base-prdEmpty img { max-width: 56px; height: auto; margin: 0 auto var(--s-3); display: block; opacity: 0.5; }
+
+/* Center-aligned button row */
+.onroad-page .myshopArea .ec-base-button.gCenter { display: flex; justify-content: center; gap: var(--s-3); margin: var(--s-6) 0; }
+.onroad-page .myshopArea .ec-base-button.gCenter button,
+.onroad-page .myshopArea .ec-base-button.gCenter a { min-height: 52px; padding: 0 clamp(28px, 3.5vw, 40px); font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; border: 1px solid var(--c-ink); background: var(--c-ink); color: var(--c-paper); cursor: pointer; display: inline-flex; align-items: center; justify-content: center; text-decoration: none; }
+.onroad-page .myshopArea .ec-base-button.gCenter button:hover,
+.onroad-page .myshopArea .ec-base-button.gCenter a:hover { background: var(--c-signal); border-color: var(--c-signal); color: var(--c-cream); }
+
+/* Tab/pagination/help in myshop context */
+.onroad-page .myshopArea .ec-base-tab .menu a { position: relative; }
+.onroad-page .myshopArea .ec-base-paginate { margin: var(--s-8) 0 var(--s-4); }
+.onroad-page .myshopArea .ec-base-help { background: var(--c-cream); border-left: 3px solid var(--c-signal); }
+
+/* Reduce visual weight of dashboard re-import */
+.onroad-page .myshopArea > #myshopMain { margin-top: var(--s-12); padding-top: var(--s-6); border-top: 1px solid var(--c-line); }
+
 /* ---------- Responsive (myshop) ---------- */
 @media (max-width: 920px) {
     .onroad-page .benefit,
@@ -2704,6 +2997,17 @@ body#userStyle .resultArea { margin-bottom: var(--s-10); }
 
 @media (max-width: 560px) {
     .onroad-page #myshopMain .menu { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 920px) {
+    .onroad-page .myshopArea fieldset.form .period { width: 100%; }
+    .onroad-page .myshopArea .couponList .ec-base-table tbody .contents ul { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 560px) {
+    .onroad-page .myshopArea fieldset.form { padding: var(--s-4); }
+    .onroad-page .myshopArea .couponSerial fieldset { flex-direction: column; align-items: stretch; }
+    .onroad-page .myshopArea .couponSerial fieldset .btnSubmitFix { width: 100%; }
 }
 
 /* ============================================================

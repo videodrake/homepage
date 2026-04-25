@@ -228,6 +228,25 @@
         });
       });
     }
+
+    // Guest purchase fallback: if Cafe24's {$action_nomember_order} rendered
+    // empty (admin "비회원 구매 허용" off, or placeholder never replaced by
+    // the skin engine), the button becomes a dead click. Route the user to
+    // the basket as a usable guest entry instead. If Cafe24 did populate the
+    // handler, we let it run first — this fallback only fires when neither
+    // onclick nor href has a real intent.
+    var guestBtn = document.querySelector('.jg-guest-purchase');
+    if (guestBtn) {
+      guestBtn.addEventListener('click', function (ev) {
+        var href = guestBtn.getAttribute('href') || '';
+        var onclickAttr = guestBtn.getAttribute('onclick') || '';
+        var hasOnclick = onclickAttr.trim() && !/^\{?\$/.test(onclickAttr.trim());
+        var hasHref = href && href !== '#' && href !== '#none' && !/^\{?\$/.test(href);
+        if (hasOnclick || hasHref) return;
+        ev.preventDefault();
+        window.location.href = '/order/basket.html';
+      });
+    }
   }
 
   if (document.readyState === 'loading') {
