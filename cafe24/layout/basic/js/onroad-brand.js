@@ -34,8 +34,12 @@
     var pdInfoArea = document.querySelector('.jg-product-detail-page .infoArea');
 
     // Smart-header: hide on scroll-down past threshold, reveal on scroll-up, always show near top
+    // Threshold raised from 80 → 200 and dy threshold from 4 → 18 so that
+    // small trackpad scroll wobbles don't constantly toggle the header,
+    // which felt like content shaking.
     var lastScrollY = 0;
-    var smartHeaderThreshold = 80;
+    var smartHeaderThreshold = 200;
+    var smartHeaderDy = 18;
     var pdAdditional = document.querySelector('.jg-product-additional-page');
     var pdReview = document.querySelector('.pd-flow--review') || document.getElementById('prdReview') || document.getElementById('review');
     var pdQnA = document.querySelector('.pd-flow--qna') || document.getElementById('prdQnA') || document.getElementById('qna');
@@ -84,9 +88,9 @@
         var dy = y - lastScrollY;
         if (y < smartHeaderThreshold) {
           header.classList.remove('is-hidden-top');
-        } else if (dy > 4) {
+        } else if (dy > smartHeaderDy) {
           header.classList.add('is-hidden-top');
-        } else if (dy < -4) {
+        } else if (dy < -smartHeaderDy) {
           header.classList.remove('is-hidden-top');
         }
         lastScrollY = y;

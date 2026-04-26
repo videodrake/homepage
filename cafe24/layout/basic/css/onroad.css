@@ -15655,32 +15655,64 @@ body.onroad-page .jg-join-page .email-input-group > select.email-domain-select {
     box-shadow: none !important;
 }
 
-/* Hero card */
+/* Hero card — borderless editorial card.
+   기존엔 박스 형태(검정 1px 보더 + cream bg)라 "form result" 같은 느낌
+   이었음. 사용자가 "박스 못생겼다" — 보더 다 빼고 얇은 signal 상단 strip
+   + cream → paper 그라데이션 + 회색 thin bottom rule로 jewel-box 톤. */
 #jgJoinResult#jgJoinResult .joinComplete {
+    position: relative !important;
     margin: 0 !important;
-    padding: clamp(40px, 5vw, 64px) clamp(28px, 4vw, 48px) !important;
-    border: 1px solid var(--c-ink) !important;
-    background: var(--c-cream) !important;
+    padding: clamp(56px, 7vw, 96px) clamp(28px, 4vw, 56px) clamp(40px, 5vw, 56px) !important;
+    border: 0 !important;
+    border-top: 1px solid var(--c-line) !important;
+    border-bottom: 1px solid var(--c-line) !important;
+    background: linear-gradient(180deg, var(--c-cream) 0%, var(--c-paper) 100%) !important;
     box-shadow: none !important;
     text-align: center !important;
+    overflow: hidden !important;
+}
+/* 상단 signal red strip (편집 잡지 톤) */
+#jgJoinResult#jgJoinResult .joinComplete::before {
+    content: "" !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    height: 2px !important;
+    background: var(--c-signal) !important;
+}
+/* eyebrow "MEMBERSHIP CONFIRMED" */
+#jgJoinResult#jgJoinResult .joinComplete::after {
+    content: "MEMBERSHIP · CONFIRMED" !important;
+    position: absolute !important;
+    top: clamp(20px, 2.5vw, 32px) !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    font-family: var(--font-mono) !important;
+    font-size: 10px !important;
+    letter-spacing: 0.22em !important;
+    text-transform: uppercase !important;
+    color: var(--c-signal) !important;
+    line-height: 1 !important;
+    pointer-events: none !important;
 }
 
 /* member icon — cafe24 기본 placeholder svg는 못생긴 아바타 그림이라
    img 자체를 숨기고 .member_icon 박스 자체를 signal red 체크마크 원형
-   배지로 재구성. 헤드라인 위에 중앙 배치. */
+   배지로 재구성. 헤드라인 위에 중앙 배치. eyebrow 아래로 약간 더 내림. */
 #jgJoinResult#jgJoinResult .member_icon {
     display: block !important;
-    width: 64px !important;
-    height: 64px !important;
-    margin: 0 auto var(--s-5) !important;
+    width: 56px !important;
+    height: 56px !important;
+    margin: var(--s-3) auto var(--s-5) !important;
     padding: 0 !important;
-    border: 2px solid var(--c-signal) !important;
+    border: 1.5px solid var(--c-signal) !important;
     border-radius: 50% !important;
     background-color: transparent !important;
-    background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='28'%20height='28'%20viewBox='0%200%2028%2028'%3E%3Cpath%20d='M7%2014.5L12%2019.5L21.5%2010'%20stroke='%23c8321e'%20stroke-width='2.4'%20stroke-linecap='round'%20stroke-linejoin='round'%20fill='none'/%3E%3C/svg%3E") !important;
+    background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%3E%3Cpath%20d='M6%2012.5L10.5%2017L18%208.5'%20stroke='%23c8321e'%20stroke-width='2.2'%20stroke-linecap='round'%20stroke-linejoin='round'%20fill='none'/%3E%3C/svg%3E") !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
-    background-size: 28px 28px !important;
+    background-size: 24px 24px !important;
     overflow: hidden !important;
     text-indent: -9999px !important;     /* alt 텍스트 가림 */
 }
@@ -16019,4 +16051,18 @@ body.onroad-page .jg-join-page .email-input-group > select.email-domain-select {
     .onroad-page .jg-join-result-coupon .grid3 {
         grid-template-columns: 1fr !important;
     }
+}
+
+/* ════════════════════════════════════════════════════════════════════
+   SCROLL JITTER FIX — neutralize layout.js's #contents margin-top inline
+   ════════════════════════════════════════════════════════════════════
+   layout.js의 fixedHeader() 함수가 스크롤마다 #contents.style.marginTop
+   을 '<header_height>px' / '0px' 로 토글한다. 우리 .site-header가
+   position: sticky (또는 fixed)이라 그 마진은 redundant이고, 토글로
+   인한 layout shift가 사용자에겐 "흔들림"으로 느껴진다.
+
+   인라인 style은 !important 없이 set되므로 우리 CSS의 !important가 이김.
+   ──────────────────────────────────────────────────────────────────── */
+body.onroad-page #contents {
+    margin-top: 0 !important;
 }
