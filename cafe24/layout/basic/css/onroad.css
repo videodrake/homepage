@@ -15626,3 +15626,382 @@ body.onroad-page .jg-join-page .email-input-group > select.email-domain-select {
         padding: 16px var(--s-4) !important;
     }
 }
+
+/* ════════════════════════════════════════════════════════════════════
+   JOIN RESULT v2 — 회원 가입 완료 페이지 redesign
+   ════════════════════════════════════════════════════════════════════
+   Wrapper에 id="jgJoinResult" 추가. #jgJoinResult#jgJoinResult 더블 ID
+   prefix로 specificity (2,X,Y) 확보 — 옛 .jg-join-result-page 룰
+   (lines ~12861) 모두 override.
+
+   디자인 톤:
+   - "회원가입이 완료 되었습니다" → serif (Fraunces) 큰 헤드라인
+   - 회원 정보 (아이디/이름/이메일) → mono key + serif/sans value, 격자형
+   - 회원 등급/혜택 → 별도 페이퍼 박스, signal 강조
+   - 쿠폰 → 카드형 grid (inline style override)
+   - 액션 버튼 → 우리 시스템 톤 (signal red CTA + ghost back)
+
+   카페24 hooks 보존: module="member_joinComplete", "member_BenefitJoin",
+   "coupon_join", 모든 {$variable}, .ec-base-box / .ec-base-desc /
+   .ec-base-button 마크업 그대로.
+   ──────────────────────────────────────────────────────────────────── */
+
+#jgJoinResult#jgJoinResult {
+    width: min(720px, calc(100vw - 40px)) !important;
+    margin: 0 auto var(--s-16) !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
+/* Hero card */
+#jgJoinResult#jgJoinResult .joinComplete {
+    margin: 0 !important;
+    padding: clamp(40px, 5vw, 64px) clamp(28px, 4vw, 48px) !important;
+    border: 1px solid var(--c-ink) !important;
+    background: var(--c-cream) !important;
+    box-shadow: none !important;
+    text-align: center !important;
+}
+
+/* member icon */
+#jgJoinResult#jgJoinResult .member_icon {
+    display: flex !important;
+    justify-content: center !important;
+    margin: 0 0 var(--s-4) !important;
+    padding: 0 !important;
+}
+#jgJoinResult#jgJoinResult .member_icon img {
+    width: 56px !important;
+    height: 56px !important;
+    opacity: 0.85 !important;
+    display: block !important;
+}
+
+/* Hero desc — serif headline */
+#jgJoinResult#jgJoinResult .joinComplete > .desc {
+    margin: 0 0 var(--s-6) !important;
+    color: var(--c-ink) !important;
+    font-family: var(--font-serif) !important;
+    font-weight: 300 !important;
+    font-size: clamp(28px, 3.6vw, 44px) !important;
+    line-height: 1.1 !important;
+    letter-spacing: -0.02em !important;
+    text-align: center !important;
+    font-variation-settings: "opsz" 48 !important;
+    text-transform: none !important;
+}
+
+/* memberSpecial — 회원 등급 + 할인 안내 */
+#jgJoinResult#jgJoinResult .memberSpecial {
+    margin: var(--s-5) 0 0 !important;
+    padding: var(--s-4) var(--s-5) !important;
+    background: var(--c-paper) !important;
+    border: 1px solid var(--c-line) !important;
+    box-shadow: none !important;
+    text-align: left !important;
+}
+#jgJoinResult#jgJoinResult .memberSpecial > p {
+    margin: 0 0 var(--s-3) !important;
+    padding: 0 !important;
+    font-family: var(--font-sans) !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    color: var(--c-ink) !important;
+}
+#jgJoinResult#jgJoinResult .memberSpecial > p strong {
+    font-weight: 600 !important;
+    color: var(--c-ink) !important;
+}
+#jgJoinResult#jgJoinResult .memberSpecial > ul {
+    list-style: none !important;
+    margin: 0 !important;
+    padding: var(--s-3) 0 0 !important;
+    border-top: 1px solid var(--c-line) !important;
+}
+#jgJoinResult#jgJoinResult .memberSpecial > ul li {
+    font-family: var(--font-sans) !important;
+    font-size: 13px !important;
+    line-height: 1.6 !important;
+    color: var(--c-char) !important;
+    margin: 0 0 8px !important;
+    padding: 0 !important;
+}
+#jgJoinResult#jgJoinResult .memberSpecial > ul li:last-child { margin-bottom: 0 !important; }
+#jgJoinResult#jgJoinResult .memberSpecial > ul li strong {
+    font-weight: 600 !important;
+    color: var(--c-ink) !important;
+}
+#jgJoinResult#jgJoinResult .memberSpecial > ul li strong.price {
+    color: var(--c-signal) !important;
+    font-weight: 600 !important;
+}
+#jgJoinResult#jgJoinResult .memberSpecial > ul li.displaynone {
+    display: none !important;
+}
+
+/* member info box (아이디 / 이름 / 이메일) — 격자형 */
+#jgJoinResult#jgJoinResult .ec-base-box.typeMember,
+#jgJoinResult#jgJoinResult .ec-base-box.typeMember.gMessage {
+    margin: var(--s-5) 0 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: 1px solid var(--c-line) !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    text-align: left !important;
+    overflow: hidden !important;
+}
+#jgJoinResult#jgJoinResult .ec-base-box .information,
+#jgJoinResult#jgJoinResult .ec-base-box .description {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: 0 !important;
+}
+#jgJoinResult#jgJoinResult .ec-base-desc {
+    display: grid !important;
+    grid-template-columns: 110px 1fr !important;
+    gap: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+}
+#jgJoinResult#jgJoinResult .ec-base-desc dt {
+    margin: 0 !important;
+    padding: var(--s-3) var(--s-4) !important;
+    background: var(--c-paper) !important;
+    border-top: 1px solid var(--c-line) !important;
+    border-right: 1px solid var(--c-line) !important;
+    border-left: 0 !important;
+    border-bottom: 0 !important;
+    font-family: var(--font-mono) !important;
+    font-size: 11px !important;
+    font-weight: 400 !important;
+    letter-spacing: 0.14em !important;
+    text-transform: uppercase !important;
+    color: var(--c-meta) !important;
+    line-height: 1.4 !important;
+    align-self: stretch !important;
+    display: flex !important;
+    align-items: center !important;
+    text-align: left !important;
+    width: auto !important;
+}
+#jgJoinResult#jgJoinResult .ec-base-desc dt:first-of-type,
+#jgJoinResult#jgJoinResult .ec-base-desc dd:first-of-type {
+    border-top: 0 !important;
+}
+#jgJoinResult#jgJoinResult .ec-base-desc dd {
+    margin: 0 !important;
+    padding: var(--s-3) var(--s-4) !important;
+    border-top: 1px solid var(--c-line) !important;
+    border: 0 !important;
+    border-top: 1px solid var(--c-line) !important;
+    background: transparent !important;
+    font-family: var(--font-sans) !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    color: var(--c-ink) !important;
+    line-height: 1.4 !important;
+    align-self: stretch !important;
+    display: flex !important;
+    align-items: center !important;
+    text-align: left !important;
+}
+
+/* memberEmail / memberAge — info notes */
+#jgJoinResult#jgJoinResult .memberEmail,
+#jgJoinResult#jgJoinResult .memberAge {
+    margin: var(--s-4) 0 0 !important;
+    padding: var(--s-3) var(--s-4) !important;
+    background: rgba(200, 50, 30, 0.06) !important;
+    border: 0 !important;
+    border-left: 2px solid var(--c-signal) !important;
+    font-family: var(--font-sans) !important;
+    font-size: 13px !important;
+    line-height: 1.55 !important;
+    color: var(--c-char) !important;
+    text-align: left !important;
+}
+#jgJoinResult#jgJoinResult .memberEmail.displaynone,
+#jgJoinResult#jgJoinResult .memberAge.displaynone {
+    display: none !important;
+}
+#jgJoinResult#jgJoinResult .memberAge strong {
+    font-weight: 600 !important;
+    color: var(--c-ink) !important;
+}
+
+/* Action buttons — vertical stack, full-width */
+#jgJoinResult#jgJoinResult .ec-base-button.gBottom {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: var(--s-3) !important;
+    margin: var(--s-5) 0 0 !important;
+    padding: 0 !important;
+    background: none !important;
+    border: 0 !important;
+    text-align: center !important;
+}
+#jgJoinResult#jgJoinResult .ec-base-button.gBottom > * {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    max-width: none !important;
+    min-height: 56px !important;
+    padding: 16px var(--s-5) !important;
+    border-radius: 0 !important;
+    font-family: var(--font-sans) !important;
+    font-size: 15px !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.02em !important;
+    text-decoration: none !important;
+    line-height: 1 !important;
+    text-transform: none !important;
+    cursor: pointer !important;
+    transition: background-color .18s ease, border-color .18s ease, color .18s ease !important;
+}
+#jgJoinResult#jgJoinResult .ec-base-button.gBottom .btnSubmitFix {
+    background-color: var(--c-signal) !important;
+    border: 1px solid var(--c-signal) !important;
+    color: var(--c-cream) !important;
+    order: 1 !important;
+}
+#jgJoinResult#jgJoinResult .ec-base-button.gBottom .btnSubmitFix:hover,
+#jgJoinResult#jgJoinResult .ec-base-button.gBottom .btnSubmitFix:focus-visible {
+    background-color: var(--c-signal-2) !important;
+    border-color: var(--c-signal-2) !important;
+    color: var(--c-cream) !important;
+}
+#jgJoinResult#jgJoinResult .ec-base-button.gBottom .btnSubmitFix.displaynone {
+    display: none !important;
+}
+#jgJoinResult#jgJoinResult .ec-base-button.gBottom .btnNormalFix {
+    background-color: var(--c-cream) !important;
+    border: 1px solid var(--c-line) !important;
+    color: var(--c-ink) !important;
+    order: 2 !important;
+}
+#jgJoinResult#jgJoinResult .ec-base-button.gBottom .btnNormalFix:hover,
+#jgJoinResult#jgJoinResult .ec-base-button.gBottom .btnNormalFix:focus-visible {
+    border-color: var(--c-ink) !important;
+    color: var(--c-ink) !important;
+    background-color: var(--c-cream) !important;
+}
+
+/* Coupon section (별도 wrapper, ID 없음 — page-level scope만) */
+.onroad-page .jg-join-result-coupon {
+    width: min(720px, calc(100vw - 40px)) !important;
+    margin: var(--s-6) auto 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: 0 !important;
+}
+.onroad-page .jg-join-result-coupon::before {
+    content: "WELCOME COUPONS" !important;
+    display: block !important;
+    font-family: var(--font-mono) !important;
+    font-size: 11px !important;
+    letter-spacing: 0.18em !important;
+    color: var(--c-signal) !important;
+    text-transform: uppercase !important;
+    margin: 0 0 var(--s-3) !important;
+    text-align: center !important;
+}
+.onroad-page .jg-join-result-coupon .couponSkinArea {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: 0 !important;
+}
+.onroad-page .jg-join-result-coupon .grid3 {
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 12px !important;
+}
+.onroad-page .jg-join-result-coupon .grid3 > li {
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+}
+/* override inline-style coupons */
+.onroad-page .jg-join-result-coupon .coupon {
+    background-image: none !important;
+    background-color: var(--c-cream) !important;
+    border: 1px solid var(--c-line) !important;
+    padding: var(--s-4) !important;
+    text-align: left !important;
+    min-height: 120px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    box-shadow: none !important;
+}
+.onroad-page .jg-join-result-coupon .coupon .title {
+    color: var(--c-meta) !important;
+    font-family: var(--font-mono) !important;
+    font-size: 11px !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.1em !important;
+    text-transform: uppercase !important;
+    margin: 0 0 var(--s-2) !important;
+    line-height: 1.4 !important;
+}
+.onroad-page .jg-join-result-coupon .coupon .discount {
+    color: var(--c-signal) !important;
+    font-family: var(--font-serif) !important;
+    font-weight: 300 !important;
+    font-size: clamp(20px, 2.4vw, 28px) !important;
+    margin: 0 0 var(--s-3) !important;
+    line-height: 1.1 !important;
+    letter-spacing: -0.01em !important;
+}
+.onroad-page .jg-join-result-coupon .coupon .discount span {
+    font-family: var(--font-serif) !important;
+    color: var(--c-signal) !important;
+}
+.onroad-page .jg-join-result-coupon .coupon .period {
+    color: var(--c-meta) !important;
+    font-family: var(--font-sans) !important;
+    font-size: 11px !important;
+    margin: 0 !important;
+    letter-spacing: 0 !important;
+    line-height: 1.4 !important;
+}
+
+/* Mobile */
+@media (max-width: 720px) {
+    #jgJoinResult#jgJoinResult {
+        width: calc(100vw - 32px) !important;
+    }
+    #jgJoinResult#jgJoinResult .joinComplete {
+        padding: var(--s-6) var(--s-4) !important;
+    }
+    #jgJoinResult#jgJoinResult .joinComplete > .desc {
+        font-size: 24px !important;
+    }
+    #jgJoinResult#jgJoinResult .ec-base-desc {
+        grid-template-columns: 88px 1fr !important;
+    }
+    #jgJoinResult#jgJoinResult .ec-base-desc dt {
+        font-size: 10px !important;
+        padding: var(--s-3) var(--s-3) !important;
+    }
+    #jgJoinResult#jgJoinResult .ec-base-desc dd {
+        font-size: 13px !important;
+        padding: var(--s-3) var(--s-3) !important;
+    }
+    .onroad-page .jg-join-result-coupon {
+        width: calc(100vw - 32px) !important;
+    }
+    .onroad-page .jg-join-result-coupon .grid3 {
+        grid-template-columns: 1fr !important;
+    }
+}
