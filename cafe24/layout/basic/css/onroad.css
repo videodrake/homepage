@@ -16066,3 +16066,332 @@ body.onroad-page .jg-join-page .email-input-group > select.email-domain-select {
 body.onroad-page #contents {
     margin-top: 0 !important;
 }
+
+/* ════════════════════════════════════════════════════════════════════
+   CURATED REVIEWS + PRODUCT REVIEW — table → card layout
+   ════════════════════════════════════════════════════════════════════
+   기존 6컬럼 테이블을 CSS grid로 카드형 변환.
+   좌측: 작성자/썸네일, 우측: 별점·제목·날짜·본문(클릭 펼침).
+   큐레이션(.pd-curated-reviews)과 카페24 제품리뷰(.xans-product-review)
+   에 동시 적용 — 두 종류 리뷰의 톤이 통일된다.
+   ──────────────────────────────────────────────────────────────────── */
+
+/* 두 영역 사이 경계 제거 + 슬롯 자체 마진 정리 */
+body.onroad-page .jg-product-additional-page .pd-curated-reviews,
+body.onroad-page .jg-product-additional-page .pd-curated-reviews table {
+    margin: 0 !important;
+    border: 0 !important;
+}
+body.onroad-page .jg-product-additional-page .pd-curated-reviews + [module="product_review"] .ec-base-table.typeList,
+body.onroad-page .jg-product-additional-page .pd-curated-reviews + .xans-product-review .ec-base-table.typeList {
+    margin-top: 0 !important;
+}
+
+/* table → block, colgroup/thead 숨김
+   border-collapse 명시 unset — grid 변환과 충돌 방지 */
+body.onroad-page .jg-product-additional-page .pd-curated-reviews .ec-base-table.typeList table,
+body.onroad-page .jg-product-additional-page [module="product_review"] .ec-base-table.typeList table,
+body.onroad-page .jg-product-additional-page .xans-product-review .ec-base-table.typeList table {
+    display: block !important;
+    border: 0 !important;
+    width: 100% !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+    table-layout: auto !important;
+}
+body.onroad-page .jg-product-additional-page .pd-curated-reviews tbody,
+body.onroad-page .jg-product-additional-page [module="product_review"] tbody,
+body.onroad-page .jg-product-additional-page .xans-product-review tbody {
+    width: 100%;
+}
+body.onroad-page .jg-product-additional-page .pd-curated-reviews colgroup,
+body.onroad-page .jg-product-additional-page [module="product_review"] colgroup,
+body.onroad-page .jg-product-additional-page .xans-product-review colgroup {
+    display: none !important;
+}
+body.onroad-page .jg-product-additional-page .pd-curated-reviews thead,
+body.onroad-page .jg-product-additional-page [module="product_review"] thead,
+body.onroad-page .jg-product-additional-page .xans-product-review thead {
+    display: none !important;
+}
+body.onroad-page .jg-product-additional-page .pd-curated-reviews tbody,
+body.onroad-page .jg-product-additional-page [module="product_review"] tbody,
+body.onroad-page .jg-product-additional-page .xans-product-review tbody {
+    display: block !important;
+}
+
+/* 카드 row — grid 2컬럼 (좌: 작성자, 우: 별점→제목→본문→사진→날짜)
+   - minmax(0, 1fr): 우측 column이 자식 min-width 무시하고 부모 폭 따름 → 사진 overflow 방지
+   - grid-template-rows 제거: 자동 row → td 2가 사진으로 커지면 row 자연 확장 */
+body.onroad-page .jg-product-additional-page .pd-curated-row,
+body.onroad-page .jg-product-additional-page [module="product_review"] tbody > tr,
+body.onroad-page .jg-product-additional-page .xans-product-review tbody > tr {
+    display: grid !important;
+    grid-template-columns: 140px minmax(0, 1fr);
+    column-gap: 32px;
+    row-gap: 8px;
+    padding: 32px 0 !important;
+    border: 0 !important;
+    border-bottom: 1px solid #ececec !important;
+    text-align: left !important;
+    background: transparent !important;
+    height: auto !important;
+    min-height: 0 !important;
+    align-items: start;
+}
+body.onroad-page .jg-product-additional-page .pd-curated-reviews .pd-curated-row > td,
+body.onroad-page .jg-product-additional-page [module="product_review"] tbody > tr > td,
+body.onroad-page .jg-product-additional-page .xans-product-review tbody > tr > td {
+    display: block !important;
+    border: 0 !important;
+    border-bottom: 0 !important;
+    border-top: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    vertical-align: baseline !important;
+    text-align: left !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+    height: auto !important;
+    width: auto !important;
+    box-shadow: none !important;
+}
+/* td 내부 a 태그 — ec-base-table a의 border-bottom underline 제거 */
+body.onroad-page .jg-product-additional-page .pd-curated-reviews .pd-curated-row > td a,
+body.onroad-page .jg-product-additional-page [module="product_review"] tbody > tr > td a,
+body.onroad-page .jg-product-additional-page .xans-product-review tbody > tr > td a {
+    border-bottom: 0 !important;
+}
+
+/* td 1번(번호 RW) — 숨김 */
+body.onroad-page .jg-product-additional-page .pd-curated-row > td:nth-child(1),
+body.onroad-page .jg-product-additional-page [module="product_review"] tbody > tr > td:nth-child(1),
+body.onroad-page .jg-product-additional-page .xans-product-review tbody > tr > td:nth-child(1) {
+    display: none !important;
+}
+/* td 5번(조회수) — 숨김 */
+body.onroad-page .jg-product-additional-page .pd-curated-row > td:nth-child(5),
+body.onroad-page .jg-product-additional-page [module="product_review"] tbody > tr > td:nth-child(5),
+body.onroad-page .jg-product-additional-page .xans-product-review tbody > tr > td:nth-child(5) {
+    display: none !important;
+}
+
+/* td 3번(작성자) — 좌측 컬럼, 모든 row span (사진으로 늘어나도 따라감) */
+body.onroad-page .jg-product-additional-page .pd-curated-row > td:nth-child(3),
+body.onroad-page .jg-product-additional-page [module="product_review"] tbody > tr > td:nth-child(3),
+body.onroad-page .jg-product-additional-page .xans-product-review tbody > tr > td:nth-child(3) {
+    grid-column: 1;
+    grid-row: 1 / -1;
+    align-self: start;
+    font-size: 13px;
+    color: #888;
+    line-height: 1.5;
+    word-break: break-all;
+}
+
+/* td 6번(평점) — 우측 1행 */
+body.onroad-page .jg-product-additional-page .pd-curated-row > td:nth-child(6),
+body.onroad-page .jg-product-additional-page [module="product_review"] tbody > tr > td:nth-child(6),
+body.onroad-page .jg-product-additional-page .xans-product-review tbody > tr > td:nth-child(6) {
+    grid-column: 2;
+    grid-row: 1;
+}
+body.onroad-page .jg-product-additional-page .pd-curated-row > td:nth-child(6) img,
+body.onroad-page .jg-product-additional-page [module="product_review"] tbody > tr > td:nth-child(6) img,
+body.onroad-page .jg-product-additional-page .xans-product-review tbody > tr > td:nth-child(6) img {
+    height: 18px;
+    width: auto;
+    display: inline-block;
+    filter: hue-rotate(220deg) saturate(1.4) brightness(0.95);
+}
+
+/* td 2번(제목/본문) — 우측 2행 */
+body.onroad-page .jg-product-additional-page .pd-curated-row > td:nth-child(2),
+body.onroad-page .jg-product-additional-page [module="product_review"] tbody > tr > td:nth-child(2),
+body.onroad-page .jg-product-additional-page .xans-product-review tbody > tr > td:nth-child(2) {
+    grid-column: 2;
+    grid-row: 2;
+    font-size: 15px;
+    line-height: 1.65;
+    color: #1b1e26;
+    margin-top: 4px;
+}
+body.onroad-page .jg-product-additional-page .pd-curated-row > td:nth-child(2) a,
+body.onroad-page .jg-product-additional-page [module="product_review"] tbody > tr > td:nth-child(2) a,
+body.onroad-page .jg-product-additional-page .xans-product-review tbody > tr > td:nth-child(2) a {
+    color: inherit !important;
+    font-weight: 500;
+    text-decoration: none;
+}
+body.onroad-page .jg-product-additional-page .pd-curated-row > td:nth-child(2) a:hover,
+body.onroad-page .jg-product-additional-page [module="product_review"] tbody > tr > td:nth-child(2) a:hover,
+body.onroad-page .jg-product-additional-page .xans-product-review tbody > tr > td:nth-child(2) a:hover {
+    color: #6f5dff !important;
+}
+
+/* td 4번(날짜) — 우측 3행 */
+body.onroad-page .jg-product-additional-page .pd-curated-row > td:nth-child(4),
+body.onroad-page .jg-product-additional-page [module="product_review"] tbody > tr > td:nth-child(4),
+body.onroad-page .jg-product-additional-page .xans-product-review tbody > tr > td:nth-child(4) {
+    grid-column: 2;
+    grid-row: 3;
+    font-size: 12px;
+    color: #b0b0b0;
+    margin-top: 8px;
+}
+
+/* 작성자 칸 — 닉네임만 (좌측 컬럼) */
+body.onroad-page .jg-product-additional-page .pd-curated-author {
+    display: block !important;
+}
+body.onroad-page .jg-product-additional-page .pd-curated-author__name {
+    font-size: 13px;
+    color: #888;
+    word-break: break-all;
+}
+
+/* row hover — 흰색/색상 배경 효과 모두 제거 */
+body.onroad-page .jg-product-additional-page .pd-curated-row,
+body.onroad-page .jg-product-additional-page [module="product_review"] tbody > tr,
+body.onroad-page .jg-product-additional-page .xans-product-review tbody > tr {
+    cursor: default !important;
+    background: transparent !important;
+}
+body.onroad-page .jg-product-additional-page .pd-curated-row:hover,
+body.onroad-page .jg-product-additional-page .pd-curated-row:hover > td,
+body.onroad-page .jg-product-additional-page [module="product_review"] tbody > tr:hover,
+body.onroad-page .jg-product-additional-page [module="product_review"] tbody > tr:hover > td,
+body.onroad-page .jg-product-additional-page .xans-product-review tbody > tr:hover,
+body.onroad-page .jg-product-additional-page .xans-product-review tbody > tr:hover > td {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+/* 본문 td — 제목 / 본문 / 더보기 / 사진 stacked */
+body.onroad-page .jg-product-additional-page .pd-curated-body {
+    display: flex !important;
+    flex-direction: column;
+    gap: 10px;
+}
+body.onroad-page .jg-product-additional-page .pd-curated-body__title {
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+    color: #1b1e26;
+    line-height: 1.5;
+    margin: 0;
+}
+body.onroad-page .jg-product-additional-page .pd-curated-body__text {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #2b2b2b;
+    white-space: pre-wrap;
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+body.onroad-page .jg-product-additional-page .pd-curated-body.is-expanded .pd-curated-body__text {
+    display: block;
+    -webkit-line-clamp: unset;
+    overflow: visible;
+}
+body.onroad-page .jg-product-additional-page .pd-curated-body__more {
+    align-self: flex-start;
+    background: transparent;
+    border: 0;
+    padding: 0;
+    margin: -2px 0 0;
+    font: inherit;
+    font-size: 13px;
+    color: #6f5dff;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+body.onroad-page .jg-product-additional-page .pd-curated-body__more:hover {
+    text-decoration: underline;
+}
+
+/* 사진 — 정사각 280px 고정 박스, 박스는 그대로 두고 사진만 hover 확대 */
+body.onroad-page .jg-product-additional-page .pd-curated-body__photos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 6px;
+    max-width: 100%;
+}
+body.onroad-page .jg-product-additional-page .pd-curated-body__photo {
+    display: block;
+    width: 280px;
+    height: 280px;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #f4f4f4;
+    flex-shrink: 0;
+}
+body.onroad-page .jg-product-additional-page .pd-curated-body__photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.45s ease;
+}
+body.onroad-page .jg-product-additional-page .pd-curated-body__photo:hover img {
+    transform: scale(1.08);
+}
+
+/* 모바일 — 작성자 좌측 → 상단으로 stack */
+@media (max-width: 768px) {
+    body.onroad-page .jg-product-additional-page .pd-curated-row,
+    body.onroad-page .jg-product-additional-page [module="product_review"] tbody > tr,
+    body.onroad-page .jg-product-additional-page .xans-product-review tbody > tr {
+        grid-template-columns: 1fr;
+        column-gap: 0;
+        row-gap: 8px;
+        padding: 24px 0 !important;
+    }
+    body.onroad-page .jg-product-additional-page .pd-curated-row > td:nth-child(3),
+    body.onroad-page .jg-product-additional-page [module="product_review"] tbody > tr > td:nth-child(3),
+    body.onroad-page .jg-product-additional-page .xans-product-review tbody > tr > td:nth-child(3) {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    body.onroad-page .jg-product-additional-page .pd-curated-row > td:nth-child(6),
+    body.onroad-page .jg-product-additional-page [module="product_review"] tbody > tr > td:nth-child(6),
+    body.onroad-page .jg-product-additional-page .xans-product-review tbody > tr > td:nth-child(6) {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    body.onroad-page .jg-product-additional-page .pd-curated-row > td:nth-child(2),
+    body.onroad-page .jg-product-additional-page [module="product_review"] tbody > tr > td:nth-child(2),
+    body.onroad-page .jg-product-additional-page .xans-product-review tbody > tr > td:nth-child(2) {
+        grid-column: 1;
+        grid-row: 3;
+        font-size: 14px;
+    }
+    body.onroad-page .jg-product-additional-page .pd-curated-row > td:nth-child(4),
+    body.onroad-page .jg-product-additional-page [module="product_review"] tbody > tr > td:nth-child(4),
+    body.onroad-page .jg-product-additional-page .xans-product-review tbody > tr > td:nth-child(4) {
+        grid-column: 1;
+        grid-row: 4;
+    }
+    body.onroad-page .jg-product-additional-page .pd-curated-body__title {
+        font-size: 14px;
+    }
+    body.onroad-page .jg-product-additional-page .pd-curated-body__text {
+        font-size: 13px;
+    }
+    body.onroad-page .jg-product-additional-page .pd-curated-body__photo {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
+}

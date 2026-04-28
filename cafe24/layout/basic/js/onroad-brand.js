@@ -268,6 +268,147 @@
         window.location.href = '/order/basket.html';
       });
     }
+
+    // 갤러리(board_no=8) 전체 글을 product_review 위에 prepend.
+    // 단일 제품 운영 단계 — 카테고리 분리 없이 갤러리 글 = 큐레이션 리뷰.
+    var CURATED_REVIEW_MAX = 5;
+
+    (function curatedReviews() {
+      if (!pdReview) return;
+      // 카페24가 리뷰 0건이면 [module="product_review"] wrapper를 제거하고
+      // .contents 안에 <p class="nodata">만 남긴다. .contents를 host로 쓰면
+      // wrapper 유무와 무관하게 작동.
+      var contentsHost = pdReview.querySelector('.contents');
+      if (!contentsHost) return;
+
+      fetch('/board/gallery/list.html', { credentials: 'same-origin' })
+        .then(function (r) { return r.ok ? r.text() : null; })
+        .then(function (html) {
+          if (!html) return null;
+          var doc = new DOMParser().parseFromString(html, 'text/html');
+          var items = doc.querySelectorAll('[class*="xans-board-list-8"] ul > li');
+          if (!items.length) return null;
+
+          var rows = [];
+          for (var i = 0; i < items.length && rows.length < CURATED_REVIEW_MAX; i++) {
+            var li = items[i];
+            var link = li.querySelector('a[href]');
+            if (!link) continue;
+            var href = link.getAttribute('href');
+            if (!href || /^#/.test(href)) continue;
+
+            var subjectEl = li.querySelector('.subject');
+            var dateEl = li.querySelector('.date');
+            var spans = li.querySelectorAll('.summary > span');
+            var writer = '';
+            for (var s = 0; s < spans.length; s++) {
+              if (!spans[s].classList.contains('date')) {
+                writer = spans[s].textContent.trim();
+                if (writer) break;
+              }
+            }
+            var subject = subjectEl ? subjectEl.textContent.trim().replace(/\s+/g, ' ') : '';
+            if (!subject) continue;
+            var date = dateEl ? dateEl.textContent.trim() : '';
+            rows.push({ href: href, subject: subject, writer: writer, date: date, bodyText: '', photos: [] });
+          }
+          if (!rows.length) return null;
+
+          // 각 글의 read.html을 병렬 fetch — 본문 텍스트 + 모든 이미지 추출
+          return Promise.all(rows.map(function (r2) {
+            return fetch(r2.href, { credentials: 'same-origin' })
+              .then(function (rr) { return rr.ok ? rr.text() : null; })
+              .then(function (rhtml) {
+                if (!rhtml) return r2;
+                var rdoc = new DOMParser().parseFromString(rhtml, 'text/html');
+                var detail = rdoc.querySelector('.xans-board-read-8 .detail') || rdoc.querySelector('.detail');
+                if (!detail) return r2;
+                var clone = detail.cloneNode(true);
+                var imgs = clone.querySelectorAll('img');
+                for (var ii = 0; ii < imgs.length; ii++) {
+                  var src = imgs[ii].getAttribute('src');
+                  if (src) r2.photos.push(src);
+                  imgs[ii].parentNode.removeChild(imgs[ii]);
+                }
+                r2.bodyText = clone.textContent.trim().replace(/\s+/g, ' ');
+                return r2;
+              })
+              .catch(function () { return r2; });
+          }));
+        })
+        .then(function (rows) {
+          if (!rows || !rows.length) return;
+
+          var slot = document.createElement('div');
+          slot.className = 'pd-curated-reviews ec-base-table typeList';
+          var html2 = ['<table border="1"><colgroup>',
+            '<col style="width:70px;"><col style="width:auto"><col style="width:100px;">',
+            '<col style="width:100px;"><col style="width:80px;"><col style="width:80px;">',
+            '</colgroup><tbody>'];
+          for (var j = 0; j < rows.length; j++) {
+            var r2 = rows[j];
+            var photosHtml = '';
+            if (r2.photos && r2.photos.length) {
+              var pieces = ['<div class="pd-curated-body__photos">'];
+              for (var p = 0; p < r2.photos.length; p++) {
+                pieces.push('<span class="pd-curated-body__photo"><img src="' + esc(r2.photos[p]) + '" alt="" onerror="this.parentNode.style.display=\'none\'"></span>');
+              }
+              pieces.push('</div>');
+              photosHtml = pieces.join('');
+            }
+            var bodyTextHtml = r2.bodyText ? '<div class="pd-curated-body__text">' + esc(r2.bodyText) + '</div>' : '';
+            var moreBtn = r2.bodyText ? '<button type="button" class="pd-curated-body__more" style="display:none;">더보기 <span aria-hidden="true">▾</span></button>' : '';
+
+            html2.push('<tr class="pd-curated-row">');
+            html2.push('<td class="RW"></td>');
+            html2.push('<td class="subject left txtBreak pd-curated-body">'
+              + '<strong class="pd-curated-body__title">' + esc(r2.subject) + '</strong>'
+              + bodyTextHtml
+              + moreBtn
+              + photosHtml
+              + '</td>');
+            html2.push('<td class="pd-curated-author"><span class="pd-curated-author__name">' + esc(r2.writer || '추천 후기') + '</span></td>');
+            html2.push('<td>' + esc(r2.date) + '</td>');
+            html2.push('<td></td>');
+            html2.push('<td><img src="//img.echosting.cafe24.com/skin/skin/board/icon-star-rating5.svg" alt="5점"></td>');
+            html2.push('</tr>');
+          }
+          html2.push('</tbody></table>');
+          slot.innerHTML = html2.join('');
+          contentsHost.insertBefore(slot, contentsHost.firstChild);
+          var nodata = contentsHost.querySelector('.nodata');
+          if (nodata) nodata.style.display = 'none';
+
+          // 더보기 버튼 토글
+          slot.addEventListener('click', function (ev) {
+            var btn = ev.target && ev.target.closest && ev.target.closest('.pd-curated-body__more');
+            if (!btn) return;
+            ev.preventDefault();
+            var body = btn.closest('.pd-curated-body');
+            if (!body) return;
+            var expanded = body.classList.toggle('is-expanded');
+            btn.innerHTML = expanded ? '접기 <span aria-hidden="true">▴</span>' : '더보기 <span aria-hidden="true">▾</span>';
+          });
+
+          // 본문이 line-clamp에 의해 잘렸을 때만 더보기 노출
+          requestAnimationFrame(function () {
+            var bodies = slot.querySelectorAll('.pd-curated-body');
+            for (var b = 0; b < bodies.length; b++) {
+              var text = bodies[b].querySelector('.pd-curated-body__text');
+              var more = bodies[b].querySelector('.pd-curated-body__more');
+              if (!text || !more) continue;
+              if (text.scrollHeight > text.clientHeight + 2) more.style.display = '';
+            }
+          });
+        })
+        .catch(function () { /* silent — curated section is optional */ });
+
+      function esc(s) {
+        return String(s).replace(/[&<>"']/g, function (c) {
+          return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+        });
+      }
+    })();
   }
 
   if (document.readyState === 'loading') {
