@@ -79,6 +79,6 @@ jobs:
             --exclude-glob '*.swp' \
             $DELETE_FLAG \
             $DRY_FLAG \
-            cafe24/ /
+            cafe24/ /base/
           bye
           LFTP_SCRIPT
