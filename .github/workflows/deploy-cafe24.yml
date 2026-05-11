@@ -12,6 +12,10 @@ on:
         description: 'Dry run (lftp --dry-run, 실제 업로드 안 함)'
         required: false
         default: 'false'
+      delete_remote:
+        description: '원격에만 있는 파일 삭제 (전체 미러). 기본 OFF — 추가/업데이트만'
+        required: false
+        default: 'false'
 
 concurrency:
   group: cafe24-sftp
@@ -36,6 +40,7 @@ jobs:
           SFTP_USER: ${{ secrets.CAFE24_SFTP_USER }}
           SFTP_PASS: ${{ secrets.CAFE24_SFTP_PASS }}
           DRY_RUN: ${{ github.event.inputs.dry_run }}
+          DELETE_REMOTE: ${{ github.event.inputs.delete_remote }}
         run: |
           set -euo pipefail
 
@@ -43,6 +48,16 @@ jobs:
           if [ "${DRY_RUN:-false}" = "true" ]; then
             DRY_FLAG="--dry-run"
             echo "::notice::Dry-run mode — 실제 업로드 안 함"
+          fi
+
+          # 기본 OFF: 추가/업데이트만. workflow_dispatch에서 delete_remote=true로
+          # 켜야 원격에만 있는 파일이 지워짐. push trigger는 항상 OFF (안전).
+          DELETE_FLAG=""
+          if [ "${DELETE_REMOTE:-false}" = "true" ]; then
+            DELETE_FLAG="--delete"
+            echo "::warning::Delete mode ON — 로컬에 없는 원격 파일은 삭제됨"
+          else
+            echo "::notice::Add/update only — 원격 파일 삭제 안 함"
           fi
 
           lftp <<LFTP_SCRIPT
@@ -55,7 +70,6 @@ jobs:
           open -u "$SFTP_USER","$SFTP_PASS" sftp://$SFTP_HOST:$SFTP_PORT
           mirror \
             --reverse \
-            --delete \
             --verbose \
             --parallel=2 \
             --exclude-glob .DS_Store \
@@ -63,6 +77,7 @@ jobs:
             --exclude-glob .gitkeep \
             --exclude-glob Thumbs.db \
             --exclude-glob '*.swp' \
+            $DELETE_FLAG \
             $DRY_FLAG \
             cafe24/ /
           bye
