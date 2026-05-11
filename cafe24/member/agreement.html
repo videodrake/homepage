@@ -234,3 +234,38 @@
 
     </div>
 </div>
+
+<!-- ============================================================
+     Inline toggle bind — bypass @js optimizer bundle caching.
+     join_agreement.js와 동일 로직 인라인 임베드. cafe24 optimizer가
+     디렉티브를 캐시한 옛 stub을 서빙해도 이 블록은 매번 실행됨.
+     ============================================================ -->
+<script>
+(function () {
+  'use strict';
+  function bind() {
+    var toggles = document.querySelectorAll('.btnToggle');
+    console.log('[AGREE TOGGLE inline] init — found', toggles.length, '.btnToggle elements');
+    toggles.forEach(function (toggle) {
+      toggle.addEventListener('click', function (event) {
+        var parent = toggle.closest('.agreeArea');
+        console.log('[AGREE TOGGLE inline] click — parent:', parent, 'has .on?', parent && parent.classList.contains('on'));
+        if (!parent) return;
+        parent.classList.toggle('on');
+        event.preventDefault();
+      });
+    });
+    var allCheck = document.getElementById('sAgreeAllChecked');
+    if (allCheck) {
+      allCheck.addEventListener('change', function () {
+        var checked = allCheck.checked;
+        document.querySelectorAll('.agreeArea input[type="checkbox"]').forEach(function (cb) {
+          if (cb !== allCheck) cb.checked = checked;
+        });
+      });
+    }
+  }
+  if (document.readyState !== 'loading') bind();
+  else document.addEventListener('DOMContentLoaded', bind);
+})();
+</script>
