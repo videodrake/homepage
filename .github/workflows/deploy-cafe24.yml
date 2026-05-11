@@ -1,0 +1,84 @@
+name: Deploy cafe24 skin to SFTP
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'cafe24/**'
+      - '.github/workflows/deploy-cafe24.yml'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry run (lftp --dry-run, 실제 업로드 안 함)'
+        required: false
+        default: 'false'
+      delete_remote:
+        description: '원격에만 있는 파일 삭제 (전체 미러). 기본 OFF — 추가/업데이트만'
+        required: false
+        default: 'false'
+
+concurrency:
+  group: cafe24-sftp
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install lftp
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends lftp
+
+      - name: Mirror cafe24/ to SFTP root
+        env:
+          SFTP_HOST: ${{ secrets.CAFE24_SFTP_HOST }}
+          SFTP_PORT: ${{ secrets.CAFE24_SFTP_PORT }}
+          SFTP_USER: ${{ secrets.CAFE24_SFTP_USER }}
+          SFTP_PASS: ${{ secrets.CAFE24_SFTP_PASS }}
+          DRY_RUN: ${{ github.event.inputs.dry_run }}
+          DELETE_REMOTE: ${{ github.event.inputs.delete_remote }}
+        run: |
+          set -euo pipefail
+
+          DRY_FLAG=""
+          if [ "${DRY_RUN:-false}" = "true" ]; then
+            DRY_FLAG="--dry-run"
+            echo "::notice::Dry-run mode — 실제 업로드 안 함"
+          fi
+
+          # 기본 OFF: 추가/업데이트만. workflow_dispatch에서 delete_remote=true로
+          # 켜야 원격에만 있는 파일이 지워짐. push trigger는 항상 OFF (안전).
+          DELETE_FLAG=""
+          if [ "${DELETE_REMOTE:-false}" = "true" ]; then
+            DELETE_FLAG="--delete"
+            echo "::warning::Delete mode ON — 로컬에 없는 원격 파일은 삭제됨"
+          else
+            echo "::notice::Add/update only — 원격 파일 삭제 안 함"
+          fi
+
+          lftp <<LFTP_SCRIPT
+          set sftp:auto-confirm yes
+          set net:max-retries 3
+          set net:timeout 30
+          set net:reconnect-interval-base 5
+          set mirror:use-pget-n 0
+          set xfer:clobber on
+          open -u "$SFTP_USER","$SFTP_PASS" sftp://$SFTP_HOST:$SFTP_PORT
+          mirror \
+            --reverse \
+            --verbose \
+            --parallel=2 \
+            --exclude-glob .DS_Store \
+            --exclude-glob .git \
+            --exclude-glob .gitkeep \
+            --exclude-glob Thumbs.db \
+            --exclude-glob '*.swp' \
+            $DELETE_FLAG \
+            $DRY_FLAG \
+            cafe24/ /
+          bye
+          LFTP_SCRIPT
