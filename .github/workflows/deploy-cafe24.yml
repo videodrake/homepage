@@ -71,6 +71,7 @@ jobs:
           mirror \
             --reverse \
             --verbose \
+            --no-perms \
             --parallel=2 \
             --exclude-glob .DS_Store \
             --exclude-glob .git \
