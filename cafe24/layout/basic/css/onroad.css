@@ -4331,18 +4331,18 @@ body.onroad-page #wrap {
     margin: 0 0 var(--s-3) 0;
     color: var(--c-text)
     }
-/* ---------- ec-base-tooltip ---------- */
+/* ---------- ec-base-tooltip (light cream card; full layout in STAGE 11) ---------- */
 .onroad-page .ec-base-tooltip {
-    background: var(--c-ink);
-    color: var(--c-cream);
-    border: 0;
+    background: var(--c-cream);
+    color: var(--c-ink);
+    border: 1px solid var(--c-line);
+    box-shadow: 0 8px 24px rgba(20, 18, 16, 0.08);
     font-family: var(--font-sans);
     font-size: 12px;
-    padding: var(--s-3) var(--s-4);
-    line-height: 1.5
+    line-height: 1.55
     }
 .onroad-page .ec-base-tooltip a {
-    color: var(--c-cream)
+    color: var(--c-ink)
     }
 /* ---------- ec-base-layer (modal/overlay) ---------- */
 .onroad-page .ec-base-layer {
@@ -16395,3 +16395,166 @@ body.onroad-page .jg-product-additional-page .pd-curated-body__photo:hover img {
         aspect-ratio: 1 / 1;
     }
 }
+
+/* ============================================================================
+   STAGE 11 — Quick fixes
+   1) Password tooltip (eTooltip / typeUpper) — light cream card above input
+   2) ec-base-paginate first/prev/next/last — hide Korean text, show arrows
+   3) my-hero bgword — toned down so title reads cleanly
+   4) Standalone orderform header — defensive: hide stray back-arrow markup,
+      enforce signal-red CTA so cafe24 default blue can't bleed through
+   ============================================================================ */
+
+/* 1) Password tooltip (.eTooltip > .ec-base-tooltip.typeUpper) -------------- */
+body.onroad-page .eTooltip {
+    position: relative !important;
+    display: inline-block;
+    width: 100%
+    }
+body.onroad-page .ec-base-tooltip.typeUpper {
+    position: absolute !important;
+    bottom: calc(100% + 10px) !important;
+    left: 0 !important;
+    top: auto !important;
+    right: auto !important;
+    width: auto !important;
+    max-width: 360px !important;
+    min-width: 280px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    z-index: 30
+    }
+body.onroad-page .ec-base-tooltip .content {
+    padding: var(--s-4) var(--s-5) !important;
+    margin: 0 !important;
+    background: transparent !important;
+    border: 0 !important
+    }
+body.onroad-page .ec-base-tooltip .content > strong {
+    display: block !important;
+    font-family: var(--font-mono) !important;
+    font-size: 10px !important;
+    letter-spacing: 0.14em !important;
+    text-transform: uppercase !important;
+    color: var(--c-signal) !important;
+    font-weight: 500 !important;
+    margin: 0 0 var(--s-3) !important
+    }
+body.onroad-page .ec-base-tooltip ul.typeDash {
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important
+    }
+body.onroad-page .ec-base-tooltip ul.typeDash li {
+    position: relative !important;
+    padding: 0 0 0 12px !important;
+    margin: 0 0 3px !important;
+    background: none !important;
+    font-family: var(--font-sans) !important;
+    font-size: 11.5px !important;
+    line-height: 1.55 !important;
+    color: var(--c-text) !important
+    }
+body.onroad-page .ec-base-tooltip ul.typeDash li::before {
+    content: "—" !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    color: var(--c-meta) !important
+    }
+body.onroad-page .ec-base-tooltip .btnClose {
+    position: absolute !important;
+    top: 6px !important;
+    right: 8px !important;
+    width: 24px !important;
+    height: 24px !important;
+    color: var(--c-meta) !important;
+    font-size: 0 !important;
+    text-decoration: none !important
+    }
+body.onroad-page .ec-base-tooltip .btnClose::before {
+    content: "×" !important;
+    font-family: var(--font-sans) !important;
+    font-size: 18px !important;
+    line-height: 1 !important;
+    color: var(--c-meta) !important
+    }
+body.onroad-page .ec-base-tooltip .edge {
+    position: absolute !important;
+    top: 100% !important;
+    left: 24px !important;
+    width: 0 !important;
+    height: 0 !important;
+    border-left: 6px solid transparent !important;
+    border-right: 6px solid transparent !important;
+    border-top: 6px solid var(--c-cream) !important;
+    border-bottom: 0 !important;
+    background: none !important;
+    filter: drop-shadow(0 1px 0 var(--c-line))
+    }
+
+/* 2) Pagination — replace 첫/이전/다음/마지막 text with chevrons --------- */
+.onroad-page .ec-base-paginate > a:first-child,
+.onroad-page .ec-base-paginate > a:nth-child(2),
+.onroad-page .ec-base-paginate > a:nth-last-child(2),
+.onroad-page .ec-base-paginate > a:last-child {
+    font-size: 0 !important;
+    line-height: 0 !important;
+    letter-spacing: 0 !important;
+    overflow: hidden;
+    white-space: nowrap
+    }
+.onroad-page .ec-base-paginate > a:first-child::before,
+.onroad-page .ec-base-paginate > a:nth-child(2)::before,
+.onroad-page .ec-base-paginate > a:nth-last-child(2)::before,
+.onroad-page .ec-base-paginate > a:last-child::before {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    line-height: 1;
+    letter-spacing: 0;
+    color: inherit
+    }
+.onroad-page .ec-base-paginate > a:first-child::before { content: "\00AB" }
+.onroad-page .ec-base-paginate > a:nth-child(2)::before { content: "\2039" }
+.onroad-page .ec-base-paginate > a:nth-last-child(2)::before { content: "\203A" }
+.onroad-page .ec-base-paginate > a:last-child::before { content: "\00BB" }
+
+/* 3) my-hero bgword — tone down so title reads first ---------------------- */
+.onroad-page .my-hero__bgword {
+    font-size: clamp(110px, 16vw, 240px);
+    color: rgba(244, 239, 230, 0.035);
+    bottom: -0.15em
+    }
+
+/* 4) Standalone orderform — defensive header + enforce signal-red CTA ----- */
+/* Hide common cafe24 default back-arrow / prev / return patterns that may
+   render alongside our logo in /order/ec_orderform/header.html */
+body#userStyle #header .btnBack,
+body#userStyle #header .btnReturn,
+body#userStyle #header .back,
+body#userStyle #header .prev,
+body#userStyle #header .headerBack,
+body#userStyle #header [class*="btnBack"],
+body#userStyle #header [class*="btn_back"] {
+    display: none !important
+    }
+body#userStyle #header h1 {
+    position: relative;
+    z-index: 2
+    }
+/* Force signal-red on payment CTA — cafe24's form_onetouch_v2.css uses higher
+   specificity (#mCafe24Order .btnSubmit / id-on-button) so we match + bump */
+body#userStyle #mCafe24Order .btnSubmit,
+body#userStyle #mCafe24Order button.btnSubmit,
+body#userStyle #orderFixItem .btnSubmit,
+body#userStyle button[id^="btn_payment"] {
+    background: var(--c-signal) !important;
+    color: var(--c-cream) !important;
+    border-color: var(--c-signal) !important
+    }
+body#userStyle #mCafe24Order .btnSubmit:hover,
+body#userStyle #orderFixItem .btnSubmit:hover {
+    background: var(--c-ink) !important;
+    border-color: var(--c-ink) !important;
+    color: var(--c-cream) !important
+    }
