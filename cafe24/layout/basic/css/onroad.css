@@ -332,6 +332,26 @@ body.onroad-page #wrap {
     .onroad-page .site-header__inner {
         padding: 0 var(--s-5)
         }
+    .onroad-page .site-header__brand em {
+        display: none
+        }
+    .onroad-page .site-header__actions {
+        gap: var(--s-2)
+        }
+    .onroad-page .site-header__auth,
+    .onroad-page .site-header__account,
+    .onroad-page .site-header__wishlist {
+        display: none !important
+        }
+    .onroad-page .site-header__icon,
+    .onroad-page .site-header__burger {
+        width: 30px;
+        height: 30px
+        }
+    .onroad-page .site-header__icon .count {
+        right: -1px;
+        top: -1px
+        }
     .onroad-page .site-header__nav {
         display: none
         }
@@ -920,13 +940,13 @@ body.onroad-page #wrap {
 /* =================== PINNED STATEMENT =================== */
 .onroad-page .pin-stage {
     position: relative;
-    height: 240vh;
+    height: auto;
     background: var(--c-cream)
     }
 .onroad-page .pin-stage__inner {
-    position: sticky;
-    top: 0;
-    height: 100vh;
+    position: relative;
+    top: auto;
+    min-height: 86vh;
     display: grid;
     place-items: center;
     overflow: hidden;
