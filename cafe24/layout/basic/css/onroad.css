@@ -16462,23 +16462,6 @@ body.onroad-page .ec-base-tooltip ul.typeDash li::before {
     top: 0 !important;
     color: var(--c-meta) !important
     }
-body.onroad-page .ec-base-tooltip .btnClose {
-    position: absolute !important;
-    top: 6px !important;
-    right: 8px !important;
-    width: 24px !important;
-    height: 24px !important;
-    color: var(--c-meta) !important;
-    font-size: 0 !important;
-    text-decoration: none !important
-    }
-body.onroad-page .ec-base-tooltip .btnClose::before {
-    content: "×" !important;
-    font-family: var(--font-sans) !important;
-    font-size: 18px !important;
-    line-height: 1 !important;
-    color: var(--c-meta) !important
-    }
 body.onroad-page .ec-base-tooltip .edge {
     position: absolute !important;
     top: 100% !important;
@@ -16560,43 +16543,19 @@ body#userStyle #orderFixItem .btnSubmit:hover {
     }
 
 /* ============================================================================
-   STAGE 12 — Fix icon overlap on signup pages
-   1) X close button in password tooltip — cafe24 default X (SVG/glyph/bg)
-      stacks under our ::before "×". Hide ALL inner children of .btnClose
-      and force the link itself to be a clean transparent box; only our
-      ::before renders.
-   2) V chevron in agreement cards — when .agreeArea has .on class, cafe24
-      default tries position:absolute the .btnToggle to title-right and
-      rotate the button itself 135deg. Our previous override fought the
-      transform but didn't kill position:absolute → button left flex flow
-      → looked displaced. Force flex-flow membership + push to flex-end
-      with margin-left:auto. Also hide any non-.icoArrowBottom children.
+   STAGE 12 — Fix V chevron displacement on agreement cards
+   When .agreeArea has .on class, cafe24 default tries position:absolute
+   the .btnToggle to title-right and rotate the button itself 135deg. Our
+   previous override fought the transform but didn't kill position:absolute
+   → button left flex flow → looked displaced. Force flex-flow membership
+   + push to flex-end with margin-left:auto.
+
+   Note: password tooltip X close button is intentionally left to cafe24
+   default — overriding it kept producing icon-stack artifacts that needed
+   ever-more aggressive workarounds. Default X is fine on cream bg.
    ============================================================================ */
 
-/* 1) Password tooltip X — single × only ----------------------------------- */
-body.onroad-page .ec-base-tooltip .btnClose {
-    color: transparent !important;
-    text-indent: -9999em !important;
-    overflow: hidden !important;
-    background: none !important;
-    background-image: none !important
-    }
-body.onroad-page .ec-base-tooltip .btnClose > *,
-body.onroad-page .ec-base-tooltip .btnClose svg,
-body.onroad-page .ec-base-tooltip .btnClose img,
-body.onroad-page .ec-base-tooltip .btnClose i {
-    display: none !important
-    }
-body.onroad-page .ec-base-tooltip .btnClose::after {
-    content: none !important;
-    display: none !important;
-    background: none !important
-    }
-body.onroad-page .ec-base-tooltip .btnClose::before {
-    text-indent: 0 !important
-    }
-
-/* 2) V chevron — single chevron, anchored to title flex-end --------------- */
+/* V chevron — single chevron, anchored to title flex-end ----------------- */
 #jgAgreeV2#jgAgreeV2 .jg-agree-v2__card .title {
     position: relative !important
     }
