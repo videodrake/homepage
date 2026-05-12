@@ -474,8 +474,8 @@ body.onroad-page #wrap {
     background: var(--c-dark)
     }
 .onroad-page .hero {
-    position: sticky;
-    top: 0;
+    position: relative;
+    top: auto;
     height: 100vh;
     min-height: 680px;
     background: var(--c-dark);
