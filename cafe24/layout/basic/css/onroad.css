@@ -16558,3 +16558,66 @@ body#userStyle #orderFixItem .btnSubmit:hover {
     border-color: var(--c-ink) !important;
     color: var(--c-cream) !important
     }
+
+/* ============================================================================
+   STAGE 12 — Fix icon overlap on signup pages
+   1) X close button in password tooltip — cafe24 default X (SVG/glyph/bg)
+      stacks under our ::before "×". Hide ALL inner children of .btnClose
+      and force the link itself to be a clean transparent box; only our
+      ::before renders.
+   2) V chevron in agreement cards — when .agreeArea has .on class, cafe24
+      default tries position:absolute the .btnToggle to title-right and
+      rotate the button itself 135deg. Our previous override fought the
+      transform but didn't kill position:absolute → button left flex flow
+      → looked displaced. Force flex-flow membership + push to flex-end
+      with margin-left:auto. Also hide any non-.icoArrowBottom children.
+   ============================================================================ */
+
+/* 1) Password tooltip X — single × only ----------------------------------- */
+body.onroad-page .ec-base-tooltip .btnClose {
+    color: transparent !important;
+    text-indent: -9999em !important;
+    overflow: hidden !important;
+    background: none !important;
+    background-image: none !important
+    }
+body.onroad-page .ec-base-tooltip .btnClose > *,
+body.onroad-page .ec-base-tooltip .btnClose svg,
+body.onroad-page .ec-base-tooltip .btnClose img,
+body.onroad-page .ec-base-tooltip .btnClose i {
+    display: none !important
+    }
+body.onroad-page .ec-base-tooltip .btnClose::after {
+    content: none !important;
+    display: none !important;
+    background: none !important
+    }
+body.onroad-page .ec-base-tooltip .btnClose::before {
+    text-indent: 0 !important
+    }
+
+/* 2) V chevron — single chevron, anchored to title flex-end --------------- */
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__card .title {
+    position: relative !important
+    }
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__card .btnToggle {
+    position: relative !important;
+    right: auto !important;
+    left: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    margin-left: auto !important
+    }
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__card .btnToggle > *:not(.icoArrowBottom),
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__card .btnToggle svg,
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__card .btnToggle img,
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__card .btnToggle i {
+    display: none !important
+    }
+/* Higher-specificity override for cafe24's .agreeArea.on .title .btnToggle
+   rule that rotates the button itself — we rotate the chevron span, not the
+   button (chained ID + .on selector beats their (0,3,1) spec) */
+#jgAgreeV2#jgAgreeV2 .jg-agree-v2__card.on .title .btnToggle {
+    transform: none !important
+    }
+
