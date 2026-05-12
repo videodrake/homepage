@@ -1,103 +1,66 @@
 <!--@layout(/layout/basic/layout.html)-->
-<div class="section path">
-    <span>현재 위치</span>
-    <ol>
-        <li><a href="/">홈</a></li>
-        <li title="현재 위치"><strong>이용안내</strong></li>
-    </ol>
-</div>
-
-<main module="mall_faq" class="section jg-info-page jg-guide-page onroad-page onroad-guide">
+<main module="mall_faq" class="onroad-page journal-page shopinfo-guide">
     <!--@css(/css/module/mall/faq.css)-->
 
-    <section class="page-hero">
-        <div class="page-hero__inner">
-            <div class="page-hero__crumb">HOME / SHOPINFO / GUIDE</div>
-            <h1 class="page-hero__title"><strong>이용안내</strong>와<br>운영 기준.</h1>
-            <p class="page-hero__sub">회원가입, 주문, 결제, 배송, 교환 및 환불 기준을 한곳에서 확인할 수 있습니다. 아래 안내는 쇼핑몰 이용과 주문 처리에 필요한 운영 기준이며, 실제 문구는 쇼핑몰 설정값을 기준으로 표시됩니다.</p>
+    <section class="jr-masthead">
+        <div class="container">
+            <p class="eyebrow">SHOPPING GUIDE</p>
+            <h1>주문부터 배송까지<br>기준을 선명하게 안내합니다.</h1>
+            <p class="jr-lede">회원, 주문, 결제, 배송, 교환, 환불 기준은 Cafe24 운영 설정값을 그대로 표시합니다. 구매 전 필요한 정보를 한곳에서 확인하세요.</p>
         </div>
     </section>
 
     <section class="section section--light">
-        <div class="container" style="max-width:1040px;">
+        <div class="container">
             <div class="sec-head">
-                <div class="sec-head__num">01 / GUIDE</div>
-                <div><h2 class="sec-head__title">쇼핑몰 <strong>이용 기준</strong>.</h2><p class="sec-head__sub">각 항목을 열어 세부 안내를 확인하세요.</p></div>
+                <p class="sec-head__num">01 / GUIDE</p>
+                <div>
+                    <h2 class="sec-head__title">운영 안내</h2>
+                    <p class="sec-head__sub">스토어 정책과 주문 처리 기준을 항목별로 정리했습니다.</p>
+                </div>
             </div>
 
-            <div class="jg-guide-list">
-                <div class="ec-base-fold theme1 gBottomLine selected eToggle jg-guide-fold">
-                    <div class="title">
-                        <h3>회원가입 안내</h3>
-                    </div>
-                    <div class="contents">
-                        {$member_info}
-                    </div>
-                </div>
-
-                <div class="ec-base-fold theme1 gBottomLine selected eToggle jg-guide-fold">
-                    <div class="title">
-                        <h3>주문 안내</h3>
-                    </div>
-                    <div class="contents">
-                        {$order_info}
-                    </div>
-                </div>
-
-                <div class="ec-base-fold theme1 gBottomLine selected eToggle jg-guide-fold">
-                    <div class="title">
-                        <h3>결제안내</h3>
-                    </div>
-                    <div class="contents">
-                        {$payment_info}
-                    </div>
-                </div>
-
-                <div class="ec-base-fold theme1 gBottomLine selected eToggle jg-guide-fold">
-                    <div class="title">
-                        <h3>배송안내</h3>
-                    </div>
-                    <div class="contents">
+            <div class="data-list guide-list">
+                <article class="data-list__item">
+                    <span>회원 안내</span>
+                    <div>{$member_info}</div>
+                </article>
+                <article class="data-list__item">
+                    <span>주문 안내</span>
+                    <div>{$order_info}</div>
+                </article>
+                <article class="data-list__item">
+                    <span>결제 안내</span>
+                    <div>{$payment_info}</div>
+                </article>
+                <article class="data-list__item">
+                    <span>배송 안내</span>
+                    <div>
                         <ul>
-                            <li>배송 방법 : {$shipping_method}</li>
-                            <li>배송 지역 : {$shipping_area}</li>
-                            <li>배송 비용 : {$shipping_fee}</li>
-                            <li>배송 기간 : {$shipping_period}</li>
-                            <li>배송 안내 : {$shipping_agreement}</li>
+                            <li>배송 방법: {$shipping_method}</li>
+                            <li>배송 지역: {$shipping_area}</li>
+                            <li>배송 비용: {$shipping_fee}</li>
+                            <li>배송 기간: {$shipping_period}</li>
+                            <li>배송 안내: {$shipping_agreement}</li>
                         </ul>
                     </div>
-                </div>
-
-                <div class="ec-base-fold theme1 gBottomLine selected eToggle jg-guide-fold">
-                    <div class="title">
-                        <h3>교환/반품안내</h3>
-                    </div>
-                    <div class="contents">
-                        {$product_change_info}
-                    </div>
-                </div>
-
-                <div class="ec-base-fold theme1 gBottomLine selected eToggle jg-guide-fold">
-                    <div class="title">
-                        <h3>환불안내</h3>
-                    </div>
-                    <div class="contents">
-                        {$refund_info}
-                    </div>
-                </div>
-
-                <div class="ec-base-fold theme1 gBottomLine selected eToggle jg-guide-fold">
-                    <div class="title">
-                        <h3>기타안내</h3>
-                    </div>
-                    <div class="contents">
-                        {$etc_info}
-                    </div>
-                </div>
+                </article>
+                <article class="data-list__item">
+                    <span>교환 및 반품</span>
+                    <div>{$product_change_info}</div>
+                </article>
+                <article class="data-list__item">
+                    <span>환불 안내</span>
+                    <div>{$refund_info}</div>
+                </article>
+                <article class="data-list__item">
+                    <span>기타 안내</span>
+                    <div>{$etc_info}</div>
+                </article>
             </div>
 
-            <div style="margin-top:64px;display:flex;gap:12px;flex-wrap:wrap;">
-                <a href="/shopinfo/company.html" class="btn btn--primary">회사소개 보기</a>
+            <div class="guide-actions">
+                <a href="/shopinfo/company.html" class="btn btn--primary">브랜드 보기</a>
                 <a href="/member/privacy.html" class="btn btn--ghost-dark">개인정보처리방침</a>
             </div>
         </div>

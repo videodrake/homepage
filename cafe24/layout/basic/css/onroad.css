@@ -16230,7 +16230,7 @@ body.onroad-page .jg-product-additional-page .xans-product-review tbody > tr > t
 body.onroad-page .jg-product-additional-page .pd-curated-row > td:nth-child(2) a:hover,
 body.onroad-page .jg-product-additional-page [module="product_review"] tbody > tr > td:nth-child(2) a:hover,
 body.onroad-page .jg-product-additional-page .xans-product-review tbody > tr > td:nth-child(2) a:hover {
-    color: #6f5dff !important;
+    color: var(--c-signal) !important;
 }
 
 /* td 4번(날짜) — 우측 3행 */
@@ -16310,7 +16310,7 @@ body.onroad-page .jg-product-additional-page .pd-curated-body__more {
     margin: -2px 0 0;
     font: inherit;
     font-size: 13px;
-    color: #6f5dff;
+    color: var(--c-signal);
     cursor: pointer;
     display: inline-flex;
     align-items: center;
@@ -16333,7 +16333,7 @@ body.onroad-page .jg-product-additional-page .pd-curated-body__photo {
     width: 280px;
     height: 280px;
     overflow: hidden;
-    border-radius: 12px;
+    border-radius: 0;
     background: #f4f4f4;
     flex-shrink: 0;
 }
@@ -16579,4 +16579,450 @@ body#userStyle #orderFixItem .btnSubmit:hover {
 #jgAgreeV2#jgAgreeV2 .jg-agree-v2__card.on .title .btnToggle {
     transform: none !important
     }
+
+/* ============================================================================
+   JOURNAL TAB / Claude Design handoff implementation
+   Adds the full Journal index + post templates without touching Cafe24 modules.
+   ============================================================================ */
+.onroad-page.journal-page,
+.onroad-page.journal-post {
+    background: var(--c-cream);
+    color: var(--c-ink);
+}
+.onroad-page .jr-masthead,
+.onroad-page .jp-hero {
+    padding: calc(var(--header-h) + 80px) var(--s-8) 56px;
+    background: var(--c-cream);
+    border-bottom: 1px solid var(--c-ink);
+}
+.onroad-page .jr-masthead__inner,
+.onroad-page .jr-feature,
+.onroad-page .jr-layout,
+.onroad-page .jp-hero__inner,
+.onroad-page .jp-layout {
+    width: 100%;
+    max-width: var(--container);
+    margin: 0 auto;
+}
+.onroad-page .jr-masthead__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: var(--s-12);
+}
+.onroad-page .jr-masthead h1,
+.onroad-page .jp-hero h1 {
+    max-width: 14ch;
+    margin: 18px 0 0;
+    font-family: var(--font-serif);
+    font-weight: 300;
+    font-size: clamp(52px, 9vw, 144px);
+    line-height: 0.92;
+    letter-spacing: -0.03em;
+    font-variation-settings: "opsz" 144;
+}
+.onroad-page .jr-editor-note {
+    width: 280px;
+    padding: 0 0 8px 24px;
+    border-left: 1px solid var(--c-line);
+    font-size: 14px;
+    line-height: 1.7;
+}
+.onroad-page .jr-editor-note b,
+.onroad-page .jr-editor-note small {
+    display: block;
+    font-family: var(--font-mono);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+.onroad-page .jr-editor-note b {
+    margin-bottom: var(--s-3);
+    color: var(--c-signal);
+    font-size: 10px;
+    font-weight: 400;
+}
+.onroad-page .jr-editor-note p {
+    margin: 0;
+    color: var(--c-text);
+}
+.onroad-page .jr-editor-note small {
+    margin-top: 18px;
+    padding-top: 14px;
+    border-top: 1px solid var(--c-line);
+    color: var(--c-meta);
+    font-size: 11px;
+}
+.onroad-page .jr-filter {
+    max-width: var(--container);
+    margin: 48px auto 0;
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1px solid var(--c-line);
+    padding-top: 20px;
+}
+.onroad-page .jr-filter a {
+    padding: 10px 16px;
+    border: 1px solid var(--c-ink);
+    border-left-width: 0;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+.onroad-page .jr-filter a:first-child {
+    border-left-width: 1px;
+}
+.onroad-page .jr-filter a.is-active,
+.onroad-page .jr-filter a:hover {
+    background: var(--c-ink);
+    color: var(--c-cream);
+}
+.onroad-page .jr-feature {
+    padding: 56px var(--s-8);
+    border-bottom: 1px solid var(--c-line);
+}
+.onroad-page .jr-feature__link {
+    display: grid;
+    grid-template-columns: 7fr 5fr;
+    gap: var(--s-12);
+    align-items: center;
+}
+.onroad-page .jr-feature__media,
+.onroad-page .jp-image {
+    background: #1a1714 center/cover no-repeat;
+    filter: saturate(0.9) contrast(1.05);
+}
+.onroad-page .jr-feature__media {
+    aspect-ratio: 16 / 11;
+    position: relative;
+    overflow: hidden;
+}
+.onroad-page .jr-feature h2 {
+    margin: var(--s-4) 0 var(--s-5);
+    font-family: var(--font-serif);
+    font-weight: 300;
+    font-size: clamp(38px, 4.6vw, 68px);
+    line-height: 0.98;
+    letter-spacing: -0.025em;
+    font-variation-settings: "opsz" 96;
+}
+.onroad-page .jr-feature p {
+    max-width: 42ch;
+    margin: 0 0 var(--s-6);
+    font-family: var(--font-serif);
+    font-weight: 300;
+    font-size: 19px;
+    line-height: 1.45;
+}
+.onroad-page .jr-grid-section {
+    padding: 56px var(--s-8) 96px;
+    background: var(--c-cream);
+}
+.onroad-page .jr-layout {
+    display: grid;
+    grid-template-columns: 9fr 3fr;
+    gap: 56px;
+}
+.onroad-page .jr-cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--s-8);
+}
+.onroad-page .jr-sidebar {
+    padding-left: var(--s-8);
+    border-left: 1px solid var(--c-line);
+}
+.onroad-page .jr-pick-list {
+    list-style: none;
+    padding: 0;
+    margin: 18px 0 48px;
+    border-top: 1px solid var(--c-line);
+}
+.onroad-page .jr-pick-list li {
+    display: flex;
+    gap: 14px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--c-line);
+}
+.onroad-page .jr-pick-list span {
+    width: 24px;
+    padding-top: 3px;
+    color: var(--c-signal);
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+}
+.onroad-page .jr-pick-list small {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--c-meta);
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+.onroad-page .jr-pick-list strong {
+    font-family: var(--font-serif);
+    font-size: 15px;
+    line-height: 1.25;
+    font-weight: 400;
+}
+.onroad-page .jr-newsletter {
+    padding: var(--s-6);
+    background: var(--c-ink);
+    color: var(--c-cream);
+}
+.onroad-page .jr-newsletter h3 {
+    margin: 14px 0;
+    font-family: var(--font-serif);
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+.onroad-page .jr-newsletter p {
+    margin: 0 0 18px;
+    color: rgba(244,239,230,0.66);
+    font-size: 13px;
+    line-height: 1.55;
+}
+.onroad-page .jr-newsletter form {
+    display: flex;
+}
+.onroad-page .jr-newsletter input {
+    min-width: 0;
+    flex: 1;
+    border: 1px solid rgba(244,239,230,0.3);
+    background: transparent;
+    color: var(--c-cream);
+    padding: 12px 14px;
+    outline: none;
+}
+.onroad-page .jr-newsletter button {
+    border: 1px solid var(--c-signal);
+    background: var(--c-signal);
+    color: var(--c-cream);
+    padding: 12px 16px;
+}
+.onroad-page .jp-topline {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--s-6);
+    margin-bottom: 36px;
+    color: var(--c-meta);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+.onroad-page .jp-topline a {
+    color: var(--c-ink);
+}
+.onroad-page .jp-deck {
+    max-width: 52ch;
+    margin: 0 0 36px;
+    font-family: var(--font-serif);
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 1.45;
+    color: var(--c-text);
+}
+.onroad-page .jp-author {
+    display: flex;
+    gap: var(--s-8);
+    align-items: center;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--c-meta);
+}
+.onroad-page .jp-avatar {
+    width: 34px;
+    height: 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--c-sand);
+    color: var(--c-ink);
+    font-family: var(--font-serif);
+    font-weight: 600;
+    font-size: 14px;
+}
+.onroad-page .jp-share {
+    margin-left: auto;
+    color: var(--c-signal);
+}
+.onroad-page .jp-image {
+    max-width: var(--container);
+    margin: 0 auto;
+    aspect-ratio: 21 / 9;
+}
+.onroad-page .jp-body {
+    padding: 80px var(--s-8);
+}
+.onroad-page .jp-layout {
+    max-width: 1100px;
+    display: grid;
+    grid-template-columns: 3fr 9fr;
+    gap: 64px;
+}
+.onroad-page .jp-rail {
+    position: sticky;
+    top: 96px;
+    align-self: start;
+}
+.onroad-page .jp-data {
+    margin-top: 18px;
+    border-top: 1px solid var(--c-ink);
+}
+.onroad-page .jp-data div {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--s-4);
+    padding: 12px 0;
+    border-bottom: 1px solid var(--c-line);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-variant-numeric: tabular-nums;
+}
+.onroad-page .jp-data span {
+    color: var(--c-meta);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+.onroad-page .jp-course {
+    margin-top: var(--s-8);
+    padding: 18px;
+    background: var(--c-paper);
+    border: 1px solid var(--c-line);
+}
+.onroad-page .jp-course h3 {
+    margin: 10px 0;
+    font-family: var(--font-serif);
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.3;
+}
+.onroad-page .jp-course p {
+    margin: 0;
+    color: var(--c-meta);
+    font-size: 12px;
+    line-height: 1.55;
+}
+.onroad-page .jp-article {
+    max-width: 62ch;
+}
+.onroad-page .jp-article p {
+    margin: 0 0 var(--s-6);
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--c-text);
+}
+.onroad-page .jp-article p.lead {
+    font-family: var(--font-serif);
+    font-weight: 300;
+    font-size: 18px;
+}
+.onroad-page .drop {
+    float: left;
+    margin: 6px 14px 0 0;
+    color: var(--c-signal);
+    font-family: var(--font-serif);
+    font-size: 88px;
+    line-height: 0.85;
+    font-style: italic;
+    font-variation-settings: "opsz" 144, "SOFT" 100;
+}
+.onroad-page .jp-article h2 {
+    margin: 48px 0 18px;
+    font-family: var(--font-serif);
+    font-weight: 300;
+    font-size: 34px;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+.onroad-page .jp-quote {
+    margin: 40px 0;
+    padding: 28px 32px;
+    background: var(--c-ink);
+    color: var(--c-cream);
+}
+.onroad-page .jp-quote p {
+    margin: 0;
+    color: inherit;
+    font-family: var(--font-serif);
+    font-weight: 300;
+    font-size: 26px;
+    line-height: 1.3;
+}
+.onroad-page .jp-quote figcaption {
+    margin-top: 18px;
+    color: rgba(244,239,230,0.66);
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+.onroad-page .jp-disclaimer {
+    margin-top: 48px !important;
+    padding: 14px 0;
+    border-top: 1px solid var(--c-line);
+    border-bottom: 1px solid var(--c-line);
+    color: var(--c-meta) !important;
+    font-family: var(--font-mono);
+    font-size: 10px !important;
+    letter-spacing: 0.08em;
+}
+.onroad-page .jp-cta {
+    margin-top: 48px;
+    padding: var(--s-8) 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--s-6);
+}
+@media (max-width: 980px) {
+    .onroad-page .jr-masthead,
+    .onroad-page .jp-hero {
+        padding-left: var(--s-5);
+        padding-right: var(--s-5);
+    }
+    .onroad-page .jr-masthead__inner,
+    .onroad-page .jr-feature__link,
+    .onroad-page .jr-layout,
+    .onroad-page .jp-layout {
+        grid-template-columns: 1fr;
+        display: grid;
+    }
+    .onroad-page .jr-masthead__inner {
+        align-items: start;
+    }
+    .onroad-page .jr-editor-note,
+    .onroad-page .jr-sidebar {
+        width: 100%;
+        padding-left: 0;
+        border-left: 0;
+        border-top: 1px solid var(--c-line);
+        padding-top: var(--s-5);
+    }
+    .onroad-page .jr-cards {
+        grid-template-columns: 1fr;
+    }
+    .onroad-page .jp-image {
+        aspect-ratio: 4 / 3;
+    }
+    .onroad-page .jp-rail {
+        position: static;
+    }
+    .onroad-page .jp-author,
+    .onroad-page .jp-cta,
+    .onroad-page .jp-topline {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .onroad-page .jp-share {
+        margin-left: 0;
+    }
+}
 

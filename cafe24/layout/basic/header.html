@@ -1,33 +1,33 @@
 <header id="header" class="site-header onroad-page" data-ez="contents-enduriz-header-1">
 	<div class="site-header__inner">
-		<a class="site-header__brand" href="/" aria-label="온로드 홈">
+		<a class="site-header__brand" href="/" aria-label="Onroad home">
 			<span class="site-header__brand-mark" aria-hidden="true"></span>
-			<span>Onroad</span><em>EST · 2026</em>
+			<span>Onroad</span><em>EST / 2026</em>
 		</a>
 
-		<nav class="site-header__nav" id="siteNav" aria-label="주요 메뉴">
-			<a href="/shopinfo/endurance-core.html">Endurance Core</a>
+		<nav class="site-header__nav" id="siteNav" aria-label="Primary navigation">
+			<a href="/">Home</a>
 			<a href="/product/detail.html?product_no=11">Product</a>
-			<a href="/shopinfo/company.html">Brand</a>
-			<a href="/shopinfo/ingredient-science.html">Journal</a>
-			<a href="/shopinfo/runner-reviews.html">Runners</a>
+			<a href="/shopinfo/ingredient-science.html">Science</a>
+			<a href="/journal/index.html">Journal</a>
+			<a href="/shopinfo/company.html">About</a>
 			<a href="/member/login.html" class="site-header__nav-auth site-header__nav-signin" module="Layout_statelogoff">Sign in</a>
 			<a href="/member/agreement.html" class="site-header__nav-auth site-header__nav-signup" module="Layout_statelogoff">Sign up</a>
 		</nav>
 
-		<div class="site-header__actions" aria-label="쇼핑 메뉴">
+		<div class="site-header__actions" aria-label="Shop menu">
 			<a href="/member/login.html" class="site-header__auth site-header__signin" module="Layout_statelogoff">Sign in</a>
 			<a href="/member/agreement.html" class="site-header__auth site-header__signup" module="Layout_statelogoff">Sign up</a>
-			<a href="/myshop/index.html" class="site-header__icon site-header__account" aria-label="마이페이지"><!--@import(/svg/icon-user.html)--></a>
-			<a href="javascript:;" class="eSearch site-header__icon" aria-label="검색"><!--@import(/svg/icon-search.html)--></a>
-			<a href="/myshop/wish_list.html" class="site-header__icon" aria-label="위시리스트"><!--@import(/svg/icon-heart.html)--></a>
-			<a href="/order/basket.html" class="site-header__icon" module="Layout_orderBasketcount" aria-label="장바구니">
+			<a href="/myshop/index.html" class="site-header__icon site-header__account" aria-label="My account"><!--@import(/svg/icon-user.html)--></a>
+			<a href="javascript:;" class="eSearch site-header__icon" aria-label="Search"><!--@import(/svg/icon-search.html)--></a>
+			<a href="/myshop/wish_list.html" class="site-header__icon" aria-label="Wishlist"><!--@import(/svg/icon-heart.html)--></a>
+			<a href="/order/basket.html" class="site-header__icon" module="Layout_orderBasketcount" aria-label="Cart">
 				<!--@import(/svg/icon-cart.html)-->
 				<span class="count {$basket_count_display|display} {$basket_count_display_class}">
 					<span class="{$basket_count_class}">{$basket_count}</span>
 				</span>
 			</a>
-			<button class="site-header__burger" id="navBurger" type="button" aria-label="메뉴"><span></span><span></span><span></span></button>
+			<button class="site-header__burger" id="navBurger" type="button" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
 		</div>
 	</div>
 </header>
