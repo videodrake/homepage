@@ -4,6 +4,8 @@
 # OS
 .DS_Store
 Thumbs.db
+node_modules/
+tmp/
 .gstack/
 .codex
 kinomix/
