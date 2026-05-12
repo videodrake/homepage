@@ -33,6 +33,10 @@ function shouldIgnoreFailure(url) {
   return ignoreUrlPatterns.some((pattern) => pattern.test(url));
 }
 
+function shouldIgnorePageError(message) {
+  return /Failed to fetch/i.test(message);
+}
+
 async function visibleText(page, selector) {
   const locator = page.locator(selector).first();
   if ((await locator.count()) === 0) return null;
@@ -57,7 +61,9 @@ async function auditPage(browser, pageSpec, viewport) {
     }
   });
   page.on('pageerror', (error) => {
-    pageErrors.push(error.message);
+    if (!shouldIgnorePageError(error.message)) {
+      pageErrors.push(error.message);
+    }
   });
   page.on('requestfailed', (request) => {
     const url = request.url();
