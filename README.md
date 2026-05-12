@@ -283,13 +283,15 @@ project/_qa/
 
 ## 10. 배포 워크플로
 
-1. **로컬 편집** (cursor/claude/vscode 등으로).
-2. **커밋 + 푸시** (`git push origin main`) → GitHub에 기록.
-3. **사용자가 FTP로 업로드** — 자동 배포 안 됨. 대상 파일 직접 올려야 zenera.kr에 반영됨.
-4. **캐시 반영 확인**
-   - 기본: 본인 브라우저 `Ctrl+Shift+R` (하드 리로드).
-   - 안 바뀌면: `cafe24/layout/basic/layout.html`의 `<!--@css(.../onroad.css)-->`를 `<!--@css(.../onroad.css?v=해시)-->` 로 수정하고 layout.html도 함께 업로드 → 모든 방문자에게 새 파일 강제 로드.
-   - 다음 CSS 업데이트 시 `?v=숫자` 값을 올려가며 갱신.
+**자동 배포 활성화됨** (2026-05 ~). 상세 절차·트러블슈팅은 **[`DEPLOY.md`](./DEPLOY.md)** 참조.
+
+요약:
+1. **편집** → feature 브랜치(`claude/review-…` 또는 `feat/…`)에 커밋.
+2. **PR로 main 머지** — main 직접 푸시는 HTTP 403, 반드시 PR 경유 (GitHub MCP `create_pull_request` + `merge_pull_request`, 또는 `gh pr create` + `gh pr merge`, 또는 웹 UI).
+3. **자동 배포** — GitHub Actions `.github/workflows/deploy-cafe24.yml`이 `cafe24/**` 변경 감지 → lftp로 SFTP `/base/`에 미러. 1~2분 소요.
+4. **확인** — 라이브 강력 새로고침(`Ctrl+Shift+R`). 안 바뀌면 카페24 옵티마이저 캐시 — 보통 콘텐츠 해시 기반이라 자동 갱신되지만 영구히 안 바뀌면 `cafe24/layout/basic/layout.html`의 `<!--@css(.../onroad.css?v=해시)-->` 값을 올려 강제 무효화.
+
+기본은 add/update only. 전체 미러 청소(원격 단독 파일 삭제)는 Actions UI에서 수동 `delete_remote=true` 실행. 자세한 건 DEPLOY.md.
 
 ---
 
