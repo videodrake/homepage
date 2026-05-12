@@ -4,6 +4,14 @@
   function init() {
     if (!document.querySelector('.onroad-page')) return;
 
+    // cafe24 default injects an extra X glyph/SVG inside .btnClose that
+    // stacks under our ::before "×" — clear inner HTML so only ::before
+    // renders. Doesn't break click behavior (focusout on input closes
+    // tooltip via basic.js setTooltipEvent).
+    document.querySelectorAll('.ec-base-tooltip .btnClose').forEach(function (el) {
+      el.textContent = '';
+    });
+
     var burger = document.getElementById('navBurger');
     var nav = document.getElementById('siteNav');
     if (burger && nav) {
