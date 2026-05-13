@@ -72,11 +72,17 @@ Do not ask the user for paths unless the adapter cannot find the source files.
    - Include `cafe24/journal/<slug>.html`.
    - Include `cafe24/SkinImg/img/journal/<slug>/img-N.png`.
    - Include `cafe24/journal/index.html` when updated by the adapter.
+   - Include automation repo `content/CONTENT_STATE.md` status update.
+   - Include automation repo `content/CONTENT_LOG.md` publication log update.
    - Exclude unrelated untracked files.
-8. Commit and push the feature branch.
-9. Create a PR into `main` and merge it.
-10. Confirm GitHub Actions workflow `Deploy cafe24 skin to SFTP` succeeds.
-11. Report the live URL.
+8. Update the automation repo Git ledger.
+   - `content/CONTENT_STATE.md`: set this slug to `deployed`.
+   - `content/CONTENT_LOG.md`: add the Cafe24 Journal publication row or mark the planned row complete.
+   - Record the live URL or generated Journal path in the log.
+9. Commit and push the feature branch.
+10. Create a PR into `main` and merge it.
+11. Confirm GitHub Actions workflow `Deploy cafe24 skin to SFTP` succeeds.
+12. Report the live URL.
 
 ## 6. Hard Rules
 
@@ -88,6 +94,7 @@ Do not ask the user for paths unless the adapter cannot find the source files.
 - Do not automate Naver publishing.
 - Do not commit unrelated files.
 - Do not run from homepage PR merges; this is only for Codex Journal PR merges.
+- Do not omit Git ledger updates after successful deployment: `content/CONTENT_STATE.md` and `content/CONTENT_LOG.md`.
 
 ## 7. Stop Conditions
 
@@ -101,6 +108,7 @@ Stop and report without PR/merge if any condition occurs:
 - Required image files are not copied.
 - GitHub PR creation or merge fails.
 - GitHub Actions deploy fails.
+- Git ledger update fails.
 
 ## 8. Final Report Format
 
