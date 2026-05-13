@@ -19058,7 +19058,7 @@ body.onroad-page .myshopArea .jg-page-links a:hover {
     }
 }
 
-/* My Page account summary v8: fixed card slots independent of dynamic values */
+/* My Page account summary v8: fixed card slots independent of dynamic values. */
 .onroad-page .my-page--refined .my-panel--account .my-account-summary {
     grid-auto-rows: 184px !important;
     align-items: stretch !important;
