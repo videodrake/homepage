@@ -205,9 +205,6 @@ function renderPage({ title, deck, articleHtml, heroImage, args }) {
   const category = args.category || 'Pace Science';
   const number = args.number || args.slug;
   const date = args.date || todayKst();
-  const author = args.author || 'ONROAD Journal';
-  const readTime = args.readTime || '7 min read';
-  const avatar = Array.from(author)[0] || 'O';
   return `<!--@layout(/layout/basic/layout.html)-->
 <main class="onroad-page journal-post journal-post--generated">
   <section class="jp-hero" data-header-light>
@@ -219,27 +216,13 @@ function renderPage({ title, deck, articleHtml, heroImage, args }) {
       <div class="eyebrow">${escapeHtml(category)} / ${escapeHtml(number)}</div>
       <h1>${inlineMarkdown(title)}</h1>
       <p class="jp-deck">${escapeHtml(deck)}</p>
-      <div class="jp-author">
-        <span class="jp-avatar">${escapeHtml(avatar)}</span>
-        <span><strong>${escapeHtml(author)}</strong><br>Journal Editor</span>
-        <span>/ ${escapeHtml(readTime)}</span>
-      </div>
     </div>
   </section>
 
-  ${heroImage ? `<div class="jp-image" style="background-image:url('${escapeHtml(heroImage)}');"></div>` : ''}
+  ${heroImage ? `<figure class="jp-image"><img src="${escapeHtml(heroImage)}" alt="" loading="eager"></figure>` : ''}
 
   <section class="jp-body" data-header-light>
     <div class="jp-layout">
-      <aside class="jp-rail">
-        <div class="eyebrow">Editorial Gate</div>
-        <div class="jp-data">
-          <div><span>Rule</span><strong>Journal 0</strong></div>
-          <div><span>Gate</span><strong>PASS before build</strong></div>
-          <div><span>Slug</span><strong>${escapeHtml(args.slug)}</strong></div>
-        </div>
-      </aside>
-
       <article class="jp-article">
         ${articleHtml}
       </article>
