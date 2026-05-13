@@ -7361,56 +7361,6 @@ body.onroad-page .onroad-agreement-step.onroad-agreement-step--compact {
 .onroad-page .my-orders .ec-base-paginate {
     margin-top: var(--s-6)
     }
-/* ---------- Account info 2x2 ---------- */
-.onroad-page .my-info {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0;
-    border: 1px solid var(--c-ink);
-    background: var(--c-cream);
-    margin-top: var(--s-5)
-    }
-.onroad-page .my-info__cell {
-    padding: var(--s-6);
-    border-right: 1px solid var(--c-line);
-    border-bottom: 1px solid var(--c-line);
-    min-width: 0
-    }
-.onroad-page .my-info__cell:nth-child(2n) {
-    border-right: 0
-    }
-.onroad-page .my-info__cell:nth-last-child(-n+2) {
-    border-bottom: 0
-    }
-.onroad-page .my-info__cell .k {
-    font-family: var(--font-mono);
-    font-size: 10px;
-    color: var(--c-meta);
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    margin-bottom: var(--s-3)
-    }
-.onroad-page .my-info__cell .v {
-    font-family: var(--font-serif);
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 1.4;
-    font-variation-settings: "opsz" 24;
-    color: var(--c-ink);
-    word-break: keep-all
-    }
-.onroad-page .my-info__cell .v em {
-    font-style: italic;
-    color: var(--c-signal);
-    font-variation-settings: "opsz" 24, "SOFT" 100
-    }
-.onroad-page .my-info__cell .v span {
-    font-family: var(--font-mono);
-    font-size: 12px;
-    color: var(--c-meta);
-    margin-left: 4px;
-    letter-spacing: 0.04em
-    }
 /* ---------- Foot CTAs ---------- */
 .onroad-page .my-foot-ctas {
     display: flex;
@@ -7711,18 +7661,6 @@ body.onroad-page .onroad-agreement-step.onroad-agreement-step--compact {
         }
     .onroad-page .my-orderstate__cell:nth-child(1), .onroad-page .my-orderstate__cell:nth-child(2) {
         border-bottom: 1px solid var(--c-line)
-        }
-    .onroad-page .my-info {
-        grid-template-columns: 1fr
-        }
-    .onroad-page .my-info__cell {
-        border-right: 0
-        }
-    .onroad-page .my-info__cell:nth-last-child(2) {
-        border-bottom: 1px solid var(--c-line)
-        }
-    .onroad-page .my-info__cell:last-child {
-        border-bottom: 0
         }
     .onroad-page .my-orders .prdBox {
         grid-template-columns: 56px 1fr
@@ -17549,46 +17487,6 @@ body.onroad-page .myshopArea #myshopMain.my-nav .menu a:hover {
     margin: 0;
 }
 
-.onroad-page .my-page--dashboard .my-info {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 1px;
-    background: var(--c-line);
-    border: 1px solid var(--c-line);
-}
-
-.onroad-page .my-page--dashboard .my-info__cell {
-    display: grid;
-    align-content: start;
-    gap: var(--s-2);
-    min-height: 122px;
-    padding: var(--s-5);
-    background: var(--c-paper);
-    border: 0;
-}
-
-.onroad-page .my-page--dashboard .my-info__cell span,
-.onroad-page .my-page--dashboard .my-info__cell em {
-    color: var(--c-meta);
-    font-family: var(--font-mono);
-    font-size: 10px;
-    font-style: normal;
-    letter-spacing: 0.12em;
-    line-height: 1.35;
-    text-transform: uppercase;
-}
-
-.onroad-page .my-page--dashboard .my-info__cell strong {
-    overflow: hidden;
-    color: var(--c-ink);
-    font-family: var(--font-serif);
-    font-size: clamp(22px, 2.4vw, 34px);
-    font-weight: 300;
-    line-height: 1.08;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
 body.onroad-page .myshopArea #myshopMain.my-nav {
     width: 100% !important;
     max-width: none !important;
@@ -17636,8 +17534,7 @@ body.onroad-page .myshopArea #myshopMain.my-nav .menu a {
     }
 
     .onroad-page .my-page--dashboard .my-hero__stats,
-    .onroad-page .my-page--dashboard .my-actions,
-    .onroad-page .my-page--dashboard .my-info {
+    .onroad-page .my-page--dashboard .my-actions {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
@@ -17655,7 +17552,6 @@ body.onroad-page .myshopArea #myshopMain.my-nav .menu a {
     .onroad-page .my-page--dashboard .my-hero__stats,
     .onroad-page .my-page--dashboard .my-orderstate,
     .onroad-page .my-page--dashboard .my-actions,
-    .onroad-page .my-page--dashboard .my-info,
     .onroad-page .my-page--dashboard .my-nav .menu,
     body.onroad-page .myshopArea #myshopMain.my-nav .menu {
         grid-template-columns: 1fr !important;
@@ -17663,8 +17559,7 @@ body.onroad-page .myshopArea #myshopMain.my-nav .menu a {
 
     .onroad-page .my-page--dashboard .my-stat,
     .onroad-page .my-page--dashboard .my-orderstate__cell,
-    .onroad-page .my-page--dashboard .my-actions a,
-    .onroad-page .my-page--dashboard .my-info__cell {
+    .onroad-page .my-page--dashboard .my-actions a {
         min-height: auto;
     }
 
@@ -17732,39 +17627,6 @@ body.onroad-page .myshopArea #myshopMain.my-nav .menu a {
     margin-top: auto !important;
     font-size: clamp(52px, 6vw, 84px) !important;
     letter-spacing: 0 !important;
-}
-
-.onroad-page .my-page--refined .my-info {
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 12px !important;
-    background: transparent !important;
-    border: 0 !important;
-}
-
-.onroad-page .my-page--refined .my-info__cell {
-    min-height: 156px !important;
-    padding: clamp(24px, 3vw, 36px) !important;
-    border: 1px solid rgba(20, 18, 16, 0.14) !important;
-    background: #fbf7ef !important;
-}
-
-.onroad-page .my-page--refined .my-info__cell span,
-.onroad-page .my-page--refined .my-info__cell em {
-    font-family: var(--font-sans) !important;
-    font-size: clamp(15px, 1.35vw, 19px) !important;
-    font-weight: 650 !important;
-    letter-spacing: 0 !important;
-    line-height: 1.35 !important;
-    text-transform: none !important;
-}
-
-.onroad-page .my-page--refined .my-info__cell strong {
-    display: block !important;
-    margin-top: auto !important;
-    color: var(--c-ink) !important;
-    font-size: clamp(34px, 4vw, 58px) !important;
-    line-height: 0.98 !important;
-    overflow-wrap: anywhere !important;
 }
 
 .onroad-page .my-page--refined .my-actions {
@@ -18128,7 +17990,6 @@ body.onroad-page .myshopArea #myshopMain.my-nav {
 
 @media (max-width: 920px) {
     .onroad-page .my-page--refined .my-orderstate,
-    .onroad-page .my-page--refined .my-info,
     .onroad-page .my-page--refined .my-actions,
     body.onroad-page .myshopArea .ec-base-tab.typeNav .menu,
     body.onroad-page .myshopArea .ec-base-box.gHalf ul,
@@ -18154,7 +18015,6 @@ body.onroad-page .myshopArea #myshopMain.my-nav {
     }
 
     .onroad-page .my-page--refined .my-orderstate__cell,
-    .onroad-page .my-page--refined .my-info__cell,
     .onroad-page .my-page--refined .my-actions a {
         min-height: 132px !important;
         padding: var(--s-5) !important;
@@ -18295,7 +18155,6 @@ body.onroad-page .myshopArea #myshopMain.my-nav {
 .onroad-page .my-page--refined .my-panel,
 .onroad-page .my-page--refined .my-stat,
 .onroad-page .my-page--refined .my-actions a,
-.onroad-page .my-page--refined .my-info__cell,
 .onroad-page .my-page--refined .my-orderstate__cell,
 body.onroad-page .myshopArea #myshopMain.my-nav {
     background: #f6f1e8 !important;
@@ -18365,14 +18224,6 @@ body.onroad-page .myshopArea #myshopMain.my-nav {
 
 .onroad-page .my-page--refined [data-empty-zero]:empty::before {
     content: "0";
-}
-
-.onroad-page .my-page--refined .my-info__cell strong {
-    white-space: normal;
-}
-
-.onroad-page .my-page--refined .my-info__cell em:empty {
-    display: none;
 }
 
 .onroad-page .my-page--refined .my-orders:has(.ec-base-prdEmpty:not(.displaynone)) .ec-base-paginate {
@@ -18481,23 +18332,19 @@ body.onroad-page .myshopArea #myshopMain.my-nav .my-nav__foot a {
     font-size: clamp(31px, 3vw, 46px) !important;
     line-height: 1.02 !important;
 }
-.onroad-page .my-page--refined .my-orderstate,
-.onroad-page .my-page--refined .my-info {
+.onroad-page .my-page--refined .my-orderstate {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     gap: 12px !important;
     background: transparent !important;
     border: 0 !important;
 }
-.onroad-page .my-page--refined .my-orderstate__cell,
-.onroad-page .my-page--refined .my-info__cell {
+.onroad-page .my-page--refined .my-orderstate__cell {
     min-height: 164px !important;
     padding: clamp(24px, 3vw, 36px) !important;
     border: 1px solid rgba(20, 18, 16, 0.14) !important;
     background: #fbf7ef !important;
 }
-.onroad-page .my-page--refined .my-orderstate__cell span,
-.onroad-page .my-page--refined .my-info__cell span,
-.onroad-page .my-page--refined .my-info__cell em {
+.onroad-page .my-page--refined .my-orderstate__cell span {
     color: var(--c-ink) !important;
     font-family: var(--font-sans) !important;
     font-size: clamp(17px, 1.45vw, 22px) !important;
@@ -18506,8 +18353,7 @@ body.onroad-page .myshopArea #myshopMain.my-nav .my-nav__foot a {
     line-height: 1.28 !important;
     text-transform: none !important;
 }
-.onroad-page .my-page--refined .my-orderstate__cell strong,
-.onroad-page .my-page--refined .my-info__cell strong {
+.onroad-page .my-page--refined .my-orderstate__cell strong {
     display: block !important;
     margin-top: auto !important;
     color: var(--c-ink) !important;
@@ -18614,7 +18460,6 @@ body.onroad-page .myshopArea:has(.ec-base-prdEmpty:not(.displaynone)) .ec-base-p
 }
 @media (max-width: 920px) {
     .onroad-page .my-page--refined .my-orderstate,
-    .onroad-page .my-page--refined .my-info,
     .onroad-page .my-page--refined .my-actions,
     body.onroad-page .myshopArea .ec-base-tab.typeNav .menu,
     body.onroad-page .myshopArea .ec-base-box.gHalf ul,
@@ -18628,7 +18473,6 @@ body.onroad-page .myshopArea:has(.ec-base-prdEmpty:not(.displaynone)) .ec-base-p
         width: calc(100vw - 32px) !important;
     }
     .onroad-page .my-page--refined .my-orderstate__cell,
-    .onroad-page .my-page--refined .my-info__cell,
     .onroad-page .my-page--refined .my-actions a {
         min-height: 132px !important;
         padding: var(--s-5) !important;
@@ -18642,107 +18486,7 @@ body.onroad-page .myshopArea:has(.ec-base-prdEmpty:not(.displaynone)) .ec-base-p
     }
 }
 
-/* My Page account summary v6: fix unit overlap and equalize cards */
-.onroad-page .my-page--refined .my-info {
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 14px !important;
-    background: transparent !important;
-    border: 0 !important;
-}
-
-.onroad-page .my-page--refined .my-info__cell {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    justify-content: flex-start !important;
-    min-height: 150px !important;
-    padding: clamp(22px, 2.4vw, 30px) !important;
-    background: #fffbf4 !important;
-    border: 1px solid rgba(20, 18, 16, 0.24) !important;
-    box-shadow: 0 10px 24px rgba(37, 30, 22, 0.035) !important;
-}
-
-.onroad-page .my-page--refined .my-panel--account .my-info__cell {
-    height: clamp(152px, 12vw, 184px) !important;
-    min-height: clamp(152px, 12vw, 184px) !important;
-}
-
-.onroad-page .my-page--refined .my-info__cell > span {
-    display: block !important;
-    margin: 0 0 14px !important;
-    color: var(--c-meta) !important;
-    font-family: var(--font-sans) !important;
-    font-size: clamp(15px, 1.25vw, 18px) !important;
-    font-weight: 700 !important;
-    letter-spacing: 0 !important;
-    line-height: 1.28 !important;
-    text-transform: none !important;
-}
-
-.onroad-page .my-page--refined .my-info__metric,
-.onroad-page .my-page--refined .my-info__cell strong.my-info__metric {
-    display: inline-flex !important;
-    align-items: baseline !important;
-    gap: 8px !important;
-    margin: 0 !important;
-    color: var(--c-ink) !important;
-    font-family: var(--font-serif) !important;
-    font-size: clamp(34px, 3.8vw, 56px) !important;
-    font-weight: 300 !important;
-    letter-spacing: 0 !important;
-    line-height: 1 !important;
-    white-space: nowrap !important;
-    overflow: visible !important;
-    text-overflow: clip !important;
-}
-
-.onroad-page .my-page--refined .my-info__metric > span {
-    display: inline !important;
-    position: static !important;
-    z-index: auto !important;
-    color: inherit !important;
-    font: inherit !important;
-    letter-spacing: inherit !important;
-    line-height: inherit !important;
-}
-
-.onroad-page .my-page--refined .my-info__metric small {
-    display: inline !important;
-    position: static !important;
-    z-index: auto !important;
-    color: var(--c-meta) !important;
-    font-family: var(--font-sans) !important;
-    font-size: clamp(15px, 1.35vw, 20px) !important;
-    font-weight: 700 !important;
-    letter-spacing: 0 !important;
-    line-height: 1 !important;
-}
-
-.onroad-page .my-page--refined .my-info__cell em {
-    display: block !important;
-    margin: 10px 0 0 !important;
-    color: var(--c-meta) !important;
-    font-family: var(--font-sans) !important;
-    font-size: clamp(14px, 1.1vw, 16px) !important;
-    font-style: normal !important;
-    font-weight: 600 !important;
-    letter-spacing: 0 !important;
-    line-height: 1.35 !important;
-    text-transform: none !important;
-}
-
-@media (max-width: 720px) {
-    .onroad-page .my-page--refined .my-info {
-        grid-template-columns: 1fr !important;
-    }
-
-    .onroad-page .my-page--refined .my-info__cell {
-        min-height: 128px !important;
-    }
-}
-
-/* My Page account summary v7: isolated uniform card system */
+/* My Page account summary: isolated uniform card system */
 .onroad-page .my-page--refined .my-panel--account {
     display: grid !important;
     gap: clamp(22px, 2.4vw, 32px) !important;
@@ -18864,7 +18608,7 @@ body.onroad-page .myshopArea:has(.ec-base-prdEmpty:not(.displaynone)) .ec-base-p
     }
 }
 
-/* Myshop detail pages: mileage summary and legacy jg replacement */
+/* Myshop detail pages: mileage summary and shared brief styles */
 body.onroad-page .myshopArea .my-mileage-summary,
 body.onroad-page .myshopArea [class*="xans-myshop-summary"].ec-base-box.gHalf {
     display: grid !important;
@@ -19058,7 +18802,7 @@ body.onroad-page .myshopArea .onroad-page-links a:hover {
     }
 }
 
-/* My Page account summary v8: fixed card slots independent of dynamic values. */
+/* My Page account summary: fixed card slots independent of dynamic values. */
 .onroad-page .my-page--refined .my-panel--account .my-account-summary {
     grid-auto-rows: 184px !important;
     align-items: stretch !important;
