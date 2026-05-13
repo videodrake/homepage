@@ -35,8 +35,8 @@
 
 Claude Project가 GitHub/Git 저장소를 읽을 수 있으면 다음을 우선 확인한다.
 
-1. `A_repo/content/CONTENT_STATE.md`
-2. `A_repo/content/CONTENT_LOG.md`
+1. `content/CONTENT_STATE.md`
+2. `content/CONTENT_LOG.md`
 3. 실제 파일 상태: `content/draft/`, `content/published/`, `assets/`
 
 Git을 읽을 수 없을 때만 Project Knowledge의 `콘텐츠_발행_로그.md`를 백업으로 사용한다.
@@ -81,7 +81,9 @@ Journal 원고는 항상 다음을 지킨다.
 - 본문 마커는 `[IMG-N: 식별명]` 단독 줄
 - 이미지 명세 헤더는 `### IMG-N — 식별명`
 - 명세에는 종류, 비율, alt 텍스트, 프롬프트 필수
-- 마지막에 검증 리포트 포함
+- 마지막에 검증 리포트 요약 포함
+- 검증 리포트에는 `[IMG-1]`, `[IMG-1: ...]` 같은 이미지 마커 문자열을 반복하지 않음
+- 사용자가 파일로 저장할 원고는 반드시 YAML frontmatter `---`부터 시작해야 하며, 선정 이유/인계 메모는 원고 안에 넣지 않음
 
 세부 형식은 `자리1_출력사양.md`를 따른다.
 
@@ -115,4 +117,3 @@ Journal 원고는 항상 다음을 지킨다.
 4. 곧바로 최종 `.md` 원고를 출력한다.
 
 사용자가 "주제부터 골라줘"라고 하면 후보 3개와 추천 1개만 제시하고 승인 후 작성한다.
-

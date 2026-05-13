@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Journal №01-A : 왜 30km에서 무너지는가 — 800kcal가 모자란 이유."
 channel: journal
 funnel_stage: TOFU

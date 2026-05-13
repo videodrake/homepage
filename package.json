@@ -3,6 +3,7 @@
     "journal:preview": "node tools/build-journal-cafe24.mjs --allow-missing-assets",
     "journal:stage": "node tools/build-journal-cafe24.mjs --write-cafe24",
     "journal:build": "node tools/build-journal-cafe24.mjs",
+    "journal:validate": "node tools/validate-journal-content.mjs",
     "audit:live": "node tools/live-audit.mjs"
   },
   "devDependencies": {
