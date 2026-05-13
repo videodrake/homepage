@@ -1,35 +1,16 @@
-# Claude Code Journal Stage 3 Prompt
+# Claude Code Journal Stage 3 Harness Prompt
 
 Read this file when a Codex Journal pull request has been merged into main. Execute it as the Stage 3 operator for the Cafe24 homepage repo.
 
-## Objective
+## 1. Objective
 
 A Codex Journal PR has been merged into main. Take the latest published markdown and image assets from the automation repo, convert them into this Cafe24 homepage repo, then create/merge the homepage PR and confirm GitHub Actions deployment.
 
-## Fixed Repo Context
+The user should not run any command manually after the Codex PR is merged.
 
-```yaml
-homepage_repo: "C:\\Users\\user\\homepage\\videodrake-homepage"
-stage_command: "npm run journal:stage"
-automation_source: "Use the defaults embedded in tools/build-journal-cafe24.mjs"
-source_md_dir: "A_repo/content/published"
-source_asset_dir: "A_repo/assets/<slug>"
-target_html_dir: "cafe24/journal"
-target_asset_dir: "cafe24/SkinImg/img/journal/<slug>"
-deploy_workflow: "Deploy cafe24 skin to SFTP"
-trigger_event: "Pull request closed"
-trigger_is_merged: true
-trigger_base_branch: "main"
-trigger_head_branch_prefix: "codex/journal-"
-trigger_label: "journal-ready"
-trigger_is_draft: false
-```
+## 2. Trigger Contract
 
-Do not ask the user for paths unless the adapter cannot find the source files.
-
-## Trigger Contract
-
-This prompt must be run only for Codex Journal PR merges with all of these conditions:
+Run this prompt only when all conditions are true:
 
 ```text
 Event: Pull request closed
@@ -51,8 +32,32 @@ branch: codex/journal-XX-X
 label: journal-ready
 ```
 
+## 3. Fixed Repo Context
 
-## Workflow
+```yaml
+homepage_repo: "C:\\Users\\user\\homepage\\videodrake-homepage"
+stage_command: "npm run journal:stage"
+automation_source: "Use the defaults embedded in tools/build-journal-cafe24.mjs"
+source_md_dir: "A_repo/content/published"
+source_asset_dir: "A_repo/assets/<slug>"
+target_html_dir: "cafe24/journal"
+target_asset_dir: "cafe24/SkinImg/img/journal/<slug>"
+deploy_workflow: "Deploy cafe24 skin to SFTP"
+```
+
+Do not ask the user for paths unless the adapter cannot find the source files.
+
+## 4. Input Discovery
+
+1. Read the triggering PR metadata if available.
+2. Derive `slug` from the Codex branch name by removing `codex/`.
+   - `codex/journal-02-a` -> `journal-02-a`
+3. If triggering metadata is unavailable, use the latest markdown selected by `npm run journal:stage`.
+4. Confirm generated output path after staging:
+   - `cafe24/journal/<slug>.html`
+   - `cafe24/SkinImg/img/journal/<slug>/img-N.png`
+
+## 5. Workflow
 
 1. Work in `homepage_repo`.
 2. Update local `main` from origin.
@@ -73,7 +78,7 @@ label: journal-ready
 10. Confirm GitHub Actions workflow `Deploy cafe24 skin to SFTP` succeeds.
 11. Report the live URL.
 
-## Hard Rules
+## 6. Hard Rules
 
 - The user should not have to run commands manually.
 - Never push directly to `main`.
@@ -84,7 +89,20 @@ label: journal-ready
 - Do not commit unrelated files.
 - Do not run from homepage PR merges; this is only for Codex Journal PR merges.
 
-## Final Report Format
+## 7. Stop Conditions
+
+Stop and report without PR/merge if any condition occurs:
+
+- `npm run journal:stage` fails.
+- Source markdown is missing.
+- Source image assets are missing.
+- `regulation_check.py` fails before or after conversion.
+- Generated HTML is missing.
+- Required image files are not copied.
+- GitHub PR creation or merge fails.
+- GitHub Actions deploy fails.
+
+## 8. Final Report Format
 
 ```markdown
 ## Journal Deployment Result
