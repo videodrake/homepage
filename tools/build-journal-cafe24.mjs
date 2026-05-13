@@ -219,8 +219,6 @@ function renderPage({ title, deck, articleHtml, heroImage, args }) {
     </div>
   </section>
 
-  ${heroImage ? `<figure class="jp-image"><img src="${escapeHtml(heroImage)}" alt="" loading="eager"></figure>` : ''}
-
   <section class="jp-body" data-header-light>
     <div class="jp-layout">
       <article class="jp-article">
