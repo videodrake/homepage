@@ -1,10 +1,10 @@
 # Claude Code Journal Stage 3 Prompt
 
-Read this file when Codex has pushed a new Journal result. Execute it as the Stage 3 operator for the Cafe24 homepage repo.
+Read this file when a Codex Journal pull request has been merged into main. Execute it as the Stage 3 operator for the Cafe24 homepage repo.
 
 ## Objective
 
-Codex has pushed a completed Journal result. Take the latest published markdown and image assets from the automation repo, convert them into this Cafe24 homepage repo, then create/merge the PR and confirm GitHub Actions deployment.
+A Codex Journal PR has been merged into main. Take the latest published markdown and image assets from the automation repo, convert them into this Cafe24 homepage repo, then create/merge the homepage PR and confirm GitHub Actions deployment.
 
 ## Fixed Repo Context
 
@@ -17,9 +17,40 @@ source_asset_dir: "A_repo/assets/<slug>"
 target_html_dir: "cafe24/journal"
 target_asset_dir: "cafe24/SkinImg/img/journal/<slug>"
 deploy_workflow: "Deploy cafe24 skin to SFTP"
+trigger_event: "Pull request closed"
+trigger_is_merged: true
+trigger_base_branch: "main"
+trigger_head_branch_prefix: "codex/journal-"
+trigger_label: "journal-ready"
+trigger_is_draft: false
 ```
 
 Do not ask the user for paths unless the adapter cannot find the source files.
+
+## Trigger Contract
+
+This prompt must be run only for Codex Journal PR merges with all of these conditions:
+
+```text
+Event: Pull request closed
+Is merged: true
+Base branch: main
+Head branch starts with: codex/journal-
+Labels contains: journal-ready
+Is draft: false
+```
+
+Do not run this prompt for homepage PR merges. The homepage PR created by this workflow must not use the `journal-ready` label and should not use a `codex/journal-` branch name.
+
+Codex naming contract:
+
+```text
+markdown filename: journal-XX-X.md
+slug: journal-XX-X
+branch: codex/journal-XX-X
+label: journal-ready
+```
+
 
 ## Workflow
 
@@ -51,6 +82,7 @@ Do not ask the user for paths unless the adapter cannot find the source files.
 - Do not add product name, ingredient name, product CTA, footer hints, or product-page links to Journal body.
 - Do not automate Naver publishing.
 - Do not commit unrelated files.
+- Do not run from homepage PR merges; this is only for Codex Journal PR merges.
 
 ## Final Report Format
 
