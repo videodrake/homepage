@@ -85,6 +85,7 @@ function inlineMarkdown(text) {
 }
 
 function splitFrontmatter(raw) {
+  raw = raw.replace(/^\uFEFF/, '');
   const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?/);
   if (!match) return { meta: {}, body: raw };
   const meta = {};

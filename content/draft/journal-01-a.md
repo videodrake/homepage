@@ -1,0 +1,278 @@
+﻿---
+title: "Journal №01-A : 왜 30km에서 무너지는가 — 800kcal가 모자란 이유."
+channel: journal
+funnel_stage: TOFU
+content_role: Journal
+journal_source: "본 문서가 원본"
+journal_h2_index: "전체"
+target_keywords:
+  primary: "(Journal은 SEO 비대상 — 참고용)"
+  secondary:
+    - "마라톤 30km 벽"
+    - "글리코겐 고갈"
+    - "마라톤 페이스 드롭"
+word_count: 약 3,000자
+image_count: 6
+review_required: N
+review_note: "심의 불필요 — 본문 내 제품명·기능성 표현 0회, 면책 문구 포함"
+date_drafted: 2026-05-13
+---
+
+# 왜 30km에서 무너지는가 — 800kcal가 모자란 이유.
+
+[IMG-1: 도입부 헤더]
+
+> **핵심 요약**
+> 30km에서 무너지는 일은 의지의 문제가 아니라 정해진 계산이다. 체내 글리코겐 약 2,000kcal, 풀마라톤 소모 약 2,800kcal — 800kcal가 모자란다.
+> - 부족분은 지방이 메워야 한다. 그러나 지방은 분해 속도가 글리코겐보다 느리다.
+> - 강도가 높을수록 글리코겐 의존도가 올라가고, 글리코겐이 더 빨리 바닥난다.
+> - 30km 부근은 평균적인 마라톤 페이스에서 남은 글리코겐이 20% 아래로 떨어지는 지점이다.
+> - 같은 800kcal 부족 앞에서도 무너지는 러너와 유지하는 러너가 갈린다. 차이는 지방을 메우는 속도다.
+
+새벽 5시 30분의 광화문 광장. 출발 그룹별로 줄이 늘어선다. 4시간 그룹, 4시간 30분 그룹, 5시간 그룹. 출발 후 25km까지, 같은 그룹의 러너들은 비슷한 호흡과 비슷한 페이스로 흐른다.
+
+30km 표지판이 시야에 들어올 즈음, 무리가 갈라진다. 한쪽은 어깨가 떨어지고 보폭이 줄어든다. Garmin 화면을 보면 km당 페이스가 30초씩 늦어지기 시작한다. 다른 한쪽은 같은 자세로 같은 페이스를 유지한다.
+
+같은 훈련, 같은 거리, 같은 날씨. 그런데 왜 무너지는 사람과 무너지지 않는 사람으로 나뉘는가.
+
+이 글이 답한다.
+
+## 글리코겐 2,000kcal와 마라톤 2,800kcal — 800kcal가 모자란 이유.
+
+마라톤 후반의 페이스 저하는 의지의 문제로 보이기 쉽다. 그러나 그보다 먼저 작동하는 것이 연료 계산이다. 풀마라톤은 평균적으로 약 2,800kcal를 소모한다. 체중 70kg 러너 기준 추정치다. 거리가 거의 같으니 러너마다의 차이는 ±200~300kcal 안에서 움직인다.
+
+문제는 몸 안에 그만큼의 즉시 사용 가능한 연료가 없다는 것이다.
+
+체내 글리코겐의 저장량은 근육 약 400~500g, 간 약 80~100g 정도다. 합쳐서 500~600g, 칼로리로 환산하면 약 2,000~2,400kcal에 그친다(Coyle, 1995). 결과는 단순하다. 2,800kcal를 써야 하는데 글리코겐은 2,000kcal밖에 없다. 800kcal가 모자란다.
+
+[IMG-2: 글리코겐 잔량 곡선]
+
+부족분은 지방이 메워야 한다. 몸 안의 지방 저장량은 글리코겐의 30배가 넘는다. 체지방률 15% 러너라면 약 10kg, 칼로리로는 90,000kcal에 달한다. 연료 자체는 차고 넘친다.
+
+그런데도 30km에서 무너지는 일이 흔하다. 이유는 분해 속도에 있다.
+
+글리코겐은 빠르게 분해된다. 산소 없이도, 산소가 있어도 모두 쓸 수 있다. 지방은 느리다. 산소가 충분해야 하고, 한 단계 한 단계 더 긴 과정을 거친다. 같은 강도에서 지방이 분해되는 속도는 글리코겐의 절반 이하다(Romijn et al., 1993).
+
+강도가 올라갈수록 글리코겐 의존도가 올라간다. VO2max의 60% 강도에서는 글리코겐과 지방을 거의 반반씩 쓰지만, 75~80% 강도(전형적인 마라톤 페이스 대역)에서는 글리코겐이 전체 에너지의 70%를 넘긴다. 글리코겐이 더 빨리 바닥난다는 뜻이다.
+
+| 항목 | 글리코겐 | 지방 |
+|------|---------|------|
+| 체내 저장량 | 약 500g (~2,000kcal) | 약 8~15kg (60,000kcal+) |
+| 분해 속도 | 빠름 | 느림 |
+| 산소 의존 | 낮음 (혐기·호기 모두) | 높음 (호기 필수) |
+| 고강도 대응 | 가능 | 제한적 |
+
+저장량은 지방이 압도적이다. 그러나 그것을 마라톤 페이스에 맞춰 끌어 쓸 수 있느냐는 다른 질문이다.
+
+[IMG-3: 800kcal 부족분 인포그래픽]
+
+30km 지점이 임계점인 이유가 여기서 드러난다. 3시간 30분~4시간대 페이스로 달리는 러너의 경우, 그 시점에 글리코겐 잔량이 약 20% 아래로 떨어진다. 남은 양으로 같은 속도를 유지할 수 없고, 지방이 그 차이를 빠르게 메우지 못한다. 페이스가 km당 20~40초씩 늦어지기 시작한다.
+
+다만 같은 800kcal 부족 앞에서도 어떤 러너는 30km에서 무너지고, 어떤 러너는 35km까지 같은 페이스를 유지한다. 차이는 무엇인가.
+
+## 남은 30%에서 갈리는 두 부류 — 글리코겐을 빨리 쓰는 사람, 천천히 쓰는 사람.
+
+같은 페이스에서도 러너마다 글리코겐과 지방을 쓰는 비율이 다르다. 이 차이가 30km 이후를 가른다.
+
+엘리트 마라토너를 추적한 대사 연구들은 같은 강도(예: 70% VO2max)에서 러너에 따라 지방 산화 속도가 두 배 가까이 벌어진다고 보고한다(Holloszy & Coyle, 1984). 두 부류로 단순화하면 다음과 같다.
+
+A형 러너는 같은 페이스에서 글리코겐을 더 많이 쓴다. 30km 시점에 남은 글리코겐이 15% 아래로 떨어진다. 지방을 동원하는 속도가 느려서 그 부족분을 제때 메우지 못한다. 그 결과 페이스가 km당 30초 이상 늦어진다.
+
+B형 러너는 같은 페이스에서 글리코겐을 덜 쓴다. 같은 30km 시점에 남은 글리코겐이 25~30%다. 지방 산화 속도가 빨라 부족분을 부드럽게 메운다. 후반 페이스 변화가 km당 5~10초 안쪽이다.
+
+[IMG-4: 두 부류 비교 다이어그램]
+
+| 변수 | A형 — 무너지는 러너 | B형 — 유지하는 러너 |
+|------|--------------------|--------------------|
+| 같은 페이스 글리코겐 사용 비율 | 약 75% | 약 60% |
+| 지방 산화 속도 | 느림 | 빠름 |
+| 30km 남은 글리코겐 | 15% 이하 | 25~30% |
+| 후반 km당 페이스 변화 | 30초+ 드롭 | 5~10초 이내 |
+
+두 부류 사이의 차이는 의지가 아니다. 미토콘드리아의 수와 활성, 그리고 지방 산화 효소의 양에서 시작된다. 미토콘드리아가 많고 효소가 잘 발달한 몸은 같은 산소 안에서 더 많은 지방을 태운다.
+
+이 차이는 훈련에서 만들어진다. 장거리·저강도 훈련(존2)을 꾸준히 쌓은 몸은 미토콘드리아 밀도가 늘고 지방 산화 능력이 발달한다(Burke, 2015). 평일에 짧고 강한 인터벌만 반복하고 주말 LSD가 비어 있는 러닝크루 구성원이 30km에서 자주 무너지는 데에는 이런 배경이 있다. 카카오톡 단톡방에 "왜 또 30km에서 다리가 멈췄지"라는 글이 매 대회 직후 올라오는 이유도 비슷하다.
+
+[IMG-5: 강도별 연료 사용 비율]
+
+다만 두 부류 구분은 모형이다. 실제 러너는 그 사이 어딘가에 분포한다. 컨디션, 기온, 수분 상태, 카보로딩, 레이스 중 탄수화물 보충 여부가 모두 같은 사람의 비율을 그날그날 다르게 만든다. 어제 충분히 잠을 잤는지, 출발 두 시간 전에 무엇을 먹었는지가 30km 시점의 글리코겐 잔량을 좌우한다.
+
+그래도 큰 줄기는 분명하다. 같은 800kcal 부족 앞에서 누가 더 잘 견디는지는 두 가지로 정해진다. 글리코겐을 천천히 쓰는 몸인가, 그리고 지방을 빠르게 동원하는 몸인가. 30km 벽은 모두에게 같은 시점에 오지 않는다. 어떤 러너에게는 28km에 오고, 어떤 러너에게는 35km에 온다.
+
+그러나 글리코겐 저장량의 절대 한계는 누구에게나 비슷하다. 무너지는 시점을 미룰 수는 있어도, 한계 자체를 없앨 수는 없다.
+
+## FAQ
+
+#### Q. 30km 벽은 모든 러너가 겪는가?
+훈련이 잘된 러너일수록 그 시점이 늦거나 약하게 온다. 그러나 글리코겐 저장량의 절대 한계는 누구에게나 비슷하다. 페이스를 끝까지 유지하는 엘리트도 마지막 10km에서 평균 페이스가 미세하게 떨어진다는 보고가 일반적이다.
+
+#### Q. 페이스를 늦추면 글리코겐 고갈을 피할 수 있나?
+부분적으로 가능하다. 70% VO2max에서 60%로 강도를 내리면 글리코겐 사용 비율이 큰 폭으로 줄고, 지방 사용 비율이 올라간다. 다만 그만큼 완주 시간도 늘어난다. 목표 시간이 정해진 대회에서는 페이스 자체를 늦추기 어려우므로, 평소 훈련에서 같은 페이스의 글리코겐 사용 비율을 낮추는 쪽이 현실적이다.
+
+#### Q. 에너지 젤로 800kcal 부족분을 채울 수 있는가?
+이론상 가능하지만 한 번에 다 채우지는 못한다. 위장이 운동 중에 처리할 수 있는 탄수화물 양에 제약이 있어 시간당 약 60~90g, 즉 240~360kcal까지가 현실적인 상한이다. 그래서 800kcal를 외부에서 어느 정도 끌어오려면 출발 직후부터 일정 간격으로 나눠 섭취하는 전략이 필요하다. 30km 이후에 한꺼번에 채우려 하면 흡수가 따라오지 못한다.
+
+#### Q. 30km에서 무너지는 건 결국 의지 문제 아닌가?
+의지보다 먼저 연료가 움직인다. 글리코겐이 20% 아래로 떨어진 몸에서는 같은 페이스를 유지할 자세 자체가 잘 안 나온다. 페이스 드롭은 정신이 약해서가 아니라 출력할 수 있는 에너지의 양이 줄어든 결과다. 의지를 다그치기 전에 연료 계산을 먼저 본다.
+
+#### Q. 글리코겐 저장량은 사람마다 얼마나 다른가?
+근육량, 평소 식사, 대회 전 카보로딩 여부에 따라 다르다. 카보로딩을 충실히 한 러너는 평소보다 20~40% 더 많이 저장하는 것으로 보고된다. 반대로 대회 전 며칠 동안 탄수화물 섭취가 적었던 러너는 저장량이 평소보다도 낮은 상태로 출발선에 선다. 같은 사람도 그 주 식단에 따라 출발 시점의 저장량이 달라진다.
+
+[IMG-6: OUTRO 회수 장면]
+
+새벽 광화문에서 갈라졌던 두 무리는 잠실 종합운동장 도착선에서 다시 만난다. 한쪽은 3시간 50분에 들어오고, 한쪽은 4시간 20분에 들어온다. 차이는 30분.
+
+그 30분은 의지가 만든 것이 아니다. 800kcal의 부족분을 누가 먼저, 누가 더 잘 메웠느냐에서 갈렸다. 30km 벽은 모두에게 같은 강도로 오지 않는다. 그러나 그 계산은 누구에게나 작동한다.
+
+원인은 알았다. 그러면 어떻게 막는가. 그 답은 다음 글에서 다룬다.
+
+※ 본 정보는 제품정보와 관련 없는 내용이며, 학술 자료에 근거한 일반 건강정보입니다.
+※ 의학적 진단을 대체하지 않습니다.
+
+**참고문헌**
+
+- Coyle, E. F. (1995). Substrate utilization during exercise in active people. *American Journal of Clinical Nutrition*, 61(suppl), 968S–979S.
+- Holloszy, J. O., & Coyle, E. F. (1984). Adaptations of skeletal muscle to endurance exercise and their metabolic consequences. *Journal of Applied Physiology*, 56(4), 831–838.
+- Romijn, J. A., Coyle, E. F., Sidossis, L. S., Gastaldelli, A., Horowitz, J. F., Endert, E., & Wolfe, R. R. (1993). Regulation of endogenous fat and carbohydrate metabolism in relation to exercise intensity and duration. *American Journal of Physiology*, 265(3), E380–E391.
+- Burke, L. M. (2015). Re-examining high-fat diets for sports performance. *Sports Medicine*, 45(Suppl 1), S33–S49.
+
+---
+
+## 이미지 명세
+
+> GPT Image 2(GPT-4o Image Generation)로 생성. 각 명세의 프롬프트를 그대로 사용한다. 시리즈 공통 색감·모델·조명·스타일은 `series_blocks/journal-01.yaml`에서 자동 주입되므로 아래 프롬프트에는 각 장면의 고유 내용만 적었다.
+
+### IMG-1 — 도입부 헤더
+
+- **종류**: 분위기 사진
+- **위치**: 제목 직후, 핵심 요약박스 직전
+- **위치 의도**: 새벽 광화문 출발선의 정적. 무리가 아직 갈라지지 않은 시점.
+- **비율**: 21:9 (와이드 시네마틱)
+- **alt 텍스트**: "새벽 광화문 광장 마라톤 출발선 앞에 줄을 선 한국 러너 무리의 새벽 풍경"
+- **캡션**: "새벽 5시 30분. 출발 그룹별로 줄이 늘어선다."
+
+**프롬프트 (GPT Image 2)**:
+> A wide cinematic editorial photograph of a Korean urban marathon staging area at Gwanghwamun Square in central Seoul, well before sunrise.
+>
+> Composition: low wide shot looking down the empty asphalt road, dozens of runners gathered in pace-group lines on both sides of the road, breath faintly visible in the cold air, the silhouette of Gyeongbokgung gate hinted in the soft distant background.
+>
+> The runners are still calm — some stretching, some quietly waiting, none looking at the camera. No race start chaos yet, no spectators, no race banners with readable text.
+>
+> 21:9 cinematic aspect ratio. No on-image text, no race bibs visible.
+
+---
+
+### IMG-2 — 글리코겐 잔량 곡선
+
+- **종류**: 데이터 시각화
+- **위치**: H2-1 본문 중간, 글리코겐과 지방의 분해 속도 차이 설명 직후
+- **위치 의도**: 거리에 따라 글리코겐이 어떻게 떨어지는지 한 장면에서 보여준다.
+- **비율**: 16:9
+- **alt 텍스트**: "마라톤 거리 0~42km에 따른 체내 글리코겐 잔량 변화 곡선 그래프"
+- **캡션**: "30km 부근에서 곡선이 가파르게 떨어진다."
+
+**프롬프트 (GPT Image 2)**:
+> A clean editorial line chart showing muscle glycogen depletion across a full marathon distance.
+>
+> X-axis: distance in km, labeled 0, 10, 20, 30, 42.195. Y-axis: muscle glycogen remaining as percent, labeled 0%, 20%, 50%, 100%.
+>
+> The curve starts at 100% at km 0, decreases gently to about 60% near km 20, then drops more steeply to about 20% around km 30, and approaches near zero at km 42.
+>
+> Horizontal dashed reference line at the 20% mark, labeled "20% 아래 — 페이스 드롭 구간".
+> Vertical thin reference line at km 30 on the x-axis.
+>
+> Title above the chart: "거리에 따른 체내 글리코겐 잔량".
+> 16:9 aspect ratio. All labels in Korean.
+
+---
+
+### IMG-3 — 800kcal 부족분 인포그래픽
+
+- **종류**: 인포그래픽
+- **위치**: H2-1 본문 후반, 비교표 직후
+- **위치 의도**: 800kcal라는 핵심 숫자를 한 장면으로 박는다.
+- **비율**: 4:5
+- **alt 텍스트**: "체내 글리코겐 약 2,000kcal와 풀마라톤 소모 약 2,800kcal의 차이 800kcal를 시각화한 인포그래픽"
+- **캡션**: "글리코겐 약 2,000kcal, 마라톤 약 2,800kcal — 차이 800kcal."
+
+**프롬프트 (GPT Image 2)**:
+> A clean editorial infographic with two large vertical bars side by side.
+>
+> Left bar labeled "체내 글리코겐 ~2,000kcal" reaching about 71% of the chart height.
+> Right bar labeled "풀마라톤 소모 ~2,800kcal" reaching 100% of the chart height.
+>
+> The gap at the top of the left bar — the difference between the two bars — is highlighted as a separate accent block, labeled "800kcal 부족분 — 지방이 메워야 함" in a contrasting accent color.
+>
+> Small footnote at the bottom: "체중 70kg 러너 기준 추정치".
+> Title above the bars: "마라톤 소모량 vs 체내 글리코겐 저장량".
+> 4:5 aspect ratio. All labels in Korean.
+
+---
+
+### IMG-4 — 두 부류 비교 다이어그램
+
+- **종류**: 다이어그램
+- **위치**: H2-2 본문 중간, A형·B형 러너 설명 직후
+- **위치 의도**: 두 부류의 연료 사용 차이를 한 장면에서 비교한다.
+- **비율**: 4:5
+- **alt 텍스트**: "마라톤 후반 무너지는 A형 러너와 유지하는 B형 러너의 글리코겐 및 지방 사용 비율 비교 다이어그램"
+- **캡션**: "같은 페이스, 다른 연료 비율."
+
+**프롬프트 (GPT Image 2)**:
+> A side-by-side comparison diagram with two stacked horizontal bars.
+>
+> Row 1 labeled "A형 — 30km에서 무너지는 러너": horizontal bar split into segments. Left segment "글리코겐 75%", right segment "지방 25%". To the right of the bar, a small annotation reads "30km 남은 글리코겐: 15% 이하".
+>
+> Row 2 labeled "B형 — 30km를 유지하는 러너": horizontal bar split as "글리코겐 60% / 지방 40%". Annotation to the right: "30km 남은 글리코겐: 25~30%".
+>
+> Center caption between rows: "같은 마라톤 페이스, 다른 연료 비율".
+>
+> 4:5 aspect ratio. All labels in Korean. Clean flat editorial style, no 3D effects.
+
+---
+
+### IMG-5 — 강도별 연료 사용 비율
+
+- **종류**: 데이터 시각화
+- **위치**: H2-2 본문 후반, 미토콘드리아·존2 훈련 설명 직후
+- **위치 의도**: 강도가 글리코겐·지방 비율을 어떻게 바꾸는지 보여준다. 마라톤 페이스 대역의 위치를 명시한다.
+- **비율**: 16:9
+- **alt 텍스트**: "운동 강도(VO2max 50~85%) 변화에 따른 글리코겐과 지방 사용 비율 변화를 보여주는 누적 영역 차트"
+- **캡션**: "강도가 오르면 글리코겐 의존도가 따라 오른다."
+
+**프롬프트 (GPT Image 2)**:
+> A stacked area chart showing fuel utilization shifting with exercise intensity.
+>
+> X-axis: exercise intensity in %VO2max, labeled 50%, 60%, 70%, 80%, 85%.
+> Y-axis: fuel use ratio, 0% to 100%.
+>
+> Lower area "지방" (fat oxidation) starts at about 55% at 50% VO2max and shrinks across the range to about 15% at 85% VO2max.
+> Upper area "글리코겐" (glycogen) grows from 45% to 85% across the same range.
+>
+> A vertical reference band between 70% and 80% VO2max labeled "마라톤 페이스 대역".
+>
+> Title above the chart: "강도에 따른 글리코겐과 지방 사용 비율".
+> 16:9 aspect ratio. All labels in Korean.
+
+---
+
+### IMG-6 — OUTRO 회수 장면
+
+- **종류**: 분위기 사진
+- **위치**: FAQ 종료 직후, OUTRO 직전
+- **위치 의도**: 도착선의 정적으로 IMG-1의 출발선과 호응한다.
+- **비율**: 21:9 (와이드 시네마틱)
+- **alt 텍스트**: "잠실 종합운동장 마라톤 도착선 부근에서 막 통과한 직후 멈춰선 한국 러너의 뒷모습"
+- **캡션**: "도착선 너머. 같은 거리, 다른 시간."
+
+**프롬프트 (GPT Image 2)**:
+> A wide cinematic editorial photograph of the moments just after a marathon finish, set in a large Seoul stadium plaza area resembling Jamsil Olympic Stadium.
+>
+> Composition: a single lone runner viewed from behind, standing still on the empty plaza just past the finish corridor, slightly hunched with hands on hips, faint steam rising from his back and shoulders.
+>
+> Background: the empty finish chute leading back toward the road, soft post-dawn morning light, a few scattered foil blankets on the ground at a distance, no crowd, no logos, no banners with readable text.
+>
+> 21:9 cinematic aspect ratio. No on-image text.
+
+---
+

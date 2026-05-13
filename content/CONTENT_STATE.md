@@ -43,8 +43,8 @@ Claude는 `완료`, `초안`, `published 있음` 상태의 글을 새로 쓰지 
 
 | slug | series | part | title | status | next_action | notes |
 |---|---|---:|---|---|---|---|
-| `journal-01-a` | `journal-01` | A | 왜 30km에서 무너지는가 | `not_started` | Claude Project가 작성 | 첫 실제 운영 글. 샘플은 `content/examples/`에만 있으며 완료로 보지 않는다. |
-| `journal-01-b` | `journal-01` | B | 30km 이후 페이스를 지키는 법 | `blocked` | `journal-01-a` 완료 후 작성 | A편 진단을 받은 실천 편. |
+| `journal-01-a` | `journal-01` | A | 왜 30km에서 무너지는가 | `deployed` | 완료 | `/journal/journal-01-a.html` 발행 완료. |
+| `journal-01-b` | `journal-01` | B | 30km 이후 페이스를 지키는 법 | `not_started` | Claude Project가 작성 | A편 진단을 받은 실천 편. |
 | `journal-02-a` | `journal-02` | A | 대회 준비 루틴 | `not_started` | `journal-01` 이후 작성 | A/B 분할은 작성 시점에 확정. |
 | `journal-02-b` | `journal-02` | B | 대회 준비 루틴 후속 | `blocked` | `journal-02-a` 완료 후 작성 | A편 작성 후 확정. |
 | `journal-03-a` | `journal-03` | A | 옥타코사놀이 달리기에 주는 것 | `blocked` | 권위 축적 후 별도 규제 검토 | 성분 직접 언급 시리즈. 가장 마지막. |
@@ -56,8 +56,8 @@ Claude는 `완료`, `초안`, `published 있음` 상태의 글을 새로 쓰지 
 현재 상태 기준 추천:
 
 ```text
-next_slug: journal-01-a
-next_reason: 첫 실제 Journal 운영 글이며, 아직 draft/published가 없는 상태다.
+next_slug: journal-01-b
+next_reason: journal-01-a가 자사몰 Journal로 발행 완료되어 같은 시리즈의 B편을 이어갈 수 있다.
 ```
 
 Claude가 자동 주제선정을 할 때:
