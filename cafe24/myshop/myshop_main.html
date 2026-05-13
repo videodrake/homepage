@@ -13,8 +13,10 @@
         <li><a href="/member/modify.html"><span>07</span><strong>회원정보 수정</strong><em>개인정보와 비밀번호</em></a></li>
         <li class="{$regular_delivery_display|display}"><a href="/myshop/regular_delivery.html"><span>08</span><strong>정기배송</strong><em>구독 배송 관리</em></a></li>
         <li class="{$deposit_display|display}"><a href="/myshop/deposits/historyList.html"><span>09</span><strong>{$deposit_name}</strong><em>예치금 내역</em></a></li>
-        <li module="Layout_stateLogon" class="my-nav__logout"><a href="{$action_logout}"><span>OUT</span><strong>로그아웃</strong><em>계정 종료</em></a></li>
     </ul>
+    <div module="Layout_stateLogon" class="my-nav__foot">
+        <a href="{$action_logout}">로그아웃</a>
+    </div>
 </nav>
 <script>
 (function () {

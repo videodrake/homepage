@@ -17681,3 +17681,297 @@ body.onroad-page .myshopArea #myshopMain.my-nav .menu a {
         grid-template-columns: auto 76px minmax(0, 1fr) !important;
     }
 }
+
+/* ==========================================================================
+   My Page refinement v4
+   Feedback pass: quieter hero, no duplicate hero stats, better empty states.
+   ========================================================================== */
+.onroad-page .my-page--refined {
+    background: #efe8dc;
+}
+
+.onroad-page .my-page--refined .my-hero {
+    padding: clamp(64px, 7vw, 104px) 0 clamp(42px, 5vw, 68px);
+    background: #211d19;
+}
+
+.onroad-page .my-page--refined .my-hero__media {
+    background:
+        linear-gradient(90deg, rgba(33, 29, 25, 0.92) 0%, rgba(33, 29, 25, 0.7) 48%, rgba(33, 29, 25, 0.42) 100%),
+        linear-gradient(180deg, rgba(33, 29, 25, 0.06), rgba(33, 29, 25, 0.45)),
+        url("/SkinImg/img/journal/journal-01-a/img-1.png") center/cover no-repeat;
+    filter: saturate(0.72) contrast(0.96);
+    opacity: 0.9;
+}
+
+.onroad-page .my-page--refined .my-hero__inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: end;
+    gap: var(--s-8);
+}
+
+.onroad-page .my-page--refined .my-hero__copy h1,
+.onroad-page .my-page--refined .my-hero__copy h1 * {
+    display: inline;
+    background: transparent !important;
+    box-shadow: none !important;
+    color: var(--c-cream);
+    text-shadow: none !important;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+}
+
+.onroad-page .my-page--refined .my-hero__copy h1 {
+    display: block;
+    max-width: 780px;
+    font-size: clamp(38px, 5.2vw, 76px);
+    line-height: 1.03;
+}
+
+.onroad-page .my-page--refined .my-hero__copy p {
+    max-width: 560px;
+    color: rgba(244, 239, 230, 0.78);
+}
+
+.onroad-page .my-page--refined .my-hero__eyebrow {
+    color: rgba(244, 239, 230, 0.62);
+}
+
+.onroad-page .my-page--refined .my-hero__stats {
+    display: none !important;
+}
+
+.onroad-page .my-page--refined .my-hero__actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: var(--s-3);
+    flex-wrap: wrap;
+}
+
+.onroad-page .my-page--refined .my-primary-cta,
+.onroad-page .my-page--refined .my-secondary-cta,
+.onroad-page .my-page--refined .my-empty-order-cta a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 0 var(--s-5);
+    border: 1px solid currentColor;
+    font-family: var(--font-sans);
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-decoration: none;
+}
+
+.onroad-page .my-page--refined .my-primary-cta,
+.onroad-page .my-page--refined .my-empty-order-cta a {
+    background: var(--c-signal);
+    border-color: var(--c-signal);
+    color: var(--c-cream);
+}
+
+.onroad-page .my-page--refined .my-primary-cta:hover,
+.onroad-page .my-page--refined .my-empty-order-cta a:hover {
+    background: var(--c-signal-2);
+    border-color: var(--c-signal-2);
+}
+
+.onroad-page .my-page--refined .my-secondary-cta {
+    background: transparent;
+    border-color: rgba(244, 239, 230, 0.44);
+    color: var(--c-cream);
+}
+
+.onroad-page .my-page--refined .my-secondary-cta:hover {
+    background: var(--c-cream);
+    border-color: var(--c-cream);
+    color: var(--c-ink);
+}
+
+.onroad-page .my-page--refined .my-shell {
+    background: transparent;
+}
+
+.onroad-page .my-page--refined .my-panel,
+.onroad-page .my-page--refined .my-stat,
+.onroad-page .my-page--refined .my-actions a,
+.onroad-page .my-page--refined .my-info__cell,
+.onroad-page .my-page--refined .my-orderstate__cell,
+body.onroad-page .myshopArea #myshopMain.my-nav {
+    background: #f6f1e8 !important;
+}
+
+.onroad-page .my-page--refined .my-panel {
+    border-color: rgba(20, 18, 16, 0.14);
+    box-shadow: none;
+}
+
+.onroad-page .my-page--refined .my-panel__head {
+    align-items: end;
+    border-bottom-color: rgba(20, 18, 16, 0.64);
+}
+
+.onroad-page .my-page--refined .my-panel__eyebrow {
+    display: none;
+}
+
+.onroad-page .my-page--refined .my-panel__note {
+    display: block;
+    margin: 0 0 var(--s-2);
+    color: var(--c-meta);
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.onroad-page .my-page--refined .my-panel__head a {
+    color: var(--c-ink);
+    font-family: var(--font-sans);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+.onroad-page .my-page--refined .my-panel__head a:hover {
+    color: var(--c-signal);
+}
+
+.onroad-page .my-page--refined .my-actions span {
+    color: var(--c-meta);
+}
+
+.onroad-page .my-page--refined .my-actions a:hover strong {
+    color: var(--c-ink);
+}
+
+.onroad-page .my-page--refined .my-actions a:hover {
+    background: var(--c-cream) !important;
+}
+
+.onroad-page .my-page--refined .my-orderstate__cell:hover strong {
+    color: var(--c-ink);
+}
+
+.onroad-page .my-page--refined .my-orderstate__cell:hover {
+    background: var(--c-cream) !important;
+}
+
+.onroad-page .my-page--refined .my-orderstate__cell strong:empty::before {
+    content: "0";
+}
+
+.onroad-page .my-page--refined [data-empty-zero]:empty::before {
+    content: "0";
+}
+
+.onroad-page .my-page--refined .my-info__cell strong {
+    white-space: normal;
+}
+
+.onroad-page .my-page--refined .my-info__cell em:empty {
+    display: none;
+}
+
+.onroad-page .my-page--refined .my-orders:has(.ec-base-prdEmpty:not(.displaynone)) .ec-base-paginate {
+    display: none !important;
+}
+
+.onroad-page .my-page--refined .my-empty-order-cta {
+    display: none;
+    margin-top: var(--s-4);
+    padding: clamp(24px, 3vw, 36px);
+    background: #f6f1e8;
+    border: 1px dashed rgba(20, 18, 16, 0.24);
+    text-align: center;
+}
+
+.onroad-page .my-page--refined .my-orders:has(.ec-base-prdEmpty:not(.displaynone)) .my-empty-order-cta {
+    display: grid;
+    justify-items: center;
+    gap: var(--s-3);
+}
+
+.onroad-page .my-page--refined .my-empty-order-cta strong {
+    color: var(--c-ink);
+    font-family: var(--font-serif);
+    font-size: clamp(22px, 2.4vw, 30px);
+    font-weight: 300;
+    line-height: 1.18;
+}
+
+.onroad-page .my-page--refined .my-empty-order-cta p {
+    max-width: 460px;
+    margin: 0;
+    color: var(--c-meta);
+    font-family: var(--font-sans);
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+.onroad-page .my-page--refined .my-nav .menu a.is-active,
+.onroad-page .my-page--refined .my-nav .menu a[aria-current="page"],
+body.onroad-page .myshopArea #myshopMain.my-nav .menu a.is-active,
+body.onroad-page .myshopArea #myshopMain.my-nav .menu a[aria-current="page"] {
+    color: var(--c-signal) !important;
+    border-bottom-color: var(--c-signal) !important;
+}
+
+.onroad-page .my-page--refined .my-nav .menu a:hover,
+body.onroad-page .myshopArea #myshopMain.my-nav .menu a:hover {
+    color: var(--c-ink) !important;
+    background: var(--c-cream) !important;
+}
+
+.onroad-page .my-nav__foot {
+    margin-top: var(--s-4);
+    padding-top: var(--s-4);
+    border-top: 1px solid var(--c-line);
+}
+
+.onroad-page .my-nav__foot a,
+body.onroad-page .myshopArea #myshopMain.my-nav .my-nav__foot a {
+    display: inline-flex !important;
+    min-height: auto !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    color: var(--c-meta) !important;
+    font-family: var(--font-sans);
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.onroad-page .my-nav__foot a:hover {
+    color: var(--c-ink) !important;
+}
+
+@media (max-width: 1180px) {
+    .onroad-page .my-page--refined .my-hero__inner {
+        grid-template-columns: 1fr;
+        align-items: start;
+    }
+
+    .onroad-page .my-page--refined .my-hero__actions {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 720px) {
+    .onroad-page .my-page--refined .my-hero__actions {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .onroad-page .my-page--refined .my-primary-cta,
+    .onroad-page .my-page--refined .my-secondary-cta {
+        width: 100%;
+    }
+}

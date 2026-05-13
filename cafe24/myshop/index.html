@@ -6,36 +6,18 @@
 -->
 </div>
 
-<div module="myshop_asyncbankbook" class="my-page my-page--dashboard">
+<div module="myshop_asyncbankbook" class="my-page my-page--dashboard my-page--refined">
     <section class="my-hero">
         <div class="my-hero__media" aria-hidden="true"></div>
         <div class="my-hero__inner">
-            <div class="my-hero__eyebrow">Onroad Account</div>
             <div class="my-hero__copy" module="myshop_asyncbenefit">
+                <span class="my-hero__eyebrow">마이페이지</span>
                 <h1>{$member_name} 님의 러닝 계정</h1>
-                <p>주문, 적립금, 쿠폰, 배송지를 한 화면에서 정리합니다.</p>
+                <p>주문 상태와 계정 혜택을 빠르게 확인하고, 필요한 관리 화면으로 바로 이동하세요.</p>
             </div>
-            <div class="my-hero__stats">
-                <a href="/myshop/order/list.html" class="my-stat">
-                    <span class="my-stat__label">총 주문</span>
-                    <strong>{$total_order_count}</strong>
-                    <em>{$total_order_price}</em>
-                </a>
-                <a href="/myshop/mileage/historyList.html" class="my-stat">
-                    <span class="my-stat__label">{$mileage_name}</span>
-                    <strong>{$total_mileage}</strong>
-                    <em>사용 가능 포인트</em>
-                </a>
-                <a href="/myshop/coupon/coupon.html" class="my-stat">
-                    <span class="my-stat__label">쿠폰</span>
-                    <strong>{$coupon_cnt}</strong>
-                    <em>보유 쿠폰</em>
-                </a>
-                <div class="my-stat" module="myshop_asyncbenefit">
-                    <span class="my-stat__label">회원 등급</span>
-                    <strong>{$group_name}</strong>
-                    <em>현재 등급</em>
-                </div>
+            <div class="my-hero__actions">
+                <a href="/product/detail.html?product_no=11" class="my-primary-cta">제품 둘러보기</a>
+                <a href="/myshop/order/list.html" class="my-secondary-cta">주문 내역 확인</a>
             </div>
         </div>
     </section>
@@ -49,7 +31,7 @@
             <section class="my-panel my-panel--status">
                 <div class="my-panel__head">
                     <div>
-                        <span class="my-panel__eyebrow">Recent 3 Months</span>
+                        <span class="my-panel__note">최근 3개월 기준</span>
                         <h2>주문 처리 현황</h2>
                     </div>
                     <a href="/myshop/order/list.html">전체 주문 보기</a>
@@ -78,7 +60,6 @@
             <section class="my-panel my-panel--actions">
                 <div class="my-panel__head">
                     <div>
-                        <span class="my-panel__eyebrow">Quick Access</span>
                         <h2>자주 쓰는 기능</h2>
                     </div>
                 </div>
@@ -86,12 +67,12 @@
                     <a href="/member/modify.html">
                         <span>01</span>
                         <strong>회원정보 수정</strong>
-                        <em>연락처와 기본 정보를 관리합니다.</em>
+                        <em>연락처, 비밀번호, 기본 정보를 관리합니다.</em>
                     </a>
                     <a href="/myshop/wish_list.html">
                         <span>02</span>
                         <strong>찜한 제품</strong>
-                        <em>다시 볼 제품을 빠르게 확인합니다.</em>
+                        <em>다시 볼 제품을 모아 확인합니다.</em>
                     </a>
                     <a href="/myshop/addr/list.html">
                         <span>03</span>
@@ -109,23 +90,26 @@
             <section class="my-panel my-panel--orders">
                 <div class="my-panel__head">
                     <div>
-                        <span class="my-panel__eyebrow">Orders</span>
                         <h2>최근 주문</h2>
                     </div>
                     <a href="/myshop/order/list.html">주문 내역</a>
                 </div>
                 <div class="my-orders">
                     <!--@import(/myshop/order/history_list_item.html)-->
+                    <div class="my-empty-order-cta">
+                        <strong>아직 주문 내역이 없습니다.</strong>
+                        <p>첫 주문을 시작하면 배송 상태와 구매 기록이 이곳에 정리됩니다.</p>
+                        <a href="/product/detail.html?product_no=11">제품 둘러보기</a>
+                    </div>
                 </div>
             </section>
 
             <section class="my-panel my-panel--account">
                 <div class="my-panel__head">
                     <div>
-                        <span class="my-panel__eyebrow">Account Summary</span>
                         <h2>계정 요약</h2>
                     </div>
-                    <a href="/member/modify.html">수정하기</a>
+                    <a href="/member/modify.html">계정 정보 수정</a>
                 </div>
                 <div class="my-info">
                     <div class="my-info__cell" module="myshop_asyncbenefit">
@@ -138,15 +122,26 @@
                     </div>
                     <div class="my-info__cell">
                         <span>누적 주문</span>
-                        <strong>{$total_order_price}</strong>
-                        <em>{$total_order_count}건</em>
+                        <strong><span data-empty-zero>{$total_order_count}</span>건</strong>
+                        <em>{$total_order_price}</em>
                     </div>
                     <div class="my-info__cell">
                         <span>{$mileage_name}</span>
-                        <strong>{$total_mileage}</strong>
+                        <strong><span data-empty-zero>{$total_mileage}</span></strong>
                     </div>
                 </div>
             </section>
         </main>
     </section>
 </div>
+
+<script>
+(function () {
+    var targets = document.querySelectorAll('[data-empty-zero]');
+    for (var i = 0; i < targets.length; i += 1) {
+        if (!targets[i].textContent.replace(/\s/g, '')) {
+            targets[i].textContent = '0';
+        }
+    }
+}());
+</script>
