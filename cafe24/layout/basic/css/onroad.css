@@ -16883,6 +16883,8 @@ body#userStyle #orderFixItem .btnSubmit:hover {
 }
 .onroad-page .jp-layout {
     max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 3fr 9fr;
     gap: 64px;
@@ -16891,6 +16893,7 @@ body#userStyle #orderFixItem .btnSubmit:hover {
     position: sticky;
     top: 96px;
     align-self: start;
+    min-width: 0;
 }
 .onroad-page .jp-data {
     margin-top: 18px;
@@ -16932,6 +16935,8 @@ body#userStyle #orderFixItem .btnSubmit:hover {
 }
 .onroad-page .jp-article {
     max-width: 62ch;
+    min-width: 0;
+    width: 100%;
 }
 .onroad-page .jp-article p {
     margin: 0 0 var(--s-6);
@@ -17002,6 +17007,79 @@ body#userStyle #orderFixItem .btnSubmit:hover {
     align-items: center;
     gap: var(--s-6);
 }
+
+.onroad-page.journal-post--generated .jp-article h3 {
+    margin: 36px 0 14px;
+    font-family: var(--font-serif);
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.25;
+}
+.onroad-page.journal-post--generated .jp-article h4 {
+    margin: 26px 0 10px;
+    font-size: 17px;
+    line-height: 1.45;
+    color: var(--c-ink);
+}
+.onroad-page.journal-post--generated .jp-figure {
+    margin: 38px 0;
+    border: 1px solid var(--c-line);
+    background: var(--c-paper);
+}
+.onroad-page.journal-post--generated .jp-figure img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    background: var(--c-ink);
+}
+.onroad-page.journal-post--generated .jp-figure figcaption {
+    padding: 12px 16px;
+    color: var(--c-meta);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    line-height: 1.5;
+    letter-spacing: 0.08em;
+}
+.onroad-page.journal-post--generated .jp-list {
+    margin: 0 0 var(--s-6);
+    padding-left: 1.2em;
+    color: var(--c-text);
+    line-height: 1.75;
+}
+.onroad-page.journal-post--generated .jp-list li {
+    margin: 0 0 8px;
+}
+.onroad-page.journal-post--generated .jp-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    margin: 34px 0;
+    border-top: 1px solid var(--c-ink);
+}
+.onroad-page.journal-post--generated .jp-table {
+    width: 100%;
+    min-width: 620px;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+.onroad-page.journal-post--generated .jp-table th,
+.onroad-page.journal-post--generated .jp-table td {
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--c-line);
+    text-align: left;
+    vertical-align: top;
+    line-height: 1.55;
+}
+.onroad-page.journal-post--generated .jp-table th {
+    color: var(--c-meta);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    font-weight: 400;
+    text-transform: uppercase;
+    background: var(--c-paper);
+}
+
 @media (max-width: 980px) {
     .onroad-page .jr-masthead,
     .onroad-page .jp-hero {
@@ -17035,6 +17113,13 @@ body#userStyle #orderFixItem .btnSubmit:hover {
     .onroad-page .jp-rail {
         position: static;
     }
+    .onroad-page .jp-body {
+        padding-left: var(--s-5);
+        padding-right: var(--s-5);
+    }
+    .onroad-page .jp-article {
+        max-width: 100%;
+    }
     .onroad-page .jp-author,
     .onroad-page .jp-cta,
     .onroad-page .jp-topline {
@@ -17045,4 +17130,3 @@ body#userStyle #orderFixItem .btnSubmit:hover {
         margin-left: 0;
     }
 }
-
