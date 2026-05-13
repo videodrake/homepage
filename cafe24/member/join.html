@@ -1,27 +1,27 @@
-<!--@layout(/layout/basic/layout.html)-->
-<div class="section path jg-auth-path">
+﻿<!--@layout(/layout/basic/layout.html)-->
+<div class="section path onroad-auth-path">
     <span>현재 위치</span>
     <ol>
         <li><a href="/">홈</a></li>
         <li title="현재 위치"><strong>회원 가입</strong></li>
     </ol>
 </div>
-<div class="section titleArea jg-join-title">
+<div class="section titleArea onroad-join-title">
     <h2>회원 가입</h2>
     <p>구매와 주문 확인에 필요한 정보만 간단히 입력하세요.</p>
 </div>
-<div class="section ec-base-step jg-join-step">
+<div class="section ec-base-step onroad-join-step">
     <ol class="step">
         <li>1. 약관동의</li>
         <li class="selected">2. 정보입력</li>
         <li>3. 가입완료</li>
     </ol>
 </div>
-<div class="section jg-sub-brief jg-join-brief">
+<div class="section onroad-sub-brief onroad-join-brief">
     <strong>주문과 이용을 위한 계정 생성</strong>
     <p>아이디, 비밀번호, 이름, 이메일만 입력하면 계정을 만들 수 있습니다.</p>
 </div>
-<div module="member_join" class="section memberArea jg-join-page">
+<div module="member_join" class="section memberArea onroad-join-page">
     <!--@css(/css/module/member/join.css)-->
     <!--
         $returnUrl = /member/join_result.html
@@ -34,10 +34,10 @@
         $foreignerSsn3 = 국제운전면허증번호
         $isRuleBasedAddrForm = T
      -->
-	<div class="titleArea titleArea--middle displaynone jg-join-pruned {$display_base_column_title|display}">
+	<div class="titleArea titleArea--middle displaynone onroad-join-pruned {$display_base_column_title|display}">
 		<h3>회원인증</h3>
 	</div>
-	<div class="ec-base-table typeWrite displaynone jg-join-pruned {$display_base_column_title|display}">
+	<div class="ec-base-table typeWrite displaynone onroad-join-pruned {$display_base_column_title|display}">
 		<table border="1">
 		<caption>회원가입</caption>
 		<colgroup>
@@ -64,7 +64,7 @@
 								<a href="#none" class="btnNormal sizeS" onclick="{$action_ipin_open}">아이핀인증</a>
 								<p class="gBlank5">아이핀이란, 회원님의 개인정보 보호를 위해 웹사이트에 주민등록번호를 제공하지 않고 본인임을 확인하는 인터넷상의 개인식별번호 서비스입니다. <br>아이핀을 통한 가입을 원하시면 아이핀 인증 버튼을 눌러 진행해 주십시오.</p>
 							</div>
-							<div id="mobileWrap" class="displaynone jg-join-pruned">
+							<div id="mobileWrap" class="displaynone onroad-join-pruned">
 								<a href="#none" class="btnNormal sizeS" onclick="{$action_mobile_open}">휴대폰인증</a>
 								<p class="gBlank5">본인 명의의 휴대폰으로 본인인증을 진행합니다.</p>
 							</div>
@@ -149,11 +149,11 @@
                 <th scope="row"><img src="/SkinImg/img/ico_required.svg" class="icon icoRequired" alt="필수">비밀번호 확인</th>
                 <td>{$form.user_passwd_confirm} <p class="txtInfo" id="{$pwConfirmMsg_id}"></p></td>
             </tr>
-            <tr class="displaynone jg-join-pruned {$display_hint|display}">
+            <tr class="displaynone onroad-join-pruned {$display_hint|display}">
                 <th scope="row"><img src="/SkinImg/img/ico_required.svg" class="icon icoRequired" alt="필수">비밀번호 확인 질문</th>
                 <td>{$form.hint}</td>
             </tr>
-            <tr class="displaynone jg-join-pruned {$display_hint_answer|display}">
+            <tr class="displaynone onroad-join-pruned {$display_hint_answer|display}">
                 <th scope="row"><img src="/SkinImg/img/ico_required.svg" class="icon icoRequired" alt="필수">비밀번호 확인 답변</th>
                 <td>{$form.hint_answer}</td>
             </tr>
@@ -164,19 +164,19 @@
                     <p id="under14Msg" class="txtInfo displaynone">14세 미만 사용자는 법정대리인 동의가 필요합니다.</p>
                 </td>
             </tr>
-            <tr class="displaynone jg-join-pruned {$display_eng_name|display}">
+            <tr class="displaynone onroad-join-pruned {$display_eng_name|display}">
                 <th scope="row"><img src="/SkinImg/img/ico_required.svg" class="icon icoRequired {$display_required_name_en|display}" alt="필수">이름(영문)</th>
                 <td>{$form.name_en} <span class="txtInfo">(이름 - 성 형식으로 입력해 주세요.)</span></td>
             </tr>
-            <tr class="displaynone jg-join-pruned">
+            <tr class="displaynone onroad-join-pruned">
                 <th scope="row" id="ssnTitle"></th>
                 <td id="ssnContents"></td>
             </tr>
-            <tr id="{$companyRow}" class="displaynone jg-join-pruned">
+            <tr id="{$companyRow}" class="displaynone onroad-join-pruned">
                 <th scope="row"><img src="/SkinImg/img/ico_required.svg" class="icon icoRequired" alt="필수">상호명</th>
                 <td id="companyName">{$form.cname}</td>
             </tr>
-            <tr id="{$companyNoRow}" class="displaynone jg-join-pruned">
+            <tr id="{$companyNoRow}" class="displaynone onroad-join-pruned">
                 <th scope="row"><img src="/SkinImg/img/ico_required.svg" class="icon icoRequired" alt="필수">사업자번호</th>
                 <td class="formGroup" id="companySsn">
                     {$form.cssn}
@@ -184,19 +184,19 @@
                     <p id="{$cssnMsg_id}"></p>
                 </td>
             </tr>
-            <tr id="nation" class="displaynone jg-join-pruned">
+            <tr id="nation" class="displaynone onroad-join-pruned">
                 <th scope="row"><img src="/SkinImg/img/ico_required.svg" class="icon icoRequired" alt="필수">국적</th>
                 <td>{$form.citizenship}</td>
             </tr>
-            <tr class="displaynone jg-join-pruned {$display_addr|display}">
+            <tr class="displaynone onroad-join-pruned {$display_addr|display}">
                 <th scope="row"><img src="/SkinImg/img/ico_required.svg" class="icon icoRequired {$display_required_address|display}" alt="필수">주소</th>
                 <td class="formMultiple">{$form.address}</td>
             </tr>
-            <tr class="displaynone jg-join-pruned {$display_phone|display}">
+            <tr class="displaynone onroad-join-pruned {$display_phone|display}">
                 <th scope="row"><img src="/SkinImg/img/ico_required.svg" class="icon icoRequired {$display_required_phone|display}" alt="필수">일반전화</th>
                 <td class="formGroup code">{$form.phone}</td>
             </tr>
-            <tr class="displaynone jg-join-pruned {$display_mobile|display}">
+            <tr class="displaynone onroad-join-pruned {$display_mobile|display}">
                 <th scope="row"><img src="/SkinImg/img/ico_required.svg" class="icon icoRequired {$display_required_cell|display}" alt="필수">휴대전화</th>
                 <td class="formGroup code">
                     {$form.mobile}<button type="button" id="{$btn_action_verify_mobile}" class="btnNormal {$display_verify_mobile|display}" onclick="{$action_verify_mobile}">인증번호</button>
@@ -207,7 +207,7 @@
                     </ul>
                 </td>
             </tr>
-            <tr class="displaynone jg-join-pruned {$display_verify_mobile_confirm|display}" id="{$confirm_verify_mobile}">
+            <tr class="displaynone onroad-join-pruned {$display_verify_mobile_confirm|display}" id="{$confirm_verify_mobile}">
                 <th scope="row"><img src="/SkinImg/img/ico_required.svg" class="icon icoRequired" alt="필수">인증번호</th>
                 <td class="formGroup">
                     <div class="verify">
@@ -241,7 +241,7 @@
                     <p class="txtInfo" id="{$emailMsg_id}"></p>
                 </td>
             </tr>
-            <tr class="displaynone jg-join-pruned {$display_is_lifetime|display}">
+            <tr class="displaynone onroad-join-pruned {$display_is_lifetime|display}">
                 <th scope="row">평생회원</th>
                 <td>
                     {$form.is_lifetime}
@@ -255,10 +255,10 @@
         </table>
     </div>
 
-    <div class="titleArea titleArea--middle displaynone jg-join-pruned {$display_add_title|display}">
+    <div class="titleArea titleArea--middle displaynone onroad-join-pruned {$display_add_title|display}">
     	<h3>추가정보 <span class="desc">(선택)</span></h3>
     </div>
-    <div class="ec-base-table typeWrite displaynone jg-join-pruned {$display_add_title|display}">
+    <div class="ec-base-table typeWrite displaynone onroad-join-pruned {$display_add_title|display}">
         <table border="1">
         <caption>회원 추가정보</caption>
         <colgroup>

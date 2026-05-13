@@ -1,4 +1,4 @@
-<!--@layout(/layout/basic/layout.html)-->
+﻿<!--@layout(/layout/basic/layout.html)-->
 <div class="section" module="board_ReadPackage_1002">
     <!--@css(/css/module/board/readPackage.css)-->
     <!--@js(/js/module/board/readPackage.js)-->
@@ -8,13 +8,13 @@
             <ol>
                 <li><a href="/">홈</a></li>
                 <li><a href="#">러너 고객센터</a></li>
-                <li title="현재 위치"><strong class="jg-board-current">러너 콘텐츠</strong></li>
+                <li title="현재 위치"><strong class="onroad-board-current">러너 콘텐츠</strong></li>
             </ol>
         </div>
 
         <div class="titleArea">
-            <h2 class="jg-board-title">러너 콘텐츠</h2>
-            <p class="jg-board-desc">공지, 섭취 가이드, 제품 Q&A를 기능성 표현 기준 안에서 안내합니다.</p>
+            <h2 class="onroad-board-title">러너 콘텐츠</h2>
+            <p class="onroad-board-desc">공지, 섭취 가이드, 제품 Q&A를 기능성 표현 기준 안에서 안내합니다.</p>
         </div>
     </div>
 
@@ -35,9 +35,9 @@
                 for (var i = 0; i < nodes.length; i += 1) nodes[i].textContent = text;
             };
 
-            setText('.jg-board-current', content[0]);
-            setText('.jg-board-title', content[0]);
-            setText('.jg-board-desc', content[1]);
+            setText('.onroad-board-current', content[0]);
+            setText('.onroad-board-title', content[0]);
+            setText('.onroad-board-desc', content[1]);
         }());
     </script>
 

@@ -1,5 +1,5 @@
-<!--@layout(/layout/basic/layout.html)-->
-<div class="section jg-board-list-page jg-board-product-page" module="Board_ListPackage_4">
+﻿<!--@layout(/layout/basic/layout.html)-->
+<div class="section onroad-board-list-page onroad-board-product-page" module="Board_ListPackage_4">
     <!--@css(/css/module/board/listPackage.css)-->
     <div module="board_title_4">
         <div class="path">
@@ -18,10 +18,10 @@
         <p class="imgArea">{$board_top_image}</p>
     </div>
 
-    <div class="jg-sub-brief jg-board-list-brief jg-board-product-brief">
+    <div class="onroad-sub-brief onroad-board-list-brief onroad-board-product-brief">
         <strong>제품 관련 게시글 목록</strong>
         <p>사진 중심 포토리뷰는 별도 아카이브에서 보고, 이곳에서는 상품과 연결된 게시글을 제품 정보와 함께 확인합니다.</p>
-        <div class="jg-page-links">
+        <div class="onroad-page-links">
             <a href="/board/index.html">게시판 허브</a>
             <a href="/shopinfo/runner-reviews.html">포토리뷰</a>
             <a href="/product/detail.html?product_no=11">제품 상세</a>
@@ -31,7 +31,7 @@
         </div>
     </div>
 
-    <div class="ec-base-tab typeMenu gScroll jg-board-list-tabs jg-board-product-tabs">
+    <div class="ec-base-tab typeMenu gScroll onroad-board-list-tabs onroad-board-product-tabs">
         <ul class="menu">
             <li><a href="/shopinfo/runner-reviews.html" class="button">포토리뷰</a></li>
             <li class="selected"><a href="/board/product/list.html?board_no=4" class="button">제품 후기 게시판</a></li>
@@ -41,12 +41,12 @@
         </ul>
     </div>
 
-    <div class="boardSort jg-board-list-sort jg-board-product-sort">
+    <div class="boardSort onroad-board-list-sort onroad-board-product-sort">
         <span module="board_category_4">{$form.board_category}</span>
         <span module="board_ReplySort_4">{$reply_sort}</span>
     </div>
 
-    <div class="ec-base-table typeList gThumb gBorderClear jg-board-list-table jg-board-product-table">
+    <div class="ec-base-table typeList gThumb gBorderClear onroad-board-list-table onroad-board-product-table">
         <table border="1" >
         <caption>상품 러너 고객센터 목록</caption>
         <colgroup module="board_listheader_4">
@@ -174,10 +174,10 @@
         </table>
         <p class="message {$empty_display|display}" module="board_empty_4">{$empty_message}</p>
     </div>
-    <div module="board_ButtonList_4" class="{$write_display|display} ec-base-button gBottom jg-board-list-actions jg-board-product-actions">
+    <div module="board_ButtonList_4" class="{$write_display|display} ec-base-button gBottom onroad-board-list-actions onroad-board-product-actions">
         <a href="/board/product/write.html{$param_write}" class="btnSubmitFix {$write_display|display}">글쓰기</a>
     </div>
-    <div module="board_search_4" class="jg-board-list-search jg-board-product-search">
+    <div module="board_search_4" class="onroad-board-list-search onroad-board-product-search">
         <!--@css(/css/module/board/search.css)-->
         <fieldset class="boardSearch">
             <legend>게시물 검색</legend>
@@ -188,7 +188,7 @@
 </div>
 
 
-<div module="board_paging_4" class="section ec-base-paginate typeList jg-board-list-paging jg-board-product-paging">
+<div module="board_paging_4" class="section ec-base-paginate typeList onroad-board-list-paging onroad-board-product-paging">
     <a href="{$param_first}" class="first">첫 페이지</a>
     <a href="{$param_prev}">이전 페이지</a>
     <ol>

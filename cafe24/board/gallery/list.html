@@ -1,5 +1,5 @@
-<!--@layout(/layout/basic/layout.html)-->
-<div class="section jg-board-gallery-page" module="Board_ListPackage_8">
+﻿<!--@layout(/layout/basic/layout.html)-->
+<div class="section onroad-board-gallery-page" module="Board_ListPackage_8">
     <!--@css(/css/module/board/listPackage_gallary.css)-->
     <div module="board_title_8">
         <div class="path">
@@ -18,10 +18,10 @@
         <p class="imgArea">{$board_top_image}</p>
     </div>
 
-    <div class="jg-sub-brief jg-board-gallery-brief">
+    <div class="onroad-sub-brief onroad-board-gallery-brief">
         <strong>이미지 자료 갤러리</strong>
         <p>옥타코사놀, 원료 투명성, 섭취 기준을 이미지와 제목 중심으로 확인하세요. 각 카드는 썸네일, 제목, 작성 정보 순서로 이어집니다.</p>
-        <div class="jg-page-links">
+        <div class="onroad-page-links">
             <a href="/board/index.html">게시판 허브</a>
             <a href="/product/detail.html?product_no=11">제품 상세</a>
             <a href="/shopinfo/endurance-core.html">지구력코어</a>
@@ -30,17 +30,17 @@
         </div>
     </div>
 
-	<div module="board_listheader_8" class="ec-base-tab gBlank7 jg-board-gallery-view {$list_type_display|display}">
+	<div module="board_listheader_8" class="ec-base-tab gBlank7 onroad-board-gallery-view {$list_type_display|display}">
 		<ul>
 			<li class="selected"><a href="/board/gallery/list.html{$param_list}"><!--@import(/svg/icon-sort-thumb.html)--> 이미지형</a></li>
 			<li><a href="/board/gallery/list2.html{$param_list}"><!--@import(/svg/icon-sort-list.html)--> 리스트형</a></li>
 		</ul>
 	</div>
 
-	<div class="boardSort jg-board-gallery-sort">
+	<div class="boardSort onroad-board-gallery-sort">
         <span module="board_category_8">{$form.board_category}</span>
     </div>
-	<div class="boardList jg-board-gallery-list">
+	<div class="boardList onroad-board-gallery-list">
 		<div module="board_notice_8">
 			<!--
 				$login_page_url = /member/login.html
@@ -130,12 +130,12 @@
 		</div>
 	</div>
 
-    <div module="board_ButtonList_8" class="{$write_display|display} ec-base-button gBottom jg-board-list-actions jg-board-gallery-actions">
+    <div module="board_ButtonList_8" class="{$write_display|display} ec-base-button gBottom onroad-board-list-actions onroad-board-gallery-actions">
         <span class="gRight">
             <a href="/board/gallery/write.html{$param_write}" class="btnSubmitFix sizeM {$write_display|display}">글쓰기</a>
         </span>
     </div>
-	<div module="board_search_8" class="jg-board-list-search jg-board-gallery-search">
+	<div module="board_search_8" class="onroad-board-list-search onroad-board-gallery-search">
 		<!--@css(/css/module/board/search.css)-->
 		<fieldset class="boardSearch">
 			<legend>게시물 검색</legend>
@@ -144,7 +144,7 @@
 	</div>
 </div>
 
-<div module="board_paging_8" class="section ec-base-paginate typeList jg-board-list-paging jg-board-gallery-paging">
+<div module="board_paging_8" class="section ec-base-paginate typeList onroad-board-list-paging onroad-board-gallery-paging">
     <a href="{$param_prev}">이전 페이지</a>
     <ol>
         <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>

@@ -1,5 +1,5 @@
-<!--@layout(/layout/basic/layout.html)-->
-<div class="section jg-board-list-page" module="Board_ListPackage_1002">
+﻿<!--@layout(/layout/basic/layout.html)-->
+<div class="section onroad-board-list-page" module="Board_ListPackage_1002">
     <!--@css(/css/module/board/listPackage.css)-->
     <div module="board_title_1002">
         <div class="path">
@@ -7,21 +7,21 @@
             <ol>
                 <li><a href="/">홈</a></li>
                 <li><a href="#">러너 고객센터</a></li>
-                <li title="현재 위치"><strong class="jg-board-current">러너 콘텐츠</strong></li>
+                <li title="현재 위치"><strong class="onroad-board-current">러너 콘텐츠</strong></li>
             </ol>
         </div>
 
         <div class="titleArea">
-            <h2 class="jg-board-title">러너 콘텐츠</h2>
-            <p class="jg-board-desc">공지, 섭취 가이드, 제품 Q&A를 기능성 표현 기준 안에서 안내합니다.</p>
+            <h2 class="onroad-board-title">러너 콘텐츠</h2>
+            <p class="onroad-board-desc">공지, 섭취 가이드, 제품 Q&A를 기능성 표현 기준 안에서 안내합니다.</p>
         </div>
         <p class="imgArea">{$board_top_image}</p>
     </div>
 
-    <div class="jg-sub-brief jg-board-list-brief">
-        <strong class="jg-board-brief-title">게시글 목록</strong>
-        <p class="jg-board-brief-desc">게시글 제목을 중심으로 공지, 안내, 질문을 확인하고 필요한 글로 이동하세요. 글쓰기, 검색, 페이지 이동은 목록 하단에서 이어집니다.</p>
-        <div class="jg-page-links">
+    <div class="onroad-sub-brief onroad-board-list-brief">
+        <strong class="onroad-board-brief-title">게시글 목록</strong>
+        <p class="onroad-board-brief-desc">게시글 제목을 중심으로 공지, 안내, 질문을 확인하고 필요한 글로 이동하세요. 글쓰기, 검색, 페이지 이동은 목록 하단에서 이어집니다.</p>
+        <div class="onroad-page-links">
             <a href="/board/index.html">게시판 허브</a>
             <a href="/board/free/list.html?board_no=1">공지사항</a>
             <a href="/board/free/list.html?board_no=5">제품 Q&A</a>
@@ -31,7 +31,7 @@
         </div>
     </div>
 
-    <div class="ec-base-tab typeMenu gScroll jg-board-list-tabs">
+    <div class="ec-base-tab typeMenu gScroll onroad-board-list-tabs">
         <ul class="menu">
             <li><a href="/board/free/list.html?board_no=1" class="button">공지사항</a></li>
             <li><a href="/board/free/list.html?board_no=2" class="button">러닝 소식</a></li>
@@ -61,23 +61,23 @@
                 for (var i = 0; i < nodes.length; i += 1) nodes[i].textContent = text;
             };
 
-            setText('.jg-board-current', content[0]);
-            setText('.jg-board-title', content[0]);
-            setText('.jg-board-desc', content[1]);
-            setText('.jg-board-brief-title', content[2]);
-            setText('.jg-board-brief-desc', content[3]);
+            setText('.onroad-board-current', content[0]);
+            setText('.onroad-board-title', content[0]);
+            setText('.onroad-board-desc', content[1]);
+            setText('.onroad-board-brief-title', content[2]);
+            setText('.onroad-board-brief-desc', content[3]);
 
-            var activeLink = document.querySelector('.jg-board-list-tabs a[href*="board_no=' + boardNo + '"]');
+            var activeLink = document.querySelector('.onroad-board-list-tabs a[href*="board_no=' + boardNo + '"]');
             if (activeLink && activeLink.parentNode) activeLink.parentNode.className += ' selected';
         }());
     </script>
 
-    <div class="boardSort jg-board-list-sort">
+    <div class="boardSort onroad-board-list-sort">
         <span module="board_category_1002">{$form.board_category}</span>
         <span module="board_ReplySort_1002">{$reply_sort}</span>
     </div>
 
-    <div class="ec-base-table typeList jg-board-list-table">
+    <div class="ec-base-table typeList onroad-board-list-table">
         <table border="1" >
             <caption>러너 고객센터 목록</caption>
             <colgroup module="board_listheader_1002">
@@ -189,12 +189,12 @@
         </table>
         <p class="message {$empty_display|display}" module="board_empty_1002">{$empty_message}</p>
     </div>
-    <div module="board_ButtonList_1002" class="ec-base-button gBottom jg-board-list-actions {$write_display|display}">
+    <div module="board_ButtonList_1002" class="ec-base-button gBottom onroad-board-list-actions {$write_display|display}">
         <span class="gRight">
             <a href="/board/free/write.html{$param_write}" class="btnSubmitFix sizeM {$write_display|display}">글쓰기</a>
         </span>
     </div>
-    <div module="board_search_1002" class="jg-board-list-search">
+    <div module="board_search_1002" class="onroad-board-list-search">
         <!--@css(/css/module/board/search.css)-->
         <fieldset class="boardSearch">
             <legend>게시물 검색</legend>
@@ -203,7 +203,7 @@
     </div>
 </div>
 
-<div module="board_paging_1002" class="section ec-base-paginate typeList jg-board-list-paging">
+<div module="board_paging_1002" class="section ec-base-paginate typeList onroad-board-list-paging">
     <a href="{$param_prev}">이전 페이지</a>
     <ol>
         <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>

@@ -1,25 +1,25 @@
-<!--@layout(/layout/basic/layout.html)-->
-<div class="section path jg-auth-path">
+﻿<!--@layout(/layout/basic/layout.html)-->
+<div class="section path onroad-auth-path">
     <span>현재 위치</span>
     <ol>
         <li><a href="/">홈</a></li>
         <li title="현재 위치"><strong>로그인</strong></li>
     </ol>
 </div>
-<div class="section titleArea jg-login-title">
+<div class="section titleArea onroad-login-title">
     <h2>로그인</h2>
     <p>주문 내역과 찜한 제품을 이어서 확인하세요.</p>
 </div>
 
 <!-- Pending purchase context (populated via JS when user came from buy/cart action) -->
-<aside class="jg-pending-purchase" id="pendingPurchase" hidden>
-    <div class="jg-pending-purchase__head">
+<aside class="onroad-pending-purchase" id="pendingPurchase" hidden>
+    <div class="onroad-pending-purchase__head">
         <span class="k">[ Resume · 구매 진행 중 ]</span>
         <em>로그인하면 결제로 이어집니다</em>
     </div>
-    <a class="jg-pending-purchase__product" id="ppLink" href="#none">
-        <div class="jg-pending-purchase__thumb"><img id="ppImage" alt="" loading="lazy"></div>
-        <div class="jg-pending-purchase__info">
+    <a class="onroad-pending-purchase__product" id="ppLink" href="#none">
+        <div class="onroad-pending-purchase__thumb"><img id="ppImage" alt="" loading="lazy"></div>
+        <div class="onroad-pending-purchase__info">
             <strong id="ppName"></strong>
             <span class="meta">
                 <span id="ppPrice"></span>
@@ -29,12 +29,12 @@
                 <span id="ppQty"></span>
             </span>
         </div>
-        <span class="jg-pending-purchase__arrow" aria-hidden="true">→</span>
+        <span class="onroad-pending-purchase__arrow" aria-hidden="true">→</span>
     </a>
 </aside>
 
-<div class="section jg-auth-stage jg-login-shell">
-    <div module="member_login" id="{$member_login_module_id}" class="jg-login-page jg-login-member jg-auth-stack">
+<div class="section onroad-auth-stage onroad-login-shell">
+    <div module="member_login" id="{$member_login_module_id}" class="onroad-login-page onroad-login-member onroad-auth-stack">
         <!--@css(/css/module/member/login.css)-->
         <!--@js(/js/module/member/login.js)-->
         <!--
@@ -43,9 +43,9 @@
         -->
 
         <!-- Card 1: Member login (equal-weight to guest) -->
-        <fieldset class="form jg-auth-card jg-auth-card--member">
+        <fieldset class="form onroad-auth-card onroad-auth-card--member">
             <legend>회원로그인</legend>
-            <div class="jg-auth-card__head">
+            <div class="onroad-auth-card__head">
                 <strong>회원으로 로그인</strong>
                 <p>주문 내역, 적립금, 찜 목록을 이어서 확인하세요.</p>
             </div>
@@ -90,31 +90,31 @@
         </fieldset>
 
         <!-- Card 2: Guest purchase (equal-weight, dedicated card) -->
-        <div class="jg-auth-card jg-auth-card--guest {$display_nomember|display}">
-            <div class="jg-auth-card__head">
+        <div class="onroad-auth-card onroad-auth-card--guest {$display_nomember|display}">
+            <div class="onroad-auth-card__head">
                 <strong>비회원으로 구매</strong>
                 <p>가입 없이 빠르게 결제만 진행합니다.</p>
             </div>
-            <ul class="jg-auth-card__perks">
+            <ul class="onroad-auth-card__perks">
                 <li>회원가입 절차 없이 <em>즉시 결제</em></li>
                 <li>주문번호 + 비밀번호로 <em>주문 조회</em></li>
                 <li>적립금·등급 혜택은 <em>회원에게만</em> 제공</li>
             </ul>
-            <a href="{$returnUrl}" onclick="{$action_nomember_order}" class="btnSubmit gFull sizeL jg-guest-purchase">비회원으로 결제하기</a>
+            <a href="{$returnUrl}" onclick="{$action_nomember_order}" class="btnSubmit gFull sizeL onroad-guest-purchase">비회원으로 결제하기</a>
         </div>
 
         <!-- Bottom: signup incentive card (still inside member_login for consistent styling) -->
-        <aside class="jg-auth-switch jg-auth-incentive">
-            <div class="jg-auth-incentive__head">
-                <span class="jg-auth-incentive__badge">FIRST · 10% OFF</span>
-                <strong class="jg-auth-incentive__title">처음이라면,<br>회원으로 시작하세요.</strong>
+        <aside class="onroad-auth-switch onroad-auth-incentive">
+            <div class="onroad-auth-incentive__head">
+                <span class="onroad-auth-incentive__badge">FIRST · 10% OFF</span>
+                <strong class="onroad-auth-incentive__title">처음이라면,<br>회원으로 시작하세요.</strong>
             </div>
-            <ul class="jg-auth-incentive__perks">
+            <ul class="onroad-auth-incentive__perks">
                 <li><em>10%</em><span>첫 구매 즉시 적용되는 <b>할인 쿠폰</b></span></li>
                 <li><em>1%</em><span>모든 주문에 <b>적립금 자동 적립</b></span></li>
                 <li><em>등급</em><span>등급별 추가 혜택 + <b>후기 작성</b> 가능</span></li>
             </ul>
-            <a href="/member/agreement.html" class="jg-auth-incentive__cta">회원가입하고 10% 받기 <span class="jg-auth-incentive__arrow" aria-hidden="true">→</span></a>
+            <a href="/member/agreement.html" class="onroad-auth-incentive__cta">회원가입하고 10% 받기 <span class="onroad-auth-incentive__arrow" aria-hidden="true">→</span></a>
         </aside>
     </div>
 </div>
@@ -134,7 +134,7 @@
             return;
         }
         var card = document.getElementById('pendingPurchase');
-        var product = card.querySelector('.jg-pending-purchase__product');
+        var product = card.querySelector('.onroad-pending-purchase__product');
         var img = document.getElementById('ppImage');
         if (data.image) {
             img.src = data.image;
@@ -151,13 +151,13 @@
 })();
 </script>
 
-<details class="jg-guest-lookup">
-    <summary class="jg-guest-lookup__summary">
-        <span class="jg-guest-lookup__label">이미 비회원으로 주문하셨나요?</span>
-        <span class="jg-guest-lookup__cta">주문번호로 조회</span>
-        <span class="jg-guest-lookup__chevron" aria-hidden="true">▾</span>
+<details class="onroad-guest-lookup">
+    <summary class="onroad-guest-lookup__summary">
+        <span class="onroad-guest-lookup__label">이미 비회원으로 주문하셨나요?</span>
+        <span class="onroad-guest-lookup__cta">주문번호로 조회</span>
+        <span class="onroad-guest-lookup__chevron" aria-hidden="true">▾</span>
     </summary>
-    <div module="MyShop_OrderHistoryNologin" id="order_history_nologin_id" class="jg-login-guest jg-guest-lookup__body">
+    <div module="MyShop_OrderHistoryNologin" id="order_history_nologin_id" class="onroad-login-guest onroad-guest-lookup__body">
         <!--@css(/css/module/myshop/orderHistoryNologin.css)-->
         <!--
             $orderDetailUrl = /myshop/order/list.html

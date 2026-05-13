@@ -1,4 +1,4 @@
-(function () {
+﻿(function () {
   'use strict';
 
   function init() {
@@ -31,7 +31,7 @@
     var showcase = document.querySelector('.showcase');
     var bottle = document.getElementById('showcaseBottle');
 
-    var pdInfoArea = document.querySelector('.jg-product-detail-page .infoArea');
+    var pdInfoArea = document.querySelector('.onroad-product-detail-page .infoArea');
 
     // Smart-header: hide on scroll-down past threshold, reveal on scroll-up, always show near top
     // Threshold raised from 80 → 200 and dy threshold from 4 → 18 so that
@@ -40,7 +40,7 @@
     var lastScrollY = 0;
     var smartHeaderThreshold = 200;
     var smartHeaderDy = 18;
-    var pdAdditional = document.querySelector('.jg-product-additional-page');
+    var pdAdditional = document.querySelector('.onroad-product-additional-page');
     var pdReview = document.querySelector('.pd-flow--review') || document.getElementById('prdReview') || document.getElementById('review');
     var pdQnA = document.querySelector('.pd-flow--qna') || document.getElementById('prdQnA') || document.getElementById('qna');
     var pdNoticeBlock = document.getElementById('prdInfo') || document.querySelector('.detail_guide');
@@ -256,7 +256,7 @@
     // the basket as a usable guest entry instead. If Cafe24 did populate the
     // handler, we let it run first — this fallback only fires when neither
     // onclick nor href has a real intent.
-    var guestBtn = document.querySelector('.jg-guest-purchase');
+    var guestBtn = document.querySelector('.onroad-guest-purchase');
     if (guestBtn) {
       guestBtn.addEventListener('click', function (ev) {
         var href = guestBtn.getAttribute('href') || '';

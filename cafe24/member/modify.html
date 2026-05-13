@@ -1,5 +1,5 @@
-<!--@layout(/layout/basic/layout.html)-->
-<div class="section path jg-account-path">
+﻿<!--@layout(/layout/basic/layout.html)-->
+<div class="section path onroad-account-path">
     <span>현재 위치</span>
     <ol>
         <li><a href="/">홈</a></li>
@@ -7,15 +7,15 @@
     </ol>
 </div>
 
-<div class="section titleArea titleArea--myshop jg-member-modify-title">
+<div class="section titleArea titleArea--myshop onroad-member-modify-title">
     <h2>회원 정보 수정</h2>
     <p>계정 이용에 필요한 핵심 정보만 간결하게 관리하세요.</p>
 </div>
 
-<div class="section jg-sub-brief jg-member-modify-brief">
+<div class="section onroad-sub-brief onroad-member-modify-brief">
     <strong>필요한 정보만 정리합니다</strong>
     <p>로그인 정보와 이메일 중심으로 관리하고, 불필요한 사업자·국적·휴대전화 인증 항목은 화면에서 제외했습니다.</p>
-    <div class="jg-page-links">
+    <div class="onroad-page-links">
         <a href="/myshop/index.html">마이페이지</a>
         <a href="/myshop/wish_list.html">찜한 제품</a>
     </div>
@@ -49,13 +49,13 @@
     </ul>
 </div>
 
-<div module="member_edit" class="section memberArea jg-member-edit-page">
+<div module="member_edit" class="section memberArea onroad-member-edit-page">
     <!--
         $login_page = /member/login.html
         $isRuleBasedAddrForm = T
      -->
     <!--@css(/css/module/member/edit.css)-->
-    <div class="displaynone jg-member-pruned {$display_certification_form|display}">
+    <div class="displaynone onroad-member-pruned {$display_certification_form|display}">
         <div class="titleArea titleArea--middle">
             <h3>회원인증</h3>
         </div>
@@ -162,11 +162,11 @@
                 <th scope="row">새 비밀번호 확인</th>
                 <td>{$form.new_passwd_confirm} <p class="txtInfo" id="{$newPwConfirmMsg_id}"></p></td>
             </tr>
-            <tr class="displaynone jg-member-pruned {$display_hint|display}">
+            <tr class="displaynone onroad-member-pruned {$display_hint|display}">
                 <th scope="row"><img src="/SkinImg/img/ico_required.svg" class="icon icoRequired" alt="필수" />비밀번호 확인 질문</th>
                 <td>{$form.hint}</td>
             </tr>
-            <tr class="displaynone jg-member-pruned {$display_hint_answer|display}">
+            <tr class="displaynone onroad-member-pruned {$display_hint_answer|display}">
                 <th scope="row"><img src="/SkinImg/img/ico_required.svg" class="icon icoRequired" alt="필수" />비밀번호 확인 답변</th>
                 <td>{$form.hint_answer}</td>
             </tr>
@@ -174,27 +174,27 @@
                 <th scope="row" id="{$name_title}"><img src="/SkinImg/img/ico_required.svg" class="icon icoRequired" alt="필수" />이름</th>
                 <td>{$form.name}</td>
             </tr>
-            <tr class="displaynone jg-member-pruned {$display_eng_name|display}">
+            <tr class="displaynone onroad-member-pruned {$display_eng_name|display}">
                 <th scope="row"><img src="/SkinImg/img/ico_required.svg" class="icon icoRequired {$display_required_name_en|display}" alt="필수" />이름(영문)</th>
                 <td>{$form.name_en}<span class="txtInfo">(이름 - 성 형식으로 입력해 주세요.)</span></td>
             </tr>
-            <tr class="displaynone jg-member-pruned {$display_foreigner_ssn|display}">
+            <tr class="displaynone onroad-member-pruned {$display_foreigner_ssn|display}">
                 <th scope="row">{$foreigner_type}</th>
                 <td>{$foreigner_ssn}</td>
             </tr>
-            <tr class="displaynone jg-member-pruned {$display_coroperate|display}">
+            <tr class="displaynone onroad-member-pruned {$display_coroperate|display}">
                 <th scope="row"><img src="/SkinImg/img/ico_required.svg" class="icon icoRequired" alt="필수" />법인명 </th>
                 <td>{$coroperate_name}</td>
             </tr>
-            <tr class="displaynone jg-member-pruned {$display_coroperate|display}">
+            <tr class="displaynone onroad-member-pruned {$display_coroperate|display}">
                 <th scope="row"><img src="/SkinImg/img/ico_required.svg" class="icon icoRequired" alt="필수" />법인번호</th>
                 <td class="formGroup">{$coroperate_ssn}</td>
             </tr>
-            <tr class="displaynone jg-member-pruned {$display_company|display}">
+            <tr class="displaynone onroad-member-pruned {$display_company|display}">
                 <th scope="row"><img src="/SkinImg/img/ico_required.svg" class="icon icoRequired" alt="필수" />상호명</th>
                 <td>{$form.cname}</td>
             </tr>
-            <tr class="displaynone jg-member-pruned {$display_company|display}">
+            <tr class="displaynone onroad-member-pruned {$display_company|display}">
                 <th scope="row"><img src="/SkinImg/img/ico_required.svg" class="icon icoRequired" alt="필수" />사업자번호</th>
                 <td class="formGroup">
                     {$form.cssn}
@@ -202,19 +202,19 @@
                     <p id="{$cssnMsg_id}" class="txtInfo"></p>
                 </td>
             </tr>
-            <tr class="displaynone jg-member-pruned {$display_nation|display}">
+            <tr class="displaynone onroad-member-pruned {$display_nation|display}">
                 <th scope="row"><img src="/SkinImg/img/ico_required.svg" class="icon icoRequired" alt="필수" />국적</th>
                 <td>{$form.citizenship}</td>
             </tr>
-            <tr class="displaynone jg-member-pruned {$display_addr|display}">
+            <tr class="displaynone onroad-member-pruned {$display_addr|display}">
                 <th scope="row"><img src="/SkinImg/img/ico_required.svg" class="icon icoRequired {$display_required_address|display}" alt="필수" />주소</th>
                 <td class="formMultiple">{$form.address}</td>
             </tr>
-            <tr class="displaynone jg-member-pruned {$display_phone|display}">
+            <tr class="displaynone onroad-member-pruned {$display_phone|display}">
                 <th scope="row"><img src="/SkinImg/img/ico_required.svg" class="icon icoRequired {$display_required_phone|display}" alt="필수" />일반전화</th>
                 <td class="formGroup code">{$form.phone}</td>
             </tr>
-            <tr class="displaynone jg-member-pruned {$display_mobile|display}">
+            <tr class="displaynone onroad-member-pruned {$display_mobile|display}">
                 <th scope="row"><img src="/SkinImg/img/ico_required.svg" class="icon icoRequired {$display_required_cell|display}" alt="필수" />휴대전화</th>
                 <td class="formGroup code">
                     {$form.mobile}<button type="button" class="btnNormal {$display_verify_mobile|display}" id="{$btn_action_verify_mobile}" onclick="{$action_verify_mobile}">인증번호</button>
@@ -225,7 +225,7 @@
                     </ul>
                 </td>
             </tr>
-            <tr class="displaynone jg-member-pruned {$display_verify_mobile_confirm|display}" id="{$confirm_verify_mobile}">
+            <tr class="displaynone onroad-member-pruned {$display_verify_mobile_confirm|display}" id="{$confirm_verify_mobile}">
                 <th scope="row"><img src="/SkinImg/img/ico_required.svg" class="icon icoRequired" alt="필수" />인증번호</th>
                 <td class="formGroup">
                     <div class="verify">
@@ -235,7 +235,7 @@
                     <button type="button" class="btnNormal" id="{$btn_verify_mobile_confirm}" onclick="{$action_verify_mobile_confirm}">확인</button>
                 </td>
             </tr>
-            <tr class="displaynone jg-member-pruned {$display_is_sms|display}">
+            <tr class="displaynone onroad-member-pruned {$display_is_sms|display}">
                 <th scope="row"><img src="/SkinImg/img/ico_required.svg" class="icon icoRequired" alt="필수" />SMS 수신여부</th>
                 <td>{$form.is_sms}<p class="txtInfo">쇼핑몰에서 제공하는 유익한 이벤트 소식을 SMS로 받으실 수 있습니다.</p></td>
             </tr>
@@ -250,7 +250,7 @@
                 <th scope="row"><img src="/SkinImg/img/ico_required.svg" class="icon icoRequired" alt="필수" />이메일 수신여부</th>
                 <td>{$form.is_news_mail}<p class="txtInfo">쇼핑몰에서 제공하는 유익한 이벤트 소식을 이메일로 받으실 수 있습니다.</p></td>
             </tr>
-            <tr class="displaynone jg-member-pruned {$display_is_lifetime|display}">
+            <tr class="displaynone onroad-member-pruned {$display_is_lifetime|display}">
                 <th scope="row">평생회원</th>
                 <td>
                     {$form.is_lifetime}
@@ -265,10 +265,10 @@
         </table>
     </div>
 
-    <div class="titleArea titleArea--middle displaynone jg-member-pruned {$display_add_title|display}">
+    <div class="titleArea titleArea--middle displaynone onroad-member-pruned {$display_add_title|display}">
         <h3>추가정보</h3>
     </div>
-    <div class="ec-base-table typeWrite displaynone jg-member-pruned {$display_add_title|display}">
+    <div class="ec-base-table typeWrite displaynone onroad-member-pruned {$display_add_title|display}">
         <table border="1" >
         <caption>회원 추가정보</caption>
         <colgroup>

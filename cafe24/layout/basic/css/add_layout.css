@@ -1,4 +1,4 @@
-@media all and (min-width: 1024px) {
+﻿@media all and (min-width: 1024px) {
 	/* 레이아웃 테마02 */
 	#header.layout2 .inner .top_nav_box .top_logo {
 		justify-content: flex-start;
@@ -324,17 +324,17 @@
 		margin-right: auto;
 	}
 
-	#contents > .jg-hero,
-	#contents > .jg-compliance,
-	#contents > .jg-section,
-	#contents > .main_image_text_gallery.jg-section,
-	#contents > .main_product_category.jg-section {
+	#contents > .onroad-hero,
+	#contents > .onroad-compliance,
+	#contents > .onroad-section,
+	#contents > .main_image_text_gallery.onroad-section,
+	#contents > .main_product_category.onroad-section {
 		max-width: 100%;
 		width: 100%;
 	}
 
-	#contents > .main_image_text_gallery.jg-section,
-	#contents > .main_product_category.jg-section {
+	#contents > .main_image_text_gallery.onroad-section,
+	#contents > .main_product_category.onroad-section {
 		padding-left: 32px;
 		padding-right: 32px;
 	}
