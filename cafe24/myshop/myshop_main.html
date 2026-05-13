@@ -1,12 +1,35 @@
-<div id="myshopMain" module="myshop_main">
-    <a href="/myshop/index.html" class="is-active">Dashboard <span>01</span></a>
-    <a href="/myshop/order/list.html">주문 내역 <span>02</span></a>
-    <a href="/myshop/mileage/historyList.html">{$mileage_name} 내역 <span>03</span></a>
-    <a href="/myshop/coupon/coupon.html" class="{$coupon_display|display}">쿠폰 <span>04</span></a>
-    <a href="/myshop/wish_list.html">찜한 제품 <span>05</span></a>
-    <a href="/myshop/addr/list.html">배송지 관리 <span>06</span></a>
-    <a href="/member/modify.html">회원정보 수정 <span>07</span></a>
-    <a href="/myshop/regular_delivery.html" class="{$regular_delivery_display|display}">정기배송 <span>08</span></a>
-    <a href="/myshop/deposits/historyList.html" class="{$deposit_display|display}">{$deposit_name} <span>09</span></a>
-    <a href="{$action_logout}" class="my-side__logout" module="Layout_stateLogon">로그아웃 <span>—</span></a>
-</div>
+<nav id="myshopMain" module="myshop_main" class="my-nav" aria-label="마이페이지">
+    <div class="my-nav__head">
+        <strong>My Page</strong>
+        <span>Account Menu</span>
+    </div>
+    <ul class="menu">
+        <li><a href="/myshop/index.html"><span>01</span><strong>대시보드</strong><em>계정 요약</em></a></li>
+        <li><a href="/myshop/order/list.html"><span>02</span><strong>주문 내역</strong><em>배송과 취소/교환/반품</em></a></li>
+        <li><a href="/myshop/mileage/historyList.html"><span>03</span><strong>{$mileage_name}</strong><em>적립/사용 내역</em></a></li>
+        <li class="{$coupon_display|display}"><a href="/myshop/coupon/coupon.html"><span>04</span><strong>쿠폰</strong><em>보유 쿠폰과 혜택</em></a></li>
+        <li><a href="/myshop/wish_list.html"><span>05</span><strong>찜한 제품</strong><em>관심 제품 모음</em></a></li>
+        <li><a href="/myshop/addr/list.html"><span>06</span><strong>배송지 관리</strong><em>기본 배송지 설정</em></a></li>
+        <li><a href="/member/modify.html"><span>07</span><strong>회원정보 수정</strong><em>개인정보와 비밀번호</em></a></li>
+        <li class="{$regular_delivery_display|display}"><a href="/myshop/regular_delivery.html"><span>08</span><strong>정기배송</strong><em>구독 배송 관리</em></a></li>
+        <li class="{$deposit_display|display}"><a href="/myshop/deposits/historyList.html"><span>09</span><strong>{$deposit_name}</strong><em>예치금 내역</em></a></li>
+        <li module="Layout_stateLogon" class="my-nav__logout"><a href="{$action_logout}"><span>OUT</span><strong>로그아웃</strong><em>계정 종료</em></a></li>
+    </ul>
+</nav>
+<script>
+(function () {
+    var nav = document.getElementById('myshopMain');
+    if (!nav) return;
+    var path = window.location.pathname.replace(/\/$/, '/index.html');
+    var links = nav.querySelectorAll('a[href]');
+    for (var i = 0; i < links.length; i += 1) {
+        var href = links[i].getAttribute('href');
+        if (!href || href.charAt(0) !== '/') continue;
+        var normalized = href.replace(/\/$/, '/index.html');
+        if (path === normalized) {
+            links[i].className += (links[i].className ? ' ' : '') + 'is-active';
+            links[i].setAttribute('aria-current', 'page');
+        }
+    }
+}());
+</script>

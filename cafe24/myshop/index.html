@@ -6,126 +6,147 @@
 -->
 </div>
 
-<div module="myshop_asyncbankbook" class="my-page">
-
-    <!-- HERO -->
+<div module="myshop_asyncbankbook" class="my-page my-page--dashboard">
     <section class="my-hero">
-        <div class="my-hero__bgword" aria-hidden="true">mypage</div>
+        <div class="my-hero__media" aria-hidden="true"></div>
         <div class="my-hero__inner">
-            <div class="my-hero__crest"><span>MY PAGE · ONROAD</span><em>— Runner's account</em></div>
-            <h1 class="my-hero__title" module="myshop_asyncbenefit">안녕하세요,<br><em>{$member_name}</em> 러너.</h1>
-            <div class="my-hero__meta">
-                <div module="myshop_asyncbenefit">회원 등급 <b>{$group_name}</b></div>
-                <div>누적 주문 <b>{$total_order_count}회 · {$total_order_price}</b></div>
-                <div>보유 <b>{$total_mileage}{$mileage_name}</b></div>
-                <div>보유 쿠폰 <b class="signal">{$coupon_cnt}매</b></div>
+            <div class="my-hero__eyebrow">Onroad Account</div>
+            <div class="my-hero__copy" module="myshop_asyncbenefit">
+                <h1>{$member_name} 님의 러닝 계정</h1>
+                <p>주문, 적립금, 쿠폰, 배송지를 한 화면에서 정리합니다.</p>
+            </div>
+            <div class="my-hero__stats">
+                <a href="/myshop/order/list.html" class="my-stat">
+                    <span class="my-stat__label">총 주문</span>
+                    <strong>{$total_order_count}</strong>
+                    <em>{$total_order_price}</em>
+                </a>
+                <a href="/myshop/mileage/historyList.html" class="my-stat">
+                    <span class="my-stat__label">{$mileage_name}</span>
+                    <strong>{$total_mileage}</strong>
+                    <em>사용 가능 포인트</em>
+                </a>
+                <a href="/myshop/coupon/coupon.html" class="my-stat">
+                    <span class="my-stat__label">쿠폰</span>
+                    <strong>{$coupon_cnt}</strong>
+                    <em>보유 쿠폰</em>
+                </a>
+                <div class="my-stat" module="myshop_asyncbenefit">
+                    <span class="my-stat__label">회원 등급</span>
+                    <strong>{$group_name}</strong>
+                    <em>현재 등급</em>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- BODY -->
-    <section class="my-body">
-        <div class="my-grid">
+    <section class="my-shell">
+        <aside class="my-side" aria-label="마이페이지 메뉴">
+            <!--@import(/myshop/myshop_main.html)-->
+        </aside>
 
-            <!-- SIDE NAV -->
-            <aside class="my-side">
-                <!--@import(/myshop/myshop_main.html)-->
-            </aside>
-
-            <!-- MAIN -->
-            <div class="my-main">
-
-                <!-- SUMMARY -->
-                <div class="my-summary">
-                    <div class="my-summary__cell">
-                        <div class="k">№ 01 · 주문</div>
-                        <div class="v">{$total_order_count}<sub>회</sub></div>
+        <main class="my-main">
+            <section class="my-panel my-panel--status">
+                <div class="my-panel__head">
+                    <div>
+                        <span class="my-panel__eyebrow">Recent 3 Months</span>
+                        <h2>주문 처리 현황</h2>
                     </div>
-                    <div class="my-summary__cell">
-                        <div class="k">№ 02 · {$mileage_name}</div>
-                        <div class="v">{$total_mileage}<sub>P</sub></div>
-                    </div>
-                    <div class="my-summary__cell">
-                        <div class="k">№ 03 · 쿠폰</div>
-                        <div class="v">{$coupon_cnt}<sub>매</sub></div>
-                    </div>
-                    <div class="my-summary__cell" module="myshop_asyncbenefit">
-                        <div class="k">№ 04 · 등급</div>
-                        <div class="v"><em>{$group_name}</em></div>
-                    </div>
+                    <a href="/myshop/order/list.html">전체 주문 보기</a>
                 </div>
 
-                <!-- ORDER STATE (3개월 기준 처리 현황) -->
-                <div class="my-section">
-                    <div class="my-section__head">
-                        <h2>주문 <em>처리</em> 현황</h2>
-                        <span class="my-section__note">최근 3개월 기준</span>
-                    </div>
-                    <div class="my-orderstate" module="myshop_orderstate">
-                        <a href="{$shppiedBeforeUrl}" class="my-orderstate__cell">
-                            <div class="k">입금 전</div>
-                            <div class="v">{$shppiedBeforeCount}</div>
-                        </a>
-                        <a href="{$shppiedStandbyUrl}" class="my-orderstate__cell">
-                            <div class="k">배송 준비중</div>
-                            <div class="v">{$shppiedStandbyCount}</div>
-                        </a>
-                        <a href="{$shppiedBeginUrl}" class="my-orderstate__cell">
-                            <div class="k">배송 중</div>
-                            <div class="v">{$shppiedBeginCount}</div>
-                        </a>
-                        <a href="{$shppiedComplateUrl}" class="my-orderstate__cell">
-                            <div class="k">배송 완료</div>
-                            <div class="v">{$shppiedComplateCount}</div>
-                        </a>
+                <div class="my-orderstate" module="myshop_orderstate">
+                    <a href="{$shppiedBeforeUrl}" class="my-orderstate__cell">
+                        <span>입금 전</span>
+                        <strong>{$shppiedBeforeCount}</strong>
+                    </a>
+                    <a href="{$shppiedStandbyUrl}" class="my-orderstate__cell">
+                        <span>배송 준비중</span>
+                        <strong>{$shppiedStandbyCount}</strong>
+                    </a>
+                    <a href="{$shppiedBeginUrl}" class="my-orderstate__cell">
+                        <span>배송 중</span>
+                        <strong>{$shppiedBeginCount}</strong>
+                    </a>
+                    <a href="{$shppiedComplateUrl}" class="my-orderstate__cell">
+                        <span>배송 완료</span>
+                        <strong>{$shppiedComplateCount}</strong>
+                    </a>
+                </div>
+            </section>
+
+            <section class="my-panel my-panel--actions">
+                <div class="my-panel__head">
+                    <div>
+                        <span class="my-panel__eyebrow">Quick Access</span>
+                        <h2>자주 쓰는 기능</h2>
                     </div>
                 </div>
+                <div class="my-actions">
+                    <a href="/member/modify.html">
+                        <span>01</span>
+                        <strong>회원정보 수정</strong>
+                        <em>연락처와 기본 정보를 관리합니다.</em>
+                    </a>
+                    <a href="/myshop/wish_list.html">
+                        <span>02</span>
+                        <strong>찜한 제품</strong>
+                        <em>다시 볼 제품을 빠르게 확인합니다.</em>
+                    </a>
+                    <a href="/myshop/addr/list.html">
+                        <span>03</span>
+                        <strong>배송지 관리</strong>
+                        <em>자주 쓰는 수령지를 정리합니다.</em>
+                    </a>
+                    <a href="/board/inquiry/list.html">
+                        <span>04</span>
+                        <strong>1:1 문의</strong>
+                        <em>주문과 제품 문의를 이어갑니다.</em>
+                    </a>
+                </div>
+            </section>
 
-                <!-- RECENT ORDERS -->
-                <div class="my-section">
-                    <div class="my-section__head">
-                        <h2>최근 <em>주문</em></h2>
-                        <a href="/myshop/order/list.html">전체 주문 보기</a>
+            <section class="my-panel my-panel--orders">
+                <div class="my-panel__head">
+                    <div>
+                        <span class="my-panel__eyebrow">Orders</span>
+                        <h2>최근 주문</h2>
                     </div>
-                    <div class="my-orders">
-                        <!--@import(/myshop/order/history_list_item.html)-->
+                    <a href="/myshop/order/list.html">주문 내역</a>
+                </div>
+                <div class="my-orders">
+                    <!--@import(/myshop/order/history_list_item.html)-->
+                </div>
+            </section>
+
+            <section class="my-panel my-panel--account">
+                <div class="my-panel__head">
+                    <div>
+                        <span class="my-panel__eyebrow">Account Summary</span>
+                        <h2>계정 요약</h2>
+                    </div>
+                    <a href="/member/modify.html">수정하기</a>
+                </div>
+                <div class="my-info">
+                    <div class="my-info__cell" module="myshop_asyncbenefit">
+                        <span>이름</span>
+                        <strong>{$member_name}</strong>
+                    </div>
+                    <div class="my-info__cell" module="myshop_asyncbenefit">
+                        <span>회원 등급</span>
+                        <strong>{$group_name}</strong>
+                    </div>
+                    <div class="my-info__cell">
+                        <span>누적 주문</span>
+                        <strong>{$total_order_price}</strong>
+                        <em>{$total_order_count}건</em>
+                    </div>
+                    <div class="my-info__cell">
+                        <span>{$mileage_name}</span>
+                        <strong>{$total_mileage}</strong>
                     </div>
                 </div>
-
-                <!-- ACCOUNT INFO -->
-                <div class="my-section">
-                    <div class="my-section__head">
-                        <h2>내 <em>정보</em></h2>
-                        <a href="/member/modify.html">수정하기</a>
-                    </div>
-                    <div class="my-info">
-                        <div class="my-info__cell" module="myshop_asyncbenefit">
-                            <div class="k">이름</div>
-                            <div class="v">{$member_name} 러너</div>
-                        </div>
-                        <div class="my-info__cell" module="myshop_asyncbenefit">
-                            <div class="k">회원 등급</div>
-                            <div class="v"><em>{$group_name}</em></div>
-                        </div>
-                        <div class="my-info__cell">
-                            <div class="k">누적 주문</div>
-                            <div class="v">{$total_order_price}<span>· {$total_order_count}회</span></div>
-                        </div>
-                        <div class="my-info__cell">
-                            <div class="k">{$mileage_name}</div>
-                            <div class="v">{$total_mileage}<span>P</span></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FOOT CTAs -->
-                <div class="my-foot-ctas">
-                    <a href="/product/detail.html?product_no=11" class="btn btn--primary">다시 구매하기 <span class="btn__arrow"></span></a>
-                    <a href="/myshop/order/list.html" class="btn btn--ghost-dark">주문 전체 보기 <span class="btn__arrow"></span></a>
-                </div>
-
-            </div>
-        </div>
+            </section>
+        </main>
     </section>
-
 </div>

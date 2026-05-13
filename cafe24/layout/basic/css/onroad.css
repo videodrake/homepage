@@ -17130,3 +17130,554 @@ body#userStyle #orderFixItem .btnSubmit:hover {
         margin-left: 0;
     }
 }
+
+/* ==========================================================================
+   My Page redesign v3
+   ========================================================================== */
+.onroad-page .my-page--dashboard {
+    background: var(--c-paper);
+    color: var(--c-ink);
+}
+
+.onroad-page .my-page--dashboard .my-hero {
+    min-height: auto;
+    padding: clamp(72px, 9vw, 128px) 0 clamp(36px, 5vw, 72px);
+    background: var(--c-dark);
+    color: var(--c-cream);
+    overflow: hidden;
+    position: relative;
+}
+
+.onroad-page .my-page--dashboard .my-hero__media {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(100deg, rgba(15, 13, 11, 0.9) 0%, rgba(15, 13, 11, 0.62) 42%, rgba(15, 13, 11, 0.22) 100%),
+        linear-gradient(180deg, rgba(15, 13, 11, 0.12), rgba(15, 13, 11, 0.82)),
+        url("/SkinImg/img/journal/journal-01-a/img-1.png") center/cover no-repeat;
+    filter: saturate(0.82) contrast(1.05);
+    transform: scale(1.02);
+}
+
+.onroad-page .my-page--dashboard .my-hero__inner {
+    width: min(var(--container), calc(100vw - 48px));
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.onroad-page .my-page--dashboard .my-hero__eyebrow,
+.onroad-page .my-page--dashboard .my-panel__eyebrow {
+    display: block;
+    margin: 0 0 var(--s-3);
+    color: var(--c-signal);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.onroad-page .my-page--dashboard .my-hero__copy {
+    max-width: 760px;
+}
+
+.onroad-page .my-page--dashboard .my-hero__copy h1 {
+    margin: 0;
+    color: var(--c-cream);
+    font-family: var(--font-serif);
+    font-size: clamp(42px, 6vw, 88px);
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: 1;
+}
+
+.onroad-page .my-page--dashboard .my-hero__copy p {
+    max-width: 520px;
+    margin: var(--s-5) 0 0;
+    color: rgba(244, 239, 230, 0.72);
+    font-family: var(--font-sans);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.onroad-page .my-page--dashboard .my-hero__stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1px;
+    width: min(980px, 100%);
+    margin-top: clamp(36px, 5vw, 64px);
+    background: rgba(244, 239, 230, 0.18);
+    border: 1px solid rgba(244, 239, 230, 0.18);
+}
+
+.onroad-page .my-page--dashboard .my-stat {
+    display: grid;
+    align-content: start;
+    gap: var(--s-2);
+    min-height: 132px;
+    padding: var(--s-5);
+    background: rgba(15, 13, 11, 0.52);
+    color: var(--c-cream);
+    text-decoration: none;
+}
+
+.onroad-page .my-page--dashboard .my-stat__label,
+.onroad-page .my-page--dashboard .my-stat em {
+    color: rgba(244, 239, 230, 0.58);
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    line-height: 1.35;
+    text-transform: uppercase;
+}
+
+.onroad-page .my-page--dashboard .my-stat strong {
+    display: block;
+    min-width: 0;
+    overflow: hidden;
+    color: var(--c-cream);
+    font-family: var(--font-serif);
+    font-size: clamp(28px, 3vw, 42px);
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: 1.05;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.onroad-page .my-page--dashboard a.my-stat:hover strong {
+    color: var(--c-signal);
+}
+
+.onroad-page .my-page--dashboard .my-shell {
+    display: grid;
+    grid-template-columns: minmax(220px, 280px) minmax(0, 1fr);
+    gap: clamp(28px, 4vw, 56px);
+    width: min(var(--container), calc(100vw - 48px));
+    margin: 0 auto;
+    padding: clamp(48px, 6vw, 84px) 0 clamp(72px, 8vw, 112px);
+}
+
+.onroad-page .my-page--dashboard .my-side {
+    align-self: start;
+    position: sticky;
+    top: calc(var(--header-h) + 24px);
+    border: 0;
+}
+
+.onroad-page .my-nav,
+body.onroad-page .myshopArea #myshopMain.my-nav {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: 0 !important;
+}
+
+.onroad-page .my-nav__head {
+    padding: 0 0 var(--s-4);
+    border-bottom: 1px solid var(--c-ink);
+}
+
+.onroad-page .my-nav__head strong {
+    display: block;
+    color: var(--c-ink);
+    font-family: var(--font-serif);
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 1.05;
+}
+
+.onroad-page .my-nav__head span {
+    display: block;
+    margin-top: var(--s-2);
+    color: var(--c-meta);
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.onroad-page .my-nav .menu,
+body.onroad-page .myshopArea #myshopMain.my-nav .menu {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: 0 !important;
+    list-style: none !important;
+}
+
+.onroad-page .my-nav .menu li,
+body.onroad-page .myshopArea #myshopMain.my-nav .menu li {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: 0 !important;
+}
+
+.onroad-page .my-nav .menu a,
+body.onroad-page .myshopArea #myshopMain.my-nav .menu a,
+.onroad-page .my-side .my-nav .menu a {
+    display: grid !important;
+    grid-template-columns: 34px minmax(0, 1fr) !important;
+    gap: var(--s-3) !important;
+    align-items: start !important;
+    min-height: 0 !important;
+    padding: var(--s-4) 0 !important;
+    border: 0 !important;
+    border-bottom: 1px solid var(--c-line) !important;
+    background: transparent !important;
+    color: var(--c-ink) !important;
+    text-decoration: none !important;
+}
+
+.onroad-page .my-nav .menu a::after,
+body.onroad-page .myshopArea #myshopMain.my-nav .menu a::after {
+    content: none !important;
+}
+
+.onroad-page .my-nav .menu a span {
+    grid-row: 1 / span 2;
+    color: var(--c-meta);
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    line-height: 1.2;
+}
+
+.onroad-page .my-nav .menu a strong {
+    overflow: hidden;
+    color: inherit;
+    font-family: var(--font-sans);
+    font-size: 14px;
+    font-weight: 650;
+    letter-spacing: 0;
+    line-height: 1.25;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.onroad-page .my-nav .menu a em {
+    overflow: hidden;
+    color: var(--c-meta);
+    font-family: var(--font-sans);
+    font-size: 12px;
+    font-style: normal;
+    line-height: 1.35;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.onroad-page .my-nav .menu a:hover,
+ .onroad-page .my-nav .menu a.is-active,
+ .onroad-page .my-nav .menu a[aria-current="page"],
+body.onroad-page .myshopArea #myshopMain.my-nav .menu a:hover {
+    color: var(--c-signal) !important;
+    border-bottom-color: var(--c-signal) !important;
+}
+
+.onroad-page .my-nav .my-nav__logout a {
+    color: var(--c-meta) !important;
+}
+
+.onroad-page .my-page--dashboard .my-main {
+    display: grid;
+    gap: var(--s-6);
+    min-width: 0;
+}
+
+.onroad-page .my-page--dashboard .my-panel {
+    margin: 0;
+    padding: clamp(22px, 3vw, 34px);
+    background: var(--c-cream);
+    border: 1px solid var(--c-line);
+    box-shadow: 0 18px 48px rgba(37, 30, 22, 0.05);
+}
+
+.onroad-page .my-page--dashboard .my-panel__head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--s-5);
+    margin: 0 0 var(--s-5);
+    padding: 0 0 var(--s-4);
+    border-bottom: 1px solid var(--c-ink);
+}
+
+.onroad-page .my-page--dashboard .my-panel__head h2 {
+    margin: 0;
+    color: var(--c-ink);
+    font-family: var(--font-serif);
+    font-size: clamp(26px, 2.4vw, 36px);
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: 1.08;
+}
+
+.onroad-page .my-page--dashboard .my-panel__head a {
+    flex: 0 0 auto;
+    color: var(--c-meta);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    line-height: 1.4;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.onroad-page .my-page--dashboard .my-panel__head a:hover {
+    color: var(--c-signal);
+}
+
+.onroad-page .my-page--dashboard .my-orderstate {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1px;
+    margin: 0;
+    background: var(--c-line);
+    border: 1px solid var(--c-line);
+}
+
+.onroad-page .my-page--dashboard .my-orderstate__cell {
+    display: grid;
+    gap: var(--s-3);
+    min-height: 130px;
+    padding: var(--s-5);
+    background: var(--c-paper);
+    border: 0;
+    color: var(--c-ink);
+    text-decoration: none;
+}
+
+.onroad-page .my-page--dashboard .my-orderstate__cell span {
+    color: var(--c-meta);
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    line-height: 1.35;
+    text-transform: uppercase;
+}
+
+.onroad-page .my-page--dashboard .my-orderstate__cell strong {
+    color: var(--c-ink);
+    font-family: var(--font-serif);
+    font-size: clamp(34px, 4vw, 54px);
+    font-weight: 300;
+    line-height: 1;
+}
+
+.onroad-page .my-page--dashboard .my-orderstate__cell:hover strong {
+    color: var(--c-signal);
+}
+
+.onroad-page .my-page--dashboard .my-actions {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1px;
+    background: var(--c-line);
+    border: 1px solid var(--c-line);
+}
+
+.onroad-page .my-page--dashboard .my-actions a {
+    display: grid;
+    align-content: start;
+    gap: var(--s-2);
+    min-height: 150px;
+    padding: var(--s-5);
+    background: var(--c-paper);
+    color: var(--c-ink);
+    text-decoration: none;
+}
+
+.onroad-page .my-page--dashboard .my-actions span {
+    color: var(--c-signal);
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+}
+
+.onroad-page .my-page--dashboard .my-actions strong {
+    overflow: hidden;
+    color: inherit;
+    font-family: var(--font-sans);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.3;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.onroad-page .my-page--dashboard .my-actions em {
+    color: var(--c-meta);
+    font-family: var(--font-sans);
+    font-size: 13px;
+    font-style: normal;
+    line-height: 1.55;
+}
+
+.onroad-page .my-page--dashboard .my-actions a:hover strong {
+    color: var(--c-signal);
+}
+
+.onroad-page .my-page--dashboard .my-orders {
+    padding: 0;
+}
+
+.onroad-page .my-page--dashboard .my-orders .orderList {
+    display: grid;
+    gap: var(--s-4);
+    margin: 0;
+}
+
+.onroad-page .my-page--dashboard .my-orders .order {
+    margin: 0;
+    padding: var(--s-5);
+    background: var(--c-paper);
+    border: 1px solid var(--c-line);
+}
+
+.onroad-page .my-page--dashboard .my-orders .ec-base-prdEmpty {
+    margin: 0;
+}
+
+.onroad-page .my-page--dashboard .my-info {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1px;
+    background: var(--c-line);
+    border: 1px solid var(--c-line);
+}
+
+.onroad-page .my-page--dashboard .my-info__cell {
+    display: grid;
+    align-content: start;
+    gap: var(--s-2);
+    min-height: 122px;
+    padding: var(--s-5);
+    background: var(--c-paper);
+    border: 0;
+}
+
+.onroad-page .my-page--dashboard .my-info__cell span,
+.onroad-page .my-page--dashboard .my-info__cell em {
+    color: var(--c-meta);
+    font-family: var(--font-mono);
+    font-size: 10px;
+    font-style: normal;
+    letter-spacing: 0.12em;
+    line-height: 1.35;
+    text-transform: uppercase;
+}
+
+.onroad-page .my-page--dashboard .my-info__cell strong {
+    overflow: hidden;
+    color: var(--c-ink);
+    font-family: var(--font-serif);
+    font-size: clamp(22px, 2.4vw, 34px);
+    font-weight: 300;
+    line-height: 1.08;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+body.onroad-page .myshopArea #myshopMain.my-nav {
+    width: 100% !important;
+    max-width: none !important;
+    margin-top: var(--s-8) !important;
+    padding: clamp(20px, 2.4vw, 28px) !important;
+    background: var(--c-cream) !important;
+    border: 1px solid var(--c-line) !important;
+}
+
+body.onroad-page .myshopArea #myshopMain.my-nav .menu {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 1px !important;
+    background: var(--c-line) !important;
+    border: 1px solid var(--c-line) !important;
+}
+
+body.onroad-page .myshopArea #myshopMain.my-nav .menu a {
+    min-height: 92px !important;
+    padding: var(--s-4) !important;
+    background: var(--c-paper) !important;
+    border: 0 !important;
+}
+
+@media (max-width: 1180px) {
+    .onroad-page .my-page--dashboard .my-shell {
+        grid-template-columns: 1fr;
+    }
+
+    .onroad-page .my-page--dashboard .my-side {
+        position: static;
+    }
+
+    .onroad-page .my-page--dashboard .my-nav .menu {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 1px !important;
+        background: var(--c-line) !important;
+        border: 1px solid var(--c-line) !important;
+    }
+
+    .onroad-page .my-page--dashboard .my-nav .menu a {
+        min-height: 92px !important;
+        padding: var(--s-4) !important;
+        background: var(--c-cream) !important;
+        border: 0 !important;
+    }
+
+    .onroad-page .my-page--dashboard .my-hero__stats,
+    .onroad-page .my-page--dashboard .my-actions,
+    .onroad-page .my-page--dashboard .my-info {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 720px) {
+    .onroad-page .my-page--dashboard .my-hero__inner,
+    .onroad-page .my-page--dashboard .my-shell {
+        width: calc(100vw - 32px);
+    }
+
+    .onroad-page .my-page--dashboard .my-hero {
+        padding-top: 56px;
+    }
+
+    .onroad-page .my-page--dashboard .my-hero__stats,
+    .onroad-page .my-page--dashboard .my-orderstate,
+    .onroad-page .my-page--dashboard .my-actions,
+    .onroad-page .my-page--dashboard .my-info,
+    .onroad-page .my-page--dashboard .my-nav .menu,
+    body.onroad-page .myshopArea #myshopMain.my-nav .menu {
+        grid-template-columns: 1fr !important;
+    }
+
+    .onroad-page .my-page--dashboard .my-stat,
+    .onroad-page .my-page--dashboard .my-orderstate__cell,
+    .onroad-page .my-page--dashboard .my-actions a,
+    .onroad-page .my-page--dashboard .my-info__cell {
+        min-height: auto;
+    }
+
+    .onroad-page .my-page--dashboard .my-panel {
+        padding: var(--s-4);
+    }
+
+    .onroad-page .my-page--dashboard .my-panel__head {
+        display: grid;
+    }
+
+    .onroad-page .my-page--dashboard .my-orders .prdBox,
+    body.onroad-page .myshopArea .ec-base-prdInfo .prdBox {
+        grid-template-columns: auto 76px minmax(0, 1fr) !important;
+    }
+}
