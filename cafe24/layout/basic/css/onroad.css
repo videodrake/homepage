@@ -18865,7 +18865,8 @@ body.onroad-page .myshopArea:has(.ec-base-prdEmpty:not(.displaynone)) .ec-base-p
 }
 
 /* Myshop detail pages: mileage summary and legacy jg replacement */
-body.onroad-page .myshopArea .my-mileage-summary {
+body.onroad-page .myshopArea .my-mileage-summary,
+body.onroad-page .myshopArea [class*="xans-myshop-summary"].ec-base-box.gHalf {
     display: grid !important;
     grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
     align-items: stretch !important;
@@ -18877,13 +18878,15 @@ body.onroad-page .myshopArea .my-mileage-summary {
     border: 0 !important;
 }
 
-body.onroad-page .myshopArea .my-mileage-summary ul {
+body.onroad-page .myshopArea .my-mileage-summary ul,
+body.onroad-page .myshopArea [class*="xans-myshop-summary"].ec-base-box.gHalf ul {
     display: contents !important;
     margin: 0 !important;
     padding: 0 !important;
 }
 
-body.onroad-page .myshopArea .ec-base-box.gHalf.my-mileage-summary > ul {
+body.onroad-page .myshopArea .ec-base-box.gHalf.my-mileage-summary > ul,
+body.onroad-page .myshopArea [class*="xans-myshop-summary"].ec-base-box.gHalf > ul {
     display: contents !important;
     grid-template-columns: none !important;
     gap: 0 !important;
@@ -18893,7 +18896,8 @@ body.onroad-page .myshopArea .ec-base-box.gHalf.my-mileage-summary > ul {
     border: 0 !important;
 }
 
-body.onroad-page .myshopArea .my-mileage-summary li {
+body.onroad-page .myshopArea .my-mileage-summary li,
+body.onroad-page .myshopArea [class*="xans-myshop-summary"].ec-base-box.gHalf li {
     display: grid !important;
     float: none !important;
     grid-template-rows: auto minmax(42px, 1fr) !important;
@@ -18911,7 +18915,8 @@ body.onroad-page .myshopArea .my-mileage-summary li {
     box-shadow: 0 10px 24px rgba(37, 30, 22, 0.035) !important;
 }
 
-body.onroad-page .myshopArea .ec-base-box.gHalf.my-mileage-summary > ul > li {
+body.onroad-page .myshopArea .ec-base-box.gHalf.my-mileage-summary > ul > li,
+body.onroad-page .myshopArea [class*="xans-myshop-summary"].ec-base-box.gHalf > ul > li {
     display: grid !important;
     float: none !important;
     width: auto !important;
@@ -18922,7 +18927,8 @@ body.onroad-page .myshopArea .ec-base-box.gHalf.my-mileage-summary > ul > li {
     box-sizing: border-box !important;
 }
 
-body.onroad-page .myshopArea .my-mileage-summary .title {
+body.onroad-page .myshopArea .my-mileage-summary .title,
+body.onroad-page .myshopArea [class*="xans-myshop-summary"].ec-base-box.gHalf .title {
     display: block !important;
     min-width: 0 !important;
     color: rgba(20, 18, 16, 0.72) !important;
@@ -18934,7 +18940,8 @@ body.onroad-page .myshopArea .my-mileage-summary .title {
     text-transform: none !important;
 }
 
-body.onroad-page .myshopArea .my-mileage-summary .data {
+body.onroad-page .myshopArea .my-mileage-summary .data,
+body.onroad-page .myshopArea [class*="xans-myshop-summary"].ec-base-box.gHalf .data {
     display: block !important;
     min-width: 0 !important;
     margin: 0 !important;
@@ -18949,17 +18956,26 @@ body.onroad-page .myshopArea .my-mileage-summary .data {
     white-space: nowrap !important;
 }
 
-body.onroad-page .myshopArea .myshop-brief {
+body.onroad-page .myshopArea .myshop-brief,
+body.onroad-page .myshopArea .jg-sub-brief,
+body.onroad-page .myshopArea .jg-wish-brief,
+body.onroad-page .myshopArea .jg-myshop-brief {
     display: grid !important;
     gap: 14px !important;
+    width: 100% !important;
+    max-width: none !important;
     margin: 0 0 clamp(28px, 3vw, 40px) !important;
     padding: clamp(24px, 3vw, 36px) !important;
+    box-sizing: border-box !important;
     background: #fffaf2 !important;
     border: 1px solid rgba(20, 18, 16, 0.24) !important;
     box-shadow: 0 10px 24px rgba(37, 30, 22, 0.035) !important;
 }
 
-body.onroad-page .myshopArea .myshop-brief strong {
+body.onroad-page .myshopArea .myshop-brief strong,
+body.onroad-page .myshopArea .jg-sub-brief strong,
+body.onroad-page .myshopArea .jg-wish-brief strong,
+body.onroad-page .myshopArea .jg-myshop-brief strong {
     color: var(--c-ink) !important;
     font-family: var(--font-serif) !important;
     font-size: clamp(28px, 3vw, 42px) !important;
@@ -18968,7 +18984,10 @@ body.onroad-page .myshopArea .myshop-brief strong {
     line-height: 1.08 !important;
 }
 
-body.onroad-page .myshopArea .myshop-brief p {
+body.onroad-page .myshopArea .myshop-brief p,
+body.onroad-page .myshopArea .jg-sub-brief p,
+body.onroad-page .myshopArea .jg-wish-brief p,
+body.onroad-page .myshopArea .jg-myshop-brief p {
     max-width: 720px !important;
     margin: 0 !important;
     color: var(--c-meta) !important;
@@ -18979,14 +18998,16 @@ body.onroad-page .myshopArea .myshop-brief p {
     line-height: 1.65 !important;
 }
 
-body.onroad-page .myshopArea .myshop-page-links {
+body.onroad-page .myshopArea .myshop-page-links,
+body.onroad-page .myshopArea .jg-page-links {
     display: flex !important;
     flex-wrap: wrap !important;
     gap: 10px !important;
     margin-top: 4px !important;
 }
 
-body.onroad-page .myshopArea .myshop-page-links a {
+body.onroad-page .myshopArea .myshop-page-links a,
+body.onroad-page .myshopArea .jg-page-links a {
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -19004,29 +19025,34 @@ body.onroad-page .myshopArea .myshop-page-links a {
     text-transform: none !important;
 }
 
-body.onroad-page .myshopArea .myshop-page-links a:hover {
+body.onroad-page .myshopArea .myshop-page-links a:hover,
+body.onroad-page .myshopArea .jg-page-links a:hover {
     background: var(--c-ink) !important;
     border-color: var(--c-ink) !important;
     color: var(--c-cream) !important;
 }
 
 @media (max-width: 1180px) {
-    body.onroad-page .myshopArea .my-mileage-summary {
+    body.onroad-page .myshopArea .my-mileage-summary,
+    body.onroad-page .myshopArea [class*="xans-myshop-summary"].ec-base-box.gHalf {
         grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
     }
 }
 
 @media (max-width: 760px) {
-    body.onroad-page .myshopArea .my-mileage-summary {
+    body.onroad-page .myshopArea .my-mileage-summary,
+    body.onroad-page .myshopArea [class*="xans-myshop-summary"].ec-base-box.gHalf {
         grid-template-columns: 1fr !important;
     }
 
-    body.onroad-page .myshopArea .my-mileage-summary li {
+    body.onroad-page .myshopArea .my-mileage-summary li,
+    body.onroad-page .myshopArea [class*="xans-myshop-summary"].ec-base-box.gHalf li {
         min-height: 124px !important;
         padding: 20px !important;
     }
 
-    body.onroad-page .myshopArea .myshop-page-links {
+    body.onroad-page .myshopArea .myshop-page-links,
+    body.onroad-page .myshopArea .jg-page-links {
         display: grid !important;
         grid-template-columns: 1fr !important;
     }
