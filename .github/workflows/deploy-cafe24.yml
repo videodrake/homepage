@@ -81,5 +81,10 @@ jobs:
             $DELETE_FLAG \
             $DRY_FLAG \
             cafe24/ /base/
+
+          # Remove retired templates that add/update-only deploys cannot delete.
+          rm -f /base/myshop/order/list_old.html
+          rm -f /base/myshop/order/detail_old.html
+          rm -f /base/css/module/myshop/orderOldHistoryList.css
           bye
           LFTP_SCRIPT
