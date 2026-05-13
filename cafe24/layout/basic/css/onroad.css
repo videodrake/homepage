@@ -17683,6 +17683,503 @@ body.onroad-page .myshopArea #myshopMain.my-nav .menu a {
 }
 
 /* ==========================================================================
+   My Page refinement v5
+   Larger dashboard metrics and unified sub-page tabs.
+   ========================================================================== */
+.onroad-page .my-page--refined .my-panel {
+    padding: clamp(28px, 3.4vw, 44px) !important;
+}
+
+.onroad-page .my-page--refined .my-panel__head {
+    margin-bottom: clamp(20px, 2.6vw, 32px) !important;
+}
+
+.onroad-page .my-page--refined .my-panel__head h2 {
+    font-size: clamp(31px, 3vw, 46px) !important;
+    line-height: 1.02 !important;
+}
+
+.onroad-page .my-page--refined .my-panel__note {
+    font-size: 12px !important;
+    letter-spacing: 0.08em !important;
+}
+
+.onroad-page .my-page--refined .my-orderstate {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+    background: transparent !important;
+    border: 0 !important;
+}
+
+.onroad-page .my-page--refined .my-orderstate__cell {
+    min-height: 164px !important;
+    padding: clamp(24px, 3vw, 36px) !important;
+    border: 1px solid rgba(20, 18, 16, 0.14) !important;
+    background: #fbf7ef !important;
+}
+
+.onroad-page .my-page--refined .my-orderstate__cell span {
+    color: var(--c-ink) !important;
+    font-family: var(--font-sans) !important;
+    font-size: clamp(18px, 1.7vw, 24px) !important;
+    font-weight: 700 !important;
+    letter-spacing: 0 !important;
+    line-height: 1.25 !important;
+    text-transform: none !important;
+}
+
+.onroad-page .my-page--refined .my-orderstate__cell strong {
+    margin-top: auto !important;
+    font-size: clamp(52px, 6vw, 84px) !important;
+    letter-spacing: 0 !important;
+}
+
+.onroad-page .my-page--refined .my-info {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+    background: transparent !important;
+    border: 0 !important;
+}
+
+.onroad-page .my-page--refined .my-info__cell {
+    min-height: 156px !important;
+    padding: clamp(24px, 3vw, 36px) !important;
+    border: 1px solid rgba(20, 18, 16, 0.14) !important;
+    background: #fbf7ef !important;
+}
+
+.onroad-page .my-page--refined .my-info__cell span,
+.onroad-page .my-page--refined .my-info__cell em {
+    font-family: var(--font-sans) !important;
+    font-size: clamp(15px, 1.35vw, 19px) !important;
+    font-weight: 650 !important;
+    letter-spacing: 0 !important;
+    line-height: 1.35 !important;
+    text-transform: none !important;
+}
+
+.onroad-page .my-page--refined .my-info__cell strong {
+    display: block !important;
+    margin-top: auto !important;
+    color: var(--c-ink) !important;
+    font-size: clamp(34px, 4vw, 58px) !important;
+    line-height: 0.98 !important;
+    overflow-wrap: anywhere !important;
+}
+
+.onroad-page .my-page--refined .my-actions {
+    gap: 12px !important;
+    background: transparent !important;
+    border: 0 !important;
+}
+
+.onroad-page .my-page--refined .my-actions a {
+    min-height: 168px !important;
+    border: 1px solid rgba(20, 18, 16, 0.14) !important;
+    background: #fbf7ef !important;
+}
+
+.onroad-page .my-page--refined .my-actions strong {
+    font-size: clamp(18px, 1.6vw, 22px) !important;
+}
+
+.onroad-page .my-page--refined .my-actions em {
+    font-size: 14px !important;
+}
+
+body.onroad-page .myshopArea {
+    display: block !important;
+    width: min(1180px, calc(100vw - 48px)) !important;
+    margin: 0 auto clamp(72px, 8vw, 112px) !important;
+    padding: clamp(44px, 6vw, 78px) 0 0 !important;
+    color: var(--c-ink) !important;
+}
+
+body.onroad-page .myshopArea > .titleArea--myshop,
+body.onroad-page .myshopArea .titleArea--myshop {
+    margin: 0 0 clamp(24px, 3vw, 40px) !important;
+    padding: 0 0 var(--s-5) !important;
+    border-bottom: 1px solid rgba(20, 18, 16, 0.72) !important;
+    text-align: left !important;
+}
+
+body.onroad-page .myshopArea > .titleArea--myshop h2,
+body.onroad-page .myshopArea .titleArea--myshop h2 {
+    max-width: 820px !important;
+    margin: 0 !important;
+    color: var(--c-ink) !important;
+    font-family: var(--font-serif) !important;
+    font-size: clamp(42px, 5vw, 76px) !important;
+    font-weight: 300 !important;
+    letter-spacing: 0 !important;
+    line-height: 0.98 !important;
+    text-align: left !important;
+}
+
+body.onroad-page .myshopArea > .titleArea--myshop p,
+body.onroad-page .myshopArea .titleArea--myshop p {
+    max-width: 620px !important;
+    margin: var(--s-4) 0 0 !important;
+    color: var(--c-meta) !important;
+    font-family: var(--font-sans) !important;
+    font-size: 16px !important;
+    line-height: 1.65 !important;
+}
+
+body.onroad-page .myshopArea .ec-base-tab.typeNav,
+body.onroad-page .myshopArea .ec-base-box,
+body.onroad-page .myshopArea .couponSerial,
+body.onroad-page .myshopArea .xans-myshop-orderhistoryhead,
+body.onroad-page .myshopArea .order,
+body.onroad-page .myshopArea .item,
+body.onroad-page .myshopArea .couponList,
+body.onroad-page .myshopArea .ec-base-help {
+    margin: 0 0 var(--s-6) !important;
+    padding: clamp(22px, 2.6vw, 34px) !important;
+    background: #f6f1e8 !important;
+    border: 1px solid rgba(20, 18, 16, 0.14) !important;
+    box-shadow: none !important;
+}
+
+body.onroad-page .myshopArea .ec-base-tab.typeNav {
+    padding: 0 !important;
+    background: transparent !important;
+    border: 0 !important;
+}
+
+body.onroad-page .myshopArea .ec-base-tab.typeNav .menu {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: 0 !important;
+}
+
+body.onroad-page .myshopArea .ec-base-tab.typeNav .menu li,
+body.onroad-page .myshopArea .ec-base-tab.typeNav .menu li.selected {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+}
+
+body.onroad-page .myshopArea .ec-base-tab.typeNav .menu a {
+    display: flex !important;
+    align-items: center !important;
+    min-height: 58px !important;
+    padding: 0 var(--s-5) !important;
+    background: #f6f1e8 !important;
+    border: 1px solid rgba(20, 18, 16, 0.14) !important;
+    color: var(--c-ink) !important;
+    font-family: var(--font-sans) !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0 !important;
+    line-height: 1.25 !important;
+    text-align: left !important;
+    text-decoration: none !important;
+    text-transform: none !important;
+}
+
+body.onroad-page .myshopArea .ec-base-tab.typeNav .menu li.selected a,
+body.onroad-page .myshopArea .ec-base-tab.typeNav .menu li[class*="selected"] a,
+body.onroad-page .myshopArea .ec-base-tab.typeNav .menu a:hover {
+    background: var(--c-ink) !important;
+    border-color: var(--c-ink) !important;
+    color: var(--c-cream) !important;
+}
+
+body.onroad-page .myshopArea .ec-base-box.gHalf ul,
+body.onroad-page .myshopArea .xans-myshop-asyncbankbook ul,
+body.onroad-page .myshopArea .jg-myshop-benefit ul {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: 0 !important;
+    list-style: none !important;
+}
+
+body.onroad-page .myshopArea .ec-base-box.gHalf ul + ul {
+    margin-top: 12px !important;
+}
+
+body.onroad-page .myshopArea .ec-base-box.gHalf li,
+body.onroad-page .myshopArea .xans-myshop-asyncbankbook li,
+body.onroad-page .myshopArea .jg-myshop-benefit li {
+    display: grid !important;
+    align-content: start !important;
+    gap: var(--s-2) !important;
+    min-height: 132px !important;
+    margin: 0 !important;
+    padding: clamp(20px, 2.4vw, 28px) !important;
+    background: #fbf7ef !important;
+    border: 1px solid rgba(20, 18, 16, 0.12) !important;
+}
+
+body.onroad-page .myshopArea .ec-base-box .title,
+body.onroad-page .myshopArea .xans-myshop-asyncbankbook .title,
+body.onroad-page .myshopArea .benefit .title {
+    color: var(--c-meta) !important;
+    font-family: var(--font-sans) !important;
+    font-size: 15px !important;
+    font-weight: 650 !important;
+    letter-spacing: 0 !important;
+    line-height: 1.35 !important;
+    text-transform: none !important;
+}
+
+body.onroad-page .myshopArea .ec-base-box .data,
+body.onroad-page .myshopArea .xans-myshop-asyncbankbook .data,
+body.onroad-page .myshopArea .benefit .txtEm,
+body.onroad-page .myshopArea .benefit .txtEm1 {
+    color: var(--c-ink) !important;
+    font-family: var(--font-serif) !important;
+    font-size: clamp(30px, 3.5vw, 50px) !important;
+    font-weight: 300 !important;
+    letter-spacing: 0 !important;
+    line-height: 1.02 !important;
+}
+
+body.onroad-page .myshopArea .xans-myshop-orderhistoryhead fieldset,
+body.onroad-page .myshopArea fieldset.form {
+    display: grid !important;
+    grid-template-columns: minmax(190px, 0.85fr) minmax(260px, 1.25fr) minmax(280px, 1.2fr) !important;
+    gap: 12px !important;
+    align-items: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: 0 !important;
+}
+
+body.onroad-page .myshopArea input[type="text"],
+body.onroad-page .myshopArea input[type="password"],
+body.onroad-page .myshopArea input[type="email"],
+body.onroad-page .myshopArea input[type="tel"],
+body.onroad-page .myshopArea input[type="number"],
+body.onroad-page .myshopArea input[type="search"],
+body.onroad-page .myshopArea select,
+body.onroad-page .myshopArea textarea {
+    min-height: 46px !important;
+    padding: 0 14px !important;
+    border: 1px solid rgba(20, 18, 16, 0.2) !important;
+    background: #fbf7ef !important;
+    color: var(--c-ink) !important;
+    font-family: var(--font-sans) !important;
+    font-size: 15px !important;
+}
+
+body.onroad-page .myshopArea [class^="btn"],
+body.onroad-page .myshopArea [class*=" btn"],
+body.onroad-page .myshopArea button,
+body.onroad-page .myshopArea .ec-base-button a,
+body.onroad-page .myshopArea .ec-base-button button {
+    min-height: 46px !important;
+    padding: 0 var(--s-5) !important;
+    font-family: var(--font-sans) !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0 !important;
+    text-transform: none !important;
+}
+
+body.onroad-page .myshopArea .btnSubmit,
+body.onroad-page .myshopArea .btnSubmitFix,
+body.onroad-page .myshopArea .btnStrong,
+body.onroad-page .myshopArea button.btnStrong {
+    background: var(--c-signal) !important;
+    border-color: var(--c-signal) !important;
+    color: var(--c-cream) !important;
+}
+
+body.onroad-page .myshopArea .txtList,
+body.onroad-page .myshopArea .txtList li,
+body.onroad-page .myshopArea .txtInfo,
+body.onroad-page .myshopArea .description,
+body.onroad-page .myshopArea .info,
+body.onroad-page .myshopArea .optionGroup,
+body.onroad-page .myshopArea .ec-base-help li {
+    color: var(--c-meta) !important;
+    font-family: var(--font-sans) !important;
+    font-size: 14px !important;
+    line-height: 1.65 !important;
+}
+
+body.onroad-page .myshopArea .ec-base-table {
+    width: 100% !important;
+    overflow-x: auto !important;
+    background: transparent !important;
+    border: 0 !important;
+}
+
+body.onroad-page .myshopArea .ec-base-table table {
+    width: 100% !important;
+    min-width: 720px !important;
+    border: 0 !important;
+    border-collapse: collapse !important;
+    background: #fbf7ef !important;
+}
+
+body.onroad-page .myshopArea .ec-base-table th,
+body.onroad-page .myshopArea .ec-base-table td {
+    padding: 18px 16px !important;
+    border: 0 !important;
+    border-bottom: 1px solid rgba(20, 18, 16, 0.12) !important;
+    color: var(--c-ink) !important;
+    font-family: var(--font-sans) !important;
+    font-size: 15px !important;
+    line-height: 1.5 !important;
+    text-align: left !important;
+    vertical-align: middle !important;
+}
+
+body.onroad-page .myshopArea .ec-base-table thead th,
+body.onroad-page .myshopArea .ec-base-table th[scope="col"] {
+    background: rgba(20, 18, 16, 0.04) !important;
+    color: var(--c-meta) !important;
+    font-size: 13px !important;
+    font-weight: 700 !important;
+}
+
+body.onroad-page .myshopArea .orderList {
+    display: grid !important;
+    gap: var(--s-4) !important;
+    margin: 0 !important;
+}
+
+body.onroad-page .myshopArea .order,
+body.onroad-page .myshopArea .item,
+body.onroad-page .myshopArea .ec-base-prdInfo {
+    background: #f6f1e8 !important;
+}
+
+body.onroad-page .myshopArea .order__number,
+body.onroad-page .myshopArea .item h3 {
+    margin: 0 0 var(--s-4) !important;
+    padding: 0 0 var(--s-3) !important;
+    border-bottom: 1px solid rgba(20, 18, 16, 0.16) !important;
+    color: var(--c-ink) !important;
+    font-family: var(--font-sans) !important;
+    font-size: 17px !important;
+    font-weight: 700 !important;
+    line-height: 1.4 !important;
+}
+
+body.onroad-page .myshopArea .ec-base-prdInfo .prdBox {
+    display: grid !important;
+    grid-template-columns: auto 108px minmax(0, 1fr) !important;
+    gap: var(--s-5) !important;
+    align-items: start !important;
+}
+
+body.onroad-page .myshopArea .ec-base-prdInfo .thumbnail {
+    width: 108px !important;
+    height: 108px !important;
+    background: #efe8dc !important;
+}
+
+body.onroad-page .myshopArea .ec-base-prdInfo .prdName,
+body.onroad-page .myshopArea .ec-base-prdInfo .prdName a,
+body.onroad-page .myshopArea .ec-base-prdInfo .productName,
+body.onroad-page .myshopArea .ec-base-prdInfo .name a {
+    color: var(--c-ink) !important;
+    font-family: var(--font-sans) !important;
+    font-size: clamp(18px, 1.7vw, 22px) !important;
+    font-weight: 750 !important;
+    line-height: 1.35 !important;
+}
+
+body.onroad-page .myshopArea .ec-base-prdInfo .price,
+body.onroad-page .myshopArea .ec-base-prdInfo .price strong,
+body.onroad-page .myshopArea .ec-base-prdInfo .txtEm,
+body.onroad-page .myshopArea .ec-base-prdInfo .sumPrice strong {
+    color: var(--c-ink) !important;
+    font-family: var(--font-sans) !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+}
+
+body.onroad-page .myshopArea .ec-base-prdEmpty,
+body.onroad-page .myshopArea .empty,
+body.onroad-page .myshopArea .message {
+    padding: clamp(48px, 6vw, 76px) var(--s-5) !important;
+    background: #f6f1e8 !important;
+    border: 1px dashed rgba(20, 18, 16, 0.22) !important;
+    color: var(--c-ink) !important;
+    font-family: var(--font-serif) !important;
+    font-size: clamp(24px, 2.5vw, 34px) !important;
+    font-weight: 300 !important;
+    line-height: 1.25 !important;
+}
+
+body.onroad-page .myshopArea:has(.ec-base-prdEmpty:not(.displaynone)) .ec-base-paginate {
+    display: none !important;
+}
+
+body.onroad-page .myshopArea #myshopMain.my-nav {
+    margin-top: clamp(40px, 5vw, 70px) !important;
+}
+
+@media (max-width: 920px) {
+    .onroad-page .my-page--refined .my-orderstate,
+    .onroad-page .my-page--refined .my-info,
+    .onroad-page .my-page--refined .my-actions,
+    body.onroad-page .myshopArea .ec-base-tab.typeNav .menu,
+    body.onroad-page .myshopArea .ec-base-box.gHalf ul,
+    body.onroad-page .myshopArea .xans-myshop-asyncbankbook ul,
+    body.onroad-page .myshopArea .jg-myshop-benefit ul {
+        grid-template-columns: 1fr !important;
+    }
+
+    body.onroad-page .myshopArea .xans-myshop-orderhistoryhead fieldset,
+    body.onroad-page .myshopArea fieldset.form {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@media (max-width: 640px) {
+    body.onroad-page .myshopArea {
+        width: calc(100vw - 32px) !important;
+        padding-top: 36px !important;
+    }
+
+    .onroad-page .my-page--refined .my-panel {
+        padding: var(--s-5) !important;
+    }
+
+    .onroad-page .my-page--refined .my-orderstate__cell,
+    .onroad-page .my-page--refined .my-info__cell,
+    .onroad-page .my-page--refined .my-actions a {
+        min-height: 132px !important;
+        padding: var(--s-5) !important;
+    }
+
+    body.onroad-page .myshopArea .ec-base-prdInfo .prdBox {
+        grid-template-columns: auto 86px minmax(0, 1fr) !important;
+        gap: var(--s-3) !important;
+    }
+
+    body.onroad-page .myshopArea .ec-base-prdInfo .thumbnail {
+        width: 86px !important;
+        height: 86px !important;
+    }
+
+    body.onroad-page .myshopArea .ec-base-button,
+    body.onroad-page .myshopArea .ec-base-prdInfo .buttonGroup,
+    body.onroad-page .myshopArea .ec-base-prdInfo .prdFoot .gRight {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 8px !important;
+    }
+}
+
+/* ==========================================================================
    My Page refinement v4
    Feedback pass: quieter hero, no duplicate hero stats, better empty states.
    ========================================================================== */
@@ -17973,5 +18470,174 @@ body.onroad-page .myshopArea #myshopMain.my-nav .my-nav__foot a {
     .onroad-page .my-page--refined .my-primary-cta,
     .onroad-page .my-page--refined .my-secondary-cta {
         width: 100%;
+    }
+}
+
+/* My Page refinement v5 final precedence */
+.onroad-page .my-page--refined .my-panel {
+    padding: clamp(28px, 3.4vw, 44px) !important;
+}
+.onroad-page .my-page--refined .my-panel__head h2 {
+    font-size: clamp(31px, 3vw, 46px) !important;
+    line-height: 1.02 !important;
+}
+.onroad-page .my-page--refined .my-orderstate,
+.onroad-page .my-page--refined .my-info {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+    background: transparent !important;
+    border: 0 !important;
+}
+.onroad-page .my-page--refined .my-orderstate__cell,
+.onroad-page .my-page--refined .my-info__cell {
+    min-height: 164px !important;
+    padding: clamp(24px, 3vw, 36px) !important;
+    border: 1px solid rgba(20, 18, 16, 0.14) !important;
+    background: #fbf7ef !important;
+}
+.onroad-page .my-page--refined .my-orderstate__cell span,
+.onroad-page .my-page--refined .my-info__cell span,
+.onroad-page .my-page--refined .my-info__cell em {
+    color: var(--c-ink) !important;
+    font-family: var(--font-sans) !important;
+    font-size: clamp(17px, 1.45vw, 22px) !important;
+    font-weight: 700 !important;
+    letter-spacing: 0 !important;
+    line-height: 1.28 !important;
+    text-transform: none !important;
+}
+.onroad-page .my-page--refined .my-orderstate__cell strong,
+.onroad-page .my-page--refined .my-info__cell strong {
+    display: block !important;
+    margin-top: auto !important;
+    color: var(--c-ink) !important;
+    font-family: var(--font-serif) !important;
+    font-size: clamp(44px, 5vw, 76px) !important;
+    font-weight: 300 !important;
+    letter-spacing: 0 !important;
+    line-height: 0.98 !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+}
+.onroad-page .my-page--refined .my-actions {
+    gap: 12px !important;
+    background: transparent !important;
+    border: 0 !important;
+}
+.onroad-page .my-page--refined .my-actions a {
+    min-height: 168px !important;
+    border: 1px solid rgba(20, 18, 16, 0.14) !important;
+    background: #fbf7ef !important;
+}
+.onroad-page .my-page--refined .my-actions strong {
+    font-size: clamp(18px, 1.6vw, 22px) !important;
+}
+body.onroad-page .myshopArea {
+    width: min(1180px, calc(100vw - 48px)) !important;
+    margin: 0 auto clamp(72px, 8vw, 112px) !important;
+    padding: clamp(44px, 6vw, 78px) 0 0 !important;
+}
+body.onroad-page .myshopArea .titleArea--myshop h2 {
+    font-size: clamp(42px, 5vw, 76px) !important;
+    line-height: 0.98 !important;
+    letter-spacing: 0 !important;
+}
+body.onroad-page .myshopArea .ec-base-tab.typeNav .menu {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+    background: transparent !important;
+    border: 0 !important;
+}
+body.onroad-page .myshopArea .ec-base-tab.typeNav .menu a {
+    min-height: 58px !important;
+    padding: 0 var(--s-5) !important;
+    background: #f6f1e8 !important;
+    border: 1px solid rgba(20, 18, 16, 0.14) !important;
+    color: var(--c-ink) !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0 !important;
+    text-transform: none !important;
+}
+body.onroad-page .myshopArea .ec-base-box.gHalf ul,
+body.onroad-page .myshopArea .xans-myshop-asyncbankbook ul,
+body.onroad-page .myshopArea .jg-myshop-benefit ul {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+    background: transparent !important;
+    border: 0 !important;
+}
+body.onroad-page .myshopArea .ec-base-box.gHalf li,
+body.onroad-page .myshopArea .xans-myshop-asyncbankbook li,
+body.onroad-page .myshopArea .jg-myshop-benefit li {
+    min-height: 132px !important;
+    padding: clamp(20px, 2.4vw, 28px) !important;
+    background: #fbf7ef !important;
+    border: 1px solid rgba(20, 18, 16, 0.12) !important;
+}
+body.onroad-page .myshopArea .ec-base-box .data,
+body.onroad-page .myshopArea .xans-myshop-asyncbankbook .data,
+body.onroad-page .myshopArea .benefit .txtEm,
+body.onroad-page .myshopArea .benefit .txtEm1 {
+    font-size: clamp(30px, 3.5vw, 50px) !important;
+    line-height: 1.02 !important;
+}
+body.onroad-page .myshopArea .ec-base-table th,
+body.onroad-page .myshopArea .ec-base-table td {
+    padding: 18px 16px !important;
+    font-size: 15px !important;
+    line-height: 1.5 !important;
+}
+body.onroad-page .myshopArea .ec-base-prdInfo .prdBox {
+    grid-template-columns: auto 108px minmax(0, 1fr) !important;
+}
+body.onroad-page .myshopArea .ec-base-prdInfo .thumbnail {
+    width: 108px !important;
+    height: 108px !important;
+}
+body.onroad-page .myshopArea .ec-base-prdInfo .prdName,
+body.onroad-page .myshopArea .ec-base-prdInfo .prdName a,
+body.onroad-page .myshopArea .ec-base-prdInfo .productName,
+body.onroad-page .myshopArea .ec-base-prdInfo .name a {
+    font-size: clamp(18px, 1.7vw, 22px) !important;
+    line-height: 1.35 !important;
+}
+body.onroad-page .myshopArea .ec-base-prdEmpty,
+body.onroad-page .myshopArea .empty,
+body.onroad-page .myshopArea .message {
+    font-size: clamp(24px, 2.5vw, 34px) !important;
+    line-height: 1.25 !important;
+}
+body.onroad-page .myshopArea:has(.ec-base-prdEmpty:not(.displaynone)) .ec-base-paginate {
+    display: none !important;
+}
+@media (max-width: 920px) {
+    .onroad-page .my-page--refined .my-orderstate,
+    .onroad-page .my-page--refined .my-info,
+    .onroad-page .my-page--refined .my-actions,
+    body.onroad-page .myshopArea .ec-base-tab.typeNav .menu,
+    body.onroad-page .myshopArea .ec-base-box.gHalf ul,
+    body.onroad-page .myshopArea .xans-myshop-asyncbankbook ul,
+    body.onroad-page .myshopArea .jg-myshop-benefit ul {
+        grid-template-columns: 1fr !important;
+    }
+}
+@media (max-width: 640px) {
+    body.onroad-page .myshopArea {
+        width: calc(100vw - 32px) !important;
+    }
+    .onroad-page .my-page--refined .my-orderstate__cell,
+    .onroad-page .my-page--refined .my-info__cell,
+    .onroad-page .my-page--refined .my-actions a {
+        min-height: 132px !important;
+        padding: var(--s-5) !important;
+    }
+    body.onroad-page .myshopArea .ec-base-prdInfo .prdBox {
+        grid-template-columns: auto 86px minmax(0, 1fr) !important;
+    }
+    body.onroad-page .myshopArea .ec-base-prdInfo .thumbnail {
+        width: 86px !important;
+        height: 86px !important;
     }
 }
