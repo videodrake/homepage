@@ -18741,3 +18741,125 @@ body.onroad-page .myshopArea:has(.ec-base-prdEmpty:not(.displaynone)) .ec-base-p
         min-height: 128px !important;
     }
 }
+
+/* My Page account summary v7: isolated uniform card system */
+.onroad-page .my-page--refined .my-panel--account {
+    display: grid !important;
+    gap: clamp(22px, 2.4vw, 32px) !important;
+}
+
+.onroad-page .my-page--refined .my-panel--account .my-panel__head {
+    margin: 0 !important;
+}
+
+.onroad-page .my-page--refined .my-account-summary {
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: 0 !important;
+}
+
+.onroad-page .my-page--refined .my-account-card {
+    display: grid !important;
+    grid-template-rows: auto minmax(52px, 1fr) auto !important;
+    align-items: start !important;
+    min-width: 0 !important;
+    min-height: 168px !important;
+    padding: 22px 20px !important;
+    background: #fffaf2 !important;
+    border: 1px solid rgba(20, 18, 16, 0.28) !important;
+    box-shadow: 0 10px 24px rgba(37, 30, 22, 0.04) !important;
+}
+
+.onroad-page .my-page--refined .my-account-card__label,
+.onroad-page .my-page--refined .my-account-card__meta {
+    display: block !important;
+    min-width: 0 !important;
+    color: var(--c-meta) !important;
+    font-family: var(--font-sans) !important;
+    font-size: 15px !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    letter-spacing: 0 !important;
+    line-height: 1.35 !important;
+    text-transform: none !important;
+}
+
+.onroad-page .my-page--refined .my-account-card__label {
+    margin: 0 0 16px !important;
+    color: rgba(20, 18, 16, 0.72) !important;
+}
+
+.onroad-page .my-page--refined .my-account-card__value {
+    display: flex !important;
+    align-items: baseline !important;
+    gap: 7px !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    color: var(--c-ink) !important;
+    font-family: var(--font-serif) !important;
+    font-size: clamp(34px, 3vw, 48px) !important;
+    font-weight: 300 !important;
+    letter-spacing: 0 !important;
+    line-height: 1.02 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+
+.onroad-page .my-page--refined .my-account-card__value > span {
+    display: inline !important;
+    position: static !important;
+    z-index: auto !important;
+    min-width: 0 !important;
+    color: inherit !important;
+    font: inherit !important;
+    line-height: inherit !important;
+}
+
+.onroad-page .my-page--refined .my-account-card__value small {
+    display: inline !important;
+    position: static !important;
+    z-index: auto !important;
+    flex: 0 0 auto !important;
+    color: var(--c-meta) !important;
+    font-family: var(--font-sans) !important;
+    font-size: 17px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0 !important;
+    line-height: 1 !important;
+}
+
+.onroad-page .my-page--refined .my-account-card__meta {
+    margin: 14px 0 0 !important;
+    min-height: 20px !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+}
+
+@media (max-width: 1180px) {
+    .onroad-page .my-page--refined .my-account-summary {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+}
+
+@media (max-width: 640px) {
+    .onroad-page .my-page--refined .my-account-summary {
+        grid-template-columns: 1fr !important;
+    }
+
+    .onroad-page .my-page--refined .my-account-card {
+        min-height: 148px !important;
+        padding: 20px !important;
+    }
+
+    .onroad-page .my-page--refined .my-account-card__value {
+        font-size: clamp(32px, 10vw, 44px) !important;
+    }
+}
