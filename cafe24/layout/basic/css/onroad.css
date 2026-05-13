@@ -18641,3 +18641,103 @@ body.onroad-page .myshopArea:has(.ec-base-prdEmpty:not(.displaynone)) .ec-base-p
         height: 86px !important;
     }
 }
+
+/* My Page account summary v6: fix unit overlap and equalize cards */
+.onroad-page .my-page--refined .my-info {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 14px !important;
+    background: transparent !important;
+    border: 0 !important;
+}
+
+.onroad-page .my-page--refined .my-info__cell {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    min-height: 150px !important;
+    padding: clamp(22px, 2.4vw, 30px) !important;
+    background: #fffbf4 !important;
+    border: 1px solid rgba(20, 18, 16, 0.24) !important;
+    box-shadow: 0 10px 24px rgba(37, 30, 22, 0.035) !important;
+}
+
+.onroad-page .my-page--refined .my-panel--account .my-info__cell {
+    height: clamp(152px, 12vw, 184px) !important;
+    min-height: clamp(152px, 12vw, 184px) !important;
+}
+
+.onroad-page .my-page--refined .my-info__cell > span {
+    display: block !important;
+    margin: 0 0 14px !important;
+    color: var(--c-meta) !important;
+    font-family: var(--font-sans) !important;
+    font-size: clamp(15px, 1.25vw, 18px) !important;
+    font-weight: 700 !important;
+    letter-spacing: 0 !important;
+    line-height: 1.28 !important;
+    text-transform: none !important;
+}
+
+.onroad-page .my-page--refined .my-info__metric,
+.onroad-page .my-page--refined .my-info__cell strong.my-info__metric {
+    display: inline-flex !important;
+    align-items: baseline !important;
+    gap: 8px !important;
+    margin: 0 !important;
+    color: var(--c-ink) !important;
+    font-family: var(--font-serif) !important;
+    font-size: clamp(34px, 3.8vw, 56px) !important;
+    font-weight: 300 !important;
+    letter-spacing: 0 !important;
+    line-height: 1 !important;
+    white-space: nowrap !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+}
+
+.onroad-page .my-page--refined .my-info__metric > span {
+    display: inline !important;
+    position: static !important;
+    z-index: auto !important;
+    color: inherit !important;
+    font: inherit !important;
+    letter-spacing: inherit !important;
+    line-height: inherit !important;
+}
+
+.onroad-page .my-page--refined .my-info__metric small {
+    display: inline !important;
+    position: static !important;
+    z-index: auto !important;
+    color: var(--c-meta) !important;
+    font-family: var(--font-sans) !important;
+    font-size: clamp(15px, 1.35vw, 20px) !important;
+    font-weight: 700 !important;
+    letter-spacing: 0 !important;
+    line-height: 1 !important;
+}
+
+.onroad-page .my-page--refined .my-info__cell em {
+    display: block !important;
+    margin: 10px 0 0 !important;
+    color: var(--c-meta) !important;
+    font-family: var(--font-sans) !important;
+    font-size: clamp(14px, 1.1vw, 16px) !important;
+    font-style: normal !important;
+    font-weight: 600 !important;
+    letter-spacing: 0 !important;
+    line-height: 1.35 !important;
+    text-transform: none !important;
+}
+
+@media (max-width: 720px) {
+    .onroad-page .my-page--refined .my-info {
+        grid-template-columns: 1fr !important;
+    }
+
+    .onroad-page .my-page--refined .my-info__cell {
+        min-height: 128px !important;
+    }
+}

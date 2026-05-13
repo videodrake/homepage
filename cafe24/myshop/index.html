@@ -113,21 +113,21 @@
                 </div>
                 <div class="my-info">
                     <div class="my-info__cell" module="myshop_asyncbenefit">
-                        <span>이름</span>
-                        <strong>{$member_name}</strong>
-                    </div>
-                    <div class="my-info__cell" module="myshop_asyncbenefit">
                         <span>회원 등급</span>
-                        <strong>{$group_name}</strong>
+                        <strong class="my-info__metric">{$group_name}</strong>
                     </div>
                     <div class="my-info__cell">
                         <span>누적 주문</span>
-                        <strong><span data-empty-zero>{$total_order_count}</span>건</strong>
-                        <em>{$total_order_price}</em>
+                        <strong class="my-info__metric"><span data-empty-zero>{$total_order_count}</span><small>건</small></strong>
+                        <em>총 결제 {$total_order_price}</em>
                     </div>
                     <div class="my-info__cell">
                         <span>{$mileage_name}</span>
-                        <strong><span data-empty-zero>{$total_mileage}</span></strong>
+                        <strong class="my-info__metric"><span data-empty-zero>{$total_mileage}</span></strong>
+                    </div>
+                    <div class="my-info__cell">
+                        <span>쿠폰</span>
+                        <strong class="my-info__metric"><span data-empty-zero>{$coupon_cnt}</span><small>장</small></strong>
                     </div>
                 </div>
             </section>
