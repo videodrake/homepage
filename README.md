@@ -17,11 +17,11 @@
 
 | 항목 | 상태 |
 |------|------|
-| 브랜치 | `main` (유일) |
+| Branch | `main` + feature branch / PR |
 | 최근 기능 커밋 | `8f7058f Remodel buy panel CTA stack (trendy editorial layout)` (2026-04-24 01:39) |
 | 최신 tip | `b3049ac Rewrite README as workspace orientation guide` |
-| origin/main과 | 동기화됨 (`git push` 완료 기준) |
-| 작업 흐름 | 요청 → 로컬 수정 → 커밋·푸시 → **사용자가 FTP로 업로드** → zenera.kr 반영 |
+| origin/main | Updated through PR merge and GitHub Actions deploy |
+| Workflow | request -> feature branch -> PR merge -> GitHub Actions deploys cafe24/ to SFTP -> zenera.kr |
 | 환경 | WSL2 + Node + Python3 + /tmp에 Playwright |
 | 디자인 레퍼런스 | https://kinomix.co.kr (구조·밀도·인터랙션 참조, 색상 톤은 Onroad 독자) |
 
@@ -292,6 +292,25 @@ project/_qa/
 4. **확인** — 라이브 강력 새로고침(`Ctrl+Shift+R`). 안 바뀌면 카페24 옵티마이저 캐시 — 보통 콘텐츠 해시 기반이라 자동 갱신되지만 영구히 안 바뀌면 `cafe24/layout/basic/layout.html`의 `<!--@css(.../onroad.css?v=해시)-->` 값을 올려 강제 무효화.
 
 기본은 add/update only. 전체 미러 청소(원격 단독 파일 삭제)는 Actions UI에서 수동 `delete_remote=true` 실행. 자세한 건 DEPLOY.md.
+
+---
+
+### Journal Automation Flow
+
+The user only reviews the Claude Project markdown and hands it to Codex. Everything after that is handled by Codex and Claude Code.
+
+```text
+Codex push
+  -> Claude Code: npm run journal:stage
+  -> generate cafe24/journal/<slug>.html and SkinImg/img/journal/<slug>/
+  -> create/merge PR
+  -> GitHub Actions deploys cafe24/ to Cafe24 SFTP /base/
+```
+
+Related files:
+- `tools/build-journal-cafe24.mjs`
+- `tools/JOURNAL_STAGE3.md`
+- `.github/workflows/deploy-cafe24.yml`
 
 ---
 
