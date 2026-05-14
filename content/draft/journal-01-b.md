@@ -138,7 +138,7 @@ date_drafted: 2026-05-14
 **프롬프트 (GPT Image 2)**:
 > Two male Korean runners passing a '30km' course marker on an empty urban marathon route, captured from a slightly elevated three-quarter rear angle. The runner on the left is mid-stride with composed posture and a steady gait; the runner on the right is half a step behind, shoulders dropping, gait slightly broken. The '30km' course sign sits in the center-right of the frame, clearly readable.
 >
-> Wardrobe: both wear black running shorts and dark technical shirts; no race bibs visible, no visible logos.
+> Wardrobe: make the two runners visibly different but still understated. Left runner wears a charcoal sleeveless running singlet, black half tights, white shoes, and a slate grey cap. Right runner wears a muted teal short-sleeve technical shirt, dark grey shorts, black calf sleeves, and orange-accent running shoes. No matching outfits. No race bibs visible, no visible logos.
 >
 > Composition: low depth of field, '30km' marker in sharp focus, both runners' figures clearly visible but with slight motion blur on the rear runner's legs.
 >
@@ -178,7 +178,7 @@ date_drafted: 2026-05-14
 >
 > The runner is captured in mid-stride from a side angle, relaxed gait, posture upright. The image conveys steady, low-effort pacing — not sprinting.
 >
-> Wardrobe: dark navy long-sleeve technical top, black running tights, light running shoes. No visible logos or race bib.
+> Wardrobe: visually distinct from the header runners. Light stone-grey wind vest over a muted burgundy long-sleeve technical top, olive-green running shorts over black compression liners, pale blue running shoes, and no cap. No visible logos or race bib.
 >
 > Composition: rule of thirds with the runner on the right third, the river horizon line at the lower third. Empty path stretches forward into the frame.
 >
