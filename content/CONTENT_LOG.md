@@ -21,6 +21,7 @@
 | 1 | 2026-03-24 | naver_blog | 독립 | — | — | Cluster | 문제고민 | 마라톤 후반부 페이스가 무너지는 이유, 훈련량이 부족한 게 아닐 수 있습니다 | 마라톤 페이스 드롭 | 부분 | N | 완료 | — | 미측정 |
 | 2 | 2026-05-13 | cafe24_journal | journal-01-a | journal-01-a | 전체 | Journal | Pace Science | 왜 30km에서 무너지는가 — 800kcal가 모자란 이유 | 마라톤 30km 벽 | 통과 | N | 완료 | /journal/journal-01-a.html | 미측정 |
 | 3 | 2026-05-14 | cafe24_journal | journal-01-b | journal-01-b | 전체 | Journal | Pace Science | 30km 이후, 페이스를 지키는 법 — 평소 한 가지, 당일 한 가지 | 마라톤 후반 페이스 유지 | 통과 | N | 완료 | /journal/journal-01-b.html | 미측정 |
+| 4 | 2026-05-14 | cafe24_journal | journal-01-b | journal-01-b | — | 이미지 갱신 | Pace Science | 30km 이후, 페이스를 지키는 법 — IMG-1·IMG-3 러너 의상 다양화 갱신 | — | — | — | 완료 | /journal/journal-01-b.html | — |
 
 ---
 
