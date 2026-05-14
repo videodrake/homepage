@@ -1,0 +1,39 @@
+# Journal №01 시리즈 고정 블록
+#
+# 자동화 파이프라인 §5 정의 그대로.
+# 시리즈 시작 시 한 번 정하면 시리즈 모든 글의 이미지 프롬프트에 자동 주입된다.
+# 도중에 변경 금지 — 일관성 깨짐.
+#
+# 적용 매핑:
+#   photo  → "분위기 사진", "인물 장면"
+#   graphic → "데이터 시각화", "다이어그램", "인포그래픽"
+
+series_id: "journal-01"
+series_name: "30km 페이스 유지 시리즈"
+
+# 분위기 사진 / 인물 장면용
+photo:
+  color: "cool blue-grey color grade with muted teal shadows, desaturated highlights"
+  model: "Korean male runner in his late 30s, lean build, contemplative expression"
+  lighting: "early dawn, slight mist, cool morning light just before sunrise"
+  style: "editorial magazine aesthetic, Magazine B style, no text overlay"
+
+# 데이터 시각화 / 다이어그램 / 인포그래픽용
+graphic:
+  background: "off-white background (#FAFAF7)"
+  primary: "deep navy (#1A2B3C) primary"
+  accent: "warm orange (#E8743C) accent"
+  font: "Pretendard for Korean labels, rendered correctly"
+  style: "flat clean editorial design, no 3D effects"
+
+# 종류 → 카테고리 매핑 (느슨한 키워드 매칭)
+# 종류 문자열에 아래 키워드가 포함되면 해당 카테고리로 분류
+type_mapping:
+  photo:
+    - "분위기 사진"
+    - "인물 장면"
+    - "인물"
+  graphic:
+    - "데이터 시각화"
+    - "다이어그램"
+    - "인포그래픽"

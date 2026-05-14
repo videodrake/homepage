@@ -1,0 +1,40 @@
+# Journal №02 시리즈 고정 블록
+#
+# 주제: 대회 준비 루틴.
+# 시리즈 시작 시 한 번 정하면 시리즈 모든 글의 이미지 프롬프트에 자동 주입된다.
+# 도중에 변경 금지 — 일관성 깨짐.
+#
+# 적용 매핑:
+#   photo  → "분위기 사진", "인물 장면"
+#   graphic → "데이터 시각화", "다이어그램", "인포그래픽"
+
+series_id: "journal-02"
+series_name: "대회 준비 루틴 시리즈"
+
+# 분위기 사진 / 인물 장면용
+photo:
+  color: "clean neutral daylight color grade, soft graphite shadows, restrained natural highlights"
+  model: "Korean male runner in his late 30s, lean build, focused but calm expression"
+  lighting: "clear morning training light, dry air, gentle side light"
+  style: "practical editorial sports photography, quiet preparation mood, no text overlay"
+
+# 데이터 시각화 / 다이어그램 / 인포그래픽용
+graphic:
+  background: "warm white background (#FBFAF6)"
+  primary: "graphite black (#242424) primary"
+  accent: "steady green (#2F7D5C) accent"
+  font: "Pretendard for Korean labels, rendered correctly"
+  style: "structured checklist and timeline design, flat clean editorial layout, no 3D effects"
+
+# 종류 → 카테고리 매핑 (느슨한 키워드 매칭)
+# 종류 문자열에 아래 키워드가 포함되면 해당 카테고리로 분류
+type_mapping:
+  photo:
+    - "분위기 사진"
+    - "인물 장면"
+    - "인물"
+  graphic:
+    - "데이터 시각화"
+    - "다이어그램"
+    - "인포그래픽"
+

@@ -21,7 +21,7 @@ npm run journal:stage
 
 This automatically:
 
-- finds the latest markdown in `A_repo/content/published/`
+- finds the latest markdown in `content/published/`
 - derives the slug from the filename
 - runs `regulation_check.py`
 - writes `cafe24/journal/<slug>.html`

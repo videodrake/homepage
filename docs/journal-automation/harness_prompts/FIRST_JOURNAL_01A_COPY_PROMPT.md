@@ -5,13 +5,13 @@ Claude Project에서 첫 글을 만들 때 이 파일 전체를 첫 메시지로
 출력된 결과는 사용자가 읽고 검토한 뒤 아래 경로에 저장한다.
 
 ```text
-C:\Users\user\blog\지구력코어_자동화_v1\A_repo\content\draft\journal-01-a.md
+content/draft/journal-01-a.md
 ```
 
 이 파일은 `step1_journal_a_master_prompt.md`와 같은 계약을 따른다. 실제 실행 프롬프트는 아래 파일을 우선 사용한다.
 
 ```text
-B_claude_project/harness_prompts/step1_journal_a_master_prompt.md
+docs/journal-automation/harness_prompts/step1_journal_a_master_prompt.md
 ```
 
 ## Claude Project에 붙여넣을 지시문

@@ -42,6 +42,10 @@ Claude Code should read:
 
 Codex and Claude Code use these repo paths:
 
+- `series_blocks/`
+- `assets/`
+- `tools/parse_boxes.py`
+- `tools/regulation_check.py`
 - `content/draft/`
 - `content/processing/`
 - `content/published/`

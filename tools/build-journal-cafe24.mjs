@@ -4,15 +4,15 @@ import fssync from 'node:fs';
 import path from 'node:path';
 import { spawnSync } from 'node:child_process';
 
-const DEFAULT_REGULATION_CHECK = 'C:/Users/user/blog/\uC9C0\uAD6C\uB825\uCF54\uC5B4_\uC790\uB3D9\uD654_v1/A_repo/tools/regulation_check.py';
-const DEFAULT_AUTOMATION_ROOT = 'C:/Users/user/blog/\uC9C0\uAD6C\uB825\uCF54\uC5B4_\uC790\uB3D9\uD654_v1/A_repo';
+const DEFAULT_REGULATION_CHECK = path.resolve('tools', 'regulation_check.py');
+const DEFAULT_AUTOMATION_ROOT = process.cwd();
 const DEFAULT_PUBLISHED_DIR = path.join(DEFAULT_AUTOMATION_ROOT, 'content', 'published');
 const DISCLAIMER_PATTERN = new RegExp('\\uC81C\\uD488\\uC815\\uBCF4\\uC640 \\uAD00\\uB828 \\uC5C6\\uB294|\\uD559\\uC220 \\uC790\\uB8CC\\uC5D0 \\uADFC\\uAC70\\uD55C|\\uC77C\\uBC18 \\uAC74\\uAC15\\uC815\\uBCF4');
 const KOREAN_KEY_RE = /^([^:]+):\s*(.*)$/;
 
 function usage(exitCode = 0) {
-  console.log(`Usage: node tools/build-journal-cafe24.mjs <published.md> --slug <slug> [options]\n\nOptions:\n  --slug <slug>                 Optional output slug. Default: markdown filename\n  --write-cafe24                Write cafe24/journal/<slug>.html and copy assets into cafe24/SkinImg/img/journal/<slug>/\n  --latest                      Use latest markdown in A_repo/content/published. Default when input is omitted
-  --out-dir <dir>               Dry-run output directory. Default: tmp/journal-build/<slug>\n  --regulation-check <path>     regulation_check.py path\n  --automation-root <path>      A_repo root for resolving /assets paths
+  console.log(`Usage: node tools/build-journal-cafe24.mjs <published.md> --slug <slug> [options]\n\nOptions:\n  --slug <slug>                 Optional output slug. Default: markdown filename\n  --write-cafe24                Write cafe24/journal/<slug>.html and copy assets into cafe24/SkinImg/img/journal/<slug>/\n  --latest                      Use latest markdown in content/published. Default when input is omitted
+  --out-dir <dir>               Dry-run output directory. Default: tmp/journal-build/<slug>\n  --regulation-check <path>     regulation_check.py path\n  --automation-root <path>      Repo root for resolving /assets paths
   --published-dir <path>        Directory used by --latest\n  --date <YYYY / MM / DD>       Hero date text. Default: today in Asia/Seoul\n  --category <text>             Hero category. Default: Pace Science\n  --number <text>               Hero issue label. Default: slug\n  --author <text>               Author name. Default: ONROAD Journal\n  --read-time <text>            Read time. Default: 7 min read\n  --allow-missing-assets        Do not fail when referenced image files are missing\n  --no-regulation-check         For local debugging only; do not use for publishing\n`);
   process.exit(exitCode);
 }
