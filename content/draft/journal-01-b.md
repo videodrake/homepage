@@ -1,0 +1,256 @@
+---
+title: "Journal №01-B : 30km 이후, 페이스를 지키는 법 — 평소 한 가지, 당일 한 가지."
+channel: journal
+funnel_stage: TOFU
+content_role: Journal
+journal_source: "본 문서가 원본"
+journal_h2_index: "전체"
+target_keywords:
+  primary: "(Journal은 SEO 비대상 — 참고용)"
+  secondary: []
+word_count: 약 3,000자
+image_count: 6
+review_required: N
+review_note: "심의 불필요 — 본문 내 제품명·기능성 표현 0회, 일반 운동생리학 정보만 다룸"
+date_drafted: 2026-05-14
+---
+
+# 30km 이후, 페이스를 지키는 법 — 평소 한 가지, 당일 한 가지.
+
+[IMG-1: 헤더 두 러너 회수]
+
+> **핵심 요약**
+> 30km 이후 페이스를 지키는 방법은 두 가지로 압축된다 — 평소 훈련에서 지방을 더 잘 태우는 몸을 만들고, 레이스 당일 시간당 30~90g의 탄수화물을 들여오는 것.
+>
+> - 잘 훈련된 러너의 최대 지방 산화 속도는 분당 0.5~1.0g 수준
+> - 글리코겐만으로 버틸 수 있는 풀마라톤 거리는 약 32km
+> - 레이스 중 추가 흡수 가능한 탄수화물은 시간당 30~90g (단일 당원 vs 다중 당원)
+> - 훈련과 보급은 분리된 두 축이지, 한 가지 해법으로 합쳐지지 않는다
+
+## INTRO
+
+5월 어느 대회. 같은 페이스 그룹에서 출발한 두 러너가 30km 표지판을 지난다. 시계의 평균 페이스는 거의 같다. 다음 1km에서 한 명의 페이스는 5분 30초로 떨어진다. 다른 한 명은 같은 5분 10초를 유지한다. 5km가 더 지나도 그 격차는 좁혀지지 않는다.
+
+그날 두 사람의 의지가 달랐던 것이 아니다. 한 사람의 몸은 모자라는 800kcal를 미리 메울 준비가 되어 있었고, 다른 사람의 몸은 그렇지 못했다. 차이는 32주 전부터, 그리고 그날 아침 5시부터 갈렸다.
+
+## 지방을 더 잘 태우는 몸 만들기
+
+30km 벽을 미리 막는 첫 번째 방법은, 지방을 더 빨리 더 많이 태울 수 있는 몸을 만드는 것이다. 글리코겐이 다 떨어진 다음에 지방을 끌어오는 게 아니라, 처음부터 지방이 더 큰 비중으로 일하게 만든다.
+
+핵심 개념은 최대 지방 산화 속도(MFO, Maximal Fat Oxidation)다. 운동 중 단위 시간당 몸이 지방을 태울 수 있는 최대치다. 평균 러너는 분당 0.3~0.4g 정도, 잘 훈련된 러너는 분당 0.5~1.0g까지 올라간다.
+
+| 구분 | 평균 러너 | 잘 훈련된 러너 |
+|---|---|---|
+| 최대 지방 산화 속도 (g/min) | 0.3~0.4 | 0.5~1.0 |
+| 시간당 지방으로 메우는 칼로리 | 약 160~220kcal | 약 270~540kcal |
+| 마라톤 페이스에서 글리코겐 의존도 | 높음 | 낮음 |
+
+지방 1g은 약 9kcal다. 분당 1g을 태운다는 건, 시간당 약 540kcal를 지방 쪽에서 메운다는 뜻이다. 같은 페이스로 같은 거리를 가도, 글리코겐을 덜 쓰고 도착할 수 있다는 의미다.
+
+이 능력을 키우는 가장 일반적인 방법은 낮은 강도의 장거리 훈련이다. 흔히 존2 LSD라고 부르는 강도다. 최대 심박수의 60~70%, 옆 사람과 짧은 대화가 가능한 페이스, 코로만 호흡해도 부족하지 않은 강도다.
+
+[IMG-2: 지방 산화 곡선 비교]
+
+이 강도에서 누적된 훈련은 미토콘드리아 밀도를 늘리고, 지방을 세포 안으로 끌어오는 효소(CPT-1)와 지방세포에서 풀어내는 효소(HSL)의 활성을 높인다. 모세혈관도 더 촘촘해진다. 결과적으로 같은 산소량으로 더 많은 지방을 연소할 수 있는 시스템이 만들어진다.
+
+[IMG-3: 한강 새벽 LSD 장면]
+
+잠실에서 출발해 한강을 따라 30km를 도는 LSD는 서울 러너들이 흔히 쓰는 코스다. 다만 같은 코스를 같은 시간에 뛰어도 강도가 다르면 결과가 다르다. 페이스를 빠르게 잡으면 어느새 존3~존4가 되어 지방 산화 적응 폭이 줄어든다. 시계의 심박수 그래프가 첫 1km부터 70%를 넘기면 그날의 훈련 목적은 다른 것이 된다.
+
+일반적으로 알려진 적응 기간은 8~12주 누적이다. 주 1회 90~120분의 존2 LSD를 12주 이상 쌓으면 측정 가능한 수준의 변화가 보이기 시작한다. 한두 번의 긴 훈련으로 만들어지지 않는 능력이다.
+
+그러나 평소 지방 산화를 키워둔다고 해도, 그것만으로 풀마라톤의 모든 칼로리가 메워지지는 않는다. 레이스 당일 외부에서 들여와야 할 몫이 따로 있다.
+
+## 레이스 당일 탄수화물 시간당 g 계산
+
+두 번째 방법은 더 구체적이다. 레이스가 시작된 후, 위장이 시간당 받아낼 수 있는 탄수화물을 정확히 챙기는 것이다. 그날 보급의 양과 종류에 따라 30km 이후의 곡선이 달라진다.
+
+인체가 운동 중에 추가로 산화할 수 있는 탄수화물의 양에는 상한이 있다. 종류에 따라 다르다.
+
+| 보급 형태 | 시간당 흡수 한도 | 예시 |
+|---|---|---|
+| 단일 당원 (글루코스 단독) | 약 60g | 일반 에너지 젤 1봉 ≈ 22~25g |
+| 다중 당원 (글루코스 + 프럭토스 2:1) | 약 90g | 고용량 젤 또는 스포츠 드링크 병행 |
+| 보급 없음 | 0g | 30km 이후 글리코겐 의존도 100% |
+
+글루코스만 들이면 시간당 약 60g이 한계다. 글루코스와 프럭토스가 2:1로 섞이면, 두 당원이 서로 다른 수송체로 흡수되어 합산 흡수량이 시간당 약 90g까지 올라간다는 것이 일반적으로 알려진 범위다.
+
+[IMG-4: 시간당 탄수화물 산화 한도]
+
+숫자로 환산하면 단순해진다. 시간당 60g 보급은 약 240kcal, 90g 보급은 약 360kcal다. 풀마라톤을 3시간 30분에 끊는 러너가 시간당 60g을 일정하게 들이면 누적 약 840kcal가 외부에서 들어온다. A편에서 다룬 800kcal 부족분과 정확히 맞물리는 자리다.
+
+[IMG-5: 보급소에서 젤을 든 손]
+
+타이밍도 정해진 게 있다. 첫 보급은 출발 후 30~45분쯤, 이후 30~45분 간격이 일반적 권장이다. 30km 이후에 한 번에 몰아 넣어도 흡수되지 않는다. 위장이 처리할 수 있는 시간당 한도가 정해져 있기 때문이다.
+
+국내 대회 보급소는 보통 5km 간격이다. 시간당 60g을 들이려면 한 보급소에서 한 봉을 넣고 다음 보급소 사이에 다시 한 번 들이는 페이스가 된다. 한 곳을 놓치면 그만큼이 그대로 30km 이후의 격차로 돌아온다.
+
+위장이 그 양을 받아낼 수 있는지는 사람마다 다르다. 평소 LSD에서 한 번도 시도해보지 않은 60g/h를 대회 당일에 처음 시도하면, 흡수 대신 위장 불편이 먼저 온다. 보급도 훈련이 필요한 영역이다.
+
+훈련과 보급은 둘 다 필요한 두 축이다. 잘 훈련된 러너도 보급을 빼면 30km 이후가 무거워지고, 잘 보급하는 러너도 평소 지방 산화가 약하면 같은 페이스에 더 많은 글리코겐을 태운다.
+
+## 자주 묻는 질문
+
+**Q. 존2 LSD를 몇 주 해야 30km 이후 페이스가 달라지나요?**
+일반적으로 알려진 적응 기간은 8~12주 누적이다. 주 1회 90~120분 정도의 존2 LSD가 전제이며, 한두 번의 긴 훈련으로 만들어지지 않는다. 개인차가 크고, 기존 훈련 이력에 따라 더 길어질 수도 있다.
+
+**Q. 시간당 60g과 90g 중 어느 쪽을 목표로 해야 하나요?**
+위장이 그 양을 받아낼 수 있는지가 먼저다. 평소 LSD에서 60g/h부터 시도하고, 위장이 편안하면 다중 당원으로 80~90g/h로 올린다. 대회 당일에 처음 시도하지 않는다.
+
+**Q. 보급소를 한 번 놓쳤다면 다음에서 두 배로 들이면 되나요?**
+권장되지 않는다. 시간당 흡수 한도가 정해져 있어, 한 번에 두 배를 넣어도 그대로 흡수되지 않고 위장 불편으로 돌아오기 쉽다. 다음 한 번을 정상량으로 들이고 페이스를 유지하는 편이 낫다.
+
+**Q. 존2 트레이닝과 인터벌 트레이닝 중 마라톤 후반에 더 도움이 되는 건 어느 쪽인가요?**
+다른 목적이다. 존2는 지방 산화와 미토콘드리아 효율을, 인터벌은 VO2max와 젖산 처리 능력을 키운다. 30km 이후의 페이스 유지에 직접 연결되는 건 존2 쪽이다. 다만 두 가지를 병행하는 것이 풀마라톤 전체 기록에 더 도움이 된다는 점은 일반적으로 알려져 있다.
+
+[IMG-6: OUTRO 회수 30km 표지판]
+
+## OUTRO
+
+같은 30km 표지판을 지난 두 러너 이야기로 돌아간다. 한 명의 페이스는 5분 30초로 떨어졌고, 다른 한 명은 5분 10초로 이어갔다. 그 차이는 그날의 의지가 아니라, 한 사람의 32주가 다른 사람의 12주와 달랐기 때문이다.
+
+그리고 그날 아침 5시, 한 사람의 손에는 젤 다섯 봉이 있었고 다른 사람의 손에는 두 봉이 있었다. 끝난 뒤 카톡방에서는 '의지의 차이'라는 말이 오갔지만, 그 차이가 의지였다는 증거는 어디에도 없었다.
+
+30km 벽은 우연이 아니고, 의지도 아니다. 평소 한 가지와 당일 한 가지의 합이다.
+
+---
+
+※ 본 정보는 제품정보와 관련 없는 내용이며, 학술 자료에 근거한 운동생리학 일반 건강정보로서 정리한 것입니다. 개인의 의학적 진단을 대체하지 않으며, 특정 훈련 강도나 보급 전략은 개인 건강 상태와 훈련 이력에 따라 적합성이 달라질 수 있습니다.
+
+**참고문헌**
+
+- Jeukendrup, A. (2014). A step towards personalized sports nutrition: carbohydrate intake during exercise. *Sports Medicine*.
+- Hawley, J.A. et al. (2018). Integrative biology of exercise. *Cell*.
+- Maunder, E. et al. (2018). Determinants of the maximal rate of fat oxidation during exercise. *PLoS One*.
+
+---
+
+## 이미지 명세
+
+### IMG-1 — 헤더 두 러너 회수
+
+- **종류**: 분위기 사진
+- **위치**: 제목 직후, 핵심 요약박스 직전
+- **위치 의도**: 글의 첫인상. INTRO에서 회수될 "두 러너"의 모습을 처음 보여준다.
+- **비율**: 21:9
+- **alt 텍스트**: "30km 표지판을 지나는 두 러너의 새벽 풍경, 한 명은 페이스를 유지하고 한 명은 흔들리는 순간"
+
+**프롬프트 (GPT Image 2)**:
+> Two male Korean runners passing a '30km' course marker on an empty urban marathon route, captured from a slightly elevated three-quarter rear angle. The runner on the left is mid-stride with composed posture and a steady gait; the runner on the right is half a step behind, shoulders dropping, gait slightly broken. The '30km' course sign sits in the center-right of the frame, clearly readable.
+>
+> Wardrobe: both wear black running shorts and dark technical shirts; no race bibs visible, no visible logos.
+>
+> Composition: low depth of field, '30km' marker in sharp focus, both runners' figures clearly visible but with slight motion blur on the rear runner's legs.
+>
+> 21:9 cinematic aspect ratio.
+
+---
+
+### IMG-2 — 지방 산화 곡선 비교
+
+- **종류**: 데이터 시각화
+- **위치**: H2-1 본문 중반, 존2 LSD 적응 기전 설명 직전
+- **위치 의도**: 평균 러너와 잘 훈련된 러너의 지방 산화 곡선 차이를 시각화한다.
+- **비율**: 16:9
+- **alt 텍스트**: "운동 강도별 지방 산화 속도 곡선, 평균 러너와 잘 훈련된 러너의 비교"
+
+**프롬프트 (GPT Image 2)**:
+> A minimalist editorial line chart titled "운동 강도별 지방 산화 속도" in Korean. X-axis labeled "운동 강도 (% VO2max)" with markings at 40, 50, 60, 70, 80. Y-axis labeled "지방 산화 (g/min)" with markings at 0.0, 0.2, 0.4, 0.6, 0.8, 1.0.
+>
+> Two curves: one labeled "평균 러너" peaking near 0.35 g/min at around 55% VO2max; another labeled "잘 훈련된 러너" peaking near 0.85 g/min at around 65% VO2max. Both curves rise then descend, forming inverted U shapes. The trained-runner curve is visibly higher and shifted right.
+>
+> Style: editorial chart with clean axes, no gridlines, two clearly distinct curves. The trained-runner curve in the accent color, the average-runner curve in the primary color. Compact legend at top-right.
+>
+> 16:9 aspect ratio.
+
+---
+
+### IMG-3 — 한강 새벽 LSD 장면
+
+- **종류**: 분위기 사진
+- **위치**: H2-1 본문 후반, 한국 맥락 (잠실-한강 LSD) 직전
+- **위치 의도**: 존2 LSD가 실제로 어떤 장면인지 보여준다. 빠른 인터벌이 아니라 긴 거리의 일정한 페이스.
+- **비율**: 16:9
+- **alt 텍스트**: "한강변을 따라 일정한 페이스로 달리는 러너의 새벽 LSD 장면"
+
+**프롬프트 (GPT Image 2)**:
+> A male Korean runner running along a wide riverside path before sunrise. The path runs parallel to a still, broad river surface that occupies the left third of the frame. Distant city skyline silhouette visible on the far side of the river.
+>
+> The runner is captured in mid-stride from a side angle, relaxed gait, posture upright. The image conveys steady, low-effort pacing — not sprinting.
+>
+> Wardrobe: dark navy long-sleeve technical top, black running tights, light running shoes. No visible logos or race bib.
+>
+> Composition: rule of thirds with the runner on the right third, the river horizon line at the lower third. Empty path stretches forward into the frame.
+>
+> 16:9 aspect ratio.
+
+---
+
+### IMG-4 — 시간당 탄수화물 산화 한도
+
+- **종류**: 인포그래픽
+- **위치**: H2-2 본문 중반, 비교표 직후
+- **위치 의도**: 시간당 흡수 한도와 누적 칼로리를 한눈에 보여준다. 800kcal 부족분과의 연결을 시각으로 확정한다.
+- **비율**: 4:5
+- **alt 텍스트**: "시간당 탄수화물 보급량별 풀마라톤 누적 흡수 칼로리 인포그래픽"
+
+**프롬프트 (GPT Image 2)**:
+> A vertically oriented editorial infographic titled "시간당 탄수화물 보급량 — 풀마라톤 3시간 30분 기준" in Korean.
+>
+> Three horizontal bar rows stacked vertically:
+> - Row 1: label "30 g/h" with bar extending to "약 420kcal 누적"
+> - Row 2: label "60 g/h" with bar extending to "약 840kcal 누적"
+> - Row 3: label "90 g/h" with bar extending to "약 1,260kcal 누적"
+>
+> The bar at "60 g/h" is highlighted with a small annotation arrow labeled "A편 800kcal 부족분과 맞물리는 구간".
+>
+> Below the bars, a short caption row: "단일 당원 60 g/h 한계 / 다중 당원 90 g/h 한계".
+>
+> Style: flat editorial infographic, bars in the primary color, the highlighted bar in the accent color. Korean labels rendered correctly. No 3D effects.
+>
+> 4:5 aspect ratio.
+
+---
+
+### IMG-5 — 보급소에서 젤을 든 손
+
+- **종류**: 분위기 사진
+- **위치**: H2-2 본문 후반, 국내 대회 보급소 간격 설명 직전
+- **위치 의도**: 보급의 물리적 장면을 구체적으로 보여준다. 보급소 한 번을 놓치는 것이 어떤 의미인지 감각으로 와닿게 한다.
+- **비율**: 16:9
+- **alt 텍스트**: "마라톤 보급소에서 에너지 젤을 손에 든 러너의 순간"
+
+**프롬프트 (GPT Image 2)**:
+> A close-up shot of a male Korean runner's hands at a marathon aid station. One hand grips a small unbranded foil energy gel sachet; the other hand is half-extended forward as if just having picked it up. A blurred row of plain white folding tables with paper cups in the background suggests an aid station.
+>
+> The runner's torso is partially visible — black running shorts, dark technical shirt, no visible race bib or logos. The face is not in the frame; the focus is entirely on the hands and gel.
+>
+> Composition: tight framing, the gel sachet at center, the second hand entering from the right. Shallow depth of field with the background aid-station table softly blurred.
+>
+> 16:9 aspect ratio.
+
+---
+
+### IMG-6 — OUTRO 회수 30km 표지판
+
+- **종류**: 분위기 사진
+- **위치**: OUTRO 직전, FAQ 종료 후
+- **위치 의도**: INTRO의 두 러너 장면을 한 박자 늦춰 회수한다. 헤더 이미지와 같은 표지판이지만, 두 러너의 격차가 벌어진 뒤의 한 프레임.
+- **비율**: 21:9
+- **alt 텍스트**: "30km 표지판을 지나 멀어지는 한 러너의 뒷모습, 다른 한 명은 시야 밖으로 처진 마라톤 후반의 한 장면"
+
+**프롬프트 (GPT Image 2)**:
+> A single male Korean runner viewed from behind, continuing past a '30km' course marker on an empty urban marathon route. The figure is small in the frame, positioned at the center, already several meters past the marker.
+>
+> A second runner is barely visible at the far left edge of the frame — only a partial silhouette, much further behind, signaling the gap that has opened between them.
+>
+> The '30km' marker is on the right third of the frame, slightly behind the lead runner.
+>
+> Wardrobe: dark navy technical shirt, black running shorts. No visible bib or logos.
+>
+> Composition: wide horizontal frame, the lead runner centered, the trailing runner intentionally at the extreme left edge, the marker as a static reference point on the right.
+>
+> 21:9 cinematic aspect ratio.
+
+---
+
