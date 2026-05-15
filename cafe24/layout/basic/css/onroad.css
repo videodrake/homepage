@@ -17315,6 +17315,7 @@ body.onroad-page :where(
     .content-card__meta,
     .content-card__excerpt,
     .jr-pick-list small,
+    .jr-editor-note small,
     .jp-topline,
     .jp-topline span,
     .jp-figure figcaption,
@@ -17323,8 +17324,29 @@ body.onroad-page :where(
     .txtInfo,
     .login__security,
     .wrap_security,
+    .wrap_find a,
+    .wrap_sns_log__more summary,
     .auth-card p,
-    .auth-page p
+    .auth-page p,
+    .onroad-login-title p,
+    .onroad-join-title p,
+    .onroad-auth-card__head p,
+    .onroad-product-detail-page .infoArea th,
+    .onroad-product-detail-page .infoArea th span,
+    .onroad-product-detail-page .pd-spec-block th,
+    .onroad-product-detail-page .pd-disclaim,
+    .onroad-product-detail-page #totalProducts strong.title,
+    .onroad-product-detail-page #totalProducts .qty,
+    .onroad-product-detail-page #totalProducts .total,
+    .onroad-product-detail-page .btnNormal.mrt10,
+    .pd-curated-author__name,
+    .ec-base-step .step li,
+    .ec-base-tab.typeNav .menu a,
+    .ec-base-prdEmpty,
+    .onroad-basket-page .ec-base-tab.typeNav .menu a,
+    .journal-page small,
+    .shopinfo-company small,
+    .company-page small
 ) {
     color: #625b52 !important;
 }
@@ -17343,6 +17365,17 @@ body.onroad-page :where(
     .content-card__excerpt
 ) {
     color: rgba(244, 239, 230, 0.78) !important;
+}
+
+body.onroad-page :where(
+    .section--dark,
+    .hero,
+    .final-cta,
+    .site-footer,
+    .pd-media,
+    .onroad-auth-incentive
+) :where(em, b, sup, .onroad-auth-incentive__badge) {
+    color: #ff735c !important;
 }
 
 /* ==========================================================================
