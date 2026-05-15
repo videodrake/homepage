@@ -45,8 +45,8 @@ Claude는 `완료`, `초안`, `published 있음` 상태의 글을 새로 쓰지 
 |---|---|---:|---|---|---|---|
 | `journal-01-a` | `journal-01` | A | 왜 30km에서 무너지는가 | `deployed` | 완료 | `/journal/journal-01-a.html` 발행 완료. |
 | `journal-01-b` | `journal-01` | B | 30km 이후 페이스를 지키는 법 | `deployed` | 완료 | `/journal/journal-01-b.html` 발행 완료. |
-| `journal-02-a` | `journal-02` | A | 대회 준비 루틴 | `not_started` | `journal-01` 이후 작성 | A/B 분할은 작성 시점에 확정. |
-| `journal-02-b` | `journal-02` | B | 대회 준비 루틴 후속 | `blocked` | `journal-02-a` 완료 후 작성 | A편 작성 후 확정. |
+| `journal-02-a` | `journal-02` | A | 마지막 2주가 기록을 만든다 — 테이퍼링이 회수하는 6% | `published_md_ready` | Claude Code 자리 3 배포 | `content/published/journal-02-a.md` 및 `assets/journal-02-a/img-1~6.png` 생성 완료. |
+| `journal-02-b` | `journal-02` | B | 대회 24시간 루틴 | `blocked` | `journal-02-a` 배포 후 작성 | B편은 전날 저녁~출발선 24시간 루틴으로 확정. |
 | `journal-03-a` | `journal-03` | A | 옥타코사놀이 달리기에 주는 것 | `blocked` | 권위 축적 후 별도 규제 검토 | 성분 직접 언급 시리즈. 가장 마지막. |
 
 ---
@@ -56,8 +56,8 @@ Claude는 `완료`, `초안`, `published 있음` 상태의 글을 새로 쓰지 
 현재 상태 기준 추천:
 
 ```text
-next_slug: journal-02-a
-next_reason: journal-01-a와 journal-01-b가 모두 자사몰 Journal로 발행 완료되어 다음 시리즈를 시작할 수 있다.
+next_slug: journal-02-b
+next_reason: journal-02-a는 published md 준비가 완료되었고, 자사몰 배포 후 B편(전날 저녁~출발선 24시간 루틴)으로 이어간다.
 ```
 
 Claude가 자동 주제선정을 할 때:
