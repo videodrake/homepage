@@ -19258,3 +19258,12 @@ body.onroad-page .onroad-auth-stage .onroad-auth-switch.onroad-auth-incentive .o
 body.onroad-page .onroad-login-page .onroad-auth-switch.onroad-auth-incentive .onroad-auth-incentive__badge {
     color: #ff735c !important;
 }
+
+body.onroad-page .onroad-home .content-card .content-card__title .italic {
+    color: #ff735c !important;
+}
+
+body.onroad-page.journal-post--generated .jp-table thead th,
+body.onroad-page.journal-post--generated .jp-disclaimer {
+    color: #625b52 !important;
+}
