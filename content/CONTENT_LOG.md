@@ -23,7 +23,7 @@
 | 3 | 2026-05-14 | cafe24_journal | journal-01-b | journal-01-b | 전체 | Journal | Pace Science | 30km 이후, 페이스를 지키는 법 — 평소 한 가지, 당일 한 가지 | 마라톤 후반 페이스 유지 | 통과 | N | 완료 | /journal/journal-01-b.html | 미측정 |
 | 4 | 2026-05-14 | cafe24_journal | journal-01-b | journal-01-b | — | 이미지 갱신 | Pace Science | 30km 이후, 페이스를 지키는 법 — IMG-1·IMG-3 러너 의상 다양화 갱신 | — | — | — | 완료 | /journal/journal-01-b.html | — |
 | 5 | 2026-05-15 | cafe24_journal | journal-02-a | journal-02-a | 전체 | Journal | Pace Science | 마지막 2주가 기록을 만든다 — 테이퍼링이 회수하는 6% | (Journal은 SEO 비대상 — 참고용) | 통과 | N | 완료 | /journal/journal-02-a.html | 미측정 |
-| 6 | 2026-05-15 | cafe24_journal | journal-02-a | journal-02-a | — | 이미지 갱신 | Pace Science | 마지막 2주가 기록을 만든다 — IMG-1·IMG-4 얼굴 숨김, IMG-6 측후면 구도 갱신 | — | — | — | 완료 | /journal/journal-02-a.html | — |
+| 6 | 2026-05-15 | cafe24_journal | journal-02-a | journal-02-a | — | 이미지 갱신 | Pace Science | 마지막 2주가 기록을 만든다 — IMG-1·IMG-6 측후면 구도, IMG-4 얼굴 숨김 처리 갱신 | — | — | — | 완료 | /journal/journal-02-a.html | — |
 
 ---
 
