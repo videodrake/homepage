@@ -17378,6 +17378,40 @@ body.onroad-page :where(
     color: #ff735c !important;
 }
 
+body.onroad-page .onroad-product-detail-page .pd-spec-block table[border="1"] th,
+body.onroad-page .onroad-product-detail-page .pd-spec-block table[border="1"] th span,
+body.onroad-page .onroad-product-detail-page #totalProducts strong.title,
+body.onroad-page .onroad-product-detail-page #totalProducts span.qty,
+body.onroad-page .onroad-product-detail-page #totalProducts span.total,
+body.onroad-page .onroad-product-detail-page .pd-disclaim,
+body.onroad-page .onroad-product-detail-page .infoArea a.btnNormal.mrt10,
+body.onroad-page .onroad-product-additional-page .sec-head__sub,
+body.onroad-page .onroad-product-additional-page .pd-curated-author__name {
+    color: #625b52 !important;
+}
+
+body.onroad-page .onroad-login-title p,
+body.onroad-page .onroad-join-title p,
+body.onroad-page .onroad-auth-card .onroad-auth-card__head p,
+body.onroad-page .onroad-login-page .wrap_find a,
+body.onroad-page .onroad-login-page .wrap_sns_log__more summary {
+    color: #625b52 !important;
+}
+
+body.onroad-page .ec-base-step .step li,
+body.onroad-page .onroad-basket-step .step li,
+body.onroad-page .onroad-join-step .step li,
+body.onroad-page .onroad-basket-page .ec-base-tab.typeNav .menu a,
+body.onroad-page .onroad-basket-page .ec-base-prdEmpty {
+    color: #625b52 !important;
+}
+
+body.onroad-page .pd-media em,
+body.onroad-page .pd-media b,
+body.onroad-page .onroad-auth-incentive .onroad-auth-incentive__badge {
+    color: #ff735c !important;
+}
+
 /* ==========================================================================
    My Page redesign v3
    ========================================================================== */
