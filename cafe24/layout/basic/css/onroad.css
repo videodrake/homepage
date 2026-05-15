@@ -19263,7 +19263,9 @@ body.onroad-page .onroad-home .content-card .content-card__title .italic {
     color: #ff735c !important;
 }
 
-body.onroad-page.journal-post--generated .jp-table thead th,
-body.onroad-page.journal-post--generated .jp-disclaimer {
+body.onroad-page main.journal-post--generated .jp-table thead th,
+body.onroad-page main.journal-post--generated .jp-disclaimer,
+body.onroad-page .journal-post--generated .jp-table thead th,
+body.onroad-page .journal-post--generated .jp-disclaimer {
     color: #625b52 !important;
 }
