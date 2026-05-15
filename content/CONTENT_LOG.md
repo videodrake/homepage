@@ -22,7 +22,7 @@
 | 2 | 2026-05-13 | cafe24_journal | journal-01-a | journal-01-a | 전체 | Journal | Pace Science | 왜 30km에서 무너지는가 — 800kcal가 모자란 이유 | 마라톤 30km 벽 | 통과 | N | 완료 | /journal/journal-01-a.html | 미측정 |
 | 3 | 2026-05-14 | cafe24_journal | journal-01-b | journal-01-b | 전체 | Journal | Pace Science | 30km 이후, 페이스를 지키는 법 — 평소 한 가지, 당일 한 가지 | 마라톤 후반 페이스 유지 | 통과 | N | 완료 | /journal/journal-01-b.html | 미측정 |
 | 4 | 2026-05-14 | cafe24_journal | journal-01-b | journal-01-b | — | 이미지 갱신 | Pace Science | 30km 이후, 페이스를 지키는 법 — IMG-1·IMG-3 러너 의상 다양화 갱신 | — | — | — | 완료 | /journal/journal-01-b.html | — |
-| 5 | 2026-05-15 | cafe24_journal | journal-02-a | journal-02-a | 전체 | Journal | Pace Science | 마지막 2주가 기록을 만든다 — 테이퍼링이 회수하는 6% | (Journal은 SEO 비대상 — 참고용) | 통과 | N | 초안 | content/published/journal-02-a.md | 미측정 |
+| 5 | 2026-05-15 | cafe24_journal | journal-02-a | journal-02-a | 전체 | Journal | Pace Science | 마지막 2주가 기록을 만든다 — 테이퍼링이 회수하는 6% | (Journal은 SEO 비대상 — 참고용) | 통과 | N | 완료 | /journal/journal-02-a.html | 미측정 |
 
 ---
 
@@ -55,7 +55,7 @@
 
 | 항목 | 상태 | 연결 로그 # | 제목 |
 |---|---|---:|---|
-| №02-A Journal | 초안 | 5 | 마지막 2주가 기록을 만든다 — 테이퍼링이 회수하는 6% |
+| №02-A Journal | 완료 | 5 | 마지막 2주가 기록을 만든다 — 테이퍼링이 회수하는 6% |
 | №02-A H2-1 Naver | 예정 | — | 대회 2주 전 테이퍼링, 훈련량을 얼마나 줄여야 할까 |
 | №02-A H2-2 Naver | 예정 | — | 대회 14일 전부터 D-1까지 훈련과 카보로딩 일정표 |
 | №02-B Journal | 예정 | — | 대회 24시간 루틴 (전날 저녁~출발선) |
