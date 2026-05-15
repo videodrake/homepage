@@ -241,13 +241,13 @@ Mujika & Padilla(2003)의 systematic review가 50건이 넘는 연구를 종합�
 - **위치**: FAQ 종료 후, OUTRO 직전
 - **위치 의도**: 12일 전 한강 LSD 장면(IMG-1)을 출발선 장면으로 회수한다. 같은 러너가 다음 시즌 출발선에 다시 선 순간.
 - **비율**: 21:9
-- **alt 텍스트**: "마라톤 대회 출발선 앞에서 얼굴이 보이지 않는 뒷모습으로 시계를 마지막 확인하는 러너의 새벽 풍경"
+- **alt 텍스트**: "마라톤 대회 출발선 앞에서 정면 얼굴이 보이지 않는 측후면 구도로 시계를 마지막 확인하는 러너의 새벽 풍경"
 
 **프롬프트 (GPT Image 2)**:
-> A male Korean runner standing at a marathon start corral in clear early morning light, photographed from behind so his face is not visible. Corral barriers visible on both sides; a few other runners' back-facing silhouettes are softly blurred in the background. The featured runner is in the foreground center, facing away from camera toward the course, posture composed, breathing steady — checking his GPS watch one final time before the gun.
+> A male Korean runner standing at a marathon start corral in clear early morning light, photographed from a 45-degree side-back angle so his frontal face is not visible. Corral barriers visible on both sides; a few other runners' silhouettes are softly blurred in the background. The featured runner is in the foreground center, posture composed, breathing steady — checking his GPS watch one final time before the gun.
 >
 > Wardrobe: dark grey technical singlet, black running shorts, light running shoes, plain cap with no logo; race bib partially obscured with no readable number or branding.
 >
-> Composition: low-angle rear three-quarter shot from behind, the runner centered, the corral barriers framing both sides. No identifiable face, no frontal portrait, no eye contact, no clear facial features.
+> Composition: low-angle three-quarter side-back shot, the runner centered, the corral barriers framing both sides. A slight side profile is acceptable, but avoid a frontal face, direct eye contact, portrait framing, or clear full facial features.
 >
 > 21:9 cinematic aspect ratio.
