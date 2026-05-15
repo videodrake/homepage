@@ -136,14 +136,14 @@ Mujika & Padilla(2003)의 systematic review가 50건이 넘는 연구를 종합�
 - **위치**: 제목 직후, 핵심 요약박스 직전
 - **위치 의도**: 글의 첫인상. 마지막 LSD를 끝낸 직후의 차분한 호흡 — INTRO의 "12일 전 일요일" 장면과 호응.
 - **비율**: 21:9
-- **alt 텍스트**: "한강변에서 새벽 장거리 훈련을 마친 러너가 얼굴이 보이지 않는 뒷모습으로 시계를 확인하는 장면"
+- **alt 텍스트**: "한강변에서 새벽 장거리 훈련을 마친 러너가 정면 얼굴이 보이지 않는 측후면 구도로 시계를 확인하는 장면"
 
 **프롬프트 (GPT Image 2)**:
-> A male Korean runner standing on a wide riverside path just after a long run at sunrise, checking his GPS watch on his left wrist, photographed from a rear three-quarter angle so his face is not visible. His breathing is settling down, posture relaxed but composed. A still, broad river surface occupies the left third of the frame, with a distant city skyline silhouette across the water. The path stretches behind him into the distance.
+> A male Korean runner standing on a wide riverside path just after a long run at sunrise, checking his GPS watch on his left wrist, photographed from a 45-degree side-back angle so his frontal face is not visible. His breathing is settling down, posture relaxed but composed. A still, broad river surface occupies the left two-thirds of the frame, with a distant city skyline silhouette across the water. The path stretches behind him into the distance.
 >
 > Wardrobe: dark grey long-sleeve technical top, black running tights, light running shoes, plain dark cap with no logo. No race bib, no visible logos.
 >
-> Composition: medium shot from directly behind, the runner positioned at the right two-thirds, river horizon line at the lower third. No identifiable face, no side profile, no frontal portrait, no eye contact, no clear facial features.
+> Composition: three-quarter side-back shot, the runner positioned on the right third and kept smaller than a portrait, river horizon line at the lower third. A slight side profile is acceptable, but avoid a frontal face, direct eye contact, portrait framing, or a large back-of-head/body blocking the landscape.
 >
 > 21:9 cinematic aspect ratio.
 
