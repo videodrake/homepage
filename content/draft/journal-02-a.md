@@ -136,14 +136,14 @@ Mujika & Padilla(2003)의 systematic review가 50건이 넘는 연구를 종합�
 - **위치**: 제목 직후, 핵심 요약박스 직전
 - **위치 의도**: 글의 첫인상. 마지막 LSD를 끝낸 직후의 차분한 호흡 — INTRO의 "12일 전 일요일" 장면과 호응.
 - **비율**: 21:9
-- **alt 텍스트**: "한강변에서 새벽 장거리 훈련을 마친 러너가 시계를 들여다보는 장면"
+- **alt 텍스트**: "한강변에서 새벽 장거리 훈련을 마친 러너가 얼굴이 보이지 않는 뒷모습으로 시계를 확인하는 장면"
 
 **프롬프트 (GPT Image 2)**:
-> A male Korean runner standing on a wide riverside path just after a long run at sunrise, checking his GPS watch on his left wrist. His breathing is settling down, posture relaxed but composed. A still, broad river surface occupies the left third of the frame, with a distant city skyline silhouette across the water. The path stretches behind him into the distance.
+> A male Korean runner standing on a wide riverside path just after a long run at sunrise, checking his GPS watch on his left wrist, photographed from a rear three-quarter angle so his face is not visible. His breathing is settling down, posture relaxed but composed. A still, broad river surface occupies the left third of the frame, with a distant city skyline silhouette across the water. The path stretches behind him into the distance.
 >
-> Wardrobe: dark grey long-sleeve technical top, black running tights, light running shoes. No race bib, no visible logos.
+> Wardrobe: dark grey long-sleeve technical top, black running tights, light running shoes, plain dark cap with no logo. No race bib, no visible logos.
 >
-> Composition: medium shot from a three-quarter angle, the runner positioned at the right two-thirds, river horizon line at the lower third.
+> Composition: medium shot from directly behind, the runner positioned at the right two-thirds, river horizon line at the lower third. No identifiable face, no side profile, no frontal portrait, no eye contact, no clear facial features.
 >
 > 21:9 cinematic aspect ratio.
 
@@ -199,14 +199,14 @@ Mujika & Padilla(2003)의 systematic review가 50건이 넘는 연구를 종합�
 - **위치**: H2-2 본문 중반, 마지막 3일 휴식 설명 직전
 - **위치 의도**: "회복 조깅"이 실제로 어떤 결의 움직임인지 보여준다. 강도 높은 훈련이 아니라 느린 페이스.
 - **비율**: 16:9
-- **alt 텍스트**: "대회 직전 평소보다 짧은 거리를 느린 페이스로 도는 러너의 새벽 회복 조깅 장면"
+- **alt 텍스트**: "대회 직전 얼굴이 보이지 않는 측후면 구도로 짧은 거리를 느린 페이스로 도는 러너의 새벽 회복 조깅 장면"
 
 **프롬프트 (GPT Image 2)**:
-> A male Korean runner running at an easy, relaxed pace along a tree-lined urban park path in clear morning light. The runner's posture is upright, gait visibly relaxed — clearly a recovery-pace run, not a workout. The path is empty save for the runner. A few people walking can be glimpsed far in the background, softly blurred.
+> A male Korean runner running at an easy, relaxed pace along a tree-lined urban park path in clear morning light, photographed from a rear three-quarter side angle so his face is not visible. The runner's posture is upright, gait visibly relaxed — clearly a recovery-pace run, not a workout. The path is empty save for the runner. A few people walking can be glimpsed far in the background, softly blurred.
 >
-> Wardrobe: light grey technical t-shirt, black running shorts, light running shoes. No race bib, no visible logos.
+> Wardrobe: light grey technical t-shirt, black running shorts, light running shoes, plain cap with no logo. No race bib, no visible logos.
 >
-> Composition: side angle, runner on the left two-thirds of the frame, empty path stretching forward into the right third.
+> Composition: rear side angle, runner on the left two-thirds of the frame, empty path stretching forward into the right third. No identifiable face, no frontal portrait, no eye contact, no clear facial features.
 >
 > 16:9 aspect ratio.
 
@@ -241,13 +241,13 @@ Mujika & Padilla(2003)의 systematic review가 50건이 넘는 연구를 종합�
 - **위치**: FAQ 종료 후, OUTRO 직전
 - **위치 의도**: 12일 전 한강 LSD 장면(IMG-1)을 출발선 장면으로 회수한다. 같은 러너가 다음 시즌 출발선에 다시 선 순간.
 - **비율**: 21:9
-- **alt 텍스트**: "마라톤 대회 출발선 앞에 차분하게 서서 시계를 마지막으로 확인하는 러너의 새벽 풍경"
+- **alt 텍스트**: "마라톤 대회 출발선 앞에서 얼굴이 보이지 않는 뒷모습으로 시계를 마지막 확인하는 러너의 새벽 풍경"
 
 **프롬프트 (GPT Image 2)**:
-> A male Korean runner standing at a marathon start corral in clear early morning light. Corral barriers visible on both sides; a few other runners' silhouettes are softly blurred in the background. The featured runner is in the foreground center, facing forward, posture composed, breathing steady — checking his GPS watch one final time before the gun.
+> A male Korean runner standing at a marathon start corral in clear early morning light, photographed from behind so his face is not visible. Corral barriers visible on both sides; a few other runners' back-facing silhouettes are softly blurred in the background. The featured runner is in the foreground center, facing away from camera toward the course, posture composed, breathing steady — checking his GPS watch one final time before the gun.
 >
-> Wardrobe: dark grey technical singlet, black running shorts, light running shoes; race bib partially obscured with no readable number or branding.
+> Wardrobe: dark grey technical singlet, black running shorts, light running shoes, plain cap with no logo; race bib partially obscured with no readable number or branding.
 >
-> Composition: low-angle three-quarter shot from the front, the runner centered, the corral barriers framing both sides.
+> Composition: low-angle rear three-quarter shot from behind, the runner centered, the corral barriers framing both sides. No identifiable face, no frontal portrait, no eye contact, no clear facial features.
 >
 > 21:9 cinematic aspect ratio.
