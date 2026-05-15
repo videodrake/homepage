@@ -1843,6 +1843,18 @@ body.onroad-page #wrap {
         }
     }
 @media (max-width: 560px) {
+    .onroad-page .site-footer__monogram-text {
+        display: block;
+        white-space: normal;
+        font-size: clamp(82px, 25vw, 112px)
+        }
+    .onroad-page .site-footer__monogram-text sup {
+        display: block;
+        margin: -0.08em 0 0;
+        font-size: 0.11em;
+        line-height: 1;
+        text-align: right
+        }
     .onroad-page .site-footer__top {
         grid-template-columns: 1fr
         }
