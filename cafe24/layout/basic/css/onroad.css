@@ -17266,6 +17266,85 @@ body#userStyle #orderFixItem .btnSubmit:hover {
     }
 }
 
+/* Text contrast pass: keep existing backgrounds, lift text that sits on dark or low-contrast surfaces */
+body.onroad-page #header.site-header,
+body.onroad-page #header.site-header.is-inverted,
+body.onroad-page #header.site-header.is-scrolled {
+    color: var(--c-cream) !important;
+}
+
+body.onroad-page #header.site-header .site-header__brand em,
+body.onroad-page #header.site-header.is-inverted .site-header__brand em,
+body.onroad-page #header.site-header.is-scrolled .site-header__brand em {
+    color: rgba(244, 239, 230, 0.72) !important;
+}
+
+body.onroad-page #header.site-header .site-header__icon,
+body.onroad-page #header.site-header .site-header__account,
+body.onroad-page #header.site-header .site-header__wishlist,
+body.onroad-page #header.site-header .site-header__burger,
+body.onroad-page #header.site-header .site-header__auth,
+body.onroad-page #header.site-header .site-header__nav a {
+    color: currentColor !important;
+}
+
+body.onroad-page #header.site-header .site-header__icon svg,
+body.onroad-page #header.site-header .site-header__icon svg *,
+body.onroad-page #header.site-header .site-header__account svg,
+body.onroad-page #header.site-header .site-header__account svg *,
+body.onroad-page #header.site-header .site-header__wishlist svg,
+body.onroad-page #header.site-header .site-header__wishlist svg * {
+    stroke: currentColor !important;
+}
+
+body.onroad-page .jr-newsletter,
+body.onroad-page .jr-newsletter h3,
+body.onroad-page .jr-newsletter .italic {
+    color: var(--c-cream) !important;
+}
+
+body.onroad-page .jr-newsletter p,
+body.onroad-page .jr-newsletter .eyebrow {
+    color: rgba(244, 239, 230, 0.78) !important;
+}
+
+body.onroad-page :where(
+    .eyebrow:not(.eyebrow--light),
+    .sec-head__sub,
+    .pin-stage__meta,
+    .content-card__meta,
+    .content-card__excerpt,
+    .jr-pick-list small,
+    .jp-topline,
+    .jp-topline span,
+    .jp-figure figcaption,
+    .empathy-cell__head,
+    .empathy-cell__body,
+    .txtInfo,
+    .login__security,
+    .wrap_security,
+    .auth-card p,
+    .auth-page p
+) {
+    color: #625b52 !important;
+}
+
+body.onroad-page :where(
+    .section--dark,
+    .hero,
+    .visual-marquee,
+    .final-cta,
+    .site-footer,
+    .jr-newsletter
+) :where(
+    .eyebrow,
+    .sec-head__sub,
+    .content-card__meta,
+    .content-card__excerpt
+) {
+    color: rgba(244, 239, 230, 0.78) !important;
+}
+
 /* ==========================================================================
    My Page redesign v3
    ========================================================================== */
