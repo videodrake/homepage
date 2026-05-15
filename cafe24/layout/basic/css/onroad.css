@@ -19240,3 +19240,21 @@ body.onroad-page .myshopArea .onroad-page-links a:hover {
         font-size: clamp(30px, 8vw, 38px) !important;
     }
 }
+
+/* Text contrast pass follow-up: final high-specificity overrides for live Cafe24 rules */
+body.onroad-page .onroad-product-detail-page #totalPrice.totalPrice > strong.title,
+body.onroad-page .onroad-product-detail-page #totalPrice.totalPrice > strong.title > span.qty,
+body.onroad-page .onroad-product-detail-page #totalPrice.totalPrice > span.total,
+body.onroad-page .onroad-product-additional-page #prdInfo.pd-guide .pd-guide__head > p,
+body.onroad-page .onroad-join-page.ec-base-table.typeWrite .txtInfo,
+body.onroad-page .onroad-join-page .ec-base-table.typeWrite td > .txtInfo,
+body.onroad-page .onroad-join-page .ec-base-table.typeWrite td > .gBlank5,
+body.onroad-page .onroad-join-page .ec-base-table.typeWrite .txtInfo {
+    color: #625b52 !important;
+}
+
+body.onroad-page .onroad-home .trust-bar .trust-bar__cell .v > em,
+body.onroad-page .onroad-auth-stage .onroad-auth-switch.onroad-auth-incentive .onroad-auth-incentive__badge,
+body.onroad-page .onroad-login-page .onroad-auth-switch.onroad-auth-incentive .onroad-auth-incentive__badge {
+    color: #ff735c !important;
+}
