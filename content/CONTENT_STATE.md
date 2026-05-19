@@ -47,6 +47,8 @@ Claude는 `완료`, `초안`, `published 있음` 상태의 글을 새로 쓰지 
 | `journal-01-b` | `journal-01` | B | 30km 이후 페이스를 지키는 법 | `deployed` | 완료 | `/journal/journal-01-b.html` 발행 완료. |
 | `journal-02-a` | `journal-02` | A | 마지막 2주가 기록을 만든다 — 테이퍼링이 회수하는 6% | `deployed` | 완료 | `/journal/journal-02-a.html` 발행 완료. |
 | `journal-02-b` | `journal-02` | B | 대회 24시간 루틴 | `deployed` | 완료 | `/journal/journal-02-b.html` 발행 완료. |
+| `journal-04-a` | `journal-04` | A | 같은 페이스, 다른 심박 — 여름 러닝이 만드는 두 가지 생리적 비용 | `published_md_ready` | Claude Code 자리 3 배포 | 신규 여름 러닝 생리학 시리즈 A편. 이미지 6장 생성 및 `content/published/journal-04-a.md` 생성 완료. |
+| `journal-04-b` | `journal-04` | B | 여름 러닝 페이스 조정과 가을 대회 회수 전략 | `not_started` | Claude 자리 1 원고 작성 | 04-A OUTRO에서 연결 갭을 열어둔 B편. |
 | `journal-03-a` | `journal-03` | A | 옥타코사놀이 달리기에 주는 것 | `blocked` | 권위 축적 후 별도 규제 검토 | 성분 직접 언급 시리즈. 가장 마지막. |
 
 ---
@@ -56,8 +58,8 @@ Claude는 `완료`, `초안`, `published 있음` 상태의 글을 새로 쓰지 
 현재 상태 기준 추천:
 
 ```text
-next_slug: journal-03-a
-next_reason: journal-02-b 자사몰 배포 완료. journal-03-a는 blocked 상태이므로 사용자 해제 전까지 대기. 신규 시리즈 기획 필요.
+next_slug: journal-04-b
+next_reason: journal-04-a 발행 준비 완료. OUTRO에서 연 여름 러닝 실행/가을 대회 회수 전략으로 이어간다.
 ```
 
 Claude가 자동 주제선정을 할 때:
