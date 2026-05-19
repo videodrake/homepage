@@ -15,6 +15,7 @@ Upload these files to Claude Project Knowledge when Git-connected reading is not
 - `docs/journal-automation/project_knowledge/자리1_자가검증.md`
 - `docs/journal-automation/project_knowledge/자리1_활성시리즈.md`
 - `docs/journal-automation/project_knowledge/자리1_콘텐츠품질_가이드.md`
+- `docs/journal-automation/project_knowledge/Google_AI_Search_적용_가이드.md`
 - `docs/journal-automation/project_knowledge/운영_룰북/*.md`
 
 Do not use the log backup as the primary state source. The Git ledger is the source of truth:

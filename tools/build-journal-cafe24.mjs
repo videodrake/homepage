@@ -13,7 +13,7 @@ const KOREAN_KEY_RE = /^([^:]+):\s*(.*)$/;
 function usage(exitCode = 0) {
   console.log(`Usage: node tools/build-journal-cafe24.mjs <published.md> --slug <slug> [options]\n\nOptions:\n  --slug <slug>                 Optional output slug. Default: markdown filename\n  --write-cafe24                Write cafe24/journal/<slug>.html and copy assets into cafe24/SkinImg/img/journal/<slug>/\n  --latest                      Use latest markdown in content/published. Default when input is omitted
   --out-dir <dir>               Dry-run output directory. Default: tmp/journal-build/<slug>\n  --regulation-check <path>     regulation_check.py path\n  --automation-root <path>      Repo root for resolving /assets paths
-  --published-dir <path>        Directory used by --latest\n  --date <YYYY / MM / DD>       Hero date text. Default: today in Asia/Seoul\n  --category <text>             Hero category. Default: Pace Science\n  --number <text>               Hero issue label. Default: slug\n  --author <text>               Author name. Default: ONROAD Journal\n  --read-time <text>            Read time. Default: 7 min read\n  --allow-missing-assets        Do not fail when referenced image files are missing\n  --no-regulation-check         For local debugging only; do not use for publishing\n`);
+  --published-dir <path>        Directory used by --latest\n  --date <YYYY / MM / DD>       Hero date text. Default: today in Asia/Seoul\n  --category <text>             Hero category. Default: Pace Science\n  --number <text>               Hero issue label. Default: slug\n  --author <text>               Author name. Default: ONROAD Journal\n  --read-time <text>            Read time. Default: 7 min read\n  --site-url <url>              Absolute site URL for BlogPosting JSON-LD. Default: https://zenera.kr\n  --allow-missing-assets        Do not fail when referenced image files are missing\n  --no-regulation-check         For local debugging only; do not use for publishing\n`);
   process.exit(exitCode);
 }
 
@@ -35,7 +35,7 @@ function deriveSlug(inputPath) {
 }
 
 function parseArgs(argv) {
-  const args = { input: null, writeCafe24: false, allowMissingAssets: false, regulation: DEFAULT_REGULATION_CHECK, automationRoot: DEFAULT_AUTOMATION_ROOT };
+  const args = { input: null, writeCafe24: false, allowMissingAssets: false, regulation: DEFAULT_REGULATION_CHECK, automationRoot: DEFAULT_AUTOMATION_ROOT, siteUrl: 'https://zenera.kr' };
   for (let i = 0; i < argv.length; i += 1) {
     const arg = argv[i];
     if (!args.input && !arg.startsWith('--')) { args.input = arg; continue; }
@@ -44,7 +44,7 @@ function parseArgs(argv) {
     if (arg === '--write-cafe24') { args.writeCafe24 = true; continue; }
     if (arg === '--allow-missing-assets') { args.allowMissingAssets = true; continue; }
     if (arg === '--no-regulation-check') { args.noRegulationCheck = true; continue; }
-    const valueFlags = new Set(['--slug', '--out-dir', '--regulation-check', '--automation-root', '--published-dir', '--date', '--category', '--number', '--author', '--read-time']);
+    const valueFlags = new Set(['--slug', '--out-dir', '--regulation-check', '--automation-root', '--published-dir', '--date', '--category', '--number', '--author', '--read-time', '--site-url']);
     if (valueFlags.has(arg)) {
       const value = argv[i + 1];
       if (!value || value.startsWith('--')) throw new Error(`${arg} requires a value`);
@@ -201,12 +201,14 @@ function plainDeck(body) {
   return (line || '').replace(/\*\*/g, '').replace(/\*/g, '').slice(0, 140);
 }
 
-function renderPage({ title, deck, articleHtml, heroImage, args }) {
+function renderPage({ title, deck, articleHtml, heroImage, args, meta = {} }) {
   const category = args.category || 'Pace Science';
   const number = args.number || args.slug;
-  const date = args.date || todayKst();
+  const date = args.date || normalizeDate(meta.date_drafted) || todayKst();
+  const structuredData = renderStructuredData({ title, deck, heroImage, args, date });
   return `<!--@layout(/layout/basic/layout.html)-->
 <main class="onroad-page journal-post journal-post--generated">
+  ${structuredData}
   <section class="jp-hero" data-header-light>
     <div class="jp-hero__inner">
       <div class="jp-topline">
@@ -228,6 +230,48 @@ function renderPage({ title, deck, articleHtml, heroImage, args }) {
   </section>
 </main>
 `;
+}
+
+function absoluteUrl(base, pathname) {
+  try {
+    return new URL(pathname, base.endsWith('/') ? base : `${base}/`).toString();
+  } catch {
+    return pathname;
+  }
+}
+
+function normalizeDate(value) {
+  if (!value) return null;
+  const text = String(value).trim();
+  const match = text.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  if (match) return `${match[1]} / ${match[2]} / ${match[3]}`;
+  return null;
+}
+
+function renderStructuredData({ title, deck, heroImage, args, date }) {
+  const pageUrl = absoluteUrl(args.siteUrl, `/journal/${args.slug}.html`);
+  const imageUrl = heroImage ? absoluteUrl(args.siteUrl, heroImage) : undefined;
+  const published = date.replace(/\s*\/\s*/g, '-');
+  const data = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: title,
+    description: deck,
+    url: pageUrl,
+    mainEntityOfPage: pageUrl,
+    datePublished: published,
+    dateModified: published,
+    author: {
+      '@type': 'Organization',
+      name: args.author || 'ONROAD Journal',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'ONROAD',
+    },
+  };
+  if (imageUrl) data.image = [imageUrl];
+  return `<script type="application/ld+json">${JSON.stringify(data).replaceAll('<', '\\u003c')}</script>`;
 }
 
 function updateJournalIndex({ args, title, deck, heroImage }) {
@@ -294,7 +338,7 @@ async function main() {
   const { title: h1Title, body } = stripTitle(withTitle);
   const title = h1Title || meta.title || args.slug;
   const { articleHtml, images } = markdownToHtml(body, args.slug);
-  const html = renderPage({ title, deck: plainDeck(body), articleHtml, heroImage: images[0]?.src || '', args });
+  const html = renderPage({ title, deck: plainDeck(body), articleHtml, heroImage: images[0]?.src || '', args, meta });
 
   const outputPath = args.writeCafe24
     ? path.resolve('cafe24', 'journal', `${args.slug}.html`)

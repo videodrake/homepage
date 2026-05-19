@@ -20,6 +20,7 @@ Custom Instructions와 Project Knowledge 전체를 기준으로, 다음 자사�
 - 발행_매핑_가이드.md
 - 규제_핵심요약_치트시트.md
 - 키워드_리서치_가이드.md
+- Google_AI_Search_적용_가이드.md
 
 만약 이 Claude Project에서 GitHub 또는 Git 저장소 문서를 읽을 수 있다면, Project Knowledge의 로그보다 Git 저장소의 최신 `content/CONTENT_STATE.md`와 `content/CONTENT_LOG.md`를 우선해. `CONTENT_STATE.md`가 없으면 Git 저장소의 최신 `CONTENT_LOG.md`를 봐. Git 상태 파일과 실제 `content/draft/`, `content/published/` 파일이 다르면 실제 파일 상태를 우선해. Git을 읽을 수 없으면 Project Knowledge의 `콘텐츠_발행_로그.md`를 백업 기준으로 진행해.
 
@@ -32,6 +33,8 @@ Custom Instructions와 Project Knowledge 전체를 기준으로, 다음 자사�
 - 제품명/성분명 직접 언급이 필요한 주제는 뒤로 미룰 것
 - 한국 30~40대 남성 러너가 실제로 겪는 문제를 우선할 것
 - 검색 질문으로 성립하고, Journal 1편과 네이버 파생글 2편으로 자연스럽게 확장되는 주제를 고를 것
+- 검색어 변형별 중복 글이 아니라, 하나의 문제를 깊게 해결하는 주제를 고를 것
+- 흔한 AI 요약이나 목록형 팁보다 한국 러너 맥락, 숫자, 조건, 한계를 담을 수 있는 주제를 우선할 것
 - 규제 위험이 낮은 TOFU 건강정보 주제를 우선할 것
 
 기본 우선순위:
@@ -54,6 +57,8 @@ Journal 01-A -> Journal 01-B -> Journal 02-A -> Journal 02-B -> Journal 03-A/B
 - 모든 명세 헤더는 ### IMG-N — 식별명
 - 각 명세에는 종류, 비율, alt 텍스트, 프롬프트 필수
 - 이미지 프롬프트에는 각 장면의 고유 내용만 적고, 시리즈 공통 색감/모델/조명/스타일은 반복하지 말 것
+- Google AI Search 대응은 별도 해킹이 아니라 사람 중심 SEO로만 적용할 것
+- llms.txt, AI 전용 요약, 검색어 변형별 중복 글, 본문에 없는 FAQ/구조화 데이터는 만들지 말 것
 - 제품명 0회
 - 성분명 0회
 - 5대 금지어 0회
@@ -74,4 +79,5 @@ Journal 01-A -> Journal 01-B -> Journal 02-A -> Journal 02-B -> Journal 03-A/B
 - 과학 설명은 러너의 문제 -> 몸 안의 원리 -> 숫자/비교 -> 적용 -> 한계 순서
 - 출처 없는 "연구에 따르면" 표현 금지
 - 최종 출력 전 유용성 -> 신뢰 -> 웹 독해 -> 한국 독자 감성 -> AI스러움 제거 순서로 자체 편집
+- 최종 출력 전 "이 글만의 비상품성 가치"가 있는지 확인
 ```
