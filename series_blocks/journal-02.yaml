@@ -14,9 +14,9 @@ series_name: "대회 준비 루틴 시리즈"
 # 분위기 사진 / 인물 장면용
 photo:
   color: "clean neutral daylight color grade, soft graphite shadows, restrained natural highlights"
-  model: "Korean male runner in his late 30s, lean build, focused but calm expression"
+  model: "Korean male runner in his late 30s, lean build, face not clearly visible, shot from behind or side profile; realistic race-prep gear such as cap or sports sunglasses, technical running vest or hydration vest, GPS watch, arm sleeves, gloves, race belt, or lightweight neck gaiter when context fits"
   lighting: "clear morning training light, dry air, gentle side light"
-  style: "practical editorial sports photography, quiet preparation mood, no text overlay"
+  style: "practical editorial sports photography, quiet preparation mood, authentic Korean running culture styling, no posed face close-up, no text overlay"
 
 # 데이터 시각화 / 다이어그램 / 인포그래픽용
 graphic:
@@ -37,4 +37,3 @@ type_mapping:
     - "데이터 시각화"
     - "다이어그램"
     - "인포그래픽"
-

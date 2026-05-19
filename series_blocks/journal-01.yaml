@@ -14,9 +14,9 @@ series_name: "30km 페이스 유지 시리즈"
 # 분위기 사진 / 인물 장면용
 photo:
   color: "cool blue-grey color grade with muted teal shadows, desaturated highlights"
-  model: "Korean male runner in his late 30s, lean build, contemplative expression"
+  model: "Korean male runner in his late 30s, lean build, face not clearly visible, shot from behind or side profile; realistic runner gear such as cap or sports sunglasses, technical running vest or hydration vest, GPS watch, arm sleeves, gloves, or lightweight neck gaiter when context fits"
   lighting: "early dawn, slight mist, cool morning light just before sunrise"
-  style: "editorial magazine aesthetic, Magazine B style, no text overlay"
+  style: "editorial magazine aesthetic, Magazine B style, authentic Korean running culture styling, no posed face close-up, no text overlay"
 
 # 데이터 시각화 / 다이어그램 / 인포그래픽용
 graphic:
