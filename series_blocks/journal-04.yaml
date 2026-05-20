@@ -1,0 +1,40 @@
+# Journal №04 시리즈 고정 블록
+#
+# 주제: 여름 러닝 생리학.
+# 시리즈 시작 시 한 번 정하면 시리즈 모든 글의 이미지 프롬프트에 자동 주입된다.
+# 도중에 변경 금지 — 일관성 깨짐.
+#
+# 적용 매핑:
+#   photo  → "분위기 사진", "인물 장면"
+#   graphic → "데이터 시각화", "다이어그램", "인포그래픽"
+
+series_id: "journal-04"
+series_name: "여름 러닝 생리학 시리즈"
+
+# 분위기 사진 / 인물 장면용
+photo:
+  color: "humid summer dawn color grade, pale blue-grey haze, restrained warm highlights, natural skin tones"
+  model: "Korean male runner in his late 30s, lean build, face not clearly visible, shot from behind or side profile; realistic summer running gear such as lightweight cap, sleeveless technical top, black shorts, GPS watch, sweat-darkened fabric, or handheld soft flask when context fits"
+  lighting: "early summer dawn, hazy humid air, soft low-angle river light"
+  style: "practical editorial sports photography, quiet heat-stress mood, authentic Korean riverside running culture styling, no posed face close-up, no text overlay"
+
+# 데이터 시각화 / 다이어그램 / 인포그래픽용
+graphic:
+  background: "warm off-white background (#FBFAF6)"
+  primary: "charcoal black (#242424) primary"
+  accent: "heat coral (#D96B4B) accent"
+  secondary: "cool plasma blue (#3F7F93) secondary"
+  font: "Pretendard for Korean labels, rendered correctly"
+  style: "flat clean physiology explainer layout, precise arrows and line charts, no 3D effects"
+
+# 종류 → 카테고리 매핑 (느슨한 키워드 매칭)
+# 종류 문자열에 아래 키워드가 포함되면 해당 카테고리로 분류
+type_mapping:
+  photo:
+    - "분위기 사진"
+    - "인물 장면"
+    - "인물"
+  graphic:
+    - "데이터 시각화"
+    - "다이어그램"
+    - "인포그래픽"
