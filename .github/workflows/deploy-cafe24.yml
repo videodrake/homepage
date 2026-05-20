@@ -82,23 +82,6 @@ jobs:
             $DELETE_FLAG \
             $DRY_FLAG \
             cafe24/ /base/
-
-          # Some Cafe24 SFTP accounts expose the active design at the SFTP root
-          # while the public URLs still omit any skin directory. Keep /base/
-          # for existing accounts, and also add/update the root without delete.
-          mirror \
-            --reverse \
-            --verbose \
-            --no-perms \
-            --parallel=2 \
-            --exclude-glob .DS_Store \
-            --exclude-glob .git \
-            --exclude-glob .gitkeep \
-            --exclude-glob Thumbs.db \
-            --exclude-glob '*.swp' \
-            $DRY_FLAG \
-            cafe24/ /
-
           # Remove retired templates that add/update-only deploys cannot delete.
           rm -f /base/myshop/order/list_old.html
           rm -f /base/myshop/order/detail_old.html
