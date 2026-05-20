@@ -25,6 +25,7 @@
 | 5 | 2026-05-15 | cafe24_journal | journal-02-a | journal-02-a | 전체 | Journal | Pace Science | 마지막 2주가 기록을 만든다 — 테이퍼링이 회수하는 6% | (Journal은 SEO 비대상 — 참고용) | 통과 | N | 완료 | /journal/journal-02-a.html | 미측정 |
 | 6 | 2026-05-15 | cafe24_journal | journal-02-a | journal-02-a | — | 이미지 갱신 | Pace Science | 마지막 2주가 기록을 만든다 — IMG-1·IMG-6 측후면 구도, IMG-4 얼굴 숨김 처리 갱신 | — | — | — | 완료 | /journal/journal-02-a.html | — |
 | 7 | 2026-05-19 | cafe24_journal | journal-02-b | journal-02-b | 전체 | Journal | Pace Science | 대회 24시간 루틴 — 출발선에 서기까지 | (Journal은 SEO 비대상 — 참고용) | 통과 | N | 완료 | /journal/journal-02-b.html | 미측정 |
+| 8 | 2026-05-20 | cafe24_journal | journal-04-a | journal-04-a | 전체 | Journal | Pace Science | 같은 페이스, 다른 심박 — 여름 러닝이 만드는 두 가지 생리적 비용 | (Journal은 SEO 비대상 — 참고용) | 통과 | N | 완료 | /journal/journal-04-a.html | 미측정 |
 
 ---
 
@@ -61,6 +62,13 @@
 | №02-A H2-1 Naver | 예정 | — | 대회 2주 전 테이퍼링, 훈련량을 얼마나 줄여야 할까 |
 | №02-A H2-2 Naver | 예정 | — | 대회 14일 전부터 D-1까지 훈련과 카보로딩 일정표 |
 | №02-B Journal | 완료 | 7 | 대회 24시간 루틴 — 출발선에 서기까지 |
+
+### Journal №04 — 여름 러닝 생리학
+
+| 항목 | 상태 | 연결 로그 # | 제목 |
+|---|---|---:|---|
+| №04-A Journal | 완료 | 8 | 같은 페이스, 다른 심박 — 여름 러닝이 만드는 두 가지 생리적 비용 |
+| №04-B Journal | 예정 | — | 여름 러닝 페이스 조정과 가을 대회 회수 전략 |
 
 ### Journal №03 — 옥타코사놀 원료
 
