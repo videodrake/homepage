@@ -274,18 +274,144 @@ function renderStructuredData({ title, deck, heroImage, args, date }) {
   return `<script type="application/ld+json">${JSON.stringify(data).replaceAll('<', '\\u003c')}</script>`;
 }
 
-function updateJournalIndex({ args, title, deck, heroImage }) {
+function decodeEntities(value = '') {
+  return value
+    .replaceAll('&amp;', '&')
+    .replaceAll('&lt;', '<')
+    .replaceAll('&gt;', '>')
+    .replaceAll('&quot;', '"')
+    .replaceAll('&#39;', "'");
+}
+
+function truncateText(value, limit) {
+  const text = String(value).trim().replace(/\s+/g, ' ');
+  if (text.length <= limit) return text;
+  return `${text.slice(0, limit).trim()}\u2026`;
+}
+
+function collectJournalEntries(dir) {
+  return fssync.readdirSync(dir)
+    .filter((name) => /^journal-.+\.html$/i.test(name))
+    .map((name) => {
+      const slug = name.replace(/\.html$/i, '');
+      const html = fssync.readFileSync(path.join(dir, name), 'utf8').replace(/^\uFEFF/, '');
+      const h1 = (html.match(/<h1>([\s\S]*?)<\/h1>/) || [])[1] || slug;
+      const fullTitle = decodeEntities(h1.replace(/<[^>]+>/g, '')).replace(/\.\s*$/, '').trim();
+      const [headline, ...rest] = fullTitle.split(/\s*[\u2014\u2013-]\s+/);
+      const deckRaw = (html.match(/<p class="jp-deck">([\s\S]*?)<\/p>/) || [])[1] || '';
+      const deck = decodeEntities(deckRaw.replace(/<[^>]+>/g, '')).replace(/\s+/g, ' ').trim();
+      const eyebrow = (html.match(/<div class="eyebrow">([^<]*?)\s*\//) || [])[1] || 'Pace Science';
+      const date = (html.match(/"datePublished":"([^"]+)"/) || [])[1] || '';
+      const articleText = ((html.match(/<article[^>]*>([\s\S]*?)<\/article>/) || [])[1] || '').replace(/<[^>]+>/g, '');
+      const minutes = Math.max(3, Math.round(articleText.replace(/\s+/g, '').length / 600));
+      return {
+        slug,
+        title: headline.trim() || fullTitle,
+        subtitle: rest.join(' \u2014 ').trim(),
+        fullTitle,
+        deck,
+        category: eyebrow.trim() || 'Pace Science',
+        date,
+        readTime: `${minutes} min`,
+        hero: `/SkinImg/img/journal/${slug}/img-1.png`,
+        label: slug.replace(/^journal-/, '').toUpperCase(),
+      };
+    })
+    .sort((a, b) => a.slug.localeCompare(b.slug, undefined, { numeric: true }));
+}
+
+function renderJournalIndex(entries) {
+  const ordered = [...entries].reverse();
+  const feature = ordered[0];
+  const cards = ordered.slice(1);
+  const picks = ordered.slice(0, 3);
+  const categories = [...new Set(entries.map((entry) => entry.category))];
+  const latestYear = ordered.map((entry) => (entry.date || '').slice(0, 4)).find(Boolean)
+    || String(new Date().getFullYear());
+  const excerpt = (entry) => escapeHtml(entry.subtitle ? truncateText(entry.subtitle, 90) : truncateText(entry.deck, 90));
+
+  const featureBlock = feature ? `  <section class="jr-feature" data-header-light>
+    <a class="jr-feature__link" href="/journal/${feature.slug}.html">
+      <div class="jr-feature__media" style="background-image:url('${feature.hero}');">
+        <span class="content-card__tag">Feature / ${escapeHtml(feature.label)}</span>
+      </div>
+      <div>
+        <div class="eyebrow"><span style="color:var(--c-signal);">${escapeHtml(feature.category)}</span> / ${escapeHtml(feature.readTime)}</div>
+        <h2>${escapeHtml(feature.title)}</h2>
+        <p>${excerpt(feature)}</p>
+        <span class="btn btn--solid-ink">\uC804\uBB38 \uC77D\uAE30 <span class="btn__arrow"></span></span>
+      </div>
+    </a>
+  </section>\n` : '';
+
+  const cardBlocks = cards.map((entry) => `        <a href="/journal/${entry.slug}.html" class="content-card">
+          <div class="content-card__media" style="background-image:url('${entry.hero}');"><span class="content-card__tag">Journal / ${escapeHtml(entry.label)}</span></div>
+          <div class="content-card__body">
+            <div class="content-card__meta"><em>${escapeHtml(entry.category)}</em><span>/ ${escapeHtml(entry.readTime)}</span></div>
+            <h3 class="content-card__title">${escapeHtml(entry.title)}</h3>
+            <p class="content-card__excerpt">${excerpt(entry)}</p>
+          </div>
+        </a>`).join('\n');
+
+  const pickBlocks = picks.map((entry, idx) => `          <li><span>${String(idx + 1).padStart(2, '0')}</span><a href="/journal/${entry.slug}.html"><small>${escapeHtml(entry.category)}</small><strong>${escapeHtml(entry.title)}.</strong></a></li>`).join('\n');
+
+  const filterBlocks = ['All', ...categories]
+    .map((name, idx) => `      <a${idx === 0 ? ' class="is-active"' : ''} href="/journal/index.html">${escapeHtml(name)}</a>`)
+    .join('\n');
+
+  return `<!--@layout(/layout/basic/layout.html)-->
+<main class="onroad-page journal-page">
+  <section class="jr-masthead" data-header-light>
+    <div class="jr-masthead__inner">
+      <div>
+        <div class="eyebrow">Running Journal / Vol. 01 / ${escapeHtml(latestYear)}</div>
+        <h1>\uB7EC\uB108\uC758 <span class="italic">\uAE30\uB85D</span>,<br><span class="italic">\uD68C\uBCF5</span>, \uADF8\uB9AC\uACE0 \uB2E4\uC74C \uAC78\uC74C.</h1>
+      </div>
+      <aside class="jr-editor-note">
+        <b>[ Editor's Note ]</b>
+        <p>\uB9E4\uC8FC \uAE08\uC694\uC77C \uBC1C\uAC04.<br>\uB7EC\uB2DD \uD504\uB85C\uD1A0\uCF5C\uC5D0\uC11C \uC801\uC5B4 \uBCF4\uB0B4\uB294<br>\uB7EC\uB108\uB97C \uC704\uD55C \uD78C\uD2B8.</p>
+        <small>${entries.length} entries / ${escapeHtml(latestYear)}</small>
+      </aside>
+    </div>
+    <div class="jr-filter" aria-label="Journal categories">
+${filterBlocks}
+    </div>
+  </section>
+
+${featureBlock}
+  <section class="jr-grid-section" data-header-light>
+    <div class="jr-layout">
+      <div class="jr-cards">
+${cardBlocks}
+      </div>
+
+      <aside class="jr-sidebar">
+        <div class="eyebrow">Editor's Pick</div>
+        <ol class="jr-pick-list">
+${pickBlocks}
+        </ol>
+
+        <div class="jr-newsletter">
+          <div class="eyebrow eyebrow--light">Newsletter</div>
+          <h3>\uB9E4\uC8FC \uAE08\uC694\uC77C,<br>\uBC1B\uC544\uBCF4\uB294 <span class="italic">\uB7EC\uB2DD \uD78C\uD2B8</span>.</h3>
+          <p>\uAD11\uACE0 \uC5C6\uC774 \uB7EC\uB108\uC5D0\uAC8C \uD544\uC694\uD55C \uB178\uD2B8\uB9CC \uC804\uD569\uB2C8\uB2E4.</p>
+          <form><input placeholder="you@email.com" aria-label="Email"><button type="submit">OK</button></form>
+        </div>
+      </aside>
+    </div>
+  </section>
+</main>
+`;
+}
+
+function updateJournalIndex({ args }) {
   if (!args.writeCafe24) return null;
-  const indexPath = path.resolve('cafe24', 'journal', 'index.html');
+  const journalDir = path.resolve('cafe24', 'journal');
+  const indexPath = path.join(journalDir, 'index.html');
   if (!fssync.existsSync(indexPath)) return null;
-  const href = `/journal/${args.slug}.html`;
-  const media = heroImage || `/SkinImg/img/journal/${args.slug}/img-1.png`;
-  let indexHtml = fssync.readFileSync(indexPath, 'utf8').replace(/^\uFEFF/, '');
-  indexHtml = indexHtml.replace(/<a href="\/journal\/post\.html">Pace Science<\/a>/, `<a href="${href}">Pace Science</a>`);
-  indexHtml = indexHtml.replace(/<a class="jr-feature__link" href="[^"]+">/, `<a class="jr-feature__link" href="${href}">`);
-  indexHtml = indexHtml.replace(/<div class="jr-feature__media" style="background-image:url\('[^']+'\);">/, `<div class="jr-feature__media" style="background-image:url('${media}');">`);
-  indexHtml = indexHtml.replace(/<li><span>01<\/span><a href="[^"]+">/, `<li><span>01</span><a href="${href}">`);
-  fssync.writeFileSync(indexPath, indexHtml, 'utf8');
+  const entries = collectJournalEntries(journalDir);
+  if (!entries.length) return null;
+  fssync.writeFileSync(indexPath, renderJournalIndex(entries), 'utf8');
   return indexPath;
 }
 
@@ -350,7 +476,7 @@ async function main() {
   await fs.mkdir(path.dirname(outputPath), { recursive: true });
   const assetResult = await copyAssets(images, inputPath, args);
   await fs.writeFile(outputPath, html, 'utf8');
-  const indexPath = updateJournalIndex({ args, title, deck: plainDeck(body), heroImage: images[0]?.src || '' });
+  const indexPath = updateJournalIndex({ args });
 
   console.log(JSON.stringify({
     ok: true,
