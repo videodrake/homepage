@@ -7,11 +7,13 @@ import { spawnSync } from 'node:child_process';
 const DEFAULT_REGULATION_CHECK = path.resolve('tools', 'regulation_check.py');
 const DEFAULT_AUTOMATION_ROOT = process.cwd();
 const DEFAULT_PUBLISHED_DIR = path.join(DEFAULT_AUTOMATION_ROOT, 'content', 'published');
+const DEFAULT_LEDGER = path.join(DEFAULT_AUTOMATION_ROOT, 'content', 'CONTENT_STATE.md');
+const PENDING_STATUS = 'published_md_ready';
 const DISCLAIMER_PATTERN = new RegExp('\\uC81C\\uD488\\uC815\\uBCF4\\uC640 \\uAD00\\uB828 \\uC5C6\\uB294|\\uD559\\uC220 \\uC790\\uB8CC\\uC5D0 \\uADFC\\uAC70\\uD55C|\\uC77C\\uBC18 \\uAC74\\uAC15\\uC815\\uBCF4');
 const KOREAN_KEY_RE = /^([^:]+):\s*(.*)$/;
 
 function usage(exitCode = 0) {
-  console.log(`Usage: node tools/build-journal-cafe24.mjs <published.md> --slug <slug> [options]\n\nOptions:\n  --slug <slug>                 Optional output slug. Default: markdown filename\n  --write-cafe24                Write cafe24/journal/<slug>.html and copy assets into cafe24/SkinImg/img/journal/<slug>/\n  --latest                      Use latest markdown in content/published. Default when input is omitted
+  console.log(`Usage: node tools/build-journal-cafe24.mjs <published.md> --slug <slug> [options]\n\nOptions:\n  --slug <slug>                 Optional output slug. Default: markdown filename\n  --write-cafe24                Write cafe24/journal/<slug>.html and copy assets into cafe24/SkinImg/img/journal/<slug>/\n  --latest                      Use latest markdown in content/published. Default selects the published_md_ready row from content/CONTENT_STATE.md
   --out-dir <dir>               Dry-run output directory. Default: tmp/journal-build/<slug>\n  --regulation-check <path>     regulation_check.py path\n  --automation-root <path>      Repo root for resolving /assets paths
   --published-dir <path>        Directory used by --latest\n  --date <YYYY / MM / DD>       Hero date text. Default: today in Asia/Seoul\n  --category <text>             Hero category. Default: Pace Science\n  --number <text>               Hero issue label. Default: slug\n  --author <text>               Author name. Default: ONROAD Journal\n  --read-time <text>            Read time. Default: 7 min read\n  --site-url <url>              Absolute site URL for BlogPosting JSON-LD. Default: https://zenera.kr\n  --allow-missing-assets        Do not fail when referenced image files are missing\n  --no-regulation-check         For local debugging only; do not use for publishing\n`);
   process.exit(exitCode);
@@ -32,6 +34,32 @@ function latestMarkdown(dir) {
 
 function deriveSlug(inputPath) {
   return path.basename(inputPath).replace(/\.md$/i, '');
+}
+
+// Selects the markdown to stage from the Git ledger (content/CONTENT_STATE.md):
+// the single row whose status is `published_md_ready` is the next journal to deploy.
+// Falls back to the most recent markdown when the ledger is absent.
+function pendingFromLedger(publishedDir, ledgerPath = DEFAULT_LEDGER) {
+  if (!fssync.existsSync(ledgerPath)) return latestMarkdown(publishedDir);
+  const pending = [];
+  for (const line of fssync.readFileSync(ledgerPath, 'utf8').split(/\r?\n/)) {
+    if (!line.trim().startsWith('|')) continue;
+    const cells = line.split('|').map((cell) => cell.replace(/`/g, '').trim());
+    const slug = cells[1] || '';
+    const status = cells[5] || '';
+    if (status === PENDING_STATUS && /^journal-/.test(slug)) pending.push(slug);
+  }
+  if (pending.length === 0) {
+    throw new Error(`No journal marked \`${PENDING_STATUS}\` in ${path.relative(DEFAULT_AUTOMATION_ROOT, ledgerPath)}. Pass a markdown path explicitly or use --latest.`);
+  }
+  if (pending.length > 1) {
+    throw new Error(`Multiple journals are pending deploy (${pending.join(', ')}). Pass the target explicitly, e.g. content/published/${pending[0]}.md --slug ${pending[0]}.`);
+  }
+  const file = path.join(publishedDir, `${pending[0]}.md`);
+  if (!fssync.existsSync(file)) {
+    throw new Error(`Ledger marks ${pending[0]} as ${PENDING_STATUS} but ${path.relative(DEFAULT_AUTOMATION_ROOT, file)} is missing.`);
+  }
+  return file;
 }
 
 function parseArgs(argv) {
@@ -56,7 +84,10 @@ function parseArgs(argv) {
     }
     throw new Error(`Unknown argument: ${arg}`);
   }
-  if (!args.input) args.input = latestMarkdown(args.publishedDir || DEFAULT_PUBLISHED_DIR);
+  if (!args.input) {
+    const publishedDir = args.publishedDir || DEFAULT_PUBLISHED_DIR;
+    args.input = args.latest ? latestMarkdown(publishedDir) : pendingFromLedger(publishedDir);
+  }
   if (!args.slug) args.slug = deriveSlug(args.input);
   return args;
 }
