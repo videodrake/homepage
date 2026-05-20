@@ -48,7 +48,7 @@ Claude는 `완료`, `초안`, `published 있음` 상태의 글을 새로 쓰지 
 | `journal-02-a` | `journal-02` | A | 마지막 2주가 기록을 만든다 — 테이퍼링이 회수하는 6% | `deployed` | 완료 | `/journal/journal-02-a.html` 발행 완료. |
 | `journal-02-b` | `journal-02` | B | 대회 24시간 루틴 | `deployed` | 완료 | `/journal/journal-02-b.html` 발행 완료. |
 | `journal-04-a` | `journal-04` | A | 같은 페이스, 다른 심박 — 여름 러닝이 만드는 두 가지 생리적 비용 | `deployed` | 완료 | `/journal/journal-04-a.html` 발행 완료. |
-| `journal-04-b` | `journal-04` | B | 여름을 다루는 방법 — 두 비용을 줄이는 조정과 가을 6%를 만드는 시간표 | `published_md_ready` | Claude Code 자리 3 배포 | Journal №04-B. 이미지 6장 생성 및 `content/published/journal-04-b.md` 생성 완료. |
+| `journal-04-b` | `journal-04` | B | 여름을 다루는 방법 — 두 비용을 줄이는 조정과 가을 6%를 만드는 시간표 | `deployed` | 완료 | `/journal/journal-04-b.html` 발행 완료. |
 | `journal-03-a` | `journal-03` | A | 옥타코사놀이 달리기에 주는 것 | `blocked` | 권위 축적 후 별도 규제 검토 | 성분 직접 언급 시리즈. 가장 마지막. |
 
 ---
@@ -58,8 +58,8 @@ Claude는 `완료`, `초안`, `published 있음` 상태의 글을 새로 쓰지 
 현재 상태 기준 추천:
 
 ```text
-next_slug: journal-04-b
-next_reason: journal-04-b 발행 준비 완료. Claude Code 자리 3 배포 대기.
+next_slug: (없음 — 현재 not_started 항목 없음)
+next_reason: journal-04-b 배포 완료. 다음 주제 미정.
 ```
 
 Claude가 자동 주제선정을 할 때:
