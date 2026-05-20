@@ -49,13 +49,24 @@ Do not ask the user for paths unless the adapter cannot find the source files.
 
 ## 4. Input Discovery
 
+`npm run journal:stage` selects the markdown automatically: with no argument it
+reads `content/CONTENT_STATE.md` and stages the single row whose status is
+`published_md_ready` (the next journal to deploy). The operator does not pick a slug.
+
 1. Read the triggering PR metadata if available.
 2. Derive `slug` from the Codex branch name by removing `codex/`.
    - `codex/journal-02-a` -> `journal-02-a`
-3. If triggering metadata is unavailable, use the latest markdown selected by `npm run journal:stage`.
+3. Run `npm run journal:stage` with no argument. It auto-selects the
+   `published_md_ready` journal from the ledger and writes the cafe24 output.
+   - If the triggering slug differs from the auto-selected one, pass it
+     explicitly: `npm run journal:stage -- content/published/<slug>.md --slug <slug>`.
+   - If the command stops because zero or several rows are `published_md_ready`,
+     fix the ledger or pass the target explicitly. Do not guess.
 4. Confirm generated output path after staging:
    - `cafe24/journal/<slug>.html`
    - `cafe24/SkinImg/img/journal/<slug>/img-N.png`
+   - `cafe24/journal/index.html` is fully regenerated from every deployed
+     journal, so the new entry appears automatically.
 
 ## 5. Workflow
 
