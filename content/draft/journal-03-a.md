@@ -1,5 +1,5 @@
 ---
-title: "Journal №03-A : 옥타코사놀이라는 분자 — 사탕수수 왁스에서 나온 지구력 보조 후보."
+title: "Journal №03-A : 옥타코사놀이라는 분자 — 사탕수수 표면 왁스에서 나온 28개 탄소의 긴 사슬 알코올."
 channel: journal
 funnel_stage: TOFU
 content_role: Journal
@@ -11,33 +11,33 @@ target_keywords:
 word_count: 약 3,200자
 image_count: 6
 review_required: N
-review_note: "심의 불필요 — 제품명 0회, 기능성 단정 광고 0회. 성분명 '옥타코사놀'은 식약처 인정 기능성 표시 범위를 객관 인용한 학술 정보 맥락에서만 사용."
+review_note: "심의 불필요 — 제품명 0회, 기능성 단정 광고 0회. 본 글은 옥타코사놀을 '사탕수수 왁스 원료의 화학·식물학적 정체와 70년 연구 이력'이라는 원료 학술 정보 맥락에서만 다루며, 식약처 인정 표시 범위는 객관 인용에 한정한다."
 date_drafted: 2026-05-19
 ---
 
-# 옥타코사놀이라는 분자 — 사탕수수 왁스에서 나온 지구력 보조 후보.
+# 옥타코사놀이라는 분자 — 사탕수수 표면 왁스에서 나온 28개 탄소의 긴 사슬 알코올.
 
-[IMG-1: 헤더 성분표 읽는 장면]
+[IMG-1: 헤더 흰 왁스 결정 접사]
 
 > **핵심 요약**
-> 옥타코사놀은 사탕수수 표면 왁스에서 추출되는 28개 탄소의 긴 사슬 알코올로, 1949년부터 운동생리학 연구에서 지구력 보조 가능성이 검토되어 온 천연 화합물이다.
+> 옥타코사놀은 사탕수수 표면을 덮은 보호 왁스에서 얻는, 탄소 28개가 일렬로 이어진 긴 사슬 알코올이다. 사람을 위해 만들어진 성분이 아니라, 식물이 자기 잎을 지키려고 만든 천연 분자가 출발점이다.
 >
-> - 화학적으로는 C₂₈H₅₈O, 폴리코사놀(C24~C34 알코올 혼합물) 가족의 한 구성 성분
-> - 자연에서는 사탕수수·쌀겨·밀배아·일부 잎 큐티클의 보호 왁스 성분으로 발견
-> - 식품의약품안전처는 옥타코사놀 함유 유지를 "지구력 증진에 도움을 줄 수 있음"이라는 단일 표시 범위로 인정
-> - 70년의 연구 누적에도 인체적용시험 표본 크기와 결과 일관성에서 한계가 함께 있다
+> - 분자식 C₂₈H₅₈O, 폴리코사놀(C24~C34 알코올 혼합물) 가족의 한 구성 성분
+> - 자연에서는 사탕수수·쌀겨·밀배아·잎 큐티클의 보호 왁스 성분으로 분포
+> - 1949년 운동생리학 연구에 처음 등장해 70년간 동물·인체 자료가 누적
+> - 식품의약품안전처는 옥타코사놀 함유 유지를 "지구력 증진에 도움을 줄 수 있음"이라는 단일 표시 범위로 인정하되, 표본 크기와 결과 일관성의 한계가 함께 보고된다
 
 ## INTRO
 
-3월 어느 일요일 오전. 한 러너가 잠실 한강공원에서 25km LSD를 마치고 집에 돌아온다. 식탁 위에는 며칠 전 도착한 영양제 통이 놓여 있다. 라벨을 들여다본다. 가운데 굵은 줄에 "옥타코사놀 함유 유지 40mg". 그 아래 작은 글씨로 한 줄이 더 있다 — "지구력 증진에 도움을 줄 수 있음".
+한여름 농장의 사탕수수 잎을 손끝으로 훑으면 옅은 흰 가루가 묻어난다. 식물이 햇볕과 건조, 곤충으로부터 잎 표면을 지키려고 깔아둔 보호 왁스다. 이 얇은 흰 막 안에 탄소 28개가 일렬로 이어진 분자 하나가 들어 있다.
 
-이 한 줄은 누가 적어둔 것이고, 안의 분자는 어디에서 와서 무엇을 한다고 알려져 있는가. 라벨에는 그 답이 없다.
+사람이 먹으려고 만든 분자가 아니다. 식물이 자신을 위해 만든 분자가, 1949년부터 운동생리학 연구에서 다뤄져 왔다. 이 분자의 이름이 옥타코사놀이다. 무엇이고, 어디서 와서, 70년의 연구가 무엇을 확인했고 무엇을 확인하지 못했는가. 영양제 라벨의 짧은 한 줄에는 그 답이 없다.
 
 [IMG-2: 사탕수수 잎과 흰 왁스 결정]
 
-## 사탕수수 왁스에서 나온 28개 탄소의 알코올
+## 사탕수수 표면 왁스에서 나온 28개 탄소의 알코올
 
-옥타코사놀의 출발점은 농장의 사탕수수 잎이다. 사탕수수가 사람을 위해 만든 분자가 아니다. 식물이 자기 표면을 햇볕과 건조와 곤충으로부터 보호하기 위해 잎 표면에 얇게 깐 왁스질의 한 성분이다.
+옥타코사놀의 출발점은 농장의 사탕수수 잎이다. 사탕수수가 사람을 위해 만든 분자가 아니다. 식물이 자기 표면을 햇볕과 건조와 곤충으로부터 보호하려고 잎 표면에 얇게 깐 왁스질의 한 성분이다.
 
 화학적으로는 단순한 분자다. 탄소 28개가 일렬로 이어진 끝에 알코올기(-OH) 하나가 붙어 있는 긴 사슬 1가 알코올. 분자식은 C₂₈H₅₈O. 폴리코사놀(policosanol)이라 불리는 더 큰 범주의 한 구성원이며, 폴리코사놀은 C24부터 C34까지의 긴 사슬 알코올들이 섞인 천연 혼합물이다. 그중 옥타코사놀이 차지하는 비율이 사탕수수 왁스 기준 60% 이상이라는 보고가 일반적이다.
 
@@ -52,23 +52,23 @@ date_drafted: 2026-05-19
 
 자연 출처도 사탕수수 한 곳이 아니다. 쌀겨 왁스, 밀배아 왁스, 잎채소 큐티클 등 식물의 보호 표면 어디든 일정량이 존재한다. 다만 함량과 추출 효율이 가장 안정적인 것이 사탕수수와 쌀겨다. 시판 원료의 대부분은 사탕수수 표면 왁스에서 출발한다.
 
-추출은 단순한 압착이 아니다. 사탕수수에서 설탕을 짜내고 남은 왁스를 모은 뒤, 알칼리 가수분해와 용매 추출, 정제 과정을 거쳐 흰색 미세 결정 분말의 형태로 다듬는다. 100kg의 사탕수수 왁스에서 정제된 옥타코사놀로 회수되는 양은 일반적으로 1kg 안팎으로 알려져 있다. 단가가 낮지 않은 원료다.
+추출은 단순한 압착이 아니다. 사탕수수에서 설탕을 짜내고 남은 왁스를 모은 뒤, 알칼리 가수분해와 용매 추출, 정제 과정을 거쳐 흰색 미세 결정 분말의 형태로 다듬는다. 100kg의 사탕수수 왁스에서 정제된 옥타코사놀로 회수되는 양은 일반적으로 1kg 안팎으로 알려져 있다. 단가가 낮지 않은 천연 원료다.
 
-한국 식품의약품안전처는 옥타코사놀 함유 유지를 건강기능식품의 기능성 원료로 인정하고 있고, 표시 가능한 기능성 문구는 한 줄이다 — "지구력 증진에 도움을 줄 수 있음". 이 문구는 회사가 정한 것이 아니라 식약처 고시상 표시 범위 그 자체다. 이 범위를 벗어나는 어떤 표현도 표시·광고 규제 대상이 된다.
+한국 식품의약품안전처는 옥타코사놀 함유 유지를 건강기능식품의 기능성 원료로 인정하고 있고, 표시 가능한 기능성 문구는 한 줄이다 — "지구력 증진에 도움을 줄 수 있음". 이 문구는 회사가 정한 것이 아니라 식약처 고시상 표시 범위 그 자체다. 이 범위를 벗어나는 어떤 표현도 표시·광고 규제 대상이 된다. 원료의 화학적 정체와 자연 출처, 인정 범위는 여기까지가 정해져 있다.
 
-분자의 출처와 모양, 인정 범위는 여기까지가 정해져 있다. 그러나 라벨의 한 줄이 70년의 연구를 거쳐 어떻게 그 자리에 올랐는지, 운동 중인 몸 안에서 이 분자가 어디에 놓이는 것으로 알려져 있는지는 다른 이야기다.
+분자의 출처와 모양, 인정 범위는 분명하다. 그러나 이 천연 분자가 운동생리학 연구에서 어떻게 다뤄져 왔는지, 그 70년의 자료가 무엇을 확인했고 무엇을 확인하지 못했는지는 다른 이야기다.
 
-## 에너지 대사에서 알려진 위치 — 70년의 연구 누적과 한계
+## 운동생리학 연구에서 다뤄진 70년 — 누적과 한계
 
 옥타코사놀이 운동과학에 처음 들어온 시점은 1949년이다. University of Illinois의 Thomas K. Cureton 교수가 운동수행 보조 후보로 밀배아유에 주목한 것이 시작이었다. 이후 그가 1972년에 펴낸 *The Physiological Effects of Wheat Germ Oil on Humans in Exercise*는 옥타코사놀 연구의 최초 단행본 형태로 남아 있다. 이후 70여 년간 동물실험과 인체적용시험들이 누적되었고, 운동생리학 문헌에서 자주 인용되는 두 가지 기전 가설이 정리되었다.
 
-첫째는 글리코겐 세이빙(glycogen sparing)이라 불리는 기전이다. 같은 운동 부하에서 옥타코사놀을 일정 기간 섭취한 동물 모델이 근육 글리코겐 소비를 더 늦추는 패턴이 일부 보고됐다. 가설은 지방 산화 경로의 조기 동원이다. 글리코겐이 다 떨어진 뒤가 아니라 운동 초반부터 지방 쪽 연료가 더 큰 비중으로 일하면, 같은 거리를 가는 데 쓰이는 글리코겐 총량이 줄어든다. №01-A에서 다룬 800kcal 부족분의 일부가 메워질 수 있는 자리다.
+첫째는 글리코겐 세이빙(glycogen sparing)이라 불리는 기전이다. 같은 운동 부하에서 옥타코사놀을 일정 기간 섭취한 동물 모델이 근육 글리코겐 소비를 더 늦추는 패턴이 일부 보고됐다. 가설은 지방 산화 경로의 조기 동원이다. 글리코겐이 다 떨어진 뒤가 아니라 운동 초반부터 지방 쪽 연료가 더 큰 비중으로 일하면, 같은 거리를 가는 데 쓰이는 글리코겐 총량이 줄어든다. №01-A에서 다룬 800kcal 부족분의 일부가 메워질 수 있는 지점이다.
 
 [IMG-4: 글리코겐과 지방 대사 경로 도식]
 
 둘째는 미토콘드리아 효소 활성 변화다. 구연산합성효소(citrate synthase, CS)와 크레아틴 키나아제(creatine kinase, CK)의 활성 또는 패턴 변화가 동물실험에서 보고됐다. 구연산합성효소는 미토콘드리아 안에서 TCA 회로가 돌아가는 첫 단계의 효소이고, 그 활성은 미토콘드리아의 산화 능력 지표로 자주 쓰인다. 이 효소가 더 활발히 작동한다는 것은 같은 산소량으로 더 많은 ATP를 만들 수 있는 시스템에 가깝다는 의미로 해석된다.
 
-여기까지는 자주 인용되는 가설이다. 그러나 70년의 누적에도 옥타코사놀 연구는 결정적인 일치된 결론에 도달한 단계가 아니다. 다음 네 가지 한계는 어느 매거진형 기사에서도 함께 언급되는 부분이다.
+여기까지는 자주 인용되는 가설이다. 그러나 70년의 누적에도 옥타코사놀 연구는 일치된 결론에 도달한 단계가 아니다. 다음 네 가지 한계는 이 원료를 다루는 어느 자료에서도 함께 언급되는 부분이다.
 
 | 알려진 한계 | 구체적 내용 |
 |---|---|
@@ -81,7 +81,7 @@ date_drafted: 2026-05-19
 
 식약처의 인정 문구가 "도움을 줄 수 있음"이라는 보조 가능성 형태로 닫혀 있는 이유도 여기에 있다. 단정 표현이 아니라 가능성을 보조적으로 표현한 한 줄. 이 한 줄을 광고가 "운동 능력의 새로운 기준"이나 "에너지가 완성된다" 같은 단정으로 옮기는 순간, 그것은 표시·광고 규제 위반이 된다. 인정 문구의 보조적 톤이 곧 규제 경계선이다.
 
-운동생리학 맥락으로 옮기면 옥타코사놀은 글리코겐 세이빙과 미토콘드리아 효율 두 축에 걸쳐 있는 후보 원료다. 후보라는 단어가 핵심이다. 70년의 연구는 가능성을 좁히는 데까지는 도달했고, 단정에 닿을 만한 일치된 임상 근거를 아직 만들지 못했다.
+천연 원료의 관점으로 정리하면 옥타코사놀은 글리코겐 세이빙과 미토콘드리아 효율 두 축에 걸쳐 연구되어 온 후보 분자다. 후보라는 단어가 핵심이다. 70년의 연구는 가능성을 좁히는 데까지는 도달했고, 단정에 닿을 만한 일치된 인체 근거는 아직 만들지 못했다.
 
 ## 자주 묻는 질문
 
@@ -95,17 +95,15 @@ date_drafted: 2026-05-19
 쌀겨 왁스, 밀배아 왁스, 카르나우바 야자 왁스, 일부 잎채소의 표면 큐티클 등에 일정량이 존재한다. 다만 함량 안정성과 추출 효율 면에서 사탕수수와 쌀겨가 가장 자주 사용되는 원료다.
 
 **Q. 인체에는 어떻게 흡수된다고 알려져 있나요?**
-긴 사슬 알코올 자체로는 흡수가 제한적이며, 섭취 후 일부가 장에서 더 짧은 사슬의 지방산이나 알코올 유도체로 분해되어 흡수되는 경로가 보고된다. 흡수율과 체내 분포에 대한 인체 데이터는 아직 충분히 축적된 단계가 아니라는 점이 자주 함께 언급된다.
+긴 사슬 알코올 자체로는 흡수가 제한적이며, 섭취 후 일부가 장에서 더 짧은 사슬의 지방산이나 알코올 유도체로 분해되어 흡수되는 경로가 보고된다. 흡수율과 체내 분포에 대한 인체 자료는 아직 충분히 축적된 단계가 아니라는 점이 자주 함께 언급된다.
 
-[IMG-6: OUTRO 분자에서 한강까지]
+[IMG-6: OUTRO 흰 결정과 연구 노트]
 
 ## OUTRO
 
-같은 일요일 늦은 오후, 그 러너는 다시 한강변을 천천히 걷고 있다. 영양제 통의 라벨을 한 번 더 들여다본다. "옥타코사놀 함유 유지 40mg". 한 줄이 더 있다. "지구력 증진에 도움을 줄 수 있음".
+같은 사탕수수 잎의 흰 가루로 돌아간다. 식물이 자기 표면을 지키려고 만든 보호 왁스, 그 안에서 정제된 28개 탄소의 알코올, 1949년의 한 교수, 70년치의 인체적용시험과 동물실험, 그리고 표본 크기와 결과 일관성의 한계.
 
-라벨이 짧다는 것이 그 뒤가 비어 있다는 뜻은 아니다. 사탕수수 표면의 흰 결정에서 28개 탄소의 알코올, 1949년의 한 교수, 70년치의 인체적용시험과 동물실험, 그리고 일관성과 표본 크기의 한계. 그 위에 식약처가 닫아둔 한 줄짜리 표시 범위가 놓여 있다.
-
-이 한 줄 뒤의 분자가 러닝 중인 몸 안에서 실제로 어떻게 자리잡는다고 알려져 있는지, 그 가설들이 어떤 한계와 함께 운동생리학에서 받아들여지는지는 다음 글에서 다룬다.
+라벨이 짧다는 것이 그 뒤가 비어 있다는 뜻은 아니다. 그 위에 식약처가 닫아둔 한 줄짜리 표시 범위가 놓여 있을 뿐이다. 이 천연 분자가 러닝 중인 몸 안에서 실제로 어떻게 자리잡는다고 알려져 있는지, 그 가설들이 어떤 한계와 함께 운동생리학에서 받아들여지는지는 다음 글에서 다룬다.
 
 ---
 
@@ -125,25 +123,25 @@ date_drafted: 2026-05-19
 
 > GPT Image 2(GPT-4o Image Generation)로 생성. №03 시리즈는 자연 원료와 학술 객체를 다루는 사이언스 매거진 톤이며, 시리즈 블록(`series_blocks/journal-03.yaml`)이 별도 정의되기 전이므로 본문 프롬프트에 톤 키워드를 적정 수준으로 명시한다. 자리 2 전달 전 시리즈 블록을 확정한 뒤 본문 프롬프트에서 중복 키워드를 정리해야 한다.
 
-### IMG-1 — 헤더 성분표 읽는 장면
+### IMG-1 — 헤더 흰 왁스 결정 접사
 
 - **종류**: 분위기 사진
 - **위치**: 제목 직후, 핵심 요약박스 직전
-- **위치 의도**: INTRO의 '일요일 오전 영양제 라벨' 장면을 그대로 받는 헤더. 제품 정체는 흐리고 라벨 텍스트만 두드러진다.
+- **위치 의도**: INTRO의 '사탕수수 표면 보호 왁스 속 분자' 주제를 그대로 받는 헤더. 제품이 아니라 천연 원료 자체를 헤더로 세운다.
 - **비율**: 21:9 (와이드 시네마틱)
-- **alt 텍스트**: "한국 가정 식탁 위에 놓인 무지 백색 영양제 통의 성분표를 가까이서 들여다보는 러너의 손 장면"
-- **캡션**: "라벨의 한 줄. 그 안의 분자는 어디서 왔는가."
+- **alt 텍스트**: "실험대 위 얕은 유리 접시에 담긴 흰색 미세 결정 분말 형태의 식물성 왁스를 가까이서 담은 학술 자료 사진"
+- **캡션**: "흰 결정 하나. 28개 탄소의 알코올이 여기서 시작한다."
 
 **프롬프트 (GPT Image 2)**:
-> A close, over-the-shoulder editorial photograph of a male Korean runner's hands holding a plain unbranded white supplement bottle in a quiet Korean home kitchen on a Sunday late morning. The bottle's label is the focal point of the frame; on the label, two Korean text lines are clearly readable: "옥타코사놀 함유 유지 40mg" in larger weight, and below it "지구력 증진에 도움을 줄 수 있음" in smaller weight. No other readable text, no brand mark, no logos.
+> A close, editorial macro photograph of a small mound of fine white crystalline powder representing isolated plant wax, resting in a shallow clean round glass dish on a matte off-white laboratory surface. Beside the dish, a single dried green sugarcane leaf fragment is placed to mark the botanical origin. A small unlabelled museum-style placard sits nearby but its surface is intentionally blank, with no readable text.
 >
-> The runner is seen only from the hands and partial forearms; running gloves removed nearby, a half-finished water bottle and a folded paper towel rest at the edge of the frame. The runner's body, face, and clothing details are entirely out of frame.
+> No human, no hands, no product packaging, no supplement bottle, no brand mark, no logos. The frame is purely about the raw material itself.
 >
-> Style: calm clean editorial photography, soft natural daylight from a side window, restrained shadows. Sober sage-magazine mood: closer to a Magazine B / science-editorial column than a product ad. No staged glossy product-photo lighting. Color grade: clean neutral daylight, slightly warm wood tones from the kitchen table surface.
+> Style: calm clean editorial science photography, soft natural daylight from a side window, restrained shadows. Sober science-magazine mood, closer to a Magazine B / science-editorial plate than a product ad. Color grade: clean neutral daylight, slightly cool, with warm off-white surface tones.
 >
-> Composition: shallow depth of field, label crisp and centered, the bottle held slightly tilted toward the camera. The kitchen background softly blurred.
+> Composition: shallow depth of field, the crystalline powder crisp and centered, the leaf fragment softly defocused at the edge.
 >
-> 21:9 cinematic aspect ratio. No on-image text other than the two readable Korean lines on the label itself.
+> 21:9 cinematic aspect ratio. No on-image text, no logos, no labels.
 
 ---
 
@@ -154,7 +152,7 @@ date_drafted: 2026-05-19
 - **위치 의도**: H2-1의 첫 문장('사탕수수 잎이 출발점')을 시각으로 받는다. 자연 원료의 정체를 객체 그대로 보여준다.
 - **비율**: 16:9
 - **alt 텍스트**: "사탕수수 잎 표면과 그 옆에 흰색 미세 결정 분말 형태로 놓인 식물성 왁스의 학술 자료 사진"
-- **캡션**: "잎 표면의 흰 결정. 분자의 첫 자리."
+- **캡션**: "잎 표면의 흰 결정. 분자의 첫 출처."
 
 **프롬프트 (GPT Image 2)**:
 > A botanical-still-life editorial photograph in a quiet science-magazine column style. On the left third of the frame: a single fresh green sugarcane leaf (Saccharum officinarum) laid flat on a matte off-white paper surface, the faint natural waxy bloom visible along the leaf's surface. On the right two-thirds: a small clean Petri-dish-style shallow round glass dish containing a small mound of fine white crystalline powder representing isolated plant wax. A tiny unlabelled museum-style placard sits next to the dish but its surface is intentionally blank (no readable text).
@@ -191,10 +189,10 @@ date_drafted: 2026-05-19
 
 - **종류**: 다이어그램
 - **위치**: H2-2 본문 중반, 글리코겐 세이빙 가설 설명 직후
-- **위치 의도**: 글리코겐 세이빙 가설이 두 연료의 사용 비율을 어떻게 바꾸는지 한 화면에 본다.
+- **위치 의도**: 글리코겐 세이빙 가설이 두 연료의 사용 비율을 어떻게 바꾼다고 검토되는지 한 화면에 본다.
 - **비율**: 16:9
-- **alt 텍스트**: "운동 중 근육 세포가 글리코겐과 지방을 연료로 사용할 때 두 경로의 분배 비율 변화를 표시한 대사 경로 도식"
-- **캡션**: "두 경로의 분배가 조금 바뀌면 후반의 곡선이 달라진다."
+- **alt 텍스트**: "운동 중 근육 세포가 글리코겐과 지방을 연료로 사용할 때 두 경로의 분배 비율 변화를 표시한 대사 경로 연구 가설 도식"
+- **캡션**: "두 경로의 분배가 조금 바뀌면 후반의 곡선이 달라진다는 가설."
 
 **프롬프트 (GPT Image 2)**:
 > A horizontally oriented editorial metabolism pathway diagram titled "근육 세포 안의 두 연료 경로" in Korean. The diagram has two parallel horizontal flow lanes, top and bottom, each flowing left to right and meeting at a shared "ATP" node at the far right.
@@ -203,7 +201,7 @@ date_drafted: 2026-05-19
 >
 > Bottom lane (fat path): three connected boxes — "지방세포 트리글리세리드" → "유리 지방산 (FFA)" → "베타 산화 / TCA 회로". An arrow from this lane also enters the same "ATP" node.
 >
-> Above the diagram, a small contextual side annotation reading "지방산 산화 경로의 조기 동원 가설" in Korean, with a thin curving arrow pointing to the bottom lane to mark which path the hypothesized glycogen-sparing effect would emphasize.
+> Above the diagram, a small contextual side annotation reading "지방산 산화 경로의 조기 동원 가설 (연구 단계)" in Korean, with a thin curving arrow pointing to the bottom lane to mark which path the hypothesized glycogen-sparing effect would emphasize.
 >
 > Style: flat clean editorial diagram on a warm off-white background. Carbohydrate lane in graphite-black primary; fat-path lane drawn slightly thicker and tinted with a warm ochre accent to visualize the hypothesized increased contribution. No 3D effects, no shadows.
 >
@@ -238,23 +236,23 @@ date_drafted: 2026-05-19
 
 ---
 
-### IMG-6 — OUTRO 분자에서 한강까지
+### IMG-6 — OUTRO 흰 결정과 연구 노트
 
 - **종류**: 분위기 사진
 - **위치**: FAQ 종료 후, OUTRO 직전
-- **위치 의도**: 분자의 출처(사탕수수 잎) → 한 러너의 한강변으로 시간상 닫는 회수 장면. 학술 영역에서 현실 러닝 장면으로 카메라를 옮긴다.
+- **위치 의도**: 분자의 출처(사탕수수 잎 → 흰 결정)와 70년의 연구 이력을 한 장면으로 닫는 회수 컷. 헤더의 흰 결정으로 시각을 되돌린다.
 - **비율**: 21:9
-- **alt 텍스트**: "일요일 늦은 오후 한강변 산책로를 천천히 걷는 정면 얼굴이 보이지 않는 측후면 구도의 한국 러너 풍경"
-- **캡션**: "분자의 한 줄, 그리고 한 사람의 한강."
+- **alt 텍스트**: "늦은 오후 빛이 드는 책상 위에 흰 결정 분말이 담긴 유리 접시와 손글씨 없는 펼쳐진 연구 노트가 함께 놓인 차분한 학술 정물 사진"
+- **캡션**: "흰 결정 하나, 그리고 70년치의 연구 노트."
 
 **프롬프트 (GPT Image 2)**:
-> A wide cinematic editorial photograph of a male Korean runner viewed from a rear three-quarter side angle, walking slowly along a paved riverside path beside the Han River in late Sunday afternoon. The river occupies the left third of the frame, with the soft silhouette of distant city buildings on the far bank. The runner is positioned on the right third of the frame, walking away from the camera; his face is not visible.
+> A wide cinematic editorial still-life photograph of a quiet researcher's desk in late Sunday afternoon light. On the desk: a shallow clean glass dish holding a small mound of fine white crystalline powder representing isolated plant wax, placed beside an open plain notebook whose pages are intentionally blank with no readable handwriting or text. A dried sugarcane leaf fragment rests at the edge of the frame to echo the botanical origin.
 >
-> Wardrobe: a light grey technical short-sleeve top, black running tights under loose running shorts, white running shoes, a low-profile plain cap. No race bib, no readable logos. The runner is no longer in race mode — recovery walking after a long-distance training run.
+> No human, no hands, no product packaging, no supplement bottle, no brand mark, no logos, no readable text anywhere.
 >
-> Lighting: late afternoon golden side-light from the left, gentle long shadow on the path, clear dry air, calm reflective river surface. Color grade: clean neutral daylight tipped slightly warm to mark the time of day.
+> Lighting: warm late-afternoon side-light from the left, gentle long shadows across the matte off-white desk surface, calm and contemplative. Color grade: clean neutral daylight tipped slightly warm to mark the time of day.
 >
-> Composition: wide horizontal frame, the river horizon line at the lower third, the runner small in the frame to convey scale and quietness.
+> Composition: wide horizontal frame, the dish and notebook balanced left-right, generous negative space to convey quietness and the passage of accumulated study.
 >
 > 21:9 cinematic aspect ratio. No on-image text, no readable signage.
 
@@ -263,30 +261,31 @@ date_drafted: 2026-05-19
 ## 검증 리포트
 
 - [x] 파일명/slug: `journal-03-a`
-- [x] 본문 H2 정확히 2개 (분자의 정체·유래 / 에너지 대사에서 알려진 위치)
+- [x] 본문 H2 정확히 2개 (사탕수수 왁스 원료의 화학·유래 / 운동생리학 연구 70년의 누적과 한계)
 - [x] INTRO 약 290자 · H2 각 약 1,100~1,250자 · OUTRO 약 280자 · FAQ 4개
 - [x] 이미지 마커 6개, 본문 마커와 명세 헤더 1:1 일치, 식별명 글자 단위 일치
 - [x] 모든 명세에 필수 4필드(종류·비율·alt 텍스트·프롬프트) 존재
 - [x] 분위기 사진 3 / 다이어그램 2 / 인포그래픽 1 — 3종 혼합
-- [x] **제품명 "지구력코어" 0회** — 본문·alt·캡션·프롬프트 전부 0회 확인
-- [⚠] **성분명 "옥타코사놀" 등장 — 사용자 명시적 지시("원료 자체에 대한 학술 정보로 우회")에 따른 의도적 룰 변경. 자동 검증 도구 `regulation_check.py`는 이를 FAIL로 처리하므로 자리 2 전달 시 본 글에 한해 룰을 우회 처리하거나 도구 화이트리스트가 필요함.**
+- [x] 브랜드 제품명 0회 — 본문·alt·캡션·프롬프트 전부 미등장
+- [⚠] 성분명 처리 — 본 글은 옥타코사놀을 **원료(사탕수수 왁스)의 화학·식물학적 정체와 70년 연구 이력**이라는 학술 정보 맥락에서만 다룬다. 기능성 단정 광고 0회. 자동 검사 도구 `regulation_check.py`는 성분명 0회 룰로 인해 본 글을 FAIL 처리하므로, 본 글에 한해 화이트리스트 처리하거나 룰을 '기능성 단정 광고 0회' 운영 기준으로 갱신해야 한다. (운영 결정 대기)
 - [x] 식약처 인정 기능성 문구("지구력 증진에 도움을 줄 수 있음")는 객관 인용 형태로 2회 등장, 단정 광고형 변형 0회
-- [x] 5대 금지어 0회 — 스테미너/피로/파워/젊음/힘없는
-- [x] 의약품 오인 용어 0회 — 복용/효능/임상시험/처방/알약 미사용, 대체어(섭취·기능·인체적용시험·배합·정제) 사용
-- [x] "효과" 단독 사용 0회 — "기능", "결과", "도움", "변화"로 대체
-- [x] 푸터 안내 문장 0건 — 하단/푸터/구매/제품 페이지 등 0회
+- [x] 5대 금지어 0회 — 해당 카테고리 금지어 전부 본문·alt·캡션·프롬프트 미사용
+- [x] 의약품 오인 단독 표현 0회 — 대체어(섭취·기능·인체적용시험·배합·정제)만 사용
+- [x] 의약품 오인 단독 어휘 0회 — 대체어(기능·결과·도움·변화)로 정리
+- [x] 발행 동선 안내 문장 0건 — 본문이 외부 판매 위치를 가리키지 않음
 - [x] OUTRO 직후 면책 문구 — 4개 키워드(제품정보와 관련 없는 / 학술 자료에 근거한 / 일반 건강정보 / 의학적 진단을 대체) + 인체적용시험 단서 모두 포함
-- [x] 핵심 요약 첫 문장에 질문 직접 답변 + 구체적 숫자(C28, 1949년)
+- [x] 핵심 요약 첫 문장에 분자 정체 직접 답변 + 구체적 숫자(C28, 1949년)
 - [x] 비교표 3개 (폴리코사놀 가족 / 알려진 한계 4축 / *FAQ 4개에서도 비교 형식 활용)
 - [x] FAQ 4개, 각 답변 첫 문장 결론 우선
-- [x] 한국 30~40대 러너 맥락 2개 반영 — 잠실 한강공원 LSD, 한국 가정 식탁 위 영양제 라벨
+- [x] 한국 30~40대 러너 맥락 반영 — №01-A 800kcal 부족분 연결, 러닝 중인 몸 맥락
 - [x] 1인칭 "저" 사용 안 함, 관찰자 시점 INTRO
 - [x] 출처 없는 "연구에 따르면" 표현 0회 (참고문헌 5건 풀 레퍼런스로 명시 + 본문에서 가설·일부 보고 형태로만 표기)
 - [x] AI 톤 금지선 — 추상명사(산술/영역/임계 등) 0회, 비유 0개, "~의 영역/자리" 0회, 자기 메타 문장 H2당 1개 이하
 - [x] 종결어미 변주: ~다/~한다/~이다 + 명사형 1~2개 (글당 1~2개 범위)
-- [x] 정보갭 2개 — INTRO("누가 적어둔 것이고 안의 분자는 어디에서 와서 무엇을 한다고 알려져 있는가") → H2-1, H2-1 끝("운동 중인 몸 안에서 이 분자가 어디에 놓이는 것으로 알려져 있는지는 다른 이야기다") → H2-2
-- [x] OUTRO가 INTRO 장면(일요일·영양제 라벨) 회수
+- [x] 정보갭 2개 — INTRO("무엇이고 어디서 와서 무엇을 확인했고 무엇을 확인하지 못했는가") → H2-1·H2-2, H2-1 끝("운동생리학 연구에서 어떻게 다뤄져 왔는지는 다른 이야기다") → H2-2
+- [x] OUTRO가 INTRO 장면(사탕수수 잎의 흰 가루·흰 결정) 회수
 - [x] Strategic Honesty 적용 — H2-2의 알려진 한계 4축을 본문과 인포그래픽으로 이중 명시
+- [x] 원료 학술 프레이밍 전환 — 제목/INTRO/IMG-1/IMG-6에서 영양제 라벨·제품 동선 제거, 천연 원료(사탕수수 왁스)·분자·연구 이력 중심으로 재구성
 - [ ] (자리 2 책임) `series_blocks/journal-03.yaml` 시리즈 톤 정의 — **현재 미정의 상태**. 본문 프롬프트에 톤 키워드(clean neutral daylight, magazine-B mood, warm off-white background)를 적정 수준으로 명시했으나, 시리즈 블록 확정 후 중복 키워드 정리 필요
 - [ ] (운영 책임) `자리1_활성시리즈.md` §2-3의 №03 시리즈 항목을 "예정"에서 활성으로 전환하고 photo/graphic 4~5줄 정의 추가
-- [ ] (도구 책임) `regulation_check.py`의 옥타코사놀 0회 룰을 본 글에 한해 화이트리스트 처리하거나, "Journal 본문 0회 룰"을 "기능성 단정 광고 0회 룰"로 운영 가이드 차원에서 갱신
+- [ ] (도구 책임) `regulation_check.py`의 성분명 0회 룰을 본 글에 한해 화이트리스트 처리하거나, "기능성 단정 광고 0회 룰"로 운영 가이드 차원에서 갱신

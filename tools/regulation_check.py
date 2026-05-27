@@ -3,7 +3,9 @@ regulation_check.py — 자사몰 Journal 발행 직전 규제 자동 검사.
 
 자동화 계획서 §4의 6항목을 검사한다:
   1. "지구력코어" 0회 (제품명 직접 언급 금지)
-  2. "옥타코사놀" 0회 (성분명 직접 언급 금지, Journal 본문 0회 룰)
+  2. "옥타코사놀" 등 성분명 — 원료 학술 정보 맥락 허용(WARN). 차단 기준은
+     제품명 직접 언급과 기능성 단정 광고이며, 성분명 단순 등장은 비차단이다.
+     (운영 결정 2026-05: '본문 0회 룰' → '제품명 0회·기능성 단정 광고 0회'로 갱신)
   3. 5대 금지어 0회 (스테미너/피로/파워/젊음/힘없는)
   4. 의약품 오인 용어 0회 (복용/효능/효과/임상시험/처방/알약)
   5. 푸터 안내 문장 0건 (§6-5 합법 우회 구조 — 본문에서 푸터 가리키기 금지)
@@ -78,13 +80,8 @@ PROHIBITED = {
         'category': '제품명 직접 언급',
         'rule': '§6-4 자사몰 BOFU/제품 페이지 외 전면 금지',
     },
-    # 2. 성분명 (Journal 본문 0회)
-    'ingredient': {
-        'patterns': ['옥타코사놀'],
-        'severity': 'FAIL',
-        'category': '성분명 직접 언급',
-        'rule': '§6-4 Journal 본문 0회 룰',
-    },
+    # 2. 성분명은 PROHIBITED(FAIL)에서 제외 — INGREDIENT_WORDS로 WARN 처리.
+    #    운영 결정(2026-05): 원료 학술 정보 맥락의 성분명 등장은 차단하지 않는다.
     # 3. 5대 금지어
     'five_blocked': {
         'patterns': [
@@ -118,6 +115,9 @@ EFFECT_WORD = '효과'
 EFFECT_WHITELIST_NEXT = [
     '적', '적으로', '적인',  # "효과적인"은 일상어로 허용
 ]
+
+# 성분명 — 원료 학술 정보 맥락 허용(WARN). 차단 기준은 제품명·기능성 단정 광고다.
+INGREDIENT_WORDS = ['옥타코사놀']
 
 # 5. 푸터 안내 문장 (§6-5 합법 우회 구조 핵심 방어선)
 FOOTER_HINTS = {
@@ -204,6 +204,22 @@ def check_effect_word(text, lines):
     return [{'word': '효과', 'occurrences': occurrences}] if occurrences else []
 
 
+def check_ingredient_word(text, lines):
+    """성분명(옥타코사놀) WARN 검사.
+
+    운영 결정(2026-05): 성분명 단순 등장은 차단하지 않는다. Journal이 원료의
+    화학·식물학적 정체와 연구 이력을 다루는 학술 정보 맥락에서 성분명을 쓰는 것은
+    허용하며, 차단 기준은 '제품명 직접 언급'과 '기능성 단정 광고'다. 성분명 등장은
+    사람이 광고성 단정 여부를 검토하도록 WARN으로만 보고한다.
+    """
+    findings = []
+    for word in INGREDIENT_WORDS:
+        occurrences = find_occurrences(text, word, lines)
+        if occurrences:
+            findings.append({'word': word, 'occurrences': occurrences})
+    return findings
+
+
 def check_disclaimer(text):
     """면책 문구 마커 존재 검사. 최소 2개 매칭되면 통과."""
     matched_markers = [m for m in DISCLAIMER_MARKERS if m in text]
@@ -250,6 +266,15 @@ def check_text(text):
             'category': '"효과" 단독 사용',
             'rule': '§6-3 의약품 오인 가능성 — 문맥 검토 필요',
             'findings': effect_findings,
+        })
+
+    # 성분명 WARN (운영 결정: 원료 학술 정보 맥락 허용, 광고 단정 여부만 사람이 검토)
+    ingredient_findings = check_ingredient_word(text, lines)
+    if ingredient_findings:
+        results['warn'].append({
+            'category': '성분명 직접 언급 (원료 학술 정보 맥락 — 광고 단정 여부 검토)',
+            'rule': '§6-4 제품명 0회·기능성 단정 광고 0회 (성분명 단순 등장은 비차단)',
+            'findings': ingredient_findings,
         })
 
     # 면책 문구 누락
