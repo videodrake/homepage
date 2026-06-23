@@ -136,12 +136,12 @@ homepage/
 
 ### 폰트
 ```
---font-serif: 'Fraunces', 'Noto Serif KR', Georgia, serif;
---font-sans:  'Inter', 'Noto Sans KR', -apple-system, sans-serif;
---font-mono:  'JetBrains Mono', SFMono-Regular, Menlo, monospace;
+--font-serif: 'Noto Serif', 'Noto Serif KR', Georgia, serif;
+--font-sans:  'Noto Sans', 'Noto Sans KR', -apple-system, sans-serif;
+--font-mono:  'Noto Sans Mono', SFMono-Regular, Menlo, monospace;
 ```
 
-**현재 방향**: 제품 상세 `.infoArea` 구매 구간에선 sans로 **전면 통일**했음. 다른 페이지(홈·브랜드)에선 여전히 serif(디스플레이 타이포) + mono(데이터·숫자) 혼용이 기본 레시피.
+**현재 방향**: 타이포 전체를 **Noto 슈퍼패밀리**로 리모델링함 (2026-06). Noto Sans = 본문·UI 기본 워크호스, Noto Serif = 디스플레이 헤드라인, Noto Sans Mono = 데이터·숫자·라벨. 기존 Fraunces / Inter / JetBrains Mono / Montserrat는 전부 제거. 토큰(`--font-*`)만 교체했으므로 200여 곳의 `var(--font-*)` 사용처는 그대로 새 폰트로 렌더됨. 제품 상세 `.infoArea` 구매 구간은 여전히 sans로 전면 통일.
 
 ### 스페이싱 토큰
 `--s-1: 4px` ~ `--s-32: 128px`로 8·16·24 단위 곱셈 스케일. `var(--s-4)` = 16px.
