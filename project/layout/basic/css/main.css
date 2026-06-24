@@ -4,7 +4,7 @@
    Off-black, warm cream, signal red.
    ============================================================= */
 
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600;9..144,800&family=JetBrains+Mono:wght@300;400;500&family=Inter:wght@300;400;500;600;700&family=Noto+Serif+KR:wght@300;400;600;900&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Sans+Mono:wght@300;400;500;700&family=Noto+Serif:wght@300;400;600;800&family=Noto+Serif+KR:wght@300;400;600;900&display=swap');
 
 :root {
   --site-context-theme-color: #f4efe6;
@@ -34,9 +34,9 @@
   --c-dark: #0f0d0b;
   --c-dark-2: #1a1814;
 
-  --font-serif: "Fraunces", "Noto Serif KR", Georgia, "Times New Roman", serif;
-  --font-sans: "Inter", "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-mono: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+  --font-serif: "Noto Serif", "Noto Serif KR", Georgia, "Times New Roman", serif;
+  --font-sans: "Noto Sans", "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "Noto Sans Mono", "SFMono-Regular", Menlo, Consolas, monospace;
 
   --s-1: 4px; --s-2: 8px; --s-3: 12px; --s-4: 16px; --s-5: 20px; --s-6: 24px;
   --s-8: 32px; --s-10: 40px; --s-12: 48px; --s-16: 64px; --s-20: 80px;

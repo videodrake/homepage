@@ -3,7 +3,7 @@
    All selectors scoped under .onroad-page to avoid collisions
    with ec-base-*.css and other Cafe24 module styles.
    ============================================================= */
-@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600;9..144,800&family=JetBrains+Mono:wght@300;400;500&family=Inter:wght@300;400;500;600;700&family=Noto+Serif+KR:wght@300;400;600;900&family=Noto+Sans+KR:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Sans+Mono:wght@300;400;500;700&family=Noto+Serif:wght@300;400;600;800&family=Noto+Serif+KR:wght@300;400;600;900&display=swap");
 :root {
     --site-context-theme-color: #f4efe6;
     --site-context-highlight-color: #c8321e;
@@ -26,9 +26,9 @@
     --c-surface: var(--c-cream);
     --c-dark: #0f0d0b;
     --c-dark-2: #1a1814;
-    --font-serif: "Fraunces", "Noto Serif KR", Georgia, "Times New Roman", serif;
-    --font-sans: "Inter", "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    --font-mono: "JetBrains Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+    --font-serif: "Noto Serif", "Noto Serif KR", Georgia, "Times New Roman", serif;
+    --font-sans: "Noto Sans", "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --font-mono: "Noto Sans Mono", "SFMono-Regular", Menlo, Consolas, monospace;
     --s-1: 4px;
     --s-2: 8px;
     --s-3: 12px;
@@ -7981,7 +7981,7 @@ body.onroad-page .onroad-agreement-step.onroad-agreement-step--compact {
     color: var(--c-signal);
     margin: 0 0 var(--s-3)
     }
-/* Product name — compact sans, not the Fraunces display face */
+/* Product name — compact sans, not the Noto Serif display face */
 .onroad-page .onroad-product-detail-page .headingArea h1 {
     font-family: var(--font-sans);
     font-weight: 500;
@@ -15605,7 +15605,7 @@ body.onroad-page .onroad-join-page .email-input-group > select.email-domain-sele
    (lines ~12861) 모두 override.
 
    디자인 톤:
-   - "회원가입이 완료 되었습니다" → serif (Fraunces) 큰 헤드라인
+   - "회원가입이 완료 되었습니다" → serif (Noto Serif) 큰 헤드라인
    - 회원 정보 (아이디/이름/이메일) → mono key + serif/sans value, 격자형
    - 회원 등급/혜택 → 별도 페이퍼 박스, signal 강조
    - 쿠폰 → 카드형 grid (inline style override)
