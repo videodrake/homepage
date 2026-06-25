@@ -34,11 +34,20 @@ for (const t of targets) {
     try {
       await page.goto(fileUrl, { waitUntil: 'load', timeout: 30000 });
       await page.evaluate(() => document.fonts && document.fonts.ready);
-      // settle entrance animations / let AOS-like reveals finish
-      await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
-      await page.waitForTimeout(900);
-      await page.evaluate(() => window.scrollTo(0, 0));
-      await page.waitForTimeout(400);
+      // step-scroll through the page so IntersectionObserver reveals fire for
+      // every section (a single jump skips mid-page intersection frames).
+      await page.evaluate(async () => {
+        const vh = window.innerHeight;
+        const max = document.body.scrollHeight;
+        for (let y = 0; y <= max; y += Math.round(vh * 0.6)) {
+          window.scrollTo(0, y);
+          await new Promise(r => setTimeout(r, 120));
+        }
+        window.scrollTo(0, max);
+        await new Promise(r => setTimeout(r, 300));
+        window.scrollTo(0, 0);
+      });
+      await page.waitForTimeout(500);
       const out = path.join(HERE, 'shots', `${t.id}-${vp.name}.png`);
       await page.screenshot({ path: out, fullPage: true });
       // Above-the-fold crop too (hero only)

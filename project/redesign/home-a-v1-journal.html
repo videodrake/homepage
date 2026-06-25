@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Onroad · Endurance Core — 오래 달리는 사람의 하루 한 정</title>
+<title>Onroad · Endurance Core — The Field Journal, Vol.01 / 2026</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Sans+Mono:wght@300;400;500;700&family=Noto+Serif:wght@300;400;600;800&family=Noto+Serif+KR:wght@300;400;600;900&display=swap');
 
@@ -534,95 +534,20 @@
   .onroad-page.ad-archive .masthead .mh-vol{display:none;}
   .onroad-page.ad-archive .ticks{height:48px;}
 }
-
-/* ===== CONVERSION REMODEL (AG1 / LMNT inspired) ===== */
-.onroad-page.ad-archive .anno{background:var(--c-ink);color:var(--c-cream);font-family:var(--font-mono);font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;text-align:center;padding:9px var(--mx);line-height:1.5;}
-.onroad-page.ad-archive .anno b{color:var(--c-signal);font-weight:500;}
-.onroad-page.ad-archive .site-head{position:sticky;}
-
-/* hero (sell) */
-.onroad-page.ad-archive .hero-sell{display:grid;grid-template-columns:1.06fr .94fr;gap:clamp(28px,5vw,76px);align-items:center;padding-top:clamp(34px,6vh,70px);padding-bottom:clamp(40px,7vh,88px);}
-.onroad-page.ad-archive .hero-copy h1{font-family:var(--font-serif);font-weight:300;font-size:clamp(2.4rem,5vw,4.1rem);line-height:1.04;letter-spacing:-.035em;color:var(--c-ink);}
-.onroad-page.ad-archive .hero-copy h1 .red{font-style:italic;color:var(--c-signal);}
-.onroad-page.ad-archive .hero-copy .lede{font-family:var(--font-serif);font-weight:300;font-size:clamp(1.04rem,1.5vw,1.24rem);line-height:1.6;color:var(--c-char);margin-top:20px;max-width:40ch;}
-.onroad-page.ad-archive .rating{display:flex;align-items:center;gap:12px;margin-top:22px;}
-.onroad-page.ad-archive .rating .stars{color:var(--c-signal);letter-spacing:.14em;font-size:.95rem;}
-.onroad-page.ad-archive .rating .rtxt{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.1em;color:var(--c-meta);text-transform:uppercase;}
-
-.onroad-page.ad-archive .buy-box{margin-top:28px;border:1px solid var(--c-ink);background:var(--c-paper);padding:clamp(20px,2.4vw,28px);max-width:460px;}
-.onroad-page.ad-archive .buy-opt{display:grid;grid-template-columns:1fr 1fr;margin-bottom:18px;}
-.onroad-page.ad-archive .buy-opt .opt{position:relative;}
-.onroad-page.ad-archive .buy-opt input{position:absolute;opacity:0;pointer-events:none;}
-.onroad-page.ad-archive .buy-opt label{display:block;cursor:pointer;padding:14px 16px;border:1px solid var(--c-line);transition:background .25s,border-color .25s,color .25s;}
-.onroad-page.ad-archive .buy-opt .opt:first-child label{border-right:0;}
-.onroad-page.ad-archive .buy-opt label .ot{font-family:var(--font-mono);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;color:var(--c-meta);display:block;margin-bottom:7px;}
-.onroad-page.ad-archive .buy-opt label .op{font-family:var(--font-serif);font-weight:300;font-size:1.18rem;color:var(--c-ink);font-variant-numeric:tabular-nums;}
-.onroad-page.ad-archive .buy-opt input:checked + label{background:var(--c-ink);border-color:var(--c-ink);}
-.onroad-page.ad-archive .buy-opt input:checked + label .ot{color:var(--c-signal);}
-.onroad-page.ad-archive .buy-opt input:checked + label .op{color:var(--c-cream);}
-.onroad-page.ad-archive .buy-opt input:focus-visible + label{outline:2px solid var(--c-signal);outline-offset:2px;}
-.onroad-page.ad-archive .btn-buy.full{width:100%;justify-content:center;border:0;cursor:pointer;font-size:.72rem;padding:17px 30px;}
-.onroad-page.ad-archive .buy-trust{display:flex;gap:16px;flex-wrap:wrap;margin-top:16px;}
-.onroad-page.ad-archive .buy-trust span{font-family:var(--font-mono);font-size:.56rem;letter-spacing:.08em;text-transform:uppercase;color:var(--c-meta);display:flex;align-items:center;gap:6px;}
-.onroad-page.ad-archive .buy-trust span::before{content:"\2713";color:var(--c-signal);font-size:.7rem;}
-
-.onroad-page.ad-archive .hero-prod{position:relative;display:flex;justify-content:center;align-items:center;padding:clamp(24px,3vw,46px);background:var(--c-paper);border:1px solid var(--c-line);min-height:340px;}
-.onroad-page.ad-archive .hero-prod svg{width:auto;height:clamp(300px,42vh,440px);}
-.onroad-page.ad-archive .hero-prod .badge{position:absolute;top:16px;left:16px;font-family:var(--font-mono);font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--c-paper);background:var(--c-signal);padding:6px 11px;}
-
-/* trust bar */
-.onroad-page.ad-archive .trust-bar{border-top:1px solid var(--c-line);border-bottom:1px solid var(--c-line);background:var(--c-cream-2);}
-.onroad-page.ad-archive .trust-bar .row{display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(14px,3vw,42px);padding:18px var(--mx);}
-.onroad-page.ad-archive .trust-bar .b{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.13em;text-transform:uppercase;color:var(--c-char);display:flex;align-items:center;gap:9px;}
-.onroad-page.ad-archive .trust-bar .b::before{content:"";width:5px;height:5px;background:var(--c-signal);display:inline-block;}
-
-/* benefits */
-.onroad-page.ad-archive .benefits{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--c-line);}
-.onroad-page.ad-archive .bene{padding:clamp(26px,3vw,40px) clamp(20px,2.4vw,34px);border-right:1px solid var(--c-line);}
-.onroad-page.ad-archive .bene:last-child{border-right:0;}
-.onroad-page.ad-archive .bene .ic{color:var(--c-signal);height:30px;margin-bottom:22px;display:flex;align-items:center;}
-.onroad-page.ad-archive .bene h3{font-family:var(--font-serif);font-weight:400;font-size:1.22rem;letter-spacing:-.01em;color:var(--c-ink);margin-bottom:10px;}
-.onroad-page.ad-archive .bene p{font-family:var(--font-mono);font-size:.6rem;letter-spacing:.07em;text-transform:uppercase;color:var(--c-meta);line-height:1.7;}
-
-/* reviews stars */
-.onroad-page.ad-archive .note .rstars{color:var(--c-signal);letter-spacing:.12em;font-size:.82rem;margin-bottom:16px;display:block;}
-
-/* guarantee */
-.onroad-page.ad-archive .guarantee{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--c-ink);}
-.onroad-page.ad-archive .gua{padding:clamp(26px,3.2vw,42px) 20px;text-align:center;border-right:1px solid var(--c-line);}
-.onroad-page.ad-archive .gua:last-child{border-right:0;}
-.onroad-page.ad-archive .gua .k{font-family:var(--font-serif);font-weight:400;font-size:1.32rem;letter-spacing:-.01em;color:var(--c-ink);margin-bottom:8px;}
-.onroad-page.ad-archive .gua .k .red{font-style:italic;color:var(--c-signal);}
-.onroad-page.ad-archive .gua .v{font-family:var(--font-mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--c-meta);}
-
-@media (max-width:900px){
-  .onroad-page.ad-archive .hero-sell{grid-template-columns:1fr;gap:34px;}
-  .onroad-page.ad-archive .hero-prod{order:-1;min-height:0;}
-  .onroad-page.ad-archive .hero-prod svg{height:clamp(260px,40vh,340px);}
-  .onroad-page.ad-archive .benefits{grid-template-columns:1fr 1fr;}
-  .onroad-page.ad-archive .bene:nth-child(2n){border-right:0;}
-  .onroad-page.ad-archive .bene:nth-child(-n+2){border-bottom:1px solid var(--c-line);}
-  .onroad-page.ad-archive .guarantee{grid-template-columns:1fr;}
-  .onroad-page.ad-archive .gua{border-right:0;border-bottom:1px solid var(--c-line);}
-  .onroad-page.ad-archive .gua:last-child{border-bottom:0;}
-}
-
 </style>
 </head>
 <body class="onroad-page onroad-home ad-archive">
 
 <!-- ============ HEADER ============ -->
-<!-- ============ ANNOUNCEMENT ============ -->
-<div class="anno">첫 정기배송 <b>5% 할인</b> + <b>무료배송</b> · 60일 환불 보장 · 언제든 해지</div>
-
 <header class="site-head">
   <div class="inner">
     <a href="#core" class="brand">Onroad <span class="est">EST · 2026</span></a>
     <nav class="nav" aria-label="주요 메뉴">
-      <a href="#benefits">Why Onroad</a>
-      <a href="#ingredients">성분</a>
-      <a href="#reviews">후기</a>
-      <a href="#plan">구매</a>
+      <a href="#core">Endurance Core</a>
+      <a href="#spec">Product</a>
+      <a href="#brand">Brand</a>
+      <a href="#journal">Journal</a>
+      <a href="#notes">Runners</a>
     </nav>
     <div class="head-icons">
       <span class="nav-mobile" id="mOpen"><span class="mono">Menu</span></span>
@@ -639,28 +564,242 @@
   </div>
 </header>
 
-
-<!-- ============ HERO ============ -->
-<section class="hero-sell" id="core">
-  <div class="hero-copy">
-    <span class="mono fx" style="display:block;margin-bottom:20px;">옥타코사놀 40MG · 무카페인 · 60정</span>
-    <h1 class="fx d1">오래 달리는 사람의<br><span class="red ital">하루 한 정.</span></h1>
-    <p class="lede fx d2">옥타코사놀 40mg과 비타민 B군. 매일 한 정으로 60일 ─ 끝까지 가는 다리를 위해.</p>
-    <div class="rating fx d2"><span class="stars">★★★★★</span><span class="rtxt">4.9 / 5 · 러너 후기 1,240+</span></div>
-
-    <form class="buy-box fx d3" onsubmit="return false">
-      <div class="buy-opt">
-        <span class="opt"><input type="radio" name="plan" id="p-one"><label for="p-one"><span class="ot">단건 구매</span><span class="op">₩48,000</span></label></span>
-        <span class="opt"><input type="radio" name="plan" id="p-sea" checked><label for="p-sea"><span class="ot">정기배송 · 5% 할인</span><span class="op">₩45,600</span></label></span>
-      </div>
-      <button class="btn-buy full" type="submit">장바구니 담기 <span class="arr">→</span></button>
-      <div class="buy-trust"><span>무료배송</span><span>60일 환불 보장</span><span>언제든 해지</span></div>
-    </form>
+<!-- ============ HERO / COVER ============ -->
+<section class="hero" id="core">
+  <div class="masthead fx">
+    <span class="mh-title">Onroad · Endurance Core</span>
+    <span class="mh-title mh-vol mono tab">The Field Journal — Vol.01 / 2026</span>
+    <span class="mh-title">지구력코어 연감</span>
   </div>
 
-  <div class="hero-prod fx d2">
-    <span class="badge">60정 / 60일</span>
-    <svg viewBox="0 0 220 360" role="img" aria-label="제품 보틀 도면 일러스트레이션">
+  <div class="hero-body">
+    <div class="hero-text">
+      <span class="mono fx d1" style="display:block;margin-bottom:22px;">№ 01 — 장거리 러너를 위한 기록</span>
+      <h1 class="hero-head fx d2">
+        먼 길을<br>
+        <span class="red ital">견디는</span> <span class="em">사람을</span><br>
+        위하여.
+      </h1>
+      <p class="hero-lede fx d3">
+        매일 한 정, 옥타코사놀 40mg. 화려하지 않게, 다만 꾸준히.
+        Onroad는 멈추지 않는 호흡과 발걸음에 관한 작은 연감입니다.
+      </p>
+      <div class="hero-meta fx d4">
+        <div class="stat"><span class="n"><span class="cnt" data-count="40">40</span><span style="font-size:.9rem;">mg</span></span><span class="l mono">옥타코사놀 / 정</span></div>
+        <div class="stat"><span class="n"><span class="cnt" data-count="1">1</span></span><span class="l mono">하루 한 정</span></div>
+        <div class="stat"><span class="n"><span class="cnt" data-count="60">60</span><span style="font-size:.9rem;">일</span></span><span class="l mono">60정 / 한 시즌</span></div>
+      </div>
+    </div>
+
+    <!-- HERO ART: contour route map -->
+    <div class="hero-art fx d3">
+      <span class="big-folio" aria-hidden="true">01</span>
+      <div class="plate-frame">
+        <svg viewBox="0 0 400 460" role="img" aria-label="러닝 루트 등고선 일러스트레이션">
+          <g class="pl-thin" stroke="var(--c-line)" fill="none" stroke-width="0.9">
+            <path d="M70 120 C140 70 280 80 330 150 C370 210 320 300 240 330 C150 365 70 320 60 240 C54 190 40 160 70 120Z"/>
+            <path d="M95 145 C155 105 270 112 308 168 C338 218 298 288 232 312 C158 338 96 302 88 238 C83 197 70 178 95 145Z"/>
+            <path d="M122 172 C172 142 256 148 285 188 C308 226 278 272 226 290 C168 308 124 282 118 234 C114 206 104 195 122 172Z"/>
+            <path d="M150 200 C188 180 238 184 260 210 C276 234 256 262 220 274 C182 286 152 268 148 236 C146 220 138 215 150 200Z"/>
+          </g>
+          <path class="draw" style="--len:780;stroke:var(--c-char);stroke-width:1.4;"
+            d="M48 400 C90 360 100 300 160 290 C220 280 240 230 210 200 C180 170 230 140 280 158 C330 176 340 120 300 100 C262 82 320 56 352 70"/>
+          <circle cx="48" cy="400" r="4.5" fill="var(--c-signal)"/>
+          <circle cx="210" cy="200" r="3" fill="none" stroke="var(--c-char)" stroke-width="1"/>
+          <circle cx="300" cy="100" r="3" fill="none" stroke="var(--c-char)" stroke-width="1"/>
+          <circle cx="352" cy="70" r="4.5" fill="none" stroke="var(--c-char)" stroke-width="1.2"/>
+          <g stroke="var(--c-sand)" stroke-width="0.6">
+            <line x1="40" y1="430" x2="120" y2="430"/>
+            <line x1="40" y1="426" x2="40" y2="434"/>
+            <line x1="80" y1="427" x2="80" y2="433"/>
+            <line x1="120" y1="426" x2="120" y2="434"/>
+          </g>
+          <text x="40" y="448" font-family="var(--font-mono)" font-size="9" fill="var(--c-meta)" letter-spacing="1">5KM</text>
+          <text x="300" y="440" font-family="var(--font-mono)" font-size="9" fill="var(--c-meta)" letter-spacing="1">N ↑</text>
+        </svg>
+      </div>
+      <span class="plate-cap mono">PL.01 — ROUTE STUDY / 42.195</span>
+    </div>
+  </div>
+
+  <div class="hero-foot fx d5">
+    <span class="mono">건강기능식품 · 지구력 증진에 도움을 줄 수 있음</span>
+    <span class="scrollcue"><span class="mono">계속 읽기</span><span class="ln"></span></span>
+  </div>
+</section>
+
+<!-- ============ № 02 BRAND STATEMENT / EDITORIAL ============ -->
+<section class="ed-section" id="brand">
+  <div class="sec-head">
+    <span class="t">기록되지 않은 거리는 없다</span>
+    <span class="folio mono tab">№ 02 — MANIFESTO</span>
+  </div>
+  <div class="editorial">
+    <aside class="marginalia fx">
+      <b>Field Note</b>
+      옥타코사놀은 사탕수수 왁스에서<br>얻는 천연 성분으로,<br>지구력 증진에 도움을 줄 수 있는<br>건강기능식품 기능성 원료입니다.<br><br>
+      비타민 B군이 에너지 대사를<br>함께 보조합니다.<br><br>
+      <span class="red">—</span> 하루 한 정, 같은 시간에.
+    </aside>
+    <div class="feature-para fx d1">
+      <span class="dropcap">러</span>닝은 결국 반복의 예술입니다. 같은 길, 같은 호흡,
+      같은 새벽. Onroad는 그 <span class="red">한결같음</span>을 믿습니다.
+      옥타코사놀 40mg을 매일 한 정, 60일을 한 시즌처럼 채워 가는 동안
+      당신의 기록은 화면이 아니라 몸 안에 천천히 새겨집니다.
+    </div>
+    <div class="side-note fx d2">
+      우리는 더 빠른 약속을 팔지 않습니다. 다만 더 오래 가는 방법을 기록할 뿐입니다.
+      이 연감은 그 기록의 첫 권입니다.
+      <span class="sig">— Onroad Editorial / 2026</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CREDENTIALS MARQUEE ============ -->
+<div class="creds" aria-label="인증 및 보증">
+  <div class="track">
+    <div class="grp">
+      <span class="it">건강기능식품 인정 기능성</span>
+      <span class="it">옥타코사놀 40MG / 정</span>
+      <span class="it">GMP 적합 시설 제조</span>
+      <span class="it">무카페인 처방</span>
+      <span class="it">국내 생산 · EST 2026</span>
+      <span class="it">하루 한 정 · 60정 / 60일</span>
+    </div>
+    <div class="grp" aria-hidden="true">
+      <span class="it">건강기능식품 인정 기능성</span>
+      <span class="it">옥타코사놀 40MG / 정</span>
+      <span class="it">GMP 적합 시설 제조</span>
+      <span class="it">무카페인 처방</span>
+      <span class="it">국내 생산 · EST 2026</span>
+      <span class="it">하루 한 정 · 60정 / 60일</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============ № 03 THE WALL (empathy / 30km) ============ -->
+<section class="wall ed-section" id="why">
+  <div class="sec-head">
+    <span class="t">모두가 아는, 그 지점</span>
+    <span class="folio mono tab">№ 03 — THE WALL</span>
+  </div>
+  <div class="wall-grid">
+    <figure class="wall-fig fx">
+      <div class="big-n"><span class="cnt" data-count="30">30</span><span class="unit">km</span></div>
+      <p class="cap mono" style="text-transform:none;letter-spacing:.04em;color:var(--c-char);line-height:1.7;">
+        장거리 러너가 가장 자주 무너지는 거리. 다리가 아니라 연료가 먼저 바닥나는 구간.
+      </p>
+      <div class="barwrap">
+        <div class="bar" aria-hidden="true"><i></i><u></u></div>
+        <div class="barlabels">
+          <span class="mono">START</span>
+          <span class="mono red" style="color:var(--c-signal);">THE WALL · 30K</span>
+          <span class="mono">42.195</span>
+        </div>
+      </div>
+    </figure>
+    <div class="wall-copy fx d1">
+      <p class="lead">
+        끝까지 가는 사람과 멈추는 사람을 가르는 건
+        속도가 아니라 <span class="red">버티는 힘</span>입니다.
+      </p>
+      <p>
+        의지만으로는 채울 수 없는 구간이 있습니다. 그래서 우리는 매일의 준비를 이야기합니다 —
+        하루 한 정의 옥타코사놀과 에너지 대사를 돕는 비타민 B군으로, 시즌을 견딜 몸의 바탕을
+        천천히 쌓아 두는 일.
+      </p>
+      <p class="wall-copy-fine mono" style="text-transform:none;letter-spacing:.04em;color:var(--c-meta);max-width:48ch;">
+        * 옥타코사놀은 지구력 증진에 도움을 줄 수 있는 건강기능식품 기능성 원료이며, 운동 능력을 보장하지 않습니다.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ № 04 INGREDIENT SCIENCE (the long chain) ============ -->
+<section class="ed-section" id="science">
+  <div class="sec-head">
+    <span class="t">긴 사슬, 긴 길</span>
+    <span class="folio mono tab">№ 04 — THE MOLECULE</span>
+  </div>
+  <div class="mol-grid">
+    <div class="mol-text fx">
+      <span class="mono kicker">OCTACOSANOL · C₂₈H₅₈O</span>
+      <h2>스물여덟 개의 탄소,<br><span class="red ital">하나의</span> 성분.</h2>
+      <p>
+        옥타코사놀은 탄소 28개가 한 줄로 이어진 장사슬 알코올입니다.
+        사탕수수와 밀 배아의 왁스에서 얻는 천연 유래 성분으로,
+        지구력 증진에 도움을 줄 수 있는 기능성 원료로 인정받았습니다.
+      </p>
+      <p>
+        Onroad는 이 성분을 하루 권장 수준인 <span class="red">40mg</span>으로 단정하게 담았습니다 —
+        더하지도, 덜지도 않게.
+      </p>
+      <div class="defrow">
+        <div class="r"><span class="k">Origin</span><span class="v">사탕수수 · 밀 배아 왁스 유래 천연 성분</span></div>
+        <div class="r"><span class="k">Function</span><span class="v">지구력 증진에 도움을 줄 수 있음 (인정 기능성)</span></div>
+        <div class="r"><span class="k">Daily</span><span class="v">40mg / 정 · 1일 1정 · 60정 / 60일</span></div>
+        <div class="r"><span class="k">Support</span><span class="v">비타민 B군 — 에너지 대사 보조</span></div>
+      </div>
+    </div>
+
+    <div class="mol-plate fx d1">
+      <span class="corner-tag mono">FIG. B — C28 CHAIN</span>
+      <svg viewBox="0 0 460 300" role="img" aria-label="옥타코사놀 탄소 28 사슬 다이어그램">
+        <!-- baseline grid -->
+        <g stroke="var(--c-line)" stroke-width="0.6" opacity="0.7">
+          <line x1="30" y1="60" x2="430" y2="60"/>
+          <line x1="30" y1="240" x2="430" y2="240"/>
+        </g>
+        <!-- 28-carbon zigzag chain -->
+        <polyline class="chain" points="34,170 48,140 62,170 76,140 90,170 104,140 118,170 132,140 146,170 160,140 174,170 188,140 202,170 216,140 230,170 244,140 258,170 272,140 286,170 300,140 314,170 328,140 342,170 356,140 370,170 384,140 398,170 412,140"/>
+        <!-- nodes -->
+        <g>
+          <circle class="node" cx="34" cy="170" r="3"/><circle class="node" cx="62" cy="170" r="3"/>
+          <circle class="node" cx="90" cy="170" r="3"/><circle class="node" cx="118" cy="170" r="3"/>
+          <circle class="node" cx="146" cy="170" r="3"/><circle class="node" cx="174" cy="170" r="3"/>
+          <circle class="node" cx="202" cy="170" r="3"/><circle class="node" cx="230" cy="170" r="3"/>
+          <circle class="node" cx="258" cy="170" r="3"/><circle class="node" cx="286" cy="170" r="3"/>
+          <circle class="node" cx="314" cy="170" r="3"/><circle class="node" cx="342" cy="170" r="3"/>
+          <circle class="node" cx="370" cy="170" r="3"/><circle class="node" cx="398" cy="170" r="3"/>
+          <circle class="node" cx="48" cy="140" r="3"/><circle class="node" cx="76" cy="140" r="3"/>
+          <circle class="node" cx="104" cy="140" r="3"/><circle class="node" cx="132" cy="140" r="3"/>
+          <circle class="node" cx="160" cy="140" r="3"/><circle class="node" cx="188" cy="140" r="3"/>
+          <circle class="node" cx="216" cy="140" r="3"/><circle class="node" cx="244" cy="140" r="3"/>
+          <circle class="node" cx="272" cy="140" r="3"/><circle class="node" cx="300" cy="140" r="3"/>
+          <circle class="node" cx="328" cy="140" r="3"/><circle class="node" cx="356" cy="140" r="3"/>
+          <circle class="node" cx="384" cy="140" r="3"/>
+        </g>
+        <!-- OH terminus highlighted -->
+        <circle cx="412" cy="140" r="5" fill="var(--c-signal)"/>
+        <text x="418" y="132" font-family="var(--font-mono)" font-size="11" fill="var(--c-signal)" letter-spacing="1">OH</text>
+        <!-- bracket / count -->
+        <line x1="34" y1="200" x2="412" y2="200" stroke="var(--c-sand)" stroke-width="0.7"/>
+        <line x1="34" y1="196" x2="34" y2="204" stroke="var(--c-sand)" stroke-width="0.7"/>
+        <line x1="412" y1="196" x2="412" y2="204" stroke="var(--c-sand)" stroke-width="0.7"/>
+        <text x="223" y="220" text-anchor="middle" font-family="var(--font-mono)" font-size="10" fill="var(--c-meta)" letter-spacing="2">28 CARBONS</text>
+        <text x="34" y="276" font-family="var(--font-mono)" font-size="10" fill="var(--c-meta)" letter-spacing="2">OCTACOSANOL</text>
+        <text x="412" y="276" text-anchor="end" font-family="var(--font-mono)" font-size="10" fill="var(--c-meta)" letter-spacing="2">40MG / 정</text>
+      </svg>
+      <div class="cap-row">
+        <span class="mono">PLATE 04 · 분자 모식도</span>
+        <span class="mono tab">NOT TO SCALE</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ № 05 SPEC SHEET ============ -->
+<section class="spec ed-section" id="spec">
+  <div class="sec-head">
+    <span class="t">Endurance Core — 명세</span>
+    <span class="folio mono tab">№ 05 — SPEC SHEET</span>
+  </div>
+  <div class="spec-grid">
+    <!-- PLATE ILLUSTRATION -->
+    <div class="plate-col fx">
+      <div class="plate-box">
+        <span class="corner-tag mono">FIG. A — 1 / 1</span>
+        <svg viewBox="0 0 220 360" role="img" aria-label="제품 보틀 도면 일러스트레이션">
           <rect class="pl-fill" x="78" y="22" width="64" height="34"/>
           <rect class="pl-stroke" x="78" y="22" width="64" height="34"/>
           <line class="pl-thin" x1="84" y1="22" x2="84" y2="56"/>
@@ -686,195 +825,262 @@
           <line class="pl-thin" x1="170" y1="332" x2="178" y2="332"/>
           <text x="186" y="212" font-family="var(--font-mono)" font-size="8" fill="var(--c-meta)" transform="rotate(90,186,212)" letter-spacing="1">H·112MM</text>
         </svg>
-  </div>
-</section>
-
-<!-- ============ TRUST BAR ============ -->
-<div class="trust-bar">
-  <div class="row">
-    <span class="b">건강기능식품 인정 기능성</span>
-    <span class="b">GMP 적합 시설 제조</span>
-    <span class="b">무카페인</span>
-    <span class="b">국내 생산</span>
-    <span class="b">3만원 이상 무료배송</span>
-  </div>
-</div>
-
-<!-- ============ BENEFITS ============ -->
-<section class="ed-section" id="benefits">
-  <div class="sec-head">
-    <span class="t">왜 Onroad인가</span>
-    <span class="mono">군더더기 없는 단정한 처방</span>
-  </div>
-  <div class="benefits reveal">
-    <div class="bene">
-      <div class="ic"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="19" cy="6.5" r="2.3"/><path d="M5 25l4-6 4 2 2-5 3 4 4-2"/><path d="M9 19l2-5 4 1"/></svg></div>
-      <h3>지구력</h3>
-      <p>옥타코사놀 40mg / 정<br>인정 기능성</p>
-    </div>
-    <div class="bene">
-      <div class="ic"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M16 3L7 17h6l-2 10 10-15h-6z" stroke-linejoin="round"/></svg></div>
-      <h3>에너지 대사</h3>
-      <p>비타민 B군<br>B1 · B2 · B6</p>
-    </div>
-    <div class="bene">
-      <div class="ic"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="5" y="11" width="20" height="8" rx="4" transform="rotate(-45 15 15)"/><path d="M11 11l8 8"/></svg></div>
-      <h3>하루 한 정</h3>
-      <p>복잡한 루틴 없이<br>매일 한 알</p>
-    </div>
-    <div class="bene">
-      <div class="ic"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M15 26C9 22 6 17 6 11l9-4 9 4c0 6-3 11-9 15z" stroke-linejoin="round"/><path d="M11 13l3 3 5-6"/></svg></div>
-      <h3>깨끗한 처방</h3>
-      <p>무카페인 · 무색소<br>국내 제조</p>
-    </div>
-  </div>
-</section>
-
-<!-- ============ INGREDIENTS ============ -->
-<section class="ed-section" id="ingredients">
-  <div class="sec-head">
-    <span class="t">무엇이 들어 있나</span>
-    <span class="mono">전성분 · 1일 1정 기준</span>
-  </div>
-  <div class="spec-info reveal" style="max-width:none;">
-    <div class="spec-list">
-      <div class="spec-row">
-        <span class="idx">01</span>
-        <span class="name">옥타코사놀 <small>OCTACOSANOL · 주기능성</small></span>
-        <span class="val"><span class="red">40</span>mg / 정</span>
       </div>
-      <div class="spec-row">
-        <span class="idx">02</span>
-        <span class="name">비타민 B군 <small>B-COMPLEX · 에너지 대사</small></span>
-        <span class="val">B1 · B2 · B6</span>
-      </div>
-      <div class="spec-row">
-        <span class="idx">03</span>
-        <span class="name">섭취 방법 <small>DIRECTIONS · DAILY</small></span>
-        <span class="val">1정 / 일</span>
-      </div>
-      <div class="spec-row">
-        <span class="idx">04</span>
-        <span class="name">구성 <small>CONTENTS · ONE SEASON</small></span>
-        <span class="val">60정 / 60일</span>
+      <div class="plate-cap-row">
+        <span class="mono">PLATE 05 · 보틀 도면</span>
+        <span class="mono tab">SCALE 1:1</span>
       </div>
     </div>
-    <div class="footnotes">
-      <span class="fn"><sup>†</sup> 지구력 증진에 도움을 줄 수 있음 — 건강기능식품 인정 기능성.</span>
-      <span class="fn"><sup>‡</sup> 본 제품은 질병의 예방 및 치료를 위한 의약품이 아닙니다.</span>
+
+    <!-- SPEC INFO -->
+    <div class="spec-info fx d1">
+      <span class="mono kicker">건강기능식품 / 1일 1정</span>
+      <h2>하루 한 정의 <span class="red ital">지구력</span></h2>
+      <p class="sub">
+        장거리 러너를 위해 설계된 단정한 처방. 군더더기 없이,
+        매일 같은 한 정으로 60일을 채웁니다.
+      </p>
+
+      <div class="spec-list">
+        <div class="spec-row">
+          <span class="idx">01</span>
+          <span class="name">옥타코사놀 <small>OCTACOSANOL · 주기능성</small></span>
+          <span class="val"><span class="red">40</span>mg / 정</span>
+        </div>
+        <div class="spec-row">
+          <span class="idx">02</span>
+          <span class="name">비타민 B군 <small>VITAMIN B-COMPLEX · 에너지 대사</small></span>
+          <span class="val">B1·B2·B6</span>
+        </div>
+        <div class="spec-row">
+          <span class="idx">03</span>
+          <span class="name">섭취 방법 <small>DIRECTIONS · DAILY</small></span>
+          <span class="val">1정 / 일</span>
+        </div>
+        <div class="spec-row">
+          <span class="idx">04</span>
+          <span class="name">구성 <small>CONTENTS · ONE SEASON</small></span>
+          <span class="val">60정 / 60일</span>
+        </div>
+      </div>
+
+      <div class="footnotes">
+        <span class="fn"><sup>†</sup> 지구력 증진에 도움을 줄 수 있음 — 건강기능식품 인정 기능성.</span>
+        <span class="fn"><sup>‡</sup> 본 제품은 질병의 예방 및 치료를 위한 의약품이 아닙니다.</span>
+      </div>
+
+      <div class="cta-row">
+        <a href="#" class="btn-buy">지금 구매하기 <span class="arr">→</span></a>
+        <a href="#" class="btn-ghost">정기배송 <span class="arr">→</span></a>
+        <span class="price">한 시즌 <b>₩48,000</b> / 60정</span>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ============ HOW IT WORKS ============ -->
-<section class="ed-section" id="how">
-  <div class="sec-head">
-    <span class="t">어떻게 먹나</span>
-    <span class="mono">60일, 한 시즌</span>
-  </div>
-  <div class="proto-cells reveal">
-    <div class="proto-cell"><span class="d">STEP 01</span><h4>하루 한 정</h4><p>아침 또는 운동 전, 물과 함께 한 정.</p></div>
-    <div class="proto-cell"><span class="d">STEP 02</span><h4>60일 채우기</h4><p>한 통 60정으로 한 시즌을 꾸준히.</p></div>
-    <div class="proto-cell"><span class="d">STEP 03</span><h4>자동 리필</h4><p>다 비울 때쯤 다음 통이 도착. 언제든 해지.</p></div>
-  </div>
-</section>
-
-<!-- ============ REVIEWS ============ -->
-<section class="ed-section" id="reviews">
-  <div class="sec-head">
-    <span class="t">러너의 후기</span>
-    <span class="mono tab">★ 4.9 / 5 · 1,240+</span>
-  </div>
-  <div class="notes-grid reveal">
-    <div class="note">
-      <span class="rstars">★★★★★</span>
-      <blockquote>30km 이후가 확실히 덜 무겁다. 매일 한 알이라 빼먹을 일이 없다.</blockquote>
-      <div class="by"><span class="who">김도현</span><span class="stat">풀코스 3:42</span></div>
-    </div>
-    <div class="note">
-      <span class="rstars">★★★★★</span>
-      <blockquote>무카페인이라 저녁 훈련 후에 먹어도 잠을 방해하지 않는다. 깔끔하다.</blockquote>
-      <div class="by"><span class="who">이서연</span><span class="stat">하프 1:38</span></div>
-    </div>
-    <div class="note">
-      <span class="rstars">★★★★☆</span>
-      <blockquote>성분이 단순해서 좋다. 이것저것 섞인 것보다 신뢰가 간다. 두 시즌째.</blockquote>
-      <div class="by"><span class="who">박준호</span><span class="stat">트레일 50K</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ SUBSCRIPTION / PLAN ============ -->
+<!-- ============ № 06 SUBSCRIPTION ============ -->
 <section class="ed-section" id="plan">
   <div class="sec-head">
     <span class="t">한 번, 또는 매 시즌</span>
-    <span class="mono">단건 vs 정기배송</span>
+    <span class="folio mono tab">№ 06 — SUBSCRIPTION</span>
   </div>
   <div class="sub-grid reveal">
     <div class="sub-card one">
       <span class="tag">Single — 단건 구매</span>
-      <h3>필요할 때<br>한 통.</h3>
+      <h3>한 시즌, <br>한 통.</h3>
       <div class="pr">₩48,000</div>
       <div class="per">60정 / 60일 · 1회 결제</div>
       <ul>
         <li>옥타코사놀 40mg · 60정</li>
         <li>언제든 원할 때 주문</li>
-        <li>3만원 이상 무료배송</li>
+        <li>무료 배송 (3만 원 이상)</li>
       </ul>
-      <div class="sub-cta"><a href="#core" class="btn-ghost">단건으로 시작 <span class="arr">→</span></a></div>
+      <div class="sub-cta"><a href="#" class="btn-ghost">단건으로 시작 <span class="arr">→</span></a></div>
     </div>
     <div class="sub-card sea">
-      <span class="tag">Season — 정기배송 · 5% 할인</span>
-      <h3>매 시즌 <span class="red ital">자동으로.</span></h3>
+      <span class="tag">Season — 정기 배송 · 5%</span>
+      <h3>끊기지 않는 <span class="red ital">시즌.</span></h3>
       <div class="pr"><s>₩48,000</s>₩45,600</div>
       <div class="per">60일마다 자동 배송 · 언제든 해지</div>
       <ul>
         <li>매 시즌 5% 할인 — 한 통당 ₩2,400 절약</li>
         <li>다 비울 때쯤 다음 통 도착</li>
         <li>배송 주기 조정 · 건너뛰기 가능</li>
-        <li>무료배송</li>
+        <li>무료 배송</li>
       </ul>
-      <div class="sub-cta"><a href="#core" class="btn-buy">정기배송 시작하기 <span class="arr">→</span></a></div>
+      <div class="sub-cta"><a href="#" class="btn-buy">정기배송 시작하기 <span class="arr">→</span></a></div>
     </div>
   </div>
 </section>
 
-<!-- ============ GUARANTEE ============ -->
-<section class="ed-section" style="padding-top:0;">
-  <div class="guarantee reveal">
-    <div class="gua"><div class="k">무료배송</div><div class="v">3만원 이상 전국</div></div>
-    <div class="gua"><div class="k"><span class="red">60일</span> 환불 보장</div><div class="v">맞지 않으면 전액 환불</div></div>
-    <div class="gua"><div class="k">언제든 해지</div><div class="v">정기배송 부담 없이</div></div>
+<!-- ============ № 07 PROTOCOL (60-day ritual) ============ -->
+<section class="ed-section" id="protocol">
+  <div class="sec-head">
+    <span class="t">60일, 하나의 시즌</span>
+    <span class="folio mono tab">№ 07 — THE PROTOCOL</span>
+  </div>
+  <div class="protocol-head">
+    <h2>매일 같은 시간, <span class="red ital">한 정.</span><br>반복이 곧 훈련입니다.</h2>
+    <p class="note">정해진 시간에 한 정. 거르지 않는 것 — 그 단순한 규율이 60일의 차이를 만듭니다.</p>
+  </div>
+  <div class="timeline fx">
+    <div class="ticks" aria-hidden="true">
+      <!-- 60 ticks, every 10th major, last is end/red -->
+      <span class="tk"></span><span class="tk"></span><span class="tk"></span><span class="tk"></span><span class="tk"></span><span class="tk"></span><span class="tk"></span><span class="tk"></span><span class="tk"></span><span class="tk maj"></span>
+      <span class="tk"></span><span class="tk"></span><span class="tk"></span><span class="tk"></span><span class="tk"></span><span class="tk"></span><span class="tk"></span><span class="tk"></span><span class="tk"></span><span class="tk maj"></span>
+      <span class="tk"></span><span class="tk"></span><span class="tk"></span><span class="tk"></span><span class="tk"></span><span class="tk"></span><span class="tk"></span><span class="tk"></span><span class="tk"></span><span class="tk maj"></span>
+      <span class="tk"></span><span class="tk"></span><span class="tk"></span><span class="tk"></span><span class="tk"></span><span class="tk"></span><span class="tk"></span><span class="tk"></span><span class="tk"></span><span class="tk maj"></span>
+      <span class="tk"></span><span class="tk"></span><span class="tk"></span><span class="tk"></span><span class="tk"></span><span class="tk"></span><span class="tk"></span><span class="tk"></span><span class="tk"></span><span class="tk maj"></span>
+      <span class="tk"></span><span class="tk"></span><span class="tk"></span><span class="tk"></span><span class="tk"></span><span class="tk"></span><span class="tk"></span><span class="tk"></span><span class="tk"></span><span class="tk end"></span>
+    </div>
+    <div class="axis">
+      <span class="mono tab">DAY 01</span>
+      <span class="mono tab">DAY 30</span>
+      <span class="mono tab red" style="color:var(--c-signal);">DAY 60 — 한 시즌 완주</span>
+    </div>
+  </div>
+  <div class="proto-cells">
+    <article class="proto-cell fx">
+      <span class="d">Phase I · Day 01–20</span>
+      <h4>몸에 <span class="red ital">새기기</span></h4>
+      <p>같은 시간에 한 정을 두는 자리부터 정합니다. 알람이 아니라 습관이 될 때까지, 거르지 않는 것이 전부입니다.</p>
+    </article>
+    <article class="proto-cell fx d1">
+      <span class="d">Phase II · Day 21–45</span>
+      <h4>리듬 만들기</h4>
+      <p>훈련량이 늘어나는 구간. 매일의 한 정이 루틴의 닻이 되어, 주행 거리와 회복의 리듬을 잡아 줍니다.</p>
+    </article>
+    <article class="proto-cell fx d2">
+      <span class="d">Phase III · Day 46–60</span>
+      <h4>시즌 완주</h4>
+      <p>한 통을 비우는 60일. 숫자가 아니라 꾸준함의 기록입니다. 다음 시즌은 같은 자리에서 다시 시작됩니다.</p>
+    </article>
   </div>
 </section>
 
-<!-- ============ FAQ ============ -->
+<!-- ============ № 08 RUNNER NOTES (reviews) ============ -->
+<section class="ed-section" id="notes">
+  <div class="sec-head">
+    <span class="t">러너의 노트</span>
+    <span class="folio mono tab">№ 08 — FIELD NOTES</span>
+  </div>
+  <div class="notes-grid">
+    <article class="note fx">
+      <span class="mark">▲▲▲</span>
+      <blockquote>“기록을 좇기보다 <span class="red">거르지 않는 것</span>에 집중하게 됐다. 한 통을 다 비운 뒤의 30km는 분명히 달랐다.”</blockquote>
+      <div class="by"><span class="who">— 김도현</span><span class="stat">FULL · 4:55/km · 서울</span></div>
+    </article>
+    <article class="note fx d1">
+      <span class="mark">▲▲▲</span>
+      <blockquote>“아침 루틴에 자연스럽게 자리 잡았다. 화려한 약속이 없어서 오히려 <span class="red">믿음</span>이 간다.”</blockquote>
+      <div class="by"><span class="who">— 이수민</span><span class="stat">HALF · 5:20/km · 부산</span></div>
+    </article>
+    <article class="note fx d2">
+      <span class="mark">▲▲▲</span>
+      <blockquote>“60일을 한 시즌처럼 채웠다. 노트에 적어 두니 <span class="red">꾸준함</span>이 눈에 보인다.”</blockquote>
+      <div class="by"><span class="who">— 박준영</span><span class="stat">ULTRA · 6:10/km · 대구</span></div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ № 09 FAQ ============ -->
 <section class="ed-section" id="faq">
   <div class="sec-head">
     <span class="t">자주 묻는 질문</span>
-    <span class="mono">Q &amp; A</span>
+    <span class="folio mono tab">№ 09 — Q &amp; A</span>
   </div>
   <div class="faq-list">
-    <div class="faq-row reveal">
-      <span class="q-idx">01</span>
-      <div><div class="q">언제, 어떻게 먹나요?</div><div class="a">하루 1정, 아침이나 운동 전에 물과 함께 드세요. 무카페인이라 저녁 훈련 후에 드셔도 수면에 영향을 주지 않습니다.</div></div>
+    <div class="faq-row fx">
+      <span class="q-idx">Q.01</span>
+      <div>
+        <p class="q">언제 먹는 것이 <span class="red ital">가장 좋을까요?</span></p>
+        <p class="a">하루 한 정, 매일 같은 시간에 드시는 것을 권합니다. 식사와 관계없이 섭취할 수 있으며, 거르지 않고 꾸준히 이어 가는 것이 가장 중요합니다.</p>
+      </div>
     </div>
-    <div class="faq-row reveal">
-      <span class="q-idx">02</span>
-      <div><div class="q">효과는 언제부터 느껴지나요?</div><div class="a">개인차가 있지만 대부분 한 시즌(60일) 꾸준히 섭취하며 변화를 체감합니다. 매일 거르지 않는 것이 가장 중요합니다.</div></div>
+    <div class="faq-row fx">
+      <span class="q-idx">Q.02</span>
+      <div>
+        <p class="q">카페인이 들어 있나요?</p>
+        <p class="a">옥타코사놀과 비타민 B군 중심의 처방으로, 카페인을 넣지 않았습니다. 저녁이나 야간 러닝 전후에도 부담 없이 섭취하실 수 있습니다.</p>
+      </div>
     </div>
-    <div class="faq-row reveal">
-      <span class="q-idx">03</span>
-      <div><div class="q">정기배송은 어떻게 운영되나요?</div><div class="a">60일마다 자동으로 배송되며 5% 할인이 적용됩니다. 주기 조정, 건너뛰기, 해지는 언제든 가능합니다.</div></div>
+    <div class="faq-row fx">
+      <span class="q-idx">Q.03</span>
+      <div>
+        <p class="q">얼마나 먹어야 차이를 느끼나요?</p>
+        <p class="a">건강기능식품은 의약품과 달리 즉각적인 효과를 보장하지 않습니다. 한 시즌(60일)을 꾸준히 채우는 것을 기준으로 설계했으며, 개인차가 있을 수 있습니다.</p>
+      </div>
     </div>
-    <div class="faq-row reveal">
-      <span class="q-idx">04</span>
-      <div><div class="q">맞지 않으면 환불되나요?</div><div class="a">처음 주문에 한해 60일 이내 전액 환불해 드립니다. 부담 없이 한 시즌을 시작해 보세요.</div></div>
+    <div class="faq-row fx">
+      <span class="q-idx">Q.04</span>
+      <div>
+        <p class="q">정기배송은 어떻게 되나요?</p>
+        <p class="a">60일마다 한 통이 자동으로 배송되도록 신청할 수 있습니다. 시즌의 흐름이 끊기지 않도록, 다 비울 때쯤 다음 통이 도착합니다.</p>
+      </div>
     </div>
-    <div class="faq-row reveal">
-      <span class="q-idx">05</span>
-      <div><div class="q">의약품인가요?</div><div class="a">아니요. 건강기능식품으로 지구력 증진에 도움을 줄 수 있으며, 질병의 예방·치료를 위한 의약품이 아닙니다.</div></div>
+    <div class="faq-row fx">
+      <span class="q-idx">Q.05</span>
+      <div>
+        <p class="q">보관은 어떻게 하나요?</p>
+        <p class="a">직사광선을 피해 서늘하고 건조한 곳에 보관하시고, 개봉 후에는 뚜껑을 잘 닫아 주세요. 어린이의 손이 닿지 않는 곳에 두시기 바랍니다.</p>
+      </div>
     </div>
+  </div>
+</section>
+
+<!-- ============ № 10 COLOPHON / publisher's note ============ -->
+<section class="colophon ed-section" id="colophon">
+  <div class="sec-head">
+    <span class="t">발행인의 말</span>
+    <span class="folio mono tab">№ 10 — COLOPHON</span>
+  </div>
+  <div class="colo-grid">
+    <p class="lead reveal">
+      우리는 영양제를 만들지 않습니다.<br>
+      <span class="red">오래 달리는 사람</span>을 위한<br>한 권의 기록을 만듭니다.
+    </p>
+    <div class="colo-body reveal r1">
+      <p>
+        Onroad는 장거리 러너의 새벽에서 시작됐습니다. 기록을 좇다 보면 어느 날 다리가 아니라
+        꾸준함이 먼저 무너진다는 것을 우리는 압니다. 그래서 화려한 약속 대신, 매일 한 정의
+        단정한 습관을 택했습니다.
+      </p>
+      <p>
+        옥타코사놀 40mg과 비타민 B군. 더하지도 덜지도 않은 처방을, 60일이라는 한 시즌의 단위로
+        담았습니다. 이 연감은 그 시즌들을 모은 첫 권이며, 다음 권은 당신의 기록으로 채워집니다.
+      </p>
+      <div class="colo-meta">
+        <div class="m"><span class="k">Published</span><span class="v">Onroad Editorial · Vol.01</span></div>
+        <div class="m"><span class="k">Origin</span><span class="v">사탕수수 · 밀 배아 유래</span></div>
+        <div class="m"><span class="k">Season</span><span class="v">60정 / 60일 · ₩48,000</span></div>
+        <div class="m"><span class="k">Est.</span><span class="v">Seoul · 2026</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ № 11 JOURNAL / INDEX teaser ============ -->
+<section class="ed-section" id="journal">
+  <div class="sec-head">
+    <span class="t">연감의 차례</span>
+    <span class="folio mono tab">№ 11 — INDEX</span>
+  </div>
+  <div class="index-grid">
+    <article class="idx-cell fx">
+      <span class="num">I</span>
+      <h3>아침의 <span class="red ital">의식</span></h3>
+      <p>같은 시간, 한 정. 반복은 가장 정직한 훈련법입니다. 60일의 루틴을 한 권의 기록으로 남깁니다.</p>
+    </article>
+    <article class="idx-cell fx d1">
+      <span class="num">II</span>
+      <h3>러너의 노트</h3>
+      <p>장거리 러너들이 직접 적어 내려간 페이스, 호흡, 회복의 메모. 데이터가 아니라 문장으로 읽는 기록.</p>
+    </article>
+    <article class="idx-cell fx d2">
+      <span class="num">III</span>
+      <h3>성분 색인</h3>
+      <p>옥타코사놀 40mg과 비타민 B군. 무엇이, 왜, 얼마나 들어 있는지 한 줄도 숨기지 않습니다.</p>
+    </article>
   </div>
 </section>
 
@@ -887,15 +1093,14 @@
     </svg>
   </div>
   <div class="final-inner">
-    <span class="mono eyebrow">Onroad · Endurance Core</span>
-    <h2>오늘 <span class="red ital">한 정</span>부터.</h2>
+    <span class="mono eyebrow">№ 12 — Onroad · Endurance Core</span>
+    <h2>먼 길의 동행을<br>오늘 <span class="red ital">시작합니다.</span></h2>
     <div class="fin-cta">
-      <a href="#core" class="btn-buy">장바구니 담기 <span class="arr">→</span></a>
-      <span class="price">정기 <b>₩45,600</b> · 단건 ₩48,000 · 옥타코사놀 40mg · 60정</span>
+      <a href="#" class="btn-buy">지금 구매하기 <span class="arr">→</span></a>
+      <span class="price">한 시즌 <b>₩48,000</b> · 옥타코사놀 40mg · 60정 / 60일</span>
     </div>
   </div>
 </section>
-
 
 <!-- ============ FOOTER ============ -->
 <footer class="site-foot">
@@ -905,24 +1110,26 @@
       <span class="sub">Endurance Core · Vol.01 / 2026 · EST 2026</span>
     </div>
     <div class="foot-col">
-      <h4>Product</h4>
-      <a href="#benefits">Why Onroad</a>
-      <a href="#ingredients">성분 · 전성분</a>
-      <a href="#how">섭취 방법</a>
-      <a href="#reviews">러너 후기</a>
+      <h4>Catalogue</h4>
+      <a href="#core">Endurance Core</a>
+      <a href="#spec">Product · 명세</a>
+      <a href="#science">Ingredient · 성분</a>
+      <a href="#protocol">Protocol · 프로토콜</a>
+      <a href="#notes">Runners · 러너의 노트</a>
     </div>
     <div class="foot-col">
       <h4>Service</h4>
-      <a href="#plan">구매 / 정기배송</a>
+      <a href="#buy">구매 / 정기배송</a>
       <a href="#">배송 안내</a>
       <a href="#faq">자주 묻는 질문</a>
       <a href="#">교환 · 환불</a>
       <a href="#">고객센터</a>
     </div>
     <div class="foot-col">
-      <h4>More</h4>
-      <a href="#faq">60일 환불 보장</a>
-      <a href="#plan">정기배송 혜택</a>
+      <h4>Journal</h4>
+      <a href="#journal">연감 · Vol.01</a>
+      <a href="#why">The Wall · 30K</a>
+      <a href="#brand">Manifesto</a>
       <a href="#">@onroad.run</a>
     </div>
   </div>
@@ -939,11 +1146,12 @@
 <!-- ============ MOBILE MENU ============ -->
 <nav class="m-menu" id="mMenu" aria-label="모바일 메뉴">
   <button class="m-close" id="mClose">닫기 ✕</button>
-  <a href="#benefits">Why <span class="red ital">Onroad</span></a>
-  <a href="#ingredients">성분 · 전성분</a>
-  <a href="#how">섭취 방법</a>
-  <a href="#reviews">러너 후기</a>
-  <a href="#plan">지금 <span class="red ital">구매하기</span></a>
+  <a href="#core">Endurance <span class="red ital">Core</span></a>
+  <a href="#spec">Product · 명세</a>
+  <a href="#science">Ingredient · 성분</a>
+  <a href="#protocol">Protocol · 프로토콜</a>
+  <a href="#notes">Runners · 노트</a>
+  <a href="#buy">지금 <span class="red ital">구매하기</span></a>
 </nav>
 
 <script>
