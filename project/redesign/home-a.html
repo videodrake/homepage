@@ -607,6 +607,32 @@
   .onroad-page.ad-archive .gua:last-child{border-bottom:0;}
 }
 
+/* evidence / research */
+.onroad-page.ad-archive .ev-lead{font-family:var(--font-serif);font-weight:300;font-size:clamp(1.1rem,1.6vw,1.35rem);line-height:1.6;color:var(--c-char);max-width:60ch;margin-bottom:clamp(28px,4vh,48px);}
+.onroad-page.ad-archive .ev-stats{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--c-line);margin-bottom:clamp(30px,5vh,56px);}
+.onroad-page.ad-archive .ev{padding:clamp(24px,3vw,40px);border-right:1px solid var(--c-line);}
+.onroad-page.ad-archive .ev:last-child{border-right:0;}
+.onroad-page.ad-archive .ev .big{font-family:var(--font-serif);font-weight:300;font-size:clamp(2rem,3.4vw,2.9rem);color:var(--c-ink);letter-spacing:-.02em;font-variant-numeric:tabular-nums;line-height:1;}
+.onroad-page.ad-archive .ev .big .red{color:var(--c-signal);font-style:italic;}
+.onroad-page.ad-archive .ev .lab{font-family:var(--font-mono);font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:var(--c-meta);margin-top:14px;line-height:1.7;}
+.onroad-page.ad-archive .refs{border-top:1px solid var(--c-ink);}
+.onroad-page.ad-archive .ref{display:grid;grid-template-columns:auto 1fr auto;gap:clamp(14px,2.4vw,38px);padding:18px 0;border-bottom:1px solid var(--c-line);align-items:baseline;}
+.onroad-page.ad-archive .ref .rn{font-family:var(--font-mono);font-size:.62rem;color:var(--c-sand);letter-spacing:.1em;}
+.onroad-page.ad-archive .ref .rc{font-family:var(--font-serif);font-weight:300;font-size:1rem;line-height:1.6;color:var(--c-char);}
+.onroad-page.ad-archive .ref .rc .ti{color:var(--c-ink);font-weight:400;}
+.onroad-page.ad-archive .ref .rc .jr{font-style:italic;color:var(--c-meta);}
+.onroad-page.ad-archive .ref .kind{font-family:var(--font-mono);font-size:.52rem;text-transform:uppercase;letter-spacing:.1em;color:var(--c-meta);border:1px solid var(--c-line);padding:3px 7px;white-space:nowrap;}
+.onroad-page.ad-archive .ref .kind.human{color:var(--c-signal);border-color:var(--c-signal);}
+.onroad-page.ad-archive .ev-note{margin-top:22px;display:flex;flex-direction:column;gap:6px;}
+.onroad-page.ad-archive .ev-note .fn{font-family:var(--font-mono);font-size:.6rem;letter-spacing:.04em;color:var(--c-meta);line-height:1.6;}
+.onroad-page.ad-archive .ev-note .fn sup{color:var(--c-signal);margin-right:5px;}
+@media (max-width:760px){
+  .onroad-page.ad-archive .ev-stats{grid-template-columns:1fr;}
+  .onroad-page.ad-archive .ev{border-right:0;border-bottom:1px solid var(--c-line);}
+  .onroad-page.ad-archive .ev:last-child{border-bottom:0;}
+  .onroad-page.ad-archive .ref{grid-template-columns:auto 1fr;}
+  .onroad-page.ad-archive .ref .kind{grid-column:2;justify-self:start;margin-top:6px;}
+}
 </style>
 </head>
 <body class="onroad-page onroad-home ad-archive">
@@ -621,6 +647,7 @@
     <nav class="nav" aria-label="주요 메뉴">
       <a href="#benefits">Why Onroad</a>
       <a href="#ingredients">성분</a>
+      <a href="#science">근거</a>
       <a href="#reviews">후기</a>
       <a href="#plan">구매</a>
     </nav>
@@ -766,6 +793,66 @@
   </div>
 </section>
 
+<!-- ============ SCIENCE / EVIDENCE ============ -->
+<section class="ed-section" id="science">
+  <div class="sec-head">
+    <span class="t">근거가 있는 처방</span>
+    <span class="mono">SELECTED RESEARCH</span>
+  </div>
+  <p class="ev-lead reveal">
+    옥타코사놀은 1960년대 운동생리학 연구에서 출발해, 지구력·피로 회복 측면에서
+    꾸준히 연구되어 온 성분입니다. 아래는 관련 문헌의 일부입니다.
+  </p>
+
+  <div class="ev-stats reveal">
+    <div class="ev">
+      <div class="big"><span class="red">+46%</span></div>
+      <div class="lab">러닝 지속 시간 증가<br>훈련 동물 모델<sup>1</sup></div>
+    </div>
+    <div class="ev">
+      <div class="big">8주</div>
+      <div class="lab">보충 후 악력·반응시간 개선<br>인체 예비 연구<sup>2</sup></div>
+    </div>
+    <div class="ev">
+      <div class="big">1960s~</div>
+      <div class="lab">지구력 연구의 시작<br>해군 훈련생 대상<sup>3</sup></div>
+    </div>
+  </div>
+
+  <div class="refs reveal">
+    <div class="ref">
+      <span class="rn">01</span>
+      <span class="rc"><span class="ti">Octacosanol Supplementation Increases Running Endurance Time and Improves Biochemical Parameters After Exhaustion in Trained Rats.</span> <span class="jr">Journal of Nutritional Science and Vitaminology</span>, 2003.</span>
+      <span class="kind">전임상 · 동물</span>
+    </div>
+    <div class="ref">
+      <span class="rn">02</span>
+      <span class="rc">Saint John, M. &amp; McNaughton, L. <span class="ti">Octacosanol ingestion and its effects on metabolic responses, reaction time and grip strength.</span> <span class="jr">Journal of Sports Medicine and Physical Fitness</span>, 1986.</span>
+      <span class="kind human">인체 · 예비</span>
+    </div>
+    <div class="ref">
+      <span class="rn">03</span>
+      <span class="rc">Cureton, T. K. <span class="ti">The Physiological Effects of Wheat Germ Oil on Humans in Exercise.</span> <span class="jr">Charles C. Thomas</span>, 1972.</span>
+      <span class="kind human">인체 · 고전</span>
+    </div>
+    <div class="ref">
+      <span class="rn">04</span>
+      <span class="rc"><span class="ti">Dietary Supplementation of Octacosanol Improves Exercise-Induced Fatigue and Its Molecular Mechanism.</span> <span class="jr">Journal of Agricultural and Food Chemistry</span>, 2021.</span>
+      <span class="kind">전임상 · 기전</span>
+    </div>
+    <div class="ref">
+      <span class="rn">05</span>
+      <span class="rc"><span class="ti">Octacosanol and policosanol prevent high-fat diet-induced metabolic disorders by improving liver metabolism.</span> <span class="jr">Scientific Reports</span>, 2019.</span>
+      <span class="kind">전임상 · 대사</span>
+    </div>
+  </div>
+
+  <div class="ev-note">
+    <span class="fn"><sup>†</sup> 인용된 연구의 일부는 동물 모델 또는 소규모 예비 연구이며, 효과에는 개인차가 있을 수 있습니다.</span>
+    <span class="fn"><sup>‡</sup> 본 제품은 건강기능식품으로, 질병의 예방 및 치료를 위한 의약품이 아닙니다.</span>
+  </div>
+</section>
+
 <!-- ============ HOW IT WORKS ============ -->
 <section class="ed-section" id="how">
   <div class="sec-head">
@@ -908,6 +995,7 @@
       <h4>Product</h4>
       <a href="#benefits">Why Onroad</a>
       <a href="#ingredients">성분 · 전성분</a>
+      <a href="#science">과학적 근거</a>
       <a href="#how">섭취 방법</a>
       <a href="#reviews">러너 후기</a>
     </div>
@@ -941,6 +1029,7 @@
   <button class="m-close" id="mClose">닫기 ✕</button>
   <a href="#benefits">Why <span class="red ital">Onroad</span></a>
   <a href="#ingredients">성분 · 전성분</a>
+  <a href="#science">과학적 근거</a>
   <a href="#how">섭취 방법</a>
   <a href="#reviews">러너 후기</a>
   <a href="#plan">지금 <span class="red ital">구매하기</span></a>
