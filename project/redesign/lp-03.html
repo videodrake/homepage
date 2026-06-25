@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Onroad — 쉬어도 피곤하다면, 지구력 신호</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300;400;500&family=Noto+Serif:wght@300;400;600&family=Noto+Serif+KR:wght@300;400;600;900&display=swap');
+:root{
+  --c-cream:#f4efe6; --c-cream-2:#ebe4d6; --c-paper:#faf7f1; --c-ink:#141210;
+  --c-char:#2a2622; --c-meta:#8a847c; --c-line:#d8d0c2; --c-sand:#a89a82;
+  --c-signal:#c8321e; --c-dark:#0f0d0b;
+  --font-serif:"Noto Serif","Noto Serif KR","Noto Serif CJK KR",Georgia,serif;
+  --font-mono:"Noto Sans Mono","Noto Mono",monospace;
+  --mx:clamp(20px,6vw,96px);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:var(--font-serif);background:var(--c-cream);color:var(--c-char);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;line-height:1.5;overflow-x:hidden;word-break:keep-all;}
+body::before{content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;opacity:.4;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");}
+::selection{background:var(--c-signal);color:var(--c-paper);}
+a{color:inherit;text-decoration:none;}
+.mono{font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.18em;font-size:.64rem;color:var(--c-meta);}
+.red{color:var(--c-signal);} .ital{font-style:italic;}
+
+.head{position:sticky;top:0;z-index:100;background:color-mix(in srgb,var(--c-cream) 90%,transparent);backdrop-filter:blur(6px);border-bottom:1px solid var(--c-line);}
+.head .in{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:13px var(--mx);}
+.back{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--c-char);display:flex;align-items:center;gap:8px;}
+.back b{font-family:var(--font-serif);font-weight:600;font-size:1.15rem;letter-spacing:-.02em;text-transform:none;color:var(--c-ink);}
+.h-nav{display:flex;align-items:center;gap:clamp(14px,2.2vw,30px);}
+.h-nav a{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--c-char);}
+.h-nav a.buy{background:var(--c-ink);color:var(--c-paper);padding:11px 20px;}
+.h-nav a.buy:hover{background:var(--c-signal);}
+
+.hero{padding:clamp(44px,8vh,100px) var(--mx);position:relative;overflow:hidden;border-bottom:1px solid var(--c-line);}
+.hero.dark{background:var(--c-dark);color:var(--c-cream);border-bottom:0;}
+.hero.light{background:var(--c-paper);color:var(--c-ink);}
+.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:clamp(30px,5vw,70px);align-items:center;max-width:1280px;margin:0 auto;}
+.eyebrow{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:22px;display:flex;align-items:center;gap:10px;color:var(--c-meta);}
+.hero.dark .eyebrow{color:var(--c-sand);}
+.eyebrow::before{content:"";width:26px;height:1px;background:var(--c-signal);}
+.hook{font-family:var(--font-serif);font-weight:300;font-size:clamp(1.9rem,3.7vw,3.05rem);line-height:1.16;letter-spacing:-.03em;color:var(--c-ink);}
+.hero.dark .hook{color:var(--c-paper);}
+.rec{font-family:var(--font-serif);font-weight:400;font-size:clamp(1.25rem,2.3vw,1.9rem);line-height:1.3;letter-spacing:-.02em;margin-top:18px;color:var(--c-char);}
+.hero.dark .rec{color:#e7ded0;}
+.rec .red{font-style:italic;}
+.lede{font-family:var(--font-serif);font-weight:300;font-size:clamp(1.02rem,1.4vw,1.18rem);line-height:1.65;margin-top:20px;max-width:42ch;color:var(--c-char);}
+.hero.dark .lede{color:#cfc6b8;}
+.cta-row{margin-top:clamp(28px,4vh,42px);display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
+.btn{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;display:inline-flex;align-items:center;gap:13px;padding:16px 30px;transition:background .35s,color .35s,border-color .35s;}
+.btn .arr{transition:transform .35s;} .btn:hover .arr{transform:translateX(6px);}
+.btn.solid{background:var(--c-ink);color:var(--c-paper);}
+.hero.dark .btn.solid{background:var(--c-signal);}
+.btn.solid:hover{background:var(--c-signal);}
+.hero.dark .btn.solid:hover{background:var(--c-paper);color:var(--c-ink);}
+.stat-line{font-family:var(--font-mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--c-meta);}
+.hero.dark .stat-line{color:var(--c-sand);}
+.cta-note{margin-top:16px;font-family:var(--font-mono);font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;color:var(--c-meta);display:flex;gap:14px;flex-wrap:wrap;}
+.hero.dark .cta-note{color:var(--c-sand);}
+.cta-note span{display:flex;align-items:center;gap:6px;}
+.cta-note span::before{content:"\2713";color:var(--c-signal);}
+
+/* image placeholder (art-direction) */
+.imgph{position:relative;border:1px dashed var(--c-sand);background:var(--c-cream-2);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:clamp(28px,4vw,44px);min-height:clamp(320px,46vh,440px);}
+.imgph .lab{position:absolute;top:14px;left:14px;font-family:var(--font-mono);font-size:.54rem;letter-spacing:.16em;text-transform:uppercase;color:var(--c-sand);}
+.imgph .ic{width:46px;height:46px;margin-bottom:20px;color:var(--c-sand);}
+.imgph p{font-family:var(--font-serif);font-weight:300;font-size:.98rem;line-height:1.6;color:var(--c-char);max-width:34ch;}
+.imgph.on-dark{border-color:rgba(216,208,194,.4);background:rgba(255,255,255,.04);}
+.imgph.on-dark .lab,.imgph.on-dark .ic{color:rgba(216,208,194,.6);}
+.imgph.on-dark p{color:#cfc6b8;}
+
+.sec{padding:clamp(54px,8vh,108px) var(--mx);max-width:1280px;margin:0 auto;}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--c-line);padding-bottom:14px;margin-bottom:clamp(30px,5vh,56px);gap:16px;flex-wrap:wrap;}
+.sec-head .t{font-family:var(--font-serif);font-weight:400;font-size:clamp(1.4rem,2.4vw,2rem);letter-spacing:-.02em;color:var(--c-ink);}
+.sec-head .t .red{font-style:italic;}
+.bridge{font-family:var(--font-serif);font-weight:300;font-size:clamp(1.1rem,1.6vw,1.32rem);line-height:1.6;color:var(--c-char);max-width:62ch;margin-bottom:clamp(34px,5vh,56px);}
+.bridge .red{font-style:italic;}
+
+.benefits{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--c-line);background:var(--c-paper);}
+.bene{padding:clamp(26px,3vw,42px);border-right:1px solid var(--c-line);}
+.bene:last-child{border-right:0;}
+.bene .ic{color:var(--c-signal);height:30px;margin-bottom:20px;display:flex;align-items:center;}
+.bene h3{font-family:var(--font-serif);font-weight:400;font-size:1.26rem;letter-spacing:-.01em;color:var(--c-ink);margin-bottom:10px;}
+.bene p{font-family:var(--font-serif);font-weight:300;font-size:.97rem;line-height:1.6;color:var(--c-char);}
+.bene .tag{display:block;margin-top:14px;font-family:var(--font-mono);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;color:var(--c-meta);}
+
+.imgband{padding:0 var(--mx) clamp(20px,4vh,40px);max-width:1280px;margin:0 auto;}
+.imgband .imgph{min-height:clamp(260px,38vh,360px);}
+.imgband .cap{margin-top:14px;font-family:var(--font-mono);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--c-meta);}
+
+.proof{background:var(--c-cream-2);border-top:1px solid var(--c-line);border-bottom:1px solid var(--c-line);}
+.proof .wrap{max-width:1280px;margin:0 auto;padding:clamp(46px,8vh,96px) var(--mx);}
+.proof .stars{color:var(--c-signal);letter-spacing:.14em;font-size:1rem;margin-bottom:20px;}
+.proof blockquote{font-family:var(--font-serif);font-weight:300;font-size:clamp(1.45rem,2.8vw,2.3rem);line-height:1.34;letter-spacing:-.02em;color:var(--c-ink);max-width:26ch;}
+.proof blockquote .red{font-style:italic;}
+.proof .by{margin-top:24px;font-family:var(--font-mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--c-meta);}
+
+.final{background:var(--c-dark);color:var(--c-cream);padding:clamp(62px,11vh,148px) var(--mx);text-align:center;}
+.final h2{font-family:var(--font-serif);font-weight:300;font-size:clamp(2.1rem,4.6vw,3.8rem);line-height:1.1;letter-spacing:-.03em;color:var(--c-paper);max-width:22ch;margin:0 auto;}
+.final h2 .red{font-style:italic;color:var(--c-signal);}
+.final .sub{font-family:var(--font-serif);font-weight:300;font-size:1.04rem;color:var(--c-sand);margin-top:20px;}
+.final .cta-row{justify-content:center;}
+.final .btn.solid{background:var(--c-signal);}
+.final .btn.solid:hover{background:var(--c-paper);color:var(--c-ink);}
+.final .btn.line{border:1px solid rgba(216,208,194,.4);color:var(--c-paper);}
+.final .btn.line:hover{border-color:var(--c-signal);color:var(--c-signal);}
+
+.foot{background:var(--c-dark);color:var(--c-sand);padding:30px var(--mx);border-top:1px solid rgba(216,208,194,.16);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-family:var(--font-mono);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;}
+.foot a{color:var(--c-sand);}
+
+@media (max-width:860px){
+  .hero-grid{grid-template-columns:1fr;gap:30px;}
+  .imgph{order:-1;min-height:clamp(240px,40vh,320px);}
+  .benefits{grid-template-columns:1fr;}
+  .bene{border-right:0;border-bottom:1px solid var(--c-line);} .bene:last-child{border-bottom:0;}
+  .h-nav a:not(.buy){display:none;}
+}
+</style>
+</head>
+<body>
+
+<header class="head">
+  <div class="in">
+    <a class="back" href="index.html">← <b>Onroad</b></a>
+    <nav class="h-nav">
+      <a href="product.html">제품</a>
+      <a href="journal.html">저널</a>
+      <a class="buy" href="product.html">지금 구매</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero light">
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">쉬어도 피곤한 당신에게</span>
+      <h1 class="hook">주말 내내 쉬었는데,<br>월요일이 더 버거우신가요?</h1>
+      <p class="rec">휴식이 아니라, <span class="red">지구력</span>이 부족하다는 신호입니다.</p>
+      <p class="lede">잠으로 채워지지 않는 피로가 있습니다. 매일 한 정, 무카페인 옥타코사놀 40mg으로 한 주를 버틸 바탕을 만드세요.</p>
+      <div class="cta-row">
+        <a class="btn solid" href="product.html">부담 없이 시작하기 <span class="arr">→</span></a>
+        <span class="stat-line">옥타코사놀 40mg · 무카페인 · 하루 한 정</span>
+      </div>
+      <p class="cta-note"><span>무료배송</span><span>60일 환불 보장</span><span>언제든 해지</span></p>
+    </div>
+    <div class="imgph">
+      <span class="lab">Image — 히어로</span>
+      <svg class="ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="6" y="14" width="36" height="26" rx="2"/><path d="M17 14l3-5h8l3 5"/><circle cx="24" cy="27" r="7"/></svg>
+      <p>[이미지: 월요일 아침, 알람을 끄지 못하고 이불 속에 웅크린 사람. 커튼 틈으로 들어오는 차가운 아침빛. 무겁고 나른한 분위기]</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="sec-head">
+    <span class="t">왜 <span class="red">지구력</span>인가</span>
+    <span class="mono">Why Endurance</span>
+  </div>
+  <p class="bridge">쉬어도 가시지 않는 피로는 ‘회복’이 아니라 ‘버티는 힘’의 문제일 수 있습니다. 옥타코사놀 40mg과 비타민 B군으로, 한 주를 끌고 갈 매일의 바탕을 더합니다.</p>
+  <div class="benefits">
+    <div class="bene">
+      <h3>하루 한 정이면 끝</h3>
+      <p>여러 알도, 복잡한 루틴도 없습니다. 물 한 잔에 한 정, 그게 전부입니다.</p>
+      <span class="tag">하루 1정</span>
+    </div>
+    <div class="bene">
+      <h3>밤에 먹어도 잠 안 깨요</h3>
+      <p>카페인이 전혀 없어, 자기 전에 먹어도 잠을 방해하지 않습니다.</p>
+      <span class="tag">무카페인</span>
+    </div>
+    <div class="bene">
+      <h3>숨길 것 없는 깨끗한 성분</h3>
+      <p>색소도 첨가물도 넣지 않았습니다. 국내 GMP 적합 시설에서 만듭니다.</p>
+      <span class="tag">국내 GMP 제조</span>
+    </div>
+  </div>
+</section>
+
+<section class="imgband">
+  <div class="imgph">
+    <span class="lab">Image — 제품/상황</span>
+    <svg class="ic" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="6" y="14" width="36" height="26" rx="2"/><path d="M17 14l3-5h8l3 5"/><circle cx="24" cy="27" r="7"/></svg>
+    <p>[이미지: 한 주 7칸이 그려진 필박스/달력 위에 정제가 하나씩 놓인 플랫레이. 규칙적 습관을 암시, 자연광 탑다운]</p>
+  </div>
+  <div class="cap">제품 컷 · 한 주를 채우는 루틴</div>
+</section>
+
+<section class="proof">
+  <div class="wrap">
+    <div class="stars">★★★★★</div>
+    <blockquote>월요일이 <span class="red">덜 무겁다.</span> 주말에 몰아 자도 안 풀리던 게 좀 낫다.</blockquote>
+    <div class="by">정민 · 35세 · 직장인 · 두 시즌째</div>
+  </div>
+</section>
+
+<section class="final">
+  <h2>다시 가벼운<br>한 주의 <span class="red">시작.</span></h2>
+  <p class="sub">옥타코사놀 40mg · 무카페인 · 60정 / 60일 · 60일 환불 보장</p>
+  <div class="cta-row">
+    <a class="btn solid" href="product.html">부담 없이 시작하기 <span class="arr">→</span></a>
+    <a class="btn line" href="index.html">처음으로</a>
+  </div>
+</section>
+
+<footer class="foot">
+  <span>© 2026 Onroad · Endurance Core · 건강기능식품</span>
+  <span><a href="index.html">Gateway</a> · <a href="product.html">제품</a> · <a href="journal.html">저널</a></span>
+</footer>
+
+</body>
+</html>
