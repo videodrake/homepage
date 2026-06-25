@@ -54,6 +54,9 @@ a{color:inherit;}
 .btn.line{border:1px solid var(--c-ink);color:var(--c-ink);}
 .btn.line:hover{border-color:var(--c-signal);color:var(--c-signal);}
 .hero .stat-line{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--c-sand);}
+.hero .cta-note{margin-top:16px;font-family:var(--font-mono);font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;color:var(--c-sand);display:flex;gap:14px;flex-wrap:wrap;}
+.hero .cta-note span{display:flex;align-items:center;gap:6px;}
+.hero .cta-note span::before{content:"\2713";color:var(--c-signal);}
 .hero-prod{display:flex;justify-content:center;align-items:center;}
 .hero-prod svg{height:clamp(280px,40vh,420px);width:auto;}
 
@@ -143,13 +146,14 @@ a{color:inherit;}
   </div>
   <div class="hero-grid">
     <div class="hero-copy">
-      <span class="mono eyebrow">For Runners · 러너를 위한</span>
-      <h1>30km, <span class="red">벽</span>이<br>오는 순간을<br>아는 당신에게.</h1>
-      <p class="lede">장거리에서 먼저 무너지는 건 다리가 아니라 꾸준함입니다. 옥타코사놀 40mg, 하루 한 정으로 마지막 구간까지.</p>
+      <span class="mono eyebrow">For Runners · 끝까지 달리는 사람들</span>
+      <h1>마지막 구간까지,<br><span class="red">무너지지 않는</span> 다리.</h1>
+      <p class="lede">30km, 벽이 오는 그 지점. 옥타코사놀 40mg을 하루 한 정으로 채워 흔들리는 후반부를 버팁니다.</p>
       <div class="cta-row">
-        <a class="btn solid" href="product.html">제품 보기 <span class="arr">→</span></a>
-        <span class="stat-line">옥타코사놀 40mg · 무카페인 · 60정</span>
+        <a class="btn solid" href="product.html">지금 시작하기 <span class="arr">→</span></a>
+        <span class="stat-line">옥타코사놀 40mg · 무카페인 · 60정 / 60일</span>
       </div>
+      <p class="cta-note"><span>무료배송</span><span>60일 환불 보장</span><span>언제든 해지</span></p>
     </div>
     <div class="hero-prod" aria-hidden="true">
       <svg viewBox="0 0 220 360" role="img" aria-label="제품 보틀">
@@ -174,26 +178,26 @@ a{color:inherit;}
 <!-- benefits -->
 <section class="sec">
   <div class="sec-head">
-    <span class="t">러너가 <span class="red">Onroad</span>를 택하는 이유</span>
+    <span class="t">러너들이 <span class="red">끝까지</span> 챙기는 이유</span>
     <span class="mono">Why Runners</span>
   </div>
   <div class="benefits">
     <div class="bene">
       <div class="ic"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="19" cy="6.5" r="2.3"/><path d="M5 25l4-6 4 2 2-5 3 4 4-2"/><path d="M9 19l2-5 4 1"/></svg></div>
-      <h3>마지막 구간의 지구력</h3>
-      <p>옥타코사놀 40mg. 페이스가 무너지기 쉬운 후반부를 위한 설계.</p>
+      <h3>후반부를 버티는 지구력</h3>
+      <p>페이스가 무너지기 쉬운 마지막 구간을 옥타코사놀 40mg으로 버팁니다.</p>
       <span class="tag">인정 기능성</span>
     </div>
     <div class="bene">
       <div class="ic"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="15" cy="15" r="10"/><path d="M15 9v6l4 2"/></svg></div>
-      <h3>무카페인, 저녁 훈련에도</h3>
-      <p>야간 러닝 후에 먹어도 수면을 방해하지 않습니다.</p>
-      <span class="tag">No Caffeine</span>
+      <h3>밤 훈련 뒤에도 숙면</h3>
+      <p>무카페인 처방이라 야간 러닝 후 먹어도 잠을 방해하지 않습니다.</p>
+      <span class="tag">무카페인</span>
     </div>
     <div class="bene">
       <div class="ic"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="5" y="11" width="20" height="8" rx="4" transform="rotate(-45 15 15)"/><path d="M11 11l8 8"/></svg></div>
-      <h3>하루 한 정, 60일</h3>
-      <p>복잡한 보충 루틴 없이 한 시즌을 단정하게.</p>
+      <h3>하루 한 정, 그게 전부</h3>
+      <p>복잡한 보충 루틴은 없습니다. 한 알로 60일, 한 시즌을 채웁니다.</p>
       <span class="tag">60정 / 60일</span>
     </div>
   </div>
@@ -203,7 +207,7 @@ a{color:inherit;}
 <section class="proof">
   <div class="wrap">
     <div class="stars">★★★★★</div>
-    <blockquote>30km 이후가 확실히 <span class="red">덜 무겁다.</span> 매일 한 알이라 빼먹을 일이 없다.</blockquote>
+    <blockquote>30km 이후가 확실히 <span class="red">덜 무겁다.</span> 매일 한 알이라 거를 일이 없다.</blockquote>
     <div class="by">김도현 · 풀코스 3:42 · 주 70km</div>
   </div>
 </section>
@@ -213,8 +217,8 @@ a{color:inherit;}
   <div class="scird">
     <div class="big">+46%</div>
     <div class="tx">
-      <h3>러닝 지속 시간 증가</h3>
-      <p>옥타코사놀을 보충한 훈련 동물 모델은 대조군 대비 탈진까지의 러닝 시간이 약 46% 길었습니다. 더 자세한 근거는 제품 페이지에서.</p>
+      <h3>러닝 지속 시간 +46%</h3>
+      <p>옥타코사놀을 보충한 훈련 동물 모델은 대조군보다 탈진까지 약 46% 더 오래 달렸습니다. 자세한 근거는 제품 페이지에서.</p>
       <span class="fn">† 동물 모델 연구 · 효과에는 개인차가 있을 수 있습니다 · 의약품 아님</span>
     </div>
   </div>
@@ -222,10 +226,10 @@ a{color:inherit;}
 
 <!-- final -->
 <section class="final">
-  <h2>당신의 마지막 구간을<br><span class="red">함께</span> 달립니다.</h2>
+  <h2>끝까지 달릴 다리를,<br><span class="red">오늘</span> 준비하세요.</h2>
   <p class="sub">옥타코사놀 40mg · 무카페인 · 60정 / 60일</p>
   <div class="cta-row">
-    <a class="btn solid" href="product.html">제품 보기 <span class="arr">→</span></a>
+    <a class="btn solid" href="product.html">지금 시작하기 <span class="arr">→</span></a>
     <a class="btn line" href="index.html">처음으로</a>
   </div>
 </section>
