@@ -8,11 +8,13 @@ import { fileURLToPath } from 'node:url';
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const EXE = '/opt/pw-browsers/chromium-1194/chrome-linux/chrome';
 
-const targets = [
-  { id: 'dir-a', file: 'dir-a.html' },
-  { id: 'dir-b', file: 'dir-b.html' },
-  { id: 'dir-c', file: 'dir-c.html' },
-];
+const targets = (process.env.SHOOT_TARGETS
+  ? process.env.SHOOT_TARGETS.split(',').map(s => ({ id: s.replace(/\.html$/, ''), file: s.endsWith('.html') ? s : s + '.html' }))
+  : [
+      { id: 'dir-a', file: 'dir-a.html' },
+      { id: 'dir-b', file: 'dir-b.html' },
+      { id: 'dir-c', file: 'dir-c.html' },
+    ]);
 
 const viewports = [
   { name: 'desktop', width: 1440, height: 960, dsf: 1 },
