@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Onroad — 저널 / Journal</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300;400;500&family=Noto+Serif:wght@300;400;600&family=Noto+Serif+KR:wght@300;400;600;900&display=swap');
+:root{
+  --c-cream:#f4efe6; --c-cream-2:#ebe4d6; --c-paper:#faf7f1; --c-ink:#141210;
+  --c-char:#2a2622; --c-meta:#8a847c; --c-line:#d8d0c2; --c-sand:#a89a82;
+  --c-signal:#c8321e; --c-dark:#0f0d0b;
+  --font-serif:"Noto Serif","Noto Serif KR","Noto Serif CJK KR",Georgia,serif;
+  --font-mono:"Noto Sans Mono","Noto Mono",monospace;
+  --mx:clamp(20px,6vw,96px);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:var(--font-serif);background:var(--c-cream);color:var(--c-char);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;line-height:1.5;overflow-x:hidden;word-break:keep-all;}
+body::before{content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;opacity:.42;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");}
+::selection{background:var(--c-signal);color:var(--c-paper);}
+a{color:inherit;text-decoration:none;}
+.mono{font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.18em;font-size:.64rem;color:var(--c-meta);}
+.red{color:var(--c-signal);} .ital{font-style:italic;}
+
+/* header (shared with welcome) */
+.head{position:sticky;top:0;z-index:100;background:color-mix(in srgb,var(--c-cream) 90%,transparent);backdrop-filter:blur(6px);border-bottom:1px solid var(--c-line);}
+.head .in{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:13px var(--mx);}
+.back{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--c-char);display:flex;align-items:center;gap:8px;}
+.back b{font-family:var(--font-serif);font-weight:600;font-size:1.15rem;letter-spacing:-.02em;text-transform:none;color:var(--c-ink);}
+.h-nav{display:flex;align-items:center;gap:clamp(14px,2.2vw,30px);}
+.h-nav a{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--c-char);}
+.h-nav a.cur{color:var(--c-signal);}
+.h-nav a.buy{background:var(--c-ink);color:var(--c-paper);padding:11px 20px;}
+.h-nav a.buy:hover{background:var(--c-signal);}
+
+/* page intro */
+.j-intro{padding:clamp(48px,8vh,104px) var(--mx) clamp(30px,4vh,52px);max-width:1280px;margin:0 auto;}
+.j-intro .kick{display:flex;align-items:center;gap:10px;margin-bottom:22px;}
+.j-intro .kick::before{content:"";width:26px;height:1px;background:var(--c-signal);}
+.j-intro h1{font-family:var(--font-serif);font-weight:300;font-size:clamp(2.6rem,6vw,4.6rem);line-height:1;letter-spacing:-.035em;color:var(--c-ink);}
+.j-intro h1 .red{font-style:italic;color:var(--c-signal);}
+.j-intro p{font-family:var(--font-serif);font-weight:300;font-size:clamp(1.05rem,1.5vw,1.22rem);line-height:1.6;color:var(--c-char);margin-top:20px;max-width:46ch;}
+
+/* topic filter row */
+.topics{max-width:1280px;margin:0 auto;padding:0 var(--mx);display:flex;gap:8px;flex-wrap:wrap;border-bottom:1px solid var(--c-line);padding-bottom:clamp(24px,4vh,40px);}
+.topics a{font-family:var(--font-mono);font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--c-char);border:1px solid var(--c-line);padding:9px 16px;transition:all .3s;}
+.topics a.on,.topics a:hover{background:var(--c-ink);color:var(--c-paper);border-color:var(--c-ink);}
+
+/* feature */
+.feature{max-width:1280px;margin:clamp(36px,6vh,68px) auto 0;padding:0 var(--mx);}
+.feature a{display:grid;grid-template-columns:1.05fr .95fr;border:1px solid var(--c-ink);background:var(--c-paper);}
+.feat-art{position:relative;background:var(--c-dark);overflow:hidden;min-height:340px;}
+.feat-art svg{position:absolute;inset:0;width:100%;height:100%;}
+.feat-art .ct{fill:none;stroke:rgba(216,208,194,.2);stroke-width:1;}
+.feat-art .ct.hot{stroke:rgba(200,50,30,.55);}
+.feat-art .fnum{position:absolute;left:clamp(22px,3vw,40px);bottom:clamp(20px,3vw,34px);font-family:var(--font-serif);font-weight:300;font-size:clamp(3rem,6vw,5rem);color:rgba(244,239,230,.28);line-height:1;font-style:italic;}
+.feat-body{padding:clamp(30px,4vw,56px);display:flex;flex-direction:column;justify-content:center;}
+.feat-body .cat{font-family:var(--font-mono);font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--c-signal);margin-bottom:20px;}
+.feat-body h2{font-family:var(--font-serif);font-weight:300;font-size:clamp(1.7rem,3vw,2.7rem);line-height:1.14;letter-spacing:-.025em;color:var(--c-ink);}
+.feat-body p{font-family:var(--font-serif);font-weight:300;font-size:1.04rem;line-height:1.7;color:var(--c-char);margin-top:18px;max-width:46ch;}
+.feat-body .meta{margin-top:26px;font-family:var(--font-mono);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--c-meta);display:flex;gap:16px;}
+.feat-body .more{margin-top:22px;font-family:var(--font-mono);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--c-ink);display:inline-flex;align-items:center;gap:10px;}
+.feature a:hover .more{color:var(--c-signal);}
+.feature a:hover .more .arr{transform:translateX(6px);}
+.more .arr{transition:transform .35s;}
+
+/* posts grid */
+.posts-wrap{max-width:1280px;margin:clamp(40px,6vh,72px) auto;padding:0 var(--mx);}
+.posts-head{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--c-line);padding-bottom:14px;margin-bottom:0;gap:16px;}
+.posts-head .t{font-family:var(--font-serif);font-weight:400;font-size:clamp(1.2rem,2vw,1.6rem);color:var(--c-ink);letter-spacing:-.015em;}
+.posts{display:grid;grid-template-columns:repeat(3,1fr);border-left:1px solid var(--c-line);border-top:1px solid var(--c-line);}
+.post{border-right:1px solid var(--c-line);border-bottom:1px solid var(--c-line);padding:clamp(26px,2.6vw,38px);display:flex;flex-direction:column;min-height:280px;transition:background .3s;}
+.post:hover{background:var(--c-paper);}
+.post .cat{font-family:var(--font-mono);font-size:.56rem;letter-spacing:.14em;text-transform:uppercase;color:var(--c-signal);margin-bottom:20px;}
+.post h3{font-family:var(--font-serif);font-weight:400;font-size:clamp(1.2rem,1.7vw,1.5rem);line-height:1.25;letter-spacing:-.015em;color:var(--c-ink);}
+.post p{font-family:var(--font-serif);font-weight:300;font-size:.96rem;line-height:1.6;color:var(--c-char);margin-top:14px;}
+.post .meta{margin-top:auto;padding-top:22px;font-family:var(--font-mono);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;color:var(--c-meta);display:flex;justify-content:space-between;gap:10px;}
+.post .meta .rd{color:var(--c-sand);}
+
+/* newsletter band */
+.nl{background:var(--c-dark);color:var(--c-cream);padding:clamp(56px,9vh,120px) var(--mx);text-align:center;}
+.nl h2{font-family:var(--font-serif);font-weight:300;font-size:clamp(1.9rem,4vw,3.2rem);line-height:1.1;letter-spacing:-.03em;color:var(--c-paper);max-width:22ch;margin:0 auto;}
+.nl h2 .red{font-style:italic;color:var(--c-signal);}
+.nl form{margin:clamp(28px,4vh,42px) auto 0;display:flex;gap:0;max-width:440px;border:1px solid rgba(216,208,194,.4);}
+.nl input{flex:1;background:transparent;border:0;padding:16px 20px;font-family:var(--font-mono);font-size:.7rem;letter-spacing:.06em;color:var(--c-cream);}
+.nl input::placeholder{color:var(--c-sand);text-transform:uppercase;letter-spacing:.12em;font-size:.62rem;}
+.nl button{background:var(--c-signal);color:var(--c-paper);border:0;cursor:pointer;font-family:var(--font-mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;padding:0 24px;}
+.nl .fine{margin-top:18px;font-family:var(--font-mono);font-size:.54rem;letter-spacing:.1em;text-transform:uppercase;color:var(--c-sand);}
+
+/* foot */
+.foot{background:var(--c-dark);color:var(--c-sand);padding:30px var(--mx);border-top:1px solid rgba(216,208,194,.16);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-family:var(--font-mono);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;}
+.foot a{color:var(--c-sand);}
+
+@media (max-width:860px){
+  .feature a{grid-template-columns:1fr;}
+  .feat-art{min-height:220px;}
+  .posts{grid-template-columns:1fr;}
+  .h-nav a:not(.buy):not(.cur){display:none;}
+  .nl form{flex-direction:column;}
+}
+</style>
+</head>
+<body>
+
+<!-- header -->
+<header class="head">
+  <div class="in">
+    <a class="back" href="index.html">← <b>Onroad</b></a>
+    <nav class="h-nav">
+      <a href="product.html">제품</a>
+      <a class="cur" href="journal.html">저널</a>
+      <a class="buy" href="product.html">제품 보기</a>
+    </nav>
+  </div>
+</header>
+
+<!-- intro -->
+<section class="j-intro">
+  <div class="kick"><span class="mono">Onroad Journal · 기록</span></div>
+  <h1>오래 달리는 <span class="red ital">법</span>에<br>관한 기록.</h1>
+  <p>지구력, 회복, 그리고 멈추지 않는 일상에 대하여. 러너와 바쁜 하루를 보내는 모두를 위한 읽을거리.</p>
+</section>
+
+<!-- topics -->
+<nav class="topics" aria-label="주제">
+  <a class="on" href="#">전체</a>
+  <a href="#">Running</a>
+  <a href="#">Science</a>
+  <a href="#">Ingredient</a>
+  <a href="#">Everyday</a>
+  <a href="#">Recovery</a>
+  <a href="#">Interview</a>
+</nav>
+
+<!-- feature -->
+<section class="feature">
+  <a href="#">
+    <div class="feat-art" aria-hidden="true">
+      <svg viewBox="0 0 600 420" preserveAspectRatio="xMidYMid slice">
+        <path class="ct" d="M-20 380 C120 320 140 250 240 250 C340 250 360 180 300 150"/>
+        <path class="ct" d="M-20 350 C130 285 170 215 270 220 C380 226 390 150 320 116"/>
+        <path class="ct hot" d="M-20 320 C130 260 200 180 290 192 C400 206 410 110 330 78 C280 58 360 38 420 56"/>
+        <path class="ct" d="M-20 290 C140 225 210 150 300 164 C410 180 430 95 360 64"/>
+        <circle cx="290" cy="192" r="5" fill="var(--c-signal)"/>
+      </svg>
+      <span class="fnum">No.01</span>
+    </div>
+    <div class="feat-body">
+      <span class="cat">Science · 지구력의 생리학</span>
+      <h2>30km의 벽은<br>왜 생기는가.</h2>
+      <p>마라톤 후반, 갑자기 다리가 멈추는 그 순간의 정체. 글리코겐 고갈과 페이스 붕괴를 둘러싼 이야기, 그리고 무엇을 준비할 수 있는가.</p>
+      <div class="meta"><span>2026 · 06</span><span>읽는 데 7분</span></div>
+      <span class="more">기사 읽기 <span class="arr">→</span></span>
+    </div>
+  </a>
+</section>
+
+<!-- posts -->
+<section class="posts-wrap">
+  <div class="posts-head">
+    <span class="t">최근 기록</span>
+    <span class="mono">Latest</span>
+  </div>
+  <div class="posts">
+    <a class="post" href="#">
+      <span class="cat">Running</span>
+      <h3>장거리 페이스를 지키는 다섯 가지 습관</h3>
+      <p>초반 욕심을 다스리는 법부터 후반 호흡까지, 완주를 만드는 작은 규칙들.</p>
+      <div class="meta"><span>2026 · 06</span><span class="rd">5분</span></div>
+    </a>
+    <a class="post" href="#">
+      <span class="cat">Ingredient</span>
+      <h3>옥타코사놀, 무엇이고 왜 40mg인가</h3>
+      <p>사탕수수·밀 배아에서 온 성분 한 가지를, 우리가 고른 함량으로 정리했습니다.</p>
+      <div class="meta"><span>2026 · 05</span><span class="rd">6분</span></div>
+    </a>
+    <a class="post" href="#">
+      <span class="cat">Everyday</span>
+      <h3>퇴근 후 무기력, 게으름이 아닙니다</h3>
+      <p>하루의 끝에 찾아오는 방전. 그것을 다루는 현실적인 방법에 대하여.</p>
+      <div class="meta"><span>2026 · 05</span><span class="rd">4분</span></div>
+    </a>
+    <a class="post" href="#">
+      <span class="cat">Recovery</span>
+      <h3>잘 쉬는 것도 훈련이다</h3>
+      <p>회복일을 설계하는 법. 더 빨리 달리기 위해 멈추는 시간의 가치.</p>
+      <div class="meta"><span>2026 · 04</span><span class="rd">5분</span></div>
+    </a>
+    <a class="post" href="#">
+      <span class="cat">Interview</span>
+      <h3>주 70km를 달리는 사람들</h3>
+      <p>새벽을 여는 러너 세 명의 루틴, 그리고 그들이 지키는 하루 한 정의 습관.</p>
+      <div class="meta"><span>2026 · 04</span><span class="rd">9분</span></div>
+    </a>
+    <a class="post" href="#">
+      <span class="cat">Guide</span>
+      <h3>건강기능식품 라벨, 이렇게 읽으세요</h3>
+      <p>기능성·함량·섭취량. 포장 뒤의 작은 글씨를 해석하는 간단한 안내.</p>
+      <div class="meta"><span>2026 · 03</span><span class="rd">6분</span></div>
+    </a>
+  </div>
+</section>
+
+<!-- newsletter -->
+<section class="nl">
+  <h2>다음 기록을<br>가장 <span class="red">먼저</span> 받아보세요.</h2>
+  <form onsubmit="return false">
+    <input type="email" placeholder="이메일 주소" aria-label="이메일 주소">
+    <button type="submit">구독</button>
+  </form>
+  <p class="fine">월 1~2회 · 언제든 해지 가능</p>
+</section>
+
+<footer class="foot">
+  <span>© 2026 Onroad · Endurance Core</span>
+  <span><a href="index.html">Gateway</a> · <a href="product.html">제품</a> · <a href="welcome-runner.html">러너</a> · <a href="welcome-general.html">일상</a></span>
+</footer>
+
+</body>
+</html>

@@ -11,9 +11,10 @@ const EXE = '/opt/pw-browsers/chromium-1194/chrome-linux/chrome';
 const targets = (process.env.SHOOT_TARGETS
   ? process.env.SHOOT_TARGETS.split(',').map(s => ({ id: s.replace(/\.html$/, ''), file: s.endsWith('.html') ? s : s + '.html' }))
   : [
-      { id: 'dir-a', file: 'dir-a.html' },
-      { id: 'dir-b', file: 'dir-b.html' },
-      { id: 'dir-c', file: 'dir-c.html' },
+      { id: 'welcome-runner', file: 'welcome-runner.html' },
+      { id: 'welcome-general', file: 'welcome-general.html' },
+      { id: 'product', file: 'product.html' },
+      { id: 'journal', file: 'journal.html' },
     ]);
 
 const viewports = [
