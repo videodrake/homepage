@@ -425,8 +425,86 @@
 .onroad-page.ad-archive .foot-bot .legal{font-family:var(--font-mono);font-size:.58rem;letter-spacing:.06em;line-height:1.9;color:var(--c-meta);max-width:62ch;}
 .onroad-page.ad-archive .foot-bot .copy{font-family:var(--font-mono);font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--c-sand);white-space:nowrap;}
 
+/* ---------- scroll reveal (JS-enhanced; visible without JS) ---------- */
+.onroad-page.ad-archive.has-js .reveal{opacity:0;transform:translateY(20px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1);}
+.onroad-page.ad-archive.has-js .reveal.r1{transition-delay:.08s;}
+.onroad-page.ad-archive.has-js .reveal.r2{transition-delay:.16s;}
+.onroad-page.ad-archive.has-js .reveal.r3{transition-delay:.24s;}
+.onroad-page.ad-archive .reveal.in{opacity:1;transform:none;}
+@media (prefers-reduced-motion:reduce){
+  .onroad-page.ad-archive.has-js .reveal{opacity:1 !important;transform:none !important;transition:none;}
+}
+
+/* header scrolled state */
+.onroad-page.ad-archive .site-head{transition:background .4s,border-color .4s,padding .4s;}
+.onroad-page.ad-archive .site-head.scrolled{background:color-mix(in srgb, var(--c-cream) 96%, transparent);border-bottom-color:var(--c-sand);}
+.onroad-page.ad-archive .site-head.scrolled .inner{padding-top:10px;padding-bottom:10px;}
+
+/* mobile menu */
+.onroad-page.ad-archive .nav-mobile{cursor:pointer;}
+.onroad-page.ad-archive .m-menu{
+  position:fixed;inset:0;z-index:1500;background:var(--c-cream);
+  display:flex;flex-direction:column;padding:clamp(80px,12vh,120px) var(--mx) 40px;
+  opacity:0;visibility:hidden;transition:opacity .4s;
+}
+.onroad-page.ad-archive .m-menu.open{opacity:1;visibility:visible;}
+.onroad-page.ad-archive .m-menu .m-close{position:absolute;top:22px;right:var(--mx);font-family:var(--font-mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--c-ink);background:none;border:0;cursor:pointer;}
+.onroad-page.ad-archive .m-menu a{font-family:var(--font-serif);font-weight:300;font-size:clamp(1.8rem,7vw,2.6rem);letter-spacing:-.02em;color:var(--c-ink);text-decoration:none;padding:14px 0;border-bottom:1px solid var(--c-line);}
+.onroad-page.ad-archive .m-menu a .red{font-style:italic;}
+
+/* certification marquee strip */
+.onroad-page.ad-archive .creds{
+  border-top:1px solid var(--c-line);border-bottom:1px solid var(--c-line);
+  background:var(--c-paper);overflow:hidden;padding:0;
+}
+.onroad-page.ad-archive .creds .track{display:flex;gap:0;width:max-content;animation:marquee 38s linear infinite;}
+.onroad-page.ad-archive .creds .grp{display:flex;gap:0;}
+.onroad-page.ad-archive .creds .it{
+  font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.2em;font-size:.66rem;
+  color:var(--c-char);padding:16px clamp(20px,3vw,44px);display:flex;align-items:center;gap:clamp(20px,3vw,44px);white-space:nowrap;
+}
+.onroad-page.ad-archive .creds .it::after{content:"";width:4px;height:4px;background:var(--c-signal);display:inline-block;}
+@keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+@media (prefers-reduced-motion:reduce){.onroad-page.ad-archive .creds .track{animation:none;}}
+
+/* subscription comparison */
+.onroad-page.ad-archive .sub-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--c-ink);}
+.onroad-page.ad-archive .sub-card{padding:clamp(28px,4vw,52px);position:relative;}
+.onroad-page.ad-archive .sub-card.one{border-right:1px solid var(--c-line);}
+.onroad-page.ad-archive .sub-card.sea{background:var(--c-ink);color:var(--c-cream);}
+.onroad-page.ad-archive .sub-card .tag{display:inline-block;font-family:var(--font-mono);font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--c-meta);margin-bottom:22px;}
+.onroad-page.ad-archive .sub-card.sea .tag{color:var(--c-signal);}
+.onroad-page.ad-archive .sub-card h3{font-family:var(--font-serif);font-weight:300;font-size:clamp(1.5rem,2.6vw,2.1rem);letter-spacing:-.02em;line-height:1.2;margin-bottom:8px;color:var(--c-ink);}
+.onroad-page.ad-archive .sub-card.sea h3{color:var(--c-paper);}
+.onroad-page.ad-archive .sub-card h3 .red{font-style:italic;color:var(--c-signal);}
+.onroad-page.ad-archive .sub-card .pr{font-family:var(--font-serif);font-weight:300;font-size:clamp(2rem,3.4vw,2.8rem);letter-spacing:-.02em;color:var(--c-ink);font-variant-numeric:tabular-nums;margin:18px 0 4px;}
+.onroad-page.ad-archive .sub-card.sea .pr{color:var(--c-paper);}
+.onroad-page.ad-archive .sub-card .pr s{color:var(--c-meta);font-size:.55em;margin-right:10px;text-decoration-color:var(--c-signal);}
+.onroad-page.ad-archive .sub-card .per{font-family:var(--font-mono);font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--c-meta);}
+.onroad-page.ad-archive .sub-card.sea .per{color:var(--c-sand);}
+.onroad-page.ad-archive .sub-card ul{list-style:none;margin:24px 0 0;border-top:1px solid var(--c-line);}
+.onroad-page.ad-archive .sub-card.sea ul{border-top-color:rgba(216,208,194,.2);}
+.onroad-page.ad-archive .sub-card li{font-family:var(--font-serif);font-weight:300;font-size:.96rem;color:var(--c-char);padding:11px 0 11px 22px;border-bottom:1px solid var(--c-line);position:relative;line-height:1.5;}
+.onroad-page.ad-archive .sub-card.sea li{color:var(--c-cream);border-bottom-color:rgba(216,208,194,.2);}
+.onroad-page.ad-archive .sub-card li::before{content:"—";position:absolute;left:0;color:var(--c-signal);}
+.onroad-page.ad-archive .sub-card .sub-cta{margin-top:26px;}
+
+/* colophon / publisher's note */
+.onroad-page.ad-archive .colophon{background:var(--c-cream-2);border-top:1px solid var(--c-line);border-bottom:1px solid var(--c-line);}
+.onroad-page.ad-archive .colo-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(28px,5vw,80px);align-items:start;}
+.onroad-page.ad-archive .colo-grid .lead{font-family:var(--font-serif);font-weight:300;font-size:clamp(1.4rem,2.4vw,2.1rem);line-height:1.5;letter-spacing:-.015em;color:var(--c-ink);}
+.onroad-page.ad-archive .colo-grid .lead .red{font-style:italic;font-weight:400;}
+.onroad-page.ad-archive .colo-body p{font-family:var(--font-serif);font-weight:300;font-size:1.04rem;line-height:1.8;color:var(--c-char);margin-bottom:16px;max-width:52ch;}
+.onroad-page.ad-archive .colo-meta{margin-top:26px;border-top:1px solid var(--c-line);display:grid;grid-template-columns:repeat(2,auto);gap:10px 48px;justify-content:start;padding-top:20px;}
+.onroad-page.ad-archive .colo-meta .m{display:flex;flex-direction:column;gap:4px;}
+.onroad-page.ad-archive .colo-meta .m .k{font-family:var(--font-mono);font-size:.56rem;letter-spacing:.14em;text-transform:uppercase;color:var(--c-sand);}
+.onroad-page.ad-archive .colo-meta .m .v{font-family:var(--font-serif);font-weight:400;font-size:.98rem;color:var(--c-ink-2);}
+
 /* ---------- responsive ---------- */
 @media (max-width:900px){
+  .onroad-page.ad-archive .sub-grid{grid-template-columns:1fr;}
+  .onroad-page.ad-archive .sub-card.one{border-right:0;border-bottom:1px solid var(--c-line);}
+  .onroad-page.ad-archive .colo-grid{grid-template-columns:1fr;gap:30px;}
   .onroad-page.ad-archive .nav{display:none;}
   .onroad-page.ad-archive .nav-mobile{display:flex;}
   .onroad-page.ad-archive .nav-mobile .mono{color:var(--c-char);}
@@ -472,7 +550,7 @@
       <a href="#notes">Runners</a>
     </nav>
     <div class="head-icons">
-      <span class="nav-mobile"><span class="mono">Menu</span></span>
+      <span class="nav-mobile" id="mOpen"><span class="mono">Menu</span></span>
       <a href="#" aria-label="검색">
         <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="8" cy="8" r="5.4" stroke="currentColor" stroke-width="1.1"/><line x1="12.2" y1="12.2" x2="16" y2="16" stroke="currentColor" stroke-width="1.1"/></svg>
       </a>
@@ -507,9 +585,9 @@
         Onroad는 멈추지 않는 호흡과 발걸음에 관한 작은 연감입니다.
       </p>
       <div class="hero-meta fx d4">
-        <div class="stat"><span class="n">40<span style="font-size:.9rem;">mg</span></span><span class="l mono">옥타코사놀 / 정</span></div>
-        <div class="stat"><span class="n">1</span><span class="l mono">하루 한 정</span></div>
-        <div class="stat"><span class="n">60<span style="font-size:.9rem;">일</span></span><span class="l mono">60정 / 한 시즌</span></div>
+        <div class="stat"><span class="n"><span class="cnt" data-count="40">40</span><span style="font-size:.9rem;">mg</span></span><span class="l mono">옥타코사놀 / 정</span></div>
+        <div class="stat"><span class="n"><span class="cnt" data-count="1">1</span></span><span class="l mono">하루 한 정</span></div>
+        <div class="stat"><span class="n"><span class="cnt" data-count="60">60</span><span style="font-size:.9rem;">일</span></span><span class="l mono">60정 / 한 시즌</span></div>
       </div>
     </div>
 
@@ -577,6 +655,28 @@
   </div>
 </section>
 
+<!-- ============ CREDENTIALS MARQUEE ============ -->
+<div class="creds" aria-label="인증 및 보증">
+  <div class="track">
+    <div class="grp">
+      <span class="it">건강기능식품 인정 기능성</span>
+      <span class="it">옥타코사놀 40MG / 정</span>
+      <span class="it">GMP 적합 시설 제조</span>
+      <span class="it">무카페인 처방</span>
+      <span class="it">국내 생산 · EST 2026</span>
+      <span class="it">하루 한 정 · 60정 / 60일</span>
+    </div>
+    <div class="grp" aria-hidden="true">
+      <span class="it">건강기능식품 인정 기능성</span>
+      <span class="it">옥타코사놀 40MG / 정</span>
+      <span class="it">GMP 적합 시설 제조</span>
+      <span class="it">무카페인 처방</span>
+      <span class="it">국내 생산 · EST 2026</span>
+      <span class="it">하루 한 정 · 60정 / 60일</span>
+    </div>
+  </div>
+</div>
+
 <!-- ============ № 03 THE WALL (empathy / 30km) ============ -->
 <section class="wall ed-section" id="why">
   <div class="sec-head">
@@ -585,7 +685,7 @@
   </div>
   <div class="wall-grid">
     <figure class="wall-fig fx">
-      <div class="big-n">30<span class="unit">km</span></div>
+      <div class="big-n"><span class="cnt" data-count="30">30</span><span class="unit">km</span></div>
       <p class="cap mono" style="text-transform:none;letter-spacing:.04em;color:var(--c-char);line-height:1.7;">
         장거리 러너가 가장 자주 무너지는 거리. 다리가 아니라 연료가 먼저 바닥나는 구간.
       </p>
@@ -778,11 +878,46 @@
   </div>
 </section>
 
-<!-- ============ № 06 PROTOCOL (60-day ritual) ============ -->
+<!-- ============ № 06 SUBSCRIPTION ============ -->
+<section class="ed-section" id="plan">
+  <div class="sec-head">
+    <span class="t">한 번, 또는 매 시즌</span>
+    <span class="folio mono tab">№ 06 — SUBSCRIPTION</span>
+  </div>
+  <div class="sub-grid reveal">
+    <div class="sub-card one">
+      <span class="tag">Single — 단건 구매</span>
+      <h3>한 시즌, <br>한 통.</h3>
+      <div class="pr">₩48,000</div>
+      <div class="per">60정 / 60일 · 1회 결제</div>
+      <ul>
+        <li>옥타코사놀 40mg · 60정</li>
+        <li>언제든 원할 때 주문</li>
+        <li>무료 배송 (3만 원 이상)</li>
+      </ul>
+      <div class="sub-cta"><a href="#" class="btn-ghost">단건으로 시작 <span class="arr">→</span></a></div>
+    </div>
+    <div class="sub-card sea">
+      <span class="tag">Season — 정기 배송 · 5%</span>
+      <h3>끊기지 않는 <span class="red ital">시즌.</span></h3>
+      <div class="pr"><s>₩48,000</s>₩45,600</div>
+      <div class="per">60일마다 자동 배송 · 언제든 해지</div>
+      <ul>
+        <li>매 시즌 5% 할인 — 한 통당 ₩2,400 절약</li>
+        <li>다 비울 때쯤 다음 통 도착</li>
+        <li>배송 주기 조정 · 건너뛰기 가능</li>
+        <li>무료 배송</li>
+      </ul>
+      <div class="sub-cta"><a href="#" class="btn-buy">정기배송 시작하기 <span class="arr">→</span></a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ № 07 PROTOCOL (60-day ritual) ============ -->
 <section class="ed-section" id="protocol">
   <div class="sec-head">
     <span class="t">60일, 하나의 시즌</span>
-    <span class="folio mono tab">№ 06 — THE PROTOCOL</span>
+    <span class="folio mono tab">№ 07 — THE PROTOCOL</span>
   </div>
   <div class="protocol-head">
     <h2>매일 같은 시간, <span class="red ital">한 정.</span><br>반복이 곧 훈련입니다.</h2>
@@ -823,11 +958,11 @@
   </div>
 </section>
 
-<!-- ============ № 07 RUNNER NOTES (reviews) ============ -->
+<!-- ============ № 08 RUNNER NOTES (reviews) ============ -->
 <section class="ed-section" id="notes">
   <div class="sec-head">
     <span class="t">러너의 노트</span>
-    <span class="folio mono tab">№ 07 — FIELD NOTES</span>
+    <span class="folio mono tab">№ 08 — FIELD NOTES</span>
   </div>
   <div class="notes-grid">
     <article class="note fx">
@@ -848,11 +983,11 @@
   </div>
 </section>
 
-<!-- ============ № 08 FAQ ============ -->
+<!-- ============ № 09 FAQ ============ -->
 <section class="ed-section" id="faq">
   <div class="sec-head">
     <span class="t">자주 묻는 질문</span>
-    <span class="folio mono tab">№ 08 — Q &amp; A</span>
+    <span class="folio mono tab">№ 09 — Q &amp; A</span>
   </div>
   <div class="faq-list">
     <div class="faq-row fx">
@@ -893,11 +1028,42 @@
   </div>
 </section>
 
-<!-- ============ № 09 JOURNAL / INDEX teaser ============ -->
+<!-- ============ № 10 COLOPHON / publisher's note ============ -->
+<section class="colophon ed-section" id="colophon">
+  <div class="sec-head">
+    <span class="t">발행인의 말</span>
+    <span class="folio mono tab">№ 10 — COLOPHON</span>
+  </div>
+  <div class="colo-grid">
+    <p class="lead reveal">
+      우리는 영양제를 만들지 않습니다.<br>
+      <span class="red">오래 달리는 사람</span>을 위한<br>한 권의 기록을 만듭니다.
+    </p>
+    <div class="colo-body reveal r1">
+      <p>
+        Onroad는 장거리 러너의 새벽에서 시작됐습니다. 기록을 좇다 보면 어느 날 다리가 아니라
+        꾸준함이 먼저 무너진다는 것을 우리는 압니다. 그래서 화려한 약속 대신, 매일 한 정의
+        단정한 습관을 택했습니다.
+      </p>
+      <p>
+        옥타코사놀 40mg과 비타민 B군. 더하지도 덜지도 않은 처방을, 60일이라는 한 시즌의 단위로
+        담았습니다. 이 연감은 그 시즌들을 모은 첫 권이며, 다음 권은 당신의 기록으로 채워집니다.
+      </p>
+      <div class="colo-meta">
+        <div class="m"><span class="k">Published</span><span class="v">Onroad Editorial · Vol.01</span></div>
+        <div class="m"><span class="k">Origin</span><span class="v">사탕수수 · 밀 배아 유래</span></div>
+        <div class="m"><span class="k">Season</span><span class="v">60정 / 60일 · ₩48,000</span></div>
+        <div class="m"><span class="k">Est.</span><span class="v">Seoul · 2026</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ № 11 JOURNAL / INDEX teaser ============ -->
 <section class="ed-section" id="journal">
   <div class="sec-head">
     <span class="t">연감의 차례</span>
-    <span class="folio mono tab">№ 09 — INDEX</span>
+    <span class="folio mono tab">№ 11 — INDEX</span>
   </div>
   <div class="index-grid">
     <article class="idx-cell fx">
@@ -927,7 +1093,7 @@
     </svg>
   </div>
   <div class="final-inner">
-    <span class="mono eyebrow">№ 10 — Onroad · Endurance Core</span>
+    <span class="mono eyebrow">№ 12 — Onroad · Endurance Core</span>
     <h2>먼 길의 동행을<br>오늘 <span class="red ital">시작합니다.</span></h2>
     <div class="fin-cta">
       <a href="#" class="btn-buy">지금 구매하기 <span class="arr">→</span></a>
@@ -976,6 +1142,88 @@
     <span class="copy">© 2026 Onroad — The Field Journal</span>
   </div>
 </footer>
+
+<!-- ============ MOBILE MENU ============ -->
+<nav class="m-menu" id="mMenu" aria-label="모바일 메뉴">
+  <button class="m-close" id="mClose">닫기 ✕</button>
+  <a href="#core">Endurance <span class="red ital">Core</span></a>
+  <a href="#spec">Product · 명세</a>
+  <a href="#science">Ingredient · 성분</a>
+  <a href="#protocol">Protocol · 프로토콜</a>
+  <a href="#notes">Runners · 노트</a>
+  <a href="#buy">지금 <span class="red ital">구매하기</span></a>
+</nav>
+
+<script>
+(function(){
+  var root=document.querySelector('.onroad-page.ad-archive');
+  if(!root) return;
+  root.classList.add('has-js');
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---- scroll reveal ---- */
+  var reveals=[].slice.call(root.querySelectorAll('.reveal'));
+  function showAll(){reveals.forEach(function(el){el.classList.add('in');});}
+  if(reduce||!('IntersectionObserver'in window)){showAll();}
+  else{
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+    },{threshold:0.12,rootMargin:'0px 0px -8% 0px'});
+    reveals.forEach(function(el){io.observe(el);});
+    /* safety: never leave anything hidden */
+    setTimeout(showAll,3500);
+  }
+
+  /* ---- counters ---- */
+  var counters=[].slice.call(root.querySelectorAll('.cnt'));
+  function animateCount(el){
+    var target=parseInt(el.getAttribute('data-count'),10)||0;
+    if(reduce){el.textContent=target;return;}
+    var start=null,dur=1100;
+    function step(ts){
+      if(!start)start=ts;
+      var p=Math.min((ts-start)/dur,1);
+      var eased=1-Math.pow(1-p,3);
+      el.textContent=Math.round(eased*target);
+      if(p<1)requestAnimationFrame(step);else el.textContent=target;
+    }
+    el.textContent='0';requestAnimationFrame(step);
+  }
+  if(!('IntersectionObserver'in window)||reduce){counters.forEach(function(el){el.textContent=el.getAttribute('data-count');});}
+  else{
+    var cio=new IntersectionObserver(function(es){
+      es.forEach(function(e){if(e.isIntersecting){animateCount(e.target);cio.unobserve(e.target);}});
+    },{threshold:0.6});
+    counters.forEach(function(el){cio.observe(el);});
+    setTimeout(function(){counters.forEach(function(el){if(el.textContent==='0')el.textContent=el.getAttribute('data-count');});},3500);
+  }
+
+  /* ---- header scrolled state ---- */
+  var head=root.querySelector('.site-head');
+  function onScroll(){if(head)head.classList.toggle('scrolled',window.scrollY>40);}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  /* ---- mobile menu ---- */
+  var open=document.getElementById('mOpen'),menu=document.getElementById('mMenu'),close=document.getElementById('mClose');
+  if(open&&menu){
+    open.addEventListener('click',function(){menu.classList.add('open');document.body.style.overflow='hidden';});
+    function shut(){menu.classList.remove('open');document.body.style.overflow='';}
+    if(close)close.addEventListener('click',shut);
+    [].slice.call(menu.querySelectorAll('a')).forEach(function(a){a.addEventListener('click',shut);});
+  }
+
+  /* ---- smooth anchor scroll ---- */
+  [].slice.call(root.querySelectorAll('a[href^="#"]')).forEach(function(a){
+    a.addEventListener('click',function(ev){
+      var id=a.getAttribute('href');if(id.length<2)return;
+      var t=root.querySelector(id);if(!t)return;
+      ev.preventDefault();
+      var y=t.getBoundingClientRect().top+window.scrollY-64;
+      window.scrollTo({top:y,behavior:reduce?'auto':'smooth'});
+    });
+  });
+})();
+</script>
 
 </body>
 </html>
