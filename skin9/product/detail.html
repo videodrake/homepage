@@ -1,5 +1,7 @@
 ﻿<!--@layout(/layout/basic/detail_layout.html)-->
 
+<!--@css(/layout/basic/css/onroad-v3-product.css)-->
+
 <div class="section path" module="product_headcategory" data-ez-module="product-head-breadcrumb/1">
     <span>현재 위치</span>
     <ol>
@@ -11,7 +13,7 @@
     </ol>
 </div>
 
-<div class="section onroad-product-detail-page" module="product_detail">
+<div class="section onroad-product-detail-page pd-v3-product" id="pdPurchase" module="product_detail">
     <!--@css(/css/module/product/detail.css)-->
     <!--@js(/js/module/product/detail.js)-->
     <!--
@@ -19,6 +21,7 @@
     -->
     <div class="detailArea pd-grid">
         <div class="pd-media">
+            <div class="pd-v3-media-head" aria-hidden="true"><span>ENDURANCE CORE</span><span>60 DAYS</span></div>
             <div class="imgArea" module="product_image">
                 <!--@js(/js/module/product/product_image.js)-->
                 <div class="RW">
@@ -62,9 +65,11 @@
         <div class="infoArea" data-ez-role="ez-discount-tag">
             <div class="headingArea">
                 <div class="icon">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$today_arrival_icon} {$pickup_icon} {$benefit_icons} {$regular_delivery_icon} {$cultural_tax_icon}</div>
-                <div class="pd-eyebrow">Onroad / Endurance Core</div>
-                <h1>{$name}</h1>
-                <p class="pd-lede">운동과 일상의 페이스를 위한 지구력 관리 루틴.<br>옥타코사놀 40mg과 비타민B군 기능성 원료를 하루 1정에 담았습니다.</p>
+                <div class="pd-eyebrow">RUNNER'S DAILY ENDURANCE ROUTINE</div>
+                <p class="pd-v3-product-name">ONROAD · {$name}</p>
+                <h1><span>지구력 관리,</span><span>이제 일상에서부터.</span></h1>
+                <p class="pd-lede">달리는 중 필요한 보충과 평소 이어가는 관리는 역할이 다릅니다. 지구력코어는 달리는 생활 속에서 하루 1정으로 꾸준히 이어가는 지구력 관리 건강기능식품입니다.</p>
+                <div class="pd-v3-function"><span>FUNCTIONAL INGREDIENT</span><strong>옥타코사놀 40mg</strong><p>지구력 증진에 도움을 줄 수 있음</p></div>
                 <div class="pd-v2-badges" aria-label="제품 핵심 정보"><span>하루 1정</span><span>60정 · 약 2개월분</span><span>무료배송</span><span>첫 구매 3,000원 쿠폰</span></div>
                 <span class="delivery {$delvtype_display|display}">(해외배송 가능상품)</span>
             </div>
@@ -149,13 +154,6 @@
                             <td class="right"><span class="{$total.quantity_price}">{$product_price}</span></td>
                         </tr>
                     </tbody>
-                    <tbody class="{$option_display|display}">
-                        <tr>
-                            <td>{$product_name}</td>
-                            <td><span class="quantity">{$quantity}</span></td>
-                            <td class="right"><span class="{$total.quantity_price}">{$product_price}</span></td>
-                        </tr>
-                    </tbody>
                 </table>
             </div>
 
@@ -185,6 +183,28 @@
         </div>
     </div>
 </div>
+
+<section class="pd-v3-proof" aria-labelledby="pdProofTitle">
+    <div class="pd-v3-shell">
+        <div class="pd-v3-proof__head">
+            <p>WHY ENDURANCE CORE</p>
+            <h2 id="pdProofTitle"><span>달리는 사람의 하루에 맞춘</span><span>네 가지 선택 기준.</span></h2>
+        </div>
+        <div class="pd-v3-proof__grid">
+            <article><span>01 / FUNCTION</span><strong>옥타코사놀 40mg</strong><p>지구력 증진에 도움을 줄 수 있는 기능성 원료</p></article>
+            <article><span>02 / ENERGY</span><strong>비타민B군 5종</strong><p>에너지 대사와 체내 에너지 생성 등에 필요한 기능성 원료</p></article>
+            <article class="is-blue"><span>03 / ROUTINE</span><strong>하루 1정 · 60일분</strong><p>운동하는 날과 쉬는 날에도 이어가기 쉬운 섭취 방식</p></article>
+            <article><span>04 / PLUS</span><strong>부원료까지 함께</strong><p>타우린·비타민C·아르기닌 부원료 함유</p></article>
+        </div>
+    </div>
+</section>
+
+<nav class="pd-v3-anchor" aria-label="상품 페이지 바로가기">
+    <a href="#pdPurchase">상품 구매</a>
+    <a href="#prdDetail">심의 상세</a>
+    <a href="#prdReview">리뷰</a>
+    <a href="#prdQnA">Q&amp;A</a>
+</nav>
 
 <!--@import(/coupon/coupon_productdetail.html)-->
 <div class="section onroad-product-additional-page" module="product_additional">
@@ -229,6 +249,11 @@
     </section>
 
     <section id="prdDetail" class="pd-flow pd-flow--detail">
+        <div class="pd-v3-detail-head">
+            <p>APPROVED PRODUCT DETAIL</p>
+            <h2><span>원료와 기능성을</span><span>꼼꼼히 확인하세요.</span></h2>
+            <small>카페24 상품관리에서 등록한 심의 완료 상세페이지를 그대로 표시합니다.</small>
+        </div>
         <div class="productDetail"><div>{$product_detail}</div></div>
     </section>
 
