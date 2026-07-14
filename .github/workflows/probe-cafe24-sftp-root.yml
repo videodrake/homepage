@@ -1,0 +1,92 @@
+name: Probe Cafe24 SFTP root
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/probe-cafe24-sftp-root.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: cafe24-sftp
+  cancel-in-progress: false
+
+jobs:
+  probe-root:
+    name: Create, verify, and remove a root test directory
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Install lftp
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends lftp
+
+      - name: Validate Cafe24 SFTP secrets
+        env:
+          SFTP_HOST: ${{ secrets.CAFE24_SFTP_HOST }}
+          SFTP_PORT: ${{ secrets.CAFE24_SFTP_PORT }}
+          SFTP_USER: ${{ secrets.CAFE24_SFTP_USER }}
+          SFTP_PASS: ${{ secrets.CAFE24_SFTP_PASS }}
+        run: |
+          set -euo pipefail
+          for key in SFTP_HOST SFTP_PORT SFTP_USER SFTP_PASS; do
+            if [ -z "${!key:-}" ]; then
+              echo "::error::Missing required Cafe24 SFTP setting: ${key}"
+              exit 1
+            fi
+          done
+
+      - name: Probe SFTP root without touching /base
+        env:
+          SFTP_HOST: ${{ secrets.CAFE24_SFTP_HOST }}
+          SFTP_PORT: ${{ secrets.CAFE24_SFTP_PORT }}
+          SFTP_USER: ${{ secrets.CAFE24_SFTP_USER }}
+          SFTP_PASS: ${{ secrets.CAFE24_SFTP_PASS }}
+        run: |
+          set -euo pipefail
+
+          PROBE_DIR="/codex-skin-root-probe-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          PROBE_FILE="${PROBE_DIR}/probe.txt"
+          LOCAL_FILE="${RUNNER_TEMP}/cafe24-root-probe.txt"
+          ROUNDTRIP_FILE="${RUNNER_TEMP}/cafe24-root-probe-roundtrip.txt"
+
+          printf 'repository=%s\nrun_id=%s\nrun_attempt=%s\n' \
+            "${GITHUB_REPOSITORY}" "${GITHUB_RUN_ID}" "${GITHUB_RUN_ATTEMPT}" > "${LOCAL_FILE}"
+
+          cleanup() {
+            lftp <<LFTP_CLEANUP || true
+          set cmd:fail-exit no
+          set sftp:auto-confirm yes
+          set net:max-retries 1
+          set net:timeout 15
+          open -u "$SFTP_USER","$SFTP_PASS" sftp://$SFTP_HOST:$SFTP_PORT
+          rm -f "$PROBE_FILE"
+          rmdir "$PROBE_DIR"
+          bye
+          LFTP_CLEANUP
+          }
+          trap cleanup EXIT
+
+          echo "::notice::Testing create/write/read permissions in SFTP root. /base is not accessed."
+          lftp <<LFTP_PROBE
+          set cmd:fail-exit yes
+          set sftp:auto-confirm yes
+          set net:max-retries 2
+          set net:timeout 20
+          set net:reconnect-interval-base 3
+          open -u "$SFTP_USER","$SFTP_PASS" sftp://$SFTP_HOST:$SFTP_PORT
+          mkdir "$PROBE_DIR"
+          put "$LOCAL_FILE" -o "$PROBE_FILE"
+          get "$PROBE_FILE" -o "$ROUNDTRIP_FILE"
+          rm "$PROBE_FILE"
+          rmdir "$PROBE_DIR"
+          bye
+          LFTP_PROBE
+
+          cmp "${LOCAL_FILE}" "${ROUNDTRIP_FILE}"
+          trap - EXIT
+          echo "::notice::Cafe24 SFTP root supports a separate skin directory. /base remained untouched."
+
