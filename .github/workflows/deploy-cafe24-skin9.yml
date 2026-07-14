@@ -1,0 +1,151 @@
+name: Deploy Onroad V2 to Cafe24 skin9
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/deploy-cafe24-skin9.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: cafe24-sftp
+  cancel-in-progress: false
+
+jobs:
+  deploy-skin9:
+    name: Back up and replace /skin9
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate source skin
+        run: |
+          set -euo pipefail
+          test -f skin9/index.html
+          test -f skin9/product/detail.html
+          test -f skin9/layout/basic/layout.html
+          test -f skin9/layout/basic/css/onroad-v2.css
+          test -f skin9/layout/basic/js/onroad-v2.js
+          grep -Fq '{$product_detail}' skin9/product/detail.html
+          if find skin9 -type f \( -path '*/base/*' -o -path '*/web/*' -o -path '*/mobile*/*' \) | grep -q .; then
+            echo '::error::Source contains a forbidden Cafe24 system path.'
+            exit 1
+          fi
+
+      - name: Install lftp
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends lftp
+
+      - name: Validate Cafe24 SFTP secrets
+        env:
+          SFTP_HOST: ${{ secrets.CAFE24_SFTP_HOST }}
+          SFTP_PORT: ${{ secrets.CAFE24_SFTP_PORT }}
+          SFTP_USER: ${{ secrets.CAFE24_SFTP_USER }}
+          SFTP_PASS: ${{ secrets.CAFE24_SFTP_PASS }}
+        run: |
+          set -euo pipefail
+          for key in SFTP_HOST SFTP_PORT SFTP_USER SFTP_PASS; do
+            if [ -z "${!key:-}" ]; then
+              echo "::error::Missing required Cafe24 SFTP setting: ${key}"
+              exit 1
+            fi
+          done
+
+      - name: Back up current skin9
+        env:
+          SFTP_HOST: ${{ secrets.CAFE24_SFTP_HOST }}
+          SFTP_PORT: ${{ secrets.CAFE24_SFTP_PORT }}
+          SFTP_USER: ${{ secrets.CAFE24_SFTP_USER }}
+          SFTP_PASS: ${{ secrets.CAFE24_SFTP_PASS }}
+        run: |
+          set -euo pipefail
+          mkdir -p "${RUNNER_TEMP}/skin9-backup"
+          backup_status=0
+          lftp <<LFTP_BACKUP || backup_status=$?
+          set cmd:fail-exit yes
+          set sftp:auto-confirm yes
+          set net:max-retries 3
+          set net:timeout 30
+          set net:reconnect-interval-base 5
+          open -u "$SFTP_USER","$SFTP_PASS" sftp://$SFTP_HOST:$SFTP_PORT
+          cls -l /skin9/
+          mirror \
+            --verbose \
+            --parallel=2 \
+            --no-perms \
+            --exclude-glob robots.txt.20260429_0828 \
+            --exclude-glob sitemap0.xml.temp \
+            --exclude-glob calendar/app/js/swiper/swiper-bundle.min.js.map \
+            --exclude-glob preference/board/board_title_4.ini \
+            --exclude-glob preference/product/product_category.ini \
+            /skin9/ "${RUNNER_TEMP}/skin9-backup/"
+          bye
+          LFTP_BACKUP
+          find "${RUNNER_TEMP}/skin9-backup" -type l -delete
+          for required in index.html product/detail.html layout/basic/layout.html; do
+            if [ ! -f "${RUNNER_TEMP}/skin9-backup/${required}" ]; then
+              echo "::error::Rollback backup is missing required file: ${required}"
+              exit 1
+            fi
+          done
+          if [ "${backup_status}" -ne 0 ]; then
+            echo '::warning::Cafe24 refused one or more platform-managed files; all required rollback files were backed up.'
+          fi
+
+      - name: Save rollback artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: cafe24-skin9-backup-${{ github.run_id }}
+          path: ${{ runner.temp }}/skin9-backup
+          if-no-files-found: error
+          retention-days: 14
+
+      - name: Replace skin9 with Onroad V2
+        env:
+          SFTP_HOST: ${{ secrets.CAFE24_SFTP_HOST }}
+          SFTP_PORT: ${{ secrets.CAFE24_SFTP_PORT }}
+          SFTP_USER: ${{ secrets.CAFE24_SFTP_USER }}
+          SFTP_PASS: ${{ secrets.CAFE24_SFTP_PASS }}
+        run: |
+          set -euo pipefail
+          echo '::notice::Replacing /skin9 only. /base and /skin8 are not accessed.'
+          lftp <<LFTP_DEPLOY
+          set cmd:fail-exit yes
+          set sftp:auto-confirm yes
+          set net:max-retries 3
+          set net:timeout 30
+          set net:reconnect-interval-base 5
+          set mirror:use-pget-n 0
+          set xfer:clobber on
+          open -u "$SFTP_USER","$SFTP_PASS" sftp://$SFTP_HOST:$SFTP_PORT
+          mirror \
+            --reverse \
+            --verbose \
+            --delete \
+            --no-perms \
+            --parallel=2 \
+            --exclude-glob .DS_Store \
+            --exclude-glob .git \
+            --exclude-glob .gitkeep \
+            --exclude-glob Thumbs.db \
+            --exclude-glob '*.swp' \
+            --exclude-glob ez/ez-settings.json \
+            --exclude-glob robots.txt.20260429_0828 \
+            --exclude-glob sitemap0.xml.temp \
+            --exclude-glob calendar/app/js/swiper/swiper-bundle.min.js.map \
+            --exclude-glob preference/board/board_title_4.ini \
+            --exclude-glob preference/product/product_category.ini \
+            --exclude-glob order/ec_orderform/* \
+            --exclude-glob preference/* \
+            skin9/ /skin9/
+          cls -l /skin9/index.html
+          cls -l /skin9/product/detail.html
+          cls -l /skin9/layout/basic/css/onroad-v2.css
+          bye
+          LFTP_DEPLOY
+          echo '::notice::Onroad V2 upload to /skin9 completed. /base and /skin8 remained untouched.'
