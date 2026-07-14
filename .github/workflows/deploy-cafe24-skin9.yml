@@ -4,6 +4,7 @@ on:
   push:
     branches: [main]
     paths:
+      - 'skin9/**'
       - '.github/workflows/deploy-cafe24-skin9.yml'
   workflow_dispatch:
 
