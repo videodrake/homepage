@@ -26,6 +26,21 @@ body.onroad-detail .pd-v3-product .detailArea.pd-grid { display: grid; grid-temp
 body.onroad-detail .pd-v3-product .pd-media,
 body.onroad-detail .pd-v3-product .infoArea { min-width: 0; }
 
+body.onroad-detail.onroad-page .pd-v3-product .infoArea.is-docked {
+    position: static !important;
+    inset: auto !important;
+    width: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+    display: block !important;
+    background: #fff !important;
+    border: 0 !important;
+    padding: clamp(32px, 4vw, 56px) !important;
+    box-shadow: 0 26px 70px rgba(7,27,60,.08) !important;
+}
+body.onroad-detail.onroad-page .pd-v3-product .infoArea.is-docked::before,
+body.onroad-detail.onroad-page .pd-v3-product .infoArea.is-docked::after { content: none !important; display: none !important; }
+
 body.onroad-detail .pd-v3-product .pd-media { position: sticky; top: 104px; overflow: hidden; padding: 22px clamp(22px, 3vw, 42px) clamp(28px, 4vw, 54px); background: #b8def4; }
 body.onroad-detail .pd-v3-media-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; color: var(--pd3-blue); font-size: 9px; line-height: 1; font-weight: 900; letter-spacing: .16em; }
 body.onroad-detail .pd-v3-product .imgArea { position: static; }
@@ -111,6 +126,14 @@ body.onroad-detail .pd-v3-product .pd-disclaim { margin: 16px 0 0; color: var(--
 .pd-v3-anchor a:hover { background: var(--pd3-blue); color: #fff !important; }
 
 body.onroad-detail .onroad-product-additional-page { width: 100%; max-width: none; margin: 0; padding-inline: 0 !important; display: flex; flex-direction: column; background: #fff; box-sizing: border-box; }
+body.onroad-detail.onroad-page #contents > .section.onroad-product-additional-page {
+    width: 100% !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
 body.onroad-detail .onroad-product-additional-page .pd-flow,
 body.onroad-detail .onroad-product-additional-page .pd-guide {
     box-sizing: border-box;
@@ -118,6 +141,17 @@ body.onroad-detail .onroad-product-additional-page .pd-guide {
     max-width: var(--pd3-shell) !important;
     margin-inline: auto !important;
     transform: none !important;
+}
+body.onroad-detail.onroad-page #contents > .onroad-product-additional-page .pd-flow {
+    width: min(calc(100% - clamp(32px, 5vw, 80px)), var(--pd3-shell)) !important;
+    max-width: var(--pd3-shell) !important;
+    margin-inline: auto !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+body.onroad-detail.onroad-page #contents > .onroad-product-additional-page #prdDetail {
+    width: 100% !important;
+    max-width: none !important;
 }
 body.onroad-detail.onroad-page .onroad-product-additional-page #prdInfo.pd-guide {
     width: min(calc(100% - clamp(32px, 5vw, 80px)), var(--pd3-shell)) !important;
@@ -151,17 +185,19 @@ body.onroad-detail .pd-guide__head > span { color: var(--pd3-blue); font-size: 9
 body.onroad-detail .pd-guide__head > p { color: var(--pd3-muted); }
 
 @media (max-width: 1180px) {
-    body.onroad-detail .pd-v3-product .detailArea.pd-grid { grid-template-columns: minmax(0,1fr) minmax(390px,.9fr); gap: 34px; }
-    body.onroad-detail .pd-v3-product .infoArea { padding: 36px; }
+    body.onroad-detail .pd-v3-product .detailArea.pd-grid { grid-template-columns: minmax(0,1fr) minmax(390px,.9fr) !important; gap: 34px !important; }
+    body.onroad-detail .pd-v3-product .infoArea,
+    body.onroad-detail.onroad-page .pd-v3-product .infoArea.is-docked { padding: 36px !important; }
     body.onroad-detail .pd-v3-product .headingArea h1 { font-size: 39px; }
 }
 
 @media (max-width: 980px) {
     body.onroad-detail .pd-v3-product { width: min(calc(100% - 32px), 800px); }
-    body.onroad-detail .pd-v3-product .detailArea.pd-grid { grid-template-columns: 1fr; gap: 24px; }
-    body.onroad-detail .pd-v3-product .pd-media { position: static; }
+    body.onroad-detail .pd-v3-product .detailArea.pd-grid { grid-template-columns: 1fr !important; gap: 24px !important; }
+    body.onroad-detail .pd-v3-product .pd-media { position: static !important; }
     body.onroad-detail .pd-v3-product .headingArea h1 { font-size: clamp(44px, 7vw, 58px); }
-    body.onroad-detail .pd-v3-product .infoArea { padding: clamp(32px, 6vw, 54px); }
+    body.onroad-detail .pd-v3-product .infoArea,
+    body.onroad-detail.onroad-page .pd-v3-product .infoArea.is-docked { padding: clamp(32px, 6vw, 54px) !important; }
     .pd-v3-proof__head { grid-template-columns: 1fr; }
     .pd-v3-proof__grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
     .pd-v3-proof__grid article:nth-child(2) { border-right: 0; }
