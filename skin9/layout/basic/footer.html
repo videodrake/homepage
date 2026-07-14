@@ -1,0 +1,60 @@
+<footer id="footer" class="orv2-footer onroad-page" data-ez="contents-onroad-v2-footer-1">
+    <div class="orv2-footer__lead">
+        <p>KEEP YOUR PACE</p>
+        <h2>계속 달리는 사람으로.</h2>
+        <a href="/product/detail.html?product_no=11">하루 1정 루틴 시작하기 <span aria-hidden="true">→</span></a>
+    </div>
+
+    <div class="orv2-footer__grid" module="Layout_footer">
+        <div class="orv2-footer__brand">
+            <strong>ONROAD</strong>
+            <p>운동과 일상을 자기 페이스로 이어가고 싶은 사람을 위한 지구력 관리 루틴 브랜드.</p>
+        </div>
+        <div>
+            <h3>SHOP</h3>
+            <a href="/product/detail.html?product_no=11">지구력코어</a>
+            <a href="/coupon/coupon_zone.html">쿠폰</a>
+            <a href="/order/basket.html">장바구니</a>
+        </div>
+        <div>
+            <h3>EXPLORE</h3>
+            <a href="/shopinfo/ingredient-science.html">원료와 기능성</a>
+            <a href="/shopinfo/intake-guide.html">섭취 가이드</a>
+            <a href="/journal/index.html">러닝 노트</a>
+            <a href="/shopinfo/company.html">브랜드</a>
+        </div>
+        <div>
+            <h3>SUPPORT</h3>
+            <a href="/member/login.html">로그인</a>
+            <a href="/myshop/index.html">마이페이지</a>
+            <a href="/board/product/list.html?board_no=6">상품 문의</a>
+            <a href="/shopinfo/guide.html">이용안내</a>
+        </div>
+    </div>
+
+    <div class="orv2-footer__legal" module="Layout_footer">
+        <div>
+            <a href="/member/mall_agreement.html">이용약관</a>
+            <a href="/member/privacy.html"><strong>개인정보처리방침</strong></a>
+            <a href="/shopinfo/guide.html">이용안내</a>
+        </div>
+        <p>상호 {$company_name} · 대표 {$president_name} · 사업자등록번호 {$company_regno}<br>통신판매업 신고 {$network_regno} · 고객센터 {$phone}<br>주소 {$address}</p>
+        <p>옥타코사놀: 지구력 증진에 도움을 줄 수 있음. 본 제품은 질병의 예방 및 치료를 위한 의약품이 아닙니다.</p>
+        <p>© {$mall_name}. All rights reserved.</p>
+    </div>
+</footer>
+
+<div module="Layout_SearchHeader" data-ez="contents-onroad-v2-search-1">
+    <!--
+        $product_page=/product/detail.html
+        $category_page=/product/list.html
+    -->
+    <div class="title">상품 검색</div>
+    <fieldset>
+        <legend>상품 검색</legend>
+        {$form.keyword}<button type="button" class="btnDelete">삭제</button><button type="button" class="btnSearch" onclick="{$action_search_submit}"><!--@import(/svg/icon-search.html)--> 검색</button><ul class="autoDrop" id="{$search_auto_id}"></ul>
+    </fieldset>
+    <button type="button" class="btnClose"><i aria-hidden="true" class="icon icoClose"></i>닫기</button>
+</div>
+
+<!--#ez="1/2"-->

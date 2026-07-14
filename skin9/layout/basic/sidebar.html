@@ -1,0 +1,57 @@
+<aside id="aside" module="layout_slidePackage" data-ez="contents-102lhyg-1">
+    <!--@css(/layout/basic/css/slideMenu.css)-->
+	<!--@js(/layout/basic/js/slide_menu.js)-->
+	<div class="navigation_member">
+		<div class="side_logo" module="Layout_LogoTop"><a href="/">온로드</a></div>
+
+		<div class="navigation_state" data-ez-group="top-util-menu" data-ez-role="list">
+			<a data-ez-item="join" module="Layout_statelogoff" href="/member/agreement.html">회원가입</a>
+			<a data-ez-item="login" module="Layout_statelogoff" href="/member/login.html">로그인</a>
+			<a data-ez-item="modify" module="Layout_stateLogon" href="/member/modify.html">내정보수정</a>
+			<a data-ez-item="logout" module="Layout_stateLogon" href="{$action_logout}">로그아웃</a>
+			<a data-ez-item="order" href="/myshop/order/list.html">주문조회</a>
+			<a data-ez-item="mypage" module="Layout_stateLogon" href="/myshop/index.html">마이페이지</a>
+			<a data-ez-item="recent" href="/product/recent_view_product.html">최근 본 제품</a>
+		</div><!-- //navigation_state -->
+	</div><!-- //navigation_member -->
+
+    <nav class="navigation-menu" role="navigation">
+		<div data-ez-module="menu-side/1"><div id="slideCateList" class="navigation-menu__category">
+  <ul id="slide_add_category">
+	<li><a href="/shopinfo/health-functional.html" class="view">건강기능식품</a></li>
+	<li><a href="/product/detail.html?product_no=11" class="view">제품 구매</a></li>
+	<li><a href="/shopinfo/endurance-core.html" class="view">지구력코어</a></li>
+	<li><a href="/shopinfo/ingredient-science.html" class="view">성분 과학</a></li>
+	<li><a href="/shopinfo/intake-guide.html" class="view">섭취 가이드</a></li>
+	<li><a href="/shopinfo/runner-reviews.html" class="view">포토리뷰</a></li>
+  </ul>
+  </div></div><!-- //menu-side/1 -->
+
+		<div class="cboth slide_line"></div>
+
+        <div class="navigation-menu__board">
+			<div class="title">러너 고객센터<button type="button" class="icoCategory">펼침</button></div>
+            <ul class="categoryList">
+                <li><a href="/board/free/list.html?board_no=1">공지</a></li>
+                <li><a href="/shopinfo/ingredient-science.html">성분 과학</a></li>
+                <li><a href="/shopinfo/intake-guide.html">섭취 가이드</a></li>
+                <li><a href="/shopinfo/runner-reviews.html">포토리뷰</a></li>
+                <li><a href="/board/free/list.html?board_no=5">제품 Q&A</a></li>
+            </ul>
+        </div><!-- //navigation-menu__board -->
+
+		<div module="Layout_multishopList">
+			<button type="button" class="toggle">{$current_language} <i aria-hidden="true" class="icon icoArrowBottom"></i></button>
+			<ul module="Layout_multishopListitem">
+				<li class="{$selected_class}">
+					<a href="//{$shop_domain}/">{$locale_language}</a>
+				</li>
+				<li class="{$selected_class}">
+					<a href="//{$shop_domain}/">{$locale_language}</a>
+				</li>
+			</ul>
+		</div>
+    </nav>
+    <button type="button" class="btnClose"><i aria-hidden="true" class="icon icoClose"></i>닫기</button>
+</aside>
+<!--#ez="1/2"-->

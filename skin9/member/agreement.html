@@ -1,0 +1,236 @@
+﻿<!--@layout(/layout/basic/layout.html)-->
+<div class="section path onroad-auth-path">
+    <span>현재 위치</span>
+    <ol>
+        <li><a href="/">홈</a></li>
+        <li title="현재 위치"><strong>회원 가입</strong></li>
+    </ol>
+</div>
+
+<div class="section titleArea onroad-join-title onroad-agreement-title">
+    <h2>회원 가입</h2>
+    <p>약관에 동의하고 정보 입력으로 진행합니다.</p>
+</div>
+
+<div class="section ec-base-step onroad-join-step onroad-agreement-step onroad-agreement-step--compact">
+    <ol class="step">
+        <li class="selected">1. 약관동의</li>
+        <li>2. 정보입력</li>
+        <li>3. 가입완료</li>
+    </ol>
+</div>
+
+<!-- ▼ Onroad onroad-agree-v2 — full rebuild as single-column stack:
+     Row 1: 전체 동의 (full-width, dark, button-like).
+     Row 2~N: 필수 cards stacked.
+     Row N+1~M: 선택 cards stacked.
+     All cafe24 module / {$var} / id / form macro / onclick hooks preserved
+     verbatim. No checkbox name, no input id changed. join_agreement.js
+     selectors (#sAgreeAllChecked, .agreeArea, .btnToggle, .contents,
+     .ec-base-chk inputs) all still present. -->
+<div module="member_join" id="jgAgreeV2" class="section onroad-agreement-page onroad-agree-v2">
+    <!--@js(/js/module/member/join_agreement.js)-->
+    <!--@css(/css/module/member/join_agreement.css)-->
+    <!--
+        $loginPageUrl = /member/login.html
+        $joinPageUrl = /member/join.html
+    -->
+
+    <div class="onroad-agree-v2__stack">
+
+        <!-- ═══ Row 1: 전체 동의 ═══ -->
+        <div class="agreeAll onroad-consent-all onroad-agree-v2__all">
+            <div class="onroad-agree-v2__all-text">
+                <span class="onroad-agree-v2__all-eyebrow">ALL CONSENT</span>
+                <strong>전체 약관에 동의합니다</strong>
+                <span class="onroad-agree-v2__all-desc">필수·선택 항목 모두 한 번에. 개별 항목은 아래에서 변경할 수 있습니다.</span>
+            </div>
+            <p class="agreeAll__control onroad-agree-v2__all-checkbox">
+                {$sAgreeAllChecked}
+                <label for="sAgreeAllChecked">전체 약관 동의</label>
+            </p>
+        </div>
+
+        <!-- ═══ 필수 동의 그룹 ═══ -->
+        <section class="onroad-agree-v2__group onroad-agree-v2__group--required">
+            <header class="onroad-agree-v2__group-head">
+                <span class="onroad-agree-v2__group-eyebrow">REQUIRED</span>
+                <span class="onroad-agree-v2__group-title">필수 동의 항목</span>
+            </header>
+
+            <div class="agreeArea on onroad-consent-card onroad-consent-card--required onroad-agree-v2__card onroad-agree-v2__card--required" id="agree_service_chk_box0">
+                <div class="title">
+                    <h3>
+                        {$form.agree_service_check}
+                        <label class="check" for="agree_service_check0">이용약관 동의 <em>필수</em></label>
+                        <button type="button" class="btnToggle" aria-label="이용약관 내용 열기/닫기"><span class="icoArrowBottom"></span></button>
+                    </h3>
+                </div>
+                <div class="contents">
+                    {$service_desc}
+                </div>
+            </div>
+
+            <div class="agreeArea on onroad-consent-card onroad-consent-card--required onroad-agree-v2__card onroad-agree-v2__card--required {$display_privacy_agreement|display}" id="agree_privacy_chk_box0">
+                <div class="title">
+                    <h3>
+                        {$form.agree_privacy_check}
+                        <label class="check" for="agree_privacy_check0">개인정보 수집 및 이용 동의 <em>필수</em></label>
+                        <button type="button" class="btnToggle" aria-label="개인정보 필수 약관 열기/닫기"><span class="icoArrowBottom"></span></button>
+                    </h3>
+                </div>
+                <div class="contents">
+                    {$privacy_desc}
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ 선택 동의 그룹 ═══ -->
+        <section class="onroad-agree-v2__group onroad-agree-v2__group--optional">
+            <header class="onroad-agree-v2__group-head">
+                <span class="onroad-agree-v2__group-eyebrow">OPTIONAL</span>
+                <span class="onroad-agree-v2__group-title">선택 동의 항목</span>
+            </header>
+
+            <div class="agreeArea onroad-consent-card onroad-agree-v2__card {$display_privacy_optional|display}" id="agree_privacy_optional_chk_box0">
+                <div class="title">
+                    <h3>
+                        {$form.agree_privacy_optional_check}
+                        <label class="check" for="agree_privacy_optional_check0">개인정보 수집 및 이용 동의 <em>선택</em></label>
+                        <button type="button" class="btnToggle" aria-label="개인정보 선택 약관 열기/닫기"><span class="icoArrowBottom"></span></button>
+                    </h3>
+                </div>
+                <div class="contents">
+                    {$privacy_optional_desc}
+                </div>
+            </div>
+
+            <div class="agreeArea onroad-consent-card onroad-agree-v2__card {$display_information|display}" id="agree_information_chk_box0">
+                <div class="title">
+                    <h3>
+                        {$form.agree_information_check}
+                        <label class="check" for="agree_information_check0">개인정보 제3자 제공 동의 <em>선택</em></label>
+                        <button type="button" class="btnToggle" aria-label="제3자 제공 약관 열기/닫기"><span class="icoArrowBottom"></span></button>
+                    </h3>
+                </div>
+                <div class="contents">
+                    {$information_desc}
+                </div>
+            </div>
+
+            <div class="agreeArea onroad-consent-card onroad-agree-v2__card {$display_consignment|display}" id="agree_consignment_chk_box0">
+                <div class="title">
+                    <h3>
+                        {$form.agree_consignment_check}
+                        <label class="check" for="agree_consignment_check0">개인정보 처리 위탁 동의 <em>선택</em></label>
+                        <button type="button" class="btnToggle" aria-label="처리 위탁 약관 열기/닫기"><span class="icoArrowBottom"></span></button>
+                    </h3>
+                </div>
+                <div class="contents">
+                    {$consignment_desc}
+                </div>
+            </div>
+
+            <div class="agreeArea onroad-consent-card onroad-agree-v2__card {$display_marketing_consent|display}" id="marketing_consent_chk_box0">
+                <div class="title">
+                    <h3>
+                        {$form.marketing_consent_check}
+                        <label class="check" for="marketing_consent_check0">마케팅 활용 동의 <em>선택</em></label>
+                        <button type="button" class="btnToggle" aria-label="마케팅 활용 약관 열기/닫기"><span class="icoArrowBottom"></span></button>
+                    </h3>
+                </div>
+                <div class="contents">
+                    <div class="fr-view fr-view-privacy-optional">{$desc_marketing_consent}</div>
+                </div>
+            </div>
+
+            <div class="agreeArea onroad-consent-card onroad-agree-v2__card {$display_marketing|display}" id="marketing_receive_chk_box0">
+                <div class="title">
+                    <h3>
+                        {$sMarketingAgreeAllChecked}
+                        <label class="check" for="sMarketingAgreeAllChecked">쇼핑정보 수신 동의 <em>선택</em></label>
+                        <button type="button" class="btnToggle" aria-label="쇼핑정보 수신 약관 열기/닫기"><span class="icoArrowBottom"></span></button>
+                    </h3>
+                    <ul class="additional">
+                        <li class="{$display_is_sms|display}">{$form.is_sms}<label class="check" for="is_sms0">모바일 메시지 수신</label></li>
+                        <li class="{$display_is_news_mail|display}">{$form.is_news_mail}<label class="check" for="is_news_mail0">이메일 수신</label></li>
+                    </ul>
+                </div>
+                <div class="contents">
+                    <p>할인쿠폰, 이벤트, 제품 소식을 모바일 메시지나 이메일로 받을 수 있습니다.</p>
+                    <p>선택 약관에 동의하지 않아도 회원가입은 가능하며, 가입 후 회원정보수정에서 언제든지 변경할 수 있습니다.</p>
+                </div>
+            </div>
+
+            <div class="agreeArea onroad-consent-card onroad-agree-v2__card {$display_user_defined_1|display}">
+                <div class="title">
+                    <h3>{$form.check_user_defined_1}<label class="check" for="{$name_user_defined_1}">{$title_user_defined_1}</label><button type="button" class="btnToggle" aria-label="추가 약관 열기/닫기"><span class="icoArrowBottom"></span></button></h3>
+                </div>
+                <div class="contents"><div class="fr-view fr-view-privacy-optional">{$desc_user_defined_1}</div></div>
+            </div>
+            <div class="agreeArea onroad-consent-card onroad-agree-v2__card {$display_user_defined_2|display}">
+                <div class="title">
+                    <h3>{$form.check_user_defined_2}<label class="check" for="{$name_user_defined_2}">{$title_user_defined_2}</label><button type="button" class="btnToggle" aria-label="추가 약관 열기/닫기"><span class="icoArrowBottom"></span></button></h3>
+                </div>
+                <div class="contents"><div class="fr-view fr-view-privacy-optional">{$desc_user_defined_2}</div></div>
+            </div>
+            <div class="agreeArea onroad-consent-card onroad-agree-v2__card {$display_user_defined_3|display}">
+                <div class="title">
+                    <h3>{$form.check_user_defined_3}<label class="check" for="{$name_user_defined_3}">{$title_user_defined_3}</label><button type="button" class="btnToggle" aria-label="추가 약관 열기/닫기"><span class="icoArrowBottom"></span></button></h3>
+                </div>
+                <div class="contents"><div class="fr-view fr-view-privacy-optional">{$desc_user_defined_3}</div></div>
+            </div>
+            <div class="agreeArea onroad-consent-card onroad-agree-v2__card {$display_user_defined_4|display}">
+                <div class="title">
+                    <h3>{$form.check_user_defined_4}<label class="check" for="{$name_user_defined_4}">{$title_user_defined_4}</label><button type="button" class="btnToggle" aria-label="추가 약관 열기/닫기"><span class="icoArrowBottom"></span></button></h3>
+                </div>
+                <div class="contents"><div class="fr-view fr-view-privacy-optional">{$desc_user_defined_4}</div></div>
+            </div>
+            <div class="agreeArea onroad-consent-card onroad-agree-v2__card {$display_user_defined_5|display}">
+                <div class="title">
+                    <h3>{$form.check_user_defined_5}<label class="check" for="{$name_user_defined_5}">{$title_user_defined_5}</label><button type="button" class="btnToggle" aria-label="추가 약관 열기/닫기"><span class="icoArrowBottom"></span></button></h3>
+                </div>
+                <div class="contents"><div class="fr-view fr-view-privacy-optional">{$desc_user_defined_5}</div></div>
+            </div>
+            <div class="agreeArea onroad-consent-card onroad-agree-v2__card {$display_user_defined_6|display}">
+                <div class="title">
+                    <h3>{$form.check_user_defined_6}<label class="check" for="{$name_user_defined_6}">{$title_user_defined_6}</label><button type="button" class="btnToggle" aria-label="추가 약관 열기/닫기"><span class="icoArrowBottom"></span></button></h3>
+                </div>
+                <div class="contents"><div class="fr-view fr-view-privacy-optional">{$desc_user_defined_6}</div></div>
+            </div>
+            <div class="agreeArea onroad-consent-card onroad-agree-v2__card {$display_user_defined_7|display}">
+                <div class="title">
+                    <h3>{$form.check_user_defined_7}<label class="check" for="{$name_user_defined_7}">{$title_user_defined_7}</label><button type="button" class="btnToggle" aria-label="추가 약관 열기/닫기"><span class="icoArrowBottom"></span></button></h3>
+                </div>
+                <div class="contents"><div class="fr-view fr-view-privacy-optional">{$desc_user_defined_7}</div></div>
+            </div>
+            <div class="agreeArea onroad-consent-card onroad-agree-v2__card {$display_user_defined_8|display}">
+                <div class="title">
+                    <h3>{$form.check_user_defined_8}<label class="check" for="{$name_user_defined_8}">{$title_user_defined_8}</label><button type="button" class="btnToggle" aria-label="추가 약관 열기/닫기"><span class="icoArrowBottom"></span></button></h3>
+                </div>
+                <div class="contents"><div class="fr-view fr-view-privacy-optional">{$desc_user_defined_8}</div></div>
+            </div>
+            <div class="agreeArea onroad-consent-card onroad-agree-v2__card {$display_user_defined_9|display}">
+                <div class="title">
+                    <h3>{$form.check_user_defined_9}<label class="check" for="{$name_user_defined_9}">{$title_user_defined_9}</label><button type="button" class="btnToggle" aria-label="추가 약관 열기/닫기"><span class="icoArrowBottom"></span></button></h3>
+                </div>
+                <div class="contents"><div class="fr-view fr-view-privacy-optional">{$desc_user_defined_9}</div></div>
+            </div>
+            <div class="agreeArea onroad-consent-card onroad-agree-v2__card {$display_user_defined_10|display}">
+                <div class="title">
+                    <h3>{$form.check_user_defined_10}<label class="check" for="{$name_user_defined_10}">{$title_user_defined_10}</label><button type="button" class="btnToggle" aria-label="추가 약관 열기/닫기"><span class="icoArrowBottom"></span></button></h3>
+                </div>
+                <div class="contents"><div class="fr-view fr-view-privacy-optional">{$desc_user_defined_10}</div></div>
+            </div>
+        </section>
+
+        <!-- ═══ 액션 버튼 ═══ -->
+        <div class="ec-base-button gBottom onroad-signup-start__actions onroad-agree-v2__actions">
+            <button type="button" class="btnSubmitFix sizeL onroad-signup-start__cta onroad-agree-v2__cta" onclick="checkAgreement('/member/join.html');">
+                동의하고 정보 입력으로 <span aria-hidden="true">→</span>
+            </button>
+            <a href="/member/login.html" class="btnNormalFix sizeM onroad-signup-start__back onroad-agree-v2__back">로그인으로 돌아가기</a>
+        </div>
+
+    </div>
+</div>

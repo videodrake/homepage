@@ -1,0 +1,68 @@
+<!--@layout(/layout/basic/layout.html)-->
+<main module="mall_faq" class="onroad-page journal-page shopinfo-guide">
+    <!--@css(/css/module/mall/faq.css)-->
+
+    <section class="jr-masthead">
+        <div class="container">
+            <p class="eyebrow">SHOPPING GUIDE</p>
+            <h1>주문부터 배송까지<br>기준을 선명하게 안내합니다.</h1>
+            <p class="jr-lede">회원, 주문, 결제, 배송, 교환, 환불 기준은 Cafe24 운영 설정값을 그대로 표시합니다. 구매 전 필요한 정보를 한곳에서 확인하세요.</p>
+        </div>
+    </section>
+
+    <section class="section section--light">
+        <div class="container">
+            <div class="sec-head">
+                <p class="sec-head__num">01 / GUIDE</p>
+                <div>
+                    <h2 class="sec-head__title">운영 안내</h2>
+                    <p class="sec-head__sub">스토어 정책과 주문 처리 기준을 항목별로 정리했습니다.</p>
+                </div>
+            </div>
+
+            <div class="data-list guide-list">
+                <article class="data-list__item">
+                    <span>회원 안내</span>
+                    <div>{$member_info}</div>
+                </article>
+                <article class="data-list__item">
+                    <span>주문 안내</span>
+                    <div>{$order_info}</div>
+                </article>
+                <article class="data-list__item">
+                    <span>결제 안내</span>
+                    <div>{$payment_info}</div>
+                </article>
+                <article class="data-list__item">
+                    <span>배송 안내</span>
+                    <div>
+                        <ul>
+                            <li>배송 방법: {$shipping_method}</li>
+                            <li>배송 지역: {$shipping_area}</li>
+                            <li>배송 비용: {$shipping_fee}</li>
+                            <li>배송 기간: {$shipping_period}</li>
+                            <li>배송 안내: {$shipping_agreement}</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="data-list__item">
+                    <span>교환 및 반품</span>
+                    <div>{$product_change_info}</div>
+                </article>
+                <article class="data-list__item">
+                    <span>환불 안내</span>
+                    <div>{$refund_info}</div>
+                </article>
+                <article class="data-list__item">
+                    <span>기타 안내</span>
+                    <div>{$etc_info}</div>
+                </article>
+            </div>
+
+            <div class="guide-actions">
+                <a href="/shopinfo/company.html" class="btn btn--primary">브랜드 보기</a>
+                <a href="/member/privacy.html" class="btn btn--ghost-dark">개인정보처리방침</a>
+            </div>
+        </div>
+    </section>
+</main>
