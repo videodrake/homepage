@@ -87,12 +87,21 @@ jobs:
           bye
           LFTP_BACKUP
           find "${RUNNER_TEMP}/skin9-backup" -type l -delete
-          for required in index.html product/detail.html layout/basic/layout.html; do
-            if [ ! -f "${RUNNER_TEMP}/skin9-backup/${required}" ]; then
-              echo "::error::Rollback backup is missing required file: ${required}"
+          if [ -f "${RUNNER_TEMP}/skin9-backup/index.html" ]; then
+            for required in product/detail.html layout/basic/layout.html; do
+              if [ ! -f "${RUNNER_TEMP}/skin9-backup/${required}" ]; then
+                echo "::error::Rollback backup is missing required file: ${required}"
+                exit 1
+              fi
+            done
+          else
+            if [ "${backup_status}" -ne 0 ]; then
+              echo '::error::Remote /skin9 could not be inspected safely.'
               exit 1
             fi
-          done
+            echo 'Remote /skin9 existed but did not contain index.html before deployment.' > "${RUNNER_TEMP}/skin9-backup/EMPTY_OR_UNINITIALIZED.txt"
+            echo '::warning::Remote /skin9 is empty or uninitialized; the status marker will be stored as its rollback artifact.'
+          fi
           if [ "${backup_status}" -ne 0 ]; then
             echo '::warning::Cafe24 refused one or more platform-managed files; all required rollback files were backed up.'
           fi
