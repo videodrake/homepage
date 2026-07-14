@@ -131,7 +131,7 @@
                 </dd>
             </dl>
 
-            <div id="totalProducts" class="{$total.total_display|display}">
+            <div id="{$total.total_id}" class="{$total.total_display|display}">
                 <table border="1">
                     <caption>상품 목록</caption>
                     <colgroup><col style="width:auto;"><col style="width:100px;"><col style="width:100px;"></colgroup>
@@ -139,15 +139,21 @@
                     <tbody class="{$quantity_display|display}">
                         <tr>
                             <td>{$name}</td>
-                            <td><span class="quantity">{$quantity}</span></td>
-                            <td class="right"><span>{$price}</span></td>
+                            <td>
+                                <span class="quantity">
+                                    {$quantity}
+                                    <a href="#none"><img id="{$quantity_up_id}" class="{$quantity_up_class} up" alt="수량 증가" src="//img.echosting.cafe24.com/skin/mobile/common/ico_quantity_up.jpg" width="33" height="29"></a>
+                                    <a href="#none"><img id="{$quantity_down_id}" class="{$quantity_down_class} down" alt="수량 감소" src="//img.echosting.cafe24.com/skin/mobile/common/ico_quantity_down.jpg" width="33" height="29"></a>
+                                </span>
+                            </td>
+                            <td class="right"><span class="{$total.quantity_price}">{$product_price}</span></td>
                         </tr>
                     </tbody>
                     <tbody class="{$option_display|display}">
                         <tr>
                             <td>{$product_name}</td>
                             <td><span class="quantity">{$quantity}</span></td>
-                            <td class="right"><span>{$price}</span></td>
+                            <td class="right"><span class="{$total.quantity_price}">{$product_price}</span></td>
                         </tr>
                     </tbody>
                 </table>
