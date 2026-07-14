@@ -55,6 +55,9 @@ body.onroad-page .RTMB { z-index: 20; }
 .orv2-offer strong { font-weight: 900; }
 .orv2-offer span { margin: 0 9px; opacity: .65; }
 .orv2-header { position: sticky; top: 0; z-index: 100; height: 72px; border-bottom: 1px solid rgba(7,27,60,.1); background: rgba(255,255,255,.94); backdrop-filter: blur(14px); }
+body.onroad-page #header.orv2-header { background: rgba(255,255,255,.96) !important; color: var(--or-navy) !important; }
+body.onroad-page #header.orv2-header a { color: var(--or-navy); }
+body.onroad-page #header.orv2-header .orv2-header__buy { color: #fff !important; }
 .orv2-header__inner { width: min(calc(100% - clamp(28px, 5vw, 72px)), 1380px); height: 100%; margin: 0 auto; display: flex; align-items: center; gap: 36px; }
 .orv2-logo { flex: 0 0 auto; display: inline-flex; align-items: center; gap: 10px; font-size: 18px; font-weight: 950; letter-spacing: -.04em; }
 .orv2-logo__track { position: relative; width: 30px; height: 30px; border: 3px solid var(--or-blue); border-radius: 50%; }
@@ -80,7 +83,7 @@ body.onroad-page .RTMB { z-index: 20; }
 .orv2-hero__shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(4,17,41,.96) 0%, rgba(4,17,41,.85) 37%, rgba(4,17,41,.25) 68%, rgba(4,17,41,.35) 100%); }
 .orv2-hero__inner { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1fr) minmax(280px, 390px); align-items: center; gap: clamp(48px, 7vw, 108px); padding-block: clamp(78px, 10vw, 128px); }
 .orv2-hero__copy { max-width: 720px; }
-.orv2-hero h1 { margin: 0 0 28px; font-size: clamp(52px, 7.2vw, 108px); line-height: .92; letter-spacing: -.075em; font-weight: 950; }
+.orv2-hero h1 { margin: 0 0 28px; color: #fff; font-size: clamp(52px, 7.2vw, 108px); line-height: .92; letter-spacing: -.075em; font-weight: 950; }
 .orv2-hero h1 span { display: block; }
 .orv2-hero__lead { max-width: 650px; margin-bottom: 28px; font-size: clamp(17px, 1.45vw, 21px); line-height: 1.7; color: rgba(255,255,255,.84); }
 .orv2-hero__facts { display: flex; flex-wrap: wrap; gap: 9px; margin-bottom: 34px; }
@@ -89,6 +92,9 @@ body.onroad-page .RTMB { z-index: 20; }
 .orv2-text-link { font-size: 14px; font-weight: 800; border-bottom: 1px solid rgba(255,255,255,.55); padding-bottom: 5px; }
 .orv2-hero__notice { margin: 20px 0 0; color: rgba(255,255,255,.58); font-size: 11px; }
 .orv2-hero__product { align-self: end; padding: 14px; border: 1px solid rgba(255,255,255,.3); border-radius: 28px; background: rgba(255,255,255,.9); color: var(--or-navy); box-shadow: 0 30px 80px rgba(0,0,0,.22); backdrop-filter: blur(12px); }
+.orv2-product-fallback { display: block; border-radius: 18px; overflow: hidden; background: var(--or-sky); }
+.orv2-product-fallback img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
+.orv2-hero__product:has(.orv2-product-live .prdList > li) .orv2-product-fallback { display: none; }
 .orv2-product-live .prdList { margin: 0; display: block; }
 .orv2-product-live .prdList > li { width: 100%; margin: 0; padding: 0; }
 .orv2-product-live .prdList > li:not(:first-child) { display: none; }
@@ -117,6 +123,21 @@ body.onroad-page .RTMB { z-index: 20; }
 .orv2-section__head h2 em, .orv2-section__copy h2 em { color: var(--or-blue); font-style: normal; }
 .orv2-section__head > p, .orv2-section__copy > p, .orv2-routine > div > p, .orv2-faq-layout > div > p { margin: 0; color: var(--or-muted); font-size: clamp(15px, 1.3vw, 18px); line-height: 1.8; }
 .orv2-section__head--light > p { color: rgba(255,255,255,.7); }
+body.onroad-page .orv2-hero h1,
+body.onroad-page .orv2-section--blue h2,
+body.onroad-page .orv2-section--blue h3,
+body.onroad-page .orv2-ingredient--primary h3,
+body.onroad-page .orv2-section--routine h2,
+body.onroad-page .orv2-section--routine h3,
+body.onroad-page .orv2-final h2,
+body.onroad-page .orv2-footer h2,
+body.onroad-page .orv2-subhero h1,
+body.onroad-page .orv2-content-card.is-dark h2,
+body.onroad-page .orv2-content-card.is-dark h3,
+body.onroad-page .orv2-content-card.is-orange h2,
+body.onroad-page .orv2-content-card.is-orange h3 { color: #fff; }
+body.onroad-page .orv2-compare article.is-onroad h3,
+body.onroad-page .orv2-offer-card h3 { color: var(--or-navy); }
 .orv2-section--identity { background: var(--or-cream); }
 .orv2-split { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); align-items: center; gap: clamp(50px, 8vw, 116px); }
 .orv2-section__copy > p { margin: 30px 0; }
