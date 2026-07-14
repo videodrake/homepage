@@ -46,6 +46,7 @@
     var pdNoticeBlock = document.getElementById('prdInfo') || document.querySelector('.detail_guide');
     var pdFooter = document.querySelector('.site-footer') || document.querySelector('footer');
     var pdDetailArea = pdInfoArea ? pdInfoArea.parentElement : null;
+    var pdUsesV3 = !!(pdInfoArea && pdInfoArea.closest('.pd-v3-product'));
     var pdDockRef = pdReview || pdAdditional;
     var pdDockReleaseRef = pdNoticeBlock || pdQnA || pdFooter;
 
@@ -150,7 +151,7 @@
         bottle.style.setProperty('--showcase-y', (Math.sin(sT * Math.PI) * -10).toFixed(1));
       }
 
-      if (pdInfoArea && pdDockRef) {
+      if (pdInfoArea && pdDockRef && !pdUsesV3) {
         var dock = false;
         if (window.matchMedia('(min-width: 1024px)').matches) {
           // Engage when review heading reaches top half of viewport.
@@ -167,6 +168,9 @@
         }
         pdInfoArea.classList.toggle('is-docked', dock);
         document.body.classList.toggle('has-docked-info', dock);
+      } else if (pdUsesV3) {
+        pdInfoArea.classList.remove('is-docked');
+        document.body.classList.remove('has-docked-info');
       }
 
       revealInViewport();
