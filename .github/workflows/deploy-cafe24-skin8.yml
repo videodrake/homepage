@@ -66,7 +66,8 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p "${RUNNER_TEMP}/skin8-backup"
-          lftp <<LFTP_BACKUP
+          backup_status=0
+          lftp <<LFTP_BACKUP || backup_status=$?
           set cmd:fail-exit yes
           set sftp:auto-confirm yes
           set net:max-retries 3
@@ -78,11 +79,23 @@ jobs:
             --verbose \
             --parallel=2 \
             --no-perms \
+            --exclude-glob robots.txt.20260429_0828 \
+            --exclude-glob sitemap0.xml.temp \
+            --exclude-glob calendar/app/js/swiper/swiper-bundle.min.js.map \
             --exclude-glob preference/board/board_title_4.ini \
             --exclude-glob preference/product/product_category.ini \
             /skin8/ "${RUNNER_TEMP}/skin8-backup/"
           bye
           LFTP_BACKUP
+          for required in index.html product/detail.html layout/basic/layout.html; do
+            if [ ! -f "${RUNNER_TEMP}/skin8-backup/${required}" ]; then
+              echo "::error::Rollback backup is missing required file: ${required}"
+              exit 1
+            fi
+          done
+          if [ "${backup_status}" -ne 0 ]; then
+            echo '::warning::Cafe24 refused one or more platform-managed files; all required rollback files were backed up.'
+          fi
 
       - name: Save rollback artifact
         uses: actions/upload-artifact@v4
@@ -122,6 +135,11 @@ jobs:
             --exclude-glob Thumbs.db \
             --exclude-glob '*.swp' \
             --exclude-glob ez/ez-settings.json \
+            --exclude-glob robots.txt.20260429_0828 \
+            --exclude-glob sitemap0.xml.temp \
+            --exclude-glob calendar/app/js/swiper/swiper-bundle.min.js.map \
+            --exclude-glob preference/board/board_title_4.ini \
+            --exclude-glob preference/product/product_category.ini \
             skin9/ /skin8/
           cls -l /skin8/index.html
           cls -l /skin8/product/detail.html
