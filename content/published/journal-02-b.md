@@ -1,6 +1,7 @@
 ---
 title: "Journal №02-B : 대회 24시간 — 전날 저녁부터 출발선까지의 운영."
 channel: journal
+category: "대회 준비"
 funnel_stage: TOFU
 content_role: Journal
 journal_source: "본 문서가 원본"

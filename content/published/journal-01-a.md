@@ -1,6 +1,7 @@
 ---
 title: "Journal №01-A : 왜 30km에서 무너지는가 — 800kcal가 모자란 이유."
 channel: journal
+category: "러닝 과학"
 funnel_stage: TOFU
 content_role: Journal
 journal_source: "본 문서가 원본"

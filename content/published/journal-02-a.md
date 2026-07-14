@@ -1,6 +1,7 @@
 ---
 title: "Journal №02-A : 마지막 2주가 기록을 만든다 — 테이퍼링이 회수하는 6%."
 channel: journal
+category: "훈련 루틴"
 funnel_stage: TOFU
 content_role: Journal
 journal_source: "본 문서가 원본"

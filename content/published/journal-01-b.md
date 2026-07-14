@@ -1,6 +1,7 @@
 ---
 title: "Journal №01-B : 30km 이후, 페이스를 지키는 법 — 평소 한 가지, 당일 한 가지."
 channel: journal
+category: "마라톤 준비"
 funnel_stage: TOFU
 content_role: Journal
 journal_source: "본 문서가 원본"

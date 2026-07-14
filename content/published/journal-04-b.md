@@ -2,6 +2,7 @@
 title: "Journal №04-B : 여름을 다루는 방법 — 두 비용을 줄이는 조정과 가을 6%를 만드는 시간표"
 slug: "journal-04-b"
 channel: journal
+category: "계절 러닝"
 funnel_stage: TOFU
 content_role: Journal
 series_id: "journal-04"

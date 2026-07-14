@@ -2,6 +2,7 @@
 title: "Journal №04-A : 같은 페이스, 다른 심박 — 여름 러닝이 만드는 두 가지 생리적 비용"
 slug: "journal-04-a"
 channel: journal
+category: "계절 러닝"
 funnel_stage: TOFU
 content_role: Journal
 series_id: "journal-04"
