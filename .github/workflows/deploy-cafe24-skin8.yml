@@ -87,6 +87,7 @@ jobs:
             /skin8/ "${RUNNER_TEMP}/skin8-backup/"
           bye
           LFTP_BACKUP
+          find "${RUNNER_TEMP}/skin8-backup" -type l -delete
           for required in index.html product/detail.html layout/basic/layout.html; do
             if [ ! -f "${RUNNER_TEMP}/skin8-backup/${required}" ]; then
               echo "::error::Rollback backup is missing required file: ${required}"
@@ -140,6 +141,8 @@ jobs:
             --exclude-glob calendar/app/js/swiper/swiper-bundle.min.js.map \
             --exclude-glob preference/board/board_title_4.ini \
             --exclude-glob preference/product/product_category.ini \
+            --exclude-glob order/ec_orderform/* \
+            --exclude-glob preference/* \
             skin9/ /skin8/
           cls -l /skin8/index.html
           cls -l /skin8/product/detail.html
