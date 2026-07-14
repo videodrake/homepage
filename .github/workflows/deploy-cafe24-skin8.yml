@@ -74,7 +74,13 @@ jobs:
           set net:reconnect-interval-base 5
           open -u "$SFTP_USER","$SFTP_PASS" sftp://$SFTP_HOST:$SFTP_PORT
           cls -l /skin8/
-          mirror --verbose --parallel=2 /skin8/ "${RUNNER_TEMP}/skin8-backup/"
+          mirror \
+            --verbose \
+            --parallel=2 \
+            --no-perms \
+            --exclude-glob preference/board/board_title_4.ini \
+            --exclude-glob preference/product/product_category.ini \
+            /skin8/ "${RUNNER_TEMP}/skin8-backup/"
           bye
           LFTP_BACKUP
 
