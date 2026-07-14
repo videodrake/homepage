@@ -1,0 +1,231 @@
+﻿<!--@layout(/layout/basic/layout.html)-->
+<div class="section onroad-board-list-page" module="Board_ListPackage_1002">
+    <!--@css(/css/module/board/listPackage.css)-->
+    <div module="board_title_1002">
+        <div class="path">
+            <span>현재 위치</span>
+            <ol>
+                <li><a href="/">홈</a></li>
+                <li><a href="#">러너 고객센터</a></li>
+                <li title="현재 위치"><strong class="onroad-board-current">러너 콘텐츠</strong></li>
+            </ol>
+        </div>
+
+        <div class="titleArea">
+            <h2 class="onroad-board-title">러너 콘텐츠</h2>
+            <p class="onroad-board-desc">공지, 섭취 가이드, 제품 Q&A를 기능성 표현 기준 안에서 안내합니다.</p>
+        </div>
+        <p class="imgArea">{$board_top_image}</p>
+    </div>
+
+    <div class="onroad-sub-brief onroad-board-list-brief">
+        <strong class="onroad-board-brief-title">게시글 목록</strong>
+        <p class="onroad-board-brief-desc">게시글 제목을 중심으로 공지, 안내, 질문을 확인하고 필요한 글로 이동하세요. 글쓰기, 검색, 페이지 이동은 목록 하단에서 이어집니다.</p>
+        <div class="onroad-page-links">
+            <a href="/board/index.html">게시판 허브</a>
+            <a href="/board/free/list.html?board_no=1">공지사항</a>
+            <a href="/board/free/list.html?board_no=5">제품 Q&A</a>
+            <a href="/board/free/list.html?board_no=7">성분 자료</a>
+            <a href="/shopinfo/guide.html">이용안내</a>
+            <a href="/myshop/index.html">마이페이지</a>
+        </div>
+    </div>
+
+    <div class="ec-base-tab typeMenu gScroll onroad-board-list-tabs">
+        <ul class="menu">
+            <li><a href="/board/free/list.html?board_no=1" class="button">공지사항</a></li>
+            <li><a href="/board/free/list.html?board_no=2" class="button">러닝 소식</a></li>
+            <li><a href="/shopinfo/ingredient-science.html" class="button">성분 과학</a></li>
+            <li><a href="/shopinfo/intake-guide.html" class="button">섭취 가이드</a></li>
+            <li><a href="/board/free/list.html?board_no=5" class="button">제품 Q&A</a></li>
+            <li><a href="/board/free/list.html?board_no=7" class="button">성분 자료</a></li>
+            <li><a href="/shopinfo/runner-reviews.html" class="button">포토리뷰</a></li>
+        </ul>
+    </div>
+
+    <script>
+        (function () {
+            var boardNo = new URLSearchParams(window.location.search).get('board_no');
+            var content = {
+                '1': ['공지사항', '배송, 제품 운영, 심의 및 판매 관련 안내를 정리합니다.', '공지사항 목록', '운영 공지와 제품 안내를 제목 중심으로 확인하고 필요한 글로 이동하세요.'],
+                '2': ['러닝 소식', '러너에게 필요한 콘텐츠와 쇼핑몰 소식을 정리합니다.', '러닝 소식 목록', '새 소식과 안내 글을 날짜 순서로 확인할 수 있습니다.'],
+                '3': ['섭취 가이드', '1일 1정 섭취법, 섭취 타이밍, 보관 방법, 섭취 시 주의사항을 정리합니다.', '섭취 가이드 목록', '러닝 루틴에 맞춘 섭취 안내 글을 과장 없이 확인하세요.'],
+                '5': ['제품 Q&A', '성분, 섭취, 주문, 배송에 대한 질문을 기능성 표현 기준 안에서 답변합니다.', '제품 Q&A 목록', '구매 전 확인이 필요한 질문과 답변을 제목 중심으로 확인하세요.'],
+                '7': ['성분 자료', '옥타코사놀, 원료 출처, 부원료와 표시 정보를 자료 형태로 정리합니다.', '성분 자료 목록', '러너가 먹는 것을 이해하고 선택할 수 있도록 원료 정보를 정리합니다.']
+            }[boardNo];
+
+            if (!content) return;
+
+            var setText = function (selector, text) {
+                var nodes = document.querySelectorAll(selector);
+                for (var i = 0; i < nodes.length; i += 1) nodes[i].textContent = text;
+            };
+
+            setText('.onroad-board-current', content[0]);
+            setText('.onroad-board-title', content[0]);
+            setText('.onroad-board-desc', content[1]);
+            setText('.onroad-board-brief-title', content[2]);
+            setText('.onroad-board-brief-desc', content[3]);
+
+            var activeLink = document.querySelector('.onroad-board-list-tabs a[href*="board_no=' + boardNo + '"]');
+            if (activeLink && activeLink.parentNode) activeLink.parentNode.className += ' selected';
+        }());
+    </script>
+
+    <div class="boardSort onroad-board-list-sort">
+        <span module="board_category_1002">{$form.board_category}</span>
+        <span module="board_ReplySort_1002">{$reply_sort}</span>
+    </div>
+
+    <div class="ec-base-table typeList onroad-board-list-table">
+        <table border="1" >
+            <caption>러너 고객센터 목록</caption>
+            <colgroup module="board_listheader_1002">
+                <col style="width:80px;" />
+                <col style="width:auto;" />
+                <col style="width:100px;" class="{$config.is_category|display}" />
+                <col style="width:90px;" />
+                <col style="width:120px;" class="{$config.use_date|display}" />
+                <col style="width:74px;" class="{$config.use_cnt|display}" />
+                <col style="width:94px;" class="{$config.is_use_point|display}" />
+            </colgroup>
+            <thead module="board_listheader_1002">
+                <tr style="{$list_bg_color} {$list_char_color}" class="{$block_target_class}" {$block_data_attr}>
+                    <th scope="col" class="chk">{$checkbox} 번호</th>
+                    <th scope="col">제목</th>
+                    <th scope="col" class="{$config.is_category|display}">카테고리</th>
+                    <th scope="col">작성자</th>
+                    <th scope="col" class="{$config.use_date|display}">작성일</th>
+                    <th scope="col" class="{$config.use_cnt|display}">조회</th>
+                    <th scope="col" class="{$config.is_use_point|display}">평점</th>
+                </tr>
+            </thead>
+            <tbody module="board_notice_1002" class="center">
+                <!--
+                    $count = 10
+                    $login_page_url = /member/login.html
+                    $deny_access_url = /index.html
+                -->
+                <tr style="{$list_bg_color} {$list_char_color}" class="{$block_target_class}" {$block_data_attr}>
+                    <td class="chk">{$checkbox}<span class="RW">{$notice_icon}</span></td>
+                    <td class="subject left txtBreak">
+                        <span class="badge">{$notice_icon}</span> <strong>{$icon_re}{$icon_lock}<a href="{$link_board_detail}" style="{$link_color}" class="{$block_content_class}">{$subject}</a>{$icon_file}<span class="comment">{$comment_count}</span>{$icon_mobile}{$icon_new}{$icon_hit}</strong>
+                    </td>
+                    <td class="{$category_display|display}">{$category_name}</td>
+                    <td>{$member_icon}{$writer}</td>
+                    <td class="{$date_display|display}">{$write_date}</td>
+                    <td class="{$hit_display|display}"><span class="RTMI">조회</span> {$hit_count}</span></td>
+                    <td class="{$point_display|display}"><img src="//img.echosting.cafe24.com/skin/skin/board/icon-star-rating{$point_count}.svg" alt="{$point_count}점" /></td>
+                </tr>
+                <tr style="{$list_bg_color} {$list_char_color}" class="{$block_target_class}" {$block_data_attr}>
+                    <td class="chk">{$checkbox}<span class="RW">{$notice_icon}</span></td>
+                    <td class="subject left txtBreak">
+                        <span class="badge">{$notice_icon}</span> <strong>{$icon_re}{$icon_lock}<a href="{$link_board_detail}" style="{$link_color}" class="{$block_content_class}">{$subject}</a>{$icon_file}<span class="comment">{$comment_count}</span>{$icon_mobile}{$icon_new}{$icon_hit}</strong>
+                    </td>
+                    <td class="{$category_display|display}">{$category_name}</td>
+                    <td>{$member_icon}{$writer}</td>
+                    <td class="{$date_display|display}">{$write_date}</td>
+                    <td class="{$hit_display|display}"><span class="RTMI">조회</span> {$hit_count}</td>
+                    <td class="{$point_display|display}"><img src="//img.echosting.cafe24.com/skin/skin/board/icon-star-rating{$point_count}.svg" alt="{$point_count}점" /></td>
+                </tr>
+            </tbody>
+            <tbody module="board_fixed_1002" class="center">
+                <!--
+                    $count = 10
+                    $login_page_url = /member/login.html
+                    $deny_access_url = /index.html
+                -->
+                <tr style="{$list_bg_color} {$list_char_color}" class="{$block_target_class}" {$block_data_attr}>
+                    <td class="chk">{$checkbox}<span class="RW">{$fixed_icon}</span></td>
+                    <td class="subject left txtBreak">
+                        <span class="badge">{$fixed_icon}</span> <strong>{$icon_re}{$icon_lock}<a href="{$link_board_detail}" style="{$link_color}" class="{$block_content_class}">{$subject}</a>{$icon_file}<span class="comment">{$comment_count}</span>{$icon_new}{$icon_hit}</strong>
+                    </td>
+                    <td class="{$category_display|display}">{$category_name}</td>
+                    <td>{$member_icon}{$writer}</td>
+                    <td class="{$date_display|display}">{$write_date}</td>
+                    <td class="{$hit_display|display}"><span class="RTMI">조회</span> {$hit_count}</td>
+                    <td class="{$point_display|display}"><img src="//img.echosting.cafe24.com/skin/skin/board/icon-star-rating{$point_count}.svg" alt="{$point_count}점" /></td>
+                </tr>
+                <tr style="{$list_bg_color} {$list_char_color}" class="{$block_target_class}" {$block_data_attr}>
+                    <td class="chk">{$checkbox}<span class="RW">{$fixed_icon}</span></td>
+                    <td class="subject left txtBreak">
+                        <span class="badge">{$fixed_icon}</span> <strong>{$icon_re}{$icon_lock}<a href="{$link_board_detail}" style="{$link_color}" class="{$block_content_class}">{$subject}</a>{$icon_file}<span class="comment">{$comment_count}</span>{$icon_new}{$icon_hit}</strong>
+                    </td>
+                    <td class="{$category_display|display}">{$category_name}</td>
+                    <td>{$member_icon}{$writer}</td>
+                    <td class="{$date_display|display}">{$write_date}</td>
+                    <td class="{$hit_display|display}"><span class="RTMI">조회</span> {$hit_count}</td>
+                    <td class="{$point_display|display}"><img src="//img.echosting.cafe24.com/skin/skin/board/icon-star-rating{$point_count}.svg" alt="{$point_count}점" /></td>
+                </tr>
+            </tbody>
+            <tbody module="board_list_1002" class="center">
+                <!--
+                    $login_page_url = /member/login.html
+                    $deny_access_url = /index.html
+                -->
+                <tr style="{$list_bg_color} {$list_char_color}" class="{$block_target_class}" {$block_data_attr}>
+                    <td class="chk no">{$checkbox}<span class="RW">{$no}</span></td>
+                    <td class="subject left txtBreak">
+                        {$icon_re}{$icon_lock}<a href="{$link_board_detail}" style="{$link_color}" class="{$block_content_class}">{$subject}</a>{$icon_file}<span class="comment">{$comment_count}</span>{$icon_mobile}{$icon_new}{$icon_hit}
+                    </td>
+                    <td class="{$category_display|display}">{$category_name}</td>
+                    <td>{$member_icon}{$writer}</td>
+                    <td class="{$date_display|display}">{$write_date}</td>
+                    <td class="{$hit_display|display}"><span class="RTMI">조회</span> {$hit_count}</td>
+                    <td class="{$point_display|display}"><img src="//img.echosting.cafe24.com/skin/skin/board/icon-star-rating{$point_count}.svg" alt="{$point_count}점" /></td>
+                </tr>
+                <tr style="{$list_bg_color} {$list_char_color}" class="{$block_target_class}" {$block_data_attr}>
+                    <td class="chk no">{$checkbox}<span class="RW">{$no}</span></td>
+                    <td class="subject left txtBreak">
+                        {$icon_re}{$icon_lock}<a href="{$link_board_detail}" style="{$link_color}" class="{$block_content_class}">{$subject}</a>{$icon_file}<span class="comment">{$comment_count}</span>{$icon_mobile}{$icon_new}{$icon_hit}
+                    </td>
+                    <td class="{$category_display|display}">{$category_name}</td>
+                    <td>{$member_icon}{$writer}</td>
+                    <td class="{$date_display|display}">{$write_date}</td>
+                    <td class="{$hit_display|display}"><span class="RTMI">조회</span> {$hit_count}</td>
+                    <td class="{$point_display|display}"><img src="//img.echosting.cafe24.com/skin/skin/board/icon-star-rating{$point_count}.svg" alt="{$point_count}점" /></td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="message {$empty_display|display}" module="board_empty_1002">{$empty_message}</p>
+    </div>
+    <div module="board_ButtonList_1002" class="ec-base-button gBottom onroad-board-list-actions {$write_display|display}">
+        <span class="gRight">
+            <a href="/board/free/write.html{$param_write}" class="btnSubmitFix sizeM {$write_display|display}">글쓰기</a>
+        </span>
+    </div>
+    <div module="board_search_1002" class="onroad-board-list-search">
+        <!--@css(/css/module/board/search.css)-->
+        <fieldset class="boardSearch">
+            <legend>게시물 검색</legend>
+            <div class="form">{$form.search_date} {$form.search_key} {$form.search} <a href="#none" class="btnNormal" onclick="{$action_search}">찾기</a></div>
+        </fieldset>
+    </div>
+</div>
+
+<div module="board_paging_1002" class="section ec-base-paginate typeList onroad-board-list-paging">
+    <a href="{$param_prev}">이전 페이지</a>
+    <ol>
+        <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+        <li><a href="{$param_num}" class="{$param_class}">{$page_num}</a></li>
+    </ol>
+    <a href="{$param_next}">다음 페이지</a>
+</div>
+
+<!-- Admin only -->
+<div class="section" module="board_catemove_1002">
+    <!--@css(/css/module/board/catemove.css)-->
+    <span class="gColumn">{$board_catemove_selectbox}</span>
+    <span class="gColumn"><a href="#none" class="btnNormal sizeS" onclick="{$action_category_move}">{$category_move}</a></span>
+</div>
+
+<div class="section" module="board_function_1002">
+    <!--@css(/css/module/board/function.css)-->
+    <span class="gColumn">{$board_function_selectbox}</span>
+    <span class="gColumn">
+        <a href="#none" class="btnNormal sizeS" onclick="{$action_article_move}">{$article_move}</a>
+        <a href="#none" class="btnNormal sizeS" onclick="{$action_article_copy}">{$article_copy}</a>
+    </span>
+    <span class="ec-base-help">{$board_function_help|replace:*,}</span>
+</div>
+<!-- // Admin only -->

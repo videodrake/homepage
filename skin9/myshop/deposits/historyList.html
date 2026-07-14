@@ -1,0 +1,45 @@
+<!--@layout(/layout/basic/layout.html)-->
+
+<div module="layout_logincheck">
+<!--
+    $url = /member/login.html
+-->
+</div>
+
+<div class="section path">
+    <span>현재 위치</span>
+    <ol>
+        <li><a href="/">홈</a></li>
+        <li><a href="/myshop/index.html">마이페이지</a></li>
+        <li title="현재 위치"><strong>예치금</strong></li>
+    </ol>
+</div>
+
+<div class="myshopArea">
+    <div class="titleArea titleArea--myshop">
+        <h2>예치금</h2>
+        <p class="subTitle">예치금 내역은 고객센터 또는 주문 상세에서 확인할 수 있습니다.</p>
+    </div>
+
+    <div class="ec-base-box gHalf myshop-brief my-deposit-brief">
+        <strong>Deposit History</strong>
+        <p>현재 스토어에서는 예치금 내역 모듈이 비활성 상태입니다. 반복 redirect를 방지하기 위해 이 화면은 안전 안내 페이지로 운영합니다.</p>
+    </div>
+
+    <div class="ec-base-help">
+        <h3>이용 안내</h3>
+        <div class="inner">
+            <ul>
+                <li>주문 취소, 환불, 예치금 전환이 필요한 경우 고객센터로 문의해 주세요.</li>
+                <li>주문별 결제 및 환불 상태는 주문 내역에서 확인할 수 있습니다.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="ec-base-button gCenter">
+        <a href="/myshop/order/list.html" class="btnSubmitFix sizeM">주문 내역 보기</a>
+        <a href="/myshop/index.html" class="btnNormalFix sizeM">마이페이지로 이동</a>
+    </div>
+
+    <!--@import(/myshop/myshop_main.html)-->
+</div>

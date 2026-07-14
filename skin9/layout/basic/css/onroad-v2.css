@@ -1,0 +1,61 @@
+/* Onroad V2 — conversion-first Cafe24 skin overlay */
+:root {
+    --or-blue: #1247ff;
+    --or-blue-dark: #6�]x����k�w��bwidth:70px;" class="RW"><col style="width:134px;"><col style="width:auto"><col style="width:80px;"><col style="width:100px;"><col style="width:55px;"></colgroup>
+                        <thead><tr><th scope="col" class="RW">번호</th><th scope="col">카테고리</th><th scope="col">제목</th><th scope="col">작성자</th><th scope="col">작성일</th><th scope="col">조회</th></tr></thead>
+                        <tbody class="center">
+                            <tr class="{$block_target_class}" {$block_data_attr}><td class="RW">{$no}</td><td>{$category_name}</td><td class="subject left txtBreak">{$icon_re}{$icon_lock} <a href="{$link_board_detail}{$param_read}" class="{$block_content_class}">{$subject}</a> {$icon_file}<span class="comment">{$comment_count}</span>{$icon_hit}{$icon_new}</td><td>{$member_icon} {$writer}</td><td>{$write_date}</td><td>{$hit_count}</td></tr>
+                            <tr class="{$block_target_class}" {$block_data_attr}><td class="RW">{$no}</td><td>{$category_name}</td><td class="subject left txtBreak">{$icon_re}{$icon_lock} <a href="{$link_board_detail}{$param_read}" class="{$block_content_class}">{$subject}</a> {$icon_file}<span class="comment">{$comment_count}</span>{$icon_hit}{$icon_new}</td><td>{$member_icon} {$writer}</td><td>{$write_date}</td><td>{$hit_count}</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div module="product_qnapaging" class="ec-base-paginate typeList">
+                <a href="{$param_first}" class="first">처음</a><a href="{$param_before}">이전</a>
+                <ol><li><a href="{$param}" class="{$param_class}">{$no}</a></li><li><a href="{$param}" class="{$param_class}">{$no}</a></li><li><a href="{$param}" class="{$param_class}">{$no}</a></li><li><a href="{$param}" class="{$param_class}">{$no}</a></li><li><a href="{$param}" class="{$param_class}">{$no}</a></li></ol>
+                <a href="{$param_next}">다음</a><a href="{$param_last}" class="last">마지막</a>
+            </div>
+        </div>
+    </section>
+
+    <div id="prdInfo" class="pd-guide">
+        <div class="pd-guide__head">
+            <span>Purchase Guide</span>
+            <h2>주문 전 확인 사항</h2>
+            <p>결제, 배송, 교환/반품 기준을 한눈에 확인할 수 있도록 정리했습니다.</p>
+        </div>
+        <div class="detail_guide">
+            <div class="ec-base-fold theme1 selected eToggle pd-guide__item pd-guide__item--payment"><div class="title"><h2>결제 안내</h2></div><div class="contents"><div class="info">{$payment_info}</div></div></div>
+            <div class="ec-base-fold theme1 selected eToggle pd-guide__item pd-guide__item--delivery"><div class="title"><h2>배송 안내</h2></div><div class="contents"><ul class="info delivery"><li>배송 방법 : {$shipping_method}</li><li>배송 지역 : {$shipping_area}</li><li>배송 비용 : {$shipping_fee}</li><li>배송 기간 : {$shipping_period}</li><li>배송 안내 : {$shipping_info}</li></ul></div></div>
+            <div class="ec-base-fold theme1 selected eToggle pd-guide__item pd-guide__item--exchange"><div class="title"><h2>교환/반품 안내</h2></div><div class="contents"><div class="info">{$exchange_info}</div></div></div>
+            <div class="ec-base-fold theme1 selected eToggle pd-guide__item pd-guide__item--service"><div class="title"><h2>서비스 안내</h2></div><div class="contents"><div class="info">{$service_info}</div></div></div>
+        </div>
+    </div>
+</div>
+
+<script>
+(function(){
+  var meta = document.getElementById('onroadProductMeta');
+  function getQty(){ var q = document.querySelector('input[name^="quantity_name"]'); return q && q.value ? q.value : '1'; }
+  function save(intent){
+    if (!meta) return;
+    try {
+      sessionStorage.setItem('onroad_pending_purchase', JSON.stringify({
+        no: meta.getAttribute('data-product-no') || '',
+        name: meta.getAttribute('data-product-name') || '',
+        image: meta.getAttribute('data-product-image') || '',
+        price: meta.getAttribute('data-product-price') || '',
+        qty: getQty(),
+        intent: intent,
+        ts: Date.now()
+      }));
+    } catch(e){}
+  }
+  document.addEventListener('click', function(e){
+    var btn = e.target.closest('[data-onroad-action]');
+    if (btn) save(btn.getAttribute('data-onroad-action'));
+  }, true);
+
+})();
+</script>
+<!--@define(cmc_log)-->
