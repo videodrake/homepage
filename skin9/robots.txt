@@ -26,4 +26,4 @@ User-agent: bingbot
 Crawl-delay: 5
  
  
-Sitemap: https://zenera91.cafe24.com/sitemap.xml
+Sitemap: https://zenera.kr/sitemap.xml

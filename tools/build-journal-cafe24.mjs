@@ -8,6 +8,7 @@ const DEFAULT_REGULATION_CHECK = path.resolve('tools', 'regulation_check.py');
 const DEFAULT_AUTOMATION_ROOT = process.cwd();
 const DEFAULT_PUBLISHED_DIR = path.join(DEFAULT_AUTOMATION_ROOT, 'content', 'published');
 const DEFAULT_LEDGER = path.join(DEFAULT_AUTOMATION_ROOT, 'content', 'CONTENT_STATE.md');
+const DEFAULT_SKIN_DIR = path.resolve('skin9');
 const PENDING_STATUS = 'published_md_ready';
 const DISCLAIMER_PATTERN = new RegExp('\\uC81C\\uD488\\uC815\\uBCF4\\uC640 \\uAD00\\uB828 \\uC5C6\\uB294|\\uD559\\uC220 \\uC790\\uB8CC\\uC5D0 \\uADFC\\uAC70\\uD55C|\\uC77C\\uBC18 \\uAC74\\uAC15\\uC815\\uBCF4');
 const KOREAN_KEY_RE = /^([^:]+):\s*(.*)$/;
@@ -63,7 +64,7 @@ function pendingFromLedger(publishedDir, ledgerPath = DEFAULT_LEDGER) {
 }
 
 function parseArgs(argv) {
-  const args = { input: null, writeCafe24: false, allowMissingAssets: false, regulation: DEFAULT_REGULATION_CHECK, automationRoot: DEFAULT_AUTOMATION_ROOT, siteUrl: 'https://zenera.kr' };
+  const args = { input: null, writeCafe24: false, allowMissingAssets: false, regulation: DEFAULT_REGULATION_CHECK, automationRoot: DEFAULT_AUTOMATION_ROOT, siteUrl: 'https://zenera.kr', skinDir: DEFAULT_SKIN_DIR };
   for (let i = 0; i < argv.length; i += 1) {
     const arg = argv[i];
     if (!args.input && !arg.startsWith('--')) { args.input = arg; continue; }
@@ -72,7 +73,7 @@ function parseArgs(argv) {
     if (arg === '--write-cafe24') { args.writeCafe24 = true; continue; }
     if (arg === '--allow-missing-assets') { args.allowMissingAssets = true; continue; }
     if (arg === '--no-regulation-check') { args.noRegulationCheck = true; continue; }
-    const valueFlags = new Set(['--slug', '--out-dir', '--regulation-check', '--automation-root', '--published-dir', '--date', '--category', '--number', '--author', '--read-time', '--site-url']);
+    const valueFlags = new Set(['--slug', '--out-dir', '--regulation-check', '--automation-root', '--published-dir', '--skin-dir', '--date', '--category', '--number', '--author', '--read-time', '--site-url']);
     if (valueFlags.has(arg)) {
       const value = argv[i + 1];
       if (!value || value.startsWith('--')) throw new Error(`${arg} requires a value`);
@@ -89,6 +90,7 @@ function parseArgs(argv) {
     args.input = args.latest ? latestMarkdown(publishedDir) : pendingFromLedger(publishedDir);
   }
   if (!args.slug) args.slug = deriveSlug(args.input);
+  args.skinDir = path.resolve(args.skinDir);
   return args;
 }
 
@@ -109,6 +111,10 @@ function escapeHtml(value = '') {
 
 function inlineMarkdown(text) {
   let out = escapeHtml(text);
+  out = out.replace(/\[([^\]]+)\]\(((?:https?:\/\/|\/)[^)\s]+)\)/g, (_match, label, href) => {
+    const external = href.startsWith('http');
+    return `<a href="${href}"${external ? ' target="_blank" rel="noopener noreferrer"' : ''}>${label}</a>`;
+  });
   out = out.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
   out = out.replace(/\*([^*]+)\*/g, '<em>$1</em>');
   out = out.replace(/`([^`]+)`/g, '<code>$1</code>');
@@ -150,6 +156,7 @@ function markdownToHtml(body, slug) {
   let paragraph = [];
   let blockquote = [];
   let list = [];
+  let listTag = 'ul';
   let table = [];
 
   const flushParagraph = () => {
@@ -168,10 +175,11 @@ function markdownToHtml(body, slug) {
   };
   const flushList = () => {
     if (!list.length) return;
-    html.push('<ul class="jp-list">');
+    html.push(`<${listTag} class="jp-list">`);
     for (const item of list) html.push(`<li>${inlineMarkdown(item)}</li>`);
-    html.push('</ul>');
+    html.push(`</${listTag}>`);
     list = [];
+    listTag = 'ul';
   };
   const flushTable = () => {
     if (table.length < 2) { table = []; return; }
@@ -197,7 +205,20 @@ function markdownToHtml(body, slug) {
     if (/^[-\u2500]{3,}$/.test(line)) { flushAll(); continue; }
     if (/^\|.+\|$/.test(line)) { flushParagraph(); flushBlockquote(); flushList(); table.push(line); continue; }
     if (line.startsWith('>')) { flushParagraph(); flushList(); flushTable(); blockquote.push(line.replace(/^>\s?/, '').trim()); continue; }
-    if (/^-\s+/.test(line)) { flushParagraph(); flushBlockquote(); flushTable(); list.push(line.replace(/^-\s+/, '').trim()); continue; }
+    if (/^-\s+/.test(line)) {
+      flushParagraph(); flushBlockquote(); flushTable();
+      if (list.length && listTag !== 'ul') flushList();
+      listTag = 'ul';
+      list.push(line.replace(/^-\s+/, '').trim());
+      continue;
+    }
+    if (/^\d+\.\s+/.test(line)) {
+      flushParagraph(); flushBlockquote(); flushTable();
+      if (list.length && listTag !== 'ol') flushList();
+      listTag = 'ol';
+      list.push(line.replace(/^\d+\.\s+/, '').trim());
+      continue;
+    }
     const image = line.match(/^!\[([^\]]*)\]\(([^)]+)\)$/);
     if (image) {
       flushAll();
@@ -232,33 +253,96 @@ function plainDeck(body) {
   return (line || '').replace(/\*\*/g, '').replace(/\*/g, '').slice(0, 140);
 }
 
-function renderPage({ title, deck, articleHtml, heroImage, args, meta = {} }) {
-  const category = args.category || 'Pace Science';
+function plainMarkdown(value = '') {
+  return String(value)
+    .replace(/!\[([^\]]*)\]\([^)]+\)/g, '$1')
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+    .replace(/[*_`>#]/g, '')
+    .replace(/^\s*[-+]\s+/, '')
+    .replace(/^\s*\d+\.\s+/, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function extractFaqItems(body) {
+  const lines = body.split(/\r?\n/);
+  const items = [];
+  let inFaq = false;
+  let question = '';
+  let answer = [];
+
+  const flush = () => {
+    const name = plainMarkdown(question);
+    const text = plainMarkdown(answer.join(' '));
+    if (name && text) items.push({ name, text });
+    question = '';
+    answer = [];
+  };
+
+  for (const rawLine of lines) {
+    const line = rawLine.trim();
+    if (/^##\s+/.test(line)) {
+      if (inFaq) {
+        flush();
+        break;
+      }
+      inFaq = plainMarkdown(line.replace(/^##\s+/, '')) === '자주 묻는 질문';
+      continue;
+    }
+    if (!inFaq) continue;
+    if (/^###\s+/.test(line)) {
+      flush();
+      question = line.replace(/^###\s+/, '').trim();
+      continue;
+    }
+    if (!question || !line || line.startsWith('![') || /^[-─]{3,}$/.test(line)) continue;
+    answer.push(line);
+  }
+  if (inFaq) flush();
+  return items;
+}
+
+function renderPage({ title, deck, articleHtml, heroImage, faqItems, args, meta = {} }) {
+  const category = args.category || meta.category || '러닝 과학';
   const number = args.number || args.slug;
   const date = args.date || normalizeDate(meta.date_drafted) || todayKst();
-  const structuredData = renderStructuredData({ title, deck, heroImage, args, date });
+  const modifiedDate = normalizeDate(meta.date_modified) || date;
+  const readTime = args.readTime || meta.read_time || '7분 읽기';
+  const structuredData = renderStructuredData({ title, deck, heroImage, faqItems, args, date, modifiedDate });
   return `<!--@layout(/layout/basic/layout.html)-->
-<main class="onroad-page journal-post journal-post--generated">
+<!--@css(/layout/basic/css/onroad-v4-journal.css)-->
+<!--@js(/layout/basic/js/onroad-v4-journal.js)-->
+<main class="onroad-page jv4-post" data-seo-title="${escapeHtml(title)} | 온로드 러닝 노트" data-seo-description="${escapeHtml(deck)}" data-seo-canonical="${escapeHtml(absoluteUrl(args.siteUrl, `/journal/${args.slug}.html`))}">
   ${structuredData}
-  <section class="jp-hero" data-header-light>
-    <div class="jp-hero__inner">
-      <div class="jp-topline">
-        <a href="/journal/index.html">All Journal</a>
-        <span>${escapeHtml(date)}</span>
-      </div>
-      <div class="eyebrow">${escapeHtml(category)} / ${escapeHtml(number)}</div>
+  <div class="jv4-progress" data-reading-progress aria-hidden="true"></div>
+  <header class="jv4-post-hero">
+    <div class="jv4-post-hero__blue" aria-hidden="true"></div>
+    <div class="jv4-post-hero__inner">
+      <nav class="jv4-breadcrumb" aria-label="현재 위치"><a href="/">홈</a><span>/</span><a href="/journal/index.html">러닝 노트</a><span>/</span><span>${escapeHtml(category)}</span></nav>
+      <div class="jv4-post-hero__meta"><span>${escapeHtml(category)}</span><span>${escapeHtml(number)}</span><span>${escapeHtml(date)}</span><span>${escapeHtml(readTime)}</span></div>
       <h1>${inlineMarkdown(title)}</h1>
-      <p class="jp-deck">${escapeHtml(deck)}</p>
+      <p class="jv4-post-hero__deck">${escapeHtml(deck)}</p>
+      <div class="jv4-post-tools"><button class="jv4-share" type="button" data-journal-share>글 공유하기</button></div>
     </div>
-  </section>
+  </header>
 
-  <section class="jp-body" data-header-light>
-    <div class="jp-layout">
-      <article class="jp-article">
+  <section class="jv4-post-body">
+    <div class="jv4-post-layout">
+      <aside class="jv4-toc" aria-label="글 목차"><strong>CONTENTS</strong><nav data-journal-toc></nav></aside>
+      <article class="jv4-reading" data-journal-article>
         ${articleHtml}
+        <aside class="jv4-post-bridge" aria-label="온로드 지구력코어 안내">
+          <p class="jv4-eyebrow">FROM READING TO ROUTINE</p>
+          <h2>지구력 관리,<br><em>이제 일상에서부터.</em></h2>
+          <p>온로드 지구력코어는 달리는 사람이 평소 하루 1정으로 챙기는 지구력 관리 건강기능식품입니다.</p>
+          <ul class="jv4-post-bridge__proof"><li>옥타코사놀 40mg 함유</li><li>지구력 증진에 도움을 줄 수 있음</li><li>비타민B군 기능성 원료 5종</li><li>하루 1정 · 60정</li></ul>
+          <a class="jv4-button jv4-button--orange" href="/product/detail.html?product_no=11">제품 기준 확인하기 →</a>
+          <small>이 글의 일반 러닝 정보는 제품의 기능성이나 개인의 운동 성과를 의미하지 않습니다.</small>
+        </aside>
       </article>
     </div>
   </section>
+  <nav class="jv4-post-nav" aria-label="러닝 노트 탐색"><div class="jv4-post-nav__inner"><a href="/journal/index.html">← 러닝 노트 전체 보기</a><a href="/product/detail.html?product_no=11">지구력코어 확인하기 →</a></div></nav>
 </main>
 `;
 }
@@ -279,7 +363,7 @@ function normalizeDate(value) {
   return null;
 }
 
-function renderStructuredData({ title, deck, heroImage, args, date }) {
+function renderStructuredData({ title, deck, heroImage, faqItems = [], args, date, modifiedDate }) {
   const pageUrl = absoluteUrl(args.siteUrl, `/journal/${args.slug}.html`);
   const imageUrl = heroImage ? absoluteUrl(args.siteUrl, heroImage) : undefined;
   const published = date.replace(/\s*\/\s*/g, '-');
@@ -291,7 +375,7 @@ function renderStructuredData({ title, deck, heroImage, args, date }) {
     url: pageUrl,
     mainEntityOfPage: pageUrl,
     datePublished: published,
-    dateModified: published,
+    dateModified: modifiedDate.replace(/\s*\/\s*/g, '-'),
     author: {
       '@type': 'Organization',
       name: args.author || 'ONROAD Journal',
@@ -302,7 +386,23 @@ function renderStructuredData({ title, deck, heroImage, args, date }) {
     },
   };
   if (imageUrl) data.image = [imageUrl];
-  return `<script type="application/ld+json">${JSON.stringify(data).replaceAll('<', '\\u003c')}</script>`;
+  const scripts = [`<script type="application/ld+json">${JSON.stringify(data).replaceAll('<', '\\u003c')}</script>`];
+  if (faqItems.length) {
+    const faqData = {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqItems.map((item) => ({
+        '@type': 'Question',
+        name: item.name,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: item.text,
+        },
+      })),
+    };
+    scripts.push(`<script type="application/ld+json">${JSON.stringify(faqData).replaceAll('<', '\\u003c')}</script>`);
+  }
+  return scripts.join('\n  ');
 }
 
 function decodeEntities(value = '') {
@@ -329,11 +429,17 @@ function collectJournalEntries(dir) {
       const h1 = (html.match(/<h1>([\s\S]*?)<\/h1>/) || [])[1] || slug;
       const fullTitle = decodeEntities(h1.replace(/<[^>]+>/g, '')).replace(/\.\s*$/, '').trim();
       const [headline, ...rest] = fullTitle.split(/\s*[\u2014\u2013-]\s+/);
-      const deckRaw = (html.match(/<p class="jp-deck">([\s\S]*?)<\/p>/) || [])[1] || '';
+      const deckRaw = (html.match(/<p class="(?:jv4-post-hero__deck|jp-deck)">([\s\S]*?)<\/p>/) || [])[1] || '';
       const deck = decodeEntities(deckRaw.replace(/<[^>]+>/g, '')).replace(/\s+/g, ' ').trim();
-      const eyebrow = (html.match(/<div class="eyebrow">([^<]*?)\s*\//) || [])[1] || 'Pace Science';
+      const postMeta = (html.match(/<div class="jv4-post-hero__meta">([\s\S]*?)<\/div>/) || [])[1] || '';
+      const metaParts = [...postMeta.matchAll(/<span>([\s\S]*?)<\/span>/g)].map((match) => decodeEntities(match[1].replace(/<[^>]+>/g, '')).trim());
+      const eyebrow = metaParts[0] || (html.match(/<div class="eyebrow">([^<]*?)\s*\//) || [])[1] || '러닝 과학';
       const date = (html.match(/"datePublished":"([^"]+)"/) || [])[1] || '';
       const articleText = ((html.match(/<article[^>]*>([\s\S]*?)<\/article>/) || [])[1] || '').replace(/<[^>]+>/g, '');
+      const searchTerms = [...html.matchAll(/<h[23]>([\s\S]*?)<\/h[23]>/g)]
+        .map((match) => decodeEntities(match[1].replace(/<[^>]+>/g, '')).trim())
+        .filter(Boolean)
+        .join(' ');
       const minutes = Math.max(3, Math.round(articleText.replace(/\s+/g, '').length / 600));
       return {
         slug,
@@ -343,9 +449,10 @@ function collectJournalEntries(dir) {
         deck,
         category: eyebrow.trim() || 'Pace Science',
         date,
-        readTime: `${minutes} min`,
+        readTime: metaParts[3] || `${minutes}분 읽기`,
         hero: `/SkinImg/img/journal/${slug}/img-1.png`,
         label: slug.replace(/^journal-/, '').toUpperCase(),
+        searchTerms,
       };
     })
     .sort((a, b) => a.slug.localeCompare(b.slug, undefined, { numeric: true }));
@@ -353,97 +460,86 @@ function collectJournalEntries(dir) {
 
 function renderJournalIndex(entries) {
   const ordered = [...entries].reverse();
-  const feature = ordered[0];
-  const cards = ordered.slice(1);
-  const picks = ordered.slice(0, 3);
   const categories = [...new Set(entries.map((entry) => entry.category))];
-  const latestYear = ordered.map((entry) => (entry.date || '').slice(0, 4)).find(Boolean)
-    || String(new Date().getFullYear());
   const excerpt = (entry) => escapeHtml(entry.subtitle ? truncateText(entry.subtitle, 90) : truncateText(entry.deck, 90));
-
-  const featureBlock = feature ? `  <section class="jr-feature" data-header-light>
-    <a class="jr-feature__link" href="/journal/${feature.slug}.html">
-      <div class="jr-feature__media" style="background-image:url('${feature.hero}');">
-        <span class="content-card__tag">Feature / ${escapeHtml(feature.label)}</span>
-      </div>
-      <div>
-        <div class="eyebrow"><span style="color:var(--c-signal);">${escapeHtml(feature.category)}</span> / ${escapeHtml(feature.readTime)}</div>
-        <h2>${escapeHtml(feature.title)}</h2>
-        <p>${excerpt(feature)}</p>
-        <span class="btn btn--solid-ink">\uC804\uBB38 \uC77D\uAE30 <span class="btn__arrow"></span></span>
-      </div>
-    </a>
-  </section>\n` : '';
-
-  const cardBlocks = cards.map((entry) => `        <a href="/journal/${entry.slug}.html" class="content-card">
-          <div class="content-card__media" style="background-image:url('${entry.hero}');"><span class="content-card__tag">Journal / ${escapeHtml(entry.label)}</span></div>
-          <div class="content-card__body">
-            <div class="content-card__meta"><em>${escapeHtml(entry.category)}</em><span>/ ${escapeHtml(entry.readTime)}</span></div>
-            <h3 class="content-card__title">${escapeHtml(entry.title)}</h3>
-            <p class="content-card__excerpt">${excerpt(entry)}</p>
-          </div>
-        </a>`).join('\n');
-
-  const pickBlocks = picks.map((entry, idx) => `          <li><span>${String(idx + 1).padStart(2, '0')}</span><a href="/journal/${entry.slug}.html"><small>${escapeHtml(entry.category)}</small><strong>${escapeHtml(entry.title)}.</strong></a></li>`).join('\n');
-
-  const filterBlocks = ['All', ...categories]
-    .map((name, idx) => `      <a${idx === 0 ? ' class="is-active"' : ''} href="/journal/index.html">${escapeHtml(name)}</a>`)
+  const filterBlocks = ['전체', ...categories]
+    .map((name, idx) => `          <button class="jv4-filter${idx === 0 ? ' is-active' : ''}" type="button" data-journal-filter="${escapeHtml(name)}" aria-pressed="${idx === 0 ? 'true' : 'false'}">${escapeHtml(name)}</button>`)
     .join('\n');
 
+  const cardBlocks = ordered.map((entry, index) => `        <a class="jv4-card${index === 0 ? ' jv4-card--featured' : ''}" href="/journal/${entry.slug}.html" data-journal-card data-category="${escapeHtml(entry.category)}" data-keywords="${escapeHtml(`${entry.fullTitle} ${entry.deck} ${entry.category} ${entry.searchTerms}`)}">
+          <div class="jv4-card__body">${index === 0 ? '<span class="jv4-card__featured-label">이번 주 질문</span>' : ''}<div class="jv4-card__meta"><span>${escapeHtml(entry.category)}</span><span>${escapeHtml(entry.date || 'ONROAD NOTE')} · ${escapeHtml(entry.readTime)}</span></div><span class="jv4-card__question" aria-hidden="true">Q.</span><h3>${escapeHtml(entry.fullTitle)}</h3><p>${excerpt(entry)}</p><span class="jv4-card__read">답 확인하기 →</span></div>
+          <div class="jv4-card__media" aria-hidden="true"><img src="${escapeHtml(entry.hero)}" alt="" loading="lazy"></div>
+        </a>`).join('\n');
+
+  const collectionData = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: '온로드 러닝 노트',
+    description: '마라톤 보급, 테이퍼링, 대회 준비, 여름 러닝처럼 러너가 실제로 겪는 문제에 답하는 온로드 러닝 가이드',
+    url: 'https://zenera.kr/journal/index.html',
+    mainEntity: ordered.map((entry) => ({ '@type': 'Article', headline: entry.fullTitle, url: `https://zenera.kr/journal/${entry.slug}.html` })),
+  };
+
   return `<!--@layout(/layout/basic/layout.html)-->
-<main class="onroad-page journal-page">
-  <section class="jr-masthead" data-header-light>
-    <div class="jr-masthead__inner">
-      <div>
-        <div class="eyebrow">Running Journal / Vol. 01 / ${escapeHtml(latestYear)}</div>
-        <h1>\uB7EC\uB108\uC758 <span class="italic">\uAE30\uB85D</span>,<br><span class="italic">\uD68C\uBCF5</span>, \uADF8\uB9AC\uACE0 \uB2E4\uC74C \uAC78\uC74C.</h1>
-      </div>
-      <aside class="jr-editor-note">
-        <b>[ Editor's Note ]</b>
-        <p>\uB9E4\uC8FC \uAE08\uC694\uC77C \uBC1C\uAC04.<br>\uB7EC\uB2DD \uD504\uB85C\uD1A0\uCF5C\uC5D0\uC11C \uC801\uC5B4 \uBCF4\uB0B4\uB294<br>\uB7EC\uB108\uB97C \uC704\uD55C \uD78C\uD2B8.</p>
-        <small>${entries.length} entries / ${escapeHtml(latestYear)}</small>
-      </aside>
-    </div>
-    <div class="jr-filter" aria-label="Journal categories">
+<!--@css(/layout/basic/css/onroad-v4-journal.css)-->
+<!--@js(/layout/basic/js/onroad-v4-journal.js)-->
+<main class="onroad-page jv4-index" data-seo-title="온로드 러닝 노트 | 러너의 실제 질문에 답합니다" data-seo-description="마라톤 보급, 테이퍼링, 대회 준비, 여름 러닝처럼 러너가 실제로 겪는 문제에 답하는 온로드 러닝 가이드" data-seo-canonical="https://zenera.kr/journal/index.html">
+  <script type="application/ld+json">${JSON.stringify(collectionData).replaceAll('<', '\\u003c')}</script>
+  <section class="jv4-index-hero">
+    <div class="jv4-shell jv4-index-hero__grid"><div><p class="jv4-eyebrow jv4-eyebrow--light">ONROAD RUNNING NOTE</p><h1><span>러닝 질문,</span><span><em>답부터</em> 확인하세요.</span></h1></div><aside class="jv4-index-hero__aside"><p>마라톤 보급, 테이퍼링, 대회 전 준비, 여름 심박처럼 러너가 실제로 겪는 문제를 근거와 체크리스트로 정리합니다.</p><div class="jv4-index-hero__stats"><div><strong>${entries.length}</strong><span>PUBLISHED NOTES</span></div><div><strong>${categories.length}</strong><span>RUNNING TOPICS</span></div></div></aside></div>
+  </section>
+
+  <section class="jv4-discovery" aria-label="러닝 노트 검색"><div class="jv4-shell jv4-discovery__panel"><label class="jv4-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg><input type="search" data-journal-search placeholder="예: 마라톤 30km, 테이퍼링, 여름 러닝" aria-label="러닝 노트 검색"></label><div class="jv4-filters" aria-label="주제별 보기">
 ${filterBlocks}
-    </div>
-  </section>
+        </div></div></section>
 
-${featureBlock}
-  <section class="jr-grid-section" data-header-light>
-    <div class="jr-layout">
-      <div class="jr-cards">
+  <section class="jv4-paths"><div class="jv4-shell"><div class="jv4-section-head"><div><p class="jv4-eyebrow">START WITH YOUR QUESTION</p><h2>지금 궁금한 것부터<br><em>바로 확인하세요.</em></h2></div><p>길게 돌려 말하지 않고, 러너가 실제로 겪는 상황에 먼저 답합니다.</p></div><div class="jv4-path-grid">
+    <button class="jv4-path-card" type="button" data-journal-filter="마라톤 준비" data-journal-path><span>01 / MARATHON</span><h3>젤을 언제 먹어야 할까?</h3><p>예상 완주 시간으로 보급 간격을 계산합니다.</p><strong>마라톤 준비 답변 보기 →</strong></button>
+    <button class="jv4-path-card" type="button" data-journal-filter="훈련 루틴" data-journal-path><span>02 / TRAINING</span><h3>2주 전, 얼마나 줄일까?</h3><p>테이퍼링 기간과 훈련량 조절을 정리합니다.</p><strong>훈련 루틴 답변 보기 →</strong></button>
+    <button class="jv4-path-card" type="button" data-journal-filter="계절 러닝" data-journal-path><span>03 / SEASON</span><h3>여름엔 왜 심박이 높을까?</h3><p>기온, 습도, 페이스와 수분을 함께 봅니다.</p><strong>계절 러닝 답변 보기 →</strong></button>
+    <button class="jv4-path-card" type="button" data-journal-filter="러닝 과학" data-journal-path><span>04 / SCIENCE</span><h3>30km부터 왜 무거울까?</h3><p>페이스·보급·날씨·훈련을 차례로 확인합니다.</p><strong>러닝 과학 답변 보기 →</strong></button>
+  </div></div></section>
+
+  <section class="jv4-library" id="journalLibrary"><div class="jv4-shell"><div class="jv4-library__bar"><div><p class="jv4-eyebrow">CHOOSE YOUR QUESTION</p><h2>지금 해결하고 싶은<br><em>질문을 골라보세요.</em></h2></div><span class="jv4-result" data-journal-count>${entries.length}개의 질문</span></div><div class="jv4-card-grid">
 ${cardBlocks}
-      </div>
+      </div><p class="jv4-empty" data-journal-empty>검색 결과가 없습니다. 다른 키워드나 주제를 선택해 주세요.</p></div></section>
 
-      <aside class="jr-sidebar">
-        <div class="eyebrow">Editor's Pick</div>
-        <ol class="jr-pick-list">
-${pickBlocks}
-        </ol>
-
-        <div class="jr-newsletter">
-          <div class="eyebrow eyebrow--light">Newsletter</div>
-          <h3>\uB9E4\uC8FC \uAE08\uC694\uC77C,<br>\uBC1B\uC544\uBCF4\uB294 <span class="italic">\uB7EC\uB2DD \uD78C\uD2B8</span>.</h3>
-          <p>\uAD11\uACE0 \uC5C6\uC774 \uB7EC\uB108\uC5D0\uAC8C \uD544\uC694\uD55C \uB178\uD2B8\uB9CC \uC804\uD569\uB2C8\uB2E4.</p>
-          <form><input placeholder="you@email.com" aria-label="Email"><button type="submit">OK</button></form>
-        </div>
-      </aside>
-    </div>
-  </section>
+  <section class="jv4-product-bridge"><div class="jv4-shell jv4-product-bridge__grid"><div class="jv4-product-bridge__copy"><p class="jv4-eyebrow jv4-eyebrow--light">READ. RUN. REPEAT.</p><h2>읽는 데서 끝나지 않게.<br><em>지구력 관리, 이제 일상에서부터.</em></h2><p>온로드 지구력코어는 달리는 사람이 평소 하루 1정으로 챙기는 지구력 관리 건강기능식품입니다.</p><div class="jv4-product-bridge__facts"><span>옥타코사놀 40mg</span><span>비타민B군 기능성 원료 5종</span><span>하루 1정 · 60정</span></div></div><aside class="jv4-product-bridge__card"><span>ENDURANCE CORE</span><h3>러너의 매일 관리 루틴</h3><p>옥타코사놀은 지구력 증진에 도움을 줄 수 있습니다.</p><a class="jv4-button jv4-button--orange" href="/product/detail.html?product_no=11">제품 기준 확인하기 →</a><small>콘텐츠의 일반 러닝 정보는 제품의 기능성이나 개인의 운동 성과를 의미하지 않습니다.</small></aside></div></section>
 </main>
 `;
 }
 
 function updateJournalIndex({ args }) {
   if (!args.writeCafe24) return null;
-  const journalDir = path.resolve('cafe24', 'journal');
+  const journalDir = path.join(args.skinDir, 'journal');
   const indexPath = path.join(journalDir, 'index.html');
   if (!fssync.existsSync(indexPath)) return null;
   const entries = collectJournalEntries(journalDir);
   if (!entries.length) return null;
   fssync.writeFileSync(indexPath, renderJournalIndex(entries), 'utf8');
   return indexPath;
+}
+
+function updateSitemap({ args }) {
+  if (!args.writeCafe24) return null;
+  const journalDir = path.join(args.skinDir, 'journal');
+  if (!fssync.existsSync(journalDir)) return null;
+  const entries = collectJournalEntries(journalDir);
+  const today = new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Seoul' }).format(new Date());
+  const staticUrls = [
+    '/',
+    '/product/detail.html?product_no=11',
+    '/shopinfo/ingredient-science.html',
+    '/shopinfo/intake-guide.html',
+    '/journal/index.html',
+    '/shopinfo/company.html',
+  ];
+  const rows = staticUrls.map((pathname) => ({ pathname, date: today }))
+    .concat(entries.map((entry) => ({ pathname: `/journal/${entry.slug}.html`, date: entry.date || today })));
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${rows.map((row) => `  <url>\n    <loc>${escapeHtml(absoluteUrl(args.siteUrl, row.pathname))}</loc>\n    <lastmod>${escapeHtml(row.date)}</lastmod>\n  </url>`).join('\n')}\n</urlset>\n`;
+  const sitemapPath = path.join(args.skinDir, 'sitemap.xml');
+  fssync.writeFileSync(sitemapPath, xml, 'utf8');
+  return sitemapPath;
 }
 
 function runRegulationCheck(mdPath, checkerPath) {
@@ -472,7 +568,7 @@ async function copyAssets(images, inputPath, args) {
   const missing = findMissingAssets(images, inputPath, args);
   if (!args.writeCafe24) return { copied, missing };
   if (missing.length && !args.allowMissingAssets) throw new Error(`Missing image assets:\n${missing.map((item) => `- ${item}`).join('\n')}`);
-  const targetDir = path.resolve('cafe24', 'SkinImg', 'img', 'journal', args.slug);
+  const targetDir = path.join(args.skinDir, 'SkinImg', 'img', 'journal', args.slug);
   await fs.mkdir(targetDir, { recursive: true });
   for (const image of images) {
     const source = resolveImageSource(image, inputPath, args);
@@ -495,10 +591,12 @@ async function main() {
   const { title: h1Title, body } = stripTitle(withTitle);
   const title = h1Title || meta.title || args.slug;
   const { articleHtml, images } = markdownToHtml(body, args.slug);
-  const html = renderPage({ title, deck: plainDeck(body), articleHtml, heroImage: images[0]?.src || '', args, meta });
+  const deck = meta.meta_description || meta.description || plainDeck(body);
+  const faqItems = extractFaqItems(body);
+  const html = renderPage({ title, deck, articleHtml, heroImage: images[0]?.src || '', faqItems, args, meta });
 
   const outputPath = args.writeCafe24
-    ? path.resolve('cafe24', 'journal', `${args.slug}.html`)
+    ? path.join(args.skinDir, 'journal', `${args.slug}.html`)
     : path.join(path.resolve(args.outDir || path.join('tmp', 'journal-build', args.slug)), `${args.slug}.html`);
   const missingBeforeWrite = findMissingAssets(images, inputPath, args);
   if (missingBeforeWrite.length && !args.allowMissingAssets) {
@@ -508,11 +606,13 @@ async function main() {
   const assetResult = await copyAssets(images, inputPath, args);
   await fs.writeFile(outputPath, html, 'utf8');
   const indexPath = updateJournalIndex({ args });
+  const sitemapPath = updateSitemap({ args });
 
   console.log(JSON.stringify({
     ok: true,
     output: path.relative(process.cwd(), outputPath),
     index: indexPath ? path.relative(process.cwd(), indexPath) : null,
+    sitemap: sitemapPath ? path.relative(process.cwd(), sitemapPath) : null,
     mode: args.writeCafe24 ? 'cafe24-write' : 'dry-run',
     imagesReferenced: images.length,
     imagesCopied: assetResult.copied.length,
