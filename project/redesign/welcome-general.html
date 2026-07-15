@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Onroad — 지친 저녁에도, 다시 한 걸음</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300;400;500&family=Noto+Serif:wght@300;400;600&family=Noto+Serif+KR:wght@300;400;600;900&display=swap');
+:root{
+  --c-cream:#f4efe6; --c-cream-2:#ebe4d6; --c-paper:#faf7f1; --c-ink:#141210;
+  --c-char:#2a2622; --c-meta:#8a847c; --c-line:#d8d0c2; --c-sand:#a89a82;
+  --c-signal:#c8321e; --c-dark:#0f0d0b;
+  --font-serif:"Noto Serif","Noto Serif KR","Noto Serif CJK KR",Georgia,serif;
+  --font-mono:"Noto Sans Mono","Noto Mono",monospace;
+  --mx:clamp(20px,6vw,96px);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:var(--font-serif);background:var(--c-cream);color:var(--c-char);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;line-height:1.5;overflow-x:hidden;word-break:keep-all;}
+body::before{content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;opacity:.4;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");}
+::selection{background:var(--c-signal);color:var(--c-paper);}
+a{color:inherit;}
+.mono{font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.18em;font-size:.64rem;color:var(--c-meta);}
+.red{color:var(--c-signal);} .ital{font-style:italic;}
+
+/* header */
+.head{position:sticky;top:0;z-index:100;background:color-mix(in srgb,var(--c-cream) 90%,transparent);backdrop-filter:blur(6px);border-bottom:1px solid var(--c-line);}
+.head .in{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:13px var(--mx);}
+.back{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--c-char);text-decoration:none;display:flex;align-items:center;gap:8px;}
+.back b{font-family:var(--font-serif);font-weight:600;font-size:1.15rem;letter-spacing:-.02em;text-transform:none;color:var(--c-ink);}
+.h-nav{display:flex;align-items:center;gap:clamp(14px,2.2vw,30px);}
+.h-nav a{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:var(--c-char);}
+.h-nav a.buy{background:var(--c-ink);color:var(--c-paper);padding:11px 20px;}
+.h-nav a.buy:hover{background:var(--c-signal);}
+
+/* hero — general = warm light */
+.hero{background:var(--c-paper);color:var(--c-ink);padding:clamp(44px,8vh,100px) var(--mx);position:relative;overflow:hidden;border-bottom:1px solid var(--c-line);}
+.hero .motif{position:absolute;inset:0;pointer-events:none;opacity:.7;}
+.hero .motif svg{position:absolute;right:-8%;bottom:-30%;width:46%;height:auto;}
+.hero .motif .sun{fill:none;stroke:rgba(168,154,130,.32);stroke-width:1;}
+.hero .motif .sun.hot{stroke:rgba(200,50,30,.28);}
+.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(30px,5vw,70px);align-items:center;max-width:1280px;}
+.hero .hook{font-family:var(--font-serif);font-weight:300;font-size:clamp(1.05rem,1.6vw,1.3rem);color:var(--c-signal);font-style:italic;margin-bottom:18px;}
+.hero h1{font-family:var(--font-serif);font-weight:300;font-size:clamp(2.5rem,5.4vw,4.3rem);line-height:1.04;letter-spacing:-.035em;color:var(--c-ink);}
+.hero h1 .red{color:var(--c-signal);font-style:italic;}
+.hero .lede{font-family:var(--font-serif);font-weight:300;font-size:clamp(1.06rem,1.5vw,1.28rem);line-height:1.65;color:var(--c-char);margin-top:24px;max-width:42ch;}
+.hero .cta-row{margin-top:clamp(30px,5vh,46px);display:flex;align-items:center;gap:22px;flex-wrap:wrap;}
+.btn{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;display:inline-flex;align-items:center;gap:13px;padding:16px 30px;transition:background .35s,color .35s,border-color .35s;}
+.btn .arr{transition:transform .35s;}
+.btn:hover .arr{transform:translateX(6px);}
+.btn.solid{background:var(--c-ink);color:var(--c-paper);}
+.btn.solid:hover{background:var(--c-signal);}
+.btn.line{border:1px solid var(--c-ink);color:var(--c-ink);}
+.btn.line:hover{border-color:var(--c-signal);color:var(--c-signal);}
+.hero .stat-line{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--c-meta);}
+.hero .cta-note{margin-top:16px;font-family:var(--font-mono);font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;color:var(--c-meta);display:flex;gap:14px;flex-wrap:wrap;}
+.hero .cta-note span{display:flex;align-items:center;gap:6px;}
+.hero .cta-note span::before{content:"\2713";color:var(--c-signal);}
+.hero-prod{display:flex;justify-content:center;align-items:center;}
+.hero-prod .card{background:var(--c-cream);border:1px solid var(--c-line);padding:clamp(22px,3vw,40px);}
+.hero-prod svg{height:clamp(260px,38vh,400px);width:auto;display:block;}
+
+/* svg product classes (light) */
+.pl-fill{fill:var(--c-cream-2);} .pl-stroke{fill:none;stroke:var(--c-ink);stroke-width:1.4;}
+.pl-thin{fill:none;stroke:var(--c-sand);stroke-width:.8;}
+
+/* section base */
+.sec{padding:clamp(54px,8vh,108px) var(--mx);max-width:1280px;margin:0 auto;}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--c-line);padding-bottom:14px;margin-bottom:clamp(32px,5vh,60px);gap:16px;flex-wrap:wrap;}
+.sec-head .t{font-family:var(--font-serif);font-weight:400;font-size:clamp(1.4rem,2.4vw,2rem);letter-spacing:-.02em;color:var(--c-ink);}
+.sec-head .t .red{font-style:italic;}
+
+/* benefits 3 */
+.benefits{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--c-line);background:var(--c-paper);}
+.bene{padding:clamp(28px,3.2vw,44px);border-right:1px solid var(--c-line);}
+.bene:last-child{border-right:0;}
+.bene .ic{color:var(--c-signal);height:30px;margin-bottom:22px;display:flex;align-items:center;}
+.bene h3{font-family:var(--font-serif);font-weight:400;font-size:1.3rem;letter-spacing:-.01em;color:var(--c-ink);margin-bottom:10px;}
+.bene p{font-family:var(--font-serif);font-weight:300;font-size:.98rem;line-height:1.6;color:var(--c-char);}
+.bene .tag{display:block;margin-top:14px;font-family:var(--font-mono);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;color:var(--c-meta);}
+
+/* proof quote */
+.proof{background:var(--c-cream-2);border-top:1px solid var(--c-line);border-bottom:1px solid var(--c-line);}
+.proof .wrap{max-width:1280px;margin:0 auto;padding:clamp(48px,8vh,100px) var(--mx);}
+.proof .stars{color:var(--c-signal);letter-spacing:.14em;font-size:1rem;margin-bottom:22px;}
+.proof blockquote{font-family:var(--font-serif);font-weight:300;font-size:clamp(1.5rem,3vw,2.4rem);line-height:1.34;letter-spacing:-.02em;color:var(--c-ink);max-width:26ch;}
+.proof blockquote .red{font-style:italic;}
+.proof .by{margin-top:26px;font-family:var(--font-mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--c-meta);}
+
+/* reassurance row */
+.reassure{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--c-ink);}
+.rea{padding:clamp(26px,3.2vw,42px) 20px;text-align:center;border-right:1px solid var(--c-line);}
+.rea:last-child{border-right:0;}
+.rea .k{font-family:var(--font-serif);font-weight:400;font-size:1.3rem;letter-spacing:-.01em;color:var(--c-ink);margin-bottom:8px;}
+.rea .k .red{font-style:italic;color:var(--c-signal);}
+.rea .v{font-family:var(--font-mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--c-meta);}
+
+/* final cta */
+.final{background:var(--c-dark);color:var(--c-cream);padding:clamp(64px,11vh,150px) var(--mx);text-align:center;}
+.final h2{font-family:var(--font-serif);font-weight:300;font-size:clamp(2.2rem,5vw,4rem);line-height:1.08;letter-spacing:-.03em;color:var(--c-paper);max-width:20ch;margin:0 auto;}
+.final h2 .red{color:var(--c-signal);font-style:italic;}
+.final .sub{font-family:var(--font-serif);font-weight:300;font-size:1.05rem;color:var(--c-sand);margin-top:20px;}
+.final .cta-row{margin-top:clamp(30px,5vh,46px);display:flex;justify-content:center;gap:20px;flex-wrap:wrap;}
+.final .btn.solid{background:var(--c-signal);}
+.final .btn.solid:hover{background:var(--c-paper);color:var(--c-ink);}
+.final .btn.line{border-color:rgba(216,208,194,.4);color:var(--c-paper);}
+.final .btn.line:hover{border-color:var(--c-signal);color:var(--c-signal);}
+
+/* foot */
+.foot{background:var(--c-dark);color:var(--c-sand);padding:30px var(--mx);border-top:1px solid rgba(216,208,194,.16);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-family:var(--font-mono);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;}
+.foot a{color:var(--c-sand);text-decoration:none;}
+
+@media (max-width:860px){
+  .hero-grid{grid-template-columns:1fr;gap:34px;}
+  .hero-prod{order:-1;}
+  .hero-prod svg{height:clamp(220px,36vh,300px);}
+  .benefits{grid-template-columns:1fr;}
+  .bene{border-right:0;border-bottom:1px solid var(--c-line);}
+  .bene:last-child{border-bottom:0;}
+  .reassure{grid-template-columns:1fr;}
+  .rea{border-right:0;border-bottom:1px solid var(--c-line);}
+  .rea:last-child{border-bottom:0;}
+  .h-nav a:not(.buy){display:none;}
+}
+</style>
+</head>
+<body class="aud-gen">
+
+<!-- header -->
+<header class="head">
+  <div class="in">
+    <a class="back" href="index.html">← <b>Onroad</b></a>
+    <nav class="h-nav">
+      <a href="product.html">제품</a>
+      <a href="journal.html">저널</a>
+      <a class="buy" href="product.html">지금 구매</a>
+    </nav>
+  </div>
+</header>
+
+<!-- hero -->
+<section class="hero">
+  <div class="motif" aria-hidden="true">
+    <svg viewBox="0 0 460 460">
+      <circle class="sun" cx="300" cy="320" r="70"/>
+      <circle class="sun" cx="300" cy="320" r="120"/>
+      <circle class="sun hot" cx="300" cy="320" r="170"/>
+      <circle class="sun" cx="300" cy="320" r="220"/>
+      <line class="sun hot" x1="80" y1="320" x2="520" y2="320"/>
+    </svg>
+  </div>
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <p class="hook">퇴근하면, 소파에 그대로 주저앉게 되나요?</p>
+      <h1>지친 저녁에도,<br>다시 <span class="red">한 걸음.</span></h1>
+      <p class="lede">무리한 운동도, 복잡한 루틴도 필요 없습니다. 무카페인 옥타코사놀 40mg 한 정으로, 지친 하루의 끝을 조금 더 가볍게.</p>
+      <div class="cta-row">
+        <a class="btn solid" href="product.html">부담 없이 시작하기 <span class="arr">→</span></a>
+        <span class="stat-line">옥타코사놀 40mg · 무카페인 · 하루 한 정</span>
+      </div>
+      <p class="cta-note"><span>무료배송</span><span>60일 환불 보장</span><span>언제든 해지</span></p>
+    </div>
+    <div class="hero-prod" aria-hidden="true">
+      <div class="card">
+        <svg viewBox="0 0 220 360" role="img" aria-label="제품 보틀">
+          <rect class="pl-fill" x="78" y="22" width="64" height="34"/>
+          <rect class="pl-stroke" x="78" y="22" width="64" height="34"/>
+          <path class="pl-stroke" d="M84 56 L84 70 Q84 78 92 80 L128 80 Q136 78 136 70 L136 56"/>
+          <path class="pl-stroke" d="M70 84 Q60 86 60 102 L60 318 Q60 332 74 332 L146 332 Q160 332 160 318 L160 102 Q160 86 150 84 L70 84Z"/>
+          <rect x="74" y="150" width="72" height="120" fill="var(--c-paper)"/>
+          <line class="pl-thin" x1="74" y1="174" x2="146" y2="174"/>
+          <text x="110" y="168" text-anchor="middle" font-family="var(--font-mono)" font-size="8" fill="var(--c-char)" letter-spacing="2">ONROAD</text>
+          <text x="110" y="200" text-anchor="middle" font-family="var(--font-serif)" font-size="13" fill="var(--c-ink)">Endurance</text>
+          <text x="110" y="216" text-anchor="middle" font-family="var(--font-serif)" font-size="13" fill="var(--c-ink)">Core</text>
+          <line class="pl-thin" x1="86" y1="232" x2="134" y2="232"/>
+          <text x="110" y="250" text-anchor="middle" font-family="var(--font-mono)" font-size="7" fill="var(--c-meta)" letter-spacing="1">OCTACOSANOL 40MG</text>
+          <text x="110" y="262" text-anchor="middle" font-family="var(--font-mono)" font-size="7" fill="var(--c-meta)" letter-spacing="1">60 TABLETS</text>
+          <line x1="74" y1="150" x2="74" y2="270" stroke="var(--c-signal)" stroke-width="1.4"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- benefits -->
+<section class="sec">
+  <div class="sec-head">
+    <span class="t">바쁜 일상에 <span class="red">딱 한 가지</span>만 더한다면</span>
+    <span class="mono">Why Everyday</span>
+  </div>
+  <div class="benefits">
+    <div class="bene">
+      <div class="ic"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="5" y="11" width="20" height="8" rx="4" transform="rotate(-45 15 15)"/><path d="M11 11l8 8"/></svg></div>
+      <h3>하루 한 정이면 끝</h3>
+      <p>여러 알도, 복잡한 루틴도 없습니다. 물 한 잔에 한 정, 그게 전부입니다.</p>
+      <span class="tag">하루 1정</span>
+    </div>
+    <div class="bene">
+      <div class="ic"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M21 16a7 7 0 1 1-8-9 6 6 0 0 0 8 9z"/></svg></div>
+      <h3>밤에 먹어도 잠 안 깨요</h3>
+      <p>카페인이 전혀 없어, 자기 전에 먹어도 잠을 방해하지 않습니다.</p>
+      <span class="tag">무카페인</span>
+    </div>
+    <div class="bene">
+      <div class="ic"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M15 26C9 22 6 17 6 11l9-4 9 4c0 6-3 11-9 15z" stroke-linejoin="round"/><path d="M11 13l3 3 5-6"/></svg></div>
+      <h3>숨길 것 없는 깨끗한 성분</h3>
+      <p>색소도 첨가물도 넣지 않았습니다. 국내 GMP 적합 시설에서 만듭니다.</p>
+      <span class="tag">국내 GMP 제조</span>
+    </div>
+  </div>
+</section>
+
+<!-- proof -->
+<section class="proof">
+  <div class="wrap">
+    <div class="stars">★★★★★</div>
+    <blockquote>저녁에 덜 <span class="red">처진다.</span> 무엇보다 챙겨 먹기가 편해서 계속 가게 된다.</blockquote>
+    <div class="by">이지은 · 32세 · 직장인 · 두 시즌째</div>
+  </div>
+</section>
+
+<!-- reassurance -->
+<section class="sec">
+  <div class="reassure">
+    <div class="rea"><div class="k">무료배송</div><div class="v">3만원 이상 전국</div></div>
+    <div class="rea"><div class="k"><span class="red">60일</span> 환불 보장</div><div class="v">맞지 않으면 묻지 않고 환불</div></div>
+    <div class="rea"><div class="k">언제든 해지</div><div class="v">약정 없는 정기배송</div></div>
+  </div>
+</section>
+
+<!-- final -->
+<section class="final">
+  <h2>오늘 저녁의 끝을<br>조금 더 <span class="red">가볍게.</span></h2>
+  <p class="sub">옥타코사놀 40mg · 무카페인 · 60정 / 60일</p>
+  <div class="cta-row">
+    <a class="btn solid" href="product.html">부담 없이 시작하기 <span class="arr">→</span></a>
+    <a class="btn line" href="index.html">처음으로</a>
+  </div>
+</section>
+
+<footer class="foot">
+  <span>© 2026 Onroad · Endurance Core · 건강기능식품</span>
+  <span><a href="index.html">Gateway</a> · <a href="welcome-runner.html">러너를 위한 페이지</a></span>
+</footer>
+
+</body>
+</html>
