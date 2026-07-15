@@ -1,0 +1,647 @@
+
+
+--- PAGE 1 ---
+Improvement of Lipids and Reduction of Oxidative Stress
+With Octacosanol After Taekwondo Training
+Sang-Ho Lee, Steven D. Scott, Elizabeth J. Pekas, Jeong-Gi Lee, and Song-Young Park
+Purpose: Athletes in combat sports undergo rapid changes in body weight prior to competition in order to gain a size advantage
+over their opponent. However, these large weight changes with concomitant high-intensity exercise training create poor lipid
+proﬁles and high levels of oxidative stress, which can be detrimental to health and sport performance. Therefore, the purpose of
+this study was to investigate the ability of the nutritional supplement octacosanol to combat the physiological detriments that
+occur in taekwondo players during rapid weight loss with high-intensity exercise training. Methods: A total of 26 male
+taekwondo players were randomly divided into 2 groups: An experimental group performed a 5% weight-loss and taekwondo
+training program with 40-mg octacosanol intake (OCT; n = 13) for 6 d, and a control group performed the same weight-loss and
+taekwondo training program with a placebo (CON; n = 13). Results: There were signiﬁcant (P < .05) group × time interactions for
+low-density lipoprotein and triglycerides, which signiﬁcantly decreased (Δ18 [5] mg/dL and Δ80 [7] mg/dL, respectively), and
+high-density lipoprotein, which signiﬁcantly increased (Δ10 [7] mg/dL), in the OCT group compared with the CON group. There
+were also signiﬁcant (P < .05) group × time interactions for superoxide dismutase (SOD), glutathione peroxidase (GPx), and
+malondialdehyde (MDA), with SOD increasing (Δ226 [121] U/gHb) in the OCT group, while GPx decreased (Δ20 [13] U/gHb)
+and MDA increased (Δ72 [0.04] nmol/mL) in the CON group. Conclusion: These results suggest that octacosanol may be a
+beneﬁcial supplement to protect against the poor cholesterol levels and oxidative stress that occurs during taekwondo training.
+Keywords: sport nutrition, exercise physiology, health
+Athletes who participate in weight-division sports such as
+taekwondo, boxing, judo, and wrestling regularly reduce their body
+weight severely prior to competition in order to gain a size
+advantage over the opponent while simultaneously meeting their
+weight-division requirements. In general, athletes have acute
+weight loss of 4 to 7 kg within 3 to 4 days of competition, while
+longer periods of more gradual weight loss of 15 to 22 kg occur
+over 3 to 4 weeks.1,2 Although this kind of extreme weight loss can
+induce metabolic dysfunction, it is repeatedly performed by ath-
+letes of weight division sports in order to acquire a more advanta-
+geous condition for play.3 Furthermore, athletes participating in
+matches tend to obtain excessive body weights compared with their
+weight division during the offseason in order to lift heavier weights
+during training, before rapidly losing that body weight over a short
+period of time prior to competition.4 This rapid weight change with
+high-intensity exercise training may result in the deterioration of
+the health and sports performance of these athletes, as it can lead to
+an abrupt disturbance of metabolism and increased oxidative stress,
+which can ultimately result in damage to the cells.5 This is
+concerning, as an impairment in lipid metabolism and an increase
+in free radical production can lead to greater risks of cardiovascular
+and metabolic disease in these athletes.6,7
+Octacosanol, a straight-chain, high-molecular-weight, primary
+aliphatic alcohol minimally contained in the epicuticular wax
+of various plants may be able to prevent these deteriorations,
+however, as it has been shown to provide various metabolic and
+cardiovascular health beneﬁts.8 For instance, octacosanol supple-
+mentation was shown to prevent an increase in adipose accumula-
+tion,
+serum
+triglyceride
+(TG)
+concentration,
+and
+glycogen
+accumulation, while increasing serum fatty acid content and fatty
+acid oxidation in experimental models fed a high-fat diet.9–11 In
+humans, octacosanol has been shown to improve cardiovascular
+function and walking capacity in patients with peripheral artery
+disease12; serum low-density lipoprotein (LDL) and high-density
+lipoprotein (HDL) concentrations in healthy adults;13 and LDL,
+HDL, total cholesterol, and TG levels in patients with type 2
+hypercholesterolemia.14 However, the potential beneﬁcial effects
+of octacosanol intake for improving cholesterol and oxidative
+stress that occur from sports that require excessive weight change
+and high-intensity exercise have not been examined. Therefore, the
+purpose of this study was to examine the effects of octacosanol
+supplementation during rapid weight loss through caloric restric-
+tion with high-intensity exercise training on lipid proﬁles and
+markers of oxidative stress in taekwondo players.
+Materials and Methods
+Subjects
+All procedures reported in this study were conducted and performed
+according to the protocols approved by Kosin University’s institu-
+tional review board (KSU IRB 2017-63-HR) and carried out in
+© 2019 The Authors. Published by Human Kinetics, Inc. This is an Open Access
+article distributed under the terms of the Creative Commons Attribution License CC
+BY NC 4.0, which permits unrestricted noncommercial use, distribution, and
+reproduction in any medium, provided the original work is properly cited, the
+new use includes a link to the license, and any changes are indicated. See http://
+creativecommons.org/licenses/by-nc/4.0. This license does not cover any third-party
+material which may appear with permission in the article. For commercial use,
+permission should be requested from Human Kinetics, Inc., through the Copyright
+Clearance Center (http://www.copyright.com).
+S.-H. Lee and J.-K. Lee are with the Dept of Taekwondo, Kosin University, Busan,
+South Korea. Scott, Pekas, and Park are with the School of Health and Kinesiology,
+University of Nebraska Omaha, Omaha, NE. Park (Song-youngpark@unomaha.
+edu) is corresponding author.
+1297
+International Journal of Sports Physiology and Performance, 2019, 14, 1297-1303
+https://doi.org/10.1123/ijspp.2018-0704
+ORIGINAL INVESTIGATION
+Unauthenticated | Downloaded 06/29/26 01:55 PM UTC
+
+
+--- PAGE 2 ---
+accordance with the Declaration of Helsinki. This study was also
+registered with clinicaltrials.gov (NTC03557476). A total of 26 elite
+male taekwondo athletes (mean age = 18 [1] y) with at least 3 years
+of experience in national taekwondo competitions were recruited
+from Kosin University. Subject characteristics can be seen in Table 1.
+All participants were healthy and free from cardiovascular, meta-
+bolic, and renal diseases, and all participants received complete
+information about the study design and provided written informed
+consent. Participants were asked to abstain from caffeinated drinks,
+alcohol, and antioxidant supplements during the whole period of the
+study. All participants had no history of chronic use of antioxidants
+or nonsteroidal anti-inﬂammatory drugs.
+Study Design
+We used a double-blinded, parallel experimental design. Allocation
+was stratiﬁed for years of training (>3 [n = 13 in OCT group and
+n = 13 in CON group]), and the sequence was generated by a
+computer-based number. All participants were randomly divided
+in a 1:1 fashion into 2 groups: (1) a 5% weight loss with octacosanol
+intake group (OCT; n = 13) and (2) a 5% weight loss with placebo
+group (CON; n = 13) (Figure 1). A power analysis calculation
+(G*Power 3.1; Universität Kiel, Kiel, Germany) determined a mini-
+mum sample size of 26 would allow the observation of a difference
+of 3% to 5% between the groups (OCT vs CON) on the primary
+study outcome variable of body weight with a power of 80%.
+Exercise Protocols
+Participants performed 2 hours of a taekwondo training program at
+the same time of day over 6 days in a training camp. The intensity
+of each training sessions was 70% to 90% of predicted maximum
+heart rate. Subjects completed a 10-minute dynamic stretching
+warm-up before training began. Approximately 1 hour of the
+taekwondo training program was devoted to technique training
+and sparring, while the other hour was spent on physical training.
+The technique training component of the session included basic
+techniques, simulated ﬁghting techniques, and simulated matches.
+The physical training component consisted of a circuit training
+program of interval sprints between various resistance training
+Table 1
+Physical Characteristics of the Study Participants
+%Fat
+Body weight, kg
+Group
+Age, y
+Height, cm
+Career, mo
+Pre
+Post
+Pre
+Post
+OCT (n = 13)
+18 (1)
+174.7 (1.4)
+66 (10)
+8 (2)
+5 (2)*
+66.9 (6.7)
+62.5 (6.9)*
+CON (n = 13)
+18 (1)
+173.9 (6.3)
+69 (10)
+8 (2)
+5 (2)*
+66.7 (5.7)
+62.3 (6.1)*
+Abbreviations: CON, 5% weight loss with placebo intake; OCT, 5% weight loss with octacosanol intake. Note: Values are mean (SD).
+*P < .05, different from pre.
+Figure 1 — Diagram for the experimental design of the study. CON indicates placebo-intake group; OCT, octacosanol-intake group.
+IJSPP Vol. 14, No. 9, 2019
+1298
+Lee et al
+Unauthenticated | Downloaded 06/29/26 01:55 PM UTC
+
+
+--- PAGE 3 ---
+activities. The participants completed a 10-minute cooldown of
+static stretching at the end of the training session. The training
+program can be seen in Table 2. Participants wore body protectors
+during the entirety of the training session, and no injuries were
+reported. Subjects were allowed to drink water ad libitum during
+the training sessions.
+Dietary Intake
+The participants’ lifestyle was highly controlled by researchers
+during the research period, as the study was conducted at a training
+camp with food intake and physical activity being supervised by
+trained instructors. Food logs were obtained during the training
+period. To lose weight, caloric restriction and exercise were used.
+Weight was measured every day before and after training sessions
+from each subject. The nutrient proﬁle was 60% carbohydrates,
+20% fats, and 20% protein. Before intervention of caloric restric-
+tion, nutritionists calculated the subjects’ mean caloric intake for
+the last 3 days and made a plan for the intake of calories to be
+progressively reduced by 400 kcal per day, totaling ∼2400 kcal
+over 6 days. Amount of meals were measured by balance (Hanna
+Instruments, Woonsocket, RI) and provided 3 times per day using a
+repeated treatment manner.
+Intake of Octacosanol
+Two capsules (20 mg each) of 100% reﬁned octacosanol powder from
+sugar cane (Swanson, Fargo, ND) were consumed daily by the OCT
+group for 6 days, 1 capsule 30 minutes after morning and afternoon
+meals. The intake of octacosanol was followed in a double-blind
+manner with either a 20-mg capsule or a placebo twice a day. The daily
+concentration of octacosanol was determined from a previous study.15
+Collection of Blood
+Before and after the 6 days of this study, blood samples were
+collected from each subject. Caffeine and any drugs related to
+vascular function were prohibited 24 hours prior to collection of
+blood samples. A total of 15 mL of blood were collected between
+9 and 10 AM by syringe (Bom Medrea Co, Ltd, Phnom Penh,
+Cambodia) after subjects had fasted for 12 hours. The blood samples
+were immediately centrifuged at 3000 rpm for 10 minutes at 4°C,
+and then plasma was collected and stored at −70°C until analysis.
+Blood Lipid Proﬁles
+To examine the levels of plasma lipids, HDL, LDL, total cholesterol,
+and TG were analyzed in duplicate using a chemistry analyzer
+(Hitachi 7600-210 and Hitachi 7180, Tokyo, Japan). Plasma samples
+were mixed with butylated hydroxytoluene and R1 reagent and
+reacted for 60 minutes at 45°C. After the reaction, the mixed samples
+were centrifuged at 2000 rpm for 10 minutes, and then supernatants
+were taken. The supernatants were read at 586 nm by a plate reader.
+Redox Balance Measurements
+Plasma levels of superoxide dismutase (SOD) were acquired by
+SOD Assay Kit-WST (Cayman Chemical, Ann Arbor, MI). Sam-
+ples were mixed with WST working solution and enzyme working
+solution, and then the samples were incubated for 20 minutes at
+37°C. The absorbances of the incubated samples were acquired at
+450 nm by plate reader. The SOD activity was determined using
+a Cobas Mira chemistry analyzer (Roche, Basel, Switzerland).
+Malondialdehyde (MDA) was measured from BIOXTECHLPO-
+586 kit (Oxis Health Products, Inc, Portland, OR). The plasma
+samples were incubated with reagent diluent for 5 minutes at room
+temperature. The incubated samples were stimulated by Ran-Cell
+total antioxidant control (Randox, Crumlin, United Kingdom) and
+then analyzed at 340 nm by plate reader. Plasma levels of glutathi-
+one peroxidase (GPx) were acquired by GPx Assay Kit (Cayman
+Chemical). Samples were incubated for 20 minutes at 37°C. The
+absorbances of the incubated samples were acquired at 450 nm by
+plate reader. The GPx activity was determined using a Cobas Mira
+chemistry analyzer (Roche). The plasma samples were incubated
+with reagent diluent for 5 minutes at room temperature. The
+incubated samples were stimulated by Ran-Cell total antioxidant
+control (Randox) and then analyzed at 340 nm by plate reader.
+Anthropometry and Body Composition
+Body composition was assessed between 9 and 10 AM after a
+12-hour fast before and after the 6-day training program using an
+Table 2
+Taekwondo Training Program
+Duration, min
+Exercises
+Intensity
+Frequency, d/wk
+10
+Dynamic stretching
+—
+6
+Kicks
+Punches
+Step sparring
+Forms
+60
+Front kick
+Reverse punch
+Step forward and step back
+Palgwe
+70–90% HRmax
+6
+Roundhouse kick
+Jab
+1 step and 2 step
+Taegeuk
+Side kick
+Hook punch
+Axe kick
+Upper cut
+Back kick
+Backﬁst
+Turn kick
+Hammer ﬁst
+Nara kick
+Circuit training
+60
+Interval running
+Lunges
+Squats
+Pull-ups
+70–90% HRmax
+6
+Chin-ups
+Push-ups
+Dips
+Crunches
+Leg lifts
+10
+Static stretching
+—
+6
+Abbreviation: HRmax, maximum heart rate.
+IJSPP Vol. 14, No. 9, 2019
+Improvement of Health With Octacosanol During Taekwondo
+1299
+Unauthenticated | Downloaded 06/29/26 01:55 PM UTC
+
+
+--- PAGE 4 ---
+8-polar tactile-electrode impedance meter (InBody 720; Biospace,
+Seoul, South Korea), which simultaneously recorded body weight,
+fat mass, and fat-free mass. Height was measured with a stadi-
+ometer to the nearest 1 cm. Body mass index was calculated as
+weight in kilograms divided by height in meters squared. 16
+Statistical Analysis
+Data were analyzed using a 2 × 2 analysis of variance with repeated
+measures (group [OCT and CON] × time [before and after 6 d]).
+If a signiﬁcant main effect or interaction was noted, a paired t test
+was used for within-group comparisons. Statistical analysis was
+performed using Statistical Package for the Social Science (SPSS)
+version 21.0 (IBM SPSS Analytics, Armonk, NY). The values
+were presented as mean and SE. A value of P < .05 was considered
+as statistically signiﬁcant.
+Results
+Subject Characteristics
+There were not any signiﬁcant group × time interactions among
+groups in age, height, taekwondo experience, or percentage of
+body fat. Body weight and percentage of body fat following acute
+weight loss training was signiﬁcantly lower (P < .05) than pre-
+training in both groups (Table 1).
+Lipid Proﬁles
+There were signiﬁcant (P < .05) group × time differences in HDL,
+LDL, and TG levels between groups (Figure 2). The OCT group
+exhibited statistically signiﬁcant increases in HDL (Δ10 [7] mg/dL)
+and decreases in LDL (Δ18 [5] mg/dL) and TG (Δ80 [7] mg/dL)
+between pretesting and posttesting, while the CON group showed
+a signiﬁcant decrease in HDL levels (Δ22 [3] mg/dL) after
+posttesting.
+Oxidative Stress
+There were signiﬁcant (P < .05) group × time differences between
+groups in all 3 oxidative stress markers after posttesting. The OCT
+group had a signiﬁcant increase in SOD (Δ226 [121] U/gHb) after
+posttesting (Figure 3A), while the CON group experienced a
+signiﬁcant decrease in GPx (Δ20 [13] U/gHb; Figure 3B) and a
+signiﬁcant increase in MDA (Δ72 [0.04] nmol/mL; Figure 3C) after
+posttesting.
+Discussion
+After 6 days of a 5% weight loss through caloric restriction with
+high-intensity exercise training program, participants who con-
+sumed the supplement octacosanol experienced signiﬁcant im-
+provements in HDL, LDL, and TG levels when compared with
+the CON group. In addition, SOD, a marker of antioxidant
+capacity, was signiﬁcantly increased in the OCT group after
+6 days of training, while GPx, an antioxidant enzyme, was
+signiﬁcantly reduced in the CON group. MDA, a marker of lipid
+peroxidation, was also signiﬁcantly increased in the CON group,
+but not the OCT group. These results suggest that octacosanol can
+be used as a beneﬁcial supplement for athletes who go through
+periods of caloric restriction with high-intensity exercise, as it
+was able to help protect against the detrimental changes in choles-
+terol levels and oxidative stress that occur from this kind of
+training.
+The rapid weight loss through caloric restriction with high-
+intensity exercise training seen in taekwondo was shown to
+decrease levels of HDL and increase levels of LDL and TG, which
+may eventually increase the risks for both metabolic dysfunction
+and cardiovascular disease (CVD) in these athletes. However, the
+OCT group showed an increase in HDL and a reduction in LDL and
+TG, demonstrating the beneﬁcial effects of octacosanol to reduce
+the negative changes in lipid levels that occur from this kind of
+training. HDL is believed to prevent and even remove cholesterol
+buildup in the arteries, and therefore, its increase would have
+beneﬁcial effects on cardiovascular health and function,17,18 while
+increased levels of LDL and TG are known to be positively
+correlated with risks for metabolic and cardiovascular disor-
+ders.19,20 In fact, both increased HDL and reduced LDL levels
+have been shown to reduce mortality from CVD.21
+These observed improvements in the OCT group may be due,
+in part, to the ability of octacosanol to inhibit the synthesis of
+cholesterol, as several studies have shown decreases in LDL, total
+cholesterol, and TG after octacosanol supplementation in both
+animals and humans.9–12,14 However, it seems more likely that
+octacosanol stimulates the conversion of lipids into energy, as an
+animal study reported that octacosanol intake resulted in greater
+serum free fatty acid levels, greater free fatty acid oxidation, and
+a decreased serum TG concentration when compared with a
+CON group.9 In addition, several studies, along with our own,
+have shown the ability of octacosanol to elicit an increase in
+serum HDL, a healthy cholesterol that increases the metabolism
+of LDL.14,22
+Another detrimental effect from these periods of rapid weight
+loss through caloric restriction with high-intensity exercise is an
+increase in oxidative stress. Free radicals are continuously pro-
+duced as part of cellular metabolic processes; however, these free
+radicals are typically neutralized by an endogenous antioxidant
+defense system consisting of the enzymes SOD and GPx, among
+others.23 During caloric restriction and high-intensity exercise, an
+Figure 2 — Changes in lipid proﬁles before and after 6 days of 5%
+weight loss with taekwondo training. HDL increased in the OCT group and
+decreased in the CON group. In addition, LDL and TG decreased in the
+OCT group. There were also intergroup differences in HDL, LDL, and
+TG levels. CON indicates placebo-intake group; HDL, high-density
+lipoprotein; LDL, low-density lipoprotein; OCT, octacosanol-intake
+group; TC, total cholesterol; TG, triglyceride. *P < .05, different from pre.
+†P < .05, different from CON.
+IJSPP Vol. 14, No. 9, 2019
+1300
+Lee et al
+Unauthenticated | Downloaded 06/29/26 01:55 PM UTC
+
+
+--- PAGE 5 ---
+imbalance between free radicals and antioxidants enzymes takes
+place, leading to oxidative stress.5 When this occurs, MDA is
+produced, a highly reactive chemical and a commonly used marker
+for oxidative stress, as it induces lipid peroxidation of the cell
+membrane, ultimately resulting in cell damage.24
+In this study, MDA was signiﬁcantly increased in the CON
+group, while there was no change in the OCT group, demonstrat-
+ing the effects of this form of sports training to increase lipid
+peroxidation and the ability of octacosanol to reduce it. Along
+with its role as a scavenger for oxidative stress, octacosanol also
+improved antioxidant enzyme levels, as the OCT group had
+signiﬁcantly greater SOD levels and the CON group had signiﬁ-
+cantly lower GPx levels. Greater SOD and GPx levels, as seen in
+the OCT group, would be beneﬁcial, as SOD eliminates harmful
+free oxygen radicals25 and GPx reduces the damaging effects of
+lipid peroxidation.26 These improvements are believed to be due
+to the antioxidant effects of octacosanol, as one study found
+strong antiradical properties of octacosanol (96.42% and 90.35%
+antiradical activity from the DPPH and ABTS radical scavenging
+assays, respectively),27 while another study demonstrated the
+ability of octacosanol to decrease oxidative stress markers in
+an animal model.28
+This form of sports training may also lead to an increase
+in systemic inﬂammation, as inﬂammatory markers, such as
+C-reactive protein and interleukin-6, have been shown to be
+correlated with elevated lipid proﬁles and oxidative stress.29 An
+increase in these markers have also been linked to increased risks
+for CVD.30 Although not measured in this study, we believe this
+warrants further research, as octacosanol supplementation was
+shown to reduce both oxidative stress and LDL cholesterol levels
+in the OCT group. This suggests that it may also potentially reduce
+levels of inﬂammation that likely increase with this form of training
+as well.
+Since taekwondo is a weight division sport, the participants of
+this sport repeatedly go through periods of rapid weight change
+with high-intensity exercise training in order to train at heavier
+body weights and then compete in lighter weight divisions. This
+results in poor lipid proﬁles and high levels of oxidative stress.
+Repeated exposure to this form of severe weight change with high-
+intensity training can result in impaired physiological function,
+which may eventually increase risks of metabolic dysfunction and
+CVD in these athletes. Therefore, it is important to ﬁnd a nutritional
+treatment, such as octacosanol supplementation, in order to protect
+against the negative effects of this kind of sports training.
+Figure 3 — Changes in SOD, GPx, and MDA levels after 6 days of 5% weight loss with taekwondo training. (A) SOD levels increased in the OCT
+group and were higher than in the CON group at posttesting. (B) GPx levels decreased in the CON group and were lower than in the OCT group at
+posttesting. (C) MDA levels increased in the CON group and were higher than in the OCT group at posttesting. CON indicates placebo-intake group; GPx,
+glutathione peroxidase; MDA, malondialdehyde; OCT, octacosanol-intake group; SOD, superoxide dismutase. *P < .05, different from pre. †P < .05,
+different from CON.
+IJSPP Vol. 14, No. 9, 2019
+Improvement of Health With Octacosanol During Taekwondo
+1301
+Unauthenticated | Downloaded 06/29/26 01:55 PM UTC
+
+
+--- PAGE 6 ---
+Practical Applications
+These ﬁndings reveal that rapid weight loss paired with high-
+intensity exercise leads to poor lipid proﬁles and elevated levels of
+oxidative stress in taekwondo athletes. Chronic training in this
+manner may result in poor metabolic and cardiovascular health in
+these athletes and may interfere with sports performance. This
+study has shown that octacosanol supplementation reduced nega-
+tive cholesterol and oxidative stress levels during taekwondo
+training, making it a potential therapeutic intervention in order
+to improve physiological function and prevent metabolic dysfunc-
+tion in these athletes. Future research on octacosanol should
+examine larger sample sizes in various sports, as well as markers
+for inﬂammation.
+Conclusion
+As we have demonstrated in this study, octacosanol supplementa-
+tion during rapid weight loss through caloric restriction with high-
+intensity exercise training improved lipid proﬁles and the balance
+between antioxidant enzymes and oxidative stress markers in
+taekwondo athletes. These ﬁndings suggest that octacosanol is a
+useful supplement for counteracting the potential negative effects
+of this form of training on health and performance in these kinds of
+athletes.
+Acknowledgments
+The authors are grateful to the participants. There was no funding source
+for this study. No conﬂicts of interest, ﬁnancial or otherwise, are declared
+by the authors. Please contact author for data requests. Conception and
+design of the experiments: S.-H.L., J.-K.L., and S.-Y.P. Collection,
+assembly, analysis, and interpretation of data: S.-H.L., S.D.S., E.J.P.,
+J.-K.L., and S.-Y.P. Drafting the article or revising it critically for
+important intellectual content: S.-H.L., S.D.S., E.J.P., J.-K.L., and
+S.-Y.P. This study was registered with clinicaltrials.gov (NTC03557476).
+References
+1. Brownell KD, Steen SN, Wilmore JH. Weight regulation practices in
+athletes: analysis of metabolic and health effects. Med Sci Sports
+Exerc.
+1987;19:546–556.
+PubMed
+ID:
+3323766
+doi:10.1249/
+00005768-198712000-00002
+2. Zambraski EJ, Tipton CM, Tcheng TK, Jordon HR, Vailas AC,
+Callahan AK. Iowa wrestling study: changes in the urinary proﬁles
+of wrestlers prior to and after competition. Med Sci Sports. 1975;
+7:217–220. PubMed ID: 1625
+3. Fogelholm GM, Koskinen R, Laakso J, Rankinen T, Ruokonen I.
+Gradual and rapid weight loss: effects on nutrition and performance in
+male athletes. Med Sci Sports Exerc. 1993;25:371–377. PubMed ID:
+8455453 doi:10.1249/00005768-199303000-00012
+4. Steen SN, Brownell KD. Patterns of weight loss and regain in
+wrestlers: has the tradition changed? Med Sci Sports Exerc. 1990;
+22:762–768.
+PubMed
+ID:
+2287253
+doi:10.1249/00005768-
+199012000-00005
+5. Alessio HM. Exercise-induced oxidative stress. Med Sci Sports
+Exerc.
+1993;25:218–224.
+PubMed
+ID:
+8383786
+doi:10.1249/
+00005768-199302000-00010
+6. Booth FW, Roberts CK. Linking performance and chronic disease
+risk: indices of physical performance are surrogates for health. Br J
+Sports Med. 2008;42:950–952. PubMed ID: 18838401 doi:10.1136/
+bjsm.2008.052589
+7. Mahjoub S, Masrour-Roudsari J. Role of oxidative stress in patho-
+genesis of metabolic syndrome. Caspian J Intern Med. 2012;3:
+386–396. PubMed ID: 26557292
+8. Taylor JC, Rapport L, Lockwood GB. Octacosanol in human health.
+Nutrition. 2003;19:192–195. PubMed ID: 12591561 doi:10.1016/
+S0899-9007(02)00869-9
+9. Kato S, Karino K, Hasegawa S, et al. Octacosanol affects lipid
+metabolism in rats fed on a high-fat diet. Br J Nutr. 1995;73:
+433–441. PubMed ID: 7766566 doi:10.1079/BJN19950045
+10. Shimura S, Hasegawa T, Takano S, Suzuki T. Studies on the effect of
+octacosanol on motor endurance in mice. Nutr Rep Int. 1987;36:
+1029–1038.
+11. Arruzazabala ML, Carbajal D, Mas R, Molina V, Valdes S, Laguna A.
+Cholesterol-lowering effects of policosanol in rabbits. Biol Res.
+1994;27:205–208. PubMed ID: 8728832
+12. Castano G, Mas Ferreiro R, Fernandez L, Gámez R, Illnait J,
+Fernández C. A long-term study of policosanol in the treatment of
+intermittent claudication. Angiology. 2001;52:115–125. PubMed ID:
+11228084 doi:10.1177/000331970105200205
+13. Hernandez F, Illnait J, Mas R, et al. Effect of policosanol on serum-
+lipids and lipoproteins in healthy-volunteers. Curr Ther Res Clin Exp.
+1992;51:568–575.
+14. Mas R, Castano G, Illnait J, et al. Effects of policosanol in patients
+with type II hypercholesterolemia and additional coronary risk fac-
+tors. Clin Pharmacol Ther. 1999;65:439–447. PubMed ID: 10223782
+doi:10.1016/S0009-9236(99)70139-6
+15. Arruzazabala ML, Molina V, Mas R, et al. Antiplatelet effects of
+policosanol (20 and 40 mg/day) in healthy volunteers and dyslipi-
+daemic patients. Clin Exp Pharmacol Physiol. 2002;29:891–897.
+PubMed ID: 12207568 doi:10.1046/j.1440-1681.2002.03746.x
+16. Wong A, Figueroa A, Son WM, Chernykh O, Park SY. The effects of
+stair climbing on arterial stiffness, blood pressure, and leg strength in
+postmenopausal women with stage 2 hypertension. Menopause.
+2018;25(7):731–737. PubMed ID: 29438269 doi:10.1097/GME.
+0000000000001072
+17. Bezaﬁbrate Infarction Prevention Study. Secondary prevention by
+raising HDL cholesterol and reducing triglycerides in patients with
+coronary artery disease. Circulation. 2000;102:21–27. doi:10.1161/
+01.CIR.102.1.21.
+18. Pearson TA, Bulkley BH, Achuff SC, Kwiterovich PO, Gordis L. The
+association of low levels of HDL cholesterol and arteriographically
+deﬁned coronary artery disease. Am J Epidemiol. 1979;109:285–295.
+PubMed ID: 222134 doi:10.1093/oxfordjournals.aje.a112682
+19. Castelli WP, Cooper GR, Doyle JT, et al. Distribution of triglyceride
+and total, LDL and HDL cholesterol in several populations: a
+cooperative lipoprotein phenotyping study. J Chronic Dis. 1977;
+30:147–169.
+PubMed
+ID:
+191465
+doi:10.1016/0021-9681(77)
+90082-0
+20. Manninen V, Tenkanen L, Koskinen P, et al. Joint effects of serum
+triglyceride and LDL cholesterol and HDL cholesterol concentrations
+on coronary heart disease risk in the Helsinki Heart Study. Implica-
+tions for treatment. Circulation. 1992;85:37–45. PubMed ID:
+1728471 doi:10.1161/01.CIR.85.1.37
+21. Gotto AM, Gorry GA, Thompson JR, et al. Relationship between
+plasma lipid concentrations and coronary artery disease in 496
+patients.
+Circulation.
+1977;56:875–883.
+PubMed
+ID:
+912850
+doi:10.1161/01.CIR.56.5.875
+22. Gamez R, Maz R, Arruzazabala ML, Mendoza S, Casta˜no G. Effects
+of concurrent therapy with policosanol and omega-3 fatty acids on
+lipid proﬁle and platelet aggregation in rabbits. Drugs R D. 2005;
+IJSPP Vol. 14, No. 9, 2019
+1302
+Lee et al
+Unauthenticated | Downloaded 06/29/26 01:55 PM UTC
+
+
+--- PAGE 7 ---
+6:11–19. PubMed ID: 15806713 doi:10.2165/00126839-200506010-
+00002
+23. Urso ML, Clarkson PM. Oxidative stress, exercise, and antioxidant
+supplementation. Toxicology. 2003;189:41–54. PubMed ID: 12821281
+doi:10.1016/S0300-483X(03)00151-3
+24. Jacob RA, Burri BJ. Oxidative damage and defense. Am J Clin Nutr.
+1996;63:985S–990S. PubMed ID: 8644698 doi:10.1093/ajcn/63.
+6.985
+25. Nishikawa T, Edelstein D, Du XL, et al. Normalizing mitochondrial
+superoxide production blocks three pathways of hyperglycaemic
+damage. Nature. 2000;404:787–790. PubMed ID: 10783895 doi:10.
+1038/35008121
+26. Thomas JP, Maiorino M, Ursini F, Girotti AW. Protective action of
+phospholipid hydroperoxide glutathione peroxidase against membrane-
+damaging lipid peroxidation. In situ reduction of phospholipid and
+cholesterol
+hydroperoxides.
+J
+Biol
+Chem.
+1990;265:454–461.
+PubMed ID: 2294113
+27. Harrabi S, Ferchichi A, Bacheli A, Fellah H. Policosanol composi-
+tion, antioxidant and anti-arthritic activities of milk thistle (Silybium
+marianum L.) oil at different seed maturity stages. Lipids Health Dis.
+2018;17:82. PubMed ID: 29661192 doi:10.1186/s12944-018-0682-z
+28. Ohta Y, Ohashi K, Matsura T, Tokunaga K, Kitagawa A, Yamada K.
+Octacosanol attenuates disrupted hepatic reactive oxygen species
+metabolism associated with acute liver injury progression in rats
+intoxicated with carbon tetrachloride. J Clin Biochem Nutr. 2008;
+42:118–125. PubMed ID: 18385828 doi:10.3164/jcbn.2008017
+29. Ridker PM, Rifai N, Rose L, Buring JE, Cook NR. Comparison of
+C-reactive protein and low-density lipoprotein cholesterol levels in
+the prediction of ﬁrst cardiovascular events. N Engl J Med. 2002;347:
+1557–1565. PubMed ID: 12432042 doi:10.1056/NEJMoa021993
+30. Ridker PM, Hennekens CH, Buring JE, Rifai N. C-reactive protein
+and other markers of inﬂammation in the prediction of cardiovascular
+disease in women. N Engl J Med. 2000;342:836–843. PubMed ID:
+10733371 doi:10.1056/NEJM200003233421202
+IJSPP Vol. 14, No. 9, 2019
+Improvement of Health With Octacosanol During Taekwondo
+1303
+Unauthenticated | Downloaded 06/29/26 01:55 PM UTC

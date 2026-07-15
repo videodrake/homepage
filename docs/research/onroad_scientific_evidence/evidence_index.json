@@ -1,0 +1,321 @@
+{
+  "created_at": "2026-06-29",
+  "purpose": "온로드 지구력코어의 옥타코사놀 및 비타민B군 과학 근거를 AI가 안전하게 해석하도록 정리한 색인",
+  "brand_context": {
+    "brand": "온로드",
+    "product": "지구력코어",
+    "core_positioning": "러너를 위한 하루 1알 지구력 관리 루틴",
+    "known_product_facts": {
+      "price_krw": 38900,
+      "servings": "60정, 약 2달분",
+      "intake": "하루 1알",
+      "key_ingredients": ["옥타코사놀 40mg", "비타민B군", "비타민C", "아르기닌", "타우린"]
+    }
+  },
+  "downloaded_assets": {
+    "pdfs": [
+      {
+        "file": "pdfs/octacosanol_2019_taekwondo_training_oxidative_stress_human_ijspp.pdf",
+        "bytes": 423543,
+        "source_url": "https://journals.humankinetics.com/downloadpdf/journals/ijspp/14/9/article-p1297.pdf"
+      },
+      {
+        "file": "pdfs/octacosanol_2016_lipolysis_endurance_review_jnsv.pdf",
+        "bytes": 647767,
+        "source_url": "https://www.jstage.jst.go.jp/article/jnsv/62/3/62_141/_pdf"
+      },
+      {
+        "file": "pdfs/vitamin_b_complex_2023_antifatigue_exercise_human_rct_ijms.pdf",
+        "bytes": 2325855,
+        "source_url": "https://www.medsci.org/v20p1272.pdf"
+      }
+    ],
+    "extracted_text": [
+      "extracted_text/octacosanol_2019_taekwondo_training_oxidative_stress_human_ijspp.txt",
+      "extracted_text/octacosanol_2016_lipolysis_endurance_review_jnsv.txt",
+      "extracted_text/vitamin_b_complex_2023_antifatigue_exercise_human_rct_ijms.txt"
+    ],
+    "user_provided_papers": [
+      "user_provided_papers/kim2003.pdf",
+      "user_provided_papers/zhou2021.pdf",
+      "user_provided_papers/woolf2006.pdf",
+      "user_provided_papers/manore2000.pdf",
+      "user_provided_papers/vanderbeek1994.pdf",
+      "user_provided_papers/suzuki1996.pdf"
+    ],
+    "user_provided_text": [
+      "user_provided_text/kim2003.txt",
+      "user_provided_text/zhou2021.txt",
+      "user_provided_text/woolf2006.txt",
+      "user_provided_text/manore2000.txt",
+      "user_provided_text/vanderbeek1994.txt",
+      "user_provided_text/suzuki1996.txt"
+    ],
+    "metadata": [
+      "metadata/pubmed_selected_papers.xml",
+      "metadata/pubmed_selected_papers_summary.json"
+    ]
+  },
+  "papers": [
+    {
+      "id": "PMID:30958045",
+      "ingredient": "octacosanol",
+      "title": "Improvement of Lipids and Reduction of Oxidative Stress With Octacosanol After Taekwondo Training",
+      "year": 2019,
+      "journal": "International Journal of Sports Physiology and Performance",
+      "doi": "10.1123/ijspp.2018-0704",
+      "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/30958045/",
+      "local_pdf": "pdfs/octacosanol_2019_taekwondo_training_oxidative_stress_human_ijspp.pdf",
+      "local_text": "extracted_text/octacosanol_2019_taekwondo_training_oxidative_stress_human_ijspp.txt",
+      "study_type": "human randomized placebo-controlled sports study",
+      "population": "26 male taekwondo players",
+      "dose_or_exposure": "octacosanol 40 mg/day for 6 days",
+      "main_findings_for_ai": [
+        "Used 40 mg/day octacosanol in a human sports setting.",
+        "Reported improvements in lipid profile and oxidative stress markers under rapid weight loss plus high-intensity taekwondo training.",
+        "Not a running endurance trial and not a marathon study."
+      ],
+      "evidence_grade_for_onroad": "B",
+      "safe_marketing_use_ko": [
+        "인체 스포츠 연구에서 옥타코사놀 40mg/day 섭취 조건이 사용된 바 있습니다.",
+        "옥타코사놀은 운동 상황에서 지질 대사와 산화 스트레스 지표를 중심으로 연구되어 왔습니다."
+      ],
+      "unsafe_marketing_use_ko": [
+        "옥타코사놀 40mg이 러닝 기록을 향상시킨다.",
+        "옥타코사놀이 후반 체력을 보장한다.",
+        "태권도 선수 연구로 마라톤 효과가 입증됐다."
+      ]
+    },
+    {
+      "id": "PMID:27465721",
+      "ingredient": "octacosanol",
+      "title": "Nutrition Supplements to Stimulate Lipolysis: A Review in Relation to Endurance Exercise Capacity",
+      "year": 2016,
+      "journal": "Journal of Nutritional Science and Vitaminology",
+      "doi": "10.3177/jnsv.62.141",
+      "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/27465721/",
+      "local_pdf": "pdfs/octacosanol_2016_lipolysis_endurance_review_jnsv.pdf",
+      "local_text": "extracted_text/octacosanol_2016_lipolysis_endurance_review_jnsv.txt",
+      "study_type": "review",
+      "population": "literature review",
+      "dose_or_exposure": "not applicable",
+      "main_findings_for_ai": [
+        "Reviews supplements related to lipolysis and endurance exercise capacity.",
+        "Includes octacosanol among ingredients studied in fat metabolism and endurance contexts.",
+        "Notes practical implications require more data, especially for athletes."
+      ],
+      "evidence_grade_for_onroad": "C",
+      "safe_marketing_use_ko": [
+        "옥타코사놀은 지구력 운동 능력과 지방대사 맥락에서 연구되어 온 성분입니다.",
+        "관련 리뷰에서는 옥타코사놀을 포함한 여러 영양 성분의 지구력 운동 관련 연구를 정리하고 있습니다."
+      ],
+      "unsafe_marketing_use_ko": [
+        "리뷰 논문이 옥타코사놀의 러닝 기록 향상을 입증했다.",
+        "옥타코사놀은 지방을 태워 지구력을 확실히 올린다."
+      ]
+    },
+    {
+      "id": "PMID:14977443",
+      "ingredient": "octacosanol",
+      "title": "Octacosanol supplementation increases running endurance time and improves biochemical parameters after exhaustion in trained rats",
+      "year": 2003,
+      "journal": "Journal of Medicinal Food",
+      "doi": "10.1089/109662003772519903",
+      "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/14977443/",
+      "local_pdf": "user_provided_papers/kim2003.pdf",
+      "local_text": "user_provided_text/kim2003.txt",
+      "metadata_source": "metadata/pubmed_selected_papers.xml",
+      "study_type": "animal treadmill endurance study",
+      "population": "trained male Sprague-Dawley rats",
+      "dose_or_exposure": "0.75% octacosanol-supplemented diet for 4 weeks",
+      "main_findings_for_ai": [
+        "Octacosanol-supplemented trained rats ran longer to exhaustion than trained controls.",
+        "Authors suggested glycogen sparing and increased oxidative capacity as possible mechanisms.",
+        "Animal result; should not be converted into a guaranteed human running effect."
+      ],
+      "evidence_grade_for_onroad": "C+",
+      "safe_marketing_use_ko": [
+        "동물 실험에서는 옥타코사놀 보충이 러닝 지속시간과 운동 후 생화학 지표에 영향을 준 사례가 보고되었습니다.",
+        "옥타코사놀은 러닝 지구력 맥락에서도 전임상 연구가 존재합니다."
+      ],
+      "unsafe_marketing_use_ko": [
+        "사람도 옥타코사놀을 먹으면 더 오래 달린다.",
+        "마라톤 후반 체력 개선이 동물실험으로 입증됐다."
+      ]
+    },
+    {
+      "id": "PMID:34223764",
+      "ingredient": "octacosanol",
+      "title": "Dietary Supplementation of Octacosanol Improves Exercise-Induced Fatigue and Its Molecular Mechanism",
+      "year": 2021,
+      "journal": "Journal of Agricultural and Food Chemistry",
+      "doi": "10.1021/acs.jafc.1c01764",
+      "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/34223764/",
+      "local_pdf": "user_provided_papers/zhou2021.pdf",
+      "local_text": "user_provided_text/zhou2021.txt",
+      "metadata_source": "metadata/pubmed_selected_papers.xml",
+      "study_type": "animal exercise-induced fatigue mechanism study",
+      "population": "trained male C57BL/6 mice",
+      "dose_or_exposure": "octacosanol 200 mg/kg/day",
+      "main_findings_for_ai": [
+        "Reported changes in autonomic activity, grip strength, swimming endurance, glycogen, lactate, antioxidant enzymes, and gene expression.",
+        "Useful as mechanistic background only.",
+        "Mouse dose and outcomes should not be extrapolated to Onroad's human serving."
+      ],
+      "evidence_grade_for_onroad": "C",
+      "safe_marketing_use_ko": [
+        "옥타코사놀은 운동 유발 피로 모델과 관련 기전 연구에서도 다뤄졌습니다."
+      ],
+      "unsafe_marketing_use_ko": [
+        "옥타코사놀이 피로회복에 효과가 있다.",
+        "운동 후 피로가 줄어든다."
+      ]
+    },
+    {
+      "id": "PMID:37786445",
+      "ingredient": "vitamin B complex",
+      "title": "A functional evaluation of anti-fatigue and exercise performance improvement following vitamin B complex supplementation in healthy humans, a randomized double-blind trial",
+      "year": 2023,
+      "journal": "International Journal of Medical Sciences",
+      "doi": "10.7150/ijms.86738",
+      "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/37786445/",
+      "local_pdf": "pdfs/vitamin_b_complex_2023_antifatigue_exercise_human_rct_ijms.pdf",
+      "local_text": "extracted_text/vitamin_b_complex_2023_antifatigue_exercise_human_rct_ijms.txt",
+      "study_type": "human randomized double-blind crossover trial",
+      "population": "32 healthy adults aged 20-30",
+      "dose_or_exposure": "28 days of Ex PLUS tablet containing B1, B2, B6, B12 plus vitamin E, inositol, calcium, taurine",
+      "main_findings_for_ai": [
+        "Reported increased running time to exhaustion and lower lactate/ammonia markers vs placebo.",
+        "The tested product was multi-ingredient; results cannot be attributed solely to B1/B2/B6.",
+        "Do not use anti-fatigue wording in consumer ad copy."
+      ],
+      "evidence_grade_for_onroad": "B-",
+      "safe_marketing_use_ko": [
+        "비타민B군은 에너지 대사 과정의 보조인자로 작용하며, 운동 수행 및 피로 관련 인체 연구에서도 다뤄져 왔습니다.",
+        "비타민B 복합 조성 인체 연구에서는 러닝 지속시간과 운동 후 생화학 지표 변화가 보고되었습니다."
+      ],
+      "unsafe_marketing_use_ko": [
+        "비타민B군이 피로회복을 입증했다.",
+        "비타민B군만으로 러닝 기록이 좋아진다.",
+        "온로드를 먹으면 젖산이 줄어든다."
+      ]
+    },
+    {
+      "id": "PMID:17240780",
+      "ingredient": "B vitamins",
+      "title": "B-vitamins and exercise: does exercise alter requirements?",
+      "year": 2006,
+      "journal": "International Journal of Sport Nutrition and Exercise Metabolism",
+      "doi": "10.1123/ijsnem.16.5.453",
+      "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/17240780/",
+      "local_pdf": "user_provided_papers/woolf2006.pdf",
+      "local_text": "user_provided_text/woolf2006.txt",
+      "metadata_source": "metadata/pubmed_selected_papers.xml",
+      "study_type": "sports nutrition review",
+      "population": "literature review",
+      "dose_or_exposure": "not applicable",
+      "main_findings_for_ai": [
+        "B1, B2, and B6 are necessary in energy-producing pathways.",
+        "Active individuals with poor or marginal B-vitamin status may have decreased ability to perform high-intensity exercise.",
+        "Exercise may increase requirements for riboflavin and vitamin B6."
+      ],
+      "evidence_grade_for_onroad": "B",
+      "safe_marketing_use_ko": [
+        "비타민B군은 에너지 생성 경로에 필요한 영양소입니다.",
+        "식이가 제한적이거나 활동량이 많은 사람은 B비타민 상태 관리가 중요할 수 있습니다."
+      ],
+      "unsafe_marketing_use_ko": [
+        "비타민B가 에너지를 즉시 공급한다.",
+        "비타민B가 운동 능력을 직접 끌어올린다."
+      ]
+    },
+    {
+      "id": "PMID:10919966",
+      "ingredient": "thiamine, riboflavin, vitamin B6",
+      "title": "Effect of physical activity on thiamine, riboflavin, and vitamin B-6 requirements",
+      "year": 2000,
+      "journal": "American Journal of Clinical Nutrition",
+      "doi": "10.1093/ajcn/72.2.598S",
+      "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/10919966/",
+      "local_pdf": "user_provided_papers/manore2000.pdf",
+      "local_text": "user_provided_text/manore2000.txt",
+      "metadata_source": "metadata/pubmed_selected_papers.xml",
+      "study_type": "nutrition review",
+      "population": "literature review",
+      "dose_or_exposure": "not applicable",
+      "main_findings_for_ai": [
+        "Exercise stresses metabolic pathways dependent on B1, B2, and B6.",
+        "Active people who restrict energy intake or have poor dietary choices are at greater risk for poor B-vitamin status."
+      ],
+      "evidence_grade_for_onroad": "B",
+      "safe_marketing_use_ko": [
+        "운동은 B1, B2, B6가 관여하는 대사 경로와 밀접하게 연결되어 있습니다."
+      ],
+      "unsafe_marketing_use_ko": [
+        "운동하는 사람은 반드시 비타민B 보충제를 먹어야 한다."
+      ]
+    },
+    {
+      "id": "PMID:7706598",
+      "ingredient": "thiamine, riboflavin, vitamin B6",
+      "title": "Thiamin, riboflavin and vitamin B6: impact of restricted intake on physical performance in man",
+      "year": 1994,
+      "journal": "Journal of the American College of Nutrition",
+      "doi": "10.1080/07315724.1994.10718459",
+      "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/7706598/",
+      "local_pdf": "user_provided_papers/vanderbeek1994.pdf",
+      "local_text": "user_provided_text/vanderbeek1994.txt",
+      "metadata_source": "metadata/pubmed_selected_papers.xml",
+      "study_type": "human vitamin restriction experiment",
+      "population": "24 healthy men",
+      "dose_or_exposure": "11 weeks at no more than 55% of Dutch RDA for B1, B2, and B6",
+      "main_findings_for_ai": [
+        "Restricted intake decreased biochemical vitamin status.",
+        "Performance variables including VO2max and peak power decreased.",
+        "This supports importance of adequate intake, not performance enhancement from supplementation."
+      ],
+      "evidence_grade_for_onroad": "B",
+      "safe_marketing_use_ko": [
+        "B1, B2, B6는 운동 수행과 관련된 대사 과정에서 중요한 영양소로 연구되어 왔습니다."
+      ],
+      "unsafe_marketing_use_ko": [
+        "비타민B군을 먹으면 VO2max가 올라간다."
+      ]
+    },
+    {
+      "id": "PMID:8815395",
+      "ingredient": "thiamine",
+      "title": "Effects of thiamine supplementation on exercise-induced fatigue",
+      "year": 1996,
+      "journal": "Metabolic Brain Disease",
+      "doi": "10.1007/BF02080935",
+      "pubmed_url": "https://pubmed.ncbi.nlm.nih.gov/8815395/",
+      "local_pdf": "user_provided_papers/suzuki1996.pdf",
+      "local_text": "user_provided_text/suzuki1996.txt",
+      "metadata_source": "metadata/pubmed_selected_papers.xml",
+      "study_type": "small human placebo-controlled supplementation study",
+      "population": "16 male athletes",
+      "dose_or_exposure": "thiamine 100 mg/day",
+      "main_findings_for_ai": [
+        "Thiamine supplementation affected some exercise-induced physiological and subjective fatigue measures.",
+        "Small study; should only be a supporting evidence card.",
+        "Do not translate into consumer claim of fatigue recovery."
+      ],
+      "evidence_grade_for_onroad": "C+",
+      "safe_marketing_use_ko": [
+        "티아민은 운동 피로 관련 인체 연구에서도 다뤄진 바 있습니다."
+      ],
+      "unsafe_marketing_use_ko": [
+        "비타민B1이 피로회복에 효과가 있다."
+      ]
+    }
+  ],
+  "global_ai_rules": [
+    "논문 제목에 anti-fatigue가 있어도 소비자 문구에는 피로회복으로 번역하지 않는다.",
+    "동물실험 결과를 사람 러너에게 직접 적용하지 않는다.",
+    "인체 연구라도 연구 대상, 기간, 운동 종목, 조성이 온로드와 다르면 한계를 함께 쓴다.",
+    "옥타코사놀 40mg은 함량 기준과 연구 맥락 설명에 사용하고 효과 보장으로 쓰지 않는다.",
+    "비타민B군은 에너지 대사에 필요한 영양소로 설명한다. 에너지를 공급한다고 쓰지 않는다.",
+    "논문 근거는 홈페이지 신뢰 보조 장치이며 핵심 판매 약속은 공식 기능성 표현 안에서 유지한다."
+  ]
+}

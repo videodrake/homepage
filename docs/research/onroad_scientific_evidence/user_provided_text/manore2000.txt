@@ -1,0 +1,1065 @@
+
+
+--- PAGE 1 ---
+ABSTRACT
+Because exercise stresses metabolic pathways
+that depend on thiamine, riboﬂavin, and vitamin B-6, the require-
+ments for these vitamins may be increased in athletes and active
+individuals. Theoretically, exercise could increase the need for
+these micronutrients in several ways: through decreased absorp-
+tion of the nutrients; by increased turnover, metabolism, or loss of
+the nutrients; through biochemical adaptation as a result of train-
+ing that increases nutrient needs; by an increase in mitochondrial
+enzymes that require the nutrients; or through an increased need
+for the nutrients for tissue maintenance and repair. Biochemical
+evidence of deficiencies in some of these vitamins in active indi-
+viduals has been reported, but studies examining these issues are
+limited and equivocal. On the basis of metabolic studies, the
+riboflavin status of young and older women who exercise moder-
+ately (2.5–5 h/wk) appears to be poorer in periods of exercise,
+dieting, and dieting plus exercise than during control periods.
+Exercise also increases the loss of vitamin B-6 as 4-pyridoxic
+acid. These losses are small and concomitant decreases in blood
+vitamin B-6 measures have not been documented. There are no
+metabolic studies that have compared thiamine status in active
+and sedentary persons. Exercise appears to decrease nutrient sta-
+tus even further in active individuals with preexisting marginal
+vitamin intakes or marginal body stores. Thus, active individuals
+who restrict their energy intake or make poor dietary choices are
+at greatest risk for poor thiamine, riboflavin, and vitamin B-6
+status.
+Am J Clin Nutr 2000;72(suppl):598S–606S.
+KEY WORDS
+Thiamine, riboflavin, vitamin B-6, exercise,
+physical activity, nutrient requirements, dietary reference intakes,
+recommended dietary allowances, RDA, DRI
+INTRODUCTION
+Two questions are frequently asked by persons engaged in
+physical activity: 1) Does exercise increase the need for certain
+vitamins? and 2) Does vitamin supplementation improve exer-
+cise performance? Because thiamine, riboflavin, and vitamin B-6
+(pyridoxine) are cofactors for many metabolic reactions that pro-
+duce energy, these question are particularly relevant. Until
+recently, the recommended dietary allowances (RDAs) for these
+nutrients were determined on the basis of energy (thiamine and
+riboflavin) and protein (vitamin B-6) intakes (1). As a person
+becomes more physically active, it is logical to assume that both
+energy and protein intakes will increase along with the intakes of
+these vitamins. Unfortunately, this is not always true. In persons
+who make poor dietary choices, these micronutrients may not
+increase with increased energy and protein intakes. Conversely,
+if persons increase their physical activity and restrict their
+energy intake, the need for these vitamins may increase further.
+This article reviews the current literature to determine whether
+physical activity increases the need for thiamine, riboflavin, and
+vitamin B-6 because of training-induced increases in the conver-
+sion or metabolism of these vitamins. First, the dietary sources
+for each of these vitamins is reviewed briefly. Second, exercise-
+related functions and requirements, measurements to assess sta-
+tus, and the theoretical rationale for increased need are briefly
+covered. Third, the effect of vitamin deficiency or marginal vita-
+min status on exercise performance and work is reviewed. Finally,
+each vitamin is considered relative to the nutrient intakes of and
+available data on the nutrient status and requirements of active
+individuals. Because research data are limited, this paper did not
+examine whether exercise increases the requirements of or alters
+the nutrient status of the other B-complex vitamins (niacin,
+folate, vitamin B-12, pantothenic acid, and biotin).
+DIETARY SOURCES
+Thiamine, riboflavin, and vitamin B-6 are water-soluble
+B-complex vitamins found in a variety of animal and vegetable
+products. Thiamine is found abundantly in lean pork, yeast,
+legumes, and enriched cereals and breads (1, 2). Riboflavin is
+found in eggs, lean meats, milk, milk products, broccoli, and
+enriched breads and cereals (1, 3). Vitamin B-6 is abundant in
+meats, especially chicken and tuna, and in plant foods such as
+beans, cereals, and brown rice (1, 4). In a mixed diet, all 3 nutri-
+ents have high bioavailability (75–95%) (5). These vitamins are
+also frequently added to commercially prepared foods at
+25–100% of the RDA per serving. Thus, the consumption of for-
+tified cereals, breakfast bars, sport bars and drinks, energy
+shakes or meal-replacement products will dramatically increase
+total dietary intakes. Frequently, individuals who “watch their
+Am J Clin Nutr 2000;72(suppl):598S–606S. Printed in USA. © 2000 American Society for Clinical Nutrition
+Effect of physical activity on thiamine, riboflavin, and vitamin B-6
+requirements1–3
+Melinda M Manore
+598S
+1From the Food and Nutrition Laboratory, the Department of Family
+Resources and Human Development, Arizona State University, Tempe.
+2Presented at the workshop Role of Dietary Supplements for Physically
+Active People, held in Bethesda, MD, June 3–4, 1996.
+3Address reprint requests to MM Manore, Department of Nutrition, Arizona
+State University East, Mesa, AZ 85212. E-mail: melinda.manore@asu.edu.
+Downloaded from https://academic.oup.com/ajcn/article-abstract/72/2/598S/4729690
+by guest
+on 19 April 2018
+
+
+--- PAGE 2 ---
+weight” or engage in physical activity are users of such products.
+In addition, multivitamin or vitamin or mineral supplements usu-
+ally contain ≥100% of the RDA for these nutrients. It is esti-
+mated that Americans spend >$5 billion/y on vitamin, mineral,
+herbal, and dietary supplements (6). Indeed, out-of-pocket
+expenditures for high-dose megavitamins in 1997 alone were
+estimated at $3.3 billion (7). Some of the highest supplement use
+is by persons engaged in physical activity, of whom it has been
+estimated that as many as 50% are taking supplements (8–10).
+Thus, the total intake of these vitamins by active Americans may
+be increasing regardless of dietary choices.
+EXERCISE-RELATED FUNCTIONS AND REQUIREMENTS
+Thiamine, as thiamine pyrophosphate, plays an important role
+in the metabolism of both carbohydrate and the branched-chain
+amino acids. It is a coenzyme for pyruvate dehydrogenase
+(lipoamide), which catalyzes the conversion of pyruvate to acetyl
+CoA. Thiamine is also a coenzyme for oxoglutarate dehydroge-
+nase (lipoamide), an enzyme responsible for the formation of
+succinyl CoA in the tricarboxlyic acid cycle, and for branched-
+chain decarboxylase, an enzyme responsible for the catabolism
+of the branched-chain amino acids. Physical activity stresses
+these energy-producing metabolic pathways (11–13). Because
+thiamine requirements are linked to energy metabolism, the
+1989 RDA for thiamine was expressed in terms of energy intake
+(0.12 mg/MJ, or per 239 kcal) (1). The 1998 DRI for thiamine is
+1.2 mg/d for men and 1.1 mg/d for women aged 19–50 y (5). An
+additional 0.3 and 0.4 mg/d are recommended during pregnancy
+and lactation, respectively (5).
+Riboflavin is necessary for the synthesis of 2 important coen-
+zymes—flavin mononucleotide and flavin adenine dinucleotide
+(FAD). These coenzymes are especially important in the metab-
+olism of glucose, fatty acids, glycerol, and amino acids for
+energy. Paralleling its effect on thiamine, physical activity
+stresses the biochemical pathways involved in the metabolism of
+these substrates (3, 13, 14). Riboflavin is also involved in the
+conversion of vitamin B-6 to its functional coenzyme (1, 5, 15,
+16). When the 1989 RDA was set, the dietary requirement for
+riboflavin was expressed in terms of energy intake (0.14 mg/MJ,
+or per 239 kcal) for people of all ages, with a minimum intake
+of 1.2 mg/d (1). The 1998 DRI for riboflavin is 1.3 mg/d for men
+and 1.1 mg/d for women aged 19–70 y (5). An additional
+0.3 mg/d is recommended during pregnancy and an additional
+0.5 mg/d is recommended during lactation (5).
+A major function of vitamin B-6 is the metabolism of proteins
+and amino acids. The most biologically active form of vitamin B-6
+is pyridoxal 5-phosphate (PLP). PLP is a cofactor for transami-
+nases, decarboxylases, and other enzymes used in the metabolic
+transformations of amino acids and nitrogen-containing compounds.
+During exercise, the gluconeogenic process involves the break-
+down of amino acids for energy in the muscle and the conversion
+of lactic acid to glucose in the liver. Various PLP-containing
+enzymes are involved in this metabolically driven conversion.
+Another function of vitamin B-6 directly related to energy
+production during exercise is the breakdown of muscle glycogen.
+Adequate vitamin B-6 must be present to release glucose-1-
+phosphate from muscle glycogen (4, 17, 18). Because vitamin B-6
+is directly involved in amino acid metabolism, the requirements
+for vitamin B-6 are frequently expressed in terms of protein intake.
+In the past, a dietary intake of 0.016 mg vitamin B-6/g protein
+was considered adequate to ensure good vitamin B-6 status (4),
+but recent research suggests that 0.019 mg vitamin B-6/g protein
+may be required to maintain good status (19, 20). In sedentary
+lactoovovegetarian women, ≥1.9 mg vitamin B-6/d was required
+to maintain good vitamin B-6 status (19). The link between pro-
+tein intake and vitamin B-6 requirements is especially important
+for athletes because they typically have a higher protein require-
+ment than do sedentary individuals (21) and generally have
+higher protein intakes because of their higher energy intakes.
+The 1989 RDA for vitamin B-6 for adults aged ≥25 y was
+2.0 mg/d for men and 1.6 mg/d for women (1). These recommen-
+dations were developed by multiplying the average protein intake
+of men (126 g) and women (100 g) by 0.016. Typical intakes of
+protein are higher than the 1989 RDA for protein of 63 g/d for
+men and 50 g/d for women (1). In 1998, the DRI for vitamin B-6
+was decreased to 1.3 mg/d for men and women aged 19–50 y and
+1.7 mg/d for men and 1.5 mg/d for women aged >51 y (5). As for
+thiamine and riboﬂavin, vitamin B-6 requirements increase slightly
+during pregnancy (by 0.6 mg/d) and lactation (by 0.7 mg/d) (5).
+STATUS ASSESSMENT
+Ideally, assessment of thiamine, riboflavin, and vitamin B-6
+status should include various biochemical measures (both direct
+and indirect) along with dietary intake data (Table 1). Because
+some blood and urinary assessment indexes for these vitamins
+are influenced by recent nutrient intakes, studies examining
+nutrient status should consider the phase of the menstrual cycle.
+In premenopausal women studied over 4–6 ovulatory menstrual
+cycles, Martini et al (24) found that energy, protein, carbohy-
+drate, fat, vitamin D, riboflavin, potassium, phosphorus, and
+magnesium intakes were all significantly higher in the midluteal
+phases than in the midfollicular phase.
+The most widely used index for assessing thiamine is the
+measurement of the erythrocyte transketolase enzyme activity
+coefficient (ETKAC). Transketolase is a thiamine pyrophos-
+phate–dependent enzyme. ETKAC is determined by first measur-
+ing the basal activity of the enzyme (without the added coenzyme)
+and then by measuring the stimulated enzyme activity (with the
+added coenzyme). The activity coefficient, or percentage of stim-
+ulation, is determined by dividing the stimulated enzyme activity
+by the basal enzyme activity. A high activity coefficient indicates
+poor or marginal nutritional status and reflects a decrease in thi-
+amine availability in the erythrocyte (23). Criteria for interpreting
+ETKAC will depend on the laboratory and the method used. An
+activity coefficient of 1.00–1.15 is considered normal, a coeffi-
+cient of 1.16–1.20 indicates marginal thiamine deficiency, and a
+coefficient >1.20 indicates severe deficiency (23). For the deter-
+mination of the 1998 DRI for thiamine, an ETKAC value of
+1.20–1.25 indicated marginal deficiency and a value >1.25 indi-
+cated deficiency (5). In addition to ETKAC, measurement of thi-
+amine can be performed in the urine, whole blood, and plasma.
+Thiamine in the urine does not adequately reflect body stores but
+can be an index of dietary intake (23).
+Riboflavin status is generally obtained by measuring the uri-
+nary excretion of riboflavin, determining erythrocyte riboflavin
+concentrations, and calculating the erythrocyte glutathione
+reductase activity coefficient (EGRAC). EGRAC has been
+found to be both useful and sensitive for determining impaired
+riboflavin status (23) and, as is ETKAC, it is determined by
+dividing the stimulated enzyme activity (with added FAD) by
+B VITAMINS AND EXERCISE
+599S
+Downloaded from https://academic.oup.com/ajcn/article-abstract/72/2/598S/4729690
+by guest
+on 19 April 2018
+
+
+--- PAGE 3 ---
+the basal enzyme activity (without added FAD). Thus, a high
+EGRAC indicates impaired riboflavin status, which has been
+confirmed by human depletion studies (13). The evaluation cri-
+teria for EGRAC vary depending on the laboratory and method
+used and the researcher, but the following cutoff values are used
+frequently: adequate, <1.2; low, 1.2–1.4; and deficient, >1.4 (3,
+5). Low riboflavin excretion indicates deficiency (Table 1) (3).
+Some researchers question whether the standard reference val-
+ues used to assess riboflavin status in sedentary individuals are
+appropriate for athletes and active individuals (25).
+For vitamin B-6, the most relevant direct measures are plasma
+PLP, total plasma vitamin B-6, and urinary 4-pyridoxic acid (4-
+PA). Indirect measures of vitamin B-6 status include the evalua-
+tion of either the erythrocyte alanine transaminase activity coef-
+ficient (EALTAC) or the erythrocyte aspartate transaminase
+activity coefficient (EASTAC) with stimulation by PLP (Table 1).
+These indexes indicate long-term vitamin B-6 status and provide
+a gross index of vitamin B-6 deficiency (23). As for thiamine and
+riboflavin, high activity coefficients (ie, >2.00) indicate poor or
+marginal status. To assess vitamin B-6 status, ≥2 biochemical
+measures should be determined, and dietary intakes of vitamin
+B-6 and protein should be measured (4, 26).
+RATIONALE FOR INCREASED NEED
+Because exercise stresses metabolic pathways that use thiamine,
+riboﬂavin, and vitamin B-6, the requirements for these vitamins may
+be elevated in athletes and active individuals. Theoretically, exercise
+increases the need for these nutrients because of a decreased absorp-
+tion of nutrients; an increased turnover, metabolism, or loss of nutri-
+ents; biochemical adaptations associated with training; increased
+concentrations of mitochondrial enzymes that require the nutrient as
+a cofactor; and the need for tissue maintenance and repair (11–14,
+17, 18, 27–30). In addition, there is some biochemical evidence of
+poor vitamin status in active persons (12, 13, 30–33) (Table 2); how-
+ever, studies examining these issues have been limited and equivocal.
+One reason for poor nutritional status in active persons may be long-
+term marginal dietary intakes associated either with poor dietary
+choices or reduced energy intake (12, 39–41).
+Differences in experimental design may also help to explain
+why studies of the vitamin status of active individuals have
+yielded inconsistent results. For example, variation has been
+seen in the degree of dietary control, the type and intensity of
+exercise, the type and number of status indexes measured, the
+amount of regular physical activity engaged in, the type of sub-
+jects used, and in whether a control group was included.
+Exercise is known to be capable of increasing both energy and
+protein needs, and thus it could increase the total daily needs of thi-
+amine, riboﬂavin, and vitamin B-6 in active individuals. If such per-
+sons consume adequate energy to maintain body weight and cover
+exercise energy expenditure, their dietary intakes of these vitamins
+should be adequate unless their food choices are poor. Conversely,
+if active persons restrict their energy intake or eliminate food
+groups, their intakes of these vitamins will probably be low.
+VITAMIN DEFICIENCY AND PHYSICAL ACTIVITY
+Because of the roles that thiamine, riboflavin, and vitamin B-
+6 play in producing energy during exercise, it is generally
+assumed that individuals with poor status have a reduced ability
+to perform physical activity. Several studies have examined the
+effect of vitamin deficiency on work performance (13, 32,
+42–44). For example, van der Beek et al (43), who depleted 24
+healthy men of thiamine, riboflavin, and vitamin B-6 over an 11-
+wk metabolic feeding period, found that vitamin depletion signi-
+ficantly decreased maximal work capacity ( ·VO2max) by 12%,
+onset of blood lactate accumulation by 7%, oxygen consumption
+at onset of blood lactate accumulation by 12%, peak power by
+9%, and mean power by 7%. This study supports earlier research
+in which individuals with subclinical vitamin deficiencies were
+identified and the ability to do work was assessed before and
+600S
+MANORE
+TABLE 1
+Values indicating inadequate status based on major indexes of vitamin B-6,
+riboﬂavin, and thiamine status
+Index
+Value
+Vitamin B-6
+Plasma pyridoxal 5-phosphate (nmol/L)1
+<30
+Plasma total vitamin B-6 (nmol/L)1
+<40
+Urinary 4-pyridoxic acid (mol/d)1
+<3.0
+Urinary total vitamin B-6 (mol/d)1
+<0.5
+Erythrocyte alanine transaminase activity coefﬁcient1
+>1.25
+Erythrocyte aspartate transaminase activity coefﬁcient1
+>1.80
+RDA (mg/d)2
+Adult men (≥15 y), 1989 RDA3
+2.0
+Adult men (19–50 y), 1998 DRI4
+1.3
+Adult women (≥15 y), 1989 RDA3
+1.6
+Adult women (19–50 y), 1998 DRI4
+1.3
+Riboﬂavin
+Plasma riboﬂavin (mol/L)
+<0.24
+Erythrocyte riboﬂavin (nmol/L)1
+<270
+Erythrocyte glutathione reductase activity coefﬁcient
+>1.25
+Urinary riboﬂavin (g/g creatinine)1
+<30
+Urinary riboﬂavin
+(g/d)
+<40
+(g/6 h)5
+<10
+RDA (mg/d)6
+Adult men (15–50 y), 1989 RDA3
+1.7
+Adult men (19–70 y), 1998 DRI4
+1.2
+Adult women (11–50 y), 1989 RDA3
+1.3
+Adult women (19–70 y), 1998 DRI4
+1.1
+Thiamine
+Plasma thiamine (nmol/L)
+<98
+Whole blood thiamine (nmol/L)1
+<79
+Thiamine pyrophosphate (% stimulation)5
+>20
+Erythrocyte transketolase activity coefﬁcient5
+>1.20
+Urinary thiamine (g/g creatinine)5
+<27
+Urinary thiamine
+(g/d)1
+<50
+(g/6 h)5
+<10
+RDA (mg/d)7
+Adult men (15–50 y), 1989 RDA3
+1.5
+Adult men (19–50 y), 1998 DRI4
+1.2
+Adult women (11–50 y), 1989 RDA3
+1.1
+Adult women (19–50 y), 1998 DRI4
+1.1
+1Values are from Fischbach (22).
+2For vitamin B-6, the RDA is based on a ratio of vitamin B-6 to protein
+of 0.032 for adult males consuming 126 g protein/d and females consum-
+ing 100 g protein/d.
+3Values are the 1989 recommended dietary allowance (RDA) for the
+vitamin (1).
+4Values are the dietary reference intake (DRI) for the vitamin (5).
+5Values are from Gibson (23).
+6Based on a consumption of 0.14 mg/MJ.
+7Based on a consumption of 0.12 mg/MJ.
+Downloaded from https://academic.oup.com/ajcn/article-abstract/72/2/598S/4729690
+by guest
+on 19 April 2018
+
+
+--- PAGE 4 ---
+after vitamin supplementation (32, 44). In one of these studies,
+Suboticanec et al (32) measured the vitamin B-6 and riboflavin
+status of 124 boys aged 12–14 y and found that 24% had poor
+vitamin B-6 status (EASTAC > 2.00) and 19% had poor
+riboflavin status (EGRAC > 1.20). One subgroup (n = 37) of the
+original sample pool was given 2 mg vitamin B-6 for 6 d/wk for
+2 mo and a second subgroup (n = 38) was given 2 mg riboflavin
+for 6 d/wk for 2 mo. At the beginning and end of the respective
+treatment periods, physical work capacity was measured on a
+bicycle ergometer; the researchers reported a significant negative
+correlation (P = 0.036) between ·VO2max and EASTAC values.
+Thus, as vitamin B-6 status improved (ie, EASTAC values
+decreased), work capacity improved. For riboflavin, the results
+were similar to those observed with vitamin B-6, except that the
+negative correlation was not significant. In general, there was a
+linear relation between EGRAC and maximal work capacity
+until EGRAC values reached 0.90–1.00. Thus, as EGRAC
+improved (ie, decreased), so did work capacity. These data sug-
+gest that subclinical deficiencies of riboflavin and vitamin B-6
+negatively affect aerobic capacity in young boys and that correc-
+tion of the deficiency improves work capacity. In both situations,
+supplementation 
+significantly 
+improved 
+vitamin 
+status
+(P = 0.001). In summary, deficiencies of thiamine, riboflavin,
+and vitamin B-6 due to poor dietary intakes of these vitamins
+may decrease the ability to do work, especially maximal work.
+DIETARY INTAKES OF ACTIVE INDIVIDUALS
+Only limited research has been conducted on the thiamine,
+riboflavin, and vitamin B-6 intake of active adult individuals
+other than athletes. Accordingly, this discussion will primarily
+include studies examining dietary intakes (collecting at least 3-d
+diet records) of athletes published within the past 10 y but will
+also review the limited data on active individuals. In general,
+studies of active males report adequate dietary intakes of thi-
+amine (12, 45–54), riboflavin (12, 36, 45–48, 50–54), and vita-
+min B-6 (33, 37, 45, 46, 49–53, 55, 56), which can be attributed
+to the relatively high energy intakes in these subjects. Only Guil-
+land et al (12) reported low mean intakes of vitamin B-6 in
+young (20 y) male athletes; 67% of their subjects were consum-
+B VITAMINS AND EXERCISE
+601S
+TABLE 2
+Incidence of low or marginal vitamin B-6, riboﬂavin, and thiamine status in studies of nonsupplemented active individuals1
+Study and assessment index used
+Type of subjects2
+Low status
+Intake3
+%
+mg/d
+Vitamin B-6
+Fogelholm et al (34)
+EASTAC >2.00
+Active subjects [42]4
+43
+—
+Guilland et al (12)
+EASTAC
+Male athletes [55]
+35
+1.5 ± 0.1
+Plasma PLP
+Male athletes [55]
+17
+—
+Telford et al (35)
+EASTAC
+Athletes [86]
+60
+—
+Rokitzki et al (36)
+EASTAC >1.50
+Athletes [57]4
+5
+1.36–5.405
+Urinary 4-PA <2.73 mol/g creatinine and whole blood
+Athletes [57]4
+18
+—
+Weight et al (37)
+Plasma PLP
+Female athletes [30]
+0
+1.7 ± 0.6
+Riboﬂavin
+Fogelholm et al (34)
+EGRAC >1.30
+Active subjects [42]4
+57
+—
+Guilland et al (12)
+EGRAC >1.20
+Male athletes [55]
+4
+2.1 ± 0.2
+Keith and Alt (38)
+EGRAC >1.20 and urinary riboﬂavin
+Female athletes [13]
+0
+1.9 ± 0.9
+Rokitzki et al (36)
+EGRAC >1.50, whole blood, and urinary riboﬂavin
+Athletes [62]4
+0
+1.4–2.55
+Weight et al (37)
+EGRAC >1.15
+Male runners [30]
+0
+1.8 ± 1.8
+Thiamine
+Fogelholm et al (34)
+ETKAC >1.20
+Active subjects [42]4
+12
+—
+Guilland et al (12)
+ETKAC >1.20
+Male athletes [55]
+17
+1.5 ± 0.1
+Weight et al (37)
+TPP stimulation >25%
+Male runners [30]
+0
+1.5 ± 0.5
+1EASTAC, erythrocyte aspartate transaminase activity coefﬁcient; PLP, pyridoxal 5-phosphate; 4-PA, 4-pyridoxic acid; EGRAC, erythrocyte glutathione
+reductase activity coefﬁcient; ETKAC, erythrocyte transketolase enzyme activity coefﬁcient.
+2n values in brackets.
+3x– ± SD or range.
+4Includes both males and females.
+5Based on 7-d weighed food records.
+Downloaded from https://academic.oup.com/ajcn/article-abstract/72/2/598S/4729690
+by guest
+on 19 April 2018
+
+
+--- PAGE 5 ---
+ing <100% of the 1989 RDA and the group as a whole had a
+ratio of vitamin B-6: to protein of 0.013. No studies reported low
+mean thiamine or riboflavin intakes in active males, and only 2
+(46, 49) reported that some of their subjects (5–18%) were con-
+suming less than the 1989 RDA of these 2 vitamins. In addition,
+no studies reported low intakes of thiamine or riboflavin
+expressed as mg per 4184 kJ (1000 kcal)/d. It appears that the
+high energy intake of active males keeps the dietary intakes of all
+these vitamins high, usually 1.5–2 times the DRI.
+As expected, dietary intakes of these vitamins are generally
+lower in active females than in males; yet, most studies have
+found that mean intakes for thiamine and riboflavin were ade-
+quate (38, 40, 46, 47, 51, 57–59). Only Kaiserauer et al (60)
+reported mean thiamine and riboflavin intakes to be low (in
+their amenorrheic runners). Dietary vitamin B-6 intakes in
+active females are more variable; yet, all of these studies
+reported mean intakes >66% of the 1989 RDA (40, 46, 51,
+57–61). In general, those studies reporting lower dietary intakes
+of vitamin B-6 also found energy intakes <7843 kJ/d (1874
+kcal/d) (60, 62). All of the studies reviewed, except for that by
+DeBolt et al (49) and Fogelholm et al (34), used 3- to 7-d food
+records to determine nutrient intakes. Thus, it appears that
+unless an individual restricts energy intake or consumes a diet
+high in refined foods, nutrient intakes of thiamine, riboflavin,
+and vitamin B-6 are adequate.
+PHYSICAL ACTIVITY AND VITAMIN REQUIREMENTS
+To determine whether exercise increases the need for thi-
+amine, riboflavin, or vitamin B-6, researchers must feed a known
+amount of the vitamin to both sedentary and active individuals
+and determine whether their nutrient statuses differ. If the vita-
+min status is poorer in the active individuals than in the seden-
+tary individuals or if the active individuals require more of the
+vitamin than do the sedentary subjects, the active individuals are
+considered to need more of the vitamin. This section will evalu-
+ate the metabolic studies that have examined riboflavin and vita-
+min B-6 status of both sedentary and active individuals under
+controlled conditions; to date, there have been no metabolic
+studies of thiamine status in active and sedentary individuals.
+On the basis of results from a series of metabolic studies in
+active women, exercise, dieting for weight loss, and dieting plus
+exercise all appear to increase the need for riboflavin above both
+the 1989 RDA and the 1998 DRI (14, 33, 63, 64). In a study pub-
+lished in 1983, Belko et al (14) fed young women various
+amounts of riboflavin over a 10-wk period and determined their
+EGRACs and urinary riboflavin excretion. During the first 2 wk,
+when 0.14 mg riboflavin/MJ was fed, EGRACs were above the
+cutoff of 1.25, indicating poor status. During the second 2-wk
+period, 0.24 mg riboflavin/MJ was fed and mean EGRAC values
+improved to within the normal range. For the next 3 wk, the
+riboflavin intake was held at 0.24 mg/MJ, but subjects exercised
+for 20–50 min 6 d/wk. The introduction of exercise increased
+mean EGRAC values above the cutoff. During the last 3 wk, sub-
+jects continued to exercise while the riboflavin intake was
+increased to 0.33 mg/MJ (0.33 mg/239 kcal). At this riboflavin
+intake, mean EGRAC values were normal (Figure 1). Through-
+out this study, urinary riboflavin excretion was significantly and
+negatively correlated with EGRAC (r = 0.23, P < 0.01).
+Two other metabolic studies, also by Belko et al (63, 64),
+examined the effect of dieting and dieting plus exercise on
+riboflavin status. In these studies, overweight women consumed
+a metabolic diet providing 5000–5300 kJ (1195–1266 kcal/d)
+and various amounts of riboflavin (0.14–0.19 mg/MJ, or per
+239 kcal). Dieting increased the amount of riboflavin required to
+maintain good status and even more riboflavin was required
+when dieting was combined with exercise. The researchers con-
+cluded that 0.38 mg riboflavin/MJ is required to keep EGRAC
+values in the normal range when subjects are dieting for weight
+loss and exercising 3–4 h/wk at 75–85% of the maximal heart
+rate. Winters et al (33) repeated the first (14) of Belko et al’s
+3 studies in 50–67-y-old active women. The subjects were fed a
+metabolic diet providing adequate energy for weight mainte-
+nance (7500–8300 kJ/d, or 1793–1983 kcal/d) and 2 different
+amounts of riboflavin (0.14 and 0.22 mg/MJ, or per 239 kcal) for
+5 wk. They found that during the weeks that subjects exercised
+(2.5 h/wk), EGRAC increased significantly over the period in
+which no exercise was performed. In addition, 0.22 mg
+riboflavin/MJ was required to maintain mean EGRAC values
+within the normal range while subjects were exercising. These
+data indicate that dieting alone or exercise alone may increase
+riboflavin requirements above the RDA and that dieting
+(5200 kJ/d, or 1243 kcal/d) plus exercise (2.5–5 h/wk) increases
+the requirement even more (0.38 mg/MJ, or 2 mg/d).
+In establishing the 1998 DRI for riboflavin (5), the committee
+considered data from the 3 studies by Belko et al (14, 63, 64) and
+the 1 by Winter et al (33). The committee noted that riboflavin
+requirements might be higher in active individuals but indicated
+that adequate data were not available from which to quantify the
+adjustment that should be made (5). All of the subjects in the
+4 referenced studies performed moderate exercise (2.5–5 h/wk)
+for fitness; no metabolic data are available on individuals who
+exercise more strenuously or participate in competitive sports.
+However, data are available indicating that even marginal
+riboflavin deficiencies can decrease work performance (42, 43).
+Metabolic studies performed in active and sedentary individu-
+als consuming known amounts of vitamin B-6 indicate that
+1.5–2.3 mg vitamin B-6/d is required to maintain plasma PLP
+concentrations above the cutoff value of 30 nmol/L (26). A meta-
+602S
+MANORE
+FIGURE 1. Effect of exercise on the riboflavin requirements of
+young women (n = 12; age 19–27 y) during a 12-wk metabolic study.
+Each no-exercise period lasted 2 wk; each exercise period lasted 3 wk
+(running for 25–50 min 6 d/wk). An erythrocyte glutathione reductase
+activity coefficient (EGRAC) >1.25 was considered high, indicating
+poor riboflavin status. Subjects were fed a metabolic diet containing
+0.14 mg/MJ, which was then increased by 0.05-mg/MJ increments to
+determine the amount of riboflavin required to maintain good EGRAC
+status (<1.25). Data adapted from Belko et al (14).
+Downloaded from https://academic.oup.com/ajcn/article-abstract/72/2/598S/4729690
+by guest
+on 19 April 2018
+
+
+--- PAGE 6 ---
+bolic study by Dreon and Butterﬁeld (28) examined vitamin B-6
+status in men consuming 4.2 mg/d and running 8.5 km (5 miles)/d
+for 29 d and then 16.1 km (10 miles)/d for 29 d. Data from these
+active individuals were compared with those from sedentary male
+control subjects. Vitamin B-6 status did not change as subjects
+increased their daily runs to 16.1 km (10 miles)/wk, as determined
+by a methionine-load test. However, subjects were consuming just
+over twice the 1989 RDA and thus may have had enough vitamin
+B-6 to meet the metabolic costs of exercise. Daily 4-PA excretion
+was not measured to determine whether excretion increased on
+exercise days or increased as the amount of exercise increased.
+In another metabolic study, by Manore et al (65), 3 groups of
+women (active, young; sedentary, young; and sedentary, old) were
+fed a metabolic diet providing 2.3–2.4 or 10 mg vitamin B-6/d for
+7 wk. Throughout the study, the active women continued to exer-
+cise (2–4 h/wk) and all subjects (including the sedentary women)
+exercised for 20 min at 80% of ·VO2max 4 times during the study.
+Plasma PLP concentrations measured during the metabolic-diet are
+given in Table 3 and are compared with measurements made dur-
+ing consumption of a free-living diet. As shown, some of the
+women had poor plasma PLP concentrations while consuming
+their free-living diet. Mean plasma PLP concentrations improved in
+all 3 groups during the metabolic-diet period.
+In the study by Manore et al (65), plasma PLP concentrations
+increased signiﬁcantly in all 3 groups during exercise (Figure 2)
+but returned to baseline within 60 min after exercise stopped, a
+phenomenon that was documented in several other studies (27, 66,
+67). The metabolic rationale for this increase in plasma PLP con-
+centration during exercise is not known, but several hypotheses
+have been proposed (16, 17, 27, 65–67). Because plasma PLP con-
+centrations increase within the ﬁrst 5 min of exercise and stay ele-
+vated during exercise, the probability increases that PLP will be
+metabolized to 4-PA and lost in the urine (27). Thus, exercise can
+increase the turnover and loss of vitamin B-6. Indeed, researchers
+have documented higher 4-PA losses in active individuals com-
+pared with sedentary control subjects or during nonexercise periods
+(65, 68) and after a strenuous bout of exercise (27). Rokitzki et al
+(69) calculated from measures of 4-PA excretion that marathon
+runners lost 1 mg vitamin B-6 during a marathon (42.18 km, or
+26.2 miles). However, no research has documented a decrease in
+plasma PLP concentrations because of exercise-induced 4-PA
+losses. In general, any loss of vitamin B-6 due to exercise is small
+and could easily be replaced by eating 1–2 servings of a food high
+in vitamin B-6. However, as shown in Table 3, some individuals,
+especially the elderly, have poor plasma PLP concentrations while
+consuming self-selected, free-living diets. In addition, several stud-
+ies have documented poor vitamin B-6 status in the elderly (70–73)
+and in individuals with such chronic diseases as arthritis (74) and
+diabetes (75). For example, in a 6-wk metabolic study by Manore
+et al (75), the vitamin B-6 status of diabetic, hypertensive, and dia-
+betic and hypertensive white men fed 2.1–2.2 mg vitamin B-6/d
+was compared with that of healthy control subjects. Over the 6-wk
+period, plasma PLP concentrations declined gradually in the dia-
+betic and hypertensive and diabetic subjects until all of the nonhy-
+pertensive, diabetic men and 63% of the hypertensive, diabetic men
+had values <30 nmol/L (Figure 3). To date, no studies have deter-
+mined whether exercise or dieting plus exercise increases the need
+for vitamin B-6 in these individuals.
+The effect of dieting plus exercise on vitamin B-6 status has
+been investigated to a limited extent. Fogelhom et al (76) exam-
+ined the effect of a 3-wk diet (7000 kJ, or 1673 kcal/d) on
+male, elite wrestlers and found a significant increase in EASTAC
+(P < 0.01) but no changes in thiamine and riboﬂavin status. No
+dietary intake data for vitamin B-6 were given, however. Thus, the
+possibility that poor dietary intake (either alone or combined with
+high activity) contributed to the increased EASTAC must be con-
+sidered. In another study, van Dale et al (77) examined the effect
+of a 14-wk diet (3700 kJ, or 884 kcal/d) or diet plus exercise on
+the vitamin status of 12 obese men (mean age: 40 y). These
+researchers found that plasma PLP concentrations decreased signi-
+ﬁcantly in the diet-plus-exercise group (from 54.5 to 40.0 nmol/L)
+compared with the diet-only group (from 49.8 to 48.7 nmol/L).
+Riboﬂavin and thiamine status decreased in both groups, but the
+only signiﬁcant change was for riboﬂavin status in the diet-plus-
+exercise group. However, the dietary intake of vitamin B-6 and
+thiamine were below the 1989 RDA for the last 9 wk of the study,
+whereas riboﬂavin intake was at the 1989 RDA.
+B VITAMINS AND EXERCISE
+603S
+TABLE 3
+Fasting concentrations of pyridoxal 5-phosphate (PLP) in active and
+sedentary women consuming free-living diets or metabolic diets
+providing either 2.3–2.4 or 10 mg vitamin B-6/d1
+Group
+PLP
+nmol/L
+Active, young (n = 5)
+Free-living diet
+42 ± 14
+2.3–2.4 mg vitamin B-6/d
+48 ± 9
+10 mg vitamin B-6/d
+175 ± 24
+Sedentary, young (n = 5)
+Free-living diet
+35 ± 15
+2.3–2.4 mg vitamin B-6/d
+61 ± 24
+10 mg vitamin B-6/d
+203 ± 56
+Sedentary, old (n = 5)
+Free-living diet
+30 ± 12
+2.3–2.4 mg vitamin B-6/d
+44 ± 18
+10 mg vitamin B-6/d
+181 ± 41
+1x– ± SD. A PLP value < 30 nmol/L is considered low. Data are adapted
+from Manore et al (65).
+FIGURE 2. Changes in pyridoxal 5-phosphate (PLP) over a 20-min
+exercise period at 80% of maximal work capacity in women. Blood sam-
+ples were drawn before exercise (baseline), immediately after the exer-
+cise session ended, and 30 and 60 min after the exercise session ended.
+*Significantly different from baseline, P < 0.05. **Significantly decreased
+from after exercise to 60 min after exercise (P < 0.05). Adapted from
+Manore et al (65).
+Downloaded from https://academic.oup.com/ajcn/article-abstract/72/2/598S/4729690
+by guest
+on 19 April 2018
+
+
+--- PAGE 7 ---
+NUTRITIONAL STATUS OF ACTIVE INDIVIDUALS
+If exercise increases the need for thiamine, riboflavin, or vita-
+min B-6, active individuals should theoretically have poor status
+if they consume the RDA for these vitamins. Much of the
+research that has examined whether exercise increases the need
+for vitamins was conducted in athletes (Table 2). Presented in the
+table are studies that examined the nutritional status of active
+individuals consuming free-living diets with no supplemental
+intakes of thiamine, riboflavin, or vitamin B6. The number of
+assessment indexes used varied, but in most studies poor status
+was based on more than one measurement as well as on the
+dietary intake of the nutrient. For vitamin B-6, the proportion of
+active individuals with poor status ranged from 0% to 60% in 5
+studies, with the highest percentage reported by Telford et al (35).
+In their study, three-fifths of a group of 86 male and female ath-
+letes had poor vitamin B-6 status. Studies that examined the sta-
+tus of active individuals consuming a free-living diet showed
+fewer incidences of poor riboflavin and thiamine status. However,
+Fogelholm et al (37), who examined vitamin B-6, riboflavin, and
+thiamine status in 42 physically active college students (18–32 y)
+before and after 5 wk of supplementation with vitamin B com-
+plex, found poor vitamin B-6 status at baseline in 43%, poor
+riboflavin status in 57%, and poor thiamine status in 12% of the
+students. Supplementation significantly increased (P < 0.0001)
+the erythrocyte activity coefficients for all vitamins. These data
+suggest that some active individuals have poor or marginal vita-
+min status while consuming their free-living diets and that exer-
+cise will diminish the vitamin status of individuals who already
+have poor or marginal vitamin status (13).
+SUMMARY
+Research examining the micronutrient needs of active individ-
+uals is still limited, with most of the work performed in compet-
+itive athletes. On the basis of the available research, riboflavin
+requirements appear to increase with exercise, dieting, and diet-
+ing plus exercise in both young and older women engaged in
+moderate activity. No data for riboflavin are available in individ-
+uals who exercise strenuously. Exercise also appears to increase
+the loss of vitamin B-6 through urinary 4–PA excretion. How-
+ever, for both of these nutrients, the amount of additional vitamin
+needed to cover losses or increased needs is small and can be met
+easily through good food choices. The data on changes in thi-
+amine status with exercise are also limited, but some cross-
+sectional studies suggest that a small percentage of active indi-
+viduals may have poor status.
+Little research is available on the effect of the combination of diet
+and exercise on weight loss and the micronutrient status of thiamine,
+riboﬂavin, and vitamin B-6. If individuals restrict their energy
+intake to achieve weight loss or make poor dietary choices, the
+dietary intakes of these nutrients will probably be low. Finally, no
+data are available on the effect of exercise or dieting plus exercise
+on thiamine, riboﬂavin, or vitamin B-6 status of individuals with
+chronic health problems, such as diabetes or hypertension.
+REFERENCES
+1. National Research Council. Recommended dietary allowances. 10th
+ed. Washington, DC: National Academy Press, 1989.
+2. Tanphaichitr V. Thiamin. In: Shils ME, Olson JA, Shike M, Ross
+AC, eds. Modern nutrition in health and disease. 9th ed. Baltimore:
+Williams & Wilkins, 1999:381–9.
+3. McCormick DB. Riboflavin. In: Shiles ME, Olson JA, Shike M,
+Ross AC, eds. Modern nutrition in health and disease. 9th ed. Balti-
+more, MD: Williams & Wilkins, 1999:391–9.
+4. Leklem JE. Vitamin B6. In: Shils ME, Olson JA, Shike M, Ross AC,
+eds. Modern nutrition in health and disease. 8th ed. Baltimore, MD:
+Williams & Wilkins, 1999:413–21.
+5. Institute of Medicine. Dietary reference intakes. Thiamin, riboflavin,
+niacin, vitamin B-6, folate, vitamin B-12, pantothenic acid, biotin,
+and choline. Washington, DC: National Academy Press, 1998.
+6. Rock A. Vitamin hype: Why we’re wasting $1 of every $3 we spend.
+Money 1995 Sept:82.
+7. Eisenberg DM, Davis RB, Ettner SL, et al. Trends in alternative med-
+icine use in the United States, 1990–1997. JAMA 1998;280:1569–75.
+8. Copeland I, Fricker PA. Vitamins in sport: who is at risk? Clin J
+Sport Med 1994;5:151–4.
+9. Sobal J, Marquart LF. Vitamin/mineral supplement use among ath-
+letes: a review of the literature. Int J Sport Nutr 1994;4:320–34.
+10. Haymes EM. Vitamin and mineral supplementation to athletes. Int J
+Sport Nutr 1991;1:146–69.
+11. Clarkson PM. Exercise and the B vitamins. In: Wolinsky I, Hickson
+JF, ed. Nutrition in exercise and sport. 3rd ed. Boca Raton, FL: CRC
+Press, 1998:179–95.
+12. Guilland JC, Penaranda T, Gallet C, Boggio V, Fuchs F, Klepping J.
+Vitamin status of young athletes including the effects of supple-
+mentation. Med Sci Sports Med 1989;21:441–9.
+13. Soares MJ, Satyanarayana K, Bamji MS, Jacob CM, Ramana YV,
+Rao SS. The effect of exercise on the riboflavin status of adult men.
+Br J Nutr 1993;69:541–51.
+14. Belko AZ, Obarzanek E, Kalkwarf HJ, et al. Effects of exercise on
+riboflavin requirements of young women. Am J Clin Nutr 1983;
+37:509–17.
+15. Leklem JE, Miller LT, Hardin K, Ridlington J. Effect of two levels
+of riboflavin on the metabolism of pyridoxine and pyridoxal.
+FASEB J 1996;10:A465 (abstr).
+16. Leklem JE. Vitamin B-6: of reservoirs, receptors and requirements.
+Nutr Today 1988;Sept/Oct:4–10.
+17. Leklem JE. Physical activity and vitamin B6 metabolism in men and
+women: interrelationship with fuel needs. In: Reynolds RD, Leklem
+604S
+MANORE
+FIGURE 3. Changes in pyridoxal 5-phosphate (PLP) in control
+(n = 9), diabetic (n = 4), hypertensive (n = 13), and hypertensive and dia-
+betic (n = 8) white males who consumed a metabolic diet containing
+2.1–2.2 mg vitamin B-6/d for 6 wk. All subjects were weight-stable and
+not taking any medications; protein intake was held constant during the
+6-wk period. Baseline PLP values are those measured while subjects
+were consuming their free-living diets 2–3 wk before starting the meta-
+bolic diet. All of the diabetic subjects, 54% of the hypertensive subjects,
+and 63% of the hypertensive and diabetic subjects had low PLP values
+(ie, <30 nmol/L). Data adapted from Manore et al (75).
+Downloaded from https://academic.oup.com/ajcn/article-abstract/72/2/598S/4729690
+by guest
+on 19 April 2018
+
+
+--- PAGE 8 ---
+JE, ed. Vitamin B6:its role in health and disease. New York: Alan R
+Liss, 1985:221–41.
+18. Manore MM. Vitamin B6 and exercise. Int J Sport Nutr 1994;4:
+89–103.
+19. Huang YC, Chen W, Evans MA, Mitchell ME, Shultz TD. Vitamin
+B-6 requirement and status assessment of young women fed a high-
+protein diet with various levels of vitamin B-6. Am J Clin Nutr
+1998;67:208–20.
+20. Hansen CM, Leklem JE, Miller LT. Changes in vitamin B-6 status
+indicators of women fed a constant protein diet with varying levels
+of vitamin B-6. Am J Clin Nutr 1997;66:1379–87.
+21. Lemon PWR. Effects of exercise on dietary protein requirements.
+Int J Sport Nutr 1998;8:426–47.
+22. Fischbach F. A manual of laboratory and diagnostic tests. 5th ed.
+Philadelphia: Lippincott-Raven, 1996.
+23. Gibson RS. Principles of nutritional assessment. New York: Oxford
+University Press, 1990.
+24. Martini MC, Lampe JW, Slavin JL, Kurzer MS. Effect of the men-
+strual cycle on energy and nutrient intake. Am J Clin Nutr 1994;
+60:895–9.
+25. Rokitzki L, Sagredos A, Keck E, Sauer B, Keul J. Assessment of
+vitamin B2 status in performance athletes of various types of sports.
+J Nutr Sci Vitaminol (Tokyo) 1994;40:11–22.
+26. Leklem JE. Vitamin B-6: a status report. J Nutr 1990;120:1503–17.
+27. Crozier PG, Cordain L, Sampson DA. Exercise-induced changes in
+plasma vitamin B-6 concentrations do not vary with exercise inten-
+sity. Am J Clin Nutr 1994;60:552–8.
+28. Dreon DM, Butterfield GE. Vitamin B6 utilization in active and
+inactive young men. Am J Clin Nutr 1986;43:816–24.
+29. Manore MM, Leklem JE. Effect of carbohydrate and vitamin B6 on
+fuel substrates during exercise in women. Med Sci Sport Exerc
+1988;20:233–41.
+30. van der Beek EJ. Vitamin supplementation and physical exercise
+performance. J Sports Sci 1991;9:77–89.
+31. Haralambie G. Vitamin B2 status in athletes and the influence of
+riboflavin administration on neuromuscular irritability. Nutr Metab
+1976;20:1–8.
+32. Suboticanec K, Stavljenic A, Schalch W, Buzina R. Effects of pyri-
+doxine and riboflavin supplementation on physical fitness in young
+adolescents. Int J Vitam Nutr Res 1990;60:81–8.
+33. Winters LRT, Yoon Y, Kalkwarf HJ, et al. Riboflavin requirements
+and exercise adaptation in older women. Am J Clin Nutr 1992;
+56:526–32.
+34. Fogelholm M, Ruokonen I, Laakso JT, Vuorimaa T, Himberg JJ.
+Lack of association between indices of vitamin B-1, B-2 and B-6
+status and exercise-induced blood lactate in young adults. Int J
+Sport Nutr 1993;3:165–76.
+35. Telford RD, Catchpole EA, Deakin V, McLeay AC, Plank AW. The
+effect of 7 to 8 months of vitamin/mineral supplementation on the vita-
+min and mineral status of athletes. Int J Sport Nutr 1992;2:123–34.
+36. Rokitzki L, Sagredos AN, Reub F, Cufi D, Keul J. Assessment of
+vitamin B6 status of strength and speedpower athletes. J Am Coll
+Nutr 1994;13:87–94.
+37. Weight LM, Noakes TD, Labadarios D, Graves J, Jacobs P, Berman
+PA. Vitamin and mineral status of trained athletes including the
+effects of supplementation. Am J Clin Nutr 1988;47:186–91.
+38. Keith RE, Alt LA. Riboflavin status of female athletes consuming
+normal diets. Nutr Res 1991;11:727–34.
+39. Beals KA, Manore MM. Prevalence and consequences of subclinical
+eating disorders in female athletes. Int J Sport Nutr 1994;4:175–95.
+40. Beals KA, Manore MM. Nutritional status of female athletes with
+subclinical eating disorders. J Am Diet Assoc 1998;98:419–25.
+41. van der Beek EJ, Lowik MRH, Hulshof KFAM, Kistemaker C.
+Combinations of low thiamin, riboflavin, vitamin B6 and vitamin C
+intake among Dutch adults. (Dutch Nutrition Surveillance System)
+J Am Coll Nutr 1994;13:383–91.
+42. van der Beek EJ, van Dokkum W, Schrijver J, et al. Thiamin,
+riboflavin, and vitamins B6 and C: impact of combined restricted
+intake on functional performance in man. Am J Clin Nutr 1988;48:
+1451–62.
+43. van der Beek EJ, van Dokkum W, Wedel M, Schrijver J, van den Berg
+H. Thiamin, riboﬂavin and vitamin B6:impact of restricted intake on
+physical performance in man. J Am Coll Nutr 1994;13:629–40.
+44. Powers HJ, Bates CJ, Lamb WH, Singh J, Gelman W, Webb E.
+Effects of a multivitamin and iron supplement on running perfor-
+mance in Gambian children. Hum Nutr Clin Nutr 1985;39C:427–37.
+45. Rico-Sanz J, Frontera WR, Mole PA, Rivera MA, Rivera-Brown A,
+Meredith CN. Dietary and performance assessment of elite soccer
+players during a period of intense training. Int J Sport Nutr 1998;8:
+230–40.
+46. Faber M, Benade AJ. Mineral and vitamin intake in field athletes
+(discus-, hammer-, javelin-throwers and shotputters). Int J Sport
+Med 1991;12:324–7.
+47. Fogelholm M, Rehunen S, Gref CG, et al. Dietary intake and thi-
+amin, iron, and zinc status in elite Nordic skiers during different
+training periods. Int J Sport Nutr 1992;2:351–65.
+48. Fogelholm GM, Himberg JJ, Alopaeus K, et al. Dietary and bio-
+chemical indices of nutritional status in male athletes and controls.
+J Am Coll Nutr 1992;11:181–91.
+49. DeBolt JE, Singh A, Day BA, Deuster PA. Nutritional survey of the
+US Navy SEAL trainees. Am J Clin Nutr 1988;48:1316–23.
+50. Jensen CD, Zaltas ES, Whittam JH. Dietary intakes of male
+endurance cyclists during training and racing. J Am Diet Assoc
+1992;92:986–8.
+51. Nieman DC, Butler JV, Pollett LM, Dietrich SJ, Lutz RD. Nutrient
+intake of marathon runners. J Am Diet Assoc 1989;89:1273–8.
+52. Singh A, Moses FM, Deuster PA. Vitamin and mineral status in
+physically active men: effects of a high-potency supplement. Am J
+Clin Nutr 1992;55:1–7.
+53. Singh A, Evans P, Gallagher KL, Deuster PA. Dietary intakes and
+biochemical profiles of nutritional status of ultramarathoners. Med
+Sci Sports Exerc 1993;25:328–34.
+54. Niekamp RA, Baer JT. In-season dietary adequacy of trained male
+cross-country runners. Int J Sport Nutr 1995;5:45–55.
+55. Bazzarre TL, Scarpino A, Sigmon R, Marquart LF, Wu SM, Izurieta
+M. Vitamin-mineral supplement use and nutritional status of ath-
+letes. J Am Coll Nutr 1993;12:162–9.
+56. Worme JD, Doubt TJ, Singh A, Ryan CJ, Moses FM, Deuster PA.
+Dietary patterns, gastrointestinal complaints, and nutrition knowl-
+edge of recreational triathletes. Am J Clin Nutr 1990;51:690–7.
+57. Kopp-Woodroffe SA, Manore MM, Dueck CA, Skinner JS, Matt
+KS. Energy and nutrient status of amenorrheic athletes participating
+in a diet and exercise training intervention program. Int J Sport Nutr
+1999;9:70–88.
+58. Baer JT, Taper LJ. Amenorrheic and eumenorrheic adolescent run-
+ners: dietary intake and exercise training status. J Am Diet Assoc
+1992;92:89–91.
+59. Keith RE, O’Keeffe KA, Alt LA, Young KL. Dietary status of
+trained female cyclists. J Am Diet Assoc 1989;89:1620–3.
+60. Kaiserauer S, Snyder AC, Sleeper M, Zierath J. Nutritional, physio-
+logical, and menstrual status of distance runners. Med Sci Sports
+Exerc 1989;21:120–5.
+61. Manore MM, Besenfelder PD, Wells CL, Carroll SS, Hooker SP.
+Nutrient intakes and iron status in female long-distance runners dur-
+ing training. J Am Diet Assoc 1989;89:257–9.
+62. Rucinski A. Relationship of body image and dietary intake of com-
+petitive ice skaters. J Diet Assoc 1989;89:98–100.
+63. Belko AZ, Obarzanek E, Roach R, et al. Effects of aerobic exercise
+and weight loss on riboflavin requirements of moderately obese,
+marginally deficient young women. Am J Clin Nutr 1984;40:553–61.
+64. Belko AZ, Meredith MP, Kalkwarf HJ, et al. Effects of exercise on
+riboflavin requirements: biological validation in weight reducing
+women. Am J Clin Nutr 1985;41:270–7.
+65. Manore MM, Leklem JE, Walter MC. Vitamin B-6 metabolism as
+affected by exercise in trained and untrained women fed diets dif-
+B VITAMINS AND EXERCISE
+605S
+Downloaded from https://academic.oup.com/ajcn/article-abstract/72/2/598S/4729690
+by guest
+on 19 April 2018
+
+
+--- PAGE 9 ---
+606S
+MANORE
+fering in carbohydrate and vitamin B-6 content. Am J Clin Nutr
+1987;46:995–1004.
+66. Leklem JE, Shultz TD. Increased plasma pyridoxal 5-phosphate
+and vitamin B6 in male adolescents after 4500-meter run. Am J Clin
+Nutr 1983;38:541–8.
+67. Hofmann A, Reynolds RD, Smoak BL, Villanueva VG, Deuster PA.
+Plasma pyridoxal and pyridoxal 5-phosphate concentrations in
+response to ingestion of water or glucose polymer during a 2-h run.
+Am J Clin Nutr 1991;53:84–9.
+68. Dunton N, Virk R, Leklem J. The influence of vitamin B-6 supple-
+mentation and exercise to exhaustion on vitamin B-6 metabolism.
+FASEB J 1992;6:A1374 (abstr).
+69. Rokitzki L, Sagredos AN, Reub F, Buchner M, Keul J. Acute
+changes in vitamin B6 status in endurance athletes before and after
+a marathon. Int J Sport Nutr 1994;4:154–65.
+70. Manore MM, Vaughan LA, Carroll SS, Leklem JE. Plasma pyridoxal
+5-phosphate concentrations and dietary vitamin B-6 intake in free-
+living, low-income elderly people. Am J Clin Nutr 1989;50:339–45.
+71. Ribaya-Mercado JD, Russell RM, Sahyoun N, Morrow FD, Ger-
+shoff SN. Vitamin B6 requirements of elderly men and women. J Nutr
+1991;121:1062–74.
+72. Lowik MR, van den Berg H, Westenbrink S, Wedel M, Schrijver J,
+Ockhuizen T. Dose-response relationships regarding vitamin B-6 in
+elderly people: a nationwide nutritional survey (Dutch Nutritional
+Surveillance System). Am J Clin Nutr 1989;50:391–9.
+73. Madigan SM, Tracey F, McNulty H, et al. Riboflavin and vitamin
+B-6 intakes and status and biochemical response to riboflavin sup-
+plementation in free-living elderly people. Am J Clin Nutr 1998;68:
+389–95.
+74. Roubenoff R, Roubenoff RA, Selhum J, et al. Abnormal vitamin
+B6 status in rheumatoid cachexia. Arthritis Rheum 1995;38:
+105–9.
+75. Manore MM, Vaughan LA, Leklem JE, Felicetta JV. Changes in
+plasma pyridoxal phosphate (PLP) in diabetic, hypertensive and
+hypertensive-diabetic men fed a constant vitamin B-6 diet. FASEB
+J 1991;5:A586 (abstr).
+76. Fogelholm GM, Koskinen R, Laakso J, Rankinen T, Ruokonen I.
+Gradual and rapid weight loss: effects on nutrition and performance
+in male athletes. Med Sci Sports Exerc 1993;25:371–7.
+77. van Dale D, Schrijver J, Saris WHM. Changes in vitamin status in
+plasma during dieting and exercise. Int J Vitam Nutr Res 1990;
+60:67–74.
+Downloaded from https://academic.oup.com/ajcn/article-abstract/72/2/598S/4729690
+by guest
+on 19 April 2018
