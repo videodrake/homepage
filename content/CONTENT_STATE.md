@@ -43,12 +43,12 @@ Claude는 `완료`, `초안`, `published 있음` 상태의 글을 새로 쓰지 
 
 | slug | series | part | title | status | next_action | notes |
 |---|---|---:|---|---|---|---|
-| `journal-01-a` | `journal-01` | A | 왜 30km에서 무너지는가 | `deployed` | 완료 | `/journal/journal-01-a.html` 발행 완료. |
-| `journal-01-b` | `journal-01` | B | 30km 이후 페이스를 지키는 법 | `deployed` | 완료 | `/journal/journal-01-b.html` 발행 완료. |
-| `journal-02-a` | `journal-02` | A | 마지막 2주가 기록을 만든다 — 테이퍼링이 회수하는 6% | `deployed` | 완료 | `/journal/journal-02-a.html` 발행 완료. |
-| `journal-02-b` | `journal-02` | B | 대회 24시간 루틴 | `deployed` | 완료 | `/journal/journal-02-b.html` 발행 완료. |
-| `journal-04-a` | `journal-04` | A | 같은 페이스, 다른 심박 — 여름 러닝이 만드는 두 가지 생리적 비용 | `deployed` | 완료 | `/journal/journal-04-a.html` 발행 완료. |
-| `journal-04-b` | `journal-04` | B | 여름을 다루는 방법 — 두 비용을 줄이는 조정과 가을 6%를 만드는 시간표 | `deployed` | 완료 | `/journal/journal-04-b.html` 발행 완료. |
+| `journal-01-a` | `journal-01` | A | 마라톤 30km 이후 갑자기 힘든 이유는? 30km 벽 원인과 대처법 | `published_md_ready` | 사용자 승인 후 배포 | AEO·검색의도 개편본. 로컬 검수 완료, 기존 배포본 유지 중. |
+| `journal-01-b` | `journal-01` | B | 마라톤 에너지젤은 언제, 몇 개 먹어야 할까? 섭취 간격 계산법 | `published_md_ready` | 사용자 승인 후 배포 | AEO·검색의도 개편본. 로컬 검수 완료, 기존 배포본 유지 중. |
+| `journal-02-a` | `journal-02` | A | 마라톤 테이퍼링은 언제부터? 대회 2주 전 훈련량 줄이는 법 | `published_md_ready` | 사용자 승인 후 배포 | AEO·검색의도 개편본. 로컬 검수 완료, 기존 배포본 유지 중. |
+| `journal-02-b` | `journal-02` | B | 마라톤 전날 무엇을 먹고 몇 시에 일어날까? 대회 24시간 체크리스트 | `published_md_ready` | 사용자 승인 후 배포 | AEO·검색의도 개편본. 로컬 검수 완료, 기존 배포본 유지 중. |
+| `journal-04-a` | `journal-04` | A | 여름에 같은 페이스인데 심박수가 높은 이유는? 심박 드리프트 설명 | `published_md_ready` | 사용자 승인 후 배포 | AEO·검색의도 개편본. 로컬 검수 완료, 기존 배포본 유지 중. |
+| `journal-04-b` | `journal-04` | B | 여름 러닝 페이스는 얼마나 낮춰야 할까? 심박·수분 조절법 | `published_md_ready` | 사용자 승인 후 배포 | AEO·검색의도 개편본. 로컬 검수 완료, 기존 배포본 유지 중. |
 | `journal-03-a` | `journal-03` | A | 옥타코사놀이 달리기에 주는 것 | `blocked` | 권위 축적 후 별도 규제 검토 | 성분 직접 언급 시리즈. 가장 마지막. |
 
 ---
@@ -58,8 +58,8 @@ Claude는 `완료`, `초안`, `published 있음` 상태의 글을 새로 쓰지 
 현재 상태 기준 추천:
 
 ```text
-next_slug: (없음 — 현재 not_started 항목 없음)
-next_reason: journal-04-b 배포 완료. 다음 주제 미정.
+next_slug: (없음 — 기존 6개 글 개편본 검수·배포 우선)
+next_reason: 6개 개편 원고가 published_md_ready 상태. 신규 글보다 로컬 검수와 배포가 먼저.
 ```
 
 Claude가 자동 주제선정을 할 때:

@@ -80,7 +80,7 @@
                 button.classList.toggle('is-active', selected);
                 button.setAttribute('aria-pressed', selected ? 'true' : 'false');
             });
-            if (count) count.textContent = visible + '개의 글';
+            if (count) count.textContent = visible + '개의 질문';
             if (empty) empty.classList.toggle('is-visible', visible === 0);
         }
 

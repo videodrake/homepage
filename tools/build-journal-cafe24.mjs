@@ -111,6 +111,10 @@ function escapeHtml(value = '') {
 
 function inlineMarkdown(text) {
   let out = escapeHtml(text);
+  out = out.replace(/\[([^\]]+)\]\(((?:https?:\/\/|\/)[^)\s]+)\)/g, (_match, label, href) => {
+    const external = href.startsWith('http');
+    return `<a href="${href}"${external ? ' target="_blank" rel="noopener noreferrer"' : ''}>${label}</a>`;
+  });
   out = out.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
   out = out.replace(/\*([^*]+)\*/g, '<em>$1</em>');
   out = out.replace(/`([^`]+)`/g, '<code>$1</code>');
@@ -152,6 +156,7 @@ function markdownToHtml(body, slug) {
   let paragraph = [];
   let blockquote = [];
   let list = [];
+  let listTag = 'ul';
   let table = [];
 
   const flushParagraph = () => {
@@ -170,10 +175,11 @@ function markdownToHtml(body, slug) {
   };
   const flushList = () => {
     if (!list.length) return;
-    html.push('<ul class="jp-list">');
+    html.push(`<${listTag} class="jp-list">`);
     for (const item of list) html.push(`<li>${inlineMarkdown(item)}</li>`);
-    html.push('</ul>');
+    html.push(`</${listTag}>`);
     list = [];
+    listTag = 'ul';
   };
   const flushTable = () => {
     if (table.length < 2) { table = []; return; }
@@ -199,7 +205,20 @@ function markdownToHtml(body, slug) {
     if (/^[-\u2500]{3,}$/.test(line)) { flushAll(); continue; }
     if (/^\|.+\|$/.test(line)) { flushParagraph(); flushBlockquote(); flushList(); table.push(line); continue; }
     if (line.startsWith('>')) { flushParagraph(); flushList(); flushTable(); blockquote.push(line.replace(/^>\s?/, '').trim()); continue; }
-    if (/^-\s+/.test(line)) { flushParagraph(); flushBlockquote(); flushTable(); list.push(line.replace(/^-\s+/, '').trim()); continue; }
+    if (/^-\s+/.test(line)) {
+      flushParagraph(); flushBlockquote(); flushTable();
+      if (list.length && listTag !== 'ul') flushList();
+      listTag = 'ul';
+      list.push(line.replace(/^-\s+/, '').trim());
+      continue;
+    }
+    if (/^\d+\.\s+/.test(line)) {
+      flushParagraph(); flushBlockquote(); flushTable();
+      if (list.length && listTag !== 'ol') flushList();
+      listTag = 'ol';
+      list.push(line.replace(/^\d+\.\s+/, '').trim());
+      continue;
+    }
     const image = line.match(/^!\[([^\]]*)\]\(([^)]+)\)$/);
     if (image) {
       flushAll();
@@ -234,12 +253,62 @@ function plainDeck(body) {
   return (line || '').replace(/\*\*/g, '').replace(/\*/g, '').slice(0, 140);
 }
 
-function renderPage({ title, deck, articleHtml, heroImage, args, meta = {} }) {
+function plainMarkdown(value = '') {
+  return String(value)
+    .replace(/!\[([^\]]*)\]\([^)]+\)/g, '$1')
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+    .replace(/[*_`>#]/g, '')
+    .replace(/^\s*[-+]\s+/, '')
+    .replace(/^\s*\d+\.\s+/, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function extractFaqItems(body) {
+  const lines = body.split(/\r?\n/);
+  const items = [];
+  let inFaq = false;
+  let question = '';
+  let answer = [];
+
+  const flush = () => {
+    const name = plainMarkdown(question);
+    const text = plainMarkdown(answer.join(' '));
+    if (name && text) items.push({ name, text });
+    question = '';
+    answer = [];
+  };
+
+  for (const rawLine of lines) {
+    const line = rawLine.trim();
+    if (/^##\s+/.test(line)) {
+      if (inFaq) {
+        flush();
+        break;
+      }
+      inFaq = plainMarkdown(line.replace(/^##\s+/, '')) === '자주 묻는 질문';
+      continue;
+    }
+    if (!inFaq) continue;
+    if (/^###\s+/.test(line)) {
+      flush();
+      question = line.replace(/^###\s+/, '').trim();
+      continue;
+    }
+    if (!question || !line || line.startsWith('![') || /^[-─]{3,}$/.test(line)) continue;
+    answer.push(line);
+  }
+  if (inFaq) flush();
+  return items;
+}
+
+function renderPage({ title, deck, articleHtml, heroImage, faqItems, args, meta = {} }) {
   const category = args.category || meta.category || '러닝 과학';
   const number = args.number || args.slug;
   const date = args.date || normalizeDate(meta.date_drafted) || todayKst();
+  const modifiedDate = normalizeDate(meta.date_modified) || date;
   const readTime = args.readTime || meta.read_time || '7분 읽기';
-  const structuredData = renderStructuredData({ title, deck, heroImage, args, date });
+  const structuredData = renderStructuredData({ title, deck, heroImage, faqItems, args, date, modifiedDate });
   return `<!--@layout(/layout/basic/layout.html)-->
 <!--@css(/layout/basic/css/onroad-v4-journal.css)-->
 <!--@js(/layout/basic/js/onroad-v4-journal.js)-->
@@ -294,7 +363,7 @@ function normalizeDate(value) {
   return null;
 }
 
-function renderStructuredData({ title, deck, heroImage, args, date }) {
+function renderStructuredData({ title, deck, heroImage, faqItems = [], args, date, modifiedDate }) {
   const pageUrl = absoluteUrl(args.siteUrl, `/journal/${args.slug}.html`);
   const imageUrl = heroImage ? absoluteUrl(args.siteUrl, heroImage) : undefined;
   const published = date.replace(/\s*\/\s*/g, '-');
@@ -306,7 +375,7 @@ function renderStructuredData({ title, deck, heroImage, args, date }) {
     url: pageUrl,
     mainEntityOfPage: pageUrl,
     datePublished: published,
-    dateModified: published,
+    dateModified: modifiedDate.replace(/\s*\/\s*/g, '-'),
     author: {
       '@type': 'Organization',
       name: args.author || 'ONROAD Journal',
@@ -317,7 +386,23 @@ function renderStructuredData({ title, deck, heroImage, args, date }) {
     },
   };
   if (imageUrl) data.image = [imageUrl];
-  return `<script type="application/ld+json">${JSON.stringify(data).replaceAll('<', '\\u003c')}</script>`;
+  const scripts = [`<script type="application/ld+json">${JSON.stringify(data).replaceAll('<', '\\u003c')}</script>`];
+  if (faqItems.length) {
+    const faqData = {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqItems.map((item) => ({
+        '@type': 'Question',
+        name: item.name,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: item.text,
+        },
+      })),
+    };
+    scripts.push(`<script type="application/ld+json">${JSON.stringify(faqData).replaceAll('<', '\\u003c')}</script>`);
+  }
+  return scripts.join('\n  ');
 }
 
 function decodeEntities(value = '') {
@@ -351,6 +436,10 @@ function collectJournalEntries(dir) {
       const eyebrow = metaParts[0] || (html.match(/<div class="eyebrow">([^<]*?)\s*\//) || [])[1] || '러닝 과학';
       const date = (html.match(/"datePublished":"([^"]+)"/) || [])[1] || '';
       const articleText = ((html.match(/<article[^>]*>([\s\S]*?)<\/article>/) || [])[1] || '').replace(/<[^>]+>/g, '');
+      const searchTerms = [...html.matchAll(/<h[23]>([\s\S]*?)<\/h[23]>/g)]
+        .map((match) => decodeEntities(match[1].replace(/<[^>]+>/g, '')).trim())
+        .filter(Boolean)
+        .join(' ');
       const minutes = Math.max(3, Math.round(articleText.replace(/\s+/g, '').length / 600));
       return {
         slug,
@@ -363,6 +452,7 @@ function collectJournalEntries(dir) {
         readTime: metaParts[3] || `${minutes}분 읽기`,
         hero: `/SkinImg/img/journal/${slug}/img-1.png`,
         label: slug.replace(/^journal-/, '').toUpperCase(),
+        searchTerms,
       };
     })
     .sort((a, b) => a.slug.localeCompare(b.slug, undefined, { numeric: true }));
@@ -370,28 +460,22 @@ function collectJournalEntries(dir) {
 
 function renderJournalIndex(entries) {
   const ordered = [...entries].reverse();
-  const feature = ordered[0];
   const categories = [...new Set(entries.map((entry) => entry.category))];
   const excerpt = (entry) => escapeHtml(entry.subtitle ? truncateText(entry.subtitle, 90) : truncateText(entry.deck, 90));
   const filterBlocks = ['전체', ...categories]
     .map((name, idx) => `          <button class="jv4-filter${idx === 0 ? ' is-active' : ''}" type="button" data-journal-filter="${escapeHtml(name)}" aria-pressed="${idx === 0 ? 'true' : 'false'}">${escapeHtml(name)}</button>`)
     .join('\n');
 
-  const cardBlocks = ordered.map((entry) => `        <a class="jv4-card" href="/journal/${entry.slug}.html" data-journal-card data-category="${escapeHtml(entry.category)}" data-keywords="${escapeHtml(`${entry.fullTitle} ${entry.deck} ${entry.category}`)}">
-          <div class="jv4-card__media"><img src="${escapeHtml(entry.hero)}" alt="${escapeHtml(entry.title)}" loading="lazy"><span class="jv4-card__category">${escapeHtml(entry.category)}</span></div>
-          <div class="jv4-card__body"><div class="jv4-card__meta"><span>${escapeHtml(entry.date || 'ONROAD NOTE')}</span><span>${escapeHtml(entry.readTime)}</span></div><h3>${escapeHtml(entry.title)}</h3><p>${excerpt(entry)}</p><span class="jv4-card__read">글 읽기 →</span></div>
+  const cardBlocks = ordered.map((entry, index) => `        <a class="jv4-card${index === 0 ? ' jv4-card--featured' : ''}" href="/journal/${entry.slug}.html" data-journal-card data-category="${escapeHtml(entry.category)}" data-keywords="${escapeHtml(`${entry.fullTitle} ${entry.deck} ${entry.category} ${entry.searchTerms}`)}">
+          <div class="jv4-card__body">${index === 0 ? '<span class="jv4-card__featured-label">이번 주 질문</span>' : ''}<div class="jv4-card__meta"><span>${escapeHtml(entry.category)}</span><span>${escapeHtml(entry.date || 'ONROAD NOTE')} · ${escapeHtml(entry.readTime)}</span></div><span class="jv4-card__question" aria-hidden="true">Q.</span><h3>${escapeHtml(entry.fullTitle)}</h3><p>${excerpt(entry)}</p><span class="jv4-card__read">답 확인하기 →</span></div>
+          <div class="jv4-card__media" aria-hidden="true"><img src="${escapeHtml(entry.hero)}" alt="" loading="lazy"></div>
         </a>`).join('\n');
-
-  const featureBlock = feature ? `    <a class="jv4-feature-card" href="/journal/${feature.slug}.html">
-      <div class="jv4-feature-card__media"><img src="${escapeHtml(feature.hero)}" alt="${escapeHtml(feature.title)}"><span class="jv4-feature-card__badge">FEATURED NOTE</span></div>
-      <div class="jv4-feature-card__copy"><div class="jv4-feature-card__meta">${escapeHtml(feature.category)} · ${escapeHtml(feature.readTime)}</div><h2>${escapeHtml(feature.title)}</h2><p>${excerpt(feature)}</p><span class="jv4-button jv4-button--white">지금 읽기 →</span></div>
-    </a>` : '';
 
   const collectionData = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
     name: '온로드 러닝 노트',
-    description: '훈련, 대회 준비, 계절 러닝과 러닝 과학을 근거 중심으로 정리한 온로드 콘텐츠 허브',
+    description: '마라톤 보급, 테이퍼링, 대회 준비, 여름 러닝처럼 러너가 실제로 겪는 문제에 답하는 온로드 러닝 가이드',
     url: 'https://zenera.kr/journal/index.html',
     mainEntity: ordered.map((entry) => ({ '@type': 'Article', headline: entry.fullTitle, url: `https://zenera.kr/journal/${entry.slug}.html` })),
   };
@@ -399,26 +483,24 @@ function renderJournalIndex(entries) {
   return `<!--@layout(/layout/basic/layout.html)-->
 <!--@css(/layout/basic/css/onroad-v4-journal.css)-->
 <!--@js(/layout/basic/js/onroad-v4-journal.js)-->
-<main class="onroad-page jv4-index" data-seo-title="온로드 러닝 노트 | 달리는 생활의 기준" data-seo-description="훈련, 마라톤 준비, 계절 러닝과 러닝 과학을 근거 중심으로 정리한 온로드 콘텐츠 허브" data-seo-canonical="https://zenera.kr/journal/index.html">
+<main class="onroad-page jv4-index" data-seo-title="온로드 러닝 노트 | 러너의 실제 질문에 답합니다" data-seo-description="마라톤 보급, 테이퍼링, 대회 준비, 여름 러닝처럼 러너가 실제로 겪는 문제에 답하는 온로드 러닝 가이드" data-seo-canonical="https://zenera.kr/journal/index.html">
   <script type="application/ld+json">${JSON.stringify(collectionData).replaceAll('<', '\\u003c')}</script>
   <section class="jv4-index-hero">
-    <div class="jv4-shell jv4-index-hero__grid"><div><p class="jv4-eyebrow jv4-eyebrow--light">ONROAD RUNNING NOTE</p><h1><span>검색으로 들어와,</span><span><em>내 페이스</em>로 나가는 러닝 노트.</span></h1></div><aside class="jv4-index-hero__aside"><p>훈련, 대회 준비, 계절 변화와 러닝 과학을 근거 중심으로 정리합니다. 한 편의 글이 다음 훈련의 기준과 매일의 관리 루틴으로 이어지도록.</p><div class="jv4-index-hero__stats"><div><strong>${entries.length}</strong><span>PUBLISHED NOTES</span></div><div><strong>${categories.length}</strong><span>RUNNING TOPICS</span></div></div></aside></div>
+    <div class="jv4-shell jv4-index-hero__grid"><div><p class="jv4-eyebrow jv4-eyebrow--light">ONROAD RUNNING NOTE</p><h1><span>러닝 질문,</span><span><em>답부터</em> 확인하세요.</span></h1></div><aside class="jv4-index-hero__aside"><p>마라톤 보급, 테이퍼링, 대회 전 준비, 여름 심박처럼 러너가 실제로 겪는 문제를 근거와 체크리스트로 정리합니다.</p><div class="jv4-index-hero__stats"><div><strong>${entries.length}</strong><span>PUBLISHED NOTES</span></div><div><strong>${categories.length}</strong><span>RUNNING TOPICS</span></div></div></aside></div>
   </section>
 
   <section class="jv4-discovery" aria-label="러닝 노트 검색"><div class="jv4-shell jv4-discovery__panel"><label class="jv4-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg><input type="search" data-journal-search placeholder="예: 마라톤 30km, 테이퍼링, 여름 러닝" aria-label="러닝 노트 검색"></label><div class="jv4-filters" aria-label="주제별 보기">
 ${filterBlocks}
         </div></div></section>
 
-  <section class="jv4-paths"><div class="jv4-shell"><div class="jv4-section-head"><div><p class="jv4-eyebrow">START WITH YOUR RUN</p><h2>지금 내 상황에서<br><em>바로 시작하세요.</em></h2></div><p>막연한 건강 정보가 아니라, 러너가 실제로 검색하는 상황에서 출발합니다.</p></div><div class="jv4-path-grid">
-    <button class="jv4-path-card" type="button" data-journal-filter="마라톤 준비" data-journal-path><span>01 / MARATHON</span><h3>30km 이후가 궁금할 때</h3><p>마라톤 후반 페이스와 보급을 이해하는 글.</p><strong>마라톤 준비 글 보기 →</strong></button>
-    <button class="jv4-path-card" type="button" data-journal-filter="훈련 루틴" data-journal-path><span>02 / TRAINING</span><h3>대회를 앞두고 있을 때</h3><p>마지막 2주와 훈련 감축을 정리한 글.</p><strong>훈련 루틴 글 보기 →</strong></button>
-    <button class="jv4-path-card" type="button" data-journal-filter="계절 러닝" data-journal-path><span>03 / SEASON</span><h3>더운 날 페이스가 다를 때</h3><p>기온, 심박과 수분을 이해하는 글.</p><strong>계절 러닝 글 보기 →</strong></button>
-    <button class="jv4-path-card" type="button" data-journal-filter="러닝 과학" data-journal-path><span>04 / SCIENCE</span><h3>이유까지 알고 싶을 때</h3><p>글리코겐과 심박 등 러닝의 원리를 읽는 글.</p><strong>러닝 과학 글 보기 →</strong></button>
+  <section class="jv4-paths"><div class="jv4-shell"><div class="jv4-section-head"><div><p class="jv4-eyebrow">START WITH YOUR QUESTION</p><h2>지금 궁금한 것부터<br><em>바로 확인하세요.</em></h2></div><p>길게 돌려 말하지 않고, 러너가 실제로 겪는 상황에 먼저 답합니다.</p></div><div class="jv4-path-grid">
+    <button class="jv4-path-card" type="button" data-journal-filter="마라톤 준비" data-journal-path><span>01 / MARATHON</span><h3>젤을 언제 먹어야 할까?</h3><p>예상 완주 시간으로 보급 간격을 계산합니다.</p><strong>마라톤 준비 답변 보기 →</strong></button>
+    <button class="jv4-path-card" type="button" data-journal-filter="훈련 루틴" data-journal-path><span>02 / TRAINING</span><h3>2주 전, 얼마나 줄일까?</h3><p>테이퍼링 기간과 훈련량 조절을 정리합니다.</p><strong>훈련 루틴 답변 보기 →</strong></button>
+    <button class="jv4-path-card" type="button" data-journal-filter="계절 러닝" data-journal-path><span>03 / SEASON</span><h3>여름엔 왜 심박이 높을까?</h3><p>기온, 습도, 페이스와 수분을 함께 봅니다.</p><strong>계절 러닝 답변 보기 →</strong></button>
+    <button class="jv4-path-card" type="button" data-journal-filter="러닝 과학" data-journal-path><span>04 / SCIENCE</span><h3>30km부터 왜 무거울까?</h3><p>페이스·보급·날씨·훈련을 차례로 확인합니다.</p><strong>러닝 과학 답변 보기 →</strong></button>
   </div></div></section>
 
-  <section class="jv4-feature"><div class="jv4-shell">${featureBlock}</div></section>
-
-  <section class="jv4-library" id="journalLibrary"><div class="jv4-shell"><div class="jv4-library__bar"><div><p class="jv4-eyebrow">ALL RUNNING NOTES</p><h2>러닝 노트 전체 보기</h2></div><span class="jv4-result" data-journal-count>${entries.length}개의 글</span></div><div class="jv4-card-grid">
+  <section class="jv4-library" id="journalLibrary"><div class="jv4-shell"><div class="jv4-library__bar"><div><p class="jv4-eyebrow">CHOOSE YOUR QUESTION</p><h2>지금 해결하고 싶은<br><em>질문을 골라보세요.</em></h2></div><span class="jv4-result" data-journal-count>${entries.length}개의 질문</span></div><div class="jv4-card-grid">
 ${cardBlocks}
       </div><p class="jv4-empty" data-journal-empty>검색 결과가 없습니다. 다른 키워드나 주제를 선택해 주세요.</p></div></section>
 
@@ -509,7 +591,9 @@ async function main() {
   const { title: h1Title, body } = stripTitle(withTitle);
   const title = h1Title || meta.title || args.slug;
   const { articleHtml, images } = markdownToHtml(body, args.slug);
-  const html = renderPage({ title, deck: plainDeck(body), articleHtml, heroImage: images[0]?.src || '', args, meta });
+  const deck = meta.meta_description || meta.description || plainDeck(body);
+  const faqItems = extractFaqItems(body);
+  const html = renderPage({ title, deck, articleHtml, heroImage: images[0]?.src || '', faqItems, args, meta });
 
   const outputPath = args.writeCafe24
     ? path.join(args.skinDir, 'journal', `${args.slug}.html`)

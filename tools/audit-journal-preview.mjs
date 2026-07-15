@@ -8,10 +8,11 @@ import { chromium } from 'playwright';
 const baseUrl = process.argv[2] || 'http://127.0.0.1:4173';
 const outputDir = path.resolve(process.argv[3] || 'artifacts/onroad-journal-v4-preview');
 const widths = [390, 768, 1024, 1440];
+const journalSlugs = ['journal-01-a', 'journal-01-b', 'journal-02-a', 'journal-02-b', 'journal-04-a', 'journal-04-b'];
 const pages = [
   { name: 'home-journal', path: '/', fullPage: false, selector: '.ov3-journal' },
   { name: 'journal-index', path: '/journal/index.html', fullPage: true },
-  { name: 'journal-post', path: '/journal/journal-04-b.html', fullPage: false },
+  ...journalSlugs.map((slug) => ({ name: slug, path: `/journal/${slug}.html`, fullPage: false, type: 'journal-post' })),
 ];
 
 let previewProcess = null;
@@ -83,8 +84,11 @@ for (const target of pages) {
     const screenshot = path.join(outputDir, `${target.name}-${width}.png`);
     if (target.selector) await page.locator(target.selector).screenshot({ path: screenshot });
     else await page.screenshot({ path: screenshot, fullPage: target.fullPage });
-    if (target.name === 'journal-post' && (width === 390 || width === 1440)) {
+    if (target.name === 'journal-04-b' && (width === 390 || width === 1440)) {
       await page.locator('.jv4-post-bridge').screenshot({ path: path.join(outputDir, `${target.name}-bridge-${width}.png`) });
+      await page.locator('.jv4-reading > :is(p, .jp-quote):first-child').screenshot({ path: path.join(outputDir, `${target.name}-answer-${width}.png`) });
+      const table = page.locator('.jv4-reading .jp-table-wrap').first();
+      if (await table.count()) await table.screenshot({ path: path.join(outputDir, `${target.name}-table-${width}.png`) });
     }
     for (let i = errors.length - 1; i >= 0; i -= 1) {
       if (/ERR_NETWORK_ACCESS_DENIED|404 \(Not Found\)/.test(errors[i])) errors.splice(i, 1);
