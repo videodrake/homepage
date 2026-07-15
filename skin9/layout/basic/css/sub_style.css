@@ -621,15 +621,6 @@ div.ec-base-help ul {margin:0;}
 /* 모바일 우편번호 이미지 아이콘 */
 .mCafe24Post.gMobile .addressList .address > a > img {height:13px;}
 
-/* 대량구매문의 */
-.xans-board-inquiryform .ec-base-table.typeWrite .ec-address > li {margin-top:10px;}
-.xans-board-inquiryform .ec-base-table.typeWrite .ec-address > li:first-child {margin-top:0;}
-.xans-board-inquirymodify .ec-base-table.typeWrite .ec-address > li {margin-top:10px;}
-.xans-board-inquirymodify .ec-base-table.typeWrite .ec-address > li:first-child {margin-top:0;}
-.xans-board-inquiryhead .information h3 {margin:0 0 5px 0;}
-.xans-board-inquiryhead .information .price {font-weight:400;color:#111;}
-.xans-board-inquiryview .ec-base-table th {padding:14px 27px;}
-
 /* 페이징 */
 .ec-base-paginate.typeList {margin:60px 0 0;}
 .ec-base-paginate.typeList > a::after,
@@ -991,19 +982,6 @@ div.ec-base-help ul {margin:0;}
 	.xans-board-commentwrite .outside {flex-wrap:wrap;}
 	.xans-board-commentwrite .outside .secret {width:60%;}
 	.xans-board-commentwrite .input .ec-base-help {width:60%;}
-
-	/* 대량구매문의 */
-	.xans-board-inquiryview .ec-base-table th {padding:14px 14px;}
-	.xans-board-inquiryhead .information h3 {padding:0;}
-	.xans-board-inquirymodify .required {margin:10px 0;}
-	.xans-board-inquirymodify .ec-base-table.typeWrite th,
-	.xans-board-inquirymodify .ec-base-table.typeWrite td {padding-left:0;padding-right:0;}
-	.xans-board-inquirymodify select {margin-left:0 !important;}
-	.xans-board-inquirysearch {margin:10px 0 0px -10px;}
-	.xans-board-inquiryform .ec-base-table.typeWrite th,
-	.xans-board-inquiryform .ec-base-table.typeWrite td {padding-left:0;padding-right:0;}
-	.xans-board-inquiryform select {margin-left:0 !important;}
-	.xans-board-inquiryform .titleArea--middle {background:#fff;padding:27px 0 0;}
 
 	/* 페이지경로 */
 	.path {margin:0;padding:0;}
