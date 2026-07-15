@@ -4,6 +4,16 @@
   function init() {
     if (!document.querySelector('.onroad-page')) return;
 
+    var topBanner = document.getElementById('topBanner');
+    if (topBanner) {
+      var topBannerClose = topBanner.querySelector('.btnClose');
+      if (topBannerClose) {
+        topBannerClose.addEventListener('click', function () {
+          topBanner.classList.add('hidden');
+        });
+      }
+    }
+
     var burger = document.getElementById('navBurger');
     var nav = document.getElementById('siteNav');
     if (burger && nav) {
@@ -69,8 +79,7 @@
       lightSections = [].slice.call(document.querySelectorAll(
         '.manifesto, .principles, .tl, .corp, .manifesto-map, .pf, ' +
         '[data-header-light], .section--cream, .section--paper, .showcase, ' +
-        '.jr-toc, .jr-article, .jr-related, ' +
-        '.rn-filter, .rn-grid, .rn-form'
+        '.jr-toc, .jr-article, .jr-related'
       ));
     }
     collectLightSections();
@@ -234,21 +243,6 @@
         if (rr.top < window.innerHeight) leftover[m].classList.add('is-in');
       }
     }, 1200);
-
-    var filters = document.querySelectorAll('.rn-filter button[data-filter]');
-    var cards = document.querySelectorAll('.rn-card[data-cat]');
-    if (filters.length && cards.length) {
-      filters.forEach(function (b) {
-        b.addEventListener('click', function () {
-          filters.forEach(function (x) { x.classList.remove('is-active'); });
-          b.classList.add('is-active');
-          var f = b.getAttribute('data-filter');
-          cards.forEach(function (c) {
-            c.style.display = (f === 'all' || c.getAttribute('data-cat') === f) ? '' : 'none';
-          });
-        });
-      });
-    }
 
     // Guest purchase fallback: if Cafe24's {$action_nomember_order} rendered
     // empty (admin "비회원 구매 허용" off, or placeholder never replaced by
