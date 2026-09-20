@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Onroad · Endurance Core / 지구력코어 — 제품 상세</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Sans+Mono:wght@300;400;500;700&family=Noto+Serif:wght@300;400;600;800&family=Noto+Serif+KR:wght@300;400;600;900&display=swap');
+
+:root{
+  --c-cream:#f4efe6; --c-cream-2:#ebe4d6; --c-paper:#faf7f1; --c-ink:#141210;
+  --c-ink-2:#1d1a17; --c-char:#2a2622; --c-text:#1f1d1a; --c-meta:#8a847c;
+  --c-line:#d8d0c2; --c-sand:#a89a82; --c-signal:#c8321e; --c-signal-2:#9a2615; --c-dark:#0f0d0b;
+  --font-serif:"Noto Serif","Noto Serif KR","Noto Serif CJK KR",Georgia,serif;
+  --font-sans:"Noto Sans","Noto Sans KR","Noto Sans CJK KR",-apple-system,sans-serif;
+  --font-mono:"Noto Sans Mono","Noto Mono",monospace;
+  --mx:clamp(20px,6vw,96px);
+}
+
+*{margin:0;padding:0;box-sizing:border-box;border-radius:0;}
+
+.onroad-page.pd-archive{
+  background:var(--c-cream);
+  color:var(--c-text);
+  font-family:var(--font-serif);
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+  position:relative;
+  line-height:1.5;
+}
+
+/* paper grain overlay */
+.onroad-page.pd-archive::before{
+  content:"";
+  position:fixed;inset:0;z-index:9999;pointer-events:none;
+  opacity:.55;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
+}
+
+.onroad-page.pd-archive ::selection{background:var(--c-signal);color:var(--c-paper);}
+
+/* ---------- shared type ---------- */
+.onroad-page.pd-archive .mono{
+  font-family:var(--font-mono);
+  text-transform:uppercase;
+  letter-spacing:.18em;
+  font-size:.66rem;
+  font-weight:400;
+  color:var(--c-meta);
+}
+.onroad-page.pd-archive .mono.tab{font-variant-numeric:tabular-nums;}
+.onroad-page.pd-archive .rule{height:1px;background:var(--c-line);border:0;width:100%;}
+.onroad-page.pd-archive .red{color:var(--c-signal);}
+.onroad-page.pd-archive .ital{font-style:italic;}
+
+/* fade-in keyframe that ENDS visible */
+@keyframes riseIn{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:translateY(0);}}
+@keyframes drawLine{from{stroke-dashoffset:var(--len);}to{stroke-dashoffset:0;}}
+@keyframes fadeOnly{from{opacity:0;}to{opacity:1;}}
+.onroad-page.pd-archive .fx{animation:riseIn 1.2s cubic-bezier(.2,.7,.2,1) both;}
+.onroad-page.pd-archive .fx.d1{animation-delay:.15s;}
+.onroad-page.pd-archive .fx.d2{animation-delay:.30s;}
+.onroad-page.pd-archive .fx.d3{animation-delay:.45s;}
+.onroad-page.pd-archive .fx.d4{animation-delay:.60s;}
+.onroad-page.pd-archive .fx.d5{animation-delay:.75s;}
+@media (prefers-reduced-motion:reduce){
+  .onroad-page.pd-archive .fx{animation:none;}
+  .onroad-page.pd-archive .draw{stroke-dashoffset:0 !important;animation:none !important;}
+}
+
+/* ---------- header ---------- */
+.onroad-page.pd-archive .site-head{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  background:color-mix(in srgb, var(--c-cream) 88%, transparent);
+  backdrop-filter:blur(6px);
+  border-bottom:1px solid var(--c-line);
+}
+.onroad-page.pd-archive .site-head .inner{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px var(--mx);gap:24px;
+}
+.onroad-page.pd-archive .brand{
+  font-family:var(--font-serif);font-weight:600;font-size:1.32rem;
+  letter-spacing:-.02em;color:var(--c-ink);text-decoration:none;
+  display:flex;align-items:baseline;gap:9px;line-height:1;
+}
+.onroad-page.pd-archive .brand .est{
+  font-family:var(--font-mono);font-size:.56rem;letter-spacing:.16em;
+  color:var(--c-meta);text-transform:uppercase;
+}
+.onroad-page.pd-archive .nav{display:flex;gap:clamp(14px,2vw,30px);align-items:center;}
+.onroad-page.pd-archive .nav a{
+  font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.14em;
+  font-size:.64rem;color:var(--c-char);text-decoration:none;padding:4px 0;
+  position:relative;transition:color .3s;
+}
+.onroad-page.pd-archive .nav a::after{
+  content:"";position:absolute;left:0;right:100%;bottom:-2px;height:1px;
+  background:var(--c-signal);transition:right .35s ease;
+}
+.onroad-page.pd-archive .nav a:hover{color:var(--c-ink);}
+.onroad-page.pd-archive .nav a:hover::after{right:0;}
+.onroad-page.pd-archive .head-icons{display:flex;gap:16px;align-items:center;}
+.onroad-page.pd-archive .head-icons a{color:var(--c-char);display:flex;line-height:0;transition:color .3s;}
+.onroad-page.pd-archive .head-icons a:hover{color:var(--c-signal);}
+.onroad-page.pd-archive .nav-mobile{display:none;}
+
+/* ---------- layout ---------- */
+.onroad-page.pd-archive section{padding-left:var(--mx);padding-right:var(--mx);position:relative;}
+.onroad-page.pd-archive .folio{
+  font-family:var(--font-serif);font-weight:300;font-size:.9rem;color:var(--c-sand);
+  letter-spacing:.02em;font-variant-numeric:tabular-nums;
+}
+.onroad-page.pd-archive .sec-head{
+  display:flex;justify-content:space-between;align-items:baseline;
+  border-bottom:1px solid var(--c-line);padding-bottom:14px;margin-bottom:clamp(36px,6vh,72px);
+  gap:16px;flex-wrap:wrap;
+}
+.onroad-page.pd-archive .sec-head .t{
+  font-family:var(--font-serif);font-weight:300;font-size:clamp(1.3rem,2.4vw,2rem);
+  letter-spacing:-.02em;color:var(--c-ink);
+}
+.onroad-page.pd-archive .sec-head .t .red{font-style:italic;font-weight:400;}
+.onroad-page.pd-archive .ed-section{padding-top:clamp(56px,8vh,116px);padding-bottom:clamp(56px,8vh,116px);}
+
+/* shared plate aesthetics */
+.onroad-page.pd-archive .pl-stroke{fill:none;stroke:var(--c-char);stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round;}
+.onroad-page.pd-archive .pl-thin{fill:none;stroke:var(--c-sand);stroke-width:.7;}
+.onroad-page.pd-archive .pl-fill{fill:var(--c-cream-2);}
+
+/* ---------- BREADCRUMB ---------- */
+.onroad-page.pd-archive .pd-crumbrow{
+  padding-top:clamp(96px,12vh,128px);padding-bottom:18px;
+  display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;
+  border-bottom:1px solid var(--c-line);
+}
+.onroad-page.pd-archive .pd-crumb{display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.onroad-page.pd-archive .pd-crumb a,.onroad-page.pd-archive .pd-crumb span{
+  font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.16em;font-size:.62rem;
+  color:var(--c-meta);text-decoration:none;
+}
+.onroad-page.pd-archive .pd-crumb a:hover{color:var(--c-signal);}
+.onroad-page.pd-archive .pd-crumb .sep{color:var(--c-sand);}
+.onroad-page.pd-archive .pd-crumb .cur{color:var(--c-char);}
+
+/* ---------- HERO SPREAD ---------- */
+.onroad-page.pd-archive .pd-hero{
+  padding-top:clamp(30px,4vh,56px);padding-bottom:clamp(48px,7vh,96px);
+}
+.onroad-page.pd-archive .pd-hero-grid{
+  display:grid;grid-template-columns:1.02fr .98fr;gap:clamp(28px,4.5vw,72px);
+  align-items:start;
+}
+
+/* PLATE (left) */
+.onroad-page.pd-archive .pd-plate{position:relative;}
+.onroad-page.pd-archive .pd-plate .big-folio{
+  position:absolute;top:-30px;left:6px;
+  font-family:var(--font-serif);font-weight:300;font-size:clamp(3rem,8vw,5.4rem);
+  letter-spacing:-.04em;line-height:.8;z-index:0;
+  -webkit-text-stroke:1px var(--c-line);color:transparent;
+}
+.onroad-page.pd-archive .plate-box{
+  border:1px solid var(--c-line);background:
+    repeating-linear-gradient(0deg,transparent,transparent 23px,rgba(168,154,130,.10) 23px,rgba(168,154,130,.10) 24px),
+    linear-gradient(160deg,var(--c-cream),var(--c-paper));
+  padding:clamp(22px,3.2vw,46px) clamp(20px,3vw,40px) clamp(20px,3vw,40px);position:relative;
+}
+.onroad-page.pd-archive .plate-box .corner-tag{position:absolute;top:14px;right:16px;}
+.onroad-page.pd-archive .plate-box .corner-tag-l{position:absolute;top:14px;left:16px;}
+.onroad-page.pd-archive .plate-box svg{display:block;width:100%;height:auto;max-width:360px;margin:0 auto;}
+.onroad-page.pd-archive .plate-cap-row{display:flex;justify-content:space-between;margin-top:14px;gap:12px;flex-wrap:wrap;}
+
+/* BUY PANEL (right) */
+.onroad-page.pd-archive .pd-buy{position:sticky;top:96px;}
+.onroad-page.pd-archive .pd-buy .eyebrow{display:block;margin-bottom:18px;}
+.onroad-page.pd-archive .pd-buy h1{
+  font-family:var(--font-serif);font-weight:300;font-size:clamp(2.3rem,4.6vw,3.7rem);
+  letter-spacing:-.035em;line-height:1.02;color:var(--c-ink);
+}
+.onroad-page.pd-archive .pd-buy h1 .red{font-style:italic;font-weight:400;}
+.onroad-page.pd-archive .pd-buy h1 .kr{display:block;font-size:.5em;font-weight:400;letter-spacing:-.01em;color:var(--c-char);margin-top:8px;}
+.onroad-page.pd-archive .pd-lede{
+  margin-top:clamp(18px,2.4vw,26px);max-width:42ch;
+  font-family:var(--font-serif);font-weight:300;font-size:clamp(1rem,1.15vw,1.12rem);
+  line-height:1.7;color:var(--c-char);
+}
+
+/* mini spec table */
+.onroad-page.pd-archive .pd-mini{
+  margin-top:clamp(22px,3vw,32px);border-top:1px solid var(--c-line);
+}
+.onroad-page.pd-archive .pd-mini .r{
+  display:flex;justify-content:space-between;align-items:baseline;gap:14px;
+  padding:11px 0;border-bottom:1px solid var(--c-line);
+}
+.onroad-page.pd-archive .pd-mini .r .k{font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.12em;font-size:.6rem;color:var(--c-meta);}
+.onroad-page.pd-archive .pd-mini .r .v{font-family:var(--font-serif);font-weight:400;font-size:1.02rem;color:var(--c-ink-2);font-variant-numeric:tabular-nums;letter-spacing:-.01em;}
+.onroad-page.pd-archive .pd-mini .r .v .red{font-weight:400;}
+
+/* price block */
+.onroad-page.pd-archive .pd-price{
+  margin-top:clamp(22px,3vw,30px);display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;
+}
+.onroad-page.pd-archive .pd-price .num{
+  font-family:var(--font-serif);font-weight:300;font-size:clamp(1.9rem,3vw,2.5rem);
+  color:var(--c-ink);letter-spacing:-.02em;font-variant-numeric:tabular-nums;line-height:1;
+}
+.onroad-page.pd-archive .pd-price .per{font-family:var(--font-serif);font-weight:300;font-size:1rem;color:var(--c-char);}
+
+/* quantity + total */
+.onroad-page.pd-archive .pd-qty-row{
+  margin-top:24px;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;
+  padding:16px 0;border-top:1px solid var(--c-line);border-bottom:1px solid var(--c-line);
+}
+.onroad-page.pd-archive .pd-qty-row .lbl{font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.14em;font-size:.6rem;color:var(--c-meta);}
+.onroad-page.pd-archive .pd-stepper{display:inline-flex;align-items:stretch;border:1px solid var(--c-ink);}
+.onroad-page.pd-archive .pd-stepper button{
+  font-family:var(--font-mono);font-size:1rem;background:transparent;color:var(--c-ink);
+  border:0;width:42px;cursor:pointer;line-height:1;transition:background .3s,color .3s;
+}
+.onroad-page.pd-archive .pd-stepper button:hover{background:var(--c-ink);color:var(--c-paper);}
+.onroad-page.pd-archive .pd-stepper .qnum{
+  min-width:54px;display:flex;align-items:center;justify-content:center;
+  font-family:var(--font-mono);font-size:.92rem;color:var(--c-ink);font-variant-numeric:tabular-nums;
+  border-left:1px solid var(--c-line);border-right:1px solid var(--c-line);padding:11px 0;
+}
+.onroad-page.pd-archive .pd-total{
+  margin-top:6px;display:flex;justify-content:space-between;align-items:baseline;gap:12px;
+  padding:16px 0;border-bottom:1px solid var(--c-line);
+}
+.onroad-page.pd-archive .pd-total .lbl{font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.14em;font-size:.62rem;color:var(--c-char);}
+.onroad-page.pd-archive .pd-total .amt{font-family:var(--font-serif);font-weight:400;font-size:1.5rem;color:var(--c-ink);font-variant-numeric:tabular-nums;letter-spacing:-.015em;}
+
+/* buttons */
+.onroad-page.pd-archive .btn-buy{
+  font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.16em;font-size:.7rem;
+  background:var(--c-ink);color:var(--c-paper);padding:16px 30px;text-decoration:none;
+  display:inline-flex;align-items:center;justify-content:center;gap:14px;position:relative;overflow:hidden;
+  transition:background .35s;cursor:pointer;border:1px solid var(--c-ink);
+}
+.onroad-page.pd-archive .btn-buy .arr{transition:transform .35s;}
+.onroad-page.pd-archive .btn-buy:hover{background:var(--c-signal);border-color:var(--c-signal);}
+.onroad-page.pd-archive .btn-buy:hover .arr{transform:translateX(5px);}
+.onroad-page.pd-archive .btn-ghost{
+  font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.16em;font-size:.7rem;
+  background:transparent;color:var(--c-ink);padding:16px 30px;text-decoration:none;
+  display:inline-flex;align-items:center;justify-content:center;gap:12px;
+  border:1px solid var(--c-ink);transition:color .35s,border-color .35s;cursor:pointer;
+}
+.onroad-page.pd-archive .btn-ghost:hover{color:var(--c-signal);border-color:var(--c-signal);}
+.onroad-page.pd-archive .btn-wish{
+  background:transparent;border:1px solid var(--c-line);color:var(--c-char);
+  width:52px;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;
+  transition:color .35s,border-color .35s;
+}
+.onroad-page.pd-archive .btn-wish:hover{color:var(--c-signal);border-color:var(--c-signal);}
+.onroad-page.pd-archive .pd-actions{margin-top:24px;display:grid;grid-template-columns:1fr 1fr 52px;gap:12px;}
+.onroad-page.pd-archive .pd-subnote{
+  margin-top:16px;display:flex;align-items:center;gap:10px;
+  font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.1em;font-size:.6rem;color:var(--c-meta);
+}
+.onroad-page.pd-archive .pd-subnote .dot{width:5px;height:5px;background:var(--c-signal);display:inline-block;}
+.onroad-page.pd-archive .pd-disc{
+  margin-top:18px;font-family:var(--font-mono);font-size:.58rem;letter-spacing:.04em;color:var(--c-meta);line-height:1.7;
+}
+.onroad-page.pd-archive .pd-disc sup{color:var(--c-signal);margin-right:5px;}
+
+/* ---------- № 02 SCIENCE ---------- */
+.onroad-page.pd-archive .pd-sci{background:var(--c-paper);border-top:1px solid var(--c-line);border-bottom:1px solid var(--c-line);}
+.onroad-page.pd-archive .pd-sci-grid{display:grid;grid-template-columns:.4fr 1.15fr .55fr;gap:clamp(24px,4vw,60px);align-items:start;}
+.onroad-page.pd-archive .marginalia{font-family:var(--font-mono);font-size:.66rem;line-height:1.9;color:var(--c-meta);letter-spacing:.04em;}
+.onroad-page.pd-archive .marginalia b{color:var(--c-char);font-weight:500;display:block;letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px;font-size:.6rem;}
+.onroad-page.pd-archive .feature-para{
+  font-family:var(--font-serif);font-weight:300;font-size:clamp(1.18rem,1.9vw,1.7rem);
+  line-height:1.6;letter-spacing:-.012em;color:var(--c-ink-2);
+}
+.onroad-page.pd-archive .feature-para .dropcap{
+  float:left;font-family:var(--font-serif);font-weight:600;
+  font-size:clamp(3.4rem,6.6vw,5.2rem);line-height:.78;margin:6px 14px 0 0;
+  color:var(--c-ink);letter-spacing:-.02em;
+}
+.onroad-page.pd-archive .feature-para .red{font-style:italic;font-weight:400;}
+.onroad-page.pd-archive .feature-para + .feature-para{margin-top:22px;font-size:clamp(1.02rem,1.4vw,1.2rem);line-height:1.75;color:var(--c-char);}
+.onroad-page.pd-archive .pd-sci-diagram{border:1px solid var(--c-line);background:linear-gradient(160deg,var(--c-cream),var(--c-paper));padding:20px 18px;position:relative;}
+.onroad-page.pd-archive .pd-sci-diagram svg{display:block;width:100%;height:auto;}
+.onroad-page.pd-archive .pd-sci-diagram .cap{margin-top:12px;}
+.onroad-page.pd-archive .pd-datalist{margin-top:18px;border-top:1px solid var(--c-line);}
+.onroad-page.pd-archive .pd-datalist .r{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px solid var(--c-line);}
+.onroad-page.pd-archive .pd-datalist .r .k{font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.1em;font-size:.58rem;color:var(--c-meta);}
+.onroad-page.pd-archive .pd-datalist .r .v{font-family:var(--font-serif);font-size:.98rem;color:var(--c-ink-2);font-variant-numeric:tabular-nums;}
+
+/* ---------- № 03 PROTOCOL TIMELINE ---------- */
+.onroad-page.pd-archive .pd-proto-lead{
+  font-family:var(--font-serif);font-weight:300;font-size:clamp(1.2rem,2vw,1.7rem);
+  line-height:1.55;letter-spacing:-.015em;color:var(--c-ink-2);max-width:30ch;margin-bottom:clamp(30px,4vh,52px);
+}
+.onroad-page.pd-archive .pd-proto-lead .red{font-style:italic;font-weight:400;}
+.onroad-page.pd-archive .pd-timeline{border:1px solid var(--c-line);background:linear-gradient(160deg,var(--c-paper),var(--c-cream));padding:clamp(22px,3vw,40px);position:relative;}
+.onroad-page.pd-archive .pd-timeline .corner-tag{position:absolute;top:14px;right:16px;}
+.onroad-page.pd-archive .pd-timeline svg{display:block;width:100%;height:auto;margin-top:14px;}
+.onroad-page.pd-archive .pd-proto-notes{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,48px);margin-top:clamp(30px,4vh,52px);}
+.onroad-page.pd-archive .pd-note-col h4{font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.14em;font-size:.62rem;color:var(--c-char);margin-bottom:14px;display:flex;align-items:center;gap:10px;}
+.onroad-page.pd-archive .pd-note-col h4 .mk{font-family:var(--font-serif);font-size:1rem;}
+.onroad-page.pd-archive .pd-note-col h4 .mk.do{color:var(--c-ink);}
+.onroad-page.pd-archive .pd-note-col h4 .mk.dont{color:var(--c-signal);}
+.onroad-page.pd-archive .pd-note-col ul{list-style:none;border-top:1px solid var(--c-line);}
+.onroad-page.pd-archive .pd-note-col li{font-family:var(--font-serif);font-weight:300;font-size:1rem;line-height:1.6;color:var(--c-char);padding:11px 0;border-bottom:1px solid var(--c-line);}
+
+/* ---------- № 04 REVIEWS ---------- */
+.onroad-page.pd-archive .pd-reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--c-line);}
+.onroad-page.pd-archive .pd-review{
+  padding:clamp(28px,3.4vw,48px) clamp(20px,2.2vw,38px);border-bottom:1px solid var(--c-line);position:relative;
+}
+.onroad-page.pd-archive .pd-review:not(:nth-child(3n)){border-right:1px solid var(--c-line);}
+.onroad-page.pd-archive .pd-review .stars{color:var(--c-signal);font-family:var(--font-serif);font-size:.82rem;letter-spacing:.3em;margin-bottom:18px;display:block;}
+.onroad-page.pd-archive .pd-review .quote{font-family:var(--font-serif);font-weight:300;font-size:clamp(1.05rem,1.5vw,1.28rem);line-height:1.6;letter-spacing:-.01em;color:var(--c-ink-2);}
+.onroad-page.pd-archive .pd-review .quote .red{font-style:italic;font-weight:400;}
+.onroad-page.pd-archive .pd-review .attrib{margin-top:22px;padding-top:14px;border-top:1px solid var(--c-line);display:flex;justify-content:space-between;align-items:baseline;gap:10px;}
+.onroad-page.pd-archive .pd-review .attrib .who{font-family:var(--font-serif);font-size:.95rem;color:var(--c-char);}
+.onroad-page.pd-archive .pd-review .attrib .data{font-family:var(--font-mono);font-size:.58rem;letter-spacing:.08em;color:var(--c-meta);text-align:right;font-variant-numeric:tabular-nums;line-height:1.7;}
+
+/* ---------- № 05 FAQ ---------- */
+.onroad-page.pd-archive .pd-faq{border-top:1px solid var(--c-line);}
+.onroad-page.pd-archive .pd-faq .q{
+  display:grid;grid-template-columns:auto 1fr;gap:clamp(18px,3vw,52px);
+  padding:clamp(22px,3vw,38px) 0;border-bottom:1px solid var(--c-line);align-items:start;
+}
+.onroad-page.pd-archive .pd-faq .q .qidx{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.14em;color:var(--c-sand);padding-top:6px;font-variant-numeric:tabular-nums;}
+.onroad-page.pd-archive .pd-faq .q .qbody h3{font-family:var(--font-serif);font-weight:400;font-size:clamp(1.15rem,1.8vw,1.5rem);letter-spacing:-.015em;color:var(--c-ink);margin-bottom:12px;line-height:1.3;}
+.onroad-page.pd-archive .pd-faq .q .qbody h3 .red{font-style:italic;font-weight:400;}
+.onroad-page.pd-archive .pd-faq .q .qbody p{font-family:var(--font-serif);font-weight:300;font-size:clamp(.98rem,1.2vw,1.1rem);line-height:1.72;color:var(--c-char);max-width:64ch;}
+
+/* ---------- № 06 COMMERCE INFO ---------- */
+.onroad-page.pd-archive .pd-commerce{background:var(--c-paper);border-top:1px solid var(--c-line);border-bottom:1px solid var(--c-line);}
+.onroad-page.pd-archive .pd-info{border-top:1px solid var(--c-line);}
+.onroad-page.pd-archive .pd-info .r{
+  display:grid;grid-template-columns:.32fr 1fr;gap:clamp(16px,3vw,48px);align-items:baseline;
+  padding:16px 0;border-bottom:1px solid var(--c-line);
+}
+.onroad-page.pd-archive .pd-info .r .k{font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.13em;font-size:.6rem;color:var(--c-meta);}
+.onroad-page.pd-archive .pd-info .r .v{font-family:var(--font-serif);font-weight:300;font-size:1.02rem;line-height:1.6;color:var(--c-ink-2);}
+.onroad-page.pd-archive .pd-info .r .v b{font-weight:400;color:var(--c-ink);font-variant-numeric:tabular-nums;}
+
+/* ---------- FINAL CTA ---------- */
+.onroad-page.pd-archive .pd-cta{
+  padding-top:clamp(64px,10vh,140px);padding-bottom:clamp(64px,10vh,140px);
+  display:flex;flex-direction:column;align-items:center;text-align:center;gap:clamp(28px,4vh,48px);
+  border-top:1px solid var(--c-line);
+}
+.onroad-page.pd-archive .pd-cta .big{
+  font-family:var(--font-serif);font-weight:300;font-size:clamp(2.2rem,6vw,4.8rem);
+  letter-spacing:-.035em;line-height:1.04;color:var(--c-ink);max-width:18ch;
+}
+.onroad-page.pd-archive .pd-cta .big .red{font-style:italic;font-weight:400;}
+.onroad-page.pd-archive .pd-cta-actions{display:flex;align-items:center;gap:clamp(18px,3vw,30px);flex-wrap:wrap;justify-content:center;}
+.onroad-page.pd-archive .pd-cta-actions .price{font-family:var(--font-serif);font-weight:300;font-size:1.1rem;color:var(--c-char);}
+.onroad-page.pd-archive .pd-cta-actions .price b{font-weight:400;color:var(--c-ink);font-variant-numeric:tabular-nums;}
+
+/* ---------- footer ---------- */
+.onroad-page.pd-archive .site-foot{background:var(--c-dark);color:var(--c-cream);padding:clamp(56px,8vh,100px) var(--mx) 40px;}
+.onroad-page.pd-archive .foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:clamp(24px,4vw,60px);padding-bottom:48px;border-bottom:1px solid rgba(216,208,194,.18);}
+.onroad-page.pd-archive .foot-brand{font-family:var(--font-serif);font-weight:300;font-size:clamp(2rem,4vw,3.4rem);letter-spacing:-.03em;line-height:1.05;color:var(--c-paper);}
+.onroad-page.pd-archive .foot-brand .red{font-style:italic;}
+.onroad-page.pd-archive .foot-brand .sub{display:block;font-family:var(--font-mono);font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--c-sand);margin-top:16px;}
+.onroad-page.pd-archive .foot-col h4{font-family:var(--font-mono);font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--c-sand);margin-bottom:16px;}
+.onroad-page.pd-archive .foot-col a{display:block;font-family:var(--font-serif);font-weight:300;font-size:.98rem;color:var(--c-cream);text-decoration:none;padding:5px 0;transition:color .3s;}
+.onroad-page.pd-archive .foot-col a:hover{color:var(--c-signal);}
+.onroad-page.pd-archive .foot-bot{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;flex-wrap:wrap;padding-top:28px;}
+.onroad-page.pd-archive .foot-bot .legal{font-family:var(--font-mono);font-size:.58rem;letter-spacing:.06em;line-height:1.9;color:var(--c-meta);max-width:62ch;}
+.onroad-page.pd-archive .foot-bot .copy{font-family:var(--font-mono);font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--c-sand);white-space:nowrap;}
+
+/* ---------- responsive ---------- */
+@media (max-width:900px){
+  .onroad-page.pd-archive .nav{display:none;}
+  .onroad-page.pd-archive .nav-mobile{display:flex;}
+  .onroad-page.pd-archive .nav-mobile .mono{color:var(--c-char);}
+  .onroad-page.pd-archive .pd-hero-grid{grid-template-columns:1fr;gap:40px;}
+  .onroad-page.pd-archive .pd-plate{max-width:460px;margin:0 auto;width:100%;}
+  .onroad-page.pd-archive .pd-buy{position:static;top:auto;}
+  .onroad-page.pd-archive .pd-sci-grid{grid-template-columns:1fr;gap:30px;}
+  .onroad-page.pd-archive .marginalia{order:3;}
+  .onroad-page.pd-archive .pd-reviews{grid-template-columns:1fr;}
+  .onroad-page.pd-archive .pd-review:not(:nth-child(3n)){border-right:0;}
+  .onroad-page.pd-archive .foot-top{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:520px){
+  .onroad-page.pd-archive .head-icons{gap:12px;}
+  .onroad-page.pd-archive .pd-actions{grid-template-columns:1fr 1fr;}
+  .onroad-page.pd-archive .pd-actions .btn-wish{grid-column:1 / -1;width:100%;height:48px;}
+  .onroad-page.pd-archive .pd-proto-notes{grid-template-columns:1fr;}
+  .onroad-page.pd-archive .pd-faq .q{grid-template-columns:1fr;gap:8px;}
+  .onroad-page.pd-archive .pd-faq .q .qidx{padding-top:0;}
+  .onroad-page.pd-archive .pd-info .r{grid-template-columns:1fr;gap:6px;}
+  .onroad-page.pd-archive .foot-top{grid-template-columns:1fr;gap:30px;}
+}
+</style>
+</head>
+<body class="onroad-page ad-archive pd-archive">
+
+<!-- ============ HEADER ============ -->
+<header class="site-head">
+  <div class="inner">
+    <a href="index.html" class="brand">Onroad <span class="est">EST · 2026</span></a>
+    <nav class="nav" aria-label="주요 메뉴">
+      <a href="#hero">Endurance Core</a>
+      <a href="#science">성분 · 근거</a>
+      <a href="#reviews">러너 후기</a>
+      <a href="#info">배송 · 환불</a>
+    </nav>
+    <div class="head-icons">
+      <span class="nav-mobile"><span class="mono">Menu</span></span>
+      <a href="#" aria-label="검색">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="8" cy="8" r="5.4" stroke="currentColor" stroke-width="1.1"/><line x1="12.2" y1="12.2" x2="16" y2="16" stroke="currentColor" stroke-width="1.1"/></svg>
+      </a>
+      <a href="#" aria-label="장바구니">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 4.5h2l1.4 8.2a1 1 0 0 0 1 .8h6.1a1 1 0 0 0 1-.78L16 6.4H5" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/><circle cx="7" cy="16" r="0.9" fill="currentColor"/><circle cx="14" cy="16" r="0.9" fill="currentColor"/></svg>
+      </a>
+      <a href="#" aria-label="로그인">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="6" r="3.1" stroke="currentColor" stroke-width="1.1"/><path d="M3.5 15.5c0-3 2.5-4.6 5.5-4.6s5.5 1.6 5.5 4.6" stroke="currentColor" stroke-width="1.1"/></svg>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ BREADCRUMB ============ -->
+<section class="pd-crumbrow" id="hero">
+  <nav class="pd-crumb fx" aria-label="위치">
+    <a href="index.html">홈</a>
+    <span class="sep">/</span>
+    <a href="welcome-runner.html">지구력</a>
+    <span class="sep">/</span>
+    <span class="cur">지구력코어</span>
+  </nav>
+  <span class="mono tab fx d1">Onroad · 지구력코어 · 하루 한 정</span>
+</section>
+
+<!-- ============ № 01 HERO SPREAD ============ -->
+<section class="pd-hero">
+  <div class="pd-hero-grid">
+
+    <!-- LEFT: PRODUCT PLATE -->
+    <div class="pd-plate fx">
+      <span class="big-folio" aria-hidden="true">01</span>
+      <div class="plate-box">
+        <span class="corner-tag-l mono">옥타코사놀 40MG</span>
+        <span class="corner-tag mono">60정 · 60일</span>
+        <svg viewBox="0 0 260 400" role="img" aria-label="Endurance Core 보틀 도면 일러스트레이션">
+          <!-- guide grid ticks -->
+          <g class="pl-thin" stroke="var(--c-sand)" stroke-width="0.5">
+            <line x1="22" y1="40" x2="22" y2="372"/>
+            <line x1="18" y1="40" x2="26" y2="40"/>
+            <line x1="18" y1="124" x2="26" y2="124"/>
+            <line x1="18" y1="208" x2="26" y2="208"/>
+            <line x1="18" y1="292" x2="26" y2="292"/>
+            <line x1="18" y1="372" x2="26" y2="372"/>
+          </g>
+          <!-- cap -->
+          <rect class="pl-fill" x="96" y="26" width="68" height="36"/>
+          <rect class="pl-stroke" x="96" y="26" width="68" height="36"/>
+          <line class="pl-thin" x1="103" y1="26" x2="103" y2="62"/>
+          <line class="pl-thin" x1="111" y1="26" x2="111" y2="62"/>
+          <line class="pl-thin" x1="119" y1="26" x2="119" y2="62"/>
+          <line class="pl-thin" x1="127" y1="26" x2="127" y2="62"/>
+          <line class="pl-thin" x1="135" y1="26" x2="135" y2="62"/>
+          <line class="pl-thin" x1="143" y1="26" x2="143" y2="62"/>
+          <line class="pl-thin" x1="151" y1="26" x2="151" y2="62"/>
+          <line class="pl-thin" x1="159" y1="26" x2="159" y2="62"/>
+          <!-- neck -->
+          <path class="pl-stroke" d="M103 62 L103 78 Q103 86 112 88 L148 88 Q157 86 157 78 L157 62"/>
+          <!-- body -->
+          <path class="pl-stroke" d="M88 92 Q76 94 76 112 L76 350 Q76 366 92 366 L168 366 Q184 366 184 350 L184 112 Q184 94 172 92 L88 92Z"/>
+          <!-- label window -->
+          <rect class="pl-thin" x="92" y="162" width="76" height="138" fill="var(--c-paper)"/>
+          <line class="pl-thin" x1="92" y1="188" x2="168" y2="188"/>
+          <text x="130" y="181" text-anchor="middle" font-family="var(--font-mono)" font-size="8" fill="var(--c-char)" letter-spacing="2.5">ONROAD</text>
+          <text x="130" y="216" text-anchor="middle" font-family="var(--font-serif)" font-size="15" fill="var(--c-ink)">Endurance</text>
+          <text x="130" y="234" text-anchor="middle" font-family="var(--font-serif)" font-size="15" fill="var(--c-ink)">Core</text>
+          <line class="pl-thin" x1="104" y1="252" x2="156" y2="252"/>
+          <text x="130" y="272" text-anchor="middle" font-family="var(--font-mono)" font-size="7" fill="var(--c-meta)" letter-spacing="1.5">OCTACOSANOL 40MG</text>
+          <text x="130" y="286" text-anchor="middle" font-family="var(--font-mono)" font-size="7" fill="var(--c-meta)" letter-spacing="1.5">60 TABLETS · 60 DAYS</text>
+          <!-- red mark -->
+          <line x1="92" y1="162" x2="92" y2="300" stroke="var(--c-signal)" stroke-width="1.6"/>
+          <circle cx="92" cy="162" r="2.4" fill="var(--c-signal)"/>
+          <!-- dimension line right -->
+          <line class="pl-thin" x1="206" y1="92" x2="206" y2="366"/>
+          <line class="pl-thin" x1="202" y1="92" x2="210" y2="92"/>
+          <line class="pl-thin" x1="202" y1="366" x2="210" y2="366"/>
+          <text x="220" y="232" font-family="var(--font-mono)" font-size="8" fill="var(--c-meta)" transform="rotate(90,220,232)" letter-spacing="1.5">H · 118MM</text>
+        </svg>
+      </div>
+      <div class="plate-cap-row">
+        <span class="mono">무카페인 · 건강기능식품 · GMP</span>
+        <span class="mono tab">1일 1정</span>
+      </div>
+    </div>
+
+    <!-- RIGHT: BUY PANEL -->
+    <div class="pd-buy fx d1">
+      <span class="mono eyebrow">하루 한 정 · 무카페인 · 60일 환불보장</span>
+      <h1>Endurance <span class="red ital">Core</span><span class="kr">지구력코어</span></h1>
+      <p class="pd-lede">
+        장거리 러너의 지구력을 위해. 옥타코사놀 40mg을 하루 단 한 정,
+        카페인 없이 60일 한 시즌을 채웁니다. 화려한 각성 대신, 매일의 한결같음으로 지구력 증진을 돕습니다.
+      </p>
+
+      <!-- mini spec -->
+      <div class="pd-mini">
+        <div class="r"><span class="k">Octacosanol</span><span class="v"><span class="red">40</span>mg / 정</span></div>
+        <div class="r"><span class="k">Vitamin B</span><span class="v">비타민 B군</span></div>
+        <div class="r"><span class="k">Directions</span><span class="v">1정 / 일</span></div>
+        <div class="r"><span class="k">Contents</span><span class="v">60정 / 60일</span></div>
+      </div>
+
+      <!-- price -->
+      <div class="pd-price">
+        <span class="num">₩48,000</span>
+        <span class="per">/ 60일분 · 하루 800원</span>
+      </div>
+
+      <!-- quantity -->
+      <div class="pd-qty-row">
+        <span class="lbl">수량 / Quantity</span>
+        <div class="pd-stepper">
+          <button type="button" aria-label="수량 감소" data-step="-1">−</button>
+          <span class="qnum" id="pdQty">1</span>
+          <button type="button" aria-label="수량 증가" data-step="1">+</button>
+        </div>
+      </div>
+
+      <!-- total -->
+      <div class="pd-total">
+        <span class="lbl">총 결제 예정 금액</span>
+        <span class="amt" id="pdTotal">₩48,000</span>
+      </div>
+
+      <!-- actions -->
+      <div class="pd-actions">
+        <a href="#" class="btn-buy">60일 시작하기 <span class="arr">→</span></a>
+        <a href="#" class="btn-ghost">장바구니 담기</a>
+        <button type="button" class="btn-wish" aria-label="찜하기">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 16.5C10 16.5 3 12.4 3 7.6 3 5.3 4.8 3.8 6.8 3.8c1.4 0 2.6.8 3.2 2 .6-1.2 1.8-2 3.2-2 2 0 3.8 1.5 3.8 3.8 0 4.8-7 8.9-7 8.9Z" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+
+      <div class="pd-subnote"><span class="dot"></span>무료배송 · 60일 환불보장 · 정기배송 5% 할인 · 언제든 해지</div>
+
+      <p class="pd-disc">
+        <sup>†</sup>지구력 증진에 도움을 줄 수 있음 — 건강기능식품 인정 기능성.
+        본 제품은 질병의 예방 및 치료를 위한 의약품이 아닙니다.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ № 02 SCIENCE ============ -->
+<section class="pd-sci ed-section" id="science">
+  <div class="sec-head">
+    <span class="t">성분과 <span class="red">근거</span></span>
+    <span class="folio mono tab">№ 02 — INGREDIENT / SCIENCE</span>
+  </div>
+  <div class="pd-sci-grid">
+    <aside class="marginalia fx">
+      <b>성분 노트</b>
+      옥타코사놀은 사탕수수 왁스와<br>밀 배아에서 얻는<br>천연 장쇄 알코올 성분입니다.<br><br>
+      식약처가 지구력 증진 기능성을<br>인정한 건강기능식품<br>원료입니다.<br><br>
+      <span class="red">—</span> 하루 한 정, 같은 시간에.
+    </aside>
+
+    <div class="pd-sci-text fx d1">
+      <p class="feature-para">
+        <span class="dropcap">옥</span>타코사놀은 사탕수수와 밀 배아에서 유래한 천연 성분으로,
+        식약처가 <span class="red">지구력 증진</span> 기능성을 인정한 건강기능식품 원료입니다.
+        Onroad는 한 정에 40mg을 꽉 채워 담았습니다. 화려한 약속 대신, 매일의 한결같음으로.
+      </p>
+      <p class="feature-para">
+        여기에 에너지 대사를 돕는 비타민 B군을 더했습니다. B1·B2·B6는 탄수화물과 지방을
+        에너지로 바꾸는 매일의 대사 과정을 보조합니다. 하루 한 정이면 충분하도록,
+        60일 한 시즌을 끝까지 채우는 단순한 구성입니다.
+      </p>
+    </div>
+
+    <div class="pd-sci-side fx d2">
+      <div class="pd-sci-diagram">
+        <svg viewBox="0 0 220 200" role="img" aria-label="옥타코사놀 분자 모식도">
+          <!-- long-chain backbone -->
+          <polyline class="pl-stroke" points="20,150 38,134 56,150 74,134 92,150 110,134 128,150 146,134 164,150 182,134 200,150"/>
+          <circle cx="20" cy="150" r="3.4" class="pl-fill" stroke="var(--c-char)" stroke-width="1"/>
+          <circle cx="200" cy="134" r="3.4" fill="var(--c-signal)"/>
+          <!-- OH group highlight -->
+          <line x1="200" y1="134" x2="200" y2="116" stroke="var(--c-signal)" stroke-width="1.1"/>
+          <text x="200" y="110" text-anchor="middle" font-family="var(--font-mono)" font-size="9" fill="var(--c-signal)" letter-spacing="1">OH</text>
+          <text x="20" y="172" font-family="var(--font-mono)" font-size="8" fill="var(--c-meta)" letter-spacing="1">C28</text>
+          <text x="178" y="172" font-family="var(--font-mono)" font-size="8" fill="var(--c-meta)" letter-spacing="1">CH₂OH</text>
+          <line class="pl-thin" x1="20" y1="186" x2="200" y2="186"/>
+          <text x="110" y="50" text-anchor="middle" font-family="var(--font-serif)" font-size="14" fill="var(--c-ink)">Octacosanol</text>
+          <text x="110" y="68" text-anchor="middle" font-family="var(--font-mono)" font-size="8" fill="var(--c-meta)" letter-spacing="1.5">C₂₈H₅₈O · 40MG/정</text>
+        </svg>
+        <span class="mono cap">옥타코사놀 · 천연 장쇄 알코올</span>
+      </div>
+      <div class="pd-datalist">
+        <div class="r"><span class="k">주기능성</span><span class="v">옥타코사놀 40mg</span></div>
+        <div class="r"><span class="k">부원료</span><span class="v">비타민 B1·B2·B6</span></div>
+        <div class="r"><span class="k">유래</span><span class="v">사탕수수 · 밀 배아</span></div>
+        <div class="r"><span class="k">1일 섭취량</span><span class="v">1정</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ № 03 PROTOCOL ============ -->
+<section class="ed-section" id="protocol">
+  <div class="sec-head">
+    <span class="t">섭취 가이드 / 60일 <span class="red">프로토콜</span></span>
+    <span class="folio mono tab">№ 03 — INTAKE GUIDE</span>
+  </div>
+
+  <p class="pd-proto-lead fx">
+    하루 한 정, <span class="red">같은 시간에.</span> 60일이 한 시즌입니다.
+    복잡한 규칙은 없습니다. 빠짐 없는 반복이 가장 정직한 훈련법입니다.
+  </p>
+
+  <div class="pd-timeline fx d1">
+    <span class="corner-tag mono">SCHEDULE · 1 SEASON</span>
+    <svg viewBox="0 0 1000 130" role="img" aria-label="60일 섭취 일정 타임라인">
+      <!-- baseline -->
+      <line x1="30" y1="78" x2="970" y2="78" stroke="var(--c-line)" stroke-width="1"/>
+      <!-- day ticks: 60 marks -->
+      <g stroke="var(--c-sand)" stroke-width="0.7">
+        <!-- generated minor ticks every ~15.6px across 60 days -->
+        <line x1="30" y1="74" x2="30" y2="82"/><line x1="46" y1="75" x2="46" y2="81"/><line x1="62" y1="75" x2="62" y2="81"/><line x1="77" y1="75" x2="77" y2="81"/><line x1="93" y1="75" x2="93" y2="81"/>
+        <line x1="108" y1="75" x2="108" y2="81"/><line x1="124" y1="75" x2="124" y2="81"/><line x1="140" y1="75" x2="140" y2="81"/><line x1="155" y1="75" x2="155" y2="81"/><line x1="171" y1="75" x2="171" y2="81"/>
+        <line x1="187" y1="75" x2="187" y2="81"/><line x1="202" y1="75" x2="202" y2="81"/><line x1="218" y1="75" x2="218" y2="81"/><line x1="234" y1="75" x2="234" y2="81"/><line x1="249" y1="75" x2="249" y2="81"/>
+        <line x1="265" y1="75" x2="265" y2="81"/><line x1="281" y1="75" x2="281" y2="81"/><line x1="296" y1="75" x2="296" y2="81"/><line x1="312" y1="75" x2="312" y2="81"/><line x1="328" y1="75" x2="328" y2="81"/>
+        <line x1="343" y1="75" x2="343" y2="81"/><line x1="359" y1="75" x2="359" y2="81"/><line x1="375" y1="75" x2="375" y2="81"/><line x1="390" y1="75" x2="390" y2="81"/><line x1="406" y1="75" x2="406" y2="81"/>
+        <line x1="422" y1="75" x2="422" y2="81"/><line x1="437" y1="75" x2="437" y2="81"/><line x1="453" y1="75" x2="453" y2="81"/><line x1="469" y1="75" x2="469" y2="81"/><line x1="500" y1="74" x2="500" y2="82"/>
+        <line x1="516" y1="75" x2="516" y2="81"/><line x1="531" y1="75" x2="531" y2="81"/><line x1="547" y1="75" x2="547" y2="81"/><line x1="563" y1="75" x2="563" y2="81"/><line x1="578" y1="75" x2="578" y2="81"/>
+        <line x1="594" y1="75" x2="594" y2="81"/><line x1="610" y1="75" x2="610" y2="81"/><line x1="625" y1="75" x2="625" y2="81"/><line x1="641" y1="75" x2="641" y2="81"/><line x1="657" y1="75" x2="657" y2="81"/>
+        <line x1="672" y1="75" x2="672" y2="81"/><line x1="688" y1="75" x2="688" y2="81"/><line x1="704" y1="75" x2="704" y2="81"/><line x1="719" y1="75" x2="719" y2="81"/><line x1="735" y1="75" x2="735" y2="81"/>
+        <line x1="751" y1="75" x2="751" y2="81"/><line x1="766" y1="75" x2="766" y2="81"/><line x1="782" y1="75" x2="782" y2="81"/><line x1="798" y1="75" x2="798" y2="81"/><line x1="813" y1="75" x2="813" y2="81"/>
+        <line x1="829" y1="75" x2="829" y2="81"/><line x1="845" y1="75" x2="845" y2="81"/><line x1="860" y1="75" x2="860" y2="81"/><line x1="876" y1="75" x2="876" y2="81"/><line x1="892" y1="75" x2="892" y2="81"/>
+        <line x1="907" y1="75" x2="907" y2="81"/><line x1="923" y1="75" x2="923" y2="81"/><line x1="939" y1="75" x2="939" y2="81"/><line x1="954" y1="75" x2="954" y2="81"/>
+      </g>
+      <!-- milestone markers DAY 01 / 15 / 30 / 45 / 60 -->
+      <circle cx="30" cy="78" r="5" fill="var(--c-signal)"/>
+      <circle cx="265" cy="78" r="4" fill="none" stroke="var(--c-char)" stroke-width="1.1"/>
+      <circle cx="500" cy="78" r="4" fill="none" stroke="var(--c-char)" stroke-width="1.1"/>
+      <circle cx="735" cy="78" r="4" fill="none" stroke="var(--c-char)" stroke-width="1.1"/>
+      <circle cx="970" cy="78" r="5" fill="none" stroke="var(--c-signal)" stroke-width="1.4"/>
+      <!-- labels -->
+      <g font-family="var(--font-mono)" font-size="11" fill="var(--c-char)" letter-spacing="1" text-anchor="middle">
+        <text x="30" y="42">DAY 01</text>
+        <text x="265" y="42">DAY 15</text>
+        <text x="500" y="42">DAY 30</text>
+        <text x="735" y="42">DAY 45</text>
+        <text x="970" y="42">DAY 60</text>
+      </g>
+      <g font-family="var(--font-mono)" font-size="9" fill="var(--c-meta)" letter-spacing="1" text-anchor="middle">
+        <text x="30" y="106">시작</text>
+        <text x="500" y="106">절반 · 자동 재배송 안내</text>
+        <text x="970" y="106">한 시즌 완료</text>
+      </g>
+    </svg>
+  </div>
+
+  <div class="pd-proto-notes">
+    <div class="pd-note-col fx d2">
+      <h4><span class="mk do">●</span> 권장 / DO</h4>
+      <ul>
+        <li>아침 식후, 매일 같은 시간에 한 정.</li>
+        <li>충분한 물과 함께 통째로 삼킵니다.</li>
+        <li>러닝 루틴과 묶어 습관으로 만듭니다.</li>
+        <li>60일을 한 시즌으로 꾸준히 채웁니다.</li>
+      </ul>
+    </div>
+    <div class="pd-note-col fx d3">
+      <h4><span class="mk dont">○</span> 주의 / DON'T</h4>
+      <ul>
+        <li>1일 권장량(1정)을 초과하지 않습니다.</li>
+        <li>임신·수유 중이거나 질환이 있으면 전문가와 상담합니다.</li>
+        <li>의약품 복용 중이라면 섭취 전 상의합니다.</li>
+        <li>이상 증상 시 섭취를 중단합니다.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ № 04 REVIEWS ============ -->
+<section class="ed-section" id="reviews">
+  <div class="sec-head">
+    <span class="t">러너의 <span class="red">노트</span></span>
+    <span class="folio mono tab">№ 04 — FIELD NOTES</span>
+  </div>
+  <div class="pd-reviews">
+    <article class="pd-review fx">
+      <span class="stars">▲ ▲ ▲ ▲ ▲</span>
+      <p class="quote">
+        새벽 장거리 훈련을 90일째 이어가는 중. 화려한 변화는 없지만,
+        후반부의 <span class="red">호흡이 한결</span> 고르게 유지됩니다.
+      </p>
+      <div class="attrib">
+        <span class="who">— 정민호</span>
+        <span class="data">42.195KM<br>4:55 / KM</span>
+      </div>
+    </article>
+    <article class="pd-review fx d1">
+      <span class="stars">▲ ▲ ▲ ▲ ▲</span>
+      <p class="quote">
+        하루 한 정이라 빼먹을 일이 없어 좋습니다. 같은 시간에 챙기는
+        작은 의식이 <span class="red">루틴</span>을 단단하게 만들어 줍니다.
+      </p>
+      <div class="attrib">
+        <span class="who">— 한가람</span>
+        <span class="data">21.097KM<br>5:20 / KM</span>
+      </div>
+    </article>
+    <article class="pd-review fx d2">
+      <span class="stars">▲ ▲ ▲ ▲ △</span>
+      <p class="quote">
+        트레일 러너입니다. 긴 업힐이 이어지는 구간에서 다리의
+        피로 회복 리듬이 <span class="red">예전보다</span> 차분해진 느낌.
+      </p>
+      <div class="attrib">
+        <span class="who">— 서지우</span>
+        <span class="data">50KM TRAIL<br>+2,100M D+</span>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ № 05 FAQ ============ -->
+<section class="ed-section" id="faq">
+  <div class="sec-head">
+    <span class="t">자주 묻는 <span class="red">질문</span></span>
+    <span class="folio mono tab">№ 05 — FAQ</span>
+  </div>
+  <div class="pd-faq">
+    <div class="q fx">
+      <span class="qidx">Q.01</span>
+      <div class="qbody">
+        <h3>어떤 도움을 기대할 수 있나요?</h3>
+        <p>옥타코사놀은 지구력 증진에 도움을 줄 수 있는 건강기능식품 기능성 원료입니다. 다만 효과는 사람마다 다를 수 있으며, 본 제품은 질병의 예방 및 치료를 위한 의약품이 아닙니다. 규칙적인 러닝·식사와 함께 꾸준히 섭취하시길 권합니다.</p>
+      </div>
+    </div>
+    <div class="q fx d1">
+      <span class="qidx">Q.02</span>
+      <div class="qbody">
+        <h3>언제 섭취하면 좋나요?</h3>
+        <p>하루 한 정, 매일 같은 시간에 충분한 물과 함께 드시는 것을 권합니다. 아침 식후가 가장 습관으로 만들기 쉽습니다. 섭취 시간을 운동 전후로 고집할 필요는 없습니다.</p>
+      </div>
+    </div>
+    <div class="q fx d2">
+      <span class="qidx">Q.03</span>
+      <div class="qbody">
+        <h3>카페인이 들어 있나요?</h3>
+        <p>아니요. Endurance Core에는 카페인이 들어 있지 않습니다. 주성분은 옥타코사놀 40mg과 에너지 대사를 돕는 비타민 B군이며, 자극성 각성 성분에 의존하지 않습니다.</p>
+      </div>
+    </div>
+    <div class="q fx d3">
+      <span class="qidx">Q.04</span>
+      <div class="qbody">
+        <h3>정기배송은 어떻게 되나요?</h3>
+        <p>60정이 60일 한 시즌 분량입니다. 정기배송을 신청하면 60일마다 자동으로 다음 시즌이 배송되며 5% 할인이 적용됩니다. 배송 주기 변경과 해지는 언제든 가능합니다.</p>
+      </div>
+    </div>
+    <div class="q fx d4">
+      <span class="qidx">Q.05</span>
+      <div class="qbody">
+        <h3>보관은 어떻게 하나요?</h3>
+        <p>직사광선을 피해 서늘하고 건조한 곳에 보관하시고, 개봉 후에는 뚜껑을 잘 닫아 주십시오. 어린이의 손이 닿지 않는 곳에 두시기 바랍니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ № 06 COMMERCE INFO ============ -->
+<section class="pd-commerce ed-section" id="info">
+  <div class="sec-head">
+    <span class="t">배송 · 교환 · 환불</span>
+    <span class="folio mono tab">№ 06 — SHIPPING / RETURNS</span>
+  </div>
+  <div class="pd-info">
+    <div class="r"><span class="k">배송 방법</span><span class="v">택배 · CJ대한통운</span></div>
+    <div class="r"><span class="k">배송 비용</span><span class="v"><b>₩3,000</b> · <b>3만원</b> 이상 구매 시 무료</span></div>
+    <div class="r"><span class="k">배송 기간</span><span class="v">결제 확인 후 <b>2 – 4일</b> 이내 (도서·산간 추가 1 – 2일)</span></div>
+    <div class="r"><span class="k">정기배송</span><span class="v">60일마다 자동 배송 · <b>5%</b> 할인 · 주기 변경 및 해지 자유</span></div>
+    <div class="r"><span class="k">교환 / 반품</span><span class="v">수령 후 <b>7일</b> 이내 신청. 단순 변심 시 왕복 배송비는 고객 부담입니다.</span></div>
+    <div class="r"><span class="k">반품 불가</span><span class="v">개봉·섭취하여 재판매가 어려운 경우, 식품 특성상 교환·환불이 제한됩니다.</span></div>
+    <div class="r"><span class="k">환불 처리</span><span class="v">반품 상품 확인 후 <b>3 – 5영업일</b> 이내 원결제수단으로 환불됩니다.</span></div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="pd-cta">
+  <span class="mono fx">무료배송 · 60일 환불보장 · 언제든 해지</span>
+  <h2 class="big fx d1">오늘, 60일 <span class="red ital">한 시즌을</span> 시작하세요.</h2>
+  <div class="pd-cta-actions fx d2">
+    <a href="#hero" class="btn-buy">60일 시작하기 <span class="arr">→</span></a>
+    <span class="price">하루 <b>800원</b> · 60일분 ₩48,000</span>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-foot">
+  <div class="foot-top">
+    <div class="foot-brand">
+      Onroad<br><span class="red ital">지구력코어</span>
+      <span class="sub">Endurance Core · EST 2026</span>
+    </div>
+    <div class="foot-col">
+      <h4>Product</h4>
+      <a href="#hero">Endurance Core</a>
+      <a href="#science">성분 · 근거</a>
+      <a href="#reviews">러너 후기</a>
+      <a href="journal.html">저널</a>
+    </div>
+    <div class="foot-col">
+      <h4>Service</h4>
+      <a href="#hero">구매 / 정기배송</a>
+      <a href="#info">배송 안내</a>
+      <a href="#faq">자주 묻는 질문</a>
+      <a href="#">고객센터</a>
+    </div>
+    <div class="foot-col">
+      <h4>Onroad</h4>
+      <a href="index.html">브랜드 소개</a>
+      <a href="welcome-runner.html">러너를 위한</a>
+      <a href="welcome-general.html">일상을 위한</a>
+    </div>
+  </div>
+  <div class="foot-bot">
+    <p class="legal">
+      Onroad / 지구력코어 · 건강기능식품 · 지구력 증진에 도움을 줄 수 있음.
+      본 제품은 질병의 예방 및 치료를 위한 의약품이 아닙니다.
+      옥타코사놀 40mg/정 · 1일 1정 · 60정 / 60일. 섭취 후 이상 증상이 있을 경우 섭취를 중단하고 전문가와 상담하십시오.
+    </p>
+    <span class="copy">© 2026 Onroad · Endurance Core</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var qEl=document.getElementById('pdQty');
+  var tEl=document.getElementById('pdTotal');
+  var UNIT=48000, qty=1;
+  function fmt(n){return '₩'+n.toLocaleString('en-US');}
+  function render(){qEl.textContent=qty;tEl.textContent=fmt(UNIT*qty);}
+  document.querySelectorAll('.pd-stepper button').forEach(function(b){
+    b.addEventListener('click',function(){
+      qty=Math.max(1,Math.min(99,qty+parseInt(b.dataset.step,10)));
+      render();
+    });
+  });
+  render();
+})();
+</script>
+
+</body>
+</html>
