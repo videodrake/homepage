@@ -1,0 +1,3066 @@
+
+
+--- PAGE 1 ---
+141
+J Nutr Sci Vitaminol, 62, 141–161, 2016
+Review
+Nutrition Supplements to Stimulate Lipolysis: 
+A Review in Relation to Endurance Exercise Capacity
+Jisu KIM1,2, Jonghoon PARK3 and Kiwon LIM1,2,*
+1 Department of Physical Education, Konkuk University, 
+#1 Hwayang-Dong, Kwangjin-Gu, Seoul 143–701, Korea
+2 Physical Activity and Performance Institution (PAPI), Konkuk Universtiy, 
+#1 Hwayang-Dong, Kwangjin-Gu, Seoul 143–701, Korea
+3 Department of Physical Education, Korea University, #145 Anam-Ro, Seongbuk-Gu, Seoul 02841, Korea
+(Received January 28, 2016)
+Summary Athletes make great efforts to increase their endurance capacity in many ways. 
+Using nutrition supplements for stimulating lipolysis is one such strategy to improve endur-
+ance performance. These supplements contain certain ingredients that affect fat metabolism; 
+furthermore, in combination with endurance training, they tend to have additive effects. A 
+large body of scientiﬁ c evidence shows that nutrition supplements increase fat metabolism; 
+however, the usefulness of lipolytic supplements as ergogenic functional foods remains con-
+troversial. The present review will describe the effectiveness of lipolytic supplements in fat 
+metabolism and as an ergogenic aid for increasing endurance exercise capacity. There are a 
+number of lipolytic supplements available on the market, but this review focuses on natural 
+ingredients such as caffeine, green tea extract, L-carnitine, Garcinia cambogia (hydroxycitric 
+acid), capsaicin, ginseng, taurine, silk peptides and octacosanol, all of which have shown 
+scientiﬁ c evidence of enhancing fat metabolism associated with improving endurance per-
+formance. We excluded some other supplements owing to lack of data on fat metabolism or 
+endurance capacity. Based on the data in this review, we suggest that a caffeine and green 
+tea extract improves endurance performance and enhances fat oxidation. Regarding other 
+supplements, the data on their practical implications needs to be gathered, especially for 
+athletes.
+Key Words lipolytic supplements, ergogenic aid, fat metabolism, endurance exercise ca-
+pacity
+Carbohydrates and fats are oxidized as a mixture and 
+are the predominant fuels that inﬂ uence various aspects 
+of exercise, including the intensity and duration. In 
+particular, skeletal muscle demands chemical energy, 
+which results in an increase in both fat and carbohy-
+drate oxidation during exercise. During low-intensity, 
+long-term exercise, the proportion of fat oxidized and 
+used in the muscle gradually increases and that of 
+carbohydrate decreases (1). Conversely, carbohydrate 
+oxidation becomes more pronounced than fat oxida-
+tion with increasing exercise intensity (2). Compared 
+with the limited storage of glycogen in human muscle 
+and liver, endogenous fat deposits are large and can be 
+utilized as an unlimited source of fuel during exercise. 
+Athletes have been looking for ways to increase endur-
+ance capacity by increasing fat utilization during exer-
+cise. There are a number of supplements which pos-
+sesses the effects of the reduction of body weight or fat 
+accumulation which can be achieved by stimulation of 
+lipolysis and/or inhibition of lipogenesis. However, the 
+usefulness of the lipolytic supplements as an ergogenic 
+functional food remains controversial. There are a num-
+ber of lipolytic supplements available on the market, but 
+this review focuses not on artiﬁ cial ingredients but on 
+natural ingredients, such as caffeine, green tea extract, 
+L-carnitine, Garcinia cambogia (hydroxycitric acid), cap-
+saicin, ginseng, taurine, silk peptides and octacosanol, 
+all of which have shown scientiﬁ c evidence of enhanc-
+ing fat metabolism associated with improving endur-
+ance performance. Of them, silk peptides and octaco-
+sanol may inhibit lipogenesis rather than stimulating 
+lipolysis but we include them in this review because 
+there was evidence of enhancing endurance exercise 
+capacity by increasing fat oxidation in human stud-
+ies. In order to systematically review the association 
+between supplement ingestion and endurance exercise 
+capacity, we identiﬁ ed relevant studies through a data-
+base of Pubmed without any publication year restric-
+tion until December 31, 2015.
+Caffeine
+The effect of caffeine on fat metabolism
+Caffeine (1,3,7-trimethylxanthine) is a major compo-
+nent of some of the most widely consumed psychoac-
+tive ingredients and beverages, such as coffee, tea, and 
+* To whom correspondence should be addressed.
+E-mail: exercise@konkuk.ac.kr
+
+
+--- PAGE 2 ---
+KIM J et al.
+142
+colas, which contain approximately 60 to 150 mg, 40 
+to 60 mg, and 40 to 50 mg of caffeine per cup, respec-
+tively (3, 4). Caffeine is absorbed by the stomach and 
+small intestine in 45 min, reaches its peak plasma con-
+centration in 30–90 min, and has a half-life of approxi-
+mately 4–6 h (5, 6).
+A previous study reported that consumption of caf-
+feine increases lipolysis by inhibiting cyclic nucleotide 
+phosphodiesterase (7). In an in vitro study, caffeine was 
+found to inhibit phosphodiesterase, the enzyme respon-
+sible for degrading cyclic adenosine monophosphate 
+(cAMP) (8). Phosphodiesterase usually hydrolyses cyclic 
+cAMP to AMP, but after consumption of caffeine, the 
+cAMP concentration rises and the sympathetic nervous 
+system (SNS) is activated, resulting in the promotion 
+of lipolysis (7, 9). Caffeine ingestion increases the level 
+of circulating adrenaline, thereby enhancing the avail-
+ability of fatty acids for oxidation (10). We previously 
+showed that one dose of caffeine (10 mg and 50 mg/kg) 
+signiﬁ cantly decreased the respiratory quotient (RQ), 
+i.e., increased fat oxidation, 2 h after ingestion in an 
+animal model (11). In addition, Kim et al. (12) reported 
+that caffeine (0.1, 0.5, 1, 2 and 5 mM) suppressed 3T3-
+L1 aidpocyte differentiation and inhibited the expression 
+of CCAAT/enhancer binding protein (C/EBP) and pro-
+liferator-activated receptor (PPAR), two main adipo-
+genic transcription factors.
+Taken together, the caffeine ingestion may reduce adi-
+pose tissue by stimulating both lipolysis and the inhibi-
+tion of lipogenesis.
+Caffeine and endurance performance
+Caffeine has attracted the attention of many competi-
+tive and noncompetitive athletes as a legal ergogenic acid 
+(see Table 1). Graham and Spriet (13) clearly demon-
+strated that caffeine ingestion improved endurance per-
+formance. Seven trained competitive runners completed 
+4 randomized and double-blind exercise trials at approx-
+imately 85% VO2 max: 2 trials of running to exhaustion 
+and 2 trials of cycling to exhaustion. The subjects con-
+sumed either a placebo (9 mg/kg dextrose) or caffeine 
+·
+Table 1. A summary of studies that examined the effects of caffeine on endurance performance.
+Reference
+Participants
+Dose
+Protocol
+Timing
+Key results
+Endurance 
+performance
+Costill et al. 
+(14)
+F: 2, M: 7
+330 mg
+80% max to exh
+1 h before 
+exercise
+Increased running time because 
+of stimulating lipolysis.
+↑
+Graham & 
+Spriet (13)
+Athletes: 7
+(runners)
+9 mg/kg
+85% max to exh
+1 h before 
+exercise
+Increased running times.
+↑
+Erickson et al. 
+(18)
+Athletes: 5
+(cyclists)
+5 mg/kg
+Consisted of 90 min 
+of cycling at 65 to 
+75% max
+1 h before 
+exercise
+Decreased muscle glycogen 
+utilization.
+↑
+Spriet et al. 
+(19)
+Athletes: 8
+9 mg/kg
+80% max to exh
+1 h before 
+exercise
+Decreased muscle glycogen 
+utilization.
+↑
+Cruz et al. (20)
+M: 8
+6 mg/kg
+1 W/kg/bw and 
+increase 0.5 W/kg/
+bw until exhaustion
+1 h before 
+exercise
+Improved maximal lactate 
+steady state (22.7% vs con) and 
+increased fat oxidation.
+↑
+Bruce et al. 
+(15)
+Athletes: 8
+(rowers)
+6 or 9
+mg/kg
+2,000-m rowing 
+test on an air-
+braked ergometer
+1 h before 
+exercise
+Decreased RQ and time (s): 411 
+(6 mg/kg), 412 (9 mg/kg), 416 
+(placebo).
+↑
+Kovacs et al. 
+(16)
+M: 15
+0, 2.1, 3.2, 
+4.5 mg/kg
+Complete a work 
+output estimated to 
+take 1 h
+1 h before 
+exercise
+Reduced exercise time and 
+increased fat oxidation.
+↑
+Graham & 
+Spriet (17)
+Athletes: 8
+(runners)
+3, 6 or 9
+mg/kg
+85% max to exh
+1 h before 
+exercise
+Endurance was enhanced with 
+3 and 6 mg/kg of caffeine. 
+Increased FFA, glycerol, cat-
+echolamines in plasma.
+↑
+Pasman et al. 
+(30)
+Athletes: 9
+(cyclists)
+0, 5, 9, 13
+mg/kg
+Cycle at 80% max 
+to exh
+1 h before 
+exercise
+Increased running times (min): 
+53.4, 67.8, 73.4, 57.9.
+↑
+Wells et al. 
+(21)
+Athletes: 10
+(marathon 
+runners)
+5 mg/kg
+Ran 20 miles 
+(32.18 km)
+1 h before 
+exercise
+No difference in plasma FFA or 
+RQ.
+↓
+Perkins & 
+Williams (22)
+F: 14
+0, 4, 7
+mg/kg
+Progressive 
+workload 
+(300 kpm add 100 
+every min) to exh
+1 h before 
+exercise
+No difference in maximal 
+endurance time, RHR, SHR or 
+MHR.
+↓
+Butts & 
+Crowell (31)
+F: 15
+300 mg
+75% max to exh
+1 h before 
+exercise
+No difference in endurance 
+time.
+↓
+F: female, M: male, exh: exhaustion, W: watt, con: control group, RHR: resting heart rate, SHR: submaximal heart rate, 
+MHR: maximal heart rate, RQ: respiratory quotient, FFA: free fatty acid.
+
+
+--- PAGE 3 ---
+Lipolytic Supplements Increasing Endurance Exercise Capacity
+143
+(9 mg/kg) 1 h before exercise. The group that consumed 
+caffeine showed an increase in endurance time for both 
+running and cycling. In a similar study, Costill et al. (14) 
+reported that caffeine ingestion increased running time. 
+Two women and seven men conducted exercise trials at 
+approximately 80% VO2 max. The subjects consumed 
+caffeine (300 mg) 1 h before exercise. As a result, the 
+caffeine consumption group increased running time 
+(90.2 min vs 75.5 min) compared with control groups 
+because of stimulating lipolysis. Moreover, Bruce et al. 
+(15) reported the effect of caffeine ingestion on short-
+term endurance performance in competitive rowers. 
+Eight rowers performed three familiarization trials of a 
+2,000-m rowing test on an air-braked ergometer, each 
+1 h after ingesting caffeine (6 or 9 mg/kg). As a result, 
+the plasma free fatty acid (FFA) concentration before 
+exercise was higher after caffeine ingestion than for the 
+placebo group. RQ was also more greatly decreased in 
+the caffeine group (0.930.06) than in the placebo 
+group (0.980.12). Similarly, Kovacs et al. (16) found 
+that, when caffeine (150, 225, 320 mg) was ingested, 
+doses of 225 mg/kg and 320 mg/kg had a greater 
+ergogenic effect. Graham and Spriet (17) also reported 
+improvements with 3 different doses of caffeine (3, 6, 
+9 mg/kg).
+Erickson et al. (18) examined the effect of caffeine 
+ingestion (5 mg/kg) before exercise (at 65 to 75% VO2 
+max for 90 min) on muscle glycogen utilization in 5 
+competitive cyclists. They found that caffeine ingestion 
+decreased muscle glycogen utilization. Spriet et al. (19) 
+also showed that for eight cyclists after ingestion of caf-
+feine (9 mg/kg) muscle glycogenolysis had decreased by 
+approximately 55% over the ﬁ rst 15 min of cycling exer-
+cise at approximately 80% VO2 max. Recently, Cruz et 
+al. (20) found that for eight active males using from two 
+to four constant-load tests of 30 min., caffeine inges-
+tion (6 mg/kg) approximately 1 h before cycle exercise 
+increased whole-body fat oxidation during a cycling test.
+However, Wells et al. (21) reported that caffeine 
+ingestion exerted no signiﬁ cant effect on endurance 
+performance. Ten male marathon runners ran 20 miles 
+(32.18 km); caffeine (6 mg/kg) ingestion occurred 1 h 
+before and during the run. However, caffeine ingestion 
+resulted in no differences in FFA, glucose in plasma or 
+RQ. In addition, Perkins and Williams (22) did not ﬁ nd 
+any ergogenic beneﬁ t of any caffeine dose (4, 7 and 
+10 mg/kg), but their protocol led to a very rapid fatigue.
+Meanwhile, Graham et al. (23) reported in their 
+review that caffeine ingestion of 5 to 9 mg/kg increased 
+citrate levels in resting muscle and cAMP during exercise 
+(70 or 85% VO2 max). To date, many investigators have 
+found that caffeine increases endurance performance 
+(24–26). This positive effect of caffeine is believed to 
+promote fat oxidation and inhibit carbohydrate oxida-
+tion in active muscle and liver (27–29). There can be no 
+doubt that caffeine enhances endurance performance in 
+these situations, (13–20, 23–26, 30) while only rarely 
+has no effect been found (21, 22, 31). Some review arti-
+cles recently reported that caffeine, at a dose ranging 
+from 2 mg/kg to 13 mg/kg at 1 h before exercise, may 
+have an ergogenic effect on endurance performance 
+(24, 32, 33). Of note, caffeine is included in the 2015 
+monitoring program of the World Anti-doping Agency 
+(WADA) though not considered a prohibited substance 
+(34). Although the dose of caffeine was not within the 
+range of doping, athletes should be cautious of ingest-
+ing too much caffeine (35).
+Green tea extract
+The effect of green tea extract on fat metabolism
+Green tea is made of Camellia sinensis leaves that have 
+undergone minimal oxidation during processing (36). 
+The predominant constituents of green tea, accounting 
+for up to 35% of its dry weight, are polyphenols, namely 
+ﬂ avonols, ﬂ avones, and ﬂ avan-3-ols (37). Further, ﬂ a-
+van-3-ols, commonly known as catechins, account for 
+60–80% of the total proportion of polyphenols in green 
+tea (37). Epigallocatechin-3-gallate (EGCG) is the most 
+abundant catechin in green tea and is also considered 
+the most bioactive component of green tea (38, 39). The 
+remaining components of green tea include theanine, 
+theaﬂ avins, thearubigins, quercetin, other phenolics, 
+and caffeine.
+The effect of EGCG on adipogenic differentiation in 
+vitro has been previously examined (40). Increasing 
+concentrations of low-dose EGCG were administered for 
+8 d to differentiating 3T3 adipocytes, either at days 0–8 
+(early stage) or at days 8–16 (late stage). In both the early 
+and late stages, the accumulation of fat was signiﬁ cantly 
+reduced by the addition of EGCG at concentrations of 
+50 mM. Furthermore, EGCG reduced fat accumulation 
+at concentrations of 5–10 mM during the early stage of 
+adipocyte differentiation. Treatment of cells with EGCG 
+(0, 50, 100, and 150 M) dose dependently increased 
+the level of adenosine monophosphate-activated pro-
+tein kinase- (AMPK) and acetyl-CoA carboxylase 
+(ACC) phosphorylation. EGCG also stimulated AMPK 
+and ACC phosphorylation in a dose- (0, 50, 100, and 
+150 M) and time-dependent (0–180 min) manner in 
+rat myotube L6 cells. In addition, orally administered 
+EGCG (200 mg/kg) increased fat oxidation in the entire 
+body with the upregulation of AMPK involving phos-
+phorylation and AMPK activity in liver and skeletal 
+muscle (41). In a recent study, treatment with green tea 
+catechins (2.3, 11.5, and 23 M) was found to increase 
+glycerol and free fatty acid (FFA) levels with hormone-
+sensitive lipase (HSL) phosphorylation in the 3T3-L1 
+adipocytes by regulating the PKA-dependent pathway 
+(42). PKA activation is a classical pathway for lipolysis 
+regulation. Norepinephrine increases cAMP production, 
+which results in cAMP-dependent PKA activation and 
+leads to HSL phosphorylation (43). In animal studies, 
+Murase et al. (44) investigated the effect of oral ingestion 
+of tea catechins for 1 mo on the development of obesity 
+in mice. The results showed that supplementation with 
+tea catechins resulted in a signiﬁ cant reduction in high-
+fat diet-induced visceral and liver fat accumulation. The 
+reduction of fat accumulation may be due to increased 
+-oxidation activity in the liver and increased acyl-CoA 
+oxidase and medium-chain acyl-CoA dehydrogenase 
+·
+·
+·
+·
+
+
+--- PAGE 4 ---
+KIM J et al.
+144
+mRNA expression. In another study involving mice with 
+high-fat-induced obesity, high-fat diets supplemented 
+with 0.2 or 0.5% EGCG (w/w) for 8 wk signiﬁ cantly 
+increased the mRNA levels of carnitine palmitoyltrans-
+ferase I (CPT-I) and uncoupling protein 2 as well as lipo-
+lytic genes such as hormone-sensitive lipase and adipose 
+triglyceride lipase (45). In a cross-sectional survey of 
+1,210 epidemiologically sampled adults, tea drinkers for 
+more than 10 y showed a 19.6% reduction in percent-
+age body fat and a 2.1% reduction in waist-to-hip ratio 
+as compared to non-habitual tea drinkers (46). Thus, 
+the effect of green tea extract on fat oxidation seem to 
+be cumulative over time.
+Green tea extract and endurance performance
+Murase et al. (47) examined the effects of GTE on 
+running endurance in mice. The total catechin content 
+was 81% (the sum of each catechin) and the epigallo-
+catechin gallate content was 41% (caffeine, 0.1%). A 
+10-wk-intervention with dietary GTE (0.2% and 0.5% 
+GTE) in combination with endurance running exercise 
+markedly improved endurance levels in association with 
+an increase in lipid utilization during exercise. They also 
+investigated the effect of GTE (epigallocatechin gallate 
+content, 41%) diet on the swimming endurance capac-
+ity of mice over a 10-wk period (48). The result showed 
+that the swimming time to exhaustion for mice fed 0.2–
+0.5% (wt/wt) GTE increased by 8–24%. In addition, the 
+-oxidation activity and the level of fatty acid translo-
+case/CD36 mRNA in the muscle was higher in the GTE-
+fed mice than in the control mice.
+In human studies, Ichinose et al. (49) reported the 
+effect of GTE on whole-body fat utilization during exer-
+Table 2. A summary of studies that examined the effects of green tea extract on endurance performance.
+Reference
+Subjects
+Dose
+Protocol
+Timing
+Key results
+Endurance 
+performance
+Murase et al.
+(44)
+Male mice: 
+32
+Meal with 0.2 
+or 0.5% (wt/
+wt)
+Exh exercise on treadmill
+With meal
+Increased running 
+times: fed 0.2 and 0.5% 
+GTE were 21 and 30% 
+longer vs con. Decreased 
+RQ and malonyl-CoA 
+content, higher muscle 
+-oxidation.
+↑
+Murase et al.
+(47)
+Male mice: 
+32
+Meal with 0.2 
+or 0.5% (wt/
+wt)
+Exh swimming exercise
+With meal
+Increased running times 
+and fat oxidation in 
+whole body. 
+FAT/CD36 mRNA in the 
+muscle was higher in 
+GTE fed in mice. 
+↑
+Ota et al. 
+(57)
+M: 7, F: 7
+570 mg 
+with caffeine 
+(40 mg)
+Engaged in treadmill exer-
+cise at a pace of 5 km/h 
+for 30 min 3 times a week
+1 h before 
+exercise for 
+2 mo
+Improved endurance 
+performance through fat 
+utilization.
+↑
+Ichinose et 
+al. (49)
+M: 12
+572.8 mg
+60 W every 3 min until 
+180 W and, above this 
+intensity, by 30 W energy 
+2 min until 240 W and 
+then by 15 W every 
+2 min until exh
+At least 
+24 h after 
+exercise for 
+10 wk
+Moderate-intensity 
+exercise with GTE, 
+increased fat oxidation 
+on whole body energy 
+expenditure.
+↑
+Dean et al. 
+(52)
+Athletes: 8
+(cyclists)
+270 mg
+60 min of cycling at 60% 
+max and then a self-paced 
+40 km cycling time trial
+1 h before 
+exercise for 
+6 d
+A little fat oxidation and 
+endurance performance.
+↑
+Venables et 
+al. (58)
+M: 12
+89013 mg/d 
+catechins 
+containing 
+3665 mg/d 
+EGCG
+30 min cycling exercise at 
+60% of maximal oxygen 
+consumption
+In the 
+morning, at 
+lunch and 
+at dinner
+Improved endurance 
+performance through fat 
+oxidation.
+↑
+Kuo et al. 
+(50)
+M: 40
+250 mg/d
+Exh swimming exercise
+4 wk train-
+ing with 
+either 
+GTE with 
+breakfast
+No difference in endur-
+ance capacity. But, 
+increased antioxidant 
+capacity.
+↓
+Eichenberger 
+et al. (51)
+M:10
+160 mg/d
+Exercise for 2 h at 50% W 
+(max) in cycling exercise
+Before and 
+after exer-
+cise for 3 wk
+No difference in endur-
+ance capacity.
+↓
+F: female, M: male, exh: exhaustion/exhauastive, W: watt, RQ: respiratory quotient, GTE: green tea extract, con: control.
+
+
+--- PAGE 5 ---
+Lipolytic Supplements Increasing Endurance Exercise Capacity
+145
+cise in healthy male subjects (peak oxygen consumption 
+(VO2 peak), 50.71.3 (SE) mL/kg/min). The subjects 
+performed a cycle ergometer exercise at 60% of VO2 
+peak for 60 min/d, 3 d/wk, and daily ingested 572.8 or 
+0 mg tea catechins in the exercise with the GTE or pla-
+cebo group, respectively, for 10 wk. The results showed 
+that the RQ was lowered, i.e., increase in whole-body fat 
+utilization, in the GTE group during endurance exer-
+cise, but this effect was not seen in the placebo group. 
+Recently, Kuo et al. (50) showed the effect of GTE on 
+endurance performance where a 4-wk-intervention 
+with GTE (breakfast with 250 mg/d) in combination 
+with endurance training improved exhaustive run time 
+(14.3%) in untrained men. EGCG accounted for 48.2% 
+of the GTE (total tea catechins82.8%). However, this 
+positive effect of GTE (containing about 160 mg/d total 
+catechins, of which about 70 mg/d comprised EGCG) 
+on endurance performance was not seen the study con-
+ducted by Eichenberger et al. (51) in endurance-trained 
+men. They suggest that a lower dose of GTE, as com-
+pared to that noted in previous studies, does not affect 
+fat oxidation during exercise especially in highly trained 
+athletes. Dean et al. (52) reported that eight male 
+cyclists were studied in a 3-way crossover experiment. 
+All participants received 3 different supplements—
+a placebo (glucose; 270 mg), caffeine (3 mg/kg), or 
+green tea extract (270 mg)—1 h before exercise for 6 d. 
+Then, each participant engaged in exercise consisting 
+of 60 min of cycling at 60% maximum oxygen uptake 
+immediately followed by a self-paced 40-km cycling 
+time trial. That study found little beneﬁ t in consuming 
+green tea extract on fat oxidation or endurance perfor-
+mance; unlike caffeine, GTE did not beneﬁ t endurance 
+performance.
+As mentioned above, caffeine has been shown to 
+enhance the availability of fatty acids for oxidation 
+(10), and its ingestion prior to an exercise bout showed 
+elevated fat oxidation rates as well as performance 
+(53). In a meta-analysis, catechin-caffeine mixtures 
+increased fat oxidation as compared with a placebo 
+or caffeine-only mixtures (54). Green tea catechins 
+(375 mg	150 mg caffeine) decreased RQ by 3.4% as 
+compared with a caffeine-free placebo, and there was no 
+effect of caffeine alone (150 mg) in healthy young men 
+with body fat ratings ranging from lean to mildly obese 
+(8–30% body fat) (55). A similar effect was seen with 
+the acute administration of 300 mg EGCG for 2 d in 
+obese men (56). These results suggest that catechin-caf-
+feine mixtures may increase fat oxidation even though 
+exercise is not performed along with ingestion. Another 
+well-designed study by Ota et al. (57) involved untrained 
+young Japanese men consuming catechins and caffeine-
+rich tea (570 mg	40 mg caffeine) 1 h before exer-
+cise during an 8-wk intervention program. During the 
+study period, they engaged in a treadmill exercise at a 
+pace of 5 km/h for 30 min 3 times a week. Fat oxida-
+tion was found to have increased with catechin- and 
+caffeine-rich tea administration in both the exercise 
+and sedentary groups as compared to placebo admin-
+istration. In addition, Venables et al. (58) reported on 
+the effect of acute GTE intake on fat oxidation rate dur-
+ing exercise. Twelve healthy men performed a 30-min 
+cycling exercise at 60% of maximal oxygen consump-
+tion before and after GTE (89013 mg/d catechins con-
+taining 3665 mg/d EGCG; 3 capsules were ingested) 
+consumption. As a result, fat oxidation rates were 17% 
+higher after ingestion of GTE than after ingestion of a 
+placebo (0.410.04 and 0.350.03 g/min).
+Taken together, GTE supplementation, at a dose 
+ranging from about 200 mg/kg to 800 mg/kg and 
+long-term intake can improve endurance performance 
+with increased fat oxidation, and the effect may be aug-
+mented in combination with exercise (see Table 2).
+L-Carnitine
+The effect of carnitine on fat metabolism
+Carnitine (L-trimethyl-3-hydroxy-ammoniobutanoate) 
+is an endogenous compound that plays a signiﬁ cant role 
+in cellular biochemistry and is a vitamin-like and amino 
+acid-like substance (59, 60). L-Carnitine is normally 
+present in plasma in the form of free carnitine at con-
+centrations of approximately 40 mol/L to 50 mol/L 
+in healthy adult men (61). Dietary sources of L-carni-
+tine primarily include animal products, particularly red 
+meat and dairy products (61).
+Synthetic carnitine occurs as both D & L isomers; 
+however, only L-carnitine is physiologically active. L-Car-
+nitine is mostly stored in muscle, and its most well-docu-
+mented function is the translocation of long-chain fatty 
+acids from the cytosol into the mitochondrial matrix 
+for subsequent -oxidation (62–64). Fatty acids must 
+be changed into acyl-CoA prior to -oxidation because 
+fatty acids cannot cross the mitochondrial membrane. 
+Acyl-CoA is converted to acylcarnitine by the malonyl-
+CoA-sentitive CPT-I on the mitochondrial outer mem-
+brane. Next, acylcarnitine is transported across the 
+mitochondrial inner membrane by carnitine acylcarni-
+tine translocase (65). In the matrix, acylcarnitine acts 
+as a substrate for carnitine palmitoyltransferase II (CPT-
+II) by which acylcarnitines are converted to the respec-
+tive acyl-CoAs (66). Acyl-CoA then enters the fatty acid 
+-oxidation pathway. Without carnitine, most dietary 
+lipids cannot be used as energy sources. The effect of 
+carnitine on adipogenic differentiation in vitro has been 
+previously examined (67). In one study, when 3T3-L1 
+cell differentiation was induced, carnitine was also exog-
+enously added to the cells. As a result, the exogenously 
+added carnitine (1 nM and 10 nM) inhibited an increase 
+in triglyceride and total lipid levels. These results sug-
+gest that carnitine plays an inhibitory role in the early 
+stage of 3T3-L1 cell differentiation (67). In an animal 
+study, mice were fed a normal diet (ND), high-fat diet 
+(HD), or carnitine-supplemented (at 0.5% w/w) high-fat 
+diet (HDC) for 12 wk. The results showed that the HDC 
+group had lower body weight and this effect may be due 
+to increased lipolysis by enhancing CPT-I mRNA expres-
+sion compared to that of the other groups (68).
+L-Carnitine and endurance performance
+Several animal studies have attempted to deter-
+mine the underlying mechanism by which L-carnitine 
+·
+
+
+--- PAGE 6 ---
+KIM J et al.
+146
+increases exercise performance (see Table 3). Kim et al. 
+(69) reported on L-carnitine (0.5%/diet) supplementa-
+tion with exercise (treadmill for 60 min/d, 10% incline, 
+20 m/min for 8 wk) in an animal model. They evalu-
+ated the effect of L-carnitine supplementation and anti-
+oxidants on lipids, carnitine concentration, and exercise 
+endurance time in both trained and untrained supple-
+mented or non-supplemented rats. CPT-I mRNA levels 
+were higher in both supplemented and exercise trained 
+rats. Pandareesh and Anand (70) explored the syner-
+gistic effects of dietary L-carnitine and fat content on 
+physical fatigue in rats. In all, 90 male Wistar rats were 
+supplemented with different concentrations of L-carni-
+tine (0.15, 0.3, and 0.5%) and fat content (5, 10, and 
+15%) through diet in different combinations. The swim-
+ming time until exhaustion was increased ~2–1.5-fold 
+in rats fed with 10% and 15% fat diets containing L-car-
+nitine (0.5%). Lipid peroxidation, lactic acid, and lactate 
+dehydrogenase levels were signiﬁ cantly reduced in vari-
+ous tissues in the L-carnitine-supplemented rats as com-
+pared to the control group. Kim et al. (71) showed that 
+L-carnitine administration promotes fat oxidation and 
+Table 3. A summary of studies that examined the effects of L-carnitine on endurance performance.
+Reference
+Subjects
+Dose
+Protocol
+Timing
+Key results
+Endurance 
+performance
+Kim et al. 
+(69)
+Male rats: 
+32
+Meal with 0.5% 
+(wt/wt)
+Treadmill for 
+60 min/d, 10 incline, 
+20 m/min
+With meal 
+for 8 wk
+Increased CPT-1 activi-
+ties and endurance 
+times.
+↑
+Pandareesh 
+et al. (70)
+Male rats: 
+90
+L-carnitine (0.15, 
+0.3, and 0.5%) 
+and fat content (5, 
+10, and 15%) diet
+Constant loads 
+(tagged to
+the tail base) cor-
+responding to 5% of 
+their body weight
+With meal 
+for 2 wk
+Increased swimming 
+time until exh (2 and 
+1.5-fold) and spared 
+liver and muscle glyco-
+gen levels.
+↑
+Kim et al. 
+(71)
+Male mice: 
+30
+150 mg/kg
+Speed was increased 
+by 1 m/min up to 
+25 m/min until exh
+Before 
+exercise, 
+once daily for 
+3 wk
+Increased running time 
+(average 25%) until 
+exh. Fatty acid trans-
+port proteins (FAT/
+CD36, FABP3, CTP1) 
+increased in skeletal 
+muscle.
+↑
+Marconi et 
+al. (72)
+Athletes: 6
+(competitive 
+walkers)
+4 g
+For 120 min walk at 
+about 65% max
+1 g in 10 mL 
+syrup every 
+6 h over a 
+period of 
+2 wk
+LC loading slightly 
+increased performance.
+↑
+Gorostiaga 
+et al. (73)
+M: 10
+2 g
+45 min of cycling at 
+66% max
+2 g/d for 
+28 d
+RQ was signiﬁ cantly 
+low during exercise.
+↑
+Vecchiet et 
+al. (74)
+Athletes: 10
+(moderately 
+trained)
+2 g
+Increased by 50 W 
+(cycle ergometer) 
+increments every 
+3 min until exh
+1 h before 
+exercise
+Increased maximal 
+oxygen uptake but, not 
+affecting the RQ.
+↑
+Cha et al. 
+(75)
+Athletes: 5
+(rugby 
+players)
+Caffeine (5 mg/
+kg)	L-carnitine 
+(15 g), L-carnitine 
+(15 g), and caf-
+feine (5 mg/kg)
+Cycle ergometer at 
+60% VO2 max for 
+45 min and increased 
+at 80 VO2 max until 
+exh
+2 h before 
+exercise
+Increased endurance 
+time compared with 
+caffeine and control 
+groups through stimu-
+lated fat oxidation.
+↑
+Orer and 
+Guzel (76)
+Athletes: 26
+(footballers)
+3 or 4 g
+Running speed of 
+8 km/h and then con-
+tinued at 10 km/h. 
+and increased 1 km/h 
+every 3 min until exh
+1 h before 
+exercise
+Increased running 
+speed and decreased 
+lactate. LC ingestion 
+increased physical exer-
+cise prolonged to exh.
+↑
+Broad et al. 
+(77)
+Athletes: 15
+(runners)
+3 g
+90 min stationary 
+cycling
+Once a day, 
+at any time
+No difference during 
+90 min cycling test.
+↓
+Lee et al. 
+(78)
+M: 28
+4 g
+Trained for 40 min on 
+a bicycle ergometer at 
+60% max, ﬁ ve times 
+per week for 6 wk 
+1 h before 
+exercise
+for 6 wk
+Beta-HAD and FABPc 
+expression increased 
+by 54% compared with 
+control. LC consump-
+tion enhanced exercise 
+performance.
+↑
+M: male, exh: exhaustion, W: watt, RQ: respiratory quotient, LC: L-carnitine.
+·
+·
+
+
+--- PAGE 7 ---
+Lipolytic Supplements Increasing Endurance Exercise Capacity
+147
+mitochondrial biogenesis during prolonged exercise, 
+resulting in enhanced endurance capacity in male mice. 
+In their study, male mice were divided into 2 groups of 
+sedentary and exercise groups. They were orally admin-
+istered L-carnitine (150 mg/kg) or a vehicle with a high-
+fat diet daily for 3 wk. During the experimental period, 
+all animals were trained 3 times a week on a motorized 
+treadmill, and the total running time until exhaus-
+tion was used as the index of endurance capacity. It 
+was found that L-carnitine administration signiﬁ cantly 
+increased the maximum running time when the mice 
+were subjected to exercise training. Importantly, L-car-
+nitine administration enhanced the expression of fatty 
+acid uptake-related genes and increased mitochondrial 
+biogenesis.
+Several human studies on the effect of carnitine 
+supplementation on endurance capacity have been con-
+ducted since the 1980s. Marconi et al. (72) examined 
+the effect of carnitine supplementation (1 g in 10 mL 
+syrup every 6 h over a period of 2 wk) on the aerobic per-
+formance of 6 long-distance athletes and reported that 
+the VO2 max in the carnitine supplementation group 
+increased by 6%. Gorostiaga et al. (73) investigated the 
+effect of L-carnitine addition (2 g/d for 4 wk) to the 
+diet of endurance-trained humans on RQ changes dur-
+ing submaximal exercise. After 4 wk, the subjects per-
+formed a submaximal exercise test consisting of 45 min 
+of cycling at 66% of VO2 max. Each subject performed 
+the test under the condition of placebo or L-carnitine 
+treatment (double-blind, crossover design). The RQ was 
+signiﬁ cantly low during exercise, i.e., increased fat oxi-
+dation, for the subjects treated with L-carnitine. Vec-
+chiet et al. (74) also showed that the acute dose of 2 g 
+L-carnitine increased the work capacity with increased 
+VO2 max in moderately trained young men, although 
+not affecting the RQ. Cha et al. (75) showed that acute 
+carnitine ingestion (15 g in 250 mL) 1 h before endur-
+ance exercise could promote fat oxidation, presumably 
+resulting in increased exercise time until exhaustion in 
+rugby athletes. Orer and Guzel (76) demonstrated the 
+positive effect of acute L-carnitine loading (3 g or 4 g) 
+on the endurance performance of footballers. They used 
+a lower dose of L-carnitine than the dose (15 g of acute 
+carnitine ingestion) used by Cha et al. (75). The athletes 
+were given a glass of fruit juice 1 h before administering 
+L-carnitine (3 g or 4 g) with the double-blind method. 
+The athletes began the exercise test at a running speed 
+of 8 km/h and then continued at 10 km/h. The result 
+showed that 3 g or 4 g of L-carnitine taken before physi-
+cal exercise prolonged the time to exhaustion. Although 
+L-carnitine may contribute to improved endurance exer-
+cise performance, no effect of L-carnitine on fat metabo-
+lism has been reported in any animal or human study 
+(76, 77). Broad et al. (77) reported that L-carnitine 
+plus L-tartrate supplementation (3 g/d for 4 wk) had 
+no effect on fat oxidation or endurance performance 
+in trained males. In a human study using the muscle 
+biopsy method, L-carnitine supplementation was con-
+sidered unlikely to be associated with enhanced exer-
+cise performance in untrained males (78). Although 
+they did not conduct any exercise performance test, 
+they concluded that the combination of exercise train-
+ing and L-carnitine supplementation does not augment 
+the fatty acid-binding protein (FABPc), an indicator of 
+the capacity for fatty acid oxidation, and the activity of 
+-hydroxyacyl-CoA dehydrogenase in the human skel-
+etal muscle of untrained healthy males. Of note, L-car-
+nitine is basically an endogenous substance, production 
+of which usually satisﬁ es the requirements but it should 
+be taken especially by athletes loaded by higher volume 
+of exercise. Overall, L-carnitine at a dose ranging from 
+about 2–4 g consumption may improve endurance per-
+formance but the data on the practical implications of 
+L-carnitine supplementation need to be further accumu-
+lated, especially for athletes.
+Garcinia cambogia (Hydroxycitric Acid)
+The effect of hydroxycitric acid on fat metabolism
+Garcinia has been used for centuries in Asian coun-
+tries for culinary purposes as a condiment and ﬂ avor-
+ing agent in place of tamarind or lemon and to make 
+meals more ﬁ lling (79). Garcinia or, more speciﬁ cally, 
+G. cambogia, G. atroviridis, and G. indica have been found 
+to contain large amounts of hydroxycitric acid (HCA) 
+(80). It is widely used in anti-obesity herbal supplements 
+around world (81, 82).
+HCA ingestion might have an effect on fat oxidation 
+because extramitochondrial cleavage of citrate is the 
+penultimate step in the conversion of glucose into mal-
+onyl-CoA, suggesting that HCA could reduce cytosolic 
+malonyl-CoA concentration and increase fatty acid oxi-
+dation (83, 84). It is well known that malonyl-CoA is an 
+inhibitor of CPT-I that controls fatty acid by regulating 
+its transfer into the mitochondria (85–87). Therefore, 
+malonyl-CoA not only serves as a substrate for lipogen-
+esis but also inhibits CPT-I allosterically, thereby sup-
+pressing fatty acid oxidation (87, 88). HCA is believed to 
+be a powerful inhibitor of the enzyme ATP-citrate lyase 
+(89). In in vitro studies, Garcinia extract (1 mg/mL) 
+treatment inhibited lipid droplet accumulation in 3T3-
+L1 preadipocytes (90). Similarly, Garcinia extract was 
+found to inhibit cytoplasmic lipid accumulation as well 
+as adipogenic differentiation of preadipocytes (91, 92).
+Some studies have shown that HCA consumption pro-
+motes fat metabolism in animals and humans. Shara et 
+al. (93) reported the dose-and-time-dependent effects of 
+HCA on body and organ weight over a period of 90 d 
+in rats. They observed a signiﬁ cant reduction in body 
+weight and adipose tissue in the HCA group as com-
+pared to the control group. Kim et al. (94) showed that 
+G. cambogia (soy peptide and L-carnitine) with a high-
+fat diet decreased body fat and improved insulin resis-
+tance in rats, and down-regulation of leptin, TNF-, 
+SREBP1c, and PPAR2 gene expression in the epididy-
+mal adipose tissue. Similarly, in a study by Leonhardt et 
+al. (95) involving rats fed a high-carbohydrate diet with 
+3% HCA for 6 d, the 3% HCA diet was found to suppress 
+lipogenesis, and the fat oxidation of the HCA group 
+was signiﬁ cantly higher than that of the control group. 
+Similar results were seen in human studies where HCA 
+·
+·
+·
+
+
+--- PAGE 8 ---
+KIM J et al.
+148
+(300 mg) ingestion for 2 wk reduced body weight in 
+randomized crossover trials in men and women (96). 
+Kovacs and Westerterp-Plantenga (97) also reported 
+that HCA (500 mg/d for 3 d or 8 wk) reduced de novo 
+lipogenesis during overfeeding with carbohydrates. HCA 
+can also decrease circulating cholesterol and triglycer-
+ide concentrations in overweight humans (98). Taken 
+together, the HCA ingestion may reduce body weight 
+and adipose tissue by both the stimulation of lipolysis 
+and the inhibition of lipogenesis.
+Hydroxycitric acid and endurance performance
+Some studies have shown that HCA supplementation 
+improved endurance capacity in animals and humans 
+(see Table 4). HCA is considered an ergogenic aid 
+because its ability to increase fatty acid oxidative capac-
+ity can help limit the utilization of muscle and liver 
+glycogen during aerobic exercise (99). Ishihara et al. 
+(100) showed that acute HCA (10 mg) administration 
+increased serum FFA levels in mice, but the level of RQ 
+was not different between the HCA and control group. 
+On the other hand, on the 26th day of HCA administra-
+tion, the RQ was signiﬁ cantly lower in the HCA group 
+than in the control group during both resting and exer-
+cising conditions. They suggested that chronic adminis-
+tration of HCA promoted lipid oxidation and spared car-
+bohydrate utilization at rest and during running.
+On the other hand, Kriketos et al. (101) reported that 
+high-dose HCA (3 g/d) ingestion led to signiﬁ cantly 
+different RQ or energy expenditure in the fasted state 
+either during rest or during moderate (40–60% VO2 
+max) exercise. These results are explained by the fact 
+that HCA treatment was not sufﬁ ciently long-term (3 d), 
+high-dose, and or administered during a fasted state. On 
+the other hand, we conﬁ rmed the opposite results: an 
+effect of short-term HCA ingestion on fat oxidation dur-
+ing exercise in untrained animals and humans (102). 
+In 2 experiments designed as a double-blind crossover 
+test, untrained women ingested breakfast with 250 mg 
+of HCA or a placebo equal amount of dextrin) via cap-
+sule for 5 d and then participated in a cycle ergometer 
+exercise. They cycled at 40% VO2 max for 1 h; then, the 
+exercise intensity was increased to 60% VO2 max until 
+exhaustion on day 5 of each experiment. HCA tended to 
+decrease the RQ during 1 h of exercise and signiﬁ cantly 
+·
+·
+·
+Table 4. A summary of studies that examined the effects of HCA on endurance performance.
+Reference
+Subjects
+Dose
+Protocol
+Timing
+Key results
+Endurance 
+performance
+Ishihara et al. 
+(100)
+Male mice: 
+54
+10, 30 mg
+Swimming exercise 
+until exh and treadmill 
+exercise at 15 m/min 
+for 1 h
+Oral adminis-
+tration every 
+day after 
+swimming (at 
+17:00 h)
+FFA levels and glycogen 
+concentration levels were 
+higher in the HCA group. 
+Decreased RQ both resting 
+and exercise.
+↑
+Lim et al. 
+(102)
+F: 6
+250 mg
+Ergometer exercise for 
+60 min at 40% VO2 
+max. And then, 60% 
+VO2 max exercise until 
+exh
+2 h before 
+exercise with 
+meal for 5 d
+Decreased RQ and CO for 
+1 h of exercise. Increased 
+running time until exh.
+↑
+Lim et al. 
+(103)
+Athletes: 6
+(male)
+250 mg
+Ergometer exercise for 
+60 min at 60% VO2 
+max. And then, VO2 
+80% VO2 max until exh
+2 h before 
+exercise with 
+meal for 5 d
+HCA ingestion decreased RQ 
+and increased fat oxidation.
+↑
+Cheng et al. 
+(105)
+M: 8
+500 mg
+60 min cycling exercise 
+at 70–75% VO2 max
+With meal for 
+7 d
+HCA ingestion lowered 
+post-meal insulin response 
+with similar glucose levels 
+compared to placebo. Gly-
+cogen synthesis was about 
+one-fold higher. FAT/CD36 
+mRNA increased in skeletal 
+muscle.
+↑
+Tomita et al. 
+(104)
+M: 6
+500 mg
+Ergometer exercise at 
+40% VO2 max, and then 
+60% VO2 max until exh
+With meal for 
+5 d
+FFA levels increased and RQ 
+decreased by HCA.
+↑
+Kriketos et al. 
+(101)
+M: 10
+3.0 g
+Treadmill exercise on 
+30 min of exercise at 
+40% VO2 max, and then 
+15 min of exercise at 
+60% VO2 max, and a 
+ﬁ nal 30 min of RMR
+Each subject 
+consumed 
+15 tablets 
+(200 mg) for 
+4 d
+No difference in RQ on rest-
+ing or during exercise. HCA 
+did not affect endurance 
+performance in a post-
+absorptive state.
+↓
+F: female, M: male, exh: exhaustion, CO: carbohydrate oxidation, FFA: free fatty acid, RMR: resting metabolic rate, HCA: 
+hydroxycitric acid, RQ: respiratory quotient.
+·
+·
+·
+·
+·
+·
+·
+·
+·
+
+
+--- PAGE 9 ---
+Lipolytic Supplements Increasing Endurance Exercise Capacity
+149
+increase the exercise time to exhaustion. Similar results 
+were seen in another study involving athletes who 
+were orally administered HCA (250 mg after breakfast 
+or lunch) for a short period (103, 104). For ergogenic 
+purposes, a dose of HCA ranging from 250 to 500 mg 
+or/and a low dose for a long term may be effective in 
+increasing endurance exercise capacity. It has recently 
+been reported that oral HCA ingestion enhances glyco-
+gen synthesis in exercised human skeletal muscle. Eight 
+healthy males conducted a 60-min cycling exercise at 
+70–75% VO2 max and a crossover design repeated after 
+a 7-d washout. Volunteers were served a high-carbo-
+hydrate meal (2 g/kg, 80% carbohydrate, 8% fat, 12% 
+protein) with 500 mg HCA. As a result, HCA ingestion 
+increased glycogen synthesis and up-regulated FAT/
+CD36 mRNA in exercised human skeletal muscle (105).
+However, to the best of our knowledge, no study has 
+examined whether HCA ingestion improves the endur-
+ance exercise performance of athletes except for the 
+study by Lim et al. (103). Therefore, more studies should 
+look at the effect of HCA ingestion on the endurance 
+performance of athletes.
+Capsaicin
+The effect of capsaicin on fat metabolism
+Capsaicin is the major pungent element in red pep-
+per. It is used in food products as a spice worldwide, 
+especially in Asia. Capsaicin is passively absorbed, with 
+approximately 20% absorbed in the stomach and 80% 
+in the small intestine within 1 h after ingestion (106, 
+107). Capsaicin is believed to increase fat oxidation in a 
+dose-dependent manner by enhancing adrenal medul-
+lary catecholamine secretion (108–111). Speciﬁ c capsa-
+icin-sensitive neurons are thought to be involved in this 
+process (112). The stimulatory effect of pungent ele-
+ments in spices on oxygen consumption is likely due to 
+the involvement of transient receptor potential vanilloid 
+receptor 1 (TRPV1), which is linked to the thermogenic 
+mechanism and increased fat oxidation (113). TRPV1 
+is expressed in the sensory neurons, brain, and various 
+non-neuronal tissues; it is activated in the putative pain 
+neural circuit. Increase in lipolysis induced by capsa-
+icin is probably caused by -adrenergic stimulation. In 
+an in vitro study, Hsu and Yen (114) studied the effects 
+of capsaicin (0–250 M) on the induction of apoptosis 
+·
+Table 5. A summary of studies that examined the effects of capsaicin on endurance performance.
+Reference
+Subjects
+Dose
+Protocol
+Timing
+Key results
+Endurance 
+performance
+Kim et al. 
+(110)
+Male mice: 
+24
+3, 6, 10, 
+and 
+15 mg/kg
+Swimming exercise 
+until exh
+1, 2, and 
+3 h before 
+exercise
+Increased swimming time in a 
+dose-dependent manner, only 
+2 h before swimming. Increased 
+adrenaline and muscle glycogen 
+concentration in the CAP group.
+↑
+Oh et al. 
+(122)
+Male rats: 
+49
+6, 10, and 
+15 mg/kg
+3% body weight 
+attached to the tail, 
+swimming exercise 
+until exh
+2 h before 
+exercise
+Highest dose (15 mg/kg) 
+increased endurance performance 
+time, FFA and muscle glycogen 
+concentration by circulating 
+catecholamine.
+↑
+Luo et al. 
+(123)
+Male mice: 
+12
+Meal with 
+0.01%
+The endurance test 
+regimen was 10 m/
+min for the ﬁ rst 60 min 
+followed by 1 m/min 
+increment increases at 
+15-min intervals
+With meal 
+for 12 mo
+Up-regulated PGC-1 in skeletal 
+muscle by TRPV1 activation. 
+Improved endurance performance 
+through fat oxidation.
+↑
+Shin and 
+Moritani 
+(124)
+M: 10
+150 mg
+5-min rest and 30 min 
+exercise at 50% of 
+maximal ventilatory 
+threshold (50% VT 
+max)
+1 h before 
+exercise
+Decreased RQ (0.92 vs. 0.94) 
+and higher fat oxidation (0.17 vs. 
+0.12 g/min) during exercise in the 
+capsaicin ingestion group than in 
+the control group.
+↑
+Hwang et al. 
+(125)
+F: 6
+0.5 mg/kg
+Rest of 60 min, exercise 
+for 40 min
+With meal
+Increased post-exercise fat oxida-
+tion and FFA levels.
+↑
+Oh and 
+Ohta (120)
+Male rats: 
+24
+6, 10, and 
+15 mg/kg
+Swimming exercise 
+until exhaustion (3% 
+BW attached to the tail)
+2 h before 
+exercise
+Enhanced the endurance per-
+formance time (219%↑), epi-
+nephrine, norepinephrine and 
+FFA. Liver and muscle glycogen 
+concentration was higher in the 
+capsaicin (15 mg/kg) group.
+↑
+Matsuo et al. 
+(121)
+Male rats: 
+20
+Meal with 
+0.014%
+For 60 min at 24 m/
+min up an 8˚ incline
+With meal 
+for 7 d
+No difference in liver or muscle 
+glycogen contents.
+↓
+F: female, M: male, exh: exhaustion, RQ: respiratory quotient, FFA: free fatty acid, CAP: capsaicin, TRPV1: transient recep-
+tor potential vanilloid 1, BW: body weight, PGC-1: peroxisome proliferator-activated receptor gamma coactivator 1-alpha.
+
+
+--- PAGE 10 ---
+KIM J et al.
+150
+and inhibition of lipid accumulation in 3T3-L1 preadi-
+pocytes and adipocytes. The results showed that cap-
+saicin inhibited cell population growth of 3T3-L1 pre-
+adipocytes. Moreover, capsaicin signiﬁ cantly decreased 
+the amount of intracellular triglycerides and glycerol-
+3-phosphate dehydrogenase (GPDH) activity in 3T3-L1 
+adipocytes. Capsaicin also inhibited the expression of 
+PPAR, C/EBP, and leptin but induced upregulation of 
+adiponectin at the protein level. Therefore, the capsaicin 
+ingestion may reduce adipose tissue by both stimulating 
+lipolysis and inhibiting lipogenesis.
+Most studies show that capsaicin intake induces 
+lipolysis in humans. Yoshioka et al. (115) reported that 
+red pepper (10 g; capsaicin: 30 mg), which releases cat-
+echolamine, causes an increase in energy expenditure 
+(approximately 30%). In another experiment, red pep-
+per (10 g; capsaicin: 30 mg) added to the meal (high-fat 
+and high-carbohydrate) increased energy expenditure 
+and fat oxidation over 210 min in Japanese females 
+(116). Similarly, a mixed-diet and red pepper (6 g; cap-
+saicin: 18 mg) ingestion led to an increase in SNS activ-
+ity (117). In addition, Lejeune et al. (118) found that 
+4 wk of capsaicin (135 mg/capsaicin/d) consumption 
+increased fat oxidation in male and female subjects. 
+These results are similar to those obtained in animal 
+studies. Kawada et al. (106) reported that capsaicin 
+intake (0.6 mg/kg) improved lipolysis by enhancing the 
+function of the adrenal medulla through sympathetic 
+activation of the central nervous system. In addition, 
+capsaicin receptor agonist reduced the body fat in obese 
+rats. Moreover, capsaicin (200 g/kg) has been reported 
+to increase lipolysis in a dose-dependent manner, 
+thereby enhancing catecholamine secretion from the 
+adrenal medulla in rats (119). Thus, capsaicin stimu-
+lates catecholamine production by the TRPV1 receptor, 
+resulting in enhanced fat oxidation through an increase 
+in SNS activity.
+Capsaicin and endurance performance
+It is well known that catecholamine secretion stim-
+ulates adipose tissue lipolysis and intramuscular tri-
+glyceride breakdown. This process promotes fat oxida-
+tion and prevents muscle glycogen depletion, thereby 
+enhancing exercise capacity (see Table 5). Many studies 
+have reported that the physiological effect of capsaicin 
+is similar to that of caffeine in increasing plasma cat-
+echolamine levels (120). Kim et al. (110) showed that 
+oral administration of capsaicin (10 mg/kg) 2 h before 
+exercise increased the swimming endurance capacity of 
+mice. After 30 min of swimming, the muscle glycogen 
+concentration was higher in the capsaicin group than 
+in the control group. This increase was the result of 
+increased fat oxidation due to capsaicin-induced adrenal 
+catecholamine secretion. However, Matsuo et al. (121) 
+reported that meal with capsaicin (0.014%) consump-
+tion does not affect glycogen contents in the liver or 
+skeletal muscle of rats (n20) before or after exercise. 
+They did not ﬁ nd any studies that supported their ﬁ nd-
+ings at that time. Nevertheless, there can be no doubt 
+that capsaicin enhances endurance performance.
+Oh et al. (122) also conﬁ rmed the effects of low and 
+high (5, 10, and 15 mg) oral doses of capsaicin on the 
+endurance capacity of rats. These results indicate that 
+high doses (15 mg/kg) 2 h prior to exercise enhance 
+endurance performance and induce the glycogen-saving 
+effect. Luo et al. (123) showed the long-term (4 mo) 
+effect of dietary 0.01% capsaicin in mice. They showed 
+that TRPV1 activation by dietary capsaicin improves 
+energy metabolism and exercise endurance, which are 
+likely to be driven by TRPV1-mediated Ca2	-dependent 
+upregulation of PGC-1 and its target genes involved in 
+mitochondrial respiration and fatty acid oxidation in the 
+skeletal muscle. Importantly, these effects of capsaicin 
+were absent in TRPV1-deﬁ cient mice (123).
+In human studies, Shin and Moritani (124) reported 
+that capsaicin (150 mg) ingestion 1 h before aerobic 
+exercise among untrained males led to signiﬁ cantly 
+lower RQ (0.92 vs. 0.94) and higher fat oxidation (0.17 
+vs. 0.12 g/min) during exercise in the capsaicin inges-
+tion group than in the control group. We also previ-
+ously demonstrated that a standard meal plus red pep-
+per with 200 mL water (10 g; capsaicin: 0.5 mg/kg) 
+induced post-exercise fat oxidation and increased 
+plasma FFA level in young untrained women (125). 
+Ingestion of capsinoids, which are capsaicin-like com-
+pounds in a non-pungent type of red pepper derived 
+from the CH-19 sweet pepper (107, 112, 126), has 
+been found to enhance fat metabolism in humans (127, 
+128). Josse et al. (129) examined how ingestion of cap-
+sinoids (10 mg) affected energy expenditure, lipid oxida-
+tion, and blood metabolites at rest and during moderate 
+intensity exercise in untrained men. The subjects had 
+ingested the capsinoid capsules 30 min prior to exer-
+cise. It was found that ingestion of 10 mg of capsinoid 
+increased adrenergic activity and energy expenditure 
+and resulted in a shift in substrate utilization toward 
+lipid at rest. However, the effect was not shown during 
+exercise. Although many researchers are interested in 
+the effect of capsaicin or capsinoids on thermogenesis, 
+to date, very little research has been conducted on their 
+effect on the endurance performance of athletes. Thus, 
+further studies are needed to clarify the dose and tim-
+ing of capsaicin ingestion before exercise for effectively 
+improving the endurance performance of athletes.
+Ginseng
+Effect of ginseng on fat metabolism
+Ginseng, the root of Panax ginseng CA Meyer, has 
+been traditionally used for thousands of years in Asian 
+countries such as Korea, Japan, and China (130). Panax 
+means “all treat” in Greek, and the Chinese characters 
+for ginseng were derived from the human-like shape of 
+the ginseng root (131). Many reports have shown that 
+ginseng has many pharmacological effects on the CNS, 
+immunomodulatory, neuroprotective, anti-oxidative, 
+antitumor, and cardiovascular systems (132–137). 
+These beneﬁ cial effects are attributed to ginsenosides 
+(Rg1, Rb1, and Rg2) and saponin. In particular, ginsen-
+osides have been shown to constitute a large proportion 
+of “red ginseng.” Red ginseng is produced by steaming 
+and drying ginseng. During this heat process, ginsen-
+
+
+--- PAGE 11 ---
+Lipolytic Supplements Increasing Endurance Exercise Capacity
+151
+osides undergo chemical changes resulting in a com-
+pound with the potential to induce speciﬁ c physiologic 
+activities. Ginseng is absorbed in the intestines (the 
+absorption rate is as low as 1 to 3.7%). Most ginsen-
+osides are metabolized in the stomach (acid hydrolysis) 
+and in the intestine (bacterial hydrolysis) or transformed 
+to other ginsenosides (138).
+Hwang et al. (139) showed that the ginsenosides Rh2 
+and Rh3 effectively inhibited adipocyte differentiation 
+via PPAR inhibition in a dose-dependent manner (0, 
+20, and 40 m). The ginsenoside Rh2 stimulated acti-
+vated protein kinase (AMPK) in 3T3-L1 adipocytes. 
+In addition, the ginsenoside Rh2 activated CPT-I and 
+UCP-2, and this activation was halted by AMPK inhibi-
+tor treatment. AMPK and PPAR are the major proteins 
+involved in the regulation of adipocyte differentiation 
+(140). These results suggest that the action of ginseng 
+in increasing fat metabolism involves the AMPK signal-
+ing pathway and PPAR inhibition (140–142).
+Many studies have reported that ginseng intake has 
+an anti-obesity effect via fat metabolism. Intraperitoneal 
+injection of ginseng extract for 10 d (5 mg) not only 
+Table 6. A summary of studies that examined the effects of ginseng on endurance performance.
+Reference
+Subjects
+Dose
+Protocol
+Timing
+Key results
+Endurance 
+performance
+Avakian et 
+al. (148)
+Male rats: 
+30
+2 mg/100 g
+Swimming exercise for 
+90 min
+1 h before 
+exercise 
+via i.p. 
+injections
+Increased plasma glucose 
+levels and fatty oxidation 
+in skeletal muscle.
+↑
+Tang et al. 
+(149)
+Male 
+mice: 120
+Low-dose (0.05 
+mg/kg), interme-
+diate-dose (0.1 
+mg/kg), high-dose 
+(0.5 mg/kg)
+Swimming exercise until 
+exh using weight-loaded 
+method
+Before 
+exercise for 
+2 wk
+Evaluated biochemi-
+cal parameter related 
+to fatigue, such as SUN, 
+LDH, SOD, MDA, LA and 
+liver glycogen. Increased 
+exercise time.
+↑
+Hwang et 
+al. (152)
+Male 
+mice: 42
+1 g/kg (19.64 mg 
+ginsenosides/g RG 
+extract)
+Treadmill exercise at 
+25 m/min, slope at 8˚ for 
+1 h (65–70% VO2 max) 
+using the whole body 
+chamber
+1 h before 
+exercise for 
+2 wk
+Promoted fat oxidation 
+(initial 20 min of the 1 h 
+exercise) and a glycogen-
+sparing effect during 
+exercise.
+↑
+Kim et al. 
+(154)
+M: 7
+2 g
+Treadmill was started 
+at 2.74 km/h (1.7 mph) 
+and at a gradient (or 
+incline) of 10%. At 
+3 min intervals the 
+incline of the treadmill 
+increased by 2%
+3 times 
+a day for 
+8 wk
+Increased exercise dura-
+tion until exhaustion by 
+1.5 min. Elevated MDA, 
+CAT, and SOD.
+↑
+Liang et al. 
+(156)
+M: 15, F: 
+14
+1,350 mg/d 
+(450 mg/cap-
+sule
+3 times)
+Ergometer exercise until 
+exh (30 W every 5 min)
+With meal 
+for 30 d
+Improved maximal 
+MBP (form 11312 
+to 10914 mmHg) 
+and endurance time by 
+7 min.
+↑
+Biondo et 
+al. (153)
+M: 10
+1,125 mg 
+(375 mg
+3 
+capsules/d)
+Ergometer exercise at 
+6 min of warm-up at 
+1.5 kp and 50 r/min, fol-
+lowed by 15 min at 80% 
+VT, and then 15 min at 
+100% VT (60 to 70 r/
+min)
+With meal 
+for 5 wk
+No difference in total 
+white WBC counts, 
+lactate, insulin, cortisol or 
+growth hormone.
+↓
+Wang et 
+al. (150)
+Male 
+mice: 24
+40, 50, 100, 160, 
+and 200 mg/kg
+Swimming exercise until 
+exh
+1 h before 
+exercise
+Improved the physi-
+ological markers (GPx, 
+CK, LDH, and MDA) for 
+fatigue.
+↑
+Wang and 
+Lee (151)
+Male rats
+10 and 20 mg/kg
+Treadmill exercise until 
+exh
+Before 
+exercise
+Increased running time 
+and FFA in plasma levels. 
+Liver and muscle glycogen 
+concentration was higher.
+↑
+F: female, M: male, exh: exhaustion, SUN: serum urea nitrogen, LDH: lactic dehydrogenase, SOD: superoxide dismutase, 
+MDA: malondialdehyde, LA: blood lactic, CAT: catalase, MBP: mean blood pressure, WBC: white blood cell, GPx: glutathione 
+peroxidase, CK: creatine phosphokinase, LDH: lactic dehydrogenase, MDA: malondialdehyde, FFA: free fatty acid.
+·
+
+
+--- PAGE 12 ---
+KIM J et al.
+152
+inhibited mRNA levels of acyl-CoA oxidase, a rate-limit-
+ing enzyme for PPAR-mediated peroxisomal fatty acid 
+-oxidation, but also inhibited the induction of PPAR 
+target genes in mice (143). Song et al. (144) found a 
+relationship between the anti-obesity effects of Korean 
+red ginseng extract and hepatic gene expression proﬁ les 
+in mice fed a high-fat diet for the long term. Levels of 
+leptin, adiponectin, and insulin, which carry out critical 
+functions in energy and lipid metabolism, were impaired 
+profoundly by the high-fat diet. However, Korean red 
+ginseng extract treatment brought these levels back 
+to normal. This result is supported by Lee et al. (145), 
+who showed the effect of Korean red ginseng (0.5–5%) 
+in mice fed a high-fat diet for 8 wk. They found that as 
+compared with the untreated group, obese mice with 
+high-fat-diet-induced obesity fed with ginseng showed 
+reduced adipose tissue mass (49–60%) and adipocyte 
+size. Li et al. (146) showed that consumption of ginseng 
+(0.5 g/kg) with a high-fat diet for 14 wk reduced body 
+fat mass and improved glucose tolerance and insulin 
+sensitivity. In addition, the expression of several tran-
+scription factors associated with adipogenesis (C/EBP- 
+and PPAR) had decreased the adipose tissue. In a 
+human study, Park et al. (147) reported that long-term 
+consumption (3–5 y) of red ginseng (about 1,600 mg) 
+had a positive effect on obesity and levels of blood lipids. 
+The results also showed that the long-term red ginseng 
+consumption group had lower obesity ratio (%), TG con-
+centration, triglyceride levels, and systolic blood pres-
+sure than the non-consumption group. Taken together, 
+the ginseng ingestion may reduce body weight and adi-
+pose tissue by both stimulating lipolysis and inhibiting 
+lipogenesis.
+Ginseng and endurance performance
+Avakian et al. (148) examined the effect of acute gin-
+seng extract (2 mg/100 g) administration on endurance 
+performance in rats. During swimming exercise, the gin-
+seng extract-treated animals were found to have higher 
+blood glucose levels and markedly lower concentrations 
+of circulating lactic acid than the control rats. The 
+plasma FFA level was also lower in the ginseng extract-
+treated animals after 30 min of swimming. They sug-
+gested that the ginsenosides signiﬁ cantly alter the mech-
+anisms involved in fuel homeostasis during prolonged 
+exercise (148). These positive effects are similarly seen 
+in long-term ingestion. In a study by Tang et al. (149), 
+2 wk after 20(R)-ginsenoside Rg3 was administered 
+intranasally to mice at 3 different doses, the anti-fatigue 
+effect of 20(R)-Rg3 was evaluated by a weight-loaded 
+swimming test and biochemical parameters related to 
+fatigue. The results showed that the intermediate dose 
+(0.1 mg/kg) and high dose (0.5 mg/kg) signiﬁ cantly 
+increased exercise time in the weight-loaded swimming 
+test. In a similar method, 15 d of swimming exercise 
+with isolated ginseng polysaccharide (40, 50, 100, 160, 
+and 200 mg/kg) ingestion had anti-fatigue activity, also 
+reﬂ ected in the effects on the physiological marker (GPx: 
+glutathione peroxidase, CK: creatine phosphokinase, 
+LDH: lactic dehydrogenase, MDA: malondialdehyde) for 
+fatigue in mice (150). In addition, Wang and Lee (151) 
+showed a short-term (4 d) ginseng (10, 20 mg/kg/d) 
+treatment effect in mice. These results indicate that gin-
+seng treatment enhances exercise endurance (time) and 
+liver and skeletal muscle glycogen contents were higher 
+than in the control group after exhaustive exercise. Our 
+recent study involved the use of a metabolic chamber, 
+and administration of red ginseng (1 g/kg, including 
+19.64 mg ginsenosides/g red ginseng extract) treat-
+ment 1 h before exercise training. The combination of 
+ginseng with 2 wk of endurance training (70% of VO2 
+max) increased fat oxidation in the initial 20-min phase 
+in mice, and a glycogen-saving effect was observed dur-
+ing the 1-h running exercise (152).
+In human studies, Biondo et al. (153) showed that 
+5 wk of meal with ginseng (1,125 mg/d; 375 mg
+ 
+capsules/d) consumption did not affect immune 
+response (neutrophils, monocytes, or lymphocytes) or 
+exercise-induced changes in the plasma concentra-
+tion of insulin, cortisol, growth hormone or lactate in 
+healthy men. They reported that ginseng had limited 
+effects on the immune response to a moderate bout of 
+acute exercise.
+On the other hand, Kim et al. (154) showed that 
+administration of 2 g of Panax ginseng extract 3 times 
+a day for 8 wk led to an increase in exercise duration 
+until exhaustion in healthy males. The lower dose of 
+ginseng (1 g/d) than that (2 g/d) used in the study by 
+Kim et al. also increased maximal oxygen consumption 
+and the post-exercise recovery period (155). Liang et al. 
+(156) also used a similar low dose of Panax ginseng and 
+found that administration of 1,350 mg/d Panax ginseng 
+for 30 d improved endurance exercise time to exhaus-
+tion in untrained young adults. Taken together, chronic 
+ginseng administration may have an ergogenic effect 
+because of enhanced fat oxidation during exercise (see 
+Table 6). Further studies are needed to clarify the dose 
+and timing of ginseng administration on the endurance 
+performance of athletes.
+Taurine
+The effect of taurine on fat metabolism
+Taurine (2-amino ethylsulfonic acid), one of the most 
+abundant amino acid-like compounds in plasma and 
+various tissues in mammalian species, is not used for 
+protein synthesis (157). The intracellular concentra-
+tion of taurine ranges between 5 and 20 mol/g wet 
+weight in the tissues of many organs such as the brain, 
+heart, and skeletal muscle (157, 158). The endogenous 
+synthesis of taurine is highly variable among individu-
+als depending on their nutritional state, the amount 
+of protein intake, and cysteine availability in the body 
+(159). Endogenous synthesis occurs in the liver via the 
+cysteine sulﬁ nic acid pathway (159). There is a body of 
+both in vivo and in vitro studies on the physiological and 
+pharmacological role of taurine (160). Taurine’s effect 
+on fat metabolism has gained attention only recently. 
+Ueki and Stipanuk (161) examined whether the path-
+ways for taurine synthesis are present in the adipocyte. 
+They used 3T3-L1 cells undergoing adipogenic conver-
+sion and fat from rats fed diets with varied sulfur-amino 
+·
+
+
+--- PAGE 13 ---
+Lipolytic Supplements Increasing Endurance Exercise Capacity
+153
+acid content. They found that genes related to taurine 
+synthesis increased during adipogenic differentiation of 
+3T3-L1 cells, meaning taurine metabolism could alter 
+fat metabolism. Fukuda et al. (162) showed that rats 
+fed a taurine-supplemented diet experienced enhanced 
+hepatic fatty acid oxidation. This result is supported by 
+Bonﬂ eur et al. (163), who showed that drinking water 
+supplemented with 2.5% taurine reduced liver triglycer-
+ide content and body fat in obese male rats by increas-
+ing PPAR mRNA expression, which in turn increases 
+lipid oxidation through CPT-Ia gene expression. Simi-
+larly, another study showed that increased hepatic CPT-
+Ia protein expression in mice fed a high-fat diet lowered 
+hepatic triglyceride content and increased fatty acid oxi-
+dation and ATP production (164). Taken together, tau-
+rine ingestion may reduce adipose tissue by both stimu-
+lating lipolysis and inhibiting lipogenesis.
+Taurine and endurance performance
+Some studies have shown that taurine supplemen-
+tation improved endurance capacity in animals and 
+humans (see Table 7). In their animal study, Manabe 
+et al. (165) showed that chronic taurine (200 mg in 
+2 mL water twice a day at 9:00 and 17:00) treatment 
+in rats decreased fat accumulation and the blood level 
+of triglycerides, resulting in improved fat utilization. In 
+addition, after exercise, the blood concentration of lactic 
+acid was lower in the chronic taurine treatment group 
+than in the control group. These results indicated that 
+taurine treatment is useful for reducing physical fatigue. 
+Yatabe et al. (166) also showed that taurine administra-
+tion (0.5 g/kg/d for 2 wk) resulted in increased treadmill 
+running time to exhaustion in rats. Likewise, in healthy 
+young men, cycling time to exhaustion was found to 
+improve with taurine supplementation at a daily dose of 
+6 g (2 g three times a day) (167). Similar, Ishikura et al. 
+(168) showed the effect of taurine (3% taurine solution 
+in drinking water) supplementation on the alterations 
+in amino acid content in skeletal muscle with exercise 
+in rats. As a result, taurine ingestion decreases the con-
+centration of threonine, serine and glycine. Therefore, 
+the reduction of the amino acids utilized for gluconeo-
+genesis induced by taurine might be one of possible 
+mechanisms behind the endurance performance. After 
+supplementation, the change in taurine concentration 
+showed a positive correlation with changes in exercise 
+time to exhaustion and maximal workload. In trained 
+male subjects, the running time to exhaustion has been 
+found to improve with taurine supplementation (4 g/d 
+for 2 wk) (169). A lower oral dose of taurine (1 g) than 
+that used by Zhang et al. (167) and Lee et al. (169) has 
+been also shown to improve the maximal 3-km time trial 
+performance of trained middle-distance runners (170). 
+Table 7. A summary of studies that examined the effects taurine on endurance performance.
+Reference
+Subject
+Dose
+Protocol
+Timing
+Key results
+Endurance 
+performance
+Manabe et 
+al. (165)
+Male rats: 31
+400 mg
+Treadmill 
+exercise for 1 h 
+(speed, 20 m/
+min)
+Twice a day 
+09:00 and 
+17:00, for 
+4 wk
+Decreased fat accumulation and 
+blood levels of cholesterol and 
+triglyceride. Improved insulin 
+resistance and utilization of fat 
+and glucose.
+↑
+Yatabe et al. 
+(166)
+Male rats: 50
+0.5 g/kg
+Treadmill exer-
+cise until exh
+Every morn-
+ing for 2 wk
+Increased taurine concentration 
+in skeletal muscle and running 
+time to exh.
+↑
+Zhang et al. 
+(167)
+M: 11
+6 g
+Ergometer 
+exercise until 
+exh
+With meal 
+for 7 d
+Increased VO2 max, exer-
+cise time to exh and maximal 
+workload in test with taurine 
+supplementation.
+↑
+Lee et al. 
+(169)
+Athletes: 24 
+(runners)
+4 g
+Ergometer 
+exercise until 
+exh (at 75% 
+VO2 max)
+With meal 
+for 2 wk
+Improved running time to exh. 
+Decreased lactate and ammonia 
+concentration.
+↑
+Balshaw et 
+al. (170)
+Athletes: 8 
+(middle distance 
+runners)
+1 g
+Treadmill in 
+3-km time trial
+2 h before 
+exercise
+Improved 3-km time trail perfor-
+mance (1.7% ↑).
+↑
+Rutherford 
+et al. (171)
+Athletes: 11 
+(cyclists)
+1.66 g
+Ergometer exer-
+cise at 15-min 
+intervals dur-
+ing the 90 min
+1 h before 
+exercise
+Increased total fat oxidation dur-
+ing submaximal cycling in endur-
+ance-trained cyclists. But acute 
+ingestion of taurine before exer-
+cise did not enhance time-trials.
+↑
+Ishikura et 
+al. (168)
+Male rats: 42
+3% taurine 
+solution in 
+drinking 
+water
+Treadmill exer-
+cise at 21.7 m/
+min until exh
+Before exer-
+cise for 2 or 
+3 wk
+Increased running time to exh, 
+and reduced amino acids in skel-
+etal muscle.
+↑
+M: male, exh: exhaustion.
+·
+·
+
+
+--- PAGE 14 ---
+KIM J et al.
+154
+However, to date, few studies have looked at the effect of 
+taurine ingestion on endurance performance, especially 
+as related to increased fat metabolism. Rutherford et al. 
+(171) examined whether acute taurine ingestion before 
+prolonged cycling improved time-trial performance and 
+altered whole-body fuel utilization. Eleven endurance-
+trained male cyclists completed 3 trials in a randomized, 
+crossover, blinded study where the subjects consumed 
+a non-caloric sweetened beverage with either 1.66 g of 
+taurine or nothing added (control and placebo groups, 
+respectively) 1 h before exercise. The participants then 
+cycled at an average 66.5% VO2 max for 90 min, fol-
+lowed immediately by a time-trial performance. The tau-
+rine ingestion group showed a 16% increase in total fat 
+oxidation over the 90-min exercise period as compared 
+with the control and placebo groups. On the other hand, 
+the acute ingestion of taurine before exercise did not 
+enhance time-trial performance in endurance-trained 
+cyclists. Of note, taurine is basically an endogenous sub-
+stance, production of which usually satisﬁ es the require-
+ments, but it should be taken especially by athletes 
+loaded by a higher volume of exercise. Taken together, 
+there is insufﬁ cient evidence related to the effect of tau-
+rine on fat metabolism associated with exercise perfor-
+mance, and further studies are needed to elucidate the 
+role of taurine in fat metabolism during exercise.
+Silk Peptides
+The effect of silk peptides on fat metabolism
+Silk peptides (SPs) have been consumed for many 
+years in Asian countries (172). SP comprises biopoly-
+mers from the cocoons produced by silkworms for pro-
+tection from the environment during metamorphosis to 
+the mature moth stage (172). In recent years, additional 
+applications of silk have been developed, mainly in the 
+ﬁ eld of biotechnology and biomedicine. The versatility 
+of these new implementations can be attributed to the 
+singularity of the molecular structure of silk (173). Pro-
+teins such as ﬁ broin and sericin are the main constitu-
+ents of silk, with ﬁ broin constituting 70–80% and seri-
+cin, 20–30% of the total cocoon weight (172, 174). SP 
+is a natural biomolecule used in powder or extract form 
+that does not cause any side effects (175, 176). Some 
+recent studies have reported the beneﬁ ts of SP treatment 
+in body weight and health management (177–179). 
+Recently, Lee et al. (180) assessed the effect of SP on adi-
+pogenesis in 3T3-L1 pre-adipocyte in vitro and its action 
+against obesity in vivo. SP treatment (1 mg/mL	0.2 nM 
+insulin) increased glucose uptake (1242.5%) via up-
+regulation of GLUT4 and decreased fat accumulation 
+via the up-regulation of leptin. In addition, it inhibited 
+the differentiation of preadipocytes and adipogenesis by 
+modulating the signal transduction pathway (PPAR 
+and Acrp30) and improved high-fat diet-induced obe-
+sity by reducing lipid accumulation and the size of 
+adipocytes (86.12.5%). Additionally, an 8-wk-long 
+SP (5% silk peptides 	 normal diet) treatment inhib-
+ited both preadipocyte differentiation and adipogenesis, 
+and reduced the body fat weight of rats with high-fat 
+diet-induced obesity (180). Furthermore, 4 wk of SP 
+(0.1–0.2 g/kg) treatment not only regulated blood glu-
+cose level and hyperlipidemia and but also decreased the 
+levels of blood triglycerides and LDL cholesterol (181, 
+182). Taken together, SP ingestion may have anti-obe-
+sity effects through the inhibition of lipogenesis but the 
+evidence for the lipolysis effect should be further con-
+ﬁ rmed through in vivo and in vitro studies.
+Silk peptides and endurance performance
+Using a metabolic chamber, we recently reported that 
+SP (800 mg/kg) ingestion increased whole body resting 
+energy expenditure, leading to fat oxidation in exercise-
+trained mice. In addition, fat oxidation was signiﬁ cantly 
+higher in the SP ingestion group than in the control 
+group (183). In another study, we showed that SPs with 
+endurance training led to higher fat oxidation in the ini-
+tial 20-min phase and the glycogen content was signiﬁ -
+cantly higher during the recovery period in the SP inges-
+tion group than in the control group (for 1-h recovery 
+time) (184). Besides, Shin et al. (185) reported that SP 
+ingestion increased physical stamina in a dose-depen-
+dent (50, 150, or 500 mg/kg) manner during maxi-
+mum swimming exercise in mice. A glycogen-sparing 
+effect and prevention of tissue damage (creatine phos-
+phokinase, aspartate transaminase, or lactate) were 
+observed with SP ingestion (186). Of note, SP has been 
+recently linked to improved endurance performance. 
+Thus, we anticipate that SP is one of the supplements 
+that has an ergogenic aid effect. The effect of SPs on the 
+endurance performance of athletes needs to be clariﬁ ed 
+in the near future.
+Octacosanol
+The effect of octacosanol on fat metabolism
+Octacosanol (CH3(CH2)26CH2OH), a major compo-
+nent of the fatty alcohol mixture policosanol, is com-
+monly found in the natural wax extracted from various 
+plant parts including fruits, leaves, and barks (187). 
+It has been suggested that octacosanol and policosa-
+nol decrease cholesterol by downregulating the cel-
+lular expression of 3-hydroxy-3-methylglutaryl-CoA 
+reductase (188, 189). It is well known that a number 
+of statins (atorvastatin, ﬂ uvastatin, lovastatin, pitava-
+statin, pravastatin, rosuvastatin and simvastatin) are 
+reversible and competitive inhibitors of HMG-CoA 
+reductase. HMG-CoA reductase catalyzes the reduction 
+of HMG-CoA to mevalonate, which is the rate-limiting 
+step in cholesterol synthesis (190).
+Kirk (191) reported that octacosanol intake increased 
+fat metabolism in order to prevent glycogen depletion. 
+Kato et al. (192) showed that 20 d of an octacosanol 
+(10 g/kg diet) supplemented high-fat diet reduced adi-
+pose tissue weight and serum triacylglycerol levels and 
+enhanced the levels of serum fatty acid, suggesting that 
+octacosanol suppresses lipid accumulation by increas-
+ing the total oxidation rate of fatty acid in the muscles. 
+Zuyuan et al. (193) also showed the long-term (12 wk) 
+effects of dietary octacosanol (0.2% [wt/wt]) on choles-
+terol with 1% ([wt/wt] octacosanol) in plasma lipids in 
+apolipoprotein E-knockout mice. They observed that a 
+long-term octacosanol diet reduced the levels of plasma 
+·
+
+
+--- PAGE 15 ---
+Lipolytic Supplements Increasing Endurance Exercise Capacity
+155
+triacylglycerol by approximately 70% by week 5 of the 
+study, as compared with the control group. However, to 
+date, there is very little evidence regarding the effect of 
+octacosanol on stimulating lipolysis in in vivo or in vitro 
+studies.
+Octacosanol and endurance performance
+The long-term (4 wk) effects of an octacosanol 
+(0.75%)-supplemented diet on endurance performance 
+and related biochemical parameters in exercise-trained 
+rats were evaluated in one study (194). Signiﬁ cantly 
+higher creatine phosphokinase activity in the plasma 
+(approximately 44% increase) and citrate synthase 
+activity in the muscle (approximately 16% increase) 
+were observed in the group with dietary supplementa-
+tion of octacosanol than in the sedentary control and 
+exercise control groups. Furthermore, as compared 
+with other groups, the exercise-with-octacosanol group 
+showed increased running time until exhaustion and 
+glycogen concentration at rest. They suggested that the 
+ergogenic properties of octacosanol include the sparing 
+of muscle glycogen stores by increasing fat oxidation. 
+Meanwhile, these results were also found in human 
+studies. To date, there is a lack of sufﬁ cient evidence 
+regarding the efﬁ cacy of octacosanol on endurance per-
+formance in humans, although it possibly has an ergo-
+genic effect.
+Closing Remarks
+Figure 1 proposes the lipolysis mechanisms of each 
+supplement of caffeine, green tea, garcinia cambogia 
+(HCA), L-carnitine, capsaicin, ginseng and taurine. Silk 
+peptides and octacosanol may inhibit lipogenesis rather 
+than stimulate lipolysis. Based on the data in this review, 
+caffeine and green tea extract improve endurance per-
+formance and enhance fat oxidation. For L-carnitine, 
+although some studies show its potential to improve 
+endurance performance associated with increasing fat 
+oxidation, the data on the practical implications need to 
+be further elucidated, especially for athletes. In future, 
+mixed supplementations, e.g., caffeine, L-carnitine, and 
+silk peptide, which may maximize fat utilization during 
+exercise, could be developed for athletes.
+Acknowledgments
+Jisu Kim and Jonghoon Park contributed equally to 
+this work.
+This paper was written as part of Konkuk University’s 
+research support program for its faculty on sabbatical 
+leave in 2013.
+REFERENCES
+1) 
+Spriet LL. 2014. New insights into the interaction 
+of carbohydrate and fat metabolism during exercise. 
+Sports Med 1: 87–96.
+2) 
+Spriet LL, Watt MJ. 2003. Regulatory mechanisms in 
+the interaction between carbohydrate and lipid oxida-
+tion during exercise. Acta Physiol Scand 4: 443–452.
+3) 
+Higgins JP, Babu KM. 2013. Caffeine reduces myocar-
+dial blood ﬂ ow during exercise. Am J Med 126: 730.
+4) 
+Gurley BJ, Steelman SC, Thomas SL. 2015. Multi-ingre-
+dient, caffeine-containing dietary supplements: history, 
+safety, and efﬁ cacy. Clin Ther 1: 275–301.
+5) 
+Jeukendrup AE, Randell R. 2011. Fat burners: nutri-
+tion supplements that increase fat metabolism. Obes 
+Rev 12: 841–851.
+Fig. 1. Proposed lipolysis mechanisms of each supplement of caffeine, green tea, garcinia cambogia (HCA), L-carnitine, 
+capsaicin, ginseng and taurine. Number in parentheses indicates reference.
+
+
+--- PAGE 16 ---
+KIM J et al.
+156
+6) 
+Graham TE. 2001. Caffeine and exercise: metabolism, 
+endurance and performance. Sports Med 31: 785–807.
+7) 
+Butcher RW, Baird CE, Sutherland EW. 1968. Effects 
+of lipolytic and antilipolytic substances on adenosine 
+3′,5′-monophosphate levels in isolated fat cells. J Biol 
+Chem 25: 1705–1712.
+8) 
+Leijten PA, van Breemen C. 1984. The effects of caf-
+feine on the noradrenaline-sensitive calcium store in 
+rabbit aorta. J Physiol 357: 327–339.
+9) 
+Acheson KJ, Zahorska-Markiewicz B, Pittet P, Ananth-
+araman K, Jéquier E. 1980. Caffeine and coffee: their 
+inﬂ uence on metabolic rate and substrate utilization in 
+normal weight and obese individuals. Am J Clin Nutr 
+33: 989–997.
+10) 
+Jeukendrup AE, Randell R. 2011. Fat burners: nutri-
+tion supplements that increase fat metabolism. Obes 
+Rev 12: 841–851.
+11) 
+Kim JS, Jeon YR, Hwang HJ, Suh HJ, Lim KW. 2011. 
+Effects of oral caffeine and capsaicin administration on 
+energy expenditure and energy substrates utilization in 
+resting rats. J Exerc Nutr Biochem 15: 183–189.
+12) 
+Kim AR, Yoon BK, Park H, Seok JW, Choi H, Yu JH, 
+Choi Y, Song SJ, Kim A, Kim W. 2016. Caffeine inhib-
+its adipogenesis through modulation of mitotic clonal 
+expansion and the AKT/GSK3 pathway in 3T3-L1 adi-
+pocytes. BMB Rep 49: 111–115.
+13) 
+Graham TE, Spriet LL. 1991. Performance and meta-
+bolic responses to a high caffeine dose during pro-
+longed exercise. J Appl Physiol 71: 2292–2298.
+14) 
+Costill DL, Dalsky GP, Fink WJ. 1978. Effects of caffeine 
+ingestion on metabolism and exercise performance. 
+Med Sci Sports 10: 155–158.
+15) 
+Bruce CR, Anderson ME, Fraser SF, Stepto NK, Klein 
+R, Hopkins WG, Hawley JA. 2000. Enhancement of 
+2000-m rowing performance after caffeine ingestion. 
+Med Sci Sports Exerc 11: 1958–1963.
+16) 
+Kovacs EM, Stegen JHCH, Brouns F. 1998. Effect of caf-
+feinated drinks on substrate metabolism, caffeine excre-
+tion, and performance. J Appl Physiol 85: 709–715.
+17) 
+Graham TE, Spriet LL. 1995. Metabolic, catecholamine, 
+and exercise performance responses to various doses of 
+caffeine. J Appl Physiol 78: 867–874.
+18) 
+Erickson MA, Schwarzkopf RJ, McKenzie RD. 1987. 
+Effects of caffeine, fructose, and glucose ingestion on 
+muscle glycogen utilization during exercise. Med Sci 
+Sports Exerc 19: 579–583.
+19) 
+Spriet LL, MacLean DA, Dyck DJ, Hultman E, Cederblad 
+G, Graham TE. 1992. Caffeine ingestion and muscle 
+metabolism during prolonged exercise in humans. Am J 
+Physiol 262: 891–898.
+20) 
+Cruz RS, de Aguiar RA, Turnes T, Guglielmo LG, Beneke 
+R, Caputo F. 2015. Caffeine affects time to exhaustion 
+and substrate oxidation during cycling at maximal lac-
+tate steady state. Nutrients 30: 5254–5264.
+21) 
+Wells CL, Schrader TA, Stern JR, Krahenbuhl GS. 1985. 
+Physiological responses to a 20-mile run under three 
+ﬂ uid replacement treatments. Med Sci Sports Exerc 17: 
+364–369.
+22) 
+Perkins R, Williams MH. 1975. Effect of caffeine upon 
+maximal muscular endurance of females. Med Sci 
+Sports 7: 221–224.
+23) 
+Graham TE, Battram DS, Dela F, El-Sohemy A, Thong 
+FS. 2008. Does caffeine alter muscle carbohydrate 
+and fat metabolism during exercise? Appl Physiol Nutr 
+Metab 33: 1311–1318.
+24) 
+Goldstein ER, Ziegenfuss T, Kalman D, Kreider R, 
+Campbell B, Wilborn C, Taylor L, Willoughby D, Stout 
+J, Graves BS, Wildman R, Ivy JL, Spano M, Smith AE, 
+Antonio J. 2010. International society of sports nutri-
+tion position stand: caffeine and performance. J Int Soc 
+Sports Nutr 27: 5.
+25) 
+Ormsbee MJ, Bach CW, Baur DA. 2014. Pre-exercise 
+nutrition: the role of macronutrients, modiﬁ ed starches 
+and supplements on metabolism and endurance perfor-
+mance. Nutrients 29: 1782–1808.
+26) 
+Chen CK, Muhamad AS, Ooi FK. 2012. Herbs in exer-
+cise and sports. J Physiol Anthropol 31: 4.
+27) 
+Graham TE. 2001. Caffeine and exercise: metabolism, 
+endurance and performance. Sports Med 31: 785–807.
+28) 
+Tarnopolsky MA. 1994. Caffeine and endurance per-
+formance. Sports Med 18: 109–125.
+29) 
+Nehlig A, Debry G. 1994. Caffeine and sports activity: 
+a review. Int J Sports Med 15: 215–223.
+30) 
+Pasman WJ, van Baak MA, Jeukendrup AE, de Haan 
+A. 1995. The effect of different dosages of caffeine 
+on endurance performance time. Int J Sports Med 16: 
+225–230.
+31) 
+Butts NK, Crowell D. 1985. Effect of caffeine ingestion 
+on cardiorespiratory endurance in men and women. 
+Res Q Exerc Sport 56: 301–305.
+32) 
+Astorino TA, Roberson DW. 2010. Efﬁ cacy of acute caf-
+feine ingestion for short-term high-intensity exercise 
+performance: a systematic review. J Strength Cond Res 
+24: 257–265.
+33) 
+Spriet LL. 2014. Exercise and sport performance with 
+low doses of caffeine. Sports Med 44: 175–184.
+34) 
+World Anti-doping Agency. The 2015 monitoring 
+program of WADA, https://www.wada-ama.org/en/
+what-we-do/prohibited-list
+35) 
+Van Thuyne W, Delbeke FT. 2006. Distribution of caf-
+feine levels in urine in different sports in relation to 
+doping control before and after the removal of caf-
+feine from the WADA doping list. Int J Sports Med 27: 
+745–750.
+36) 
+Khan N, Mukhtar H. 2013. Tea and health: studies in 
+humans. Curr Pharm Des 19: 6141–6147.
+37) 
+Rains TM, Agarwal S, Maki KC. 2011. Antiobesity 
+effects of green tea catechins: a mechanistic review. J 
+Nutr Biochem 22: 1–7.
+38) 
+Wolfram S, Wang Y, Thielecke F. 2006. Anti-obesity 
+effects of green tea: from bedside to bench. Mol Nutr 
+Food Res 50: 176–187.
+39) 
+Khan N, Mukhtar H. 2007. Tea polyphenols for health 
+promotion. Life Sci 81: 519–533.
+40) 
+Sakurai N, Mochizuki K, Kameji H, Shimada M, Goda 
+T. 2009. ()-Epigallocatechin gallate enhances the 
+expression of genes related to insulin sensitivity and 
+adipocyte differentiation in 3T3-L1 adipocytes at an 
+early stage of differentiation. Nutrition 25: 1047–1056.
+41) 
+Murase T, Misawa K, Haramizu S, Hase T. 2009. Cat-
+echin-induced activation of the LKB1/AMP-activated 
+protein kinase pathway. Biochem Pharmacol 1: 78–84.
+42) 
+Chen S, Osaki N, Shimotoyodome A. 2015. Green tea 
+catechins enhance norepinephrine-induced lipolysis 
+via a protein kinase A-dependent pathway in adipo-
+cytes. Biochem Biophys Res Commun 461: 1–7.
+43) 
+Greenberg AS, Shen WJ, Muliro K, Patel S, Souza SC, 
+Roth RA, Kraemer FB. 2001. Stimulation of lipoly-
+sis and hormone-sensitive lipase via the extracellu-
+lar signal-regulated kinase pathway. J Biol Chem 30: 
+
+
+--- PAGE 17 ---
+Lipolytic Supplements Increasing Endurance Exercise Capacity
+157
+45456–45461.
+44) 
+Murase T, Nagasawa A, Suzuki J, Hase T, Tokimitsu 
+I. 2002. Beneﬁ cial effects of tea catechins on diet-
+induced obesity: stimulation of lipid catabolism in the 
+liver. Int J Obes Relat Metab Disord 26: 1459–1464.
+45) 
+Lee MS, Kim CT, Kim Y. 2009. Green tea ()-epigallo-
+catechin-3-gallate reduces body weight with regulation 
+of multiple genes expression in adipose tissue of diet-
+induced obese mice. Ann Nutr Metab 54: 151–157.
+46) 
+Wu CH, Lu FH, Chang CS, Chang TC, Wang RH, Chang 
+CJ. 2003. Relationship among habitual tea consump-
+tion, percent body fat, and body fat distribution. Obes 
+Res 11: 1088–1095.
+47) 
+Murase T, Haramizu S, Shimotoyodome A, Tokimitsu 
+I, Hase T. 2006. Green tea extract improves running 
+endurance in mice by stimulating lipid utilization dur-
+ing exercise. Am J Physiol Regul Integr Comp Physiol 
+290: 1550–1556.
+48) 
+Murase T, Haramizu S, Shimotoyodome A, Nagasawa 
+A, Tokimitsu I. 2005. Green tea extract improves 
+endurance capacity and increases muscle lipid oxida-
+tion in mice. Am J Physiol Regul Integr Comp Physiol 
+288: 708–715.
+49) 
+Ichinose T, Nomura S, Someya Y, Akimoto S, Tachiya-
+shiki K, Imaizumi K. 2011. Effect of endurance train-
+ing supplemented with green tea extract on substrate 
+metabolism during exercise in humans. Scand J Med Sci 
+Sports 21: 598–605.
+50) 
+Kuo YC, Lin JC, Bernard JR, Liao YH. 2015. Green tea 
+extract supplementation does not hamper endurance-
+training adaptation but improves antioxidant capac-
+ity in sedentary men. Appl Physiol Nutr Metab 40: 
+990–996.
+51) 
+Eichenberger P, Colombani PC, Mettler S. 2009. Effects 
+of 3-week consumption of green tea extracts on whole-
+body metabolism during cycling exercise in endurance-
+trained men. Int J Vitam Nutr Res 79: 24–33.
+52) 
+Dean S, Braakhuis A, Paton C. 2009. The effects of 
+EGCG on fat oxidation and endurance performance in 
+male cyclists. Int J Sport Nutr Exerc Metab 19: 624–644.
+53) 
+Costill DL, Dalsky GP, Fink WJ. 1978. Effects of caffeine 
+ingestion on metabolism and exercise performance. 
+Med Sci Sports 10: 155–158.
+54) 
+Hursel R, Viechtbauer W, Dulloo AG, Tremblay A, 
+Tappy L, Rumpler W, Westerterp-Plantenga MS. 2011. 
+The effects of catechin rich teas and caffeine on energy 
+expenditure and fat oxidation: a meta-analysis. Obes 
+Rev 12: 573–581.
+55) 
+Dulloo AG, Duret C, Rohrer D, Girardier L, Mensi N, 
+Fathi M, Chantre P, Vandermander J. 1999. Efﬁ cacy of 
+a green tea extract rich in catechin polyphenols and 
+caffeine in increasing 24-h energy expenditure and fat 
+oxidation in humans. Am J Clin Nutr 70: 1040–1045.
+56) 
+Boschmann M, Thielecke F. 2007. The effects of epi-
+gallocatechin-3-gallate on thermogenesis and fat oxi-
+dation in obese men: a pilot study. J Am Coll Nutr 26: 
+389–395.
+57) 
+Ota N, Soga S, Shimotoyodome A, Haramizu S, Inaba 
+M, Murase T, Tokimitsu I. 2005. Effects of combination 
+of regular exercise and tea catechins intake on energy 
+expenditure in humans. J Health Sci 51: 233–236.
+58) 
+Venables MC, Hulston CJ, Cox HR, Jeukendrup AE. 
+2008. Green tea extract ingestion, fat oxidation, and 
+glucose tolerance in healthy humans. Am J Clin Nutr 
+87: 778–784.
+59) 
+Cerretelli P, Marconi C. 1990. L-carnitine supplemen-
+tation in human. The effects on physical performance. 
+Int J Sports Med 11: 1–14.
+60) 
+Heinonen OJ. 1996. Carnitine and physical exercise. 
+Sports Med 22: 109–132.
+61) 
+Hoppel C. 2003. The role of carnitine in normal and 
+altered fatty acid metabolism. Am J Kidney Dis 41: 
+4–12.
+62) 
+Fritz IB, Marquis NR. 1965. The role of acylcarnitine 
+esters and carnitine palmityltransferase in the trans-
+port of fatty acyl groups across mitochondrial mem-
+branes. Proc Natl Acad Sci USA 54: 1226–1233.
+63) 
+Bremer J. 1983. Carnitine—metabolism and functions. 
+Physiol Rev 63: 1420–1480.
+64) 
+Kerner J, Hoppel C. 2000. Fatty acid import into mito-
+chondria. Biochem Biophys Acta 1486: 1–17.
+65) 
+Parvin R, Pande SV. 1979. Enhancement of mitochon-
+drial carnitine and carnitine acylcarnitine translocase-
+mediated transport of fatty acids into liver mitochon-
+dria under ketogenic conditions. J Biol Chem 254: 
+5423–5429.
+66) 
+Hoppel C. 2003. The role of carnitine in normal and 
+altered fatty acid metabolism. Am J Kidney Dis 41: 
+4–12.
+67) 
+Cha YS, Eun JS, Oh SH. 2003. Carnitine proﬁ les during 
+differentiation and effects of carnitine on differentia-
+tion of 3T3-L1 cells. J Med Food 6: 163–167.
+68) 
+Cha YS. 2008. Effects of L-carnitine on obesity, diabe-
+tes, and as an ergogenic aid. Asia Pac J Clin Nutr 17: 
+306–308.
+69) 
+Kim E, Park H, Cha YS. 2004. Exercise training and 
+supplement with carnitine and antioxidants increases 
+carnitine stores, triglyceride utilization, and endurance 
+in exercising rats. J Nutr Sci Vitaminol 50: 335–343.
+70) 
+Pandareesh MD, Anand T. 2013. Ergogenic effect of 
+dietary L-carnitine and fat supplementation against 
+exercise induced physical fatigue in Wistar rats. J 
+Physiol Biochem 69: 799–809.
+71) 
+Kim JH, Pan JH, Lee ES, Kim YJ. 2015. L-Carnitine 
+enhances exercise endurance capacity by promoting 
+muscle oxidative metabolism in mice. Biochem Biophys 
+Res Commun 21: 568–573.
+72) 
+Marconi C, Sassi G, Carpinelli A, Cerretelli P. 1985. 
+Effects of L-carnitine loading on the aerobic and anaer-
+obic performance of endurance athletes. Eur J Appl 
+Physiol Occup Physiol 54: 131–135.
+73) 
+Gorostiaga EM, Maurer CA, Eclache JP. 1989. Decrease 
+in respiratory quotient during exercise following L-car-
+nitine supplementation. Int J Sports Med 10: 169–174.
+74) 
+Vecchiet L, Di Lisa F, Pieralisi G, Ripari P, Menabò R, 
+Giamberardino MA, Siliprandi N. 1990. Inﬂ uence of 
+L-carnitine administration on maximal physical exer-
+cise. Eur J Appl Physiol Occup Physiol 61: 486–490.
+75) 
+Cha YS, Choi SK, Suh H, Lee SN, Cho D, Li K. 2001. 
+Effects of carnitine coingested caffeine on carnitine 
+metabolism and endurance capacity in athletes. J Nutr 
+Sci Vitaminol 47: 378–384.
+76) 
+Orer GE, Guzel NA. 2014. The effects of acute L-car-
+nitine supplementation on endurance performance of 
+athletes. J Strength Cond Res 28: 514–519.
+77) 
+Broad EM, Maughan RJ, Galloway SD. 2005. Effects of 
+four weeks L-carnitine L-tartrate ingestion on substrate 
+utilization during prolonged exercise. Int J Sport Nutr 
+Exerc Metab 15: 665–679.
+78) 
+Lee JK, Lee JS, Park H, Cha YS, Yoon CS, Kim CK. 2007. 
+
+
+--- PAGE 18 ---
+KIM J et al.
+158
+Effect of L-carnitine supplementation and aerobic train-
+ing on FABPc content and beta-HAD activity in human 
+skeletal muscle. Eur J Appl Physiol 99: 193–199.
+79) 
+Chuah LO, Yeap SK, Ho WY, Beh BK, Alitheen NB. 
+2012. In vitro and in vivo toxicity of garcinia or 
+hydroxycitric acid: a review. Evid Based Complement 
+Alternat Med 2012: 1–12.
+80) 
+Chuah LO, Ho WY, Beh BK, Yeap SK. 2013. Updates 
+on antiobesity effect of garcinia origin ()-HCA. Evid 
+Based Complement Alternat Med 2013: 1–17.
+81) 
+Preuss HG, Bagchi D, Bagchi M, Rao CV, Dey DK, Saty-
+anarayana S. 2004. Effects of a natural extract of 
+()-hydroxycitric acid (HCA-SX) and a combination of 
+HCA-SX plus niacin-bound chromium and Gymnema 
+sylvestre extract on weight loss. Diabetes Obes Metab 6: 
+171–180.
+82) 
+Preuss HG, Rao CV, Garis R, Bramble JD, Ohia SE, 
+Bagchi M, Bagchi D. 2004. An overview of the safety 
+and efﬁ cacy of a novel, natural ()-hydroxycitric acid 
+extract (HCA-SX) for weight management. J Med 35: 
+33–48.
+83) 
+Sullivan AC, Hamilton JG, Miller ON, Wheatley 
+VR. 1972. Inhibition of lipogenesis in rat liver by 
+()-hydroxycitrate. 
+Arch 
+Biochem 
+Biophys 
+150: 
+183–190.
+84) 
+Semwal RB, Semwal DK, Vermaak I, Viljoen A. 2015. 
+A comprehensive scientiﬁ c overview of Garcinia cam-
+bogia. Fitoterapia 102: 134–148.
+85) 
+Saha AK, Vavvas D, Kurowski TG, Apazidis A, Witters 
+LA, Shafrir E, Ruderman NB. 1997. Malonyl-CoA regu-
+lation in skeletal muscle: its link to cell citrate and the 
+glucose-fatty acid cycle. Am J Physiol 272: 641–648.
+86) 
+Faye A, Borthwick K, Esnous C, Price NT, Gobin S, 
+Jackson VN, Zammit VA, Girard J, Prip-Buus C. 2005. 
+Demonstration of N- and C-terminal domain intra-
+molecular interactions in rat liver carnitine palmitoyl-
+transferase 1 that determine its degree of malonyl-CoA 
+sensitivity. Biochem J 1: 67–76.
+87) 
+Lim K, Ryu S, Suh H, Ishihara K, Fushiki T. 2005. 
+()-Hydroxycitrate ingestion and endurance exercise 
+performance. J Nutr Sci Vitaminol 51: 1–7.
+88) 
+McGarry JD, Brown NF. 1997. The mitochondrial car-
+nitine palmitoyltransferase system from concept to 
+molecular analysis. Eur J Biochem 244: 1–14.
+89) 
+Zambell KL, Fitch MD, Fleming SE. 2003. Acetate 
+and butyrate are the major substrates for de novo 
+lipogenesis in rat colonic epithelial cells. J Nutr 133: 
+3509–3515.
+90) 
+Hasegawa N. 2001. Garcinia extract inhibits lipid drop-
+let accumulation without affecting adipose conversion 
+in 3T3-L1 cells. Phytother Res 15: 172–173.
+91) 
+Kim MS, Kim JK, Kwon DY, Park R. 2004. Anti-adipo-
+genic effects of Garcinia extract on the lipid droplet 
+accumulation and the expression of transcription fac-
+tor. Biofactors 22: 193–196.
+92) 
+Kang ES, Ham SA, Hwang JS, Lee CK, Seo HG. 2013. 
+Effects of Garcinia cambogia extract on the adipogenic 
+differentiation and lipotoxicity. Korean J Food Sci An 33: 
+411–416.
+93) 
+Shara M, Ohia SE, Schmidt RE, Yasmin T, Zardetto-
+Smith A, Kincaid A, Bagchi M, Chatterjee A, Bagchi D, 
+Stohs SJ. 2004. Physico-chemical properties of a novel 
+()-hydroxycitric acid extract and its effect on body 
+weight, selected organ weights, hepatic lipid peroxida-
+tion and DNA fragmentation, hematology and clinical 
+chemistry, and histopathological changes over a period 
+of 90 days. Mol Cell Biochem 260: 171–186.
+94) 
+Kim YJ, Kim KY, Kim MS, Lee JH, Lee KP, Park T. 2008. 
+A mixture of the aqueous extract of Garcinia cambo-
+gia, soy peptide and L-carnitine reduces the accumu-
+lation of visceral fat mass in rats rendered obese by a 
+high fat diet. Genes Nutr 2: 353–358.
+95) 
+Leonhardt M, Balkan B, Langhans W. 2004. Effect of 
+hydroxycitrate on respiratory quotient, energy expen-
+diture, and glucose tolerance in male rats after a period 
+of restrictive feeding. Nutrition 20: 911–915.
+96) 
+Westerterp-Plantenga MS, Kovacs EM. 2002. The effect 
+of ()-hydroxycitrate on energy intake and satiety in 
+overweight humans. Int J Obes Relat Metab Disord 26: 
+870–872.
+97) 
+Kovacs EM, Westerterp-Plantenga MS. 2006. Effects of 
+()-hydroxycitrate on net fat synthesis as de novo lipo-
+genesis. Physiol Behav 30: 371–381.
+98) 
+Ramos RR, Saenz JF, Aguilar MCFA. 1996. Control of 
+obesity with Garcinia cambogia extract. Invest Med Int 
+22: 97–100.
+99) 
+McCarty MF. 1995. Inhibition of citrate lyase may aid 
+aerobic endurance. Med Hypotheses 45: 247–254.
+100) Ishihara K, Oyaizu S, Onuki K, Lim K, Fushiki T. 2000. 
+Chronic ()-hydroxycitrate administration spares car-
+bohydrate utilization and promotes lipid oxidation dur-
+ing exercise in mice. J Nutr 130: 2990–2995.
+101) Kriketos AD, Thompson HR, Greene H, Hill JO. 1999. 
+()-Hydroxycitric acid does not affect energy expen-
+diture and substrate oxidation in adult males in a 
+post-absorptive state. Int J Obes Relat Metab Disord 23: 
+867–873.
+102) Lim K, Ryu S, Nho HS, Choi SK, Kwon T, Suh H, 
+So J, Tomita K, Okuhara Y, Shigematsu N. 2003. 
+()-Hydroxycitric acid ingestion increases fat utiliza-
+tion during exercise in untrained women. J Nutr Sci 
+Vitaminol 49: 163–167.
+103) Lim K, Ryu S, Ohishi Y, Watanabe I, Tomi H, Suh H, 
+Lee WK, Kwon T. 2002. Short-term ()-hydroxycitrate 
+ingestion increases fat oxidation during exercise in ath-
+letes. J Nutr Sci Vitaminol 48: 128–133.
+104) Tomita K, Okuhara Y, Shigematsu N, Suh H, Lim K. 
+2003. ()-Hydroxycitrate ingestion increases fat oxi-
+dation during moderate intensity exercise in untrained 
+men. Biosci Biotechnol Biochem 67: 1999–2001.
+105) Cheng IS, Huang SW, Lu HC, Wu CL, Chu YC, Lee SD, 
+Huang CY, Kuo CH. 2012. Oral hydroxycitrate supple-
+mentation enhances glycogen synthesis in exercised 
+human skeletal muscle. Br J Nutr 107: 1048–1055.
+106) Kawada T, Watanabe T, Takaishi T, Tanaka T, Iwai 
+K. 1986. Capsaicin-induced beta-adrenergic action 
+on energy metabolism in rats: inﬂ uence of capsaicin 
+on oxygen consumption, the respiratory quotient, 
+and substrate utilization. Proc Soc Exp Biol Med 183: 
+250–256.
+107) Iwai K, Yazawa A, Watanabe T. 2003. Roles as meta-
+bolic regulators of the non-nutrients, capsaicin and 
+capsiate, supplemented to diets. Proc Jpn Acad 79: 
+207–212.
+108) Watanabe T, Kawada T, Kurosawa M, Sato A, Iwai K. 
+1988. Adrenal sympathetic efferent nerve and cat-
+echolamine secretion excitation caused by capsaicin in 
+rats. Am J Physiol 255: 23–27.
+109) Diepvens K, Westerterp KR, Westerterp-Plantenga MS. 
+2007. Obesity and thermogenesis related to the con-
+
+
+--- PAGE 19 ---
+Lipolytic Supplements Increasing Endurance Exercise Capacity
+159
+sumption of caffeine, ephedrine, capsaicin, and green 
+tea. Am J Physiol Regul Integr Comp Physiol 292: 77–85.
+110) Kim KM, Kawada T, Ishihara K, Inoue K, Fushiki T. 
+1997. Increase in swimming endurance capacity of 
+mice by capsaicin-induced adrenal catecholamine 
+secretion. Biosci Biotechnol Biochem 61: 1718–1723.
+111) Saito M, Yoneshiro T. 2013. Capsinoids and related 
+food ingredients activating brown fat thermogenesis 
+and reducing body fat in humans. Curr Opin Lipidol 24: 
+71–77.
+112) Ludy MJ, Moore GE, Mattes RD. 2012. The effects of 
+capsaicin and capsiate on energy balance: critical 
+review and meta-analyses of studies in humans. Chem 
+Senses 37: 103–121.
+113) Westerterp-Plantenga M, Diepvens K, Joosen AM, 
+Bérubé-Parent S, Tremblay A. 2006. Metabolic effects 
+of spices, teas, and caffeine. Physiol Behav 30: 85–91.
+114) Hsu CL, Yen GC. 2007. Effects of capsaicin on induc-
+tion of apoptosis and inhibition of adipogenesis in 3T3-
+L1 cells. J Agric Food Chem 75: 1730–1736.
+115) Yoshioka M, Lim K, Kikuzato S, Kiyonaga A, Tanaka H, 
+Shindo M, Suzuki M. 1995. Effects of red-pepper diet 
+on the energy metabolism in men. J Nutr Sci Vitaminol 
+41: 647–656.
+116) Yoshioka M, St-Pierre S, Suzuki M, Tremblay A. 1998. 
+Effects of red pepper added to high-fat and high-car-
+bohydrate meals on energy metabolism and substrate 
+utilization in Japanese women. Br J Nutr 80: 503–510.
+117) Yoshioka M, St-Pierre S, Drapeau V, Dionne I, Doucet E, 
+Suzuki M, Tremblay A. 1999. Effects of red pepper on 
+appetite and energy intake. Br J Nutr 82: 115–123.
+118) Lejeune MP, Kovacs EM, Westerterp-Plantenga MS. 
+2003. Effect of capsaicin on substrate oxidation and 
+weight maintenance after modest body-weight loss in 
+human subjects. Br J Nutr 90: 651–659.
+119) Watanabe T, Kawada T, Yamamoto M, Iwai K. 1987. 
+Capsaicin, a pungent principle of hot red pepper, evokes 
+catecholamine secretion from the adrenal medulla 
+of esthetized rats. Biochem Biophys Res Commun 15: 
+259–264.
+120) Oh TW, Ohta F. 2003. Capsaicin increases endurance 
+capacity and spares tissue glycogen through lipolytic 
+function in swimming rats. J Nutr Sci Vitaminol 49: 
+107–111.
+121) Matsuo T, Yoshioka M, Suzuki M. 1996. Capsaicin in 
+diet does not affect glycogen contents in the liver and 
+skeletal muscle of rats before and after exercise. J Nutr 
+Sci Vitaminol 42: 249–256.
+122) Oh TW, Oh TW, Ohta F. 2003. Dose-dependent effect of 
+capsaicin on endurance capacity in rats. Br J Nutr 90: 
+515–520.
+123) Luo Z, Ma L, Zhao Z, He H, Yang D, Feng X, Ma S, Chen 
+X, Zhu T, Cao T, Liu D, Nilius B, Huang Y, Yan Z, Zhu Z. 
+2012. TRPV1 activation improves exercise endurance 
+and energy metabolism through PGC-1 upregulation 
+in mice. Cell Res 22: 551–564.
+124) Shin KO, Moritani T. 2007. Alterations of autonomic 
+nervous activity and energy metabolism by capsaicin 
+ingestion during aerobic exercise in healthy men. J 
+Nutr Sci Vitaminol 53: 124–132.
+125) Hwang HJ, Suh HJ, Lim KW. 2010. Effect of red-pepper 
+ingestion on excess post-exercise oxygen consumption 
+in young women. J Exerc Nutr Biochem 14: 87–93.
+126) Ohyama K, Nogusa Y, Suzuki K, Shinoda K, Kajimura 
+S, Bannai M. 2015. A combination of exercise and 
+capsinoid supplementation additively suppresses diet-
+induced obesity by increasing energy expenditure in 
+mice. Am J Physiol Endocrinol Metab 15: 315–323.
+127) Kawabata F, Inoue N, Yazawa S, Kawada T, Inoue K, 
+Fushiki T. 2006. Effects of CH-19 sweet, a non-pungent 
+cultivar of red pepper, in decreasing the body weight 
+and suppressing body fat accumulation by sympathetic 
+nerve activation in humans. Biosci Biotechnol Biochem 
+70: 2824–2835.
+128) Hachiya S, Kawabata F, Ohnuki K, Inoue N, Yoneda H, 
+Yazawa S, Fushiki T. 2007. Effects of CH-19 sweet, a 
+non-pungent cultivar of red pepper, on sympathetic 
+nervous activity, body temperature, heart rate, and 
+blood pressure in humans. Biosci Biotechnol Biochem 
+71: 671–676.
+129) Josse AR, Sherriffs SS, Holwerda AM, Andrews R, Sta-
+ples AW, Phillips SM. 2010. Effects of capsinoid inges-
+tion on energy expenditure and lipid oxidation at rest 
+and during exercise. Nutr Metab 3: 65.
+130) Im DS, Nah SY. 2013. Yin and Yang of ginseng phar-
+macology: ginsenosides vs gintonin. Acta Pharmacol Sin 
+34: 1367–1373.
+131) Choi KT. 2008. Botanical characteristics, pharmaco-
+logical effects and medicinal components of Korean 
+Panax ginseng C A Meyer. Acta Pharmacol Sin 29: 
+1109–1118.
+132) Radad K, Moldzio R, Rausch WD. 2011. Ginsenosides 
+and their CNS targets. CNS Neurosci Ther 17: 761–768.
+133) Sung H, Kang SM, Lee MS, Kim TG, Cho YK. 2005. 
+Korean red ginseng slows depletion of CD4 T cells 
+in human immunodeﬁ ciency virus type 1-infected 
+patients. Clin Diagn Lab Immunol 12: 497–501.
+134) Peng SL, Guo ZA. 2010. Effect of total saponins of 
+Panax notoginseng on urinary albumin in patients 
+with chronic renal failure. Zhongguo Wei Zhong Bing Ji 
+Jiu Yi Xue 22: 744–746.
+135) Ramesh T, Kim SW, Hwang SY, Sohn SH, Yoo SK, Kim 
+SK. 2012. Panax ginseng reduces oxidative stress and 
+restores antioxidant capacity in aged rats. Nutr Res 32: 
+718–726.
+136) Kamangar F, Gao YT, Shu XO, Kahkeshani K, Ji BT, 
+Yang G, Li HL, Rothman N, Chow WH, Zheng W. 2007. 
+Ginseng intake and gastric cancer risk in the Shanghai 
+Women’s Health Study cohort. Cancer Epidemiol Bio-
+markers Prev 16: 629–630.
+137) Lee CH, Kim JH. 2014. A review on the medicinal 
+potentials of ginseng and ginsenosides on cardiovascu-
+lar diseases. J Ginseng Res 38: 161–166.
+138) Ong WY, Farooqui T, Koh HL, Farooqui AA, Ling EA. 
+2015. Protective effects of ginseng on neurological dis-
+orders. Front Aging Neurosci 16: 129.
+139) Hwang JT, Kim SH, Lee MS, Kim SH, Yang HJ, Kim MJ, 
+Kim HS, Ha J, Kim MS, Kwon DY. 2007. Anti-obesity 
+effects of ginsenoside Rh2 are associated with the acti-
+vation of AMPK signaling pathway in 3T3-L1 adipo-
+cyte. Biochem Biophys Res Commun 28: 1002–1008.
+140) Bijland S, Mancini SJ, Salt IP. 2013. Role of AMP-acti-
+vated protein kinase in adipose tissue metabolism and 
+inﬂ ammation. Clin Sci 124: 491–507.
+141) Nedergaard J, Petrovic N, Lindgren EM, Jacobsson A, 
+Cannon B. 2005. PPARgamma in the control of brown 
+adipocyte differentiation. Biochim Biophys Acta 30: 
+293–304.
+142) Xiong Y, Shen L, Liu KJ, Tso P, Xiong Y, Wang G, Woods 
+SC, Liu M. 2010. Antiobesity and antihyperglyce-
+
+
+--- PAGE 20 ---
+KIM J et al.
+160
+mic effects of ginsenoside Rb1 in rats. Diabetes 59: 
+2505–2512.
+143) Yoon M, Lee H, Jeong S, Kim JJ, Nicol CJ, Nam KW, 
+Kim M, Cho BG, Oh GT. 2003. Peroxisome proliferator-
+activated receptor alpha is involved in the regulation 
+of lipid metabolism by ginseng. Br J Pharmacol 138: 
+1295–1302.
+144) Song YB, An YR, Kim SJ, Park HW, Jung JW, Kyung 
+JS, Hwang SY, Kim YS. 2012. Lipid metabolic effect of 
+Korean red ginseng extract in mice fed on a high-fat 
+diet. J Sci Food Agric 30: 388–396.
+145) Lee H, Park D, Yoon M. 2013. Korean red ginseng 
+(Panax ginseng) prevents obesity by inhibiting angio-
+genesis in high fat diet-induced obese C57BL/6J mice. 
+Food Chem Toxicol 53: 402–408.
+146) Li X, Luo J, Anandh Babu PV, Zhang W, Gilbert E, Cline 
+M, McMillan R, Hulver M, Alkhalidy H, Zhen W, Zhang 
+H, Liu D. 2014. Dietary supplementation of Chinese 
+ginseng prevents obesity and metabolic syndrome in 
+high-fat diet-fed mice. J Med Food 17: 1287–1297.
+147) Park HJ, Lee JH, Lee SJ, Ham HS, Cho HJ, Lim CR, Yoo 
+YB, Park KH. 2010. Effects of intaking of red ginseng 
+products on correlationship between obesity and blood 
+lipids. J Exp Biomed Sci 12: 253–260.
+148) Avakian EV, Sugimoto RB, Taguchi S, Horvath SM. 
+1984. Effect of Panax ginseng extract on energy 
+metabolism during exercise in rats. Planta Med 50: 
+151–154.
+149) Tang W, Zhang Y, Gao J, Ding X, Gao S. 2008. The 
+anti-fatigue effect of 20(R)-ginsenoside Rg3 in mice 
+by intranasally administration. Biol Pharm Bull 31: 
+2024–2027.
+150) Wang J, Li S, Fan Y, Chen Y, Liu D, Cheng H, Gao X, 
+Zhou Y. 2010. Anti-fatigue activity of the water-solu-
+ble polysaccharides isolated from Panax ginseng C. A. 
+Meyer. J Ethnopharmacol 30: 421–423.
+151) Wang LC, Lee TF. 1998. Effect of ginseng saponins on 
+exercise performance in non-trained rats. Planta Med 
+64: 130–133.
+152) Hwang H, Kim J, Park J, Yun H, Cheon WK, Kim B, Lee 
+CH, Suh H, Lim K. 2014. Red ginseng treatment for 
+two weeks promotes fat metabolism during exercise in 
+mice. Nutrients 5: 1874–1885.
+153) Biondo PD, Robbins SJ, Walsh JD, McCargar LJ, Har-
+ber VJ, Field CJ. 2008. A randomized controlled cross-
+over trial of the effect of ginseng consumption on the 
+immune response to moderate exercise in healthy sed-
+entary men. Appl Physiol Nutr Metab 33: 966–975.
+154) Kim SH, Park KS, Chang MJ, Sung JH. 2005. Effects of 
+Panax ginseng extract on exercise-induced oxidative 
+stress. J Sports Med Phys Fitness 45: 178–182.
+155) McNaughton L, Egan G, Caelli G. 1989. A comparison 
+of Chinese and Russian ginseng as ergogenic aids to 
+improve various facets of physical ﬁ tness. Int J Clin Nutr 
+Rev 9: 32–35.
+156) Liang MTC, Podolka TD, Chuang WJ. 2005. Panax 
+notoginseng supplementation enhances physical per-
+formance during endurance exercise. J Strength Cond 
+Res 19: 108–114.
+157) Huxtable RJ. 1992. Physiological actions of taurine. 
+Physiol Rev 72: 101–163.
+158) Huxtable RJ. 2000. Expanding the circle 1975–1999: 
+sulfur biochemistry and insights on the biological func-
+tions of taurine. Adv Exp Med Biol 483: 1–25.
+159) De Luca A, Pierno S, Camerino DC. 2015. Taurine: the 
+appeal of a safe amino acid for skeletal muscle disor-
+ders. J Transl Med 13: 1–18.
+160) Ripps H, Shen W. 2012. Review: taurine: a “very essen-
+tial” amino acid. Mol Vis 18: 2673–2686.
+161) Ueki I, Stipanuk MH. 2009. 3T3-L1 adipocytes and rat 
+adipose tissue have a high capacity for taurine synthe-
+sis by the cysteine dioxygenase/cysteinesulﬁ nate decar-
+boxylase and cysteamine dioxygenase pathways. J Nutr 
+139: 207–214.
+162) Fukuda N, Yoshitama A, Sugita S, Fujita M, Murakami 
+S. 2011. Dietary taurine reduces hepatic secretion of 
+cholesteryl ester and enhances fatty acid oxidation in 
+rats fed a high-cholesterol diet. J Nutr Sci Vitaminol 57: 
+144–149.
+163) Bonﬂ eur ML, Borck PC, Ribeiro RA, Caetano LC, Soares 
+GM, Carneiro EM, Balbo SL. 2015. Improvement in 
+the expression of hepatic genes involved in fatty acid 
+metabolism in obese rats supplemented with taurine. 
+Life Sci 15: 15–21.
+164) Orellana-Gavaldà JM, Herrero L, Malandrino MI, 
+Pañeda A, Sol Rodríguez-Peña M, Petry H, Asins G, 
+Van Deventer S, Hegardt FG, Serra D. 2011. Molecular 
+therapy for obesity and diabetes based on a long-term 
+increase in hepatic fatty-acid oxidation. Hepatology 53: 
+821–832.
+165) Manabe S, Kuroda I, Okada K, Morishima M, Okamoto 
+M, Harada N, Takahashi A, Sakai K, Nakaya Y. 2003. 
+Decreased blood levels of lactic acid and urinary excre-
+tion of 3-methylhistidine after exercise by chronic 
+taurine treatment in rats. J Nutr Sci Vitaminol 49: 
+375–380.
+166) Yatabe Y, Miyakawa S, Miyazaki T, Matsuzaki Y, Ochiai 
+N. 2003. Effects of taurine administration in rat skel-
+etal muscles on exercise. J Orthop Sci 8: 415–419.
+167) Zhang M, Izumi I, Kagamimori S, Sokejima S, Yama-
+gami T, Liu Z, Qi B. 2004. Role of taurine supplemen-
+tation to prevent exercise-induced oxidative stress in 
+healthy young men. Amino Acids 26: 203–207.
+168) Ishikura K, Miyazaki T, Ra SG, Endo S, Nakamura Y, 
+Matsuzaka T, Miyakawa S, Ohmori H. 2001. Effect of 
+taurine supplementation on the alterations in amino 
+acid content in skeletal muscle with exercise in rat. J 
+Sports Sci Med 10: 306–314.
+169) Lee HM, Paik IY, Park TS. 2003. Effects of dietary 
+supplementation of taurine, carnitine or glutamine on 
+endurance performance and fatigue parameters in ath-
+letes. Korean J Nutr 36: 711–719.
+170) Balshaw TG, Bampouras TM, Barry TJ, Sparks SA. 
+2013. The effect of acute taurine ingestion on 3-km 
+running performance in trained middle-distance run-
+ners. Amino Acids 44: 555–561.
+171) Rutherford JA, Spriet LL, Stellingwerff T. 2010. The 
+effect of acute taurine ingestion on endurance perfor-
+mance and metabolism in well-trained cyclists. Int J 
+Sport Nutr Exerc Metab 20: 322–329.
+172) Seo CW, Um IC, Rico CW, Kang MY. 2011. Antihyper-
+lipidemic and body fat-lowering effects of silk proteins 
+with different ﬁ broin/sericin compositions in mice fed 
+with high fat diet. J Agric Food Chem 59: 4192–4197.
+173) Mora CM, Mrowiec A, Maria GV, Atonia A, Jose LC, 
+Francisco JN. 2012. Fibroin and sericin from Bombyx 
+mori silk stimulate cell migration through upregulation 
+and phosphorylation of c-Jun. PLoS ONE 7: 42271.
+174) Norihisa K, Seiji S, Atsushi Y, Hideyuki Y, Naozumi F, 
+Masakazu N. 1998. Silk protein, sercin, inhibits lipid 
+
+
+--- PAGE 21 ---
+Lipolytic Supplements Increasing Endurance Exercise Capacity
+161
+peroxidation and tyrosinase activity. Biosci Biotechnol 
+Biochem 62: 145–147.
+175) Shin MJ, Park MJ, Young MS, Lee YS, Nam MS, Park IS. 
+2006. Effects of silk protein hydrolysates on blood glu-
+cose and serum lipid in db/db diabetic mice. J Korean 
+Soc Food Sci Nutr 35: 1343–1348.
+176) Kato N, Sato S, Yamanaka A, Yamada H, Fuwa N, 
+Nomura M. 1998. Silk protein, sericin, inhibits lipid 
+peroxidation and tyrosinase activity. Biosci Biotechnol 
+Biochem 62: 145–147.
+177) Park DS, Lee SH, Choi YJ, Bae DK, Yang YH, Goeun Y, 
+Kim TK, Yeon SH, Hwang SY, Joo SS, Kim YB. 2011. 
+Improving effect of silk peptides on the cognitive func-
+tion of rats with aging brain facilitated by d-galactose. 
+Biomol Ther 19: 224–230.
+178) Kim TK, Park DS, Yeon SH, Lee SH, Choi YJ, Bae DK, 
+Yang YH, Yang GE, Joo SS, Lim WT, Lee JY, Lee JS, Jeong 
+HS, Hwang SY. 2011. Tyrosine-fortiﬁ ed silk amino 
+acids improve physical function of parkinson’s disease 
+rats. Food Sci Biotechnol 20: 79–84.
+179) Kim DW, Hwang HS, Kim DS, Sheen SH, Heo DH, Hang 
+GJ, Kang SH, Kweon HY, Jo YY, Kang SW, Lee KG, Park 
+JS, Eum WS. 2012. Enhancement of anti-inﬂ amma-
+tory activity of PEP-1-FK506 binding protein by silk 
+ﬁ broin peptide. J Microbiol Biotechnol 22: 494–500.
+180) Lee SH, Park D, Yang G, Bae DK, Yang YH, Kim TK, Kim 
+D, Kyung J, Yeon S, Koo KC, Lee JY, Hwang SY, Joo SS, 
+Kim YB. 2012. Silk and silkworm pupa peptide suppress 
+adipogenesis in preadipocytes and fat accumulation in 
+rats fed a high-fat diet. Eur J Nutr 51: 1011–1019.
+181) Hwang EH, Kang BG, Kim BY, Lee HJ. 2001. Protein 
+quality evaluation and effect of plasma lipid contents 
+of acid hydrolysates of cocoon in rats fed by high cho-
+lesterol, high triglyceride and high sucrose diet. J Kor 
+Soc Food Sci Nutr 30: 1004–1009.
+182) Jung EY, Lee HS, Lee YJ, Kim JM, Lee K, Suh HJ. 2010. 
+Feeding silk protein hydrolysates to C57BL/KsJ-db/db 
+mice improves blood glucose and lipid proﬁ le. Nutr Res 
+30: 783–790.
+183) Kim JS, Hwang HJ, Yun HY, Kim BK, Lee CH, Suh HJ, 
+Lim KW. 2013. Silk peptide intake increases fat oxida-
+tion at rest in exercised mice. J Nutr Sci Vitaminol 59: 
+250–255.
+184) Kim JS, Hwang HJ, Park JH, Yun HY, Suh HJ, Lim KW. 
+2014. Silk peptide treatment can improve the exercise 
+performance of mice. J Int Soc Sports Nutr 11: 1–7.
+185) Shin SH, Yeon SH, Park DS, Oh JY, Kang HM, Kim SH, 
+Joo SS, Lim WT, Lee JY, Choi KC, Kim KY, Kim SU, Kim 
+JC, Kim YB. 2010. Silk amino acids improve physical 
+stamina and male reproductive function of mice. Biol 
+Pharm Bull 33: 273–278.
+186) Shin SH, Park DS, Yeon SH, Jeon JH, Kim TK, Joo SS, 
+Lim WT, Lee JY, Kim YB. 2009. Stamina-enhancing 
+effects of silk amino acid preparations in mice. Lab 
+Anim Res 25: 127–134.
+187) Taylor JC, Rapport L, Lockwood GB. 2003. Octacosanol 
+in human health. Nutrition 19: 192–195.
+188) Jones AM, Haramizu S, Ranchordas M, Burke L, Stear 
+S, Castell LM. 2011. A–Z of nutritional supplements: 
+dietary supplements, sports nutrition foods and ergo-
+genic aids for health and performance—Part 27. Br J 
+Sports Med 45: 1246–1248.
+189) McCarty MF. 2002. Policosanol safely down-regulates 
+HMG-CoA reductase-potential as a component of the 
+Esselstyn regimen. Med Hypotheses 59: 268–279.
+190) Ye YC, Zhao XL, Zhang SY. 2015. Use of atorvastatin 
+in lipid disorders and cardiovascular disease in Chinese 
+patients. Chin Med J 20: 259–266.
+191) Kirk T. 1974. The physiological effects of wheat germ 
+oil on human in exercise. Am J Phys Med Rehabil 53: 
+249.
+192) Kato S, Karino K, Hasegawa S, Nagasawa J, Nagasaki A, 
+Eguchi M, Ichinose T, Tago K, Okumori H, Hamatani K. 
+1995. Octacosanol affects lipid metabolism in rats fed 
+on a high-fat diet. Br J Nutr 73: 433–441.
+193) Xu Z, Fitz E, Riediger N, Moghadasian MH. 2007. 
+Dietary octacosanol reduces plasma triacylglycerol lev-
+els but not atherogenesis in apolipoprotein E–knockout 
+mice. Nut Res 27: 212–217.
+194) Kim H, Park S, Han DS, Park T. 2003. Octacosanol sup-
+plementation increases running endurance time and 
+improves biochemical parameters after exhaustion in 
+trained rats. J Med Food 6: 345–351.

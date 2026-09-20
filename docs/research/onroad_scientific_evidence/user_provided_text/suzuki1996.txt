@@ -1,0 +1,691 @@
+
+
+--- PAGE 1 ---
+Metabolic Brain Disease, Vol. 11, No . 1, 1996
+Effects of Thiamine Supplementation on Exercise-induced
+Fatigue
+Masashige Suzukil ,3, and Yoshinori Itokawa 2
+High-dose thiamine (vitamin B t ) supplementation (100 mg/day) may be helpful in
+preventing or accelerating recovery from exercise-induced fatigue . Sixteen volunteer
+male athletes volunteer
+, 8 with a blood thiamine level of 40 ng/ml or more (normal
+thiamine group) and 8 with levels below that level (low thiamine group) were selected as
+subjects .
+They exercised on a bicycle ergometer and the effects of thiamine
+supplementation were compared with placebo . Blood thiamine level markedly increased
+following supplementation of thiamine for 3 days before exercise . Exercise-induced
+changes in hemodynamic parameters and cardiopulmonary function indicated the onset of
+fatigue .
+Thiamine supplementation significantly suppressed the increase in blood
+glucose in the normal thiamine group and significantly decreased the number of
+complaints shortly after exercise in the subjective fatigue assessment of 30 items .
+Keywords : thiamine, fursultiamine (TTFD), athletes, exercise-induced fatigue,
+blood glucose level, subjective fatigue symptoms
+INTRODUCTION
+Vitamin B I (thiamine) plays an important role as a coenzyme in energy metabolism and
+in the maintenance of nerve cell function (Itokawa, 1975 ; Von Muralt, 1962). This
+suggests that thiamine might be effective not only in the prevention of or recovery from
+exercise-induced fatigue, but also in the improvement of mental and sensory fatigue, such as
+languor and malaise .
+In the present study, healthy adult volunteers exercised on a bicycle ergometer and the
+effects of thiamine supplementation on the prevention of and recovery from exercise-induced
+fatigue were evaluated using a series of physiological measures and the subjective
+evaluation of fatigue .
+I Institute of Health & Sports Sciences, University of Tsukuba, Tsukuba (Masashige Suzuki),
+Japan
+2 Graduate School of Medicine, Kyoto University, Kyoto, Japan
+3 To whom correspondance should be addressed at Institute of Health & Sports Sciences,
+University of Tsukuba, 1-1-1 Tennodai, Tsukuba, Ibaraki, 305, Japan
+95
+0885-7490/96/0300-0095$09 .50/0 © 1996 Plenum Publishing Corporation
+
+
+--- PAGE 2 ---
+96
+Suzuki
+and
+Itokawa
+SUBJECTS and METHODS
+A medical checkup was performed on 81 volunteer male athletes aged 19 years or more,
+and the blood thiamine level was determined . Sixty-one out of 81 male college-athlete
+volunteers had a thiamine level lower than 40 ng/ml and the mean blood thiamine level was
+38 .5±8 .8 ng/ml. Of these volunteers, 32 (40%) were shown to have a blood thiamine level
+of between 41 and 68 ng/ml and 49 (60%) to have a level less than 40 ng/ml .
+No
+individual had a blood thiamine level below 20ng/ml . Eight individuals from both the
+normal (>40 ng/ml) and low (<_40ng/ml) groups were selected as subjects (Table 1) . All of
+the subjects were well informed of the nature and contents of this study by the investigator
+and gave their consent to participate in this study .
+Table 1 . Mean (± SD) age, body weight and height and range of blood thiamine levels for
+normal and low thiamine groups .
+Test drug :
+The thiamine preparation contained 100 mg of thiamine as fursultiamine
+(Thiamine Tetrahydrofurfuryl Disulfide, TTFD), thiamin derivative, as well as vitamins B2
+(10 mg), B 6 (10 mg), and B 12 (20 µg), in 2 tablets . Placebo tablets were identical in
+appearance to the active tablets and contained lactose as the major component
+.
+Experimental schedule: A comparative study of the thiamine preparation versus placebo
+was performed in a cross-over manner (Table 2) . The subjects took 2 tablets of the vitamin
+preparation or placebo with water after breakfast for 3 days prior to the day of exercise
+.
+They took 2 more tablets after supper on the day of exercise to facilitate the recovery from
+fatigue. Half of each group took the active tablets first, and the others took placebo tablets
+first. A washout period of 3-9 days was allowed between the completion of the first test
+session and the start of the second supplementation .
+A medical interview to confirm general health and to draw blood samples was performed
+before thiamine supplementation and bicycle ergometer exercise . Meals and physical
+activity during the supplementation period were recorded .
+Normal Thiamine Group
+Low Thiamine Group
+No .
+8
+8
+Age (yr .)
+23±2
+21±1
+Height (cm)
+172±4
+173±6
+Body weight (kg)
+65±4
+64±5
+Blood thiamine (ng/ml)
+56.8±15.0
+30.9±7 .7
+
+
+--- PAGE 3 ---
+Thiamine
+Effect
+on
+Exercise-induced Fatigue
+Table 2. Thirty items were assessed for subjective fatigue symptoms
+97
+Assessment of thiamine effect :
+The subjects exercised on a bicycle ergometer for 30
+min (60% of VO 2 Max .) at 1 h after breakfast of the day of testing. Evaluation items and
+hemodynamic parameters were measured before, immediately after (0 min), and at 30, 60,
+and 120 min after the exercise . In addition, subjective symptoms were recorded the next
+morning .
+Subjective fatigue was evaluated as generalized fatigue on a scale of 5 and using a
+questionnaire of 30 items prepared by the Industrial Fatigue Study Group of the Japanese
+Society for Industrial Hygiene (Sangyo Hiro Kenkyukai) of Japan Society for Occupational
+Health (Table 2) . In the latter evaluation, the subjects marked the items they felt, from the
+list of 30 items . A larger number denotes a more fatigued condition .
+Statistical analysis : Category variables were analyzed by the Mann-Whitney U-test, and
+continuous variables by the t-test for cross-over design
+.
+RESULTS
+The results of hemodynamic parameters and the evaluation items are summarized as
+follows :
+Biochemical Parameters and Cardiopulmonary Function
+The blood thiamine levels markedly increased after supplementation of the thiamine
+preparation, indicating good absorption (Figure 1)
+.
+The levels of blood catecholamines (adrenaline, noradrenaline and dopamine) increased
+immediately after exercise, but returned to the pre-exercise levels after I h . Thiamine
+supplementation had no noticeable effect on the plasma levels of catecholamines, which are
+known to rise immediately after exercise (Fujii et al., 1992; Miyagawa et al ., 1991). The
+blood glucose level, which is related to energy metabolism, increased during the first 30
+A .
+General Languishness
+B .
+Spiritual Concentration
+C .
+Physical Malaise (Local)
+1 .
+Heavy headedness
+11 . Difficulty in thinking
+21 .
+Headache
+2 .
+General dullness
+12 . No mood for chat
+22 .
+Stiff shoulder
+3 .
+Dullness of legs
+13 .
+Irritation
+23 .
+Lumbago
+4 .
+Tendency to yawn
+14 . Distraction
+24 .
+Choking
+5 .
+Absent-mindedness
+15 . Lack of zeal
+25 .
+Abnormal feeling in mouth
+6 .
+Sleepiness
+16 . Lapse of memory
+26 .
+Harsh voice
+7 .
+Fatigue of eyes
+17 . No confidence
+27 .
+Dizziness
+8 .
+Awkward behavior
+18 . Uneasiness
+28 . Twitching in eyes and muscles
+9 .
+Unsteady walk
+19 .
+Sloppiness
+29 . Trembling of hands and legs
+10 .
+Weakness
+20 .
+Lack of patience
+30 .
+Nausea
+
+
+--- PAGE 4 ---
+98
+Suzuki
+and
+Itokawa
+min after exercise. This rise was significantly suppressed with thiamine supplementation
+in the normal thiamine group . Heart rate increased transiently after exercise but returned to
+the pre-exercise levels after 1 h . Oxygen consumption also rose after exercise and the levels
+after 2 h was still higher than the pre-exercise levels, though it declined steadily . No effect
+of thiamine supplementation was observed (Figure 2) .
+120-
+** :P<0 .01
+100
+80
+-
+Days
+1
+2
+3
+20
+- 
+Pre
+Before
+After (0)
+60m .
+120m .
+Supplementation Exerclse30m .
+Resting
+4
+W *
+• Active
+O Placebo
+Figure 1 .
+Blood thiamine in thiamine supplemented versus placebo-treated athletes
+.
+Blood lactate levels increased following exercise in all subjects . The serum free fatty
+acid level decreased immediately after exercise and returned to the pre-exercise level after 2 h
+.
+Blood pressure increased transiently after exercise but returned to the pre-exercise levels after
+I h .
+Respiratory quotient was not affected by exercise .
+No effect of thiamine
+supplementation on these parameters was observed .
+
+
+--- PAGE 5 ---
+Thiamine
+Effect
+on Exercise-induced Fatigue
+99
+~7
+0
+•
+m
+~
+A
+c
+m
+N
+°v
+N
+~p
+ro
+3
+o
+•
+=
+•
+m
+as
+~ "-
+~
+m D
+•
+3
+0
+•
+3
+•
+a
+N
+A
+0
+•
+3
+G
+W
+.
+G
+•
+N
+C
+3
+'L1
+'LS
+CD
+NO
+3
+O
+O O
+O
+VO
+(mg/dl)
+(bpm)
+C,
+m
+oO
+O O
+O
+NO
+O
+0
+m
+a
+Cm
+C
+m
+m
+0
+0
+2
+m
+OV0
+CD
+0
+0
+3
+0
+3
+NO
+3
+(mg/dl)
+C,
+m
+O
+N
+A
+O
+O
+O
+O O
+(mI/min)
+(n O N O Ui O Ci O fT
+O O O O O O O O O
+U,v
+D
+m
+Ovmn
+0
+O
+N
+O
+NC
+3
+-a
+r+
+O
+
+
+--- PAGE 6 ---
+ioo
+Suzuki and
+Itokawa
+Normal Thiamine Group
+3
+(U
+(U
+(U
+a)
+0U
+U)
+a)
+0U
+U)
+Doy.
+*
+a
+B .Io,.
+A(I. (0) Jam
+.
+(am.
+a
+2
+aesihy
+- a a a
+I
+Nnl
+MmnIn
+Figure
+3a :
+Normal thiamine group .
+Subjective fatigue symptoms (30 items) in
+thiamine-supplemented (•) versus placebo-treated (o) athletes . *p<o .05 ; +p<O.O1 .
+
+
+--- PAGE 7 ---
+Thiamine
+Effect
+on
+Exercise-induced Fatigue
+101
+Low Thiamine Group
+12
+10
+eu
+6
+O
+cy
+0 4
+2
+0
+-2
+0
+Oqe
+Figure 3b :
+Low thiamine group . Subjective fatigue symptoms (30 items) in thiamine-
+supplemented (.) versus placebo-treated (o) athletes . *p<0 .05 ; +p<0.01 .
+Betore Alley (g)
+70m.
+Ewde.Jgm
+.
+60m .
+Resting
+12gm.
+Neat
+Morning
+
+
+--- PAGE 8 ---
+1 02
+Suzuki and Itokawa
+Total
+12 .
+10
+00N
+2
+0
+2
+W
+1
+0U
+0
+-1
+Dolor.
+After (0)
+300..
+Gam .
+1200..
+Noel
+Momlng
+0
+ra
+Dolor. Ale., (0)
+30m.
+Gam,
+1200. .
+Heel
+Morning
+Ddore
+All .. (a)
+Sum.
+600. .
+1200.
+.
+Heel
+Morning
+aaa_a_a.f
+S
+Belore
+AHer (0)
+300. .
+600. .
+120.0.
+Noel
+Morning
+Eeercbe3am.
+Heeling
+Doye
+4
+Figure 3c : Normal plus low thiamine group (Total) . Subjective fatigue symptoms (30
+items) in thiamine-supplemented (.) versus placebo-treated (o) athletes . *p<0 .05; +p<0.01 .
+
+
+--- PAGE 9 ---
+Thiamine
+Effect
+on
+Exercise-induced Fatigue
+103
+Subjective Findings
+Subjective symptom evaluation using 30 items indicated significant improvement
+immediately after exercise when thiamine supplementation was given (p<0 .05) (Figure 3) .
+Statistical analyses revealed separately, no significant differences were noted in either
+normal thiamine group and low thiamine group, but subjective fatigue was significantly
+alleviated in both groups with thiamine supplementation (p<0 .01) .
+In the ten items (A) in Table 2, which indicate general languishness, the effect of
+thiamine supplementation was significantly better in the low thiamine group and in the
+total of 2 groups (Figure 3) .
+Very
+Fairly
+1T
+C M
+•
+oderate
+Ce
+Slightly
+None
+Belore Atter(0) 300,. 60m .
+ExeroIse7Om.
+Resting
+Days
+4
+Very
+Fairly
+D)
+C Moderate
+Ce
+Slightly
+None
+120m.
+Days
+Figure 4,
+Overall fatigue rata
+athletes .
+Exercise3om.
+Next
+Morning
+Belore Allot (0) 700,. 6Om .
+4
+Very
+r
+Fairly
+O)
+M
+•
+oderate
+Slightly
+None
+Rooting
+12Dm .
+actor,, AIIer(o) 30m . 60m.
+12Dm.
+Neat
+Morning
+Exercise30m.
+Resting
+Days
+4
+Nest
+Morning
+supplemented (o) versus placebo-treated (o)
+
+
+--- PAGE 10 ---
+1 0 4
+Suzuki
+and
+Itokawa
+In the ten items (B) in Table 2, which indicate spiritual concentration, thiamine
+supplementation significantly maintained spiritual concentration in the normal thiamine
+group. Spiritual concentration tended to be maintained with thiamine supplementation
+(Figure 3) . The effect of thiamine supplmentation on physical malaise was not significant
+(Figure 3) . As for the overall physiological fatigue rating, fatigue rate tended to be less
+with thiamine supplementation in the normal thiamine group, but its effect in the low
+thiamine group and in the total of 2 groups was not significant (Figure 4) .
+DISCUSSION
+Many aspects of fatigue have been studied over the years, but adequate parameters for
+objective evaluation of fatigue have not yet been established . In the present study, healthy
+adult male athletes exercised to fatigue, and the effect of thiamine supplementation on
+fatigue was then evaluated .
+The results of a medical checkup performed before selection of subjects revealed that
+61% (49/81) of those surveyed had a blood thiamine level less than the lower limit of
+normal (40 ng/ml), indicating a marginal or latent deficit. It is unknown whether or not the
+levels among athletes are different from those found in the general population . It is reported
+that oarsmen who consumed energy of 4000 kcal or more a day took a larger amount of
+thiamine than the recommended requirement, but 11 of 14 oarsmen were judged to have a
+marginal deficiency (Kobayashi, 1990) . This suggests that the thiamine requirement of
+athletes may be larger than that recommended for non-athletes
+.
+Fursultiamine ('1 !FD), a thiamine derivative, has been proven to be absorbed efficiently
+from the intestine, to have a large tissue distribution, and to be readily converted into
+thiamine . Therefore, TTFD is expected to have a greater physiological effect than
+conventional thiamine because of improved absorption (Itokawa et al., 1992). TTFD has
+been widely used not only in the treatment of thiamine deficiency and various diseases with
+possible energy metabolism disorders but also to prevent or accelerate the recovery from
+exercise-induced fatigue . Studies have shown that TTFD, which was supplemented to
+physical workers in a high-temperature environment (Nakamura, 1971) and to athletes in a
+training camp for 10 days to 2 weeks (Nishiyama et al., 1972), was effective in the recovery
+from chronic physical fatigue . When conventional thiamine preparations were
+supplemented (10 mg/day) to elderly people with marginal thiamine deficiency for 6 weeks,
+various benefits such as increased appetite, improved general well-being, and decreased
+fatigue were observed (Smidt, 1991)
+.
+As shown in these reports, long-term
+supplementation of thiamine preparations has been demonstrated to be effective in
+accelerating the recovery from fatigue, but the effects of short-term thiamine
+supplementation (3 days) on recovery from acute fatigue due to single exercise have not yet
+been studied . Although the effects on recovery from fatigue should be evaluated on
+substances administered after the onset of fatigue, it was suggested in one report that
+thiamine must be stored in the muscles before exercise (Tsuji, 1991) . Accordingly, in the
+present study, TTFD was supplemented for 3 days before exercise to evaluate its effect .
+
+
+--- PAGE 11 ---
+Thiamine
+Effect on
+Exercise-induced
+Fatigue
+ios
+TTFD was also supplemented in the evening on the day of exercise and its effect on the
+recovery from fatigue was evaluated the next morning .
+In the present study, the number of complaints regarding subjective fatigue were
+significantly decreased immediately after exercise by thiamine supplementation . In the 10
+items relating to general languishness in Table 3, thiamine supplementation significantly
+alleviated malaise in the total of 2 groups and the low thiamine group . This finding
+substantiated our hypothesis that there might be a correlation between blood thiamine levels
+and fatigue, and it may support the needs of thiamine supplementation to people suspected
+of having insufficient thiamine levels, e .g. those who are unbalanced diet eaters, liable to
+fatigue, heavy alcohol drinkers, hard workers, competitive athletes, etc . In the 10 items
+relating to spiritual concentration, thiamine supplementation significantly suppressed the
+exercise-induced lowering of spiritual concentration in the normal thiamine group . The
+reason for this is unknown, though we might speculate that thiamine played a role other
+than just a supplementary one . But all in all, there was no clear difference in the effect of
+thiamine between the low thiamine and normal thiamine groups . This may be due to the
+fact that the thiamine in the low thiamine group is only marginally deficient, and that there
+was no marked difference in the blood thiamine level between the low thiamine (mean 30.9
+± 7.7 ng/ml) and normal thiamine (mean 56.8 ± 15.0 ng/ml) groups . A larger number of
+volunteers may be needed to study this subject further . Thiamine supplementation had no
+effect on subjective fatigue symptoms measured the morning after the exercise, but this
+may have been because the subjects were young athletes who could quickly recover from
+exercise-induced fatigue .
+Thiamine supplementation influenced neither the increase in the plasma lactate level nor
+the decrease in the serum free fatty acid level caused by muscular exercise . Respiratory
+quotient, which is defined as the ratio of exhaled carbon dioxide gas to inhaled oxygen gas,
+was not affected by exercise . This phenomenon might be explained by the fact that the
+subjects were athletes and well trained . Thiamine supplementation did suppress the increase
+in the blood glucose level in the normal thiamine group . This finding is difficult to
+interpret, but thiamine, as a coenzyme, may enhance the energy metabolism of glucose in
+some way (Takahashi, 1981) . Namely, ingestion of a sufficient amount of thiamine might
+increase pyruvate dehydrogenase activity in the glycolytic pathway and a-ketoglutarate
+dehydrogenase activity in the TCA cycle . Hence, thiamine may promote energy production
+by utilizing glucose efficiently as an energy source . It is unknown whether this possible
+effect on glucose is related to the suppressive effect of thiamine supplementation on the
+lowering of spiritual concentration seen in the normal thiamine group .
+CONCLUSION
+Sixteen young male athletes were divided into a low thiamine group (<40 ng/ml) and a
+normal thiamine group (>_40 ng/ml), and the effects of thiamine supplementation on
+exercise-induced fatigue were compared with placebo .
+
+
+--- PAGE 12 ---
+1 0 6
+Suzuki and
+Itokawa
+1)
+The blood thiamine level markedly increased following supplementation of thiamine for
+3 days before exercise .
+2) Exercise-induced changes in hemodynamic parameters and cardiopulmonary function
+indicated the onset of fatigue . Thiamine supplementation before exercise significantly
+suppressed the increase in blood glucose level in the normal thiamine group but had no
+effect on the other hemodynamic parameters or on cardiopulmonary function .
+3) Regarding subjective fatigue assessed by 30 items, the number of complaints shortly
+after exercise significantly decreased following thiamine supplementation, indicating that
+thiamine either prevents or promotes recovery from fatigue .
+4) In ten items indicating general languishness, thiamine supplementation alleviated
+fatigue complaints shortly after exercise all subjects as a whole and in the low thiamine
+group . In the ten items indicating spiritual concentration, thiamine supplementation
+significantly alleviated the lowering of spiritual concentration seen shortly after exercise
+in tall subjects as a whole and in the normal thiamine group . The mechanism by which
+thiamine produces these differences requires further study .
+ACKNOWLEDGMENTS
+We thank Ms . Rei Fujimura, University of Tsukuba, for her assistance. This study was
+supported by Takeda Chemical Ind ., Ltd .
+REFERENCES
+Fujii, N ., Nabekura, Y ., Gwon, O., Yamazaki, F., Homma, S ., and Ikegami, H . (1992) . Heart rate and plasma
+catecholamines responses to exercise at various intensities
+. Japanese Journal of Physical Fitness and Sports
+Medicine 41(3) :313-321 .
+Itokawa, Y. (1975) . Role of thiamine in excitable membrane of nerve .
+Vitamins (Japan), 49:415-427
+Itokawa, Y ., Nishino, Y ., and Igarashi, S . (1992) . Evaluation of thiamin derivatives : human bioavailability,
+uptake by human blood cells, and conversion to thiamin by rat liver homogenate .
+Vitamins (Japan),
+66(1) :35-42
+Kobayashi, S . (1990). Correlation between exercise and nutrition . Health Care, 32(3) :159-162
+Miyagawa, F., Kamegai, M., and Murayama, M . (1991) . Plasma total and free dopamine, norepinephrine,
+epinephrine response to treadmill exercise .
+The Autonomic Nervous System 28(5) :529-536 .
+Nakamura, M . (1971) . The effect of thiamine tetrahydrofurfuryl disulfide on fatigue of workers in an iron
+works . Japanese Journal of Industrial Health, 13(1):17-36
+Nishiyama, I ., Tanaka, T., and Tsumura, D .(1972) . Effect of thiamin tetrahydrofurfuryl disulfide (TTFD) on
+physical fitness chiefly on muscle strength-double blind studies .
+Japanese Journal of Physical Fitness and
+Sports Medicine, 21 :6-15
+Smidt, L.J ., Cremin, F.M ., Grivetti, L .E ., and Clifford, A .J . (1991) . Influence of thiamin supplementation on the
+health and general well-being of an elderly Irish population with marginal thiamin deficiency
+. J. Gerontol.
+(USA), 46(1):M16-M22
+Takahashi, H. (1981) . The effect of thiamine deficiency on glucose metabolism in rat cerebral cortex
+. Journal
+of Nippon Medical School, 48(5) :61-74
+Tsuji, S . (1991) . Sports and vitaminlmineral. The Japanese Journal of Clinical Nutrition, 78(1):46-52
+Von Murals, A . (1962) . The role of thiamine in neurophysiology . Ann.N.Y. Acad. Sci., 98:499-507

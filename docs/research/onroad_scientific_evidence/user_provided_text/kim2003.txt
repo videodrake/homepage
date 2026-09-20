@@ -1,0 +1,692 @@
+
+
+--- PAGE 1 ---
+JOURNAL OF MEDICINAL FOOD
+J Med Food 6 (4) 2003, 345–351
+© Mary Ann Liebert, Inc. and Korean Society of Food Science and Nutrition
+Octacosanol Supplementation Increases Running Endurance Time and Improves
+Biochemical Parameters After Exhaustion in Trained Rats
+Hyunjung Kim,1 Sunghee Park,1 Dae Suk Han,2 and Taesun Park1
+1Department of Food and Nutrition, Yonsei University, Seoul; and 2Korea Food Research Institute, 
+Kyunggi-do, Korea
+ABSTRACT
+This study evaluated the effects of octacosanol on running performance and related biochemical parameters in
+exercise-trained rats run to exhaustion on a treadmill. Male Sprague–Dawley rats were randomly assigned to one of three
+groups—sedentary control group (SC), exercise-trained control group (EC), and exercise-trained, octacosanol-supplemented
+group (EO)—and raised on either control or octacosanol (0.75%)-supplemented diet with (or without for SC rats) exercise-
+training for 4 weeks. EC rats ran 184% longer until exhaustion than SC rats (P , .01), while octacosanol-supplemented trained
+rats ran 46% longer than EC rats (P , .05). Under the exhausted state immediately following the running performance test,
+EO rats exhibited significantly higher plasma ammonia and lactate concentrations compared with the values for EC rats (P ,
+.05). Although EO rats ran significantly longer until exhausted, their plasma glucose level and gastronecmius muscle glyco-
+gen concentration were not significantly different from those of EC rats. Dietary supplementation of octacosanol resulted in
+significantly higher creatine phosphokinase activity in plasma (44% increase, P , .01) and citrate synthase activity in mus-
+cle (16% increase, P , .01) of exercise-trained rats. These results suggest that the ergogenic properties of octacosanol include
+the sparing of muscle glycogen stores and increases in the oxidative capacity in the muscle of exercise-trained rats.
+KEY WORDS:  exercise-trained rats  glycogen  lactate  octacosanol  running performance
+345
+INTRODUCTION
+O
+VER THE PAST 10 YEARS, nutritional supplements have
+become increasingly popular among the general public
+worldwide, and many supplements are taken as ergogenic
+aids, a term used for substances that enhance athletic per-
+formance and increase stamina and exercise capacity. Er-
+gogenic aids are believed to increase athletic performance
+by either renewing or increasing energy stores in the body,
+modulating the biochemical reactions contributing to fa-
+tigue, or maintaining optimal body weight.1
+Octacosanol [HO-CH2-(CH2)26CH3], a high-molecular-
+weight, primary aliphatic alcohol, is the main component of
+a natural wax product that naturally occurs in fruits and
+leaves and on the surface of plants and whole seeds. Most
+studies evaluating the efficacy of octacosanol have used ei-
+ther a wheat-germ oil extract (policosanol) or a natural mix-
+ture of primary alcohols isolated from sugar cane wax (Sac-
+charum officinarum L.), of which octacosanol is the main
+component.2,3 Recent studies in humans and rabbits with hy-
+percholesterolemia4–9 have demonstrated that octacosanol is
+involved in the modulation of cholesterol metabolism, low-
+ering blood low-density lipoprotein-cholesterol and elevat-
+ing high-density lipoprotein-cholesterol concentrations. In
+addition to the cholesterol-lowering effects, anti-aggrega-
+tory properties and the cytoprotective activity of octacosanol
+have been investigated.
+Ergogenic properties of octacosanol were first postulated
+by Cureton10 from the observation that extracts from wheat-
+germ oil (octacosanol) had beneficial effects on the physi-
+cal performance of athletes. Another early study on octa-
+cosanol involved the investigation of its effects on metabolic
+responses to submaximal cycle ergometry, grip and chest
+strength, and reaction time in human subjects.2 More re-
+cently, studies11,12 have suggested beneficial effects of oc-
+tacosanol on physical performance in different systems.
+Most of these studies assessing the use of octacosanol on
+athletic performance have been conducted in humans using
+experimental designs lacking randomization, and appear to
+be nonspecific in terms of sports regimens and diet. Also,
+many claims for improving athletic performance as well as
+its underlying mechanism have yet to be proven in an ap-
+propriate and controlled animal model. The present study
+was, therefore, undertaken to evaluate effects of octacosanol,
+used as a dietary supplement, on endurance exercise per-
+formance in exercise-trained rats. Several biochemical pa-
+rameters, such as blood concentrations of lactate, ammonia,
+glucose, and inorganic phosphorus, along with muscle
+glycogen concentration and enzyme activities involved in
+the energy production pathway during exercise have been
+assessed.
+Received 12 May 2003. Accepted 26 June 2003.
+Address reprint requests to: Taesun Park, Ph.D., Department of Food and Nutrition, Yon-
+sei University, 134 Shinchon-dong, Sudaemun-ku, Seoul 120–749, South Korea, E-mail:
+tspark@yonsei.ac.kr
+
+
+--- PAGE 2 ---
+MATERIALS AND METHODS
+Animals and experimental diets
+Twenty-four male Sprague–Dawley rats weighing be-
+tween 180 and 200 g were purchased from Daehan Labora-
+tory Animal Research Center Co. (Chungcheongbuk-do,
+Korea). Rats were acclimated to individual stainless steel
+cages in a room with controlled temperature (20–23°C), hu-
+midity (50–60%), and lighting (12-hour light–dark cycle)
+and fed a commercial pelleted rat chow for 5 days prior to
+initiating the experimental diets. The rats were randomly as-
+signed to one of the following experimental groups: seden-
+tary control group (SC; n 5 8), exercise-trained control
+group (EC; n 5 8), and exercise-trained, octacosanol-sup-
+plemented group (EO; n 5 8).
+Rats in the SC and EC groups were fed the control diet
+formulated using the AIN-93G purified rodent diet, and an-
+imals in the EO group were fed the same diet supplemented
+with 0.75% octacosanol for 4 weeks. Compositions of the
+experimental diets are as listed in Table 1. Animals were
+given free access to food and drinking water for the entire
+feeding period. Food consumption was recorded daily, and
+body weight gain was measured every third day between
+1200 and 1300 h. This study adhered to the Guide for the
+Care and Use of Laboratory Animals developed by the In-
+stitute of Laboratory Animal Resources of the National Re-
+search Council,13 and was approved by the Institutional An-
+imal Care and Use Committee of Yonsei University, Seoul,
+South Korea.
+Exercise training protocol and running 
+performance test
+Rats in EC and EO groups were exercise-trained for the
+entire experimental period on a treadmill, at room temper-
+ature, 5 days/week. After being familiarized with a motor-
+driven rodent treadmill (Daejong Instrument Co., Seoul) for
+2 days, animals were forced to run on a treadmill at 15
+m/minute, 0% slope for 20 minutes/day during the first
+week. The intensity and duration of the exercise training
+were progressively increased until at week 4 the animals
+were running at 25 m/minute, 0% slope for 60 minutes/day
+as shown in Table 2.
+At the end of the experimental period, animals in the SC,
+EC, and EO groups were all food-deprived for 2 hours, and
+then tested for their endurance exercise performance on a
+treadmill. The speed began with 12 m/minute, and was in-
+creased every 3 minutes by 3 m/minute until reaching 30
+m/minute. Rats were run until they could no longer main-
+tain the pace of the treadmill. Once a rat could not keep pace
+with the treadmill for up to 10 seconds, it was removed from
+the treadmill and placed in a supine position. If the rat did
+not right itself, it was considered exhausted and immediately
+346
+KIM ET AL.
+TABLE 1.
+COMPOSITION OF EXPERIMENTAL DIETS
+Level (g/kg)
+CD
+OD
+Cornstarch
+367.486
+359.986
+Dextrinized cornstarch
+132.000
+132.000
+Sucrose
+100.000
+100.000
+Casein
+200.000
+200.000
+Corn oil
+100.000
+100.000
+Cellulose
+50.000
+50.000
+Mineral mix (AIN-93G-MX)a
+35.000
+35.000
+Vitamin mix (AIN-93G-VX)b
+10.000
+10.000
+L-Cystine
+3.000
+3.000
+Choline bitartarate
+2.500
+2.500
+tert-Butylhydroquinone
+0.014
+0.014
+Octacosanolc
+.—
+7.500
+CD, control diet; OD, octacosanol-supplemented diet.
+aPrepared by ICN Biomedicals, Inc. (Costa Mesa, CA).
+The mineral mixture contained (in g/kg of mix): calcium
+carbonate, anhydrous, 357; potassium phosphate,
+monobasic, 196; potassium citrate, tri-potassium, mono-
+hydrate, 70.78; sodium chloride, 74; potassium sulfate,
+46.6; magnesium oxide, 24; ferric citrate, 6.06; zinc car-
+bonate, 1.65; manganous carbonate, 0.63; cupric carbon-
+ate, 0.3; potassium iodate, 0.01; sodium selenate, anhy-
+drous, 0.01025; ammonium paramolybdate, 4-hydrate,
+0.00795; sodium metasilicate, 9-hydrate, 1.45; chromium
+potassium sulfate, 12-hydrate, 0.275; lithium chloride,
+0.0174; boric acid, 0.0815; sodium fluoride, 0.0635; nickel
+carbonate, 0.0318; ammonium vanadate, 0.0066; pow-
+dered sucrose, 221.026
+bPrepared by ICN Biomedicals, Inc. The vitamin mix-
+ture contained (in g/kg of mix): nicotinic acid, 3; Ca pan-
+tothenate, 1.6; pyridoxine-HCl, 0.7; thiamine-HCl, 0.6; ri-
+boflavin, 0.6; folic acid, 0.2; biotin, 0.02; vitamin B-12
+(cyanocobalamin) (0.1% in mannitol), 2.5; vitamin E (500
+IU/g), 15; vitamin A (500,000 IU/g), 0.8; vitamin D3
+(cholecalciferol) (400,000 IU/g), 0.25; vitamin K (phyllo-
+quinone), 0.075; powdered sucrose, 974.655.
+cIsolated from rice wax, and supplied by Sungkyun
+Biotech Co., Kyunggi-do, South Korea.
+TABLE 2.
+EXERCISE TRAINING PROTOCOL ON A TREADMILL
+Sum of running
+Week
+Intensity (m/min)
+Duration (min)
+distance (m/week)
+1
+15
+20
+1,500
+2
+20
+30
+3,000
+3
+25
+40
+5,000
+4
+25
+60
+7,500
+
+
+--- PAGE 3 ---
+anesthetized for surgery. If rats were not exhausted, exer-
+cise was continued until exhaustion occurred. To avoid bias,
+rat identification was concealed from the investigator as-
+sessing the exhaustion criteria in all rats.
+Sample collection
+Immediately after the end of the running performance test,
+exhausted animals were anesthetized with ethyl ether, and
+the abdomen was opened. Blood samples were collected
+from the abdominal vein into a heparinized syringe, and
+plasma was prepared by a low-speed centrifugation (2,000
+g for 10 minutes). Gastrocnemius and soleus muscles were
+surgically removed from both left and right hind limbs,
+weighed after trimming away connective tissues, freeze-
+clamped in liquid nitrogen, and stored at 280°C until analy-
+ses.
+Analytical methods
+Activity of plasma creatine phosphokinase (CK) (Bio
+Clinical System Corp., Anyang, Kyunggi-do, South Korea)
+and plasma concentrations of ammonia (Wako Pure Chem-
+ical, Osaka, Japan), lactate (Sigma, St. Louis, MO), glucose
+(Bio Clinical System Corp.), and inorganic phosphorus (Bio
+Clinical System Corp.) were analyzed using commercially
+available kits.
+Citrate synthase (CS) activity was measured in soleus
+muscles as an index of the training-induced increase in ox-
+idative capacity. Samples of thawed muscle tissue were
+minced and homogenized in ice-cold 100 mM potassium
+phosphate buffer with 0.05% bovine serum albumin (1:20
+wt/vol, pH 7.4). Homogenates were then centrifuged at 400
+g for 10 minutes. The supernatant was decanted and assayed
+for CS activity at 37°C using the procedure described by
+Srere.14 Activity of lactate dehydrogenase (LDH) was de-
+termined according to the method of Pesce et al.15 Gas-
+trocnemius muscles were homogenized in ice-cold 100 mM
+potassium phosphate buffer (pH 7.4) using a Polytron ho-
+mogenizer. The assay was performed in a reaction mixture
+containing 100 mM KH2PO4 (pH 7.5), 3.6 mM nicotinamide
+adenine dinucleotide, and 3.3 mM pyruvate. Protein con-
+centration was determined using reagents from Bio-Rad
+Laboratories (Hercules, CA). Enzyme activities were ex-
+pressed in mmol (or nmol) mg of wet muscle21 min21.
+Glycogen content of the gastrocnemius muscle was de-
+termined by the method of Chun and Yin16 with minor mod-
+ifications. The gastrocnemius muscle (0.2 g) was added to
+0.5 mL of 30% KOH, and the vials were kept at 100°C for
+20 minutes. After addition of 1.5 mL of anhydrous ethanol,
+the vials were centrifuged at 4,000 g for 15 minutes, and the
+supernatants were discarded. Distilled water (0.5 mL) and
+1 mL of 0.2% anthrone (0.2 g of anthrone in 100 mL of
+freshly prepared 98% H2SO4) were added, and the vials were
+placed in boiling water for 20 minutes. The optical density
+of the reaction mixture was determined by photometry at
+620 nm.
+OCTACOSANOL AND RUNNING PERFORMANCE
+347
+TABLE 3.
+BODY WEIGHT GAIN, FOOD EFFICIENCY RATIO, AND SKELETAL MUSCLE WEIGHTS OF RATS
+Group
+SC
+EC
+EO
+Body weight gain (g/4 weeks)
+125 6 5.52
+107 6 7.11
+100 6 3.73
+Food efficiency ratio
+0.28 6 0.01
+0.26 6 0.02
+0.23 6 0.01
+Gastrocnemius muscle (g/100 g
+646 6 10.5
+675 6 7.7a
+677 6 10.3
+of body weight)
+Soleus muscle (g/100 g of body
+35.5 6 1.0
+37.8 6 1.3
+39.3 6 2.0
+weight)
+SC, sedentary control group; EC, exercise-trained control group; EO, exercise-trained, octacosanol-supplemented
+group. The food efficiency ratio was defined as the body weight gain for the experimental period (g/day)/food 
+intake for the experimental period (g/day). Data are mean 6 SEM values of eight rats.
+aSignificantly different compared with the value for SC rats by the independent samples t test at P , .05.
+FIG. 1.
+Endurance exercise time to exhaustion in sedentary and
+trained rats: SC, sedentary control group; EC, exercise-trained control
+group; EO, exercise-trained, octacosanol-supplemented group. Data
+are mean 6 SEM values of eight rats. 11Significantly different com-
+pared with the value for SC rats by the independent samples t test at
+P , .01. *Significantly different compared with the value for EC rats
+by the independent samples t test at P , .05.
+
+
+--- PAGE 4 ---
+Statistical analyses
+Data are expressed as mean 6 SEM values of eight rats.
+All statistical analyses were performed using SAS/STAT
+version 8.1 (SAS Institute, Inc., Cary, NC). Significance of
+the effect of exercise training or dietary supplementation was
+analyzed by the independent samples t test at P , .05 or
+P , .01. Correlations between running time as an indicator
+of endurance exercise performance and plasma concentra-
+tion of glucose, ammonia, lactate, or inorganic phosphorus,
+as well as muscle glycogen level, of rats were analyzed by
+the Pearson correlation test at P , .05.
+RESULTS
+The food efficiency ratio and skeletal muscle weights of
+rats are presented in Table 3. Exercise training on a tread-
+mill for 4 weeks with or without dietary supplementation re-
+sulted in slightly lower values for cumulative body weight
+gain and food efficiency ratio compared with the SC rats,
+but these differences were not statistically significant (P .
+.05). Rats exercise-trained without dietary supplementation
+had a significantly higher gastrocnemius muscle mass (P ,
+.05) with no difference in the soleus muscle weight com-
+pared with those for the SC animals (P . .05). Supple-
+menting trained rats with octacosanol did not affect body
+weight gain, food efficiency ratio, or skeletal muscle weights
+compared with the EC animals.
+In this study, both exercise training and octacosanol sup-
+plementation significantly affected running time to exhaus-
+tion (Fig. 1). In the SC rats, mean running time to exhaus-
+tion was 33.3 6 3.8 minutes (range 26–59 minutes), whereas
+trained rats ran 184% longer, 94.5 6 6.6 minutes (range
+76–125 minutes), which was statistically significant (P ,
+.01). The EO rats ran significantly (P , .05) longer (46%)
+than the trained rats without supplementation, with an av-
+erage running time of 137.6 6 17.5 minutes (range 90–248
+minutes).
+Correlations between running time, as an indicator of en-
+durance exercise performance, and the plasma concentra-
+tions of diverse fatigue-related parameters as well as mus-
+cle glycogen concentration were analyzed in the SC, EC,
+and EO rats (Table 4). The positive correlation observed be-
+tween plasma lactate concentration and running time to ex-
+haustion was significant in the SC rats (P , .05), but was
+without statistical significance in the exercise-trained ani-
+mals with or without dietary supplementation (EO and EC,
+P . .05). Running time to exhaustion was positively corre-
+lated, but not significantly (P . .05), with plasma concen-
+trations of ammonia and inorganic phosphorus, and nega-
+tively correlated with plasma glucose concentrations (also
+not significant). There was an inverse correlation of running
+time with muscle glycogen concentration in all three groups,
+but it was only significant in the EC rats.
+Table 5 shows the plasma concentrations of glucose, am-
+monia, lactate, and inorganic phosphorus in exhausted rats
+348
+KIM ET AL.
+TABLE 4.
+CORRELATION COEFFICIENTS BETWEEN RUNNING TIME UNTIL EXHAUSTED AND PLASMA CONCENTRATION
+OF GLUCOSE, AMMONIA, OR INORGANIC PHOSPHORUS, OR MUSCLE GLYCOGEN LEVEL OF RATS
+Inorganic
+Group
+Glucose
+Ammonia
+Lactate
+phosphorus
+Glycogen
+SC
+20.214
+0.565
+0.822a
+0.653
+20.179
+EC
+20.155
+0.640
+0.557
+0.537
+20.811a
+EO
+20.699
+0.330
+0.576
+0.196
+20.573
+SC, sedentary control group; EC, exercise-trained control group; EO, exercise-trained, octacosanol-supplemented
+group. Data are mean values of eight rats.
+aSignificantly correlated by the Pearson correlation test at P , .05.
+TABLE 5.
+PLASMA CONCENTRATIONS OF AMMONIA, LACTATE, GLUCOSE, AND INORGANIC
+PHOSPHORUS IN EXHAUSTED RATS FOLLOWING THE RUNNING PERFORMANCE TEST
+Group
+SC
+EC
+EO
+Glucose (mg/dL)
+221 6 13.0
+154 6 8.83a
+141 6 13.7
+Ammonia (mg/dL)
+209 6 11.2
+193 6 17.5
+253 6 12.1b
+Lactate (mg/dL)
+26.6 6 2.12
+22.1 6 1.49
+27.2 6 1.24b
+Inorganic phosphorus (mg/dL)
+5.30 6 0.14
+5.80 6 0.23
+6.08 6 0.28
+SC, sedentary control group; EC, exercise-trained control group; EO, exercise-trained, octacosanol-supplemented
+group. Data are mean 6 SEM values of eight rats.
+aSignificantly different compared with the value for SC rats by the independent samples t test at P , .01.
+bSignificantly different compared with the value for EC rats by the independent samples t test at P , .05.
+
+
+--- PAGE 5 ---
+immediately following the running performance test. A sig-
+nificant decrease (30%) in plasma glucose concentration was
+observed in the exercise-trained rats compared with the SC
+animals (P , .01). Although the exercise-trained rats ran 1.8
+times longer until exhausted than did the sedentary rats, their
+plasma levels of ammonia, lactate, and inorganic phospho-
+rus were not significantly different from the SC group. Sig-
+nificant elevations in plasma ammonia and lactate concen-
+trations were found in the EO rats, which ran 46% longer
+until exhausted, compared with the EC rats (P , .05), while
+the octacosanol-induced decrease in plasma glucose con-
+centration of exercise-trained rats following the running per-
+formance test was not statistically significant (P . .05).
+Plasma inorganic phosphorus concentration was not affected
+by either the exercise training or the octacosanol supple-
+mentation.
+Gastronecmius muscle glycogen concentration under the
+exhausted state was lower in the exercise-trained rats than
+the value for the SC group (P , .05), but was not signifi-
+cantly different between the EC and EO rats, despite the lat-
+ter group running 45% longer until exhausted (Fig. 2).
+Table 6 shows the activities of selected enzymes mea-
+sured in the plasma and skeletal muscle of exhausted rats.
+Plasma CK activity was significantly affected by both the
+exercise training and diet: Rats in the EC group had signif-
+icantly higher CK activity (198 6 19.55 IU/L) than did the
+SC rats (128 6 7.85 IU/L) (P , .01), and EO rats had sig-
+nificantly higher plasma CK activity (285 6 20.72 IU/L)
+compared with the EC animals (P , .01). Four weeks of ex-
+ercise training without dietary supplementation resulted in
+significantly higher CS activity in the soleus muscle of rats
+(15%, P , .01) compared with the value for the SC rats.
+Feeding the octacosanol-supplemented diet in trained rats
+resulted in higher muscle CS activity than observed in the
+trained control animals (16% increase, P , .01). The LDH
+activity in the gastrocnemus muscle of rats exhibited a sim-
+ilar tendency as shown for the activities of CK and CS, in
+that it tended to be increased by the exercise training (25.6 6
+1.94 vs. 19.5 6 1.30 mmol mg of muscle21 min21) and fur-
+ther increased by the dietary supplement (32.4 6 1.94 vs.
+25.6 6 1.94 mmol mg of muscle21 min21), although these
+training and dietary effects were not statistically significant
+(P . .05).
+DISCUSSION
+Peripheral factors that contribute to exercise-induced fa-
+tigue such as glycogen depletion and lactate accumulation
+have been extensively studied and are well described.17 Lac-
+tate is produced during glycolysis, and under normal cir-
+cumstances it is further degraded via the tricarboxylic acid
+cycle for the production of ATP by oxidative phosphoryla-
+tion. There is also growing evidence of a significant central
+(i.e., a central nervous system) component, such as plasma
+ammonia level, to exercise-induced fatigue.18,19 The imme-
+diate source of ammonia from muscle appears to be a result
+of the deamination of AMP and is more apparent in fast-
+twich than in slow-twitch fibers. In high-intensity exercise,
+the increase in ADP concentration activates the enzyme
+AMP deaminase, a key enzyme in the purine nucleotide cy-
+OCTACOSANOL AND RUNNING PERFORMANCE
+349
+TABLE 6.
+ACTIVITIES OF SELECTED ENZYMES IN SKELETAL MUSCLE AND PLASMA
+OF EXHAUSTED RATS FOLLOWING THE RUNNING PERFORMANCE TEST
+Group
+SC
+EC
+EO
+CK (IU/L of plasma)
+128 6 7.85
+198 6 19.6a
+285 6 20.7b
+CS (nmol mg of soleus muscle21 min21)
+46.9 6 2.00
+54.1 6 1.32c
+62.6 6 2.48b
+LDH (mmol mg of gastrocnemius
+19.5 6 1.30
+25.6 6 2.73
+32.4 6 1.94
+muscle21 min21)
+SC, sedentary control group; EC, exercise-trained control group; EO, exercise-trained and octacosanol-supplemented
+group. Data are mean 6 SEM values of eight rats.
+Significantly different compared with the value for SC rats by the independent samples t test at cP , .05, aP , .01.
+bSignificantly different compared with the value for EC rats by the independent samples t test at P , .01.
+FIG. 2.
+Muscle glycogen concentration of exhausted rats following
+the running performance test: SC, sedentary control group; EC, exer-
+cise-trained control group; EO, exercise-trained, octacosanol-supple-
+mented group. Data are mean 6 SEM values of eight rats. 1Signifi-
+cantly different compared with the value for SC rats by the independent
+samples t test at P , .05.
+
+
+--- PAGE 6 ---
+cle, leading to an increased production of NH41.20 Increases
+in blood ammonia levels have been reported in rats after
+swimming and in humans after arm work, maximal cycle
+ergometry, and treadmill exercise.20–22
+The effect of the training protocol used in this study is
+confirmed by the increased time to reach exhaustion ob-
+served for the trained rats without dietary supplementation.
+The training protocol in our study also increased the gas-
+trocnemius muscle (fast-twitch fiber) weight and CS activ-
+ity in the soleus muscle (slow-twitch fiber) of rats, both of
+which are known to be elevated by aerobic exercise train-
+ing.23–25 In this study, the exercise-trained rats that were not
+supplemented appeared to accumulate ammonia and lactate
+in their blood at a slower rate than did SC animals, so they
+could run longer until exhausted. These data are in agree-
+ment with human studies showing that trained subjects gen-
+erally experience a lesser increase in plasma ammonia dur-
+ing either prolonged or intense exercise.26 The major
+metabolic consequences of adaptation to endurance exercise
+training are a slower utilization of muscle glycogen and
+blood glucose, a greater reliance on fat oxidation, and less
+lactate production in the muscle during exercise of a given
+intensity.27 The presence in the blood of enzymes that are
+normally localized in muscle fibers is taken as evidence of
+disruption or increased permeability of the muscle cell mem-
+branes. In this respect, increased plasma CK is considered
+one of the best indicators of muscle damage from eccentric
+contraction.28 Exercise training is known to prevent the rise
+of plasma CK during a single bout of exercise under a given
+protocol.29,30 The reason our trained rats exhibited higher
+plasma CK activity appears to be attributable to the in-
+creased running time to exhaustion compared with the SC
+rats.
+We investigated the effect of octacosanol supplemen-
+tation on the time to reach exhaustion of exercise-trained
+rats subjected to a single bout of high-intensity exercise.
+We chose a 0.75% octacosanol supplementation level
+based on earlier reports by other investigators3,31 that oc-
+tacosanol (or polycosanol) was effective in preventing my-
+ocardial necrosis and modulating lipid metabolism in rats
+at 0.1–1% levels. Octacosanol supplementation produced
+an increase in the time to exhaustion of exercise-trained
+rats. Elevations in plasma lactate and ammonia concen-
+trations and CK activity following the running perfor-
+mance test appear to be related to the increase in en-
+durance. Although EO rats ran significantly longer until
+exhausted, their plasma glucose and gastronecmius mus-
+cle glycogen concentrations under the exhausted state
+were not significantly different from those for EC rats.
+Octacosanol supplementation significantly elevated CK
+and CS activities in the muscle of exercise-trained rats.
+These results can be summarized as follows: Octacosanol
+supplementation per se increased the endurance exercise
+performance of trained rats without down-regulating the
+production of lactate and ammonia. Therefore, octa-
+cosanol exerts its ergogenic activity through other bio-
+chemical mechanisms involving increased activity of CS
+and enhanced glycogen storage (and/or saving of glyco-
+gen utilization) in trained muscle.
+ACKNOWLEDGMENTS
+This study was supported by the Technology Develop-
+ment Program for Agriculture and Forestry, Ministry Agri-
+culture and Forestry, Republic of Korea.
+REFERENCES
+1. Beltz SD, Doering PL: Efficacy of nutritional supplements used
+by athletes. Clin Pharm 1993;12:900–908.
+2. Saint-John M, McNaughton L: Octacosanol ingestion and its effects
+on metabolic responses to submaximal cycle ergometry, reaction
+time and chest and grip strength. Int Clin Nutr Rev 1986;6:81–87.
+3. Kato S, Karino K, Hasegawa S, et al.: Octacosanol affects lipid
+metabolism in rats fed on a high-fat diet. Br J Nutr 1995;73:
+433–441.
+4. Canetti M, Moreira M, Mas R, et al.: A two-year study on the ef-
+ficacy and tolerability of policosanol in patients with type II hy-
+perlipoproteinaemia. Int J Clin Pharmacol Res 1995;15:159–165.
+5. Menendez R, Arruzazabala L, Mas R, et al.: Cholesterol-lower-
+ing effect of policosanol on rabbits with hypercholesterolaemia
+induced by a wheat starch-casein diet. Br J Nutr 1997;77:923–932.
+6. Mas R, Castano G, Illnait J, et al.: Effects of policosanol in pa-
+tients with type II hyperlipoproteinaemia and additional coronary
+risk factors. Clin Pharmacol Ther 1999;65:439–447.
+7. Castano G, Mas R, Fernandez J, et al.: Effects of policosanol on
+postmenopausal women with type II hyperlipoproteinaemia. Gy-
+necol Endocrinol 2000;14:187–195.
+8. McCarty MF: Policosanol safely down-regulates HMG-Co A re-
+ductase-potential as a component of the Esselstyn regimen. Med
+Hypothesis 2002;59:268–279.
+9. Castano G, Mas R, Fernandez JC, Fernandez L, Illnait J, Lopez
+E: Effects of policosanol on older patients with hypertension and
+type II hyperlipoproteinaemia. Drugs R D 2002;3:159–172.
+10. Cureton TK: Forty-two physiological training program utilizing
+894 humans. In: The Physiological Effects of Wheat Germ Oil on
+Humans. In Exercise, Charles C Thomas, Springfield, IL, 1972,
+pp. 525–715.
+11. Levin E: Effects of octacosanol on chick comb growth. Proc Soc
+Exp Biol Med 1963;112:331–334.
+12. Passwater R: Octacosanol. Its name really spells increased en-
+ergy, stamina and vigor. Health Q 1982;7:14–15.
+13. Institute of Laboratory Animal Resources, National Research
+Council: Guide for the Care and Use of Laboratory Animals, Na-
+tional Academy Press, Washington, DC, 1996.
+14. Srere PA: Citrate synthase. Methods Enzymol 1969;13:3–11.
+15. Pesce A, Fondy TP, Stolzenbach F, Castillo F, Kaplan NO: Com-
+parative enzymology of lactate dehydrogenases. 3. Properties of
+the H4 and M4 enzymes from a number of vertebrates. J Biol
+Chem 1967;242:2151–2167.
+16. Chun Y, Yin ZD: Glycogen assay for diagnosis of female geni-
+tal Chlamydia trachomatis infection. J Clin Microbiol 1998;36:
+1081–1082.
+17. Gollnick PD: Peripheral factors as limitations to exercise capac-
+ity. Can J Appl Sports Sci 1982;7:14–21.
+18. Davis JM, Bailey SP: Possible mechanisms of central nervous sys-
+tem fatigue during exercise. Med Sci Sports Exerc 1997;29:45–57.
+350
+KIM ET AL.
+
+
+--- PAGE 7 ---
+19. Mutch BJC, Banister EW: Ammonia metabolism in exercise and
+fatigue: a review. Med Sci Sports Exerc 1983;15:41–50.
+20. Katz A, Broberg S, Sahlin K, Wahren J: Muscle ammonia and
+amino acid metabolism during dynamic exercise in man. Clin
+Physiol 1986;6:365–379.
+21. Denis C, Linossier MT, Dormois D, Cottier-Perrin M, Geyssant
+A, Lacour JR: Effects of endurance training on hyperammoni-
+aemia during a 45–min constant exercise intensity. Eur J Appl
+Physiol 1989;59:268–272.
+22. Graham TE, Turcotte LP, Kiens B, Richter EA: Training and mus-
+cle ammonia and amino acid metabolism in humans during pro-
+longed exercise. J Appl Physiol 1995;78:725–735.
+23. Meneguello MO, Mendonca JR, Lancha AH Jr, Costa Rosa FBP:
+Effect of arginine, ornithine and citrulline supplementation upon
+performance and metabolism of trained rats. Cell Biochem Funct
+2003;21:85–91.
+24. Jansson E, Kaijser L: Substrate utilization and enzymes in skele-
+tal muscle of extremely endurance-trained men. J Appl Physiol
+1987;62:999–1005.
+25. Siu PM, Donley DA, Bryner RW, Always SE: Citrate synthase
+expression and enzyme activity after endurance training in 
+cardiac and skeletal muscles. J Appl Physiol 2003;94:555–
+560.
+26. Graham TE, Turcotte LP, Kiens B, Richter EA: Effect of en-
+durance training on ammonia and amino acid metabolism in hu-
+mans. Med Sci Sports Exerc 1997;29:646–653.
+27. Crowley MA, Willis WT, Matt KS, Donovan CM: A reduced lac-
+tate mass explains much of the glycogen sparing associated with
+training. J Appl Physiol 1996;81:362–367.
+28. Armstrong RB, Ogilvie RW, Schwane JA: Eccentric exercise-in-
+duced injury to rat skeletal muscle. J Appl Physiol 1983;54:80–93.
+29. Schwane JA, Armstrong RB: Effect of training on skeletal mus-
+cle injury from downhill running in rat. J Appl Physiol 1983;55:
+969–975.
+30. Hyatt JP, Clarkson PM: Creatine kinase release and clearance us-
+ing MM variants following repeated bouts of eccentric exercise.
+Med Sci Sports Exerc 1998;30:1059–1065.
+31. Herrera MN, Magraner J, Mas R: Effect of policosanol on iso-
+prenaline-induced myocardial necrosis in rats. J Pharm Pharma-
+col 1994;46:282–285.
+OCTACOSANOL AND RUNNING PERFORMANCE
+351

@@ -1,0 +1,1770 @@
+
+
+--- PAGE 1 ---
+Dietary Supplementation of Octacosanol Improves Exercise-Induced
+Fatigue and Its Molecular Mechanism
+Yaping Zhou,∥Fuliang Cao, Qiang Wu, Yi Luo, Tianyi Guo, Shuai Han, Mengzhen Huang, Zuomin Hu,
+Jie Bai, Feijun Luo,*,∥and Qinlu Lin*,∥
+Cite This: J. Agric. Food Chem. 2021, 69, 7603−7618
+Read Online
+ACCESS
+Metrics & More
+Article Recommendations
+ABSTRACT: Several publications report that octacosanol (OCT) has diﬀerent biological functions. This study was designed to
+evaluate the antifatigue eﬀect and molecular mechanism of octacosanol (200 mg/(kg day)) in forced exercise-induced fatigue models
+of trained male C57BL/6 mice. Results showed that octacosanol ameliorated the mice’s autonomic activities, forelimb grip strength,
+and swimming endurance, and the levels of liver glycogen (LG), muscle glycogen (MG), blood lactic acid (BLA), lactate
+dehydrogenase (LDH), superoxide dismutase (SOD), and glutathione peroxidase (GSH-Px) were also regulated. Gene analysis
+results showed that treatment with OCT upregulated 29 genes, while 38 genes were downregulated in gastrocnemius tissue. Gene
+ontology (GO) analyses indicated that these genes enriched functions in relation to myoﬁbril, contractile ﬁber, and calcium-
+dependent adenosinetriphosphatase (ATPase) activity. Octacosanol supplementation signiﬁcantly adjusted the messenger RNA
+(mRNA) and protein expression levels related to fatigue performance. Octacosanol has an observably mitigating eﬀect in exercise-
+induced fatigue models, and its molecular mechanism may be related to the regulation of tripartite motif-containing 63 (Trim63),
+periaxin (Prx), calcium voltage-gated channel subunit α1 H (Cacna1h), and myosin-binding protein C (Mybpc3) expression.
+KEYWORDS: antifatigue, octacosanol, energy and endurance performance, biochemical parameters, microarray, molecular mechanism
+■INTRODUCTION
+Fatigue is one of the most common physiological reactions
+related to a progressive gradual decline in the ability for vitality
+and activity.1 Fatigue can either be physiologic or chronic.
+Physiological fatigue is the disability of muscles to maintain
+normal movements due to severe stress and intensive physical
+or mental activity.2 Therefore, exercise fatigue is a distinguish-
+ingly physiological process after strenuous exercise that
+involves a signiﬁcant decrease in the ability for more work,
+vitality, and activities.3 This situation mainly results from the
+depletion of energy sources and the accumulation of end
+products that eventually lead to the disorder in the internal
+environment of the body.4 Asides from physiological reaction
+to physical stress, fatigue is also indicative of disorders, such as
+immunologic, hematological, endocrinological diseases, etc.5
+Fatigue also progresses in aging, cancer, depression, multiple
+sclerosis, Parkinson’s, etc.6 Accelerated life pace and ﬁerce
+competitive social lifestyles are making fatigue a commonly
+occurring condition. Reports abound of some traditional/
+natural medicines and food constituents used as healthcare
+products for the relieve of body fatigue include Antrodia
+camphorata,2 Radix Rehmanniae Preparata (Shu Dihuang),4
+Loach protein,5 dietary nucleotides,7 etc. Additionally, medical
+practitioners often advise one to get enough sleep and avoid
+staying up late. With these arrays of options for fatigue
+alleviation, it is still necessary for patients aﬀected by the
+above-mentioned associated diseases to take medication-based
+therapies.6 Synthetic drugs or therapies currently available for
+fatigue treatment have not been top-notch, and hence, eﬀorts
+are directed toward nutritional interventions that are safer and
+eﬀective fatigue prevention methods.7 Therefore, it is
+imperative to investigate natural antifatigue compounds,8
+most of which could improve athletic ability, accelerate the
+elimination of fatigue by-products in humans, without
+attendant adverse eﬀects.
+Natural products have no side eﬀects or cause very few side
+eﬀects. They have attracted the attention of many researchers
+in the ﬁeld of biomedicine. Many active ingredients have been
+used in the development of drugs and functional foods.
+Octacosanol (OCT) is a regular monohydric high-grade
+saturated linear aliphatic alcohol and an important component
+of a natural wax extracted from multiple plants and animals.9,10
+It has a diet of interest due to its excellent biological activities;
+of interest was the identiﬁcation of OCT as a functional
+antifatigue agent, which could enhance endurance and
+energy,11 dietary and pharmaceutical supplements,12 and as
+feed additives for animals.13 In addition, OCT has an anti-
+Parkinsonian eﬀect,14 regulating cardiovascular functions,15
+anti-inﬂammatory and antinociceptive eﬀects,16 etc. As a
+natural compound, only a small portion gets ingested from
+diets. Adding OCT to diet will beneﬁt people’s health.9 In
+Received:
+March 26, 2021
+Revised:
+June 2, 2021
+Accepted:
+June 24, 2021
+Published: July 5, 2021
+Article
+pubs.acs.org/JAFC
+© 2021 American Chemical Society
+7603
+https://doi.org/10.1021/acs.jafc.1c01764
+J. Agric. Food Chem. 2021, 69, 7603−7618
+Downloaded via UNIV OF THE PUNJAB on August 11, 2021 at 11:29:36 (UTC).
+See https://pubs.acs.org/sharingguidelines for options on how to legitimately share published articles.
+
+
+--- PAGE 2 ---
+recent years, OCT also has other novel physiological functions,
+including improvement of the stress response, sleep quality,
+regulated lipid metabolism, and constipation relief.17−19
+Nevertheless, most studies about OCT only evaluated its
+physiological functions and the molecular mechanism is poorly
+understood.
+In our previous work, we found that OCT attenuated
+dextran sulfate sodium (DSS)-induced colitis in the mice and
+explained the molecular mechanisms of OCT in the mouse
+colitis model.20 In this study, the mouse over-exercise model
+was used to evaluate the antifatigue eﬀect of OCT. Gene chip
+analysis, bioinformatics, western blots, and real-time quantita-
+tive polymerase chain reaction (RT-qPCR) techniques were
+used in the experiments. We are the ﬁrst to obtain the gene
+expression proﬁle aﬀected by OCT and identify the target
+genes and signal pathways regulated by OCT in the muscle
+tissues of the mouse over-exercise model. Bioinformatics
+indicated the protein−protein interaction network in the
+muscle cells after the addition of OCT to the diet. Our study
+preliminarily elucidates the antifatigue eﬀect of OCT.
+■MATERIALS AND METHODS
+Chemicals and Reagents. OCT (purity 99%, ﬂakelike white
+powder) was brought from Sigma-Aldrich Company (St. Louis, MO).
+Liver glycogen (LG), muscle glycogen (MG), blood lactic acid
+(BLA), lactate dehydrogenase (LDH), superoxide dismutase (SOD),
+and glutathione peroxidase (GSH-Px) assay kits were purchased from
+Jiangsu Meimian Industrial Co., Ltd. (Jiangsu, China). Radio-
+immunoprecipitation assay (RIPA) lysis buﬀer was purchased from
+Servicebio (Servicebio Biotechnology Co. Ltd., Wuhan, China, Cat.
+G2002). Polyclonal antibody periaxin (Prx) (NBP2-93522), tripartite
+motif-containing 63 (Trim63) (AF5366-SP), calcium channel,
+voltage-dependent, T type, α 1H subunit (Cacna1h) (NBP1-
+22444SS), myosin-binding protein C (Mybpc3) (AB133499), and
+glyceraldehyde-3-phosphate dehydrogenase (GAPDH) (no. AT000)
+were brought from Cell Signaling Technology Co. Ltd. (Beverly,
+MA). Antimouse immunoglobulin G (IgG) horseradish peroxidase
+(HRP) conjugate (W4021), and anti-rabbit IgG HRP conjugate
+(V7951) were obtained from Promega Company (Madison, WI). All
+other chemical reagents of this investigation were of analytical grade.
+Experimental Animals and Diet. For the care and treatment of
+experimental mice, we followed the guidelines for the ethical
+treatment of laboratory animals. We used 7-week-old special
+pathogen-free male C57BL/6 mice brought from Hunan SJA
+Laboratory Animal (SLAC, Co., Ltd., Changsha, Hunan, China).
+All mice were fed with a standard diet in the animal laboratory with
+12/12 h reverse light/dark cycles at a stationary temperature of 23 ±
+2 °C, relative humidity of 60 ± 4%, and noise less than 48 dB
+throughout the experimental period. Before the experiment, mice
+were fed with a standard laboratory diet (32% carbohydrates, 22%
+proteins, 10% lipids, and 3% vitamins) (SLAC, Co., Ltd., Changsha,
+Hunan, China) and tap water. Ethical regulations of Hunan province
+on animal experiments and guidelines for the care and use of
+laboratory animals were followed in the study. The use of animals and
+experimental agreements were approved by the Guidelines for the
+Care and Use of Experimental Animals, the Hunan Prima
+Pharmaceutical Research Center Co., Ltd. (69181714-X, Liuyang,
+Changsha, Hunan, China). The investigation was approved by the
+oﬃce of Animal Experiment Ethics at the Central South University of
+Forestry and Technology.
+Mouse Grouping. The animals were adapted to the new
+environment for 1 week before used in the study (Figure 1). During
+the ﬁrst week, animals were trained to accustom themselves to swim
+twice (5 min per time), and the mice that failed at swimming were
+screened out in the period. After that, 30 mice were randomly divided
+into three groups (n = 10 per group): control (CON) group (200 mg
+distilled water/kg body of weight with no exercise), exercise (EX)
+group (200 mg distilled water/kg body of weight with exercise), and
+exercise with OCT (EX-OCT) group (200 mg distilled water
+suspension of OCT/kg body of weight with exercise).17 We prepared
+OCT gavage solution by mixing 50 mg of OCT (purity 99%) to 5 mL
+distilled water (contained 1% carboxymethyl cellulose sodium),
+oscillated for 5 min by a vortex mixer (MIX-25P, Miou Instrument
+Co., Ltd., Hangzhou, China), and stored at room temperature.
+Animal Operating Methods. All animals received an intragastric
+administration using a feeding atraumatic needle once per day at 9:00
+am for 30 consecutive days. Their body weight and food intake were
+monitored every week. After 30 min of drug administration, a group
+of ﬁve mice in the exercise group were exposed to the Sleep
+Interruption (KSYY-I 18S418M1, Yikang Technology Co., Ltd.,
+Beijing, China) and they were made to perform dynamic movements.
+The principle of sleep interruption was applied with the athletics
+stimulus. The instrument parameters were is set as follows: speed, 20
+s/r; number of turns, 3 r; rest time, 1 min, and the total daily duration
+of the experiment is approximately 360 min. The rotation mode is
+random (forward or reverse). The mice were forced into constant
+motion.
+At about 4:00 pm, the mice in the same group were dropped into a
+rectangle glass swimming pool (50 × 40 × 30 cm3, freshwater depth
+of 25 cm, and maintained at 25 ± 1 °C) for forced swimming test. In
+addition, the weights on the tail root of each mouse corresponded to
+5% of body weight as evaluated. The swimming time was regarded as
+the time spent by the mice ﬂoating in water with struggle and
+necessary movements until exhaustion set in. Exhaustion was
+Figure 1. Experimental scheme for the eﬀects of octacosanol on exercise adaptation. C57BL/6 mice were randomly assigned to the three groups (n
+= 10 per group) indicated (CON, EX, and EX-OCT) and were consecutively supplemented with octacosanol (200 mg/(kg day)) until the end of
+the experiments. The physical capabilities and related biochemistry properties of mice were evaluated during the test duration.
+Journal of Agricultural and Food Chemistry
+pubs.acs.org/JAFC
+Article
+https://doi.org/10.1021/acs.jafc.1c01764
+J. Agric. Food Chem. 2021, 69, 7603−7618
+7604
+
+
+--- PAGE 3 ---
+determined when there was a loss of movement coordination and
+failure to return to the surface of the water to breathe within a 5 s
+period. At the end of the process, mice were dried with a towel and
+took to their cages to rest, the exercise task was completed. Water in
+the swimming pool was replaced after each session.
+This antifatigue screening model with OCT was established
+following previous models with slight changes.4 In the last 2 days of
+the experiment, the forelimb grip strength, autonomic activities, and
+autonomous swimming were completed, and the corresponding
+fatigue biochemical index was determined (Figure 1).
+Autonomic Activities. Autonomous activity is a common
+indicator of an animal’s mobility and is often used to reﬂect the
+energy state of mice.21 The tests were performed on the 28th day of
+treatment by OCT, after 30 min of intragastric administration, and
+the mice were placed in an autonomous chamber in Animal Behavior
+Analysis System (JLBehv, Shanghai Jiliang Software Technology Co.,
+Ltd., Shanghai, China). After a 5 min adaption time, various behaviors
+of the mice were observed, and analysis movement videos that lasted
+10 min were recorded; the mice movement tracks, including total
+distance (m), average velocity (mm/s), the number of activities
+(times), rest time (s), activity time (s), and degree of linearity were
+also determined. The test was in triplicates.
+Forelimb Grip Strength. The forelimb grip strength of mice was
+tested after treatment with OCT supplementation for 28 days. A Grip
+tester (YLS-13A, Jinan Yiyan Science and Technology Development
+Co., Ltd., Shandong, China) was used to evaluate the forelimb grip
+strength of mice.2 The force transducer equipped with a metal rod
+(diameter: 2 mm, length: 7.5 cm) was used to gauge the amount of
+tensile force for mice. As mice gripped the metal rod, its tail was held
+and pulled backward gently while the two forelimbs gripped the rod,
+which triggered a “counter pull” causing them to loosen their claws.
+This maximum grip force of mice was automatically recorded on a
+digital force transducer. The forelimb grip strengths of all mice were
+measured on the same day. The test was performed six consecutive
+times, and the average measure of maximal force (in g) was recorded;
+this low-force system was used to measure the forelimb grip strength
+of the mouse forelimb.
+Autonomous Swimming Test. Endurance performance is a
+signiﬁcant parameter to assess antifatigue, evaluated by autonomous
+swimming test. A swimming test was conducted referencing the
+previously reported method with minor modiﬁcations.22 On the 30th
+day of the experiment, 30 min after the oral administration of OCT,
+the mice were taken into a columnar swimming pool (height 35 cm,
+radius 10 cm) containing freshwater maintained at 25 ± 1 °C,
+approximately 25 cm deep. Mice were placed in the pool and their
+behavior recorded over a 3 min test period. The durations of swims
+and rests were manually recorded by a trained experimenter during
+the last period of the test, and rest was deﬁned when the mice ceased
+struggling and were ﬂoating motionlessly on the water, making
+minimal eﬀorts necessary to keep their head above the water. The
+endurance performance of the mice was surveyed as the swimming
+and resting time, recorded from the beginning to exhaustion.
+Blood Biochemical Assessments. After 30 days, mice were
+euthanized with ethyl ether 60 min after the last intragastric
+administration of OCT. After anesthetization, the whole blood
+samples were gathered in respective heparinized tubes. The blood
+collection was done by removing the left eyeball of each mouse
+without anticoagulation. Serum was promptly prepared by centrifu-
+gation at 3000 rpm, at 4 °C for 15 min, and then stored at 4 °C till
+further analysis. Blood biochemical assessments, blood lactic acid
+(BLA), lactate dehydrogenase (LDH), superoxide dismutase (SOD),
+and glutathione peroxidase (GSH-Px) concentrations, were carried
+out using a commercially available enzyme-linked immunosorbent
+assay (ELISA) kit (Jiangsu Meimian Industrial Company, Jiangsu,
+China).
+Glycogen Concentration Analysis. After blood collection, liver
+and hind-limb skeletal muscle tissues of mice were immediately
+dissected, frozen in liquid nitrogen, and kept at −80 °C until glycogen
+concentration analysis was performed as described previously.23 The
+brief procedure for glycogen concentration analysis is as follows: 100
+mg of liver and muscle tissues were cut, weighed, and homogenized in
+the Tris−HCl buﬀer. After centrifugation for 15 min at 13 000 rpm
+and 4 °C, the supernatant solutions were used for further experiments.
+Tissue extracts (30 μL) or standard glycogen (Sigma-Aldrich Co.,
+Ltd., St. Louis, MO) were added to wells of a 96-well plate, and 200
+μL of iodine−potassium iodide reagent was added. The 96-well plate
+was rested for 10 min before the absorbance value was measured at
+460 nm in the ELISA reader. The liver glycogen (LG) and muscle
+glycogen (MG) contents were measured using commercial kits
+(Meimian Industrial Co., Ltd., Jiangsu, China). All biochemical
+parameters were determined using a commercial diagnostic kit
+according to the manufacturer’s recommended instructions.
+Tissue Sample Preparation. The hind-limb was skinned; the
+muscle was separated from the tibia and ﬁbula bones of the
+experimental mice. The skeletal muscle and gastrocnemius were
+dissected immediately from their surrounding muscles. Muscle tissues
+were collected and immediately cleaned with ice-cold saline, stored in
+liquid nitrogen, and then kept at −80 °C for genome-wide gene
+expression proﬁling analysis. Then, brains, hearts, livers, lungs,
+kidneys, and spleens were cut, rinsed in normal phosphate-buﬀered
+saline (PBS) solution, and blotted dry. The entire weight and main
+organ weights relative to the individual’s body weight (organ
+coeﬃcient, %) were recorded and calculated.
+Histopathology Analysis. For histological analysis, the midseg-
+ments of the gastrocnemius and skeletal muscle tissues were resected,
+ﬁxed in 4.0% (v/v) paraformaldehyde solution for 24 h, tissue sections
+of mice were made transparent using dimethylbenzene, and ﬁnally,
+inlaid in molten paraﬃn. Sections of the gastrocnemius and skeletal
+muscle tissues were cut into 5 μm thick slices on a Microtome
+(Thermo Histostar), put on clean glass slides, and dried overnight at
+37 °C. These sections were stained for 6 min and used for the
+[hematoxylin and eosin (H&E) stained] morphological and
+pathological evaluation of muscle cells, inspected under a microscope
+equipped with a digital imaging system (BX-43 + MD-50, Olympus
+Corporation, Tokyo, Japan).
+Gene Expression Proﬁling Analysis. RNA sequencing was
+performed at the Shanghai Kangcheng Biological Engineering Co.,
+Ltd. (Shanghai, China). RNA quality was assessed using the Agilent
+2100 bioanalyzer and the RNA 6000 Nano Chip (Agilent
+Technologies, Amstelveen, The Netherlands). RNA samples were
+quantiﬁed using the machine of ND-2000 spectrophotometer
+(Thermo Fisher Scientiﬁc Company, Waltham, MA). Three gastro-
+cnemius RNA samples of mice from each group were stochastically
+selected. The SuperScript double-strand complementary DNA (ds-
+cDNA) synthesis kit from Invitrogen Company Ltd. was used to
+synthesize ds-cDNA from a 5.0 μg total RNA sample. After
+precipitation and puriﬁcation with ethanol under 0 °C, 1.0 μg of
+ds-cDNA sample was labeled with the NimbleGen One-Color DNA
+from the NimbleGen labeling kit (NimbleGen Co., Ltd.) at 37 °C for
+2 h under the company’s agreement. Then, 0.1 volume of 0.5 mM
+ethylenediaminetetraacetic acid (EDTA) was used to stop the labeled
+reaction, and the cDNAs samples were precipitated by isopropanol/
+ethanol mixed solution. Gene chips were hybridized at 42 °C with 4.0
+μg of labeled cDNA samples in the NimbleGen hybridization buﬀer
+plus component A in the hybridization chamber (NimbleGen Co.,
+Ltd.) for 20 h. This step was followed by washing in an ozone-free
+surrounding, the gene expression chips were scanned by a GenePix
+4000B scanner (Axon Co., Ltd.), and signal data of gene chips were
+collected. Scanned images of gene chips were imported into the
+NimbleScan software (version 2.5) for grid calibration and gene
+expression multiple analyses. Expression data of gene chips were
+normalized via the quantile normalization method, and the robust
+multichip average (RMA) algorithm was calculated by the
+NimbleScan. After ﬁnishing the normalization step of raw data, the
+probe level ﬁles (*_norm_RMA. pair) and gene-level ﬁles (*_RMA.
+calls) were obtained and imported into the Agilent GeneSpring GX
+software (version 12.1) for further analysis. Diﬀerentially expressed
+genes of gene chips were identiﬁed via fold change (FC) or T-test
+ﬁltering between the three groups. The up- and downregulated
+expression genes with an absolute FC larger than a selected threshold
+Journal of Agricultural and Food Chemistry
+pubs.acs.org/JAFC
+Article
+https://doi.org/10.1021/acs.jafc.1c01764
+J. Agric. Food Chem. 2021, 69, 7603−7618
+7605
+
+
+--- PAGE 4 ---
+and FC lower than a selected threshold were used in the comparison
+of EX and EX-OCT groups. Hierarchical clustering was performed
+using MeV 4.9.0 software (https://sourceforge.net/projects/mev/).
+Total RNA Extraction, Integrity Test, and cDNA Synthesis.
+Gastrocnemius tissue (100 mg/sample) was resected and grounded in
+the liquid nitrogen mortar. Total RNA was extracted with the
+TransZol-Up reagent from TransGen Biotech Company (TransGen
+Biotech Co., Ltd., Beijing, China) and the steps were in accordance
+with the operation manual of the manufacturer. Extracts were
+immediately stored in a −80 °C refrigerator. The quality, purity, and
+concentration of total RNA were determined using a Nano-Drop
+2000c ultramicro spectrophotometer (Gene Co., Ltd., Beijing,
+China). The RNA integrity of samples was checked by a standard
+denaturing agarose gel electrophoresis experiment (Bio-Rad Co.,
+Ltd.). High-quality RNA samples were chosen for the next step
+experiments. About 2.0 μg of total RNA samples were used as a
+template to transcribe ﬁrst-strand cDNA synthesis for RT-qPCR
+experiments (cDNA reverse transcription kits, Applied Biosystems
+Co., Ltd.).
+Real-Time Quantitative PCR. Real-time quantitative polymerase
+chain reaction (RT-qPCR) was performed using the CFX96 Real
+Time-PCR system (SYBR Select Master Mix protocol) (Applied
+Biosystems Co., Ltd.) The focus was on peripheral myelin protein 22
+(Pmp22), Trim63, unc-51-like kinase 3 (Ulk3), arrestin domain
+containing 2 (Arrdc2), Prx, B cell leukemia/lymphoma 3 (Bcl3),
+glycoprotein hormones, α subunit (Cga), synaptic vesicle glyco-
+protein 2 a (Sv2a), Cacna1h, Mybpc3, and β-actin (control for RT-
+qPCR) of antifatigue related genes. The PCR conditions were as
+follows: initial denaturation for 3 min at 94 °C; denaturation for 30 s
+at 94 °C; annealing for 40 s at 60 °C; extension for 1 min at 72 °C;
+and the cycle of 42 times. Gene expression levels of the target genes
+were computed based on the 2−ΔΔCt (RQ) formula. The speciﬁcity of
+PCRs was analyzed by the dissociation curve and 2.0% agarose gel
+electrophoresis (Bio-Rad Co., Ltd.). Primers of genes were designed
+using Primer Premier 6.0 software (Premier Ltd., Canada), and are
+listed in Table 1. All PCR products were within the linear range of the
+exponential phase of PCR ampliﬁcation. Then, the relative expression
+levels of target genes were calculated using the Applied Biosystems
+software (Applied Biosystems Co., Ltd.), and the expression ratio of
+the target gene to that of β-actin is represented in bars.
+Total Protein Extraction. Gastrocnemius tissues (100 mg/
+sample) were fragmentized in liquid nitrogen precooled mortar; the
+homogenized samples were then poured in 400 μL of RIPA buﬀer
+(Servicebio Co., Ltd., Cat. no. G2002, Wuhan, China), mixed with 4
+μL of cocktail, 4 μL of phosphatase inhibitors, and 4 μL of
+phenylmethylsulfonyl ﬂuoride (PMSF) at 4 °C for 1 h. The
+suspension solutions were centrifuged at 13 200 rpm for 15 min at
+4 °C; then, the supernatant solution was pipetted and protein
+concentrations were detected with the bicinchoninic acid (BCA)
+protein assay kit (Beyotime Biotechnology Co., Ltd., Shanghai,
+China) in accordance with the company’s instructions. The prepared
+protein samples (200 μL) were fully mixed with appropriate amounts
+of 5× sodium dodecyl sulfate (SDS) loading buﬀer [10% 2-hydroxy-1-
+ethanethiol, 20% glycerol, 4% SDS, 0.3% bromophenol blue, and 125
+mM Tris−HCl (pH = 6.8)] heated for 10 min at 95 °C and then
+stored at −20 °C.
+Western Blot Analysis. About 7−8 μL of protein samples were
+denatured by heating and separated through electrophoresis onto a
+10% SDS-polyacrylamide gel electrophoresis (PAGE) gel, and
+transferred to a poly(vinylidene diﬂuoride) (PVDF) membrane.
+The membranes hosting the target protein were blocked using 5%
+bovine serum albumin (BSA) (2 g of BSA power in 40 mL of 1× Tris-
+buﬀered saline with Tween 20 (TBS-T)) at 25 °C for 1 h. After being
+blocked, the membranes were incubated with the corresponding
+primary antibody (1:1000 dilution in 5% BSA with TBS-T) at 4 °C
+for 8−10 h. These were washed thrice (10 min per time) afterward
+with TBS-T at 25 °C and re-incubated in a secondary antibody of
+antimouse and/or antirabbit IgG HRP (1:5000−10 000) conjugate at
+25 °C for 1 h. The membranes were washed thrice (10 min) again
+with TBS-T. Immunoreactive proteins on the membranes were
+detected using the ECL Plus Western blot detection system (no.
+721BR10883, Pierce, Rockford, IL), and the signals of membranes
+were recorded in the Gel Imaging system (Chemi Doc XRS+, Bio-Rad
+Co., Ltd.). The relative target protein expression compared to the
+control protein was determined by calculating the integral optical
+density value of each band using the Gel Imaging System.
+Statistical Analysis. Each experiment was repeated three times,
+and the related data were analyzed by SPSS software (version 2.5,
+SPSS, Chicago, IL). Grip results were shown as the mean ± standard
+error mean (SEM), and other results were shown as the mean ±
+standard deviation (SD) and were analyzed using one-way analysis of
+variance (ANOVA) test, followed by Tukey’s test, when comparisons
+proceed intergroups and indicated by vertical bars in ﬁgures.
+Percentage comparisons were analyzed by utilizing χ2 test. The
+probability value p-value less than 0.05 was considered statistically
+signiﬁcant.
+■RESULTS
+Eﬀect of OCT on the Body Weight, Food Intake, and
+Organ Weight. The body weights, food intake, and main
+organs (including brain, heart, lungs, liver, kidneys, and spleen)
+of mice involved in 30 days forced exercise experiment were
+measured and recorded. In addition to normal growth, there
+were no signiﬁcant diﬀerences in the curve of weights and food
+intake in the three groups of mice (p > 0.05) (Figure 2A,B).
+The changes in the main organ weights were expressed as an
+organ/body weight percentage. The results suggest that
+continuous OCT supplementation did not inﬂuence the
+relative tissue weight when compared with the CON group
+(p > 0.05) (Figure 2C).
+Eﬀect of OCT on Energy and Endurance Perform-
+ance. After 4 weeks of OCT supplementation, the autonomic
+activities of mice were analyzed. We observed that the total
+distance (p < 0.05), average velocity (p < 0.05), number of
+activities (p < 0.01), activity time (p < 0.01), and degree of
+linearity (p < 0.05) of the EX-OCT group signiﬁcantly
+increased compared to the EX group within the same
+recording time (Figure 3), but the rest time (p < 0.05)
+decreased (Figure 3D).
+Table 1. Primers of Genes for RT-qPCR
+gene
+name
+sense (5′−3′)
+anti-sense (5′−3′)
+Pmp22
+TTG CTG GTC TGT GCG
+TGA TGA GT
+GCG AAG CCA TAG GAG
+TAG TCA GTG T
+Trim63
+ATC ACG CAG GAG CAG
+GAG GAG A
+CTT GGC ACT TGA GAG
+GAA GGT AGC
+Ulk3
+AGG AAG GAG GCA ATT
+AAG GCG AAG G
+CGA AGC AGC TCT TGG
+ACA GTT GTG
+Arrdc2
+GAG AAG GTG GCA CGA
+TCC TGG TA
+ATG ACC TCG CCT GGA
+GTG TAG C
+Prx
+AGG CGG CGG CAA AGA
+AGG AAT C
+TCT CAA AGA ACA CAC
+GGG CAC TCA
+Bcl3
+GCA GCA GTC GTC TCA
+GCT CCA A
+GGC AGG AAG GCA GGT
+GTA GAT GTT
+Cga
+GGT CCA AGA AGA CAA
+TGC TGG TTC C
+GGC ACT CCG TAT GAT
+TCT CCA CTC T
+Sv2a
+GGA CAA GAT TGG CAG
+GCT CAG AAT G
+GCG TTC CAG GAT GCG
+ATG CTA AC
+Cacna1h
+GCC ATC GTC CTC CTG
+TCC ATC AT
+GCC ATC TTC AGT AGC
+TTC AGC ACA C
+Mybpc3
+TGC CTG GTG TGA CTG
+TTC TCA AGA T
+CCT CCG CTG ACC TTG
+GCT TCT T
+β-actin
+GTG AAA AGA TGA CCC
+AGA TCA TGT
+AGG ATC TTC ATG AGG
+TAG TCT GTC
+Journal of Agricultural and Food Chemistry
+pubs.acs.org/JAFC
+Article
+https://doi.org/10.1021/acs.jafc.1c01764
+J. Agric. Food Chem. 2021, 69, 7603−7618
+7606
+
+
+--- PAGE 5 ---
+Figure 2. Eﬀects of octacosanol on the weights. Bodyweight (A), food intake (B), and relative weights of main organs (C), including brain, heart,
+lungs, liver, kidneys, and spleen of C57BL/6 mice (organ coeﬃcient (%) = organ/body weight × 100). CON vs EX or EX vs EX-OCT; the values
+represent mean ± SD. **p < 0.01, *p < 0.05, and #p > 0.05.
+Figure 3. Eﬀects of octacosanol on the autonomic activity for energy performance. Total distance (A), average velocity (B), number of activities
+(C), rest time (D), activity time (E), and degree of linearity (F) in C57BL/6 mice (n = 10). The values represent mean ± SD. **p < 0.01, *p <
+0.05, and #p > 0.05.
+Journal of Agricultural and Food Chemistry
+pubs.acs.org/JAFC
+Article
+https://doi.org/10.1021/acs.jafc.1c01764
+J. Agric. Food Chem. 2021, 69, 7603−7618
+7607
+
+
+--- PAGE 6 ---
+The grip of the forelimb is a measure of endurance in mice.2
+The forelimb grip strength was observably higher in the EX-
+OCT mouse group than the EX mouse group (p < 0.05)
+(Figure 4A). The results showed that exercise model building
+is successful, and the grip was evidently diﬀerent in the CON
+and EX groups (p < 0.01) (Figure 4A). The grips of mice in
+CON, EX, and EX-OCT groups are 64.79 ± 11.11, 22.48 ±
+2.77, and 39.63 ± 1.38 g, respectively. After prolonged
+exhausting exercise, the mice’s grip reduced by 2.88-fold.
+Interestingly, mice with OCT supplementation had a 1.76-fold
+increase in grip.
+In addition, swimming time is an important indicator for
+exercise endurance and is evaluated by antifatigue com-
+pounds.24 The autonomous swimming and rest times of mice
+were measured to evaluate the inhibitory eﬀect of OCT on
+fatigue. We observed that the swimming capacity increased
+after administration of OCT (200 mg/kg, p < 0.05) for 29 days
+compared with that of the EX group (Figure 4B). In a span of
+3 min, the swimming times of mice in CON, EX, and EX-OCT
+groups were 121.1 ± 34.64, 87.1 ± 13.71, and 119.1 ± 48.39 s,
+respectively, indicating that the mice had a 1.37-fold increase
+in swimming time after the addition of OCT. On the contrary,
+Figure 4. Eﬀects of octacosanol on endurance performance. Forelimb grip strength (A), autonomous swimming time (B), and rest time (C) in
+C57BL/6 mice (n = 10). The values represent mean ± SEM/SD. **p < 0.01, *p < 0.05, and #p > 0.05.
+Figure 5. Eﬀects of octacosanol on the assessments of the biochemical index. LG (A), MG (B), BLA (C), LDH (D), SOD (E), and GSH-Px (F)
+levels in the liver, hind-limb skeletal muscle tissues, and whole blood of C57BL/6 mice (n = 5). The values represent mean ± SD. **p < 0.01, *p <
+0.05, and #p > 0.05.
+Journal of Agricultural and Food Chemistry
+pubs.acs.org/JAFC
+Article
+https://doi.org/10.1021/acs.jafc.1c01764
+J. Agric. Food Chem. 2021, 69, 7603−7618
+7608
+
+
+--- PAGE 7 ---
+the rest time after swimming was observably decreased (p <
+0.01) (Figure 4C). The rest time of mice after exercise reduced
+by 1.29-fold than that in the CON group; furthermore, the
+mice group supplemented with OCT (200 mg/kg for 29 days)
+had increased rest time by 1.26-fold. These results suggest that
+OCT actively aﬀects the energy and endurance of mice. To
+further clarify its potential mechanism, the biochemical
+indicator related to fatigue were appraised.
+Eﬀect of OCT on Glycogen Concentration. Energy
+consumption and deﬁciency aﬀect the energy supply and
+maximal power output in physical fatigue during exercise.23,25
+Stored glycogen in muscle and liver tissues is the primary
+source of energy during exercise. In this study, the LG in the
+EX group decreased by 11.82% from 63.03 ± 1.79 to 55.58 ±
+1.67 ng/mg (p < 0.01) compared with the CON group. OCT
+treatment slightly ameliorated exercise-induced LG loss, which
+was increased to 58.48 ± 3.81 ng/mg (p < 0.05, Figure 5A).
+Moreover, MG followed the same change trend as LG, and the
+MG contents of mice in CON, EX, and EX-OCT groups were
+347.89 ± 39.29, 315.44 ± 29.77, and 341.65 ± 7.53 ng/mg,
+respectively. The MG content in the OCT supplementation
+group is increased by 8.31% (p < 0.05, Figure 5B) compared
+with the EX group. These results suggest that OCT can slightly
+improve the decrease of LG and MG contents of mice induced
+by forced exercise and then enhance the exercise endurance of
+mice.
+Eﬀect of OCT on Biochemical Assessments. Activities
+or levels of certain enzymes and biochemical parameters can
+forthrightly reﬂect the true status of physical fatigue. They are
+widely used to estimate the antifatigue activity of test
+substances.26 As shown in Figure 5, exposure to the forced
+exercise led to an enhancement in BLA and LDH levels in
+comparison to the CON group. The BLA increased the most
+after exercise, increased by 11.82% from 3.74 ± 0.88 to 5.33 ±
+2.43 mmol/L (p < 0.05). OCT reduced the concentration of
+BLA to 4.35 ± 0.90 mmol/L (p > 0.05, Figure 5C), although
+the change was not signiﬁcant. Also, the LDH was increased by
+18.99% (p < 0.01) after exercise in mice; OCT treatment
+observably reduced the LDH content in the blood of mice,
+from 19.06 ± 1.52 to 16.03 ± 1.57 ng/mL (p < 0.01, Figure
+5D). When compared with the CON group, exposure to the
+forced exercise test led to a reduction in SOD and GSH-Px
+levels, from 10.12 ± 0.84 and 96.68 ± 12.02 ng/mL to 8.39 ±
+0.81 (p < 0.01, Figure 5E) and 84.23 ± 1.80 ng/mL (p < 0.01,
+Figure 5F), respectively. Interestingly, OCT inhibited the
+above changes, with the SOD and GSH-Px levels increasing to
+10.01 ± 0.70 (p < 0.01, Figure 5E) and 95.51 ± 6.55 ng/mL (p
+< 0.01, Figure 5F), respectively. Based on these collective
+eﬀects of OCT on BLA, LDH, SOD, and GSH-Px, we
+conclude that OCT has antifatigue activity in mice, and 200
+mg/kg is a potential dose for the development of OCT as an
+antifatigue drug and/or functional food. Further study is
+warranted to elucidate its antifatigue-related gene regulation.
+Eﬀect of OCT on Histopathology of Muscle. Muscle
+mass is the main determinant of muscle strength and strength
+and is closely related to an organism’s exercise endurance
+capacity.27 Histopathological examination of the gastrocnemius
+and skeletal muscle did not reveal signiﬁcant lesions between
+the CON, EX, and EX-OCT groups (Figure 6). The results
+indicated that no clinical signs of tissue-speciﬁc toxicity were
+observed after OCT treatments. Nevertheless, all cell nuclei
+were situated at the edge of the muscle ﬁbers. In contrast, the
+skeletal muscle ﬁbers in the forced exercise mice showed
+typical features of striated-muscle degeneration, such as blurred
+or dissipated (Figure 6B, as shown in the arrow). Furthermore,
+local muscle ﬁber structures became loose, with slight cracks
+and twists, and the cell nuclei were more mixed and distributed
+in a disorderly manner (Figure 6B, as shown by the arrow).
+Likewise, the gastrocnemius muscle of mice also showed these
+characteristics (Figure 6A). After treatment with OCT for 30
+days, the anomalies were improved to a large extent.
+OCT Modulates the Expressions of Factors in Gastro-
+cnemius Tissues. To elucidate the possible mechanism for
+the antifatigue eﬀect of OCT, a cDNA microarray was
+implemented to obtain gene expression proﬁles of gastro-
+cnemius tissues. The experiment data, exhibited in the
+investigation including genes of EX and EX-OCT groups,
+showed increased and decreased expression levels of more than
+Figure 6. Eﬀects of octacosanol supplementation on morphology. Gastrocnemius tissues (A) and skeletal muscle tissues (B) of C57BL/6 mice.
+The arrows indicate that the local muscle ﬁber structure is blurred or dissipated, loose, slight cracks exist, and twisted. Specimens were
+photographed with a biological microscope equipped with a digital imaging system (BX-43 + MD-50), H&E stain, magniﬁcation: 10 × 20, and
+scale bar, 50 μm.
+Journal of Agricultural and Food Chemistry
+pubs.acs.org/JAFC
+Article
+https://doi.org/10.1021/acs.jafc.1c01764
+J. Agric. Food Chem. 2021, 69, 7603−7618
+7609
+
+
+--- PAGE 8 ---
+1.5-fold or less than 0.75-fold compared with the CON group.
+The data of gene chip (36 894 signals) was ﬁltered and
+analyzed by hierarchical clustering. 38 decreased expression
+genes and 29 increased expression genes were discovered to be
+administered by OCT treatments (Figure 7). The list of gene
+names and FC are as listed in Tables 2 and 3.
+OCT Aﬀects the Expressions of Fatigue-Related
+Target Genes. To explore the molecular mechanism of
+OCT on antifatigue, the related target genes were analyzed
+diﬀerentially using the β-actin expression value as control using
+RT-qPCR analysis. It was observed that messenger RNA
+(mRNA) expressions of gastrocnemius tissue genes, including
+Pmp22, Trim63, Ulk3, Arrdc2, Prx, Bcl3, Cga, Sv2a, Cacna1h,
+and Mybpc3 were diﬀerentially expressed with the treatment of
+forced exercise based on the CON group. OCT supplementa-
+tion signiﬁcantly regulated the expressions of these genes when
+compared to the EX group (Figure 8A,B). Among these genes,
+increased expression genes were Pmp22, Trim63, Ulk3,
+Arrdc2, and Prx at 1.27, 1.45, 1.50, 1.63, and 1.88-fold in
+gastrocnemius tissues, respectively, while experimental data
+from RT-qPCR were 2.42, 4.69, 4.23, 5.56, and 5.39-fold,
+respectively (Figure 8C). For decreased expression genes, Bcl3,
+Cga, Sv2a, Cacna1h, and Mybpc3 were selected. They were
+downregulated by OCT treatments at 1.53, 1.57, 2.13, 2.78,
+and 3.21-fold by gene chip analysis, respectively, and RT-
+qPCR analysis indicated that expression levels of those genes
+were 1.71, 1.90, 1.46, 2.34, and 4.41-fold, respectively (Figure
+8E). All of the above comparisons were conducted between the
+EX-OCT group and the EX group. For those increased
+expression genes, the Pearson correlation coeﬃcient of gene
+microarray analysis and RT-qPCR was 0.6962 (p < 0.01)
+(Figure 8D). For those decreased expression genes, the
+Pearson correlation coeﬃcient was 0.6501 (p < 0.01) (Figure
+8F). The results of gene chip analysis were reliable and over 67
+genes took part in the antifatigue action of OCT treatments. It
+means that OCT supplementation alleviated fatigue eﬀects via
+modulating related gene expressions.
+Functional Validation of Identiﬁed Genes through
+Gene Ontology (GO) Analyses. Gene ontology (GO)
+analysis mainly includes biological processes, cellular compo-
+nents, and molecular functions. To explore the functional
+relevance of the identiﬁed genes related to fatigue, we
+performed GO analyses using online software of g:Proﬁler
+(https://biit.cs.ut.ee/gproﬁler/gost), and performed GO anal-
+ysis for all of the 67 genes and found 8 GO terms (Figure 9),
+which were related to myoﬁbril, contractile ﬁber, calcium-
+dependent adenosinetriphosphatase (ATPase) activity, and
+regulation of the multicellular organismal process. The
+interaction network of genes and GO function was ﬁnally
+analyzed using Cytoscape 2.8.2 software (http://www.
+cytoscape.org/) (Figure 9A).
+Main Network among Genes Aﬀected by OCT. We
+further uploaded the normalized gene chip data into an online
+software STRING (https://string-db.org/cgi/). The STRING
+database showed the functional gene association network
+(Figure 10). Forty-three genes with at least one interaction
+formed the main network among genes aﬀected by OCT,
+indicating that OCT played a role in relieving fatigue through
+holistic network regulation on these genes.
+OCT Aﬀects the Expressions of Fatigue-Related
+Target Proteins. Furthermore, to determine whether the
+activation of fatigue-related genes was changed by OCT in
+Figure 7. Genome-wide gene expression proﬁling analysis of gastrocnemius tissues from C57BL/6 mice. The scatter plots (A) and volcano plot (B)
+analysis of diﬀerentially expressed genes in mice, EX vs CON, EX-OCT vs CON, and EX-OCT vs EX. p < 0.05; fold change value is greater than
+1.5, and/or fold change value is less than 0.75. Genes that were relative to exercise fatigue were labeled. Heat map (C) of diﬀerentially expressed
+genes related to fatigue aﬀected by octacosanol in mice for EX and EX-OCT groups compared with the CON group. The hierarchical clustering
+was implemented using the program MeV 4.9.0.
+Journal of Agricultural and Food Chemistry
+pubs.acs.org/JAFC
+Article
+https://doi.org/10.1021/acs.jafc.1c01764
+J. Agric. Food Chem. 2021, 69, 7603−7618
+7610
+
+
+--- PAGE 9 ---
+gastrocnemius tissues of mice, related proteins expressions
+were examined by western blot analysis. In Figure 11, after
+forced exercise, the amounts of Prx and Trim63 in the
+gastrocnemius tissues decreased markedly but increased in the
+OCT treatment group (Figure 11A). Furthermore, the
+expression of Mybpc3 was also altered, and the expression
+levels of Mybpc3 increased with exercise and reduced with
+OCT treatment. These results were consistent with microarray
+and RT-qPCR analysis results, although the expression changes
+of Cacna1h at the protein level were less obvious (Figure 11A).
+■DISCUSSION
+Fatigue can be deﬁned as an exercise-induced inability to
+perform an expected or desired work output,24 which could
+result in a broad range of physical and mental unﬁtness, such as
+inattention, drowsiness, and weakness, and it provokes various
+disorders that could be nervous, endocrine, metabolic, or
+immune dysfunction, etc.5 Previous studies, including animal
+experiments, have conﬁrmed that OCT is able to play an
+antifatigue role.11,17,28 The current study demonstrates an
+antifatigue activity of OCT in the exercise model and on
+several markers for fatigue. Especially, it is shown that the body
+weight, food intake, and main organ relative weight were not
+markedly changed, and OCT exhibited high safety proﬁles.
+OCT supplement could alleviate fatigue symptoms in mice,
+caused by forced exercise, which includes enhanced forelimb
+grip strength and swimming endurance.11 OCT has a certain
+alleviating eﬀect on muscle injury induced by over-exercising in
+mice. Under normal circumstances, the myoﬁlament is in a
+contraction state and the arrangement was in perfect order and
+neat.29 OCT can relieve the slightly blurred or dissipated
+muscle ﬁbers caused by forced exercise.
+Moreover, the role of OCT in the mice is the attenuation of
+the eﬀects of forced exercise induced on the physiological
+indicators for fatigue. Previous ﬁndings suggest that recovery
+from exercise-induced fatigue requires repair of the injuries
+that has already occurred in the body and/or prompts the
+elimination of metabolites that accumulate during exercise.8 In
+this study, OCT restored the levels of glycogen, BLA, LDH,
+SOD, and GSH-Px to baseline. The energy for exercise is
+initially generated from the breakdown of MG, and later stages
+will be derived from the liver.23,25 LG depletion is an important
+Table 2. Genes Downregulated by Octacosanol from Microarray Analysis
+gene ID
+gene name
+EX/CON fold change
+EX/CON p value
+EX/EX-OCT fold change
+EX/EX-OCT p value
+NM_007742
+Col1a1
+2.12
+0.0429
+1.68
+0.0012
+NM_001164171
+Myh6
+4.97
+0.0466
+4.37
+0.0544
+NM_015734
+Col5a1
+2.15
+0.0458
+1.65
+0.0529
+NM_008881
+Plxna1
+8.90
+0.0093
+2.26
+0.0251
+NM_001177544
+Hist1h2ao
+3.50
+0.0430
+2.50
+0.0612
+NM_033601
+Bcl3
+2.05
+0.0464
+1.53
+0.0382
+NM_001198766
+Postn
+5.61
+0.0423
+4.68
+0.0122
+NM_001291455
+Dpysl3
+2.06
+0.0470
+1.47
+0.0880
+NM_011619
+Tnnt2
+2.82
+0.0452
+2.95
+0.0800
+NM_007742
+Psmb8
+2.01
+0.0475
+1.46
+0.0974
+NM_009892
+Chil3
+14.08
+0.0408
+2.01
+0.0225
+NM_001039648
+Gm20767
+10.84
+0.0400
+1.51
+0.0300
+NM_013706
+Cd52
+3.27
+0.0399
+1.47
+0.0449
+NM_009898
+Coro1a
+2.66
+0.0457
+1.56
+0.0565
+AK036325
+Syn3
+2.13
+0.0418
+2.18
+0.0494
+NM_001277183
+Gm1966
+2.16
+0.0470
+1.44
+0.0485
+NM_001039959
+Ahnak
+2.28
+0.0420
+1.81
+0.0334
+NM_001033960
+Rabgap1
+2.40
+0.0409
+1.88
+0.0271
+NM_016659
+Klra1
+2.29
+0.0466
+1.98
+0.0478
+NM_008723
+Npm3
+2.37
+0.0429
+1.42
+0.0436
+NM_013932
+Ddx25
+2.98
+0.0394
+1.94
+0.0412
+NM_178227
+Scn3b
+2.54
+0.0389
+1.79
+0.0445
+NM_145487
+Prr3
+2.38
+0.0367
+1.62
+0.0493
+NM_203492
+Mrgprg
+3.03
+0.0357
+1.79
+0.0464
+AK016494
+4931431B13Rik
+2.06
+0.0355
+1.47
+0.0494
+NM_021050
+Cftr
+2.16
+0.0311
+1.40
+0.0646
+NM_001037502
+Defb28
+2.70
+0.0297
+1.41
+0.0525
+NM_001033228
+Itga1
+2.71
+0.0260
+1.65
+0.0459
+NM_194063
+Rhox3a
+2.33
+0.0236
+1.44
+0.0575
+XM_006521608
+Gm5215
+2.07
+0.0197
+1.46
+0.0478
+NM_009127
+Scd1
+3.04
+0.0192
+1.57
+0.0413
+NM_027954
+Syce2
+3.71
+0.0115
+1.64
+0.0419
+AK014901
+4921515L22Rik
+6.76
+0.0089
+2.03
+0.0307
+Cga
+2.66
+0.0017
+1.57
+0.0418
+AB041801
+Cacna1h
+2.34
+0.0494
+2.78
+0.0435
+NM_022030
+Sv2a
+5.62
+0.0732
+2.13
+0.0481
+NM_001044384
+Timp1
+5.36
+0.04424
+3.44
+0.0531
+NM_008653
+Mybpc3
+7.44
+0.04632
+3.21
+0.0470
+Journal of Agricultural and Food Chemistry
+pubs.acs.org/JAFC
+Article
+https://doi.org/10.1021/acs.jafc.1c01764
+J. Agric. Food Chem. 2021, 69, 7603−7618
+7611
+
+
+--- PAGE 10 ---
+factor in the development of fatigue; increased glycogen
+storage and reduced glycogen consumption contribute to
+enhanced endurance and locomotors capacity.30 However, in
+this study, the MG level did not increase as much as LG. It
+might be because OCT promoted glycogenolysis restraint and/
+or gluconeogenesis. Generally, the muscle in high-intensity
+exercise can produce plenty of LA almost simultaneously as it
+obtains enough energy from anaerobic glycolysis.25 Excess LA
+is generated and accumulated in muscles, generating fatigue.26
+Studies have shown that swimming to exhaustion results in
+signiﬁcantly elevated BLA levels.31 LDH is an enzyme that
+catalyzes the reciprocal conversion of pyruvate and lactic acid,
+which plays an important role in eliminating LA and providing
+energy under hypoxia.32 Our data showed that the LDH
+content in serum decreased in EX-OCT groups, indicating that
+OCT could decrease muscle damage during forced exercise.
+The result indicated that reduction of BLA and LDH levels
+may be another pathway through which OCT elicits its
+antifatigue eﬀect. Fatigue is also related to immune
+abnormalities in the oxidative stress pathways or multiple
+inﬂammatory pathways.1 Oxidative stress caused by over-
+exercise leads to the production of excess free radicals
+contributing intensively to fatigue.33 The intracellular defense
+systems including SOD and GSH-Px can scavenge free radicals
+and their metabolites, and this helps them ﬁght against
+fatigue.25 Data showed that OCT increased SOD and GSH-Px
+activities in mice, indicating that OCT can protect against
+oxidative stress induced by exhaustive exercise, alluding to
+OCT having an antifatigue eﬀect. OCT has been used
+extensively as an adaptogen whose properties are the ability
+to increase as a nonspeciﬁc body to resist fatigue.12 Although a
+number of biochemical mechanisms are suggested as
+modulating these eﬀects, further research is needed to
+elucidate the nature of OCT eﬀects on fatigue, and particularly,
+on the metabolite changes that are the ultimate result of
+genetic changes.
+Fatigue may be attributed to a deviation of a series of gene
+expressions. To investigate the potential molecular mechanism
+of the antifatigue eﬀect of OCT, a microarray assay was
+executed using the RNA from the gastrocnemius tissues of
+mice. From the results of the analysis, validated by RT-qPCR,
+expression modiﬁcations of more than 67 genes were noticed.
+GO analyses showed that these genes enriched functions in the
+eight terms related to myoﬁbril, contractile ﬁber, calcium-
+dependent ATPase activity, regulation of the multicellular
+organismal process, etc. From these terms, further studies on
+the interactive relationship of these genes during the OCT
+antifatigue modulation process are required. Among these
+genes, we found several interesting genes or gene families,
+which may be the target of OCT aﬀecting the antifatigue
+process. Microarray data would promote investigation into the
+signal transduction pathways, the gene expressions regulated
+by OCT, and provide an explanation for the possible molecular
+mechanism of OCT in the antifatigue eﬀect. OCT regulated
+the expression levels of fatigue-related genes in forced exercise
+stimulated in the gastrocnemius tissue of mice. It can be clearly
+discovered that the expression levels of mRNA including
+Pmp22, Trim63, Ulk3, Arrdc2, Prx, Bcl3, Cga, Sv2a, Cacna1h,
+and Mybpc3 were signiﬁcantly diﬀerent; the protein expression
+Table 3. Genes Upregulated by Octacosanol from Microarray Analysis
+gene ID
+gene name
+EX/CON fold change
+EX/CON p value
+EX/EX-OCT fold change
+EX/EX-OCT p value
+NM_010171
+F3
+0.51
+0.0441
+0.73
+0.0487
+NM_027560
+Arrdc2
+0.51
+0.0498
+0.66
+0.0313
+NM_008885
+Pmp22
+0.51
+0.0466
+0.75
+0.0470
+NM_177721
+Ranbp6
+0.50
+0.0167
+0.74
+0.0432
+NM_027560
+Arrdc2
+0.49
+0.0453
+0.62
+0.0405
+NR_033729
+Fbxl12os
+0.49
+0.0061
+0.64
+0.0473
+NM_009464
+Ucp3
+0.48
+0.0278
+0.56
+0.0470
+NM_001081643
+Xlr3b
+0.48
+0.0487
+0.53
+0.0418
+NM_148927
+Plekha4
+0.48
+0.0462
+0.65
+0.0462
+NM_007819
+Cyp3a13
+0.45
+0.0470
+0.65
+0.0436
+NM_001039048
+Trim63
+0.44
+0.0023
+0.69
+0.0481
+NM_001081643
+Xlr3b
+0.44
+0.0474
+0.45
+0.0124
+NM_170786
+Cntf
+0.43
+0.0410
+0.52
+0.0496
+NM_001009935
+Txnip
+0.42
+0.0008
+0.65
+0.0458
+NM_001143689
+H2-Q4
+0.42
+0.0046
+0.66
+0.0477
+NM_016854
+Ppp1r3c
+0.41
+0.0376
+0.72
+0.0440
+NM_027895
+Ulk3
+0.41
+0.0158
+0.67
+0.0282
+XM_006514922
+0.40
+0.0449
+0.55
+0.0408
+NM_019412
+Prx
+0.37
+0.0493
+0.53
+0.0413
+AY053455
+Hsd3b2
+0.36
+0.0031
+0.52
+0.0466
+NM_029972
+Ermn
+0.33
+0.0311
+0.68
+0.0425
+AK089567
+0.33
+0.0055
+0.62
+0.0462
+AK089567
+0.31
+0.0056
+0.63
+0.0484
+AK172117
+0.31
+0.0041
+0.61
+0.0451
+AK008146
+2010007E15Rik
+0.29
+0.0207
+0.63
+0.0415
+AK142775
+Gm10428
+0.26
+0.0327
+0.66
+0.0442
+AK156257
+0.25
+0.0016
+0.63
+0.0513
+AK028917
+Gm4402
+0.15
+0.0435
+0.66
+0.0416
+AK014845
+0.09
+0.0117
+0.50
+0.0496
+Journal of Agricultural and Food Chemistry
+pubs.acs.org/JAFC
+Article
+https://doi.org/10.1021/acs.jafc.1c01764
+J. Agric. Food Chem. 2021, 69, 7603−7618
+7612
+
+
+--- PAGE 11 ---
+levels of Prx, Trim63, Cacna1h, and Mybpc3 were also
+changed by OCT treatment.
+B cell leukemia/lymphoma 3 (Bcl3) is a member of the IκB
+family and contributes to regulating transcriptional activation
+of nuclear factor κ-B (NF-κB) target genes.34 Unaccustomed
+strenuous exercise can lead to muscle strength loss,
+inﬂammation, and delayed-onset muscle soreness.35 Bcl3 is
+an NF-κB transcriptional activator required for muscle atrophy
+and binds to the promoters of several genes whose collective
+function describes muscle wasting.36 Studies showed that
+knockout of the Bcl3 gene in the soleus muscle caused
+inhibition of ﬁber atrophy and abolition of NF-κB activity. The
+NF-κB and Bcl3 play a critical role in muscle atrophy.37,38
+Classical NF-κB signaling is a key factor in controlling
+inﬂammation and it has been found that OCT exerts anti-
+inﬂammatory properties through the blocking of mitogen-
+activated protein kinase (MAPK)−NF-κB/AP-1 signaling
+pathway.20 Furthermore, Bcl3 controls Toll-like receptors
+(TLRs)-induced MAPK activity.39 Besides, NF-κB can mediate
+the protein loss induced by tumor necrosis factor-α (TNF-α)
+in diﬀerentiated skeletal muscle myotubes.40 Also Bcl3 directs
+the transcription networks of proteolysis and energy
+metabolism.36 Our study found that OCT reduces the
+expressions of Bcl3 in gastrocnemius (Figure 8B), which
+inhibits skeletal muscle atrophy, inﬂammatory transcription
+factors, and energy metabolism.
+Tripartite motif-containing 63 (Trim63, former MuRF1) is
+the direct target of Bcl3, which showed increased Bcl3 binding
+to κB sites in muscles.38 In this study, we found an
+upregulation of Trim63 expression with OCT treatment
+(Figures 8A and 11A). Trim63 mutations were described as
+a potential cause for cardiomyopathy and skeletal myopathy.41
+The inactivation of MuRF1 can lead to an attenuated muscle
+atrophy response.42 Additionally, Trim63 is capable of
+polyubiquitination and the ubiquitin-proteasome system
+(UPS)-mediated degradation of thick ﬁlament proteins
+(Myh6 and Mybpc3).43 Mybpc3 belongs to the immunoglo-
+bulin Mybp superfamily and contributes to the maintenance of
+muscle structure, regulation of contraction, and relaxation.44
+Research studies link truncating mutations in Mybpc3 as the
+mechanism associated with cardiomyopathy.45 The missing
+Mybpc3 gene leads to a decrease in the myocardial
+contractility force.46 Myh6 is also associated with myocardial
+contractility.47 This study found that OCT decreased the
+expressions of Mybpc3 and Myh6 (Figures 8B and 11A).
+Interestingly, the microarray assay screened out the protein
+of calcium voltage-gated channel subunit α1 H (Cacna1h),
+which could mediate the entry of calcium ions into the
+Figure 8. Octacosanol regulated the expression levels of fatigue-related genes in forced exercise stimulated in the gastrocnemius tissue of C57BL/6
+mice. Mice treated with octacosanol (200 mg/(kg day)) for 30 days. Total RNA was extracted from the gastrocnemius tissue of mice after
+octacosanol treatments; comparisons of expression fold change between microarray and RT-qPCR (n = 3). These genes included Pmp22, Trim63,
+Ulk3, Arrdc2, Prx, Bcl3, Cga, Sv2a, Cacna1h, and Mybpc3, which were diﬀerentially expressed, caused by forced exercise fatigue in the
+gastrocnemius tissue of C57BL/6 mice. Expression levels of ﬁve upregulated genes by the RT-qPCR (A), expression levels of ﬁve downregulated
+genes by the RT-qPCR (B), expression fold change of ﬁve upregulated genes (C), linear correlation of ﬁve upregulated genes (D), expression fold
+change of ﬁve downregulated genes (E), and linear correlation of ﬁve downregulated genes (F). The images shown here are representative data
+from three independent experiments. Values represent mean ± SD. **p < 0.01, *p < 0.05, and #p > 0.05.
+Journal of Agricultural and Food Chemistry
+pubs.acs.org/JAFC
+Article
+https://doi.org/10.1021/acs.jafc.1c01764
+J. Agric. Food Chem. 2021, 69, 7603−7618
+7613
+
+
+--- PAGE 12 ---
+excitable cells and have been implicated in a variety of calcium-
+dependent processes, including muscle ﬁber development,
+muscle contraction, and hormone secretion or neurotransmit-
+ter release.48−50 Recent publications report that the hetero-
+zygous mutation of Cacna1h causes congenital muscular
+atrophy, probably through dysfunctional Ca2+ regulation.48
+Deﬁciency of Cacna1h shows the reduced contractile ability of
+the muscle.49 But our data showed that Cacna1h expression
+was decreased after OCT treatment (Figures 8B and 11A).
+OCT inhibitory eﬀect is an important factor in protecting
+myotubes from atrophy and apoptosis induced by T-channel.
+These ﬁndings provided insights into the role of Cacna1h as a
+key regulator of skeletal muscle functions.
+Furthermore, our research found that the periaxin (Prx)
+expression level is decreased after forced exercise, but OCT
+restored it to normalcy (Figures 8B and 11A). Prx, a Schwann
+cell-speciﬁc protein, during the formation of myelin by
+Schwann cells wrap the axons, speciﬁcally participated in the
+extension, repair, stabilization, and regeneration of the
+myelin.51 The deletion or mutation of the Prx gene induces
+demyelinating neurological Charcot-Marie-tooth disease sub-
+type 4F (CMT4F), which then causes convulsions, dyskinesia,
+and so on.52 Therefore, OCT may also regulate exercise
+damage through the self-neuroprotective process of the
+organism, stimulating fatigue recovery functions.
+In summary, our present study demonstrated that OCT has
+antifatigue activity in exercise-induced fatigue models and
+partly inhibited over-exercise-induced muscle injury in gastro-
+cnemius tissues. This study used gene chip technology for the
+ﬁrst time to systematically identify the genes involved in the
+antifatigue eﬀect of OCT and explored the possible
+interactions between these genes. The results indicate that
+OCT modulating expressions of Bcl3, Trim63, Mybpc3, Myh6,
+Cacna1h, and so on, will ameliorate exercise-induced abnormal
+reaction. These cytokines synergistically promote muscular
+atrophy by the interaction between inﬂammatory cells and
+organs, resulting in disorders on the balance of protein
+biosynthesis and degradation, and in muscle loss and exercise
+functional impairment.35,53 These ﬁndings have broad
+signiﬁcance for understanding the genes and pathways that
+regulate fatigue function. Additionally, it is necessary to further
+investigate the gene expression proﬁle of OCT and the
+Figure 9. Functional relevance of gene ontology analysis with 67 genes. Interaction network of genes and gene ontology function (A), interrelation
+analysis between gene ontology terms (B), and bubble chart (C) of gene ontology analysis result. Gene ontology analysis consists of biological
+processes, cellular components, and molecular functions. The vertical items are the names of gene ontology terms and the length of the horizontal
+graph represents the adjusted p-value. The depth of the color represents the −log(10) adjusted p-value. The area of a circle in the graph means gene
+counts. These analyses were performed using g:Proﬁler and Cytoscape 2.8.2 software.
+Journal of Agricultural and Food Chemistry
+pubs.acs.org/JAFC
+Article
+https://doi.org/10.1021/acs.jafc.1c01764
+J. Agric. Food Chem. 2021, 69, 7603−7618
+7614
+
+
+--- PAGE 13 ---
+interaction between OCT and its target genes. Results from
+this will advance the understanding of the antifatigue eﬀects of
+OCT. Taken together, dietary supplements using natural
+extracts like OCT may be a candidate for adjuvant treatment
+for fatigue and other related diseases.
+■PROSPECT
+Fatigue is not a disease in medicine and has not strongly
+attracted the attention of medical researchers. In the high-
+speed economic society, fatigue almost accompanies our daily
+life. Since natural products have no side eﬀects or very few side
+eﬀects, it is an important idea to screen antifatigue active
+components from natural products. At present, the research on
+fatigue and antifatigue in the medical ﬁeld is still at the initial
+stage, and the molecular mechanism of fatigue and antifatigue
+eﬀects of active ingredients is still unclear. In this study, we
+systematically analyzed the eﬀects of dietary OCT on the gene
+expression proﬁling of muscle tissue in the over-exercise mice,
+identiﬁed the important target genes and related signal
+pathways regulated by OCT, and also identiﬁed the network
+of protein−protein interactions. The study can provide a
+reference for the study of the antifatigue mechanism of other
+active components.
+Figure 10. Main network among genes related to fatigue aﬀected by octacosanol. The normalized microarray data were uploaded into STRING
+database to generate this network through an automatic comparison.
+Figure 11. Octacosanol relieves fatigue-related proteins expression levels in forced exercise stimulated in the gastrocnemius tissue of C57BL/6
+mice. Mice treated with octacosanol (200 mg/(kg day)) for 30 days. Total protein was extracted from the gastrocnemius tissue of mice after
+octacosanol treatments, and the expression of Prx, Trim63, Cacna1h, and Mybpc3 proteins was assessed by western blot analysis. The images
+shown here are representative data from three independent experiments. Values represented as mean ± SD. **p < 0.01, *p < 0.05, and #p > 0.05.
+Journal of Agricultural and Food Chemistry
+pubs.acs.org/JAFC
+Article
+https://doi.org/10.1021/acs.jafc.1c01764
+J. Agric. Food Chem. 2021, 69, 7603−7618
+7615
+
+
+--- PAGE 14 ---
+This study identiﬁed important genes and signaling
+pathways modulated by OCT, but how does dietary OCT
+regulate gene expression? Do intestinal microbiota and
+metabolites play a role in antifatigue action? Are microRNAs,
+long-coding RNAs, circRNAs, and other noncoding genes
+involved in the antifatigue eﬀect? At present, these problems
+are not clear and need further investigations in the future.
+■AUTHOR INFORMATION
+Corresponding Authors
+Feijun Luo −National Engineering Laboratory for Deep
+Process of Rice and Byproducts, Hunan Key Laboratory of
+Grain-Oil Deep Process and Quality Control, Hunan Key
+Laboratory of Processed Food for Special Medical Purpose,
+College of Food Science and Engineering, Central South
+University of Forestry and Technology, Changsha 410004
+Hunan, China;
+orcid.org/0000-0003-4398-1403;
+Phone: +86-731-85623240; Email: 780349671@qq.com,
+T20121480@csuft.edu.cn
+Qinlu Lin −National Engineering Laboratory for Deep
+Process of Rice and Byproducts, Hunan Key Laboratory of
+Grain-Oil Deep Process and Quality Control, Hunan Key
+Laboratory of Processed Food for Special Medical Purpose,
+College of Food Science and Engineering, Central South
+University of Forestry and Technology, Changsha 410004
+Hunan, China;
+orcid.org/0000-0003-2043-4220;
+Email: linqinlu@hotmail.com
+Authors
+Yaping Zhou −National Engineering Laboratory for Deep
+Process of Rice and Byproducts, Hunan Key Laboratory of
+Grain-Oil Deep Process and Quality Control, Hunan Key
+Laboratory of Processed Food for Special Medical Purpose,
+College of Food Science and Engineering, Central South
+University of Forestry and Technology, Changsha 410004
+Hunan, China
+Fuliang Cao −Co-Innovation Center for the Sustainable
+Forestry in Southern China, College of Forestry, Nanjing
+Forestry University, Nanjing 210037 Jiangsu, China
+Qiang Wu −National Engineering Laboratory for Deep
+Process of Rice and Byproducts, Hunan Key Laboratory of
+Grain-Oil Deep Process and Quality Control, Hunan Key
+Laboratory of Processed Food for Special Medical Purpose,
+College of Food Science and Engineering, Central South
+University of Forestry and Technology, Changsha 410004
+Hunan, China
+Yi Luo −Department of Clinical Medicine, Medical College of
+Xiangya, Central South University, Changsha 410008
+Hunan, China
+Tianyi Guo −National Engineering Laboratory for Deep
+Process of Rice and Byproducts, Hunan Key Laboratory of
+Grain-Oil Deep Process and Quality Control, Hunan Key
+Laboratory of Processed Food for Special Medical Purpose,
+College of Food Science and Engineering, Central South
+University of Forestry and Technology, Changsha 410004
+Hunan, China
+Shuai Han −National Engineering Laboratory for Deep
+Process of Rice and Byproducts, Hunan Key Laboratory of
+Grain-Oil Deep Process and Quality Control, Hunan Key
+Laboratory of Processed Food for Special Medical Purpose,
+College of Food Science and Engineering, Central South
+University of Forestry and Technology, Changsha 410004
+Hunan, China
+Mengzhen Huang −National Engineering Laboratory for
+Deep Process of Rice and Byproducts, Hunan Key Laboratory
+of Grain-Oil Deep Process and Quality Control, Hunan Key
+Laboratory of Processed Food for Special Medical Purpose,
+College of Food Science and Engineering, Central South
+University of Forestry and Technology, Changsha 410004
+Hunan, China
+Zuomin Hu −National Engineering Laboratory for Deep
+Process of Rice and Byproducts, Hunan Key Laboratory of
+Grain-Oil Deep Process and Quality Control, Hunan Key
+Laboratory of Processed Food for Special Medical Purpose,
+College of Food Science and Engineering, Central South
+University of Forestry and Technology, Changsha 410004
+Hunan, China
+Jie Bai −National Engineering Laboratory for Deep Process of
+Rice and Byproducts, Hunan Key Laboratory of Grain-Oil
+Deep Process and Quality Control, Hunan Key Laboratory of
+Processed Food for Special Medical Purpose, College of Food
+Science and Engineering, Central South University of Forestry
+and Technology, Changsha 410004 Hunan, China
+Complete contact information is available at:
+https://pubs.acs.org/10.1021/acs.jafc.1c01764
+Author Contributions
+∥Y.Z., F.L., and Q.L. contributed equally to this work.
+Funding
+This project was ﬁnancially supported by the National Natural
+Science Foundation of China (no. 31571874), Project “The
+Grain-oil Process and Quality Control 2011 Collaborative and
+Innovative Grant from Hunan Province” (2013, no. 448), the
+Key Project of the Education Department of Hunan Province
+(nos. 16A228, 13A124), and the Graduate Innovative Research
+Project of Hunan province and Central South University of
+Forestry and Technology (nos. CX20200699, CX20201018).
+Notes
+The authors declare no competing ﬁnancial interest.
+■ABBREVIATIONS
+OCT, octacosanol; CON, control; EX, exercise; LG, liver
+glycogen; MG, muscle glycogen; BLA, blood lactic acid; LDH,
+lactate dehydrogenase; SOD, superoxide dismutase; GSH-Px,
+glutathione peroxidase; HRP, horseradish peroxidase; ELISA,
+enzyme-linked immunosorbent assay; H&E, hematoxylin and
+eosin; RNA, ribonucleic acid; cDNA, complementary deoxy-
+ribonucleic acid; ds-cDNA, double-strand cDNA; EDTA,
+ethylenediaminetetraacetic acid; RMA, robust multichip
+average; FC, fold change; RT-qPCR, real-time quantitative
+polymerase chain reaction; PMSF, phenylmethylsulfonyl
+ﬂuoride; PVDF, poly(vinylidene diﬂuoride); BSA, bovine
+serum albumin; TBS-T, Tris-buﬀered saline with Tween 20;
+Pmp22, peripheral myelin protein 22; Trim63, tripartite motif
+containing 63; Ulk3, unc-51-like kinase 3; Arrdc2, arrestin
+domain containing 2; Prx, periaxin; Bcl3, B cell leukemia/
+lymphoma 3; Cga, glycoprotein hormones, α subunit; Sv2a,
+synaptic vesicle glycoprotein 2 a; Cacna1h, calcium channel,
+voltage-dependent, T type, α 1H subunit; Mybpc3, myosin
+binding protein C; SEM, standard error mean; SD, standard
+deviation; GO, gene ontology; NF-κB, nuclear factor kappa-B;
+MAPK, mitogen-activated protein kinase; TLRs, Toll-like
+receptors; TNF-α, tumor necrosis factor-α; CMT4F, Char-
+cot-Marie-tooth disease subtype 4F
+Journal of Agricultural and Food Chemistry
+pubs.acs.org/JAFC
+Article
+https://doi.org/10.1021/acs.jafc.1c01764
+J. Agric. Food Chem. 2021, 69, 7603−7618
+7616
+
+
+--- PAGE 15 ---
+■REFERENCES
+(1) Nam, S. Y.; Kim, H. M.; Jeong, H. J. Anti-fatigue effect by active
+dipeptides of fermented porcine placenta through inhibiting the
+inflammatory and oxidative reactions. Biomed. Pharmacother. 2016,
+84, 51−59.
+(2) Huang, C. C.; Hsu, M. C.; Huang, W. C.; Yang, H. R.; Hou, C.
+C. Triterpenoid-rich extract from Antrodia camphorata improves
+physical fatigue and exercise performance in mice. Evidence-Based
+Complementary Altern. Med. 2012, No. 364741.
+(3) Narkhede, A. N.; Jagtap, S. D.; Nirmal, P. S.; Giramkar, S. A.;
+Nagarkar, B. E.; Kulkarni, O. P.; Harsulkar, A. M. Anti-fatigue effect of
+Amarkand on endurance exercise capacity in rats. BMC Comple-
+mentary Altern. Med. 2016, 16, No. 23.
+(4) Tan, W.; Yu, K. Q.; Liu, Y. Y.; Ouyang, M. Z.; Yan, M. H.; Luo,
+R.; Zhao, X. S. Anti-fatigue activity of polysaccharides extract from
+Radix Rehmanniae Preparata. Int. J. Biol. Macromol. 2012, 50, 59−62.
+(5) You, L.; Ren, J.; Yang, B.; Regenstein, J.; Zhao, M. Antifatigue
+activities of loach protein hydrolysates with different antioxidant
+activities. J. Agric. Food Chem. 2012, 60, 12324−12331.
+(6) Finsterer, J.; Mahjoub, S. Z. Fatigue in healthy and diseased
+individuals. Am. J. Hosp. Palliative Care 2014, 31, 562−575.
+(7) Xu, M.; Liang, R.; Li, Y.; Wang, J. Anti-fatigue effects of dietary
+nucleotides in mice. Food Nutr. Res. 2017, 61, No. 1334485.
+(8) Chi, A.; Li, H.; Kang, C.; Guo, H.; Wang, Y.; Guo, F.; Tang, L.
+Anti-fatigue activity of a novel polysaccharide conjugates from Ziyang
+green tea. Int. J. Biol. Macromol. 2015, 80, 566−572.
+(9) Taylor, J. C.; Rapport, L.; Lockwood, G. B. Octacosanol in
+human health. Nutrition 2003, 19, 192−195.
+(10) Kato, S.; Karino, K.-I.; Hasegawa, S.; et al. Octacosanol affects
+lipid metabolism in rats fed on a high-fat diet. Br. J. Nutr. 1995, 73,
+433−441.
+(11) Kim, H.; Park, S.; Han, D. S.; Park, T. Octacosanol
+supplementation increases running endurance time and improves
+biochemical parameters after exhaustion in trained rats. J. Med. Food
+2003, 6, 345−351.
+(12) Lee, S. H.; Scott, S. D.; Pekas, E. J.; Lee, J. K.; Park, S. Y.
+Improvement of lipids and reduction of oxidative stress with
+octacosanol after taekwondo training. Int. J. Sports Physiol. 2019,
+1297−1303.
+(13) Menchetti, L.; Guelfi, G.; Speranza, R.; Carotenuto, P.;
+Moscati, L.; Diverio, S. Benefits of dietary supplements on the
+physical fitness of German Shepherd dogs during a drug detection
+training course. PLoS One 2019, 14, No. e0218275.
+(14) Wang, T.; Liu, Y.; Yang, N.; Ji, C.; Chan, P.; Zuo, P. Anti-
+parkinsonian effects of octacosanol in 1-methyl-4-phenyl-1, 2, 3, 6
+tetrahydropyridine-treated mice. Neural Regener. Res. 2012, 7, 1080−
+1087.
+(15) Thippeswamy, G.; Sheela, M. L.; Salimath, B. P. Octacosanol
+isolated from tinospora cordifolia downregulates VEGF gene
+expression by inhibiting nuclear translocation of NF-kappa B and its
+DNA binding activity. Eur. J. Pharmacol. 2008, 588, 141−150.
+(16) de Oliveira, A. M.; Conserva, L. M.; De souza ferro, J. N.; De
+Almeida Brito, F.; Lyra Lemos, R. P.; Barreto, E. Antinociceptive and
+anti-inflammatory effects of octacosanol from the leaves of Sabicea
+grisea var. grisea in mice. Int. J. Mol. Sci. 2012, 13, 1598−1611.
+(17) Kaushik, M. K.; Aritake, K.; Takeuchi, A.; Yanagisawa, M.;
+Urade, Y. Octacosanol restores stress-affected sleep in mice by
+alleviating stress. Sci. Rep. 2017, 7, No. 8892.
+(18) Sharma, R.; Matsuzaka, T.; Kaushik, M. K.; Sugasawa, T.;
+Ohno, H.; Wang, Y.; Motomura, K.; Shimura, T.; Okajima, Y.;
+Mizunoe, Y.; Ma, Y.; Saber, Z. M.; Iwasaki, H.; Yatoh, S.; Suzuki, H.;
+Aita, Y.; Han, S. I.; Takeuchi, Y.; Yahagi, N.; Miyamoto, T.; Sekiya,
+M.; Nakagawa, Y.; Shimano, H. Octacosanol and policosanol prevent
+high-fat diet-induced obesity and metabolic disorders by activating
+brown adipose tissue and improving liver metabolism. Sci. Rep. 2019,
+9, No. 5169.
+(19) Jiang, M. Y.; Lu, H.; Pu, X. Y.; Li, Y. H.; Tian, K.; Xiong, Y.;
+Wang, W.; Huang, X. Z. Laxative metabolites from the leaves of
+moringa oleifera. J. Agric. Food Chem. 2020, 68, 7850−7860.
+(20) Guo, T.; Lin, Q.; Li, X.; Nie, Y.; Wang, L.; Shi, L.; Xu, W.; Hu,
+T.; Guo, T.; Luo, F. Octacosanol attenuates inflammation in both
+RAW264.7 macrophages and a mouse model of colitis. J. Agric. Food
+Chem. 2017, 65, 3647−3658.
+(21) Jiang, X.; Chu, Q.; Li, L.; Qin, L.; Hao, J.; Koum, L.; Linm, F.;
+Wang, D. The anti-fatigue activities of tuber melanosporum in a
+mouse model. Exp. Ther. Med. 2018, 15, 3066−3073.
+(22) Park, S. H.; Jang, S.; Lee, S. W.; Park, S. D.; Sung, Y. Y.; Kim,
+H. K. Akebia quinata Decaisne aqueous extract acts as a novel anti-
+fatigue agent in mice exposed to chronic restraint stress. J.
+Ethnopharmacol. 2018, 222, 270−279.
+(23) Wei, Y. F.; Tao, H. H. Effect of polysaccharides from the roots
+of Morinda officinalis how on physical fatigue. J. Food Agric. Environ.
+2013, 11, 581−584.
+(24) Huang, W. C.; Chiu, W. C.; Chuang, H. L.; Tang, D. W.; Lee,
+Z. M.; Wei, L.; Chen, F. A.; Huang, C. C. Effect of curcumin
+supplementation on physiological fatigue and physical performance in
+mice. Nutrients 2015, 7, 905−921.
+(25) Ding, J. F.; Li, Y. Y.; Xu, J. J.; Su, X. R.; Gao, X.; Yue, F. P.
+Study on effect of jellyfish collagen hydrolysate on anti-fatigue and
+anti-oxidation. Food Hydrocolloids 2011, 25, 1350−1353.
+(26) Gibson, H.; Edwards, R. H. Muscular exercise and fatigue.
+Sports Med. 1985, 2, 120−132.
+(27) Song, H.; Jang, M. G.; Lee, J. Y.; Ko, H. C.; Hur, S. P.; Kim, S.
+J. Sasa quelpaertensis leaf extract mitigates fatigue and regulates the
+transcriptome profile in mice. Genes Genomics 2019, 41, 317−324.
+(28) Kabir, Y.; Kimura, S. Distribution of radioactive octacosanol in
+response to exercise in rats. Nahrung 1994, 38, 373−377.
+(29) Zhao, R.; Cai, Y.; Shao, X.; Ma, B. Improving the activity of
+Lycium barbarum polysaccharide on sub-health mice. Food Funct.
+2015, 6, 2033−2040.
+(30) Yan, F.; Zhang, Y.; Wang, B. B. Effects of polysaccharides from
+Cordyceps sinensis mycelium on physical fatigue in mice. Bangladesh J.
+Pharmacol. 2012, 7, 217−221.
+(31) Zhang, G.; Zhou, S. M.; Tian, J. H.; Huang, Q. Y.; Gao, Y. Q.
+Anti-fatigue effects of methazolamide in high-altitude hypoxic mice.
+Trop. J. Pharm. Res. 2012, 11, 209−215.
+(32) Gladden, L. B. Lactate metabolism: a new paradigm for the
+third millennium. J. Physiol. 2004, 558, 5−30.
+(33) Yu, S. H.; Huang, H. Y.; Korivi, M.; Hsu, M. F.; Huang, C. Y.;
+Hou, C. W.; Chen, C. Y.; Kao, C. L.; Lee, R. P.; Lee, S. D.; Kuo, C. H.
+Oral Rg1 supplementation strengthens antioxidant defense system
+against exercise-induced oxidative stress in rat skeletal muscles. J. Int.
+Soc. Sports Nutr. 2012, 9, No. 23.
+(34) Herrington, F. D.; Nibbs, R. J. Regulation of the adaptive
+immune response by the IκB family protein Bcl-3. Cells 2016, 5,
+No. 14.
+(35) Baumert, P.; G-REX Consortium; Lake, M. J.; Drust, B.;
+Stewart, C. E.; Erskine, R. M. TRIM63 (MuRF-1) gene poly-
+morphism is associated with biomarkers of exercise-induced muscle
+damage. Physiol. Genomics 2018, 50, 142−143.
+(36) Jackman, R. W.; Wu, C. L.; Kandarian, S. C. The ChIP-seq-
+defined networks of Bcl-3 gene binding support its required role in
+skeletal muscle atrophy. PLoS One 2012, 7, No. e51478.
+(37) Hunter, R. B.; Kandarian, S. C. Disruption of either the Nfkb1
+or the Bcl3 gene inhibits skeletal muscle atrophy. J. Clin. Invest. 2004,
+114, 1504−1511.
+(38) Wu, C. L.; Kandarian, S. C.; Jackman, R. W. Identification of
+genes that elicit disuse muscle atrophy via the transcription factors
+p50 and Bcl-3. PLoS One 2011, 6, No. e16171.
+(39) Collins, P. E.; Somma, D.; Kerrigan, D.; Herrington, F.;
+Keeshan, K.; Nibbs, R. J. B.; Carmody, R. J. The IκB-protein BCL-3
+controls Toll-like receptor-induced MAPK activity by promoting
+TPL-2 degradation in the nucleus. Proc. Natl. Acad. Sci. U.S.A. 2019,
+116, 25828−25838.
+(40) Li, Y. P.; Reid, M. B. NF-kappaB mediates the protein loss
+induced by TNF-alpha in differentiated skeletal muscle myotubes.
+Am. J. Physiol.: Regul., Integr. Comp. Physiol. 2000, 279, R1165−
+R1170.
+Journal of Agricultural and Food Chemistry
+pubs.acs.org/JAFC
+Article
+https://doi.org/10.1021/acs.jafc.1c01764
+J. Agric. Food Chem. 2021, 69, 7603−7618
+7617
+
+
+--- PAGE 16 ---
+(41) Jokela, M.; Baumann, P.; Huovinen, S.; Penttilä, S.; Udd, B.
+Homozygous nonsense mutation p.Q274x in Trim63 (MuRF1) in a
+patient with mild skeletal myopathy and cardiac hypertrophy. J.
+Neuromuscular Dis. 2019, 6, 143−146.
+(42) Labeit, S.; Kohl, C. H.; Witt, C. C.; Labeit, D.; Jung, J.;
+Granzier, H. Modulation of muscle atrophy, fatigue and MLC
+phosphorylation by MuRF1 as indicated by hindlimb suspension
+studies on MuRF1-KO mice. J. Biomed. Biotechnol. 2010, No. 693741.
+(43) Clarke, B. A.; Drujan, D.; Willis, M. S.; Murphy, L. O.; Corpina,
+R. A.; Burova, E.; Rakhilin, S. V.; Stitt, T. N.; Patterson, C.; Latres, E.;
+Glass, D. J. The E3 ligase MuRF1 degrades myosin heavy chain
+protein in dexamethasone-treated skeletal muscle. Cell Metab. 2007, 6,
+376−385.
+(44) Carrier, L.; Mearini, G.; Stathopoulou, K.; Cuello, F. Cardiac
+myosin-binding protein C (MYBPC3) in cardiac pathophysiology.
+Gene 2015, 573, 188−197.
+(45) Toepfer, C. N.; Wakimoto, H.; Garfinkel, A. C.; McDonough,
+B.; Liao, D.; Jiang, J.; Tai, A. C.; Gorham, J. M.; Lunde, I. G.; Lun, M.;
+Lynch, T. L.; McNamara, J. W.; Sadayappan, S.; Redwood, C. S.;
+Watkins, H. C.; Seidman, J. G.; Seidman, C. E. Hypertrophic
+cardiomyopathy mutations in MYBPC3 dysregulate myosin. Sci.
+Transl. Med. 2019, 11, No. eaat1199.
+(46) Jiang, J.; Burgon, P. G.; Wakimoto, H.; Onoue, K.; Gorham, J.
+M.; O’Meara, C. C.; Fomovsky, G.; McConnell, B. K.; Lee, R. T.;
+Seidman, J. G.; Seidman, C. E. Cardiac myosin binding protein C
+regulates postnatal myocyte cytokinesis. Proc. Natl. Acad. Sci. U.S.A.
+2015, 112, 9046−9051.
+(47) Tomita-Mitchell, A.; Stamm, K. D.; Mahnke, D. K.; Kim, M. S.;
+Hidestrand, P. M.; Liang, H. L.; Goetsch, M. A.; Hidestrand, M.;
+Simpson, P.; Pelech, A. N.; Tweddell, J. S.; Benson, D. W.; Lough, J.
+W.; Mitchell, M. E. Impact of MYH6 variants in hypoplastic left heart
+syndrome. Physiol. Genomics 2016, 48, 912−921.
+(48) Carter, M. T.; Mcmillan, H. J.; Tomin, A.; Weiss, N.
+Compound heterozygous CACNA1H mutations associated with
+severe congenital amyotrophy. Channels 2019, 13, 153−161.
+(49) Li, S.; Hao, M.; Li, B.; Chen, M.; Chen, J.; Tang, J.; Hong, S.;
+Min, J.; Hu, M.; Hong, L. CACNA1H downregulation induces
+skeletal muscle atrophy involving endoplasmic reticulum stress
+activation and autophagy flux blockade. Cell Death Dis. 2020, 11,
+No. 279.
+(50) Stringer, R. N.; Jurkovicova-Tarabova, B.; Huang, S.; Haji-
+Ghassemi, O.; Idoux, R.; Liashenko, A.; Souza, I. A.; Rzhepetskyy, Y.;
+Lacinova, L.; Van Petegem, F.; Zamponi, G. W.; Pamphlett, R.; Weiss,
+N. A rare CACNA1H variant associated with amyotrophic lateral
+sclerosis causes complete loss of Ca3.2 T-type channel activity. Mol.
+Brain 2020, 13, No. 33.
+(51) Raasakka, A.; Linxweiler, H.; Brophy, P. J.; Sherman, D. L.;
+Kursula, P. Direct binding of the flexible C-terminal segment of
+periaxin to β4 integrin suggests a molecular basis for CMT4F. Front.
+Mol. Neurosci. 2019, 12, No. 84.
+(52) Sherman, D. L.; Brophy, P. J. A murine model of Charcot-
+Marie-Tooth disease 4F reveals a role for the C-terminus of periaxin
+in the formation and stabilization of Cajal bands. Wellcome Open Res.
+2018, 3, No. 20.
+(53) Majumder, A.; Singh, M.; Behera, J.; Theilen, N. T.; George, A.
+K.; Tyagi, N.; Metreveli, N.; Tyagi, S. C. Hydrogen sulfide alleviates
+hyperhomocysteinemia-mediated skeletal muscle atrophy via miti-
+gation of oxidative and endoplasmic reticulum stress injury. Am. J.
+Physiol.: Cell Physiol. 2018, 315, C609−C622.
+Journal of Agricultural and Food Chemistry
+pubs.acs.org/JAFC
+Article
+https://doi.org/10.1021/acs.jafc.1c01764
+J. Agric. Food Chem. 2021, 69, 7603−7618
+7618

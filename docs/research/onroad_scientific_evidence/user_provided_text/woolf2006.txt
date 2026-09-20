@@ -1,0 +1,2462 @@
+
+
+--- PAGE 1 ---
+453
+International Journal of Sport Nutrition and Exercise Metabolism, 2006, 16, 453-484 
+© 2006 Human Kinetics, Inc.
+B-Vitamins and Exercise:  
+Does Exercise Alter Requirements?
+Kathleen Woolf and Melinda M. Manore 
+The B-vitamins (thiamin, riboflavin, vitamin B-6) are necessary in the energy-
+producing pathways of the body, while folate and vitamin B-12 are required for the 
+synthesis of new cells, such as the red blood cells, and for the repair of damaged 
+cells.  Active individuals with poor or marginal nutritional status for a B-vitamin 
+may have decreased ability to perform exercise at high intensities.  This review 
+focuses on the B-vitamins and their role in energy metabolism and cell regenera-
+tion.  For each vitamin, function related to physical activity, requirement, and 
+status measures are given.  Research examining dietary intakes and nutritional 
+status in active individuals is also presented.  Current research suggests that 
+exercise may increase the requirements for riboflavin and vitamin B-6, while data 
+for folate and vitamin B-12 are limited.  Athletes who have poor diets, especially 
+those restricting energy intakes or eliminating food groups from the diet, should 
+consider supplementing with a multivitamin/mineral supplement.  
+Key Words: thiamin, riboflavin, vitamin B-6, folate, vitamin B-12, athletes
+Micronutrients play important roles in maintaining the health of physically active 
+individuals (53, 54, 57, 59). For example, the B-vitamins are necessary in the 
+energy-producing pathways of the body, while folate and vitamin B-12 are required 
+for the synthesis of new cells, such as red blood cells, and for the repair of dam-
+aged cells. Other micronutrients are important for maintaining adequate immune 
+function, protecting the tissues of the body from oxidative damage, maintaining 
+bone health, and building and repairing muscle tissue. 
+Regular physical activity may alter the need or requirements for some micronu-
+trients in several ways (53, 54, 57, 59). First, the metabolic pathways that produce 
+energy are stressed during physical activity; thus, requirements for some of the 
+nutrients used in these pathways may increase. Second, biochemical adaptations 
+that occur with training in the tissues of the body may increase requirements. 
+Third, strenuous exercise may also increase the turnover or loss of a particular 
+micronutrient in sweat, urine, or feces. Finally, additional micronutrients may be 
+required to repair and maintain the higher lean tissue mass of some athletes and 
+active individuals. 
+Woolf is with the Dept of Nutrition, Arizona State University, Mesa, AZ 85212. Manore is with the Dept 
+of Nutrition and Exercise Sciences, Oregon State University, Corvallis, OR 97331-5109.
+Original Research
+
+
+--- PAGE 2 ---
+454    Woolf and Manore
+When the current Dietary Reference Intakes (DRI) for each of the B-vitamins 
+were established for the US and Canada, there was inadequate information to calcu-
+late specific recommendations for active individuals (40, 41) (Table 1). If exercise 
+increases the need for selected B-vitamins, then athletes and active individuals may 
+have poorer status while consuming the Recommended Dietary Allowance (RDA) 
+or Adequate Intake (AI) for these nutrients or have poorer status compared to sed-
+entary controls with similar dietary intakes. Athletes at greatest risk of poor status 
+are those who restrict energy intake for weight loss, those who are concerned about 
+maintaining a low body weight (i.e., gymnasts, jockeys, wrestlers, figure skaters), 
+or those who eliminate selected food groups, such as dairy or meat. Individuals 
+with these types of eating behaviors may need to use a multivitamin supplement 
+or use fortified foods to improve overall micronutrient status.
+This review will focus on the B-vitamins (thiamin, riboflavin, vitamin B-6, 
+folate, and vitamin B-12) and their role in energy metabolism and cell regeneration, 
+especially the synthesis of red blood cells. For each nutrient, we will discuss their 
+function related to physical activity, their requirements, and their status measures. 
+We will also review the research literature examining the dietary intakes and 
+nutritional status of these vitamins in active individuals. Studies published after 
+1980 examining nutritional status of athletes were identified using the PubMed 
+search engine. Finally, we will discuss whether there are adequate data to suggest 
+increased requirements for these vitamins in active individuals.
+B-Complex Vitamins
+B-complex vitamins have several important functions in the body, including energy 
+production, hemoglobin synthesis, adequate immune function, and building and 
+repair of muscle tissue. Research examining dietary intakes of the B-complex vita-
+mins in athletes has reported adequate mean intakes (1, 4, 6, 20, 44, 63). However, 
+when examining the dietary intake data for individual athletes, many athletes, espe-
+cially women, do not consume the recommended levels for these nutrients (4, 38, 
+43, 45, 47, 55, 77). For example, folate, vitamin B-6, and riboflavin are B-complex 
+vitamins that are frequently low in the diets of women who are physically active 
+(32, 51-53, 57, 64), especially those with restricted energy intakes or disordered 
+eating behaviors (4, 17, 96-98). In general, active males have better nutrient intakes, 
+not because they select a more nutrient-dense diet, but because their energy intakes 
+are typically higher than that of active females (32). Finally, it should be noted that 
+many individuals under-report when recording diet records, which may contribute 
+to some of the low nutrient intakes reported in the literature. Underreporting of 
+food intake may result from incomplete recordkeeping, conscious misreporting to 
+respond in a more socially desirable way, or the recording process causing a tem-
+porary change in eating behaviors (60, 87). Further research is needed to identify 
+how to account for these discrepancies in studies of nutrition.
+Thiamin
+Thiamin is important for the metabolism of carbohydrates, fats, and proteins, 
+especially the branched chain amino acids (BCAAs) (leucine, isoleucine, and 
+valine) (52, 53, 57, 59). The active form of this micronutrient, thiamin pyrophos-
+Downloaded by Syracuse University Library on 09/16/16, Volume 16, Article Number 5
+
+
+--- PAGE 3 ---
+B-Vitamins and Exercise: Does Exercise Alter Requirements?    455
+Table 1  Exercise-Related Function and the Dietary Reference Intakes (DRIs) for Individuals 19-50 y a, b
+Nutrient
+Function
+Food sources
+Males 
+RDA
+Females
+RDA
+Males
+EAR
+Females
+EAR
+UL
+Adverse effects of 
+high doses
+Thiamin  
+(mg/d)
+Serves as a coenzyme 
+[TPP (thiamin pyro-
+phosphate)] in reac-
+tions in the energy 
+pathways
+Whole grains and 
+enriched grain 
+products, pork, 
+liver, dark green 
+vegetables, nuts
+1.2
+1.1
+1.0
+0.9
+NDc
+Data are inadequate to 
+assess risk
+Riboflavin  
+(mg/d)
+Participates in 
+electron transfer in 
+energy metabolism
+Milk and dairy 
+products, organ 
+meats, whole 
+grains and enriched 
+grain products, 
+eggs, and nuts
+1.3
+1.1
+1.1
+0.9
+NDc
+Data are inadequate to 
+assess risk
+Vitamin B-6 
+(mg/d)
+Involved in amino 
+acid metabolism 
+(such as transamina-
+tion) and in glycogen 
+breakdown
+Animal foods, such 
+as meats, fish, and 
+poultry
+1.3
+1.3
+1.1
+1.1
+100
+No adverse effect of 
+↑ food B6; ↑ supple-
+mental B6 can cause 
+sensory neuropathy 
+(difficulty walking)  
+Folate (µg/d as 
+dietary folate 
+equivalents 
+[DFE])
+Required for cell 
+division and cell 
+regeneration in cells 
+such as the red blood 
+cells
+Enriched grains, 
+plant sources, and 
+organ meats
+400
+400
+320
+320
+1000d
+No adverse effect of 
+fortified food folic acid; 
+↑ supplemental folic 
+acid can mask vitamin 
+B12 deficiency 
+Vitamin B-12 
+(µg/d)
+Involved in the recy-
+cling of folate and in 
+neural tissue
+Only found in 
+animal foods
+2.4
+2.4
+2.0
+2.0
+NDc
+Data are inadequate to 
+assess risk; No adverse 
+effect of ↑ food B12
+a This table summarizes Recommended Dietary Allowances (RDA), Estimated Average Requirements (EAR), and Tolerable Upper Intake Levels (UL) for selected 
+B-vitamins.
+b Source: Institute of Medicine. Food and Nutrition Board (40-41). A complete table of RDAs and AIs for all life stages groups can be found at http://www.iom.edu.  
+cND= none determinable due to lack of data.
+dThe UL for folate applies to synthetic forms obtained from supplements, fortified foods, or a combination of the two.  
+Downloaded by Syracuse University Library on 09/16/16, Volume 16, Article Number 5
+
+
+--- PAGE 4 ---
+456    Woolf and Manore
+phate (TPP), serves as a coenzyme in many key reactions in the energy-producing 
+pathways of the body, which are stressed during physical activity. For example, 
+TPP is required by pyruvate dehydrogenase, the enzyme that converts pyruvate to 
+acetyl CoA, and by α-keotglutarate dehydrogenase in the tricarboxylic acid (TCA) 
+cycle. Thus, thiamin is critical to aerobically metabolize both carbohydrates and 
+fats. In addition, thiamin is also needed for BCAA metabolism, which increases 
+with physical activity, especially endurance exercise.
+Food Sources and Recommended Intakes. Thiamin is found in a variety of 
+foods, such as whole grains and enriched grain products, pork, liver, nuts, legumes, 
+and green leafy vegetables. Athletes at risk for poor thiamin status are those who 
+restrict dietary intake or who self-select diets with low thiamin foods. The RDA 
+for thiamin is 1.1 and 1.2 mg/d for adult females and males, respectively (41). No 
+Tolerable Upper Intake Level (UL) has been established. 
+Assessment of Status. To assess status of a nutrient, dietary intake data and bio-
+chemical measures (blood and urine) are typically determined (28). For thiamin, 
+biochemical status is determined by assessing the activity of an enzyme, erythrocyte 
+transketolase, located in the red blood cells (28). Thiamin is needed at two steps of 
+the pentose phosphate pathway, a pathway that generates ribose-5-phosphate needed 
+in the production of ATP. One of these steps requires erythrocyte transketolase. The 
+assessment of this activity is called erythrocyte transketolase activity coefficient 
+or ETKAC. It is measured by determining the activity of erythrocyte transketolase 
+before and after the coenzyme (thiamin) is added. If more enzyme activity is gener-
+ated with additional thiamin, poor or marginal thiamin status is indicated (28, 41, 
+57). An ETKAC value > 1.25 suggests thiamin deficiency (28, 41).
+Assessment of Dietary Intake in Active Individuals. Table 2 summarizes research 
+examining thiamin intakes in adult athletes. Researchers have found that the dietary 
+intakes of thiamin in active individuals meet recommended guidelines. For example, 
+Niekamp and Baer (62) examined dietary intakes of several nutrients, including 
+thiamin, in trained male cross-country runners. Using 4-d dietary records, they 
+documented mean intakes of thiamin exceeding the 1989 RDA (1.5 mg) (61) for 
+these male athletes. In a recent study, Beshgetoor and Nichols (10) measured thia-
+min intakes in the diets of supplementing and non-supplementing female athletes 
+and found that mean intakes of thiamin exceeded the 1998 RDA for both groups. 
+In addition, Rankinen et al. (68) compared nutrient intakes in Finnish elite male 
+ski jumpers to age-matched controls. Despite a lower energy intake in the athletes, 
+intake of thiamin was similar in both groups. Finally, Ziegler et al. (97) measured 
+the dietary intakes of thiamin in male and female adolescent figure skaters and 
+found mean intakes to be normal, with only 7% of males and 13% of the females to 
+have thiamin intakes less than two-thirds the 1989 RDA for thiamin. Thus, thiamin 
+intakes of most athletes, even those participating in sports that emphasize leanness, 
+appear to be consistent with recommendations (5).
+Assessment of Status in Active Individuals. Table 2 summarizes research 
+examining thiamin status in adult athletes. Although dietary intakes for thiamin 
+are typically above recommended guidelines, exercise or vigorous physical activ-
+ity may alter nutrient requirements and result in marginal or poor status in some 
+Downloaded by Syracuse University Library on 09/16/16, Volume 16, Article Number 5
+
+
+--- PAGE 5 ---
+B-Vitamins and Exercise: Does Exercise Alter Requirements?    457
+Table 2  Summary of Studies Examining Thiamin Intake and/or 
+Status in Adult Athletesa,b
+Study
+Subjects
+Assessment 
+index
+Results
+Thiamin intake 
+Beals & Manore, 
+1998 (4)
+24 female athletes 
+with subclinical 
+eating disorders; 
+24 female control 
+athletes
+7-d weighed 
+food record
+Athletes with subclinical 
+eating disorders: 
+1.9 ± 0.6 mg/d 
+Control athletes:  
+2.2 ± 0.6 mg/d
+Beshgetoor & Nich-
+ols, 2003 (10)
+25 female master 
+cyclists and runners
+4-d food 
+record
+2.0 ± 0.5 mg/d
+Clark et al., 2003 
+(14)
+13 female collegiate 
+soccer players
+2 3-d food 
+records (pre-
+season and 
+post-season)
+Pre-season:  
+1.5 ± 0.6 mg/d 
+Post-season:  
+1.0 ± 0.4 mg/d
+DeBolt et al., 1988 
+(18)
+267 male US Navy 
+SEAL trainees
+1-d food 
+record
+2.5 mg/d
+Faber & Benade, 
+1991 (20)
+30 field athletes 
+(discus-, hammer-, 
+javelin-throwers, 
+and shotputters) (20 
+male; 10 female)
+7-d food 
+record
+Males:  
+2.19 ± 0.73 mg/d 
+Females:  
+1.31 ± 0.21 mg/d
+Jensen et al., 1992 
+(42)
+14 male endurance 
+cyclists
+5-d weighed 
+food record 
+while train-
+ing; 3-d 
+weighed food 
+record while 
+racing
+Training: 4 ± 1 mg/d 
+Racing: 5 ± 2 mg/d
+Kaiserauer et al., 
+1989 (43)
+17 female distance 
+runners (8 with 
+amenorrhea; 9 with 
+eumenorrhea)
+3-d food 
+record
+Amenorrheic distance 
+runners: 0.8 mg/d 
+Eumenorrheic distance 
+runners: 1.4 mg/d
+Keith et al., 1989 
+(45)
+8 female highly 
+trained cyclists
+3-d weighed 
+food record
+1.7 ± 1.1 mg/d
+Kopp-Woodroffe et 
+al., 1999 (47)
+4 female amenor-
+rheic runners
+7-d weighed 
+food record
+1.4 ± 0.3 mg/d
+Leydon & Wall, 
+2002 (50)
+20 jockeys (6 male; 
+14 female)
+7-d weighed 
+food record
+Males:  
+0.91 ± 0.42 mg/d 
+Females:  
+1.07 ± 1.08 mg/d
+Niekamp & Baer, 
+1995 (62)
+12 male runners 
+2 4-d food 
+records
+2.3 ± 0.6 mg/d
+Nieman et al., 1989 
+(63)
+347 marathon run-
+ners (291 male; 56 
+female)
+3-d food 
+record
+Males: 1.95 mg/d 
+Females: 1.39 mg/d
+(continued)
+Downloaded by Syracuse University Library on 09/16/16, Volume 16, Article Number 5
+
+
+--- PAGE 6 ---
+458    Woolf and Manore
+Study
+Subjects
+Assessment 
+index
+Results
+Rankinen et al., 
+1998 (68)
+21 male Finnish 
+elite ski jumpers
+4-d food 
+record
+1.6 ± 0.8 mg/d
+Rico-Sanz et al., 
+1998 (70)
+8 male elite soccer 
+players
+12-d food 
+record
+3.91 ± 0.88 mg/d
+Saris et al., 1989 
+(78)
+5 male cyclists 
+during the Tour de 
+France
+22-d food 
+record while 
+racing
+2.4 ± 0.7 mg/d
+Worme et al., 1990 
+(94)
+71 triathletes (50 
+male; 21 female)
+3-d food 
+record
+Males: 2.1 mg/d 
+Females: 1.7 mg/d
+Ziegler et al., 1999 
+(97)
+37 US National 
+Figure Skaters (19 
+male; 18 female)
+4-d diet 
+record
+Males: 2.2 ± 0.9 mg/d 
+Females: 1.6 ± 1.4 mg/d
+Thiamin status
+Fogelholm et al., 
+1992 (23)
+17 Nordic skiers  
+(9 male; 8 female)
+4 7-d food 
+records; 
+ETKAC
+Dietary 
+Male: 3.0 mg/d 
+Female: 2.2 mg/d 
+ETKAC 
+Males: 1.12 
+Females: 1.11
+Fogelholm et al., 
+1993 (24)
+42 physically active 
+college students (24 
+male; 18 female)
+Blood 
+ETKAC
+Males: 1.14 
+Females: 1.15
+Frank et al., 2000 
+(25)
+60 leisure athletes 
+(55 male; 5 female)
+Blood thia-
+min; ETKAC 
+Blood thiamin 
+16.2 ± 8.8 nmol/L 
+ETKAC 
+1.08 ± 0.07
+Guilland et al., 1989 
+(29)
+55 male well-trained 
+recreational athletes
+7-d food 
+record; 
+ETKAC; 
+erythrocyte 
+TPP
+Dietary 
+1.5 mg/d 
+ETKAC 
+1.11  
+Erythrocyte TPP 
+0.33 µmol/L
+Singh et al., 1993 
+(80)
+17 ultramarathoners 
+(15 male; 2 female)
+4-d food 
+record (usual 
+intake); blood 
+thiamin; uri-
+nary thiamin 
+Dietary 
+2.4 mg/d 
+Blood 
+208.0 nmol/L 
+Urine 
+5.83 µmol/L
+Weight et al., 1988 
+(92)
+30 well-trained male 
+runners
+5-d food 
+record; blood 
+transketolase
+Dietary 
+1.51 ± 0.50 mg/d 
+Blood transketolase 
+51.1 ± 10.6 U/L
+aAll values are means or means ± standard deviation.
+bReference values: 1989 RDA for males 19-50 y = 1.5 mg; 1989 RDA for females 19-50 y = 1.1 mg; 
+1998 RDA for males 19-50 y = 1.2 mg; 1998 RDA for females 19-50 y = 1.1 mg; 1998 EAR for males 
+19-50 y = 1.0 mg; 1998 EAR for females 19-50 y = 0.9 mg; Erythrocyte transketolase activity coef-
+ficient (ETKAC) = ≤ 1.25; Erythrocyte thiamin ≥ 70 nmol/L; Thiamin pyrophosphate effect < 25% 
+(28, 41, 61).
+Table 2  (continued)
+Downloaded by Syracuse University Library on 09/16/16, Volume 16, Article Number 5
+
+
+--- PAGE 7 ---
+B-Vitamins and Exercise: Does Exercise Alter Requirements?    459
+active individuals. Fogelholm and colleagues have completed several cross-sec-
+tional studies examining thiamin status in active males and females compared to 
+controls. In Finnish male athletes, Fogelholm et al. (22) examined whether physical 
+activity alters biochemical indices of nutritional status, including thiamin status, 
+using ETKAC. They found that the athletes did not have poor status of thiamin 
+compared to the control subjects; ETKAC was actually statistically higher in the 
+control subjects (1.17 ± 0.01) versus the athletes (1.14 ± 0.01 to 1.15 ± 0.01). This 
+study was supported by another study examining thiamin status in elite Nordic 
+skiers (23). Again they did not find that ETKAC differed between the elite Nordic 
+skiers and controls. Seasonal variations in ETKAC were the same between skiers 
+and controls despite the large changes by season in physical activity of the skiers. 
+This research is supported by others who examined thiamin status in 1918 elite 
+Polish athletes (males and females combined) from 1987 to 1992 and found little 
+risk of thiamin deficiency, with only 2% of all athletes with poor status, ranging 
+from 0 to 3% over a 6-y period (67). Conversely, another cross-sectional study by 
+Fogelholm et al. (24) found that 12% (n = 5) of the participants (male and female 
+recreational and competitive athletes) whom they examined had marginal thiamin 
+status with an ETKAC > 1.20. 
+Research has also examined the impact of training on thiamin status. In a 
+prospective study, Fogelholm (21) assessed thiamin status in active and sedentary 
+young women throughout a 24-wk fitness exercise program. ETKAC remained 
+the same in both groups throughout the study; thus, exercise training has not been 
+shown to alter thiamin status. 
+Although we have limited data on the prevalence of poor thiamin status in active 
+individuals, thiamin deficiency may impair athletic performance (88, 89). Using a 
+controlled metabolic feeding study, van der Beek et al. (89) depleted male athletes 
+of thiamin, riboflavin, and vitamin B-6 over a 3-wk period by feeding commonly 
+consumed processed foods. Although no control group was included in this study, 
+the researchers found that exercise performance decreased significantly after the 
+depletion of thiamin, riboflavin, and vitamin B-6, with significant increases in lactic 
+acid production. However, this decrease in exercise performance was attributed to 
+the deficiency of three B-vitamins, not just thiamin.
+Thiamin functions in the conversion of pyruvate into acetyl CoA; thus, a 
+deficiency of thiamin could impair metabolism of carbohydrates and result in the 
+accumulation of lactic acid. Research examining whether supplementation with 
+thiamin would improve exercise performance found that supplementation with a 
+thiamin derivative did not influence high-intensity exercise performance, when 
+thiamin status was adequate (91). Research by others supports these findings. Doyle 
+et al. (19) found that thiamin did not improve performance in knee extension and 
+flexion exercises, while Webster (90) found that blood lactic acid levels and exercise 
+performance did not differ between the thiamin and placebo trials in trained cyclists. 
+However, in a placebo-controlled crossover study, Suzuki and Itokawa (85) found 
+that high-dose thiamin supplementation (100 mg/d) for 3 d significantly decreased 
+the number of complaints after exercise in a subjective fatigue assessment. Thus, 
+poor thiamin status may impact exercise performance; however, the prevalence of 
+deficiency appears to be low in active individuals.
+Downloaded by Syracuse University Library on 09/16/16, Volume 16, Article Number 5
+
+
+--- PAGE 8 ---
+460    Woolf and Manore
+Riboflavin
+Riboflavin is an essential component of two coenzymes, flavin adenine dinucleo-
+tide (FAD) and flavin mononucleotide (FMN). These coenzymes participate in the 
+transfer of electrons in energy metabolism, amino acid metabolism, and steroid 
+hormone production (52, 53, 57, 59). Thus, riboflavin is important for exercise 
+because it assists with the transfer of electrons that come from the energy pathways 
+to the electron transport chain for formation of ATP. Finally, riboflavin is involved 
+in the conversion of vitamin B-6 to its active form (53).
+Food Sources and Recommended Intakes. Adequate riboflavin intakes can easily 
+be achieved by regularly consuming milk and dairy products, eggs, whole grains 
+and cereals, lean meats, and broccoli. As with thiamin, those athletes at risk of poor 
+riboflavin status are those that restrict dietary intake or select highly refined diets. 
+The RDA for riboflavin is 1.1 and 1.3 mg for adult females and males, respectively, 
+while a UL for riboflavin has not been established (41).
+Assessment of Status. Riboflavin status is typically assessed by determining the 
+extent to which enzyme activity of erythrocyte glutathione reductase increases in the 
+presence of added riboflavin, termed the erythrocyte glutathione reductase activity 
+coefficient (EGRAC) (28, 53). Activity of this enzyme is the most sensitive marker 
+of riboflavin status and is the method used in most exercise studies examining 
+riboflavin status. An EGRAC value ≥ 1.2 suggests riboflavin deficiency (28, 41).
+Assessment of Dietary Intake in Active Individuals. Table 3 summarizes 
+research examining riboflavin intakes in adult athletes. Most cross-sectional stud-
+ies comparing dietary riboflavin intakes in active and sedentary individuals have 
+found that riboflavin intake by athletes is adequate to meet dietary guidelines. For 
+example, Niekamp and Baer (62) found that during the competitive season mean 
+intakes of riboflavin for male cross-country runners were 158% of the 1989 RDA 
+(1.7 mg) (61). In addition, Beshgetoor and Nichols (10) found that mean intakes 
+for riboflavin for female master athletes (cyclists and runners) exceeded the 1998 
+RDA of 1.1 mg/d.
+Assessment of Status in Active Individuals. Table 3 summarizes research 
+examining riboflavin status in adult athletes. Like thiamin, riboflavin deficiency 
+may impair athletic performance (88, 89). When van der Beek et al. (89) fed a diet 
+low in thiamin, riboflavin, and vitamin B-6 until blood levels indicated deficiency, 
+lactate threshold and exercise performance decreased. Thus, a combination of 
+poor status of these B-vitamins (thiamin, riboflavin, and B-6) negatively impacted 
+performance. In addition, supplemental riboflavin is beneficial for those individuals 
+in poor riboflavin status. Suboticanec et al. examined the effects of riboflavin and 
+vitamin B-6 supplements on physical fitness in male adolescents (age 12 to 14 y) 
+attending three schools in a rural area of Central Croatia (84). After baseline data 
+were completed, the schools were randomized to receive a riboflavin supplement 
+(2 mg), a vitamin B-6 supplement, or a placebo supplement. Before supplementa-
+tion, 19% of the participants had poor status of riboflavin as assessed by EGRAC. 
+After supplementation, those participants with initial poor status of riboflavin 
+significantly increased physical fitness. 
+Downloaded by Syracuse University Library on 09/16/16, Volume 16, Article Number 5
+
+
+--- PAGE 9 ---
+B-Vitamins and Exercise: Does Exercise Alter Requirements?    461
+Table 3  Summary of Studies Examining Riboflavin Intake and/or 
+Status in Adult Athletesa,b
+Study
+Subjects
+Assessment 
+index
+Results
+Riboflavin intake
+Beals & Manore, 
+1998 (4)
+24 female ath-
+letes with sub-
+clinical eating 
+disorders; 24 
+female control 
+athletes
+7-d weighed 
+food record
+Athletes with subclinical 
+eating disorders:  
+2.2 ± 0.6 mg/d 
+Control athletes:  
+2.7 ± 0.7 mg/d
+Beshgetoor & 
+Nichols, 2003 (10)
+25 female master 
+cyclists and  
+runners
+4-d food 
+record
+2.0 ± 0.5 mg/d
+Clark et al., 2003 
+(14)
+13 female  
+collegiate soccer 
+players
+2 3-d food 
+records (pre-
+season and 
+post-season)
+Pre-season:  
+1.8 ± 0.7 mg/d 
+Post-season:  
+1.2 ± 0.7 mg/d
+DeBolt et al., 1988 
+(18)
+267 male US 
+Navy SEAL 
+trainees
+1-d food 
+record
+3.4 mg/d
+Faber & Benade, 
+1991 (20)
+30 field ath-
+letes (discus-, 
+hammer-, jave-
+lin-throwers, and 
+shotputters) (20 
+male; 10 female)
+7-d food 
+record
+Males:  
+3.65 ± 2.18 mg/d 
+Females:  
+1.67 ± 0.42 mg/d
+Fogelholm et al., 
+1992 (23)
+17 Nordic skiers 
+(9 male; 8 
+female)
+4 7-d food 
+records
+Male: 3.4 mg/d 
+Female: 2.4 mg/d
+Jensen et al., 1992 
+(42)
+14 male  
+endurance 
+cyclists
+5-d weighed 
+food record 
+while train-
+ing; 3-d 
+weighed food 
+record while 
+racing
+Training: 5 ± 2 mg/d 
+Racing: 5 ± 2 mg/d
+Kaiserauer et al., 
+1989 (43)
+17 female dis-
+tance runners (8 
+with amenorrhea; 
+9 with eumenor-
+rhea)
+3-d food 
+record
+Amenorrheic distance  
+runners: 1.2 mg/d 
+Eumenorrheic distance 
+runners: 2.0 mg/d
+Keith et al., 1989 
+(45)
+8 female highly 
+trained cyclists
+3-d weighed 
+food record
+1.6 ± 0.9 mg/d
+Kopp-Woodroffe 
+et al., 1999 (47)
+4 female amenor-
+rheic runners
+7-d weighed 
+food record
+1.6 ± 0.3 mg/d
+(continued)
+Downloaded by Syracuse University Library on 09/16/16, Volume 16, Article Number 5
+
+
+--- PAGE 10 ---
+462    Woolf and Manore
+Study
+Subjects
+Assessment 
+index
+Results
+Leydon & Wall, 
+2002 (50)
+20 jockeys (6 
+male; 14 female)
+7-d weighed 
+food record
+Males:  
+1.11 ± 0.26 mg/d 
+Females:  
+0.92 ± 0.34 mg/d
+Niekamp & Baer, 
+1995 (62)
+12 male runners
+2 4-d food 
+records
+2.7 ± 0.7 mg/d
+Nieman et al., 
+1989 (63)
+347 marathon  
+runners (291 
+male; 56 female)
+3-d food 
+record
+Males: 2.28 mg/d 
+Females: 1.63 mg/d
+Rankinen et al., 
+1998 (68)
+21 Finnish elite 
+male ski jumpers
+4-d food 
+record
+2.1 ± 1.0 mg/d
+Rico-Sanz et al., 
+1998 (70)
+8 male elite 
+soccer players
+12-d food 
+record
+2.48 ± 0.56 mg/d
+Saris et al., 1989 
+(78)
+5 male cyclists 
+during the Tour 
+de France
+22-d food 
+record while 
+racing
+Dietary 
+5.0 ± 1.6 mg/d
+Worme et al., 1990 
+(94)
+71 triathletes (50 
+male; 21 female)
+3-d food 
+record
+Males: 2.6 mg/d 
+Females: 2.2 mg/d
+Riboflavin status
+Fogelholm et al., 
+1993 (24)
+42 physically 
+active college 
+students (24 
+male; 18 female)
+Blood 
+EGRAC
+Males: 1.34 
+Females: 1.38
+Frank et al., 2000 
+(25)
+60 leisure ath-
+letes (55 male; 5 
+female)
+Plasma 
+riboflavin; 
+EGRAC
+Plasma riboflavin 
+69.6 ± 18.9 nmol/L 
+EGRAC 
+1.25 ± 0.12
+Guilland et al., 
+1989 (29)
+55 male well 
+trained recre-
+ational athletes
+7-d food 
+record; 
+EGRAC
+2.1 mg/d 
+ 
+1.06 
+Keith & Alt, 1991 
+(44)
+13 female ath-
+letes
+3-d weighed 
+food record; 
+EGRAC; 
+Urinary  
+riboflavin
+Dietary 
+1.9 ± 0.9 mg/d 
+EGRAC 
+1.06 ± 0.06 
+Urine 
+98 ± 51 µg/24 h
+Table 3  (continued)
+Downloaded by Syracuse University Library on 09/16/16, Volume 16, Article Number 5
+
+
+--- PAGE 11 ---
+B-Vitamins and Exercise: Does Exercise Alter Requirements?    463
+Study
+Subjects
+Assessment 
+index
+Results
+Rokitzki et al., 
+1994 (73)
+62 athletes (50 
+male; 12 female)
+7-d weighed 
+food record; 
+EGRAC; 
+Whole blood 
+riboflavin; 
+Urinary  
+riboflavin
+Dietary 
+Male:   
+  marathon 2.2  mg/d 
+  wrestling 2.2 mg/d 
+  soccer 2.1 mg/d 
+  basketball 2.5 mg/d 
+Female:   
+  handball 1.4 mg/d 
+EGRAC 
+Male:   
+  marathon 1.29 
+  wrestling 1.15 
+  basketball 1.27  
+Female:   
+  handball 1.32  
+Whole blood riboflavin 
+Male:   
+  marathon 372 nmol/L 
+  wrestling 303 nmol/L 
+  soccer 359 nmol/L 
+  basketball 356 nmol/L 
+Female:  
+  handball 353 nmol/L 
+Urine riboflavin 
+Male:   
+  marathon 2.67 µmol/g Cr 
+  wrestling 2.68 µmol/g Cr 
+  soccer 2.68 µmol/g Cr 
+  basketball 2.95 µmol/g Cr 
+Female:  
+  handball 1.78 µmol/g Cr
+Weight et al., 1988 
+(92)
+30 well-trained 
+male runners
+5-d food 
+records; 
+EGRAC
+Dietary 
+1.79 ± 1.80 mg/d 
+EGRAC 
+1.02 ± 0.10
+aAll values are means or means ± standard deviation.
+bReference values: 1989 RDA for males 19-50 y = 1.7 mg; 1989 RDA for females 19-50 y = 1.3 
+mg; 1998 RDA for males 19-50 y = 1.3 mg; 1998 RDA for females 19-50 y = 1.1 mg; 1998 EAR for 
+males 19-50 y = 1.1 mg; 1998 EAR for females 19-50 y = 0.9 mg; Erythrocyte glutathione reductase 
+activity coefficient (EGRAC) = ≤ 1.2; Erythrocyte riboflavin  ≥ 400 nmol/L; Urinary riboflavin ≥ 120 
+µg/d (28, 41, 61).
+Table 3  (continued)
+Downloaded by Syracuse University Library on 09/16/16, Volume 16, Article Number 5
+
+
+--- PAGE 12 ---
+464    Woolf and Manore
+Keith and Alt (44) found that non-supplementing female athletes can maintain 
+good riboflavin status from dietary intakes. Fogelholm (21) assessed riboflavin status 
+in active and sedentary young women throughout a 24-wk fitness exercise program; 
+EGRAC remained the same throughout the study. However, other research suggests 
+that athletes may need more riboflavin than the general population. For example, 
+using a cross-sectional design, Fogelhom et al. (24) found that 55% of their athletes 
+(males and females combined) had poor status as determined by EGRAC. These 
+data are supported by metabolic studies examining the effects of exercise, dieting, 
+or dieting plus exercise on riboflavin requirements (7-9, 93); overall results have 
+indicated that riboflavin needs are higher in females engaging in exercise for fit-
+ness compared to sedentary controls. In the 1980s, Belko et al. (7-9) conducted a 
+series of metabolic studies examining the riboflavin status of active young women. 
+In the first metabolic study, riboflavin requirements were assessed during a 12-wk 
+feeding study (8). The study was divided into 6 wk of no exercise followed by 6 
+wk of moderate physical activity (20 to 50 min/d, 6 d/wk). Normal-weight women 
+were fed a diet containing 0.6 mg riboflavin per 1000 kcal. Throughout the study, 
+riboflavin intake was increased by 0.2 mg riboflavin per 1000 kcal. Riboflavin 
+requirements were defined as the intake of riboflavin needed to keep the EGRAC 
+< 1.25. Using linear regression analysis, riboflavin requirements increased to as 
+high as 1.4 mg/1000 kcal (1998 RDA = 1.1 mg/d for adult women) during the 
+physical activity phase of the study (41). Two subsequent metabolic studies also 
+found that dieting (1200 to 1250 kcal/d) and dieting combined with fitness exercise 
+increased riboflavin requirements in active women (7, 9). In the first study, the 
+effect of exercise and dieting on riboflavin status was examined in moderately over-
+weight, untrained women (9). Using a crossover design, participants were initially 
+assigned into either an exercise or non-exercise group. The exercise consisted of 
+50 min of dance for 5 d/wk. The women consumed only 1200 kcal per day with a 
+riboflavin concentration of 0.8 mg per 1000 kcal. Riboflavin depletion, assessed 
+by increased EGRAC and decreased urinary excretion of riboflavin, occurred 
+during both the non-exercise and exercise periods. Thus, both exercise and dieting 
+increased riboflavin requirements in these women. In a follow-up study, estimates 
+for riboflavin requirements were determined during non-exercise and exercise for 
+dieting, overweight women (7). The women consumed either 0.96 mg riboflavin per 
+1000 kcal or 1.16 mg riboflavin per 1000 kcal. The study was a crossover design 
+(exercise, non-exercise) at each level of riboflavin intake. At the lower riboflavin 
+intake, the erythrocyte glutathione reductase activity coefficient increased in both 
+the exercise and non-exercise groups. When subjects were both dieting for weight 
+loss and exercising, 1.4 mg of riboflavin/d was required to maintain good riboflavin 
+status. Even active older women (2.5 h exercise/wk) eating a weight-maintenance 
+diet (1800 to 2000 kcal/d) required 1.8 mg/d of riboflavin to maintain good status 
+(EGRAC < 1.20) (93). Based on these studies, it appears that exercise, dieting, 
+and dieting plus exercise increase the need for riboflavin above the 1998 RDA 
+for active women (7-9, 41, 93). However, it should be noted that these subjects 
+performed moderate exercise (2.5 to 5 h/wk) for fitness. Unfortunately, there are 
+no metabolic studies available examining riboflavin status in female athletes who 
+participate in strenuous exercise and competitive sports; however, if moderately 
+active females have an increased need for riboflavin, then female athletes who are 
+even more active, would have just as great a need, if not greater. In another study, 
+Downloaded by Syracuse University Library on 09/16/16, Volume 16, Article Number 5
+
+
+--- PAGE 13 ---
+B-Vitamins and Exercise: Does Exercise Alter Requirements?    465
+riboflavin status declined during a short period of increased physical activity in 
+adult men whose riboflavin status was marginal (81). Thus, based on the research 
+to date, athletes may need more riboflavin than the general population and more 
+than the current RDA. However, athletes can maintain good status for riboflavin 
+when adequate energy is consumed.
+Vitamin B-6
+Vitamin B-6 plays an important role in the metabolic pathways required for exercise, 
+principally amino acid metabolism and glycogen breakdown (51-53, 57, 59). The 
+active form of vitamin B-6, pyridoxal phosphate (PLP), is required as a cofactor 
+for enzymes involved in protein transamination and deamination reactions, thus 
+more protein breakdown or increased protein consumption may increase the need 
+for vitamin B-6. The breakdown of glycogen is regulated through glycogen phos-
+phorylase, which also requires PLP. 
+Food Sources and Recommended Intakes. Rich sources of vitamin B-6 include 
+animal foods, such as meat, fish, and poultry, and plant foods, such as bananas, navy 
+beans, whole grains, and walnuts. The RDA for vitamin B-6 for men and women 
+age 19 to 50 y is 1.3 mg while the UL for vitamin B-6 is 100 mg (41).
+Assessment of Status. Several blood and urine indicators are used in the assess-
+ment of vitamin B-6 status, including plasma PLP and urinary concentrations of a 
+B-6 metabolite, 4-pyridoxic acid (28). Individuals with adequate status of vitamin 
+B-6 will have a PLP concentration ≥ 20 nmol/L and a urinary 4-pyridoxic acid 
+concentration > 3.0 µmol/d (28, 41). Activity of erythrocyte alanine or aspartate 
+amino transferase (EALT or EAST) is also used to determine status. Values sug-
+gesting good status of vitamin B-6 for EALT and EAST are < 1.25 and < 1.7, 
+respectively (28, 41).
+Assessment of Dietary Intake in Active Individuals. Table 4 summarizes studies 
+examining dietary intake of vitamin B-6 in athletes. Some studies report vitamin 
+B-6 intakes by athletes that are less than recommended guidelines, especially female 
+athletes with low energy intakes (51, 75). For example, when dietary intakes of 
+trained female cyclists were examined, more than a third consumed less than the 
+RDA for vitamin B-6 (45). In addition, Steen et al. found that only 70% of female 
+heavyweight rowers met the RDA for vitamin B-6 (83). A study of strength and 
+speedpower German athletes found that more than 30% did not meet the dietary 
+guidelines for vitamin B-6 for that country (1.8 mg/d male, 1.6 mg/d female) (75). 
+However, Niekamp and Baer (62) documented better vitamin B-6 intakes in male 
+cross-country runners with mean intake levels greater than the 1989 RDA. Because 
+vitamin B-6 is concentrated in certain foods, elimination of meats, whole grains, 
+legumes, and bananas will dramatically reduce the intake of vitamin B-6 in the 
+diet. Thus, the degree to which an athlete is low in vitamin B-6 may depend on 
+food preferences and selection.
+Assessment of Status in Active Individuals. Table 4 summarizes studies examin-
+ing vitamin B-6 status in athletes. Poor status in athletes has been documented in 
+the research literature; studies examining vitamin B-6 status in male and female 
+athletes report poor vitamin B-6 status ranging from 5 to 60% of the athletes (24, 
+Downloaded by Syracuse University Library on 09/16/16, Volume 16, Article Number 5
+
+
+--- PAGE 14 ---
+466    Woolf and Manore
+Table 4  Summary of Studies Examining Vitamin B-6 Intake and/or 
+Status in Adult Athletesa,b
+Study
+Subjects
+Assessment 
+index
+Results
+Vitamin B-6 intake
+Beals & Manore, 
+1998 (4)
+24 female ath-
+letes with sub-
+clinical eating 
+disorders; 24 
+female control 
+athletes
+7-d weighed 
+food record
+Athletes with subclinical 
+eating disorders:  
+2.1 ± 0.8 mg/d 
+Control athletes:  
+2.5 ± 0.8 mg/d
+Beshgetoor &  
+Nichols, 2003 (10)
+25 female master 
+cyclists and run-
+ners
+4-d food 
+record
+3 ± 1 mg/d
+Clark et al., 2003 
+(14)
+13 female col-
+legiate soccer 
+players
+2 3-d food 
+records (pre-
+season and 
+post-season)
+Pre-season:  
+1.8 ± 0.6 mg/d 
+Post-season:  
+1.1 ± 0.6 mg/d
+DeBolt et al., 1988 
+(18)
+267 male US 
+Navy SEAL 
+trainees
+1-d food 
+record
+2.7 mg/d
+Faber & Benade, 
+1991 (20)
+30 field ath-
+letes (discus-, 
+hammer-, javelin-
+throwers, and 
+shotputters) (20 
+male; 10 female)
+7-d food 
+record
+Males:  
+2.84 ± 1.08 mg/d 
+Females:  
+1.62 ± 0.42 mg/d
+Jensen et al., 1992 
+(42)
+14 male endur-
+ance cyclists
+5-d weighed 
+food record 
+while 
+training; 
+3-d weighed 
+food record 
+while racing
+Training: 5 ± 2 mg/d 
+Racing: 6 ± 3 mg/d
+Kaiserauer et al., 
+1989 (43)
+17 female dis-
+tance runners (8 
+with amenorrhea; 
+9 with eumenor-
+rhea)
+3-d food 
+record
+Amenorrheic distance  
+runners: 1.5 mg/d 
+Eumenorrheic distance  
+runners: 2.1 mg/d
+Keith et al., 1989 
+(45)
+8 female highly 
+trained cyclists
+3-d weighed 
+food record
+1.8 ± 1.1 mg/d
+Kopp-Woodroffe et 
+al., 1999 (47)
+4 female amenor-
+rheic runners
+7-d weighed 
+food record
+1.7 ± 0.5 mg/d
+Leydon & Wall, 
+2002 (50)
+20 jockeys (6 
+male; 14 female)
+7-d weighed 
+food record
+Males:  
+1.06 ± 0.30 mg/d 
+Females:  
+0.90 ± 0.49 mg/d
+Downloaded by Syracuse University Library on 09/16/16, Volume 16, Article Number 5
+
+
+--- PAGE 15 ---
+B-Vitamins and Exercise: Does Exercise Alter Requirements?    467
+Study
+Subjects
+Assessment 
+index
+Results
+Manore et al., 1989 
+(55)
+10 female long 
+distance runners
+3-d food 
+record
+1.8 ± 0.9 mg/d
+Niekamp & Baer, 
+1995 (62)
+12 male runners
+2 4-d food 
+record
+2.5 ± 2.0 mg/d
+Nieman et al., 1989 
+(63)
+347 marathon 
+runners (291 
+male; 56 female)
+3-d food 
+record
+Males: 2.58 mg/d 
+Females: 1.64 mg/d
+Rankinen et al., 
+1998 (68)
+21 Finnish elite 
+male ski jumpers
+4-d food 
+record
+2.1 ± 0.9 mg/d
+Rico-Sanz et al., 
+1998 (70)
+8 male elite 
+soccer players
+12-d food 
+record
+3.30 ± 0.74 mg/d
+Saris et al., 1989 
+(78)
+5 male cyclists 
+during the Tour 
+de France
+22-d food 
+record while 
+racing
+Dietary 
+2.4 ± 0.7 mg/d
+Worme et al., 1990 
+(94)
+71 triathletes (50 
+male; 21 female)
+3-d food 
+record
+Males: 2.6 mg/d 
+Females: 2.0 mg/d
+Vitamin B-6 status
+Fogelholm et al., 
+1993 (24)
+42 physically 
+active college 
+students (24 
+male; 18 female)
+Blood 
+EASTAC
+Males: 2.08 
+Females: 1.92
+Gaume et al., 2005 
+(27)
+12 trained male 
+athletes
+Quantitative 
+food fre-
+quency ques-
+tionnaire; 
+Plasma 
+homocys-
+teine
+Dietary 
+2.05 ± 0.10 mg/d 
+Blood (homocysteine) 
+7.48 ± 0.4 µmol/L
+Guilland et al., 1989 
+(29)
+55 male well 
+trained recre-
+ational athletes
+7-d food 
+records;  
+EASTAC; 
+Plasma PLP
+Dietary 
+1.5 mg/d 
+Blood 
+EASTAC: 1.95  
+PLP: 66.5 nmol/L
+Leonard & Leklem, 
+2000 (49)
+11 ultramara-
+thoners (8 male; 
+3 female)
+Plasma PLP; 
+Plasma 4-
+pyridoxic 
+acid
+PLP 
+41.1 ± 14.2 nmol/L 
+4-pyridoxic acid 
+25.5 ± 7.6 nmol/L
+(continued)
+Table 4  (continued)
+Downloaded by Syracuse University Library on 09/16/16, Volume 16, Article Number 5
+
+
+--- PAGE 16 ---
+468    Woolf and Manore
+Study
+Subjects
+Assessment 
+index
+Results
+Rokitzki et al., 1994 
+(74)
+13 male endur-
+ance athletes 
+7-d weighed 
+food record; 
+Whole 
+blood; 
+serum B-6; 
+EASTAC; 
+Urinary 4-
+pyridoxic 
+acid
+Dietary 
+  2.13 mg/d 
+Whole blood vitamin B-6 
+  0.05 nmol/mL 
+Serum vitamin B-6 
+  0.07 nmol/mL 
+EASTAC 
+  1.38  
+Urinary B-6 
+  4.48 µmol/g Cr
+Rokitzki et al., 1994 
+(75)
+57 athletes (45 
+male; 12 female)
+7-d weighed 
+food record; 
+EASTAC; 
+Whole blood 
+vitamin B-6; 
+Urinary 4-
+pyridoxic 
+acid
+Dietary 
+Male:  
+  body building 5.40 mg/d 
+  wrestling 1.72 mg/d 
+  soccer 2.10 mg/d 
+  basketball 2.12 mg/d 
+Female:  
+  handball 1.36 mg/d 
+EASTAC 
+Male:  
+  body building 1.00  
+  wrestling 1.38  
+  basketball 1.43 
+Female:  
+  handball 1.43 
+Whole blood vitamin B-6 
+Male:  
+  body building  
+  0.404 nmol/mL 
+  wrestling 0.043 nmol/mL 
+  soccer 0.046 nmol/mL 
+  basketball 0.053 nmol/mL 
+Female:  
+  handball 0.037 nmol/mL 
+Urine  
+Male:  
+  body building  
+  10.43 µmol/g Cr 
+  wrestling 4.15 µmol/g Cr 
+  soccer 3.49 µmol/g Cr 
+  basketball 3.59 µmol/g Cr 
+Female:  
+  handball 3.22 µmol/g Cr
+Table 4  (continued)
+Downloaded by Syracuse University Library on 09/16/16, Volume 16, Article Number 5
+
+
+--- PAGE 17 ---
+B-Vitamins and Exercise: Does Exercise Alter Requirements?    469
+51, 53, 75, 86). For example, Telford et al. (86) studied 86 male and female athletes 
+before and after an 8-month training period. At study entry, they found that 60% 
+of the athletes had poor baseline vitamin B-6 status while consuming their typical 
+diets. Roughly half of the subjects (n = 42) then consumed a multivitamin/mineral 
+supplement and half took a placebo (n = 44). At the end of the 8-month study, 41% 
+of the athletes assigned to the placebo still had poor vitamin B-6 status while only 
+10% of those athletes assigned to the multivitamin/mineral supplement were still 
+in poor vitamin B-6 status. Raczynski and Szczepanska (67) also examined vitamin 
+B-6 status in 1753 elite male and female Polish athletes from the years 1987 to 1992. 
+The risk of vitamin deficiency averaged 9% in all athletes over the 6-y period, with 
+an annual range of 4 to 15%. The highest prevalence of vitamin B-6 deficiency was 
+seen in endurance athletes (13%) and in those athletes participating in team sports 
+(10%). They also observed that the risk of vitamin B-6 deficiency was highest in 
+pre-Olympic years (16%) and lowest in Olympic years (3%), suggesting that some 
+athletes had poor vitamin B-6 status while consuming their typical diets.
+Metabolic research studies have documented that approximately 1.5 to 2.3 
+mg/d of vitamin B-6 is required to maintain good vitamin B-6 status in sedentary 
+Study
+Subjects
+Assessment 
+index
+Results
+Rousseau et al., 
+2005 (76)
+74 competitive 
+male athletes
+7-d food 
+record; 
+Plasma 
+homocys-
+teine
+Dietary 
+Athletes performing  
+intermittent activity:  
+2.28 ± 0.73 mg/d 
+Athletes performing  
+anaerobic activity:  
+2.53 ± 0.99 mg/d 
+Athletes performing  
+aerobic activity:  
+3.09 ± 1.66 mg/d
+Blood (homocysteine) 
+Athletes performing  
+intermittent activity:  
+10.6 ± 2.6 µmol/L 
+Athletes performing  
+anaerobic activity:  
+9.6 ± 1.7 µmol/L  
+Athletes performing  
+aerobic activity:  
+9.2 ± 2.0 µmol/L 
+aAll values are means or means ± standard deviation.
+bReference values:  1989 RDA for males 19-50 y = 2.0 mg; 1989 RDA for females 19-50 y = 1.6 mg; 
+1998 RDA for males and females 19-50 y = 1.3 mg; 1998 EAR for males and females 19-50 y = 1.1 mg; 
+1998 UL for males and females 19-50 y = 100 mg; Pyridoxal phosphate (PLP) ≥ 20 nmol/L; Erythrocyte 
+aspartate aminotransferase (EAST) = < 1.6; Erythrocyte alanine aminotransferase (EALT)  < 1.25; Plasma 
+homocysteine < 16 μmol/L; Urinary 4-pyridoxic acid > 3.0 μmol/d (28, 41, 61).
+Table 4  (continued)
+Downloaded by Syracuse University Library on 09/16/16, Volume 16, Article Number 5
+
+
+--- PAGE 18 ---
+470    Woolf and Manore
+individuals (30, 31, 39, 48, 56). This level of vitamin B-6 is higher than the current 
+RDA of 1.3 mg/d for men and women (41). Research has also documented that 
+acute exercise alters vitamin B-6 metabolism by increasing blood concentrations 
+of PLP (16, 37, 48, 56, 57), which in turn increases the probability that PLP will 
+be converted to 4-pyridoxic acid and lost in the urine during exercise (16, 37, 48, 
+56). Thus, exercise may increase the turnover and loss of vitamin B-6 from the 
+body (16, 56). At least one study has documented higher 4-pyridoxic acid losses 
+in active individuals compared to sedentary controls or periods of inactivity (56); 
+higher 4-pyridoxic acid losses have also been documented after strenuous physical 
+activity (16). Using 4-pyridoxic acid excretion concentrations, Rokitzki et al. (74) 
+calculated that marathon runners lost approximately 1 mg of vitamin B-6 during a 
+race (26.2 miles). Thus, based on the current research literature, some active indi-
+viduals, depending on training level, may require 1.5 to 2.5 times the current RDA 
+(approximately 2.0 to 3.0 mg/d) for vitamin B-6 to maintain good B-6 status.
+Folate
+Folate is required for a number of enzymes that are critical for DNA synthesis and 
+amino acid metabolism (57, 59). In addition, folate’s role in assisting with cell 
+division makes it a critical nutrient for growth, the synthesis of new cells, such 
+as red blood cells, and for the repair of damaged cells and tissues. Thus, folate 
+requirements might be higher with exercise, since damaged muscle tissue needs to 
+be repaired. Finally, folate, vitamin B-12, and vitamin B-6 are closely interrelated 
+in the metabolism of methionine, an essential amino acid. If these key B-vitamins 
+are not available, homocysteine, an intermediate metabolite in methionine metabo-
+lism, increases. High blood concentrations of homocysteine have been associated 
+with an increased risk of cardiovascular disease (12, 13, 15, 71). However, recent 
+large clinical trials have found that supplementing with folic acid, vitamin B-6, and 
+vitamin B-12 did not reduce the risk of cardiovascular events (11, 33). Thus, other 
+relationships in the intermediates in this metabolic pathway should be explored.
+Food Sources and Recommended Intakes. Rich sources of dietary folate include 
+leafy green vegetables, fortified cereals and grains, nuts, legumes, liver, and brewer’s 
+yeast. If these types of foods are not consumed in the diet, dietary supplementa-
+tion may be required. The RDA for folate for adults is 400 µg/d of dietary folate 
+equivalents (DFE) while the UL for folate is 1000 µg/d of synthetic folic acid (41). 
+Because of folate’s critical role during the first few weeks of pregnancy and because 
+many women of child-bearing age do not consume adequate folate, the fortification 
+of breads and cereals with folic acid was initiated. Thus, ready-to-eat cereals, bread, 
+and other grain products are among the primary sources of folate in the US. 
+Assessment of Status. Folate status is assessed by measuring serum folate and 
+red blood cell folate concentrations (28). Normal concentrations of serum and 
+erythrocyte folate are ≥ 7 nmol/L and ≥ 305 nmol/L, respectively (28, 41). With 
+a folate deficiency, the ability to make red blood cells becomes impaired and can 
+eventually lead to megaloblastic anemia, as the megaloblasts fail to replicate into 
+functional red blood cells. This results in large red blood cells that cannot effectively 
+transport oxygen. Another measure of folate status is mean corpuscular volume 
+(MCV), which is an indication of red blood cell size (28). Fortunately, folic acid 
+fortification has markedly improved folate status in the US (26).
+Downloaded by Syracuse University Library on 09/16/16, Volume 16, Article Number 5
+
+
+--- PAGE 19 ---
+B-Vitamins and Exercise: Does Exercise Alter Requirements?    471
+Assessment of Dietary Intake in Active Individuals. Table 5 summarizes stud-
+ies examining folate intakes in adult athletes. Active men typically have adequate 
+intakes of folate due to high energy intakes (57). Conversely, dietary intakes of 
+folate in active women are consistently low, ranging from 126 to 364 µg/d (1, 4, 
+20, 45, 63, 94). For example, using 7-d weighed food records, Beals and Manore 
+(4) reported mean folate intakes for these female athletes (n = 48) to be less than 
+400 µg/d. Ziegler et al. (97) found poor mean dietary intakes of folate for male 
+(234 µg/d) and female (275 µg/d) figure skaters, which can be attributed to lower 
+energy intakes. However, Niekamp and Baer (62) found that the mean intake of 
+male distance runners was 454 µg/d. Studies completed after the FDA mandatory 
+fortification of folic acid should report an improvement in dietary intakes for folate. 
+Unfortunately, Clark et al. (14) reported that female soccer players have mean folate 
+intakes less than the 1998 EAR during pre- and post-season play. 
+Table 5  Summary of Studies Examining Folate Intake and/or  
+Status in Adult Athletesa,b
+Study
+Subjects
+Assessment 
+index
+Results
+Folate intake
+Beshgetoor & 
+Nichols, 2003c (10)
+25 female 
+master cyclists 
+and runners
+4-d food 
+record
+402 ± 115 µg/d
+Clark et al., 2003c 
+(14)
+13 female col-
+legiate soccer 
+players
+2 3-d food 
+records (pre-
+season and 
+post-season)
+Pre-season:  
+271 ± 130 µg/d 
+Post-season:  
+186 ± 113 µg/d
+DeBolt et al., 1988 
+(18)
+267 male US 
+Navy SEAL 
+trainees
+1-d food 
+record
+420 µg/d
+Faber & Benade, 
+1991 (20)
+30 field ath-
+letes (discus-, 
+hammer-, jav-
+elin-throwers, 
+and shotputters) 
+(20 male; 10 
+female) 
+7-d food 
+record
+Males: 407 ± 207 µg/d 
+Females: 230 ± 64 µg/d
+Jensen et al., 1992 
+(42)
+14 male endur-
+ance cyclists
+5-d weighed 
+food record 
+while training; 
+3-d weighed 
+food record 
+while racing
+Training: 683 ± 230 µg/d 
+Racing: 925 ± 386 µg/d
+Kaiserauer et al., 
+1989 (43)
+17 female dis-
+tance runners 
+(8 with amen-
+orrhea; 9 with 
+eumenorrhea)
+3-d food 
+record
+Amenorrheic distance 
+runners: 198.5 µg/d 
+Eumenorrheic distance 
+runners: 276.4 µg/d
+(continued)
+Downloaded by Syracuse University Library on 09/16/16, Volume 16, Article Number 5
+
+
+--- PAGE 20 ---
+472    Woolf and Manore
+Study
+Subjects
+Assessment 
+index
+Results
+Keith et al., 1989 
+(45)
+8 female highly 
+trained cyclists
+3-d weighed 
+food record
+303 ± 305 µg/d
+Kopp-Woodroffe et 
+al., 1999c (47)
+4 female amen-
+orrheic runners
+7-d weighed 
+food record
+250 ± 105 µg/d
+Leydon & Wall, 
+2002 (50)
+20 jockeys (6 
+male; 14 female)
+7-d weighed 
+food record
+Males: 146 ± 60 µg/d 
+Females: 132 ± 52 µg/d
+Manore et al., 1989 
+(55)
+10 female long 
+distance runners
+3-d food 
+record
+252.7 ± 111.4 µg/d
+Niekamp & Baer, 
+1995 (62)
+12 male runners
+2 4-d food 
+records
+452.0 ± 181.8 µg/d
+Nieman et al., 1989 
+(63)
+347 marathon 
+runners (291 
+male; 56 female)
+3-d food 
+record
+Males: 367 µg/d 
+Females: 266 µg/d
+Rankinen et al., 
+1998c (68)
+21 Finnish elite 
+male ski jumpers
+4-d food 
+record
+286 ± 107 µg/d
+Rico-Sanz et al., 
+1998c (70)
+8 male elite 
+soccer players
+12-d food 
+record
+905 ± 286 µg/d
+Spodaryk et al., 
+1996 (82)
+40 trained 
+female athletes
+7-d food 
+record
+189.9 ± 33 µg/d
+Worme et al., 1990 
+(94)
+71 triathletes (50 
+male; 21 female)
+3-d food 
+record
+Males: 386 µg/d 
+Females: 302 µg/d
+Folate status
+Beals & Manore, 
+1998c (4)
+24 female ath-
+letes with sub-
+clinical eating 
+disorders; 24 
+female control 
+athletes
+7-d weighed 
+food record; 
+Serum folate
+Dietary 
+	 Athletes with  
+	 subclinical eating  
+	 disorders:  
+	 306 ± 157 µg/d 
+	 Control athletes:  
+	 364 ± 99 µg/d
+Blood 
+	 Athletes with  
+	 subclinical eating  
+	 disorders:  
+	 20.2 ± 7.3 nmol/L 
+	 Control athletes:  
+	 19.3 ± 8.4 nmol/L
+Gaume et al., 2005c 
+(27)
+12 trained male 
+athletes
+Quantita-
+tive food 
+frequency 
+questionnaire; 
+Plasma  
+homocysteine
+Dietary 
+  287 ± 15 µg/d 
+Blood (homocysteine) 
+  7.48 ± 0.4 µmol/L
+Table 5  (continued)
+Downloaded by Syracuse University Library on 09/16/16, Volume 16, Article Number 5
+
+
+--- PAGE 21 ---
+B-Vitamins and Exercise: Does Exercise Alter Requirements?    473
+Study
+Subjects
+Assessment 
+index
+Results
+Konig et al., 2003c 
+(46)
+42 male  
+triathletes
+Plasma folate; 
+Plasma  
+homocysteine
+Plasma folate: 
+  6.4 ± 2.3 nmol/L
+Plasma homocysteine: 
+  12.3 ± 2.0 µmol/L
+Real et al., 2005c 
+(69)
+22 male  
+marathon  
+runners
+Plasma folate; 
+plasma homo-
+cysteine
+Plasma folate 
+  27.01 ± 10.21 nmol/L
+Plasma homocysteine 
+  8.6 ± 1.8 µmol/L
+Rousseau et al., 
+2005c (76)
+74 competitive 
+male athletes
+7-d food 
+record; 
+plasma  
+homocysteine
+Dietary 
+	 Athletes performing  
+	 intermittent activity:  
+	 295 ± 105 µg/d 
+	 Athletes performing  
+	 anaerobic activity:  
+	 298 ± 100 µg/d 
+	 Athletes performing  
+	 aerobic activity:  
+	 434 ± 220 µg/d 
+Plasma homocysteine 
+	 Athletes performing 	
+	 intermittent activity:  
+	 10.6 ± 2.6 µmol/L 
+	 Athletes performing  
+	 anaerobic activity:  
+	 9.6 ± 1.7 µmol/L  
+	 Athletes performing  
+	 aerobic activity:  
+	 9.2 ± 2.0 µmol/L 
+Telford et al., 1992 
+(86)
+86 athletes (50 
+male; 36 female)
+Blood folate
+Males:  
+11.1 ± 1.6 nmol/L 
+Females:  
+14.2 ± 1.8 nmoL/L
+Weight et al., 1988 
+(92)
+30 well-trained 
+male runners
+5-d food 
+records; 
+Serum folate; 
+RBC folate
+Dietary 
+264.6 ± 100.1 µg/d
+Serum folate 
+11.1 ± 4.3 nmol/L
+RBC folate 
+630 ± 148 nmol/L
+aAll values are means or means ± standard deviation.
+bReference values: 1989 RDA for males 19-50 y = 200 µg; 1989 RDA for females 19-50 y = 180 µg; 
+1998 RDA for males and females 19-50 y = 400 µg of Dietary Folate Equivalents (DFE); 1998 EAR 
+for males and females 19-50 y = 320 μg of DFE; 1998 UL for males and females 19-50 y = 1000 µg 
+of synthetic folic acid; Erythrocyte folate =  ≥ 305 nmol/L; Serum folate  = ≥ 7 nmol/L; Plasma homo-
+cysteine ≤ 16 µmol/L (28, 41, 61).
+cPaper published after the 1998 FDA mandatory fortification of grain products with folic acid.
+Table 5  (continued)
+Downloaded by Syracuse University Library on 09/16/16, Volume 16, Article Number 5
+
+
+--- PAGE 22 ---
+474    Woolf and Manore
+Assessment of Status in Active Individuals. Table 5 summarizes studies exam-
+ining folate status in adult athletes. Research examining folate status in athletes 
+is limited. Matter et al. (58) examined folate status in non-supplementing female 
+marathon runners and found that 33% (n = 85) had poor folate status; however, no 
+assessment of dietary folate was completed in this study. When Beals and Manore 
+(4) examined folate status in their female athletes (~ 50% reported some type of 
+supplementation or use of fortified food), 8% of their athletes had poor folate status 
+(plasma folate ≤ 6.8 nmol/L). In this study, supplementation may have contributed 
+to the adequate folate status of some athletes, because mean dietary folate intakes 
+were low. Recently, Herrmann et al. (34) examined folate status in 72 recreational 
+endurance athletes (64 men and 8 women) and 46 inactive controls (34 men and 
+12 women); no differences were seen between groups for blood folate concentra-
+tions. Unfortunately, the researchers did not examine dietary intakes of folate in 
+this study. Based on the limited research, it is recommended that all athletes, both 
+males and females, increase their daily intake of folate to the current RDA of 400 
+µg/d. For some individuals, this may mean that folic acid supplements need to be 
+consumed.
+Research shows that athletes, especially women, have poor intakes and status of 
+folate. However, it has not been clearly documented that supplementing with folate 
+will improve exercise performance. Matter et al. supplemented female marathon 
+runners in poor folate status (low serum folate concentrations) with 5 mg of folic acid 
+for 10 wk (58). Although hematological parameters for folate improved, exercise 
+performance on a treadmill did not. Thus, more research is needed to determine 
+the relationship between folate and exercise performance.
+Vitamin B-12
+Vitamin B-12 is one of a number of coenzymes that assist with DNA synthesis, 
+which is necessary for the formation of red blood cells (57). A deficiency in vitamin 
+B-12 can lead to megaloblastic anemia, which is characterized by large red blood 
+cells similar to that seen with folate deficiency (57). Most vitamin B-12 deficiencies 
+reflect inadequate absorption, rather than poor intakes. The inadequate absorption 
+typically occurs due to a lack of hydrochloric acid or intrinsic factor (28). Hydro-
+chloric acid is required to release the vitamin from dietary proteins so that it can bind 
+with intrinsic factor before absorption. Vitamin B-12 deficiency caused by a lack of 
+intrinsic factor is known as pernicious anemia. Vitamin B-12 is also essential for the 
+nervous system because it helps maintain the sheath that coats nerve fibers. If these 
+nerve fibers are damaged or altered, conduction of nervous signals is interrupted 
+causing numerous neurological problems. As mentioned earlier, adequate levels 
+of vitamin B-12, folate, and vitamin B-6 are also necessary for the metabolism of 
+methionine and keeping blood levels of homocysteine low (57). 
+Food Sources and Recommended Intakes. The best dietary sources include 
+meats, fish, poultry, shellfish, eggs, milk, and milk products. Because vitamin B-12 
+is found almost exclusively in animal products, an athlete following a vegetarian 
+diet needs to include food sources that will provide vitamin B-12 (2). Fortunately, 
+many vegetarian food products are fortified with vitamin B-12. The risk of poor 
+vitamin B-12 status is low in active individuals unless animal products are avoided 
+and no supplementation is occurring. However, many older adults may malabsorb 
+vitamin B-12 due to low gastric acidity. Thus, it is recommended that older adults 
+Downloaded by Syracuse University Library on 09/16/16, Volume 16, Article Number 5
+
+
+--- PAGE 23 ---
+B-Vitamins and Exercise: Does Exercise Alter Requirements?    475
+obtain the majority of their vitamin B-12 from fortified foods or a supplement 
+containing vitamin B-12. The RDA for vitamin B-12 for adults is 2.4 µg/d while 
+no UL for vitamin B-12 has been determined (41).
+Assessment of Status. Assessment of vitamin B-12 status includes measuring 
+the vitamin B-12 transport proteins, transcobalamin II and haptocorrins, and 
+measuring the concentration of vitamin B-12 bound to the transport protein (holo-
+transcobalamin II and holohaptocorrins) (28). In addition, serum vitamin B-12 
+and MCV can also be used. Normal concentrations of serum vitamin B-12 are > 
+120 pmol/L (41).
+Assessment of Dietary Intake in Active Individuals. Table 6 summarizes studies 
+examining vitamin B-12 intakes in adult athletes. Limited research has examined 
+vitamin B-12 intakes and status in active individuals. Keith et al. (45) found that 
+more than 33% of highly trained female cyclists did not consume the recommended 
+intake for vitamin B-12, while Ziegler et al. (97) found the vitamin B-12 intakes 
+in their male and female figure skaters were less than that reported by the Third 
+National Health and Nutrition Examination Survey (NHANES III). Steen et al. (83) 
+found that 80% of female collegiate heavyweight rowers met the RDA for vitamin 
+B-12. As mentioned above, those athletes that eliminate animal products from the 
+diet will be at greatest risk for poor vitamin B-12 intakes.
+Table 6  Summary of Studies Examining Vitamin B-12 Intake and/or 
+Status in Adult Athletesa,b
+Study
+Subjects
+Assessment 
+index
+Results
+Vitamin B-12 
+intake
+Beshgetoor & 
+Nichols, 2003 
+(10)
+25 female master 
+cyclists and  
+runners
+4-d food record
+6 ± 2 µg/d
+Clark et al., 
+2003 (14)
+13 female  
+collegiate soccer 
+players
+2 3-d food 
+records (pre-
+season and 
+post-season)
+Pre-season: 4.5 ± 1.9 µg/d 
+Post-season: 2.1 ± 1.7 µg/d
+Faber & 
+Benade, 1991 
+(20)
+30 field athletes 
+(discus-, hammer-, 
+javelin-throwers, 
+and shotputters) 
+(20 male; 10 
+female)
+7-d food record
+Males: 26.9 ± 42.0 µg/d 
+Females: 5.26 ± 2.29 µg/d
+Jensen et al., 
+1992 (42)
+14 male  
+endurance  
+cyclists
+5-d weighed 
+food record 
+while training; 
+3-d weighed 
+food record 
+while racing
+Training: 8 ± 6 µg/d 
+Racing: 11 ± 7 µg/d
+(continued)
+Downloaded by Syracuse University Library on 09/16/16, Volume 16, Article Number 5
+
+
+--- PAGE 24 ---
+476    Woolf and Manore
+Study
+Subjects
+Assessment 
+index
+Results
+Kaiserauer et 
+al., 1989 (43)
+17 female  
+distance runners 
+(8 with amen-
+orrhea; 9 with 
+eumenorrhea)
+3-d food record
+Amenorrheic distance  
+runners: 
+  2.8 µg/d 
+Eumenorrheic distance 
+runners: 
+  4.1 µg/d
+Keith et al., 
+1989 (45)
+8 female highly 
+trained cyclists
+3-d weighed 
+food record
+3.3 ± 4.7 µg/d
+Kopp- 
+Woodroffe et al., 
+1999 (47)
+4 female  
+amenorrheic  
+runners
+7-d weighed 
+food record
+3.2 ± 1.1 µg/d
+Leydon & Wall, 
+2002 (50)
+20 jockeys (6 
+male; 14 female)
+7-d weighed 
+food record
+Males: 2.90 ± 0.90 µg/d 
+Females: 2.15 ± 1.07 µg/d
+Manore et al., 
+1989 (55)
+10 female long 
+distance runners
+3-d food record
+2.5 ± 1.3 µg/d
+Nieman et al., 
+1989 (63)
+347 marathon  
+runners (291 male; 
+56 female)
+3-d food record
+Males: 5.98 µg/d 
+Females: 2.98 µg/d
+Rico-Sanz et al., 
+1998 (70)
+8 male elite soccer 
+players
+12-d food 
+record
+10.7 ± 9.2 µg/d
+Weight et al., 
+1988 (92)
+30 well-trained 
+male runners
+5-d food record
+4.95 ± 3.2 µg/d
+Worme et al., 
+1990 (94)
+71 triathletes (50 
+male; 21 female)
+3-d food record
+Males: 5.1 µg/d 
+Females: 4.9 µg/d
+Vitamin B-12 
+status
+Beals & 
+Manore, 1998 
+(4)
+24 female athletes 
+with subclinical 
+eating disorders; 
+24 female control 
+athletes
+7-d weighed 
+food record; 
+Serum B-12
+Dietary 
+	 Athletes with subclinical 	
+	 eating disorders:  
+	 3.9 ± 2.6 µg/d 
+	 Control athletes:  
+	 4.3 ± 1.9 µg/d
+Blood 
+	 Athletes with subclinical 	
+	 eating disorders:  
+	 254 ± 77 pmol/L 
+	 Control athletes:  
+	 331 ± 172 pmol/L
+Gaume et al., 
+2005 (27)
+12 trained male 
+athletes
+Quantitative 
+food frequency 
+questionnaire; 
+plasma homo-
+cysteine
+Dietary 
+  7.5 ± 0.4 mg/d 
+Blood (homocysteine) 
+  7.48 ± 0.4 µmol/L
+Table 6  (continued)
+Downloaded by Syracuse University Library on 09/16/16, Volume 16, Article Number 5
+
+
+--- PAGE 25 ---
+B-Vitamins and Exercise: Does Exercise Alter Requirements?    477
+Study
+Subjects
+Assessment 
+index
+Results
+Konig et al., 
+2003 (46)
+42 male triathletes
+Plasma B-12; 
+plasma homo-
+cysteine
+Plasma B-12:  
+  362 ± 104 pmol/L 
+Plasma homocysteine: 
+  12.3 ± 2.0 µmol/L
+Real et al., 2005 
+(69)
+22 male marathon 
+runners
+Plasma vitamin 
+B-12; plasma 
+homocysteine
+Plasma vitamin B-12 
+  409.6 ± 106 pmol/L 
+Plasma homocysteine 
+  8.6 ± 1.8 µmol/L
+Rousseau et al., 
+2005 (76)
+74 competitive 
+male athletes
+7-d food 
+record; plasma 
+homocysteine
+Dietary 
+	 Athletes performing  
+	 intermittent activity:  
+	 5.87 ± 3.63 µg/d 
+	 Athletes performing  
+	 anaerobic activity:  
+	 4.91 ± 1.37 µg/d 
+	 Athletes performing  
+	 aerobic activity:  
+	 8.06 ± 6.34 µg/d
+Blood (homocysteine) 
+	 Athletes performing  
+	 intermittent activity:  
+	 10.6 ± 2.6 µmol/L 
+	 Athletes performing  
+	 anaerobic activity:  
+	 9.6 ± 1.7 µmol/L  
+	 Athletes performing 
+	 aerobic activity:  
+	 9.2 ± 2.0 µmol/L 
+Telford et al., 
+1992 (86)
+86 athletes (50 
+male; 36 female)
+Plasma B-12
+Males: 299 ± 32 pmol/L 
+Females: 299 ± 35 pmol/L
+aAll values are means or means ± standard deviation.
+bReference values: 1989 RDA for males and females 19-50 y = 2.0 μg; 1998 RDA for males and 
+females 19-50 y = 2.4 µg; 1998 EAR for males and females 19-50 y = 2.0 µg; Serum vitamin B-12 = 
+> 120 pmol/L; Serum methylmalonic acid  = 73 to 271 nmol/L; Plasma homocysteine < 16 µmol/L 
+(28, 41, 61).
+Assessment of Status in Active Individuals. Table 6 summarizes studies examin-
+ing vitamin B-12 status in adult athletes. As with assessment of dietary intakes of 
+vitamin B-12 in athletes, there are few reports assessing vitamin B-12 status. Beals 
+and Manore (4) examined vitamin B-12 status in their female athletes and found no 
+athlete with poor vitamin B-12 status; however, about half of the athletes reported 
+taking a multivitamin supplement, which would contain vitamin B-12. In an earlier 
+study, Telford et al. (86) reported that 5% of their athletes had poor vitamin B-12 
+status, but they did not report vitamin B-12 intakes. Recently, Herrmann et al. 
+(34) reported altered vitamin B-12 metabolism in recreational athletes compared 
+Table 6  (continued)
+Downloaded by Syracuse University Library on 09/16/16, Volume 16, Article Number 5
+
+
+--- PAGE 26 ---
+478    Woolf and Manore
+to sedentary controls. Thus, more research is needed to understand vitamin B-12 
+status and metabolism in athletes, especially older active individuals who may have 
+decreased ability to absorb vitamin B-12.
+As mentioned earlier, elevated blood homocysteine concentrations are con-
+sidered another risk factor for cardiovascular disease (12, 13, 15, 71). There is a 
+strong inverse relationship between blood homocysteine concentrations and dietary 
+intake and/or blood measures of folate, vitamin B-12, and vitamin B-6 (3, 13, 66, 
+72, 79); however, little is known about the effects of exercise on blood homocysteine 
+concentrations. Research examining the effect of chronic exercise on homocysteine 
+found that highly active individuals (men and women) had significantly lower homo-
+cysteine concentrations than their sedentary counterparts (65); however, this study 
+did not report B-vitamin intake or B-vitamin status. Conversely, recent research 
+has documented the effects of acute strenuous endurance exercise on blood homo-
+cysteine concentrations and found that running a marathon significantly increased 
+homocysteine concentrations, while mountain biking (120 km) or running (100 
+km) had no effect (35). These same researchers also found that 3 wk of strenuous 
+swimming increased blood homocysteine (36); thus, changes in training volume 
+may also impact homocysteine. Other research suggests that acute exercise does 
+not seem to have any impact on plasma homocysteine in healthy young men (95). 
+Konig et al. (46) also examined the influence of the training volume on plasma 
+homocysteine, folate, and vitamin B-12. They found that intense exercise acutely 
+increased plasma homocysteine concentrations; however, athletes with the highest 
+training volumes exhibited a significant decrease in plasma homocysteine concentra-
+tions. Other research suggests that the combined effects of chronic physical exercise 
+and a high folate and vitamin B-12 intake could help reduce plasma homocysteine 
+concentrations and possibly prevent many chronic diseases (27). More research is 
+needed to determine the impact of physical activity on homocysteine concentrations 
+and B-vitamin status for athletes.
+Summary
+The B-vitamins play important roles in maintaining the health of the active indi-
+vidual and assuring that energy can be produced for physical activity. Athletes 
+who have poor or marginal nutritional status for a B-vitamin may have decreased 
+ability to perform exercise at high intensities. However, the studies examining 
+these issues in athletes, while controlling for diet and confounding factors, are 
+limited. More controlled studies, especially metabolic studies, are needed in this 
+area using highly active individuals. In addition, the assessment of status for many 
+micronutrients is expensive and time consuming, making it unrealistic to screen 
+athletes on a regular basis. If better methods were available for assessment, we 
+could more quickly see which athletes had poor status and recommend changes in 
+diet and/or supplementation. 
+Many athletes, especially young athletes, do not appreciate the importance of 
+diet for performance, maintenance of a healthy immune response, and for recovery 
+from injury and illness. These same athletes typically do not know how to buy and 
+prepare healthy foods for themselves, especially if they live away from home. Long 
+periods of poor nutrition status can have serious consequences for the athlete and 
+Downloaded by Syracuse University Library on 09/16/16, Volume 16, Article Number 5
+
+
+--- PAGE 27 ---
+B-Vitamins and Exercise: Does Exercise Alter Requirements?    479
+active individual. To obtain adequate status of the B-vitamins, nutrient-rich foods, 
+such as enriched and whole grains, fruits, vegetables, and lean meats, should be 
+selected and energy intake should be adequate to maintain weight. Athletes who 
+have poor diets, especially those restricting energy intakes or eliminating food 
+groups from the diet, should consider supplementing with a multivitamin/mineral 
+supplement. Current research suggests that exercise may increase the requirements 
+for riboflavin and vitamin B-6; however, more research is needed to further deter-
+mine if exercise increases the need for folate and vitamin B-12.
+References
+	 1.	 Baer, J.T., and L.J. Taper. Amenorrheic and eumenorrheic adolescent runners: Dietary 
+intake and exercise training status. J. Am. Diet. Assoc. 92:89-91, 1992.
+	 2.	 Barr, S.I., and C.A. Rideout. Nutritional considerations for vegetarian athletes. Nutri-
+tion. 20:696-703, 2004.
+	 3.	 Bates, C.J., K.D. Pentieva, A. Prentice, M.A. Mansoor, and S. Finch. Plasma pyri-
+doxal phosphate and pyridoxic acid and their relationship to plasma homocysteine in 
+a representative sample of British men and women aged 65 years and over. Br. J. Nutr. 
+81:191-201, 1999.
+	 4.	 Beals, K.A., and M.M. Manore. Nutritional status of female athletes with subclinical 
+eating disorders. J. Am. Diet. Assoc. 98:419-425, 1998.
+	 5.	 Beals, K.A., and M.M. Manore. Disorders of the female athlete triad among collegiate 
+athletes. Int. J. Sport Nutr. Exerc. Metab. 12:281-293, 2002.
+	 6.	 Beitz, R., G.B.M. Mensink, Y. Henschel, B. Fischer, and H.F. Erbersdobler. Dietary 
+behaviour of German adults differing in levels of sport activity. Public Health Nutr. 
+7:45-52, 2004.
+	 7.	 Belko, A.Z., M.P. Meredith, H.J. Kalkwarf, E. Obarzanek, S. Weinberg, R. Roach, 
+G. McKeon, and D.A. Roe. Effects of exercise on riboflavin requirements: biological 
+validation in weight reducing women. Am. J. Clin. Nutr. 41:270-277, 1985.
+	 8.	 Belko, A.Z., E. Obarzanek, H.J. Kalkwarf, M.A. Rotter, S. Bogusz, D. Miller, J.D. 
+Haas, and D.A. Roe. Effects of exercise on riboflavin requirements of young women. 
+Am. J. Clin. Nutr. 37:509-517, 1983.
+	 9.	 Belko, A.Z., E. Obarzanek, R. Roach, M. Rotter, G. Urban, S. Weinberg, and D.A. Roe. 
+Effects of aerobic exercise and weight loss on riboflavin requirements of moderately 
+obese, marginally deficient young women. Am. J. Clin. Nutr. 40:553-561, 1984.
+	10.	 Beshgetoor, D., and J.F. Nichols. Dietary intake and supplement use in female master 
+cyclists and runners. Int. J. Sport. Nutr. Exerc. Metab. 13:166-172, 2003.
+	11.	 Bonaa, K.H., I. Njolstad, P.M. Ueland, H. Schirmer, A. Tverdal, T. Steigen, H. Wang, 
+J.E., Nordrehaug, E. Arnesen, and K. Rasmussen. Homocysteine lowering and car-
+diovascular events after acute myocardial infarction. N. Engl. J. Med. 354:1578-1588, 
+2006.
+	12.	 Bostom, A.G., H. Silbershatz, I.H. Rosenberg, J. Selhub, R.B. D’Agostino, P.A. Wolf, 
+P.F. Jacques, and P.W.F. Wilson. Nonfasting plasma total homocysteine levels and all-
+cause and cardiovascular disease mortality in elderly Framingham men and women. 
+Arch. Intern. Med. 159:1077-1080, 1999.
+	13.	 Boushey, C.J., S.A.A. Beresford, G.S. Omenn, and A.G. Motulsky. A quantitative 
+assessment of plasma homocysteine as a risk factor for vascular disease. Probable 
+benefits of increasing folic acid intakes. JAMA. 274:1049-1057, 1995.
+	14.	 Clark, M., D.B. Reed, S.F. Crouse, and R.B. Armstrong. Pre- and post-season dietary 
+intake, body composition, and performance indices of NCAA Division I female soccer 
+players. Int. J. Sport. Nutr. Exerc. Metab. 13:303-319, 2003.
+Downloaded by Syracuse University Library on 09/16/16, Volume 16, Article Number 5
+
+
+--- PAGE 28 ---
+480    Woolf and Manore
+	15.	 Clarke, R., L. Daly, K. Robinson, E. Naughten, S. Cahalane, B. Fowler, and I. Graham. 
+Hyperhomocysteinemia: an independent risk factor for vascular disease. N. Engl. J. 
+Med. 324:1149-1155, 1991.
+	16.	 Crozier, P.G., L. Cordain, and D.A. Sampson. Exercise-induced changes in plasma 
+vitamin B-6 concentrations do not vary with exercise intensity. Am. J. Clin. Nutr. 
+60:552-558, 1994.
+	17.	 Cupisti, A., C. D’Alessandro, S. Castrogiovanni, A. Barale, and E. Morelli. Nutrition 
+survey in elite rhythmic gymnasts. J. Sports Med. Phys. Fitness. 40:350-355, 2000.
+	18.	 DeBolt, J.E., A. Singh, B.A. Day, and P.A. Deuster. Nutritional survey of the US Navy 
+SEAL trainees. Am. J. Clin. Nutr. 48:1316-1323, 1988.
+	19.	 Doyle, M.R., M.J. Webster, and L.D. Erdmann. Allithiamine ingestion does not enhance 
+isokinetic parameters of muscle performance. Int. J. Sport. Nutr. 7:39-47, 1997.
+	20.	 Faber, M., and A.J.S. Benade. Mineral and vitamin intake in field athletes (discus-, 
+hammer-, javelin-throwers and shotputters). Int. J. Sport Nutr. 12:324-327, 1991.
+	21.	 Fogelholm, M. Micronutrient status in females during a 24-week fitness-type exercise 
+program. Ann. Nutr. Metab. 36:209-218, 1992.
+	22.	 Fogelholm, G.M., J.J. Himberg, K. Alopaeus, C.G, Gref, J.T. Laakso, J.J. Lehto, and 
+H. Mussalo-Rauhamaa. Dietary and biochemical indices of nutritional status in male 
+athletes and controls. J. Am. Coll. Nutr. 11:181-191, 1992.
+	23.	 Fogelholm, M., S. Rehunen, C.G. Gref, J.T. Laakso, J. Lehto, I. Ruokonen, and J.J. 
+Himberg. Dietary intake and thiamin, iron, and zinc status in elite Nordic skiers during 
+different training periods. Int. J. Sport Nutr. 2:351-365. 1992. 
+	24.	 Fogelholm, M., I. Ruokonen, J.T. Laakso, T. Vuorimaa, and J.J. Himberg. Lack of 
+association between indices of vitamin B-1, B-2 and B-6 status and exercise-induced 
+blood lactate in young adults. Int. J. Sport Nutr. 3:165-176, 1993.
+	25.	 Frank, T., M. Kuhl, B. Makowski, R. Bitsch, G. Jahries, and J. Hubscher. Does a 100-
+km walking affect indicators of vitamin status? Int. J. Vitam. Nutr. Res. 70:238-250, 
+2000.
+	26.	 Ganji, V., and M.R. Kafai. Trend in serum folate, RBC folate, and circulating total 
+homocysteine concentrations in the United States: analysis of data from National Health 
+and Nutrition Examination Surveys, 1988-1994, 1999-2000, and 2001-2002. J. Nutr. 
+136:153-158, 2006.
+	27.	 Gaume, V., F. Mougin, H. Figard, M.L. Simon-Rigaud, U.N. N’Guyen, J. Callier, J.P. 
+Kantelip, and A. Berthelot. Physical training decreases total plasma homocysteine and 
+cysteine in middle-aged subjects. Ann. Nutr. Metab. 49:125-131, 2005.
+	28.	 Gibson, R.S. Principles of Nutritional Assessment. New York: Oxford University Press, 
+2005.
+	29.	 Guilland, J.C., T. Penaranda, C. Gallet, V. Boggio, F. Fuchs, and J. Klepping. Vitamin 
+status of young athletes including the effects of supplementation. Med. Sci. Sports 
+Exerc. 21:441-449, 1989.
+	30.	 Hansen, C.M., J.E. Leklem, and L.T. Miller. Changes in vitamin B-6 status indicators 
+of women fed a constant protein diet with varying levels of vitamin B-6. Am. J. Clin. 
+Nutr. 66:1379-1387, 1997.
+	31.	 Hansen, C.M., T.D. Shultz, H.K. Kwak, H.S. Memon, and J.E. Leklem. Assessment of 
+vitamin B-6 status in young women consuming a controlled diet containing four levels 
+of vitamin B-6 provides an estimated average requirement and recommended dietary 
+allowance. J. Nutr. 131:1777-1786, 2001.
+	32.	 Hawley, J.A., S.C. Dennis, F.H. Lindsay, and T.D. Noakes. Nutritional practices of 
+athletes: are they sub-optimal? J. Sports Sci. 13:S75-S87, 1995.
+	33.	 Heart Outcomes Prevention Evaluation (HOPE) 2 Investigators. Homocysteine lowering 
+with folic acid and B vitamins in vascular disease. N. Engl. J. Med. 354:1567-1577, 
+2006.
+Downloaded by Syracuse University Library on 09/16/16, Volume 16, Article Number 5
+
+
+--- PAGE 29 ---
+B-Vitamins and Exercise: Does Exercise Alter Requirements?    481
+	34.	 Herrmann, M., R. Obeid, J. Scharhag, W. Kindermann, and W. Herrmann. Altered 
+vitamin B-12 status in recreational endurance athletes. Int. J. Sport Nutr. Exerc. Metab. 
+15:433-441, 2005.
+	35.	 Herrmann, M., H. Schorr, R. Obeid, J. Scharhag, A. Urhausen, W. Kindermann, and 
+W. Herrmann. Homocysteine increases during endurance exercise. Clin. Chem. Lab. 
+Med. 41:1518-1524, 2003.
+	36.	 Herrmann, M., J. Wilkinson, H. Schorr, R. Obeid, T. Georg, A. Urhausen, J. Scharhag, 
+W. Kindermann, and W. Herrmann. Comparison of the influence of volume-oriented 
+training and high-intensity interval training on serum homocysteine and its cofactors 
+in young, healthy swimmers. Clin. Chem. Lab. Med. 41:1525-1531, 2003.
+	37.	 Hofmann, A., R.D. Reynolds, B.L. Smoak, V.G. Villanueva, and P.A. Deuster. Plasma 
+pyridoxal and pyridoxal 5’-phosphate concentrations in response to ingestion of water 
+or glucose polymer during a 2-h run. Am. J. Clin. Nutr. 53:84-89, 1991.
+	38.	 Howat, P.M., M.L. Carbo, G.Q. Mills, and P. Wozniak. The influence of diet, body 
+fat, menstrual cycling, and activity upon bone density of females. J. Am. Diet. Assoc. 
+89:1305-1307, 1989.
+	39.	 Huang, Y.C., W. Chen, M.A. Evans, M.E. Mitchell, and T.D. Shultz. Vitamin B-6 
+requirement and status assessment of young women fed a high-protein diet with vari-
+ous levels of vitamin B-6. Am. J. Clin. Nutr. 67:208-220, 1998.
+	40.	 Institute of Medicine. Food and Nutrition Board. Dietary reference intakes: A risk 
+assessment model for establishing upper intake levels for nutrients. Washington: 
+National Academy Press, 1998.
+	41.	 Institute of Medicine. Food and Nutrition Board. Dietary reference intakes: Thiamin, 
+riboflavin, niacin, vitamin B-6, folate, vitamin B-12, pantothenic acid, biotin, and 
+choline. Washington: National Academy Press, 1998.
+	42.	 Jensen, C.D., E.S. Zaltas, and J.H. Whittam. Dietary intakes of male endurance cyclists 
+during training and racing. J. Am. Diet. Assoc. 92:986-988, 1992.
+	43.	 Kaiserauer, S., A.C. Snyder, M. Sleeper, and J. Zierath. Nutritional, physiological, and 
+menstrual status of distance runners. Med. Sci. Sports Exerc. 21:120-125, 1989.
+	44.	 Keith, R.E., and L.A. Alt. Riboflavin status of female athletes consuming normal diets. 
+Nutr. Res. 11:727-734, 1991.
+	45.	 Keith, R.E., K.A. O’Keeffe, L.A. Alt, and K.L. Young. Dietary status of trained female 
+cyclists. J. Am. Diet. Assoc. 89:1620-1623, 1989.
+	46.	 Konig, D., E. Bisse, P. Deibert, H.M. Muller, H. Wieland, and A. Berg. Influence of 
+training volume and acute physical exercise on the homocysteine levels in endurance-
+trained men: interactions with plasma folate and vitamin B-12. Ann. Nutr. Metab. 
+47:114-118, 2003.
+	47.	 Kopp-Woodroffe, S.A., M.M. Manore, C.A. Dueck, J.S. Skinner, and K.S. Matt. Energy 
+and nutrient status of amenorrheic athletes participating in a diet and exercise training 
+intervention program. Int. J. Sport Nutr. 9:70-88, 1999.
+	48.	 Leklem, J.E. Vitamin B-6: a status report. J. Nutr. 120:1503-1507, 1990.
+	49.	 Leonard, S.W., and J.E. Leklem. Plasma B-6 vitamer changes following a 50-km 
+ultramarathon. Int. J. Sport Nutr. Exerc. Metab. 10:302-314, 2000.
+	50.	 Leydon, M.A., and C. Wall. New Zealand jockeys’ dietary habits and their potential 
+impact on health. Int. J. Sport Nutr. Exerc. Metab. 12:220-237, 2002.
+	51.	 Manore, M.M. Vitamin B-6 and exercise. Int. J. Sport Nutr. 4:89-103, 1994.
+	52.	 Manore, M.M. Nutritional needs of the female athlete. In Clinics in Sports Medicine: 
+Nutritional Aspects of Exercise, K.B. Wheeler, and J.A. Lombardo (Eds.). Philadelphia: 
+W.B. Sanders Company, 1999, pp. 549-563.
+	53.	 Manore, M.M. Effect of physical activity on thiamine, riboflavin, and vitamin B-6 
+requirements. Am. J. Clin. Nutr. 72:598S-606S, 2000.
+Downloaded by Syracuse University Library on 09/16/16, Volume 16, Article Number 5
+
+
+--- PAGE 30 ---
+482    Woolf and Manore
+	54.	 Manore, M.M., S.I. Barr, and G.A. Butterfield. Position of the American Dietetic Asso-
+ciation, Dietitians of Canada, and the American College of Sports Medicine: nutrition 
+and athletic performance. J. Am. Diet. Assoc. 100:1543-1556, 2000.
+	55.	 Manore, M.M., P.D. Besenfelder, C.L. Wells, S.S. Carroll, and S.P. Hooker. Nutrient 
+intakes and iron status in female long-distance runners during training. J. Am. Diet. 
+Assoc. 89:257-259, 1989.
+	56.	 Manore, M.M., J.E. Leklem, and M.C. Walter. Vitamin B-6 metabolism as affected by 
+exercise in trained and untrained women fed diets differing in carbohydrate and vitamin 
+B-6 content. Am. J. Clin. Nutr. 46:995-1004, 1987.
+	57.	 Manore, M.M., and J.A. Thompson. Sport Nutrition for Health and Performance. 
+Champaign, IL: Human Kinetics, 2000
+	58.	 Matter, M., T. Stittfall, J. Graves, K. Myburgh, B. Adams, P. Jacobs, and T.D. Noakes. 
+The effect of iron and folate therapy on maximal exercise performance in female 
+marathon runners with iron and folate deficiency. Clin. Sci. 72:415-422, 1987.
+	59.	 Maughan, R.J. Role of micronutrients in sport and physical activity. Br. Med. Bull. 
+55:683-690, 1999.
+	60.	 Maurer, J., D.L. Taren, P.J. Teixeira, C.A. Thomson, T.G. Lohman, S.B. Going, and 
+L.B. Houtkooper. The psychosocial and behavioral characteristics related to energy 
+misreporting. Nutr. Rev. 64:53-66, 2006.
+	61.	 National Research Council. Food and Nutrition Board. Recommended Dietary Allow-
+ances 10th Ed. Washington: National Academy Press, 1989.
+	62.	 Niekamp, R.A., and J.T. Baer. In-season dietary adequacy of trained male cross-country 
+runners. Int. J. Sport Nutr. 5:45-55, 1995.
+	63.	 Nieman, D.C., J.V. Butler, L.M. Pollett, S.J. Dietrich, and R.D. Lutz. Nutrient intake 
+of marathon runners. J. Am. Diet. Assoc. 89:1273-1278, 1989.
+	64.	 Nutter, J. Seasonal changes in female athletes’ diets. Int. J. Sport Nutr. 1:395-407, 
+1991.
+	65.	 Nygard, O., S.E. Vollset, H. Refsum, I. Stensvold, A. Tverdal, J.E. Nordrehaug, P.M. 
+Ueland, and G. Kvale. Total plasma homocysteine and cardiovascular risk profile: the 
+Hordaland Homocysteine Study. JAMA. 274:1526-1533, 1995.
+	66.	 Pancharuniti, N., C.A. Lewis, H.E. Sauberlich, L.L. Perkins, R.C.P. Go, J.O. Alvarez, 
+M. Macaluso, R.T. Acton, R.B. Copeland, A.L. Cousins, et al. Plasma homocyst(e)ine, 
+folate, and vitamin B-12 concentrations and risk for early-onset coronary artery disease. 
+Am. J. Clin. Nutr. 59:940-948, 1994.
+	67.	 Raczynski, G., and B. Szczepanska. Longitudinal studies on vitamin B-1 and B-6 status 
+in Polish elite athletes. Biol. Sport. 10:189-194, 1993.
+	68.	 Rankinen, T., S. Lyytikainen, E. Vanninen, I. Penttila, R. Rauramaa, and M. Uusitupa. 
+Nutritional status of the Finnish elite ski jumpers. Med. Sci. Sports Exerc. 30:1592-
+1597, 1998.
+	69.	 Real, J.T., A. Merchante, J.L. Gomez, F.J. Chaves, J.F. Ascaso, and R. Carmena. Effects 
+of marathon running on plasma total homocysteine concentrations. Nutr. Metab. Car-
+diovasc. Dis. 15:134-139, 2005.
+	70.	 Rico-Sanz, J., W.R. Frontera, P.A. Mole, M.A. Rivera, A. Rivera-Brown, and C.N. 
+Meredith. Dietary and performance assessment of elite soccer players during a period 
+of intense training. Int. J. Sport Nutr. 8:230-240, 1998.
+	71.	 Ridker, P.M., J.E. Manson, J.E. Buring, J. Shih, M. Matias, and C.H. Hennekens. 
+Homocysteine and risk of cardiovascular disease among postmenopausal women. 
+JAMA. 281:1817-1821, 1999.
+	72.	 Robinson, K., E.L. Mayer, D.P. Miller, R. Green, F. van Lente, A. Gupta, K. Kottke-
+Marchant, S.R. Savon, J. Selhub, S.E. Nissen, et al. Hyperhomocysteinemia and low 
+pyridoxal phosphate. Common and independent reversible risk factors for coronary 
+artery disease. Circulation. 92:2825-2830, 1995.
+Downloaded by Syracuse University Library on 09/16/16, Volume 16, Article Number 5
+
+
+--- PAGE 31 ---
+B-Vitamins and Exercise: Does Exercise Alter Requirements?    483
+	73.	 Rokitzki, L., A. Sagredos, E. Keck, B. Sauer, and J. Keul. Assessment of vitamin B-2 
+status in performance athletes of various types of sports. J. Nutr. Sci. Vitaminol. 40:11-
+22, 1994.
+	74.	 Rokitzki, L., A.N. Sagredos, F. Reuss, M. Buchner, and J. Keul. Acute changes in 
+vitamin B-6 status in endurance athletes before and after a marathon. Int. J. Sport Nutr. 
+4:154-165, 1994.
+	75.	 Rokitzki, L., A.N. Sagredos, F. Reuss, D. Cufi, and J. Keul. Assessment of vitamin B-6 
+status of strength and speedpower athletes. J. Am. Coll. Nutr. 13:87-94, 1994.
+	76.	 Rousseau, A.S., S. Robin, A.M. Roussel, V. Ducros, and I. Margaritis. Plasma homo-
+cysteine is related to folate intake but not training status. Nutr. Metab. Cardiovasc. Dis. 
+15:125-133, 2005.
+	77.	 Rucinski, A. Relationship of body image and dietary intake of competitive ice skaters. 
+J. Am. Diet. Assoc. 89:98-100, 1989.
+	78.	 Saris, W.H.M., M.A. van Erp-Baart, F. Brouns, K.R. Westerterp, and F. ten Hoor. Study 
+on food intake and energy expenditure during extreme sustained exercise: the Tour de 
+France. Int. J. Sports Med. 10:S26-S31, 1989.
+	79.	 Selhub, J., P.F. Jacques, P.W.F. Wilson, D. Rush, and I.H. Rosenberg. Vitamin status and 
+intake as primary determinants of homocysteinemia in an elderly population. JAMA. 
+270:2693-2698, 1993.
+	80.	 Singh, A., P. Evans, K.L. Gallagher, and P.A. Deuster. Dietary intakes and biochemical 
+profiles of nutritional status of ultramarathoners. Med. Sci. Sports Exerc. 25:328-334, 
+1993.
+	81.	 Soares, M.J., K. Satyanarayana, M.S. Bamji, C.M. Jacob, Y.V. Ramana, and S.S. Rao. 
+The effect of exercise on the riboflavin status of adult men. Br. J. Nutr. 69:541-551, 
+1993.
+	82.	 Spodaryk, K., J. Czekaj, and W. Sowa. Relationship among reduced level of stored iron 
+and dietary iron in trained women. Physiol. Res. 45:393-397, 1996.
+	83.	 Steen, S.N., K. Mayer, K.D. Brownell, and T.A. Wadden. Dietary intake of female 
+collegiate heavyweight rowers. Int. J. Sport Nutr. 5:225-231, 1995.
+	84.	 Suboticanec, K., A. Stavljenic, W. Schalch, and R. Buzina. Effects of pyridoxine and 
+riboflavin supplementation on physical fitness in young adolescents. Int. J. Vitam. Nutr. 
+Res. 60:81-88, 1990.
+	85.	 Suzuki, M., and Y. Itokawa. Effects of thiamin supplementation on exercise-induced 
+fatigue. Metab. Brain Dis. 11:95-106, 1996.
+	86.	 Telford, R.D., E.A. Catchpole, V. Deakin, A.C. McLeay, and A.W. Plank. The effect of 
+7 to 8 months of vitamin/mineral supplementation on the vitamin and mineral status 
+of athletes. Int. J. Sport Nutr. 2:123-134, 1992.
+	87.	 Trabulsi, J., and D.A. Schoeller. Evaluation of dietary assessment instruments against 
+doubly labeled water, a biomarker of habitual energy intake. Am. J. Physiol. Endocrinol. 
+Metab. 281:E891-E899, 2001.
+	88.	 van der Beek, E.J., W. van Dokkum, J. Schrijver, M. Wedel, A.W.K. Gaillard, A. 
+Wesstra, H. van de Weerd, and R.J.J. Hermus. Thiamin, riboflavin and vitamins B-6 
+and C: impact of combined restricted intake on physical performance in man. Am. J. 
+Clin. Nutr. 48:1451-1462, 1988.
+	89.	 van der Beek, E.J., W. van Dokkum, M. Wedel, J. Schrijver, and H. van den Berg. Thia-
+min, riboflavin and vitamin B-6: impact of restricted intake on physical performance 
+in man. J. Am. Coll. Nutr. 13:629-640, 1994.
+	90.	 Webster, M.J. Physiological and performance responses to supplementation with thiamin 
+and pantothenic acid derivatives. Eur. J. Appl. Physiol. Occup. Physiol. 77:486-491, 
+1998.
+	91.	 Webster, M.J., T.P. Scheett, M.R. Doyle, and M. Branz. The effect of a thiamin derivative 
+on exercise performance. Eur. J. Appl. Physiol. Occup. Physiol. 75:520-524, 1997.
+Downloaded by Syracuse University Library on 09/16/16, Volume 16, Article Number 5
+
+
+--- PAGE 32 ---
+484    Woolf and Manore
+	92.	 Weight, L.M., T.D. Noakes, D. Labadarios, J. Graves, D. Haem, P. Jacobs, and P.A. 
+Berman. Vitamin and mineral status of trained athletes including the effects of supple-
+mentation. Am. J. Clin. Nutr. 47:186-191, 1988.
+	93.	 Winters, L.R.T., J.S. Yoon, H.J. Kalkwarf, J.C. Davies, M.G. Berkowitz, J. Haas, and 
+D.A. Roe. Riboflavin requirements and exercise adaptation in older women. Am. J. 
+Clin. Nutr. 56:526-532, 1992.
+	94.	 Worme, J.D., T.J. Doubt, A. Singh, C.J. Ryan, F.M. Moses, and P.A. Deuster. Dietary 
+patterns, gastrointestinal complaints, and nutrition knowledge of recreational triathletes. 
+Am. J. Clin. Nutr. 51:690-697, 1990.
+	95.	 Wright, M., K. Francis, and P.H. Cornwell. Effect of acute exercise on plasma homo-
+cysteine. J. Sports Med. Phys. Fitness. 38:262-265, 1998.
+	96.	 Ziegler, P., S. Hensley, J.B. Roepke, S.H. Whitaker, B.W. Craig, and A. Drewnowski. 
+Eating attitudes and energy intakes of female skaters. Med. Sci. Sports Exerc. 30:583-
+586, 1998.
+	97.	 Ziegler, P.J., J.A. Nelson, and S.S. Jonnalagadda. Nutritional and physiological status 
+of US national figure skaters. Int. J. Sport Nutr. 9:345-360, 1999.
+	98.	 Ziegler, P.J., C.S. Khoo, P.M. Kris-Etherton, S.S. Jonnalagadda, B. Sherr, and J.A. 
+Nelson. Nutritional status of nationally ranked junior US figure skaters. J. Am. Diet. 
+Assoc. 98:809-811, 1998.
+Downloaded by Syracuse University Library on 09/16/16, Volume 16, Article Number 5
