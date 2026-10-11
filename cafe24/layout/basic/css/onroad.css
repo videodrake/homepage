@@ -1,7 +1,7 @@
 /* ONROAD 2026. Shared storefront styles; Cafe24 owns forms and commerce states. */
 body.onroad-page *,body.onroad-page *::before,body.onroad-page *::after {box-sizing:border-box;}
 body.onroad-page input,body.onroad-page select,body.onroad-page textarea,body.onroad-page button,body.onroad-page code {font-family:'Noto Sans KR',Arial,sans-serif!important;}
-body.onroad-page a {color:inherit;}
+:where(body.onroad-page) a {color:inherit;}
 body.onroad-page button,body.onroad-page a {touch-action:manipulation;}
 body.onroad-page em {font-style:normal;}
 body.onroad-page #wrap {overflow:visible;}
@@ -204,7 +204,8 @@ body.onroad-page :is(.memberArea,.myshopArea,.onroad-basket-page) .ec-base-table
 body.onroad-page :is(.memberArea,.myshopArea,.onroad-basket-page) .ec-base-table td {border-color:#e3e7e3;color:#17221e;}
 body.onroad-page :is(.memberArea,.myshopArea,.onroad-basket-page) .ec-base-tab .menu {border-color:#e3e7e3;background:#fff;}
 body.onroad-page :is(.memberArea,.myshopArea,.onroad-basket-page) .ec-base-tab .menu>li>a {background:#fff;color:#707872;}
-body.onroad-page :is(.memberArea,.myshopArea,.onroad-basket-page) .ec-base-tab .menu>li.selected>a {color:#17221e;border-color:#17221e;}
+body.onroad-page :is(.memberArea,.myshopArea,.onroad-basket-page) .ec-base-tab .menu>li>a:hover {background:#f7f8f6;color:#17221e;border-color:#17221e;}
+body.onroad-page :is(.memberArea,.myshopArea,.onroad-basket-page) .ec-base-tab .menu>li.selected>a {background:#fff;color:#17221e;border-color:#17221e;}
 body.onroad-page :is(.memberArea,.myshopArea,.onroad-basket-page) .txtEm {color:#17221e;}
 body.onroad-page :is(.memberArea,.myshopArea,.onroad-basket-page) .ec-base-button.gBottom {margin:32px 0;}
 
@@ -606,6 +607,7 @@ body.onroad-page #contents .onroad-product-detail-page.pd-minimal .imgArea .list
     box-sizing: border-box !important;
 }
 body.onroad-page #contents .onroad-product-detail-page.pd-minimal .imgArea .listImg li img { display: block !important; width: 100% !important; height: auto !important; }
+body.onroad-page #contents .onroad-product-detail-page.pd-minimal .pd-media img[src*="txt_product_zoom.gif"] { display: none !important; }
 body.onroad-page #contents .onroad-product-detail-page.pd-minimal .headingArea { margin: 0 0 24px !important; padding: 8px 0 0 !important; border: 0 !important; }
 body.onroad-page #contents .onroad-product-detail-page.pd-minimal .headingArea .icon:empty { display: none !important; }
 body.onroad-page #contents .onroad-product-detail-page.pd-minimal .headingArea .icon { margin-bottom: 8px !important; }
@@ -781,9 +783,9 @@ body.onroad-page #contents .onroad-product-detail-page.pd-minimal .productAction
 }
 body.onroad-page #contents .onroad-product-detail-page.pd-minimal .productAction .action_button > [class*="btn"]::before,
 body.onroad-page #contents .onroad-product-detail-page.pd-minimal .productAction .action_button > [class*="btn"]::after { display: none !important; }
-body.onroad-page #contents .onroad-product-detail-page.pd-minimal .productAction .btnSubmit { border-color: #171b19 !important; background: #171b19 !important; color: #fff !important; }
-body.onroad-page #contents .onroad-product-detail-page.pd-minimal .productAction .btnSubmit:hover { background: #343c36 !important; }
-body.onroad-page #contents .onroad-product-detail-page.pd-minimal .productAction .btnNormal:hover { background: #f5f6f5 !important; }
+body.onroad-page #contents .onroad-product-detail-page.pd-minimal .productAction .action_button > .btnSubmit:not(.disabled):not(:disabled) { border-color: #171b19 !important; background: #171b19 !important; color: #fff !important; }
+body.onroad-page #contents .onroad-product-detail-page.pd-minimal .productAction .action_button > .btnSubmit:not(.disabled):not(:disabled):hover { background: #343c36 !important; }
+body.onroad-page #contents .onroad-product-detail-page.pd-minimal .productAction .action_button > .btnNormal:not(.disabled):not(:disabled):hover { background: #f5f6f5 !important; }
 body.onroad-page #contents .onroad-product-detail-page.pd-minimal .productAction #actionWish::before,
 body.onroad-page #contents .onroad-product-detail-page.pd-minimal .productAction #actionWish::after,
 body.onroad-page #contents .onroad-product-detail-page.pd-minimal .productAction #actionWishSoldout::before,
