@@ -84,6 +84,7 @@ body.onroad-page #contents .onroad-product-detail-page.pd-minimal .imgArea .list
     box-sizing: border-box !important;
 }
 body.onroad-page #contents .onroad-product-detail-page.pd-minimal .imgArea .listImg li img { display: block !important; width: 100% !important; height: auto !important; }
+body.onroad-page #contents .onroad-product-detail-page.pd-minimal .pd-media img[src*="txt_product_zoom.gif"] { display: none !important; }
 body.onroad-page #contents .onroad-product-detail-page.pd-minimal .headingArea { margin: 0 0 24px !important; padding: 8px 0 0 !important; border: 0 !important; }
 body.onroad-page #contents .onroad-product-detail-page.pd-minimal .headingArea .icon:empty { display: none !important; }
 body.onroad-page #contents .onroad-product-detail-page.pd-minimal .headingArea .icon { margin-bottom: 8px !important; }
