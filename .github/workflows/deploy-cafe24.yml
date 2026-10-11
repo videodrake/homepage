@@ -54,6 +54,14 @@ jobs:
               'shopinfo/intake-guide.html',
               'shopinfo/health-functional.html',
               'shopinfo/endurance-core.html',
+              'shopinfo/guide.html',
+              'journal/post.html',
+              'member/login.html',
+              'member/agreement.html',
+              'member/join.html',
+              'member/join_result.html',
+              'member/modify.html',
+              'myshop/index.html',
           ]
           # This image directory is new in this redesign.
           added = []
@@ -85,7 +93,7 @@ jobs:
                                'required_before_deploy': relative in required})
           manifest_path = Path(os.environ['RUNNER_TEMP']) / 'onroad-design-manifest.json'
           manifest_path.write_text(json.dumps(manifest, indent=2) + '\n')
-          print(f'Staged {len(manifest)} design files. Orders, account templates, platform settings, and /skin9 are outside this manifest.')
+          print(f'Staged {len(manifest)} design files. Order/payment templates, customer records, platform settings, and /skin9 are outside this manifest.')
           PY
 
       - name: Install lftp
