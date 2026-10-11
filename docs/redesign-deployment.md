@@ -8,7 +8,7 @@ This document supersedes the old whole-directory mirror and deletion instruction
 
 - A local pre-edit repository archive is kept outside the repository in `D:\온로드\쇼핑몰_리디자인_2026-10-11`.
 - Before each deployment, the workflow downloads the current remote `/base/` design. Five known unreadable Cafe24 managed files are excluded explicitly; none is in the upload scope.
-- Any other download failure stops the job. All 13 existing templates, styles, and scripts that will be overwritten must have nonempty rollback copies.
+- Any other download failure stops the job. All 21 existing templates, styles, and scripts that will be overwritten must have nonempty rollback copies, including the six member/account templates, store guide, and journal page added for the full-store renewal.
 - A deployment target or any parent directory that is a symbolic link fails validation. Other downloaded platform symbolic links are recorded as relative paths and original targets in `SYMLINKS.json`, then only those local links are removed. The scan does not follow links; this prevents the artifact uploader from traversing outside the backup into the runner filesystem. Remote links and files are unchanged.
 - `DEPLOY_MANIFEST.json` records every uploaded path, new file hash, whether it existed before deployment, and the old file hash.
 - The backup is stored as the GitHub Actions artifact `cafe24-base-before-<run ID>-<attempt>`, with a requested retention of 90 days. Its upload must succeed before the live upload step can run. Download an enduring local copy before the artifact expires.
@@ -28,17 +28,27 @@ shopinfo/ingredient-science.html
 shopinfo/intake-guide.html
 shopinfo/health-functional.html
 shopinfo/endurance-core.html
+shopinfo/guide.html
+journal/post.html
+member/login.html
+member/agreement.html
+member/join.html
+member/join_result.html
+member/modify.html
+myshop/index.html
 SkinImg/img/onroad-2026/*                    (new product design assets)
 ```
 
-Cart, payment, account, and order templates, customer/order records, products/prices, platform settings, and DNS are outside the write scope. Shared header, footer, and CSS still change their visual appearance. A file outside this manifest requires an explicit workflow scope change before it can be deployed.
+Cart, payment, and order templates, customer/order records, products/prices, platform settings, and DNS are outside the write scope. The listed member/account templates receive presentation changes while preserving Cafe24 modules, variables, directives, and action handlers. Shared header, footer, and CSS also change the appearance of pages outside the template list. A file outside this manifest requires an explicit workflow scope change before it can be deployed.
+
+Product records are separate from the skin backup. Before changing product 11 in the product manager, preserve its image slots, additional-image order, PC description HTML, and any separate mobile description HTML. Updating `/SkinImg/img/` alone does not update the native product, search, or cart images. Keep the original image variables and `{$product_detail}` in the templates; change their content through product management. Do not use the Cafe24 Smart Design editor.
 
 ## Running and checking
 
 1. Commit the reviewed design, workflow, and this document on a feature branch. Use the existing PR-to-main process; do not force-push.
 2. A main push automatically performs backup → artifact save → scoped upload. A manual run with `dry_run: true` performs staging, remote reads, backup validation, and artifact save only. It makes no remote files, directories, deletions, or permission changes.
 3. If backup or artifact save fails, resolve that failure before retrying. Never bypass the backup gate to make deployment pass.
-4. Check the completed workflow, then review storefront home/product/mobile navigation, actual price and quantity selection, cart, and login. Stop before placing an order. The local preview does not execute Cafe24's purchase runtime and cannot validate checkout behavior.
+4. Check the completed workflow, then review storefront home/product/mobile navigation, actual price and quantity selection, cart, login, signup forms, and the account dashboard. Verify native hidden/disabled states, unsupported social-login buttons, guest-purchase availability, accordion and option-layer behavior, and empty versus populated order views. Stop before placing an order or submitting a real signup/profile change. The local preview does not execute Cafe24's purchase runtime and cannot validate checkout behavior.
 
 Local visual preview:
 
