@@ -174,7 +174,7 @@ body.onroad-page .or-page .or-section p:not([class]) {font-size:15px;color:#6470
 body.onroad-page #contents>.section:not(.or-container),
 body.onroad-page #contents>.myshopArea,
 body.onroad-page #contents>.memberArea {width:calc(100% - 80px);max-width:1120px;margin-left:auto;margin-right:auto;float:none;}
-body.onroad-page #contents>.path {display:none;}
+body.onroad-page #contents .path {display:none!important;}
 body.onroad-page #contents>.titleArea,
 body.onroad-page .myshopArea>.titleArea {padding:56px 0 28px;margin-top:0;margin-bottom:0;text-align:left;border:0;}
 body.onroad-page .titleArea h2 {font-size:28px;font-weight:500;line-height:1.5;letter-spacing:-1px;color:#17221e;}
@@ -209,8 +209,8 @@ body.onroad-page :is(.memberArea,.myshopArea,.onroad-basket-page) .txtEm {color:
 body.onroad-page :is(.memberArea,.myshopArea,.onroad-basket-page) .ec-base-button.gBottom {margin:32px 0;}
 
 /* Login and a remembered product; no promised promotions. */
-body.onroad-page #contents>.onroad-login-title,
-body.onroad-page #contents>.onroad-login-shell {max-width:460px;}
+body.onroad-page #contents>.section.onroad-login-title,
+body.onroad-page #contents>.section.onroad-login-shell {max-width:460px;}
 body.onroad-page .onroad-login-title h2 {text-align:left;}
 body.onroad-page .onroad-login-page {width:100%;margin:0;}
 body.onroad-page .onroad-auth-card {width:100%;margin:0;padding:0;border:0;background:#fff;}
@@ -231,6 +231,8 @@ body.onroad-page .onroad-login-page .login__sns [class*="btn"] {font-size:13px;f
 body.onroad-page .wrap_sns_log__more {margin-top:15px;}
 body.onroad-page .wrap_sns_log__more summary {padding:8px 0;font-size:12px;color:#707872;cursor:pointer;text-align:center;}
 body.onroad-page .wrap_sns_log__more[open] summary {margin-bottom:10px;}
+body.onroad-page .onroad-login-page .login__sns:not(:has(.wrap_sns_log a:not(.displaynone):not([hidden]))),
+body.onroad-page .onroad-login-page .wrap_sns_log__more:not(:has(>a:not(.displaynone):not([hidden]))) {display:none;}
 body.onroad-page .onroad-auth-card--guest {margin-top:30px;padding-top:28px;border-top:1px solid #e3e7e3;}
 body.onroad-page .onroad-auth-card--guest .onroad-auth-card__head {margin-bottom:8px;}
 body.onroad-page .onroad-auth-card--guest .onroad-guest-purchase {margin-top:20px;background:#fff;color:#17221e;border:1px solid #dce1dc;}
@@ -256,12 +258,12 @@ body.onroad-page .onroad-guest-lookup__body .txt_nonmem_check {display:none;}
 body.onroad-page .onroad-guest-lookup__body input {width:100%;height:48px;margin:0 0 10px;border:1px solid #dce1dc;}
 
 /* Consent uses native .on state and checkboxes without changing selection. */
-body.onroad-page #contents>.onroad-agreement-page,
-body.onroad-page #contents>.onroad-join-page,
-body.onroad-page #contents>.onroad-join-title,
-body.onroad-page #contents>.onroad-join-step,
-body.onroad-page #contents>.onroad-join-result-page,
-body.onroad-page #contents>.onroad-join-result-coupon {max-width:760px;}
+body.onroad-page #contents>.section.onroad-agreement-page,
+body.onroad-page #contents>.section.onroad-join-page,
+body.onroad-page #contents>.section.onroad-join-title,
+body.onroad-page #contents>.section.onroad-join-step,
+body.onroad-page #contents>.section.onroad-join-result-page,
+body.onroad-page #contents>.section.onroad-join-result-coupon {max-width:760px;}
 body.onroad-page #jgAgreeV2 {margin-bottom:80px;}
 body.onroad-page #jgAgreeV2 .onroad-agree-v2__all {display:flex;gap:24px;align-items:center;justify-content:space-between;padding:24px;background:#f7f8f6;border:1px solid #e3e7e3;margin-bottom:32px;}
 body.onroad-page #jgAgreeV2 .onroad-agree-v2__all-text strong {display:block;font-size:17px;font-weight:500;}
