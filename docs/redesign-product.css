@@ -9,6 +9,7 @@ body.onroad-page #contents > .pd-section-nav {
     box-sizing: border-box !important;
 }
 body.onroad-page #contents > .onroad-product-detail-page.pd-minimal { margin-top: 32px !important; margin-bottom: 88px !important; }
+body.onroad-page #contents > .onroad-product-additional-page.pd-minimal-additional { margin-top: 0 !important; padding: 0 !important; }
 body.onroad-page #contents .onroad-product-detail-page.pd-minimal,
 body.onroad-page #contents .onroad-product-additional-page.pd-minimal-additional { color: #171b19 !important; font-family: var(--font-sans, sans-serif) !important; }
 body.onroad-page #contents .onroad-product-detail-page.pd-minimal .detailArea {
