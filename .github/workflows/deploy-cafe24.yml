@@ -9,13 +9,13 @@ on:
   workflow_dispatch:
     inputs:
       dry_run:
-        description: 'Dry run (lftp --dry-run, 실제 업로드 안 함)'
+        description: 'Back up and validate only; never write to Cafe24'
         required: false
-        default: 'false'
-      delete_remote:
-        description: '원격에만 있는 파일 삭제 (전체 미러). 기본 OFF — 추가/업데이트만'
-        required: false
-        default: 'false'
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
 
 concurrency:
   group: cafe24-sftp
@@ -23,44 +23,163 @@ concurrency:
 
 jobs:
   deploy:
+    name: Back up /base, then deploy the Onroad design
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 45
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Stage only the approved design paths
+        run: |
+          set -euo pipefail
+          python3 <<'PY'
+          import hashlib, json, os, shutil
+          from pathlib import Path
+
+          source = Path('cafe24').resolve()
+          stage = Path(os.environ['RUNNER_TEMP']) / 'onroad-design-stage'
+          required = [
+              'index.html',
+              'layout/basic/main.html',
+              'layout/basic/layout.html',
+              'layout/basic/header.html',
+              'layout/basic/footer.html',
+              'layout/basic/css/onroad.css',
+              'layout/basic/js/onroad-brand.js',
+              'product/detail.html',
+              'shopinfo/company.html',
+              'shopinfo/ingredient-science.html',
+              'shopinfo/intake-guide.html',
+              'shopinfo/health-functional.html',
+              'shopinfo/endurance-core.html',
+          ]
+          # This image directory is new in this redesign.
+          added = []
+          image_root = source / 'SkinImg/img/onroad-2026'
+          if not image_root.is_dir() or image_root.is_symlink():
+              raise SystemExit('Missing real product asset directory: SkinImg/img/onroad-2026')
+          allowed_images = {'.png', '.jpg', '.jpeg', '.webp', '.avif', '.svg'}
+          for asset in sorted(image_root.rglob('*')):
+              if asset.is_symlink():
+                  raise SystemExit(f'Symlinks are not allowed: {asset.relative_to(source)}')
+              if asset.is_file():
+                  if asset.suffix.lower() not in allowed_images:
+                      raise SystemExit(f'Unexpected asset type: {asset.relative_to(source)}')
+                  added.append(asset.relative_to(source).as_posix())
+          if not added:
+              raise SystemExit('The new product asset directory is empty')
+          manifest = []
+          for relative in required + added:
+              original = source / relative
+              if not original.is_file() or original.is_symlink() or not original.resolve().is_relative_to(source):
+                  raise SystemExit(f'Missing or unsafe source: {relative}')
+              data = original.read_bytes()
+              if not data:
+                  raise SystemExit(f'Empty design file: {relative}')
+              destination = stage / relative
+              destination.parent.mkdir(parents=True, exist_ok=True)
+              shutil.copyfile(original, destination)
+              manifest.append({'path': relative, 'sha256': hashlib.sha256(data).hexdigest(),
+                               'required_before_deploy': relative in required})
+          manifest_path = Path(os.environ['RUNNER_TEMP']) / 'onroad-design-manifest.json'
+          manifest_path.write_text(json.dumps(manifest, indent=2) + '\n')
+          print(f'Staged {len(manifest)} design files. Orders, account templates, platform settings, and /skin9 are outside this manifest.')
+          PY
+
       - name: Install lftp
         run: sudo apt-get update && sudo apt-get install -y --no-install-recommends lftp
 
-      - name: Mirror cafe24/ to SFTP root
+      - name: Validate Cafe24 SFTP secrets
         env:
           SFTP_HOST: ${{ secrets.CAFE24_SFTP_HOST }}
           SFTP_PORT: ${{ secrets.CAFE24_SFTP_PORT }}
           SFTP_USER: ${{ secrets.CAFE24_SFTP_USER }}
           SFTP_PASS: ${{ secrets.CAFE24_SFTP_PASS }}
-          DRY_RUN: ${{ github.event.inputs.dry_run }}
-          DELETE_REMOTE: ${{ github.event.inputs.delete_remote }}
         run: |
           set -euo pipefail
+          for key in SFTP_HOST SFTP_PORT SFTP_USER SFTP_PASS; do
+            if [ -z "${!key:-}" ]; then
+              echo "::error::Missing required Cafe24 SFTP setting: ${key}"
+              exit 1
+            fi
+          done
 
-          DRY_FLAG=""
-          if [ "${DRY_RUN:-false}" = "true" ]; then
-            DRY_FLAG="--dry-run"
-            echo "::notice::Dry-run mode — 실제 업로드 안 함"
-          fi
+      - name: Back up the current remote design before any writes
+        env:
+          SFTP_HOST: ${{ secrets.CAFE24_SFTP_HOST }}
+          SFTP_PORT: ${{ secrets.CAFE24_SFTP_PORT }}
+          SFTP_USER: ${{ secrets.CAFE24_SFTP_USER }}
+          SFTP_PASS: ${{ secrets.CAFE24_SFTP_PASS }}
+        run: |
+          set -euo pipefail
+          mkdir -p "${RUNNER_TEMP}/cafe24-base-backup/base"
+          # These platform-managed files are unreadable on Cafe24 and are never deployed.
+          # Every other download error aborts the job. Nothing has been written remotely yet.
+          lftp <<LFTP_BACKUP
+          set cmd:fail-exit yes
+          set sftp:auto-confirm yes
+          set net:max-retries 3
+          set net:timeout 30
+          set net:reconnect-interval-base 5
+          open -u "$SFTP_USER","$SFTP_PASS" sftp://$SFTP_HOST:$SFTP_PORT
+          mirror \
+            --verbose \
+            --parallel=2 \
+            --no-perms \
+            --exclude-glob robots.txt.20260429_0828 \
+            --exclude-glob sitemap0.xml.temp \
+            --exclude-glob calendar/app/js/swiper/swiper-bundle.min.js.map \
+            --exclude-glob preference/board/board_title_4.ini \
+            --exclude-glob preference/product/product_category.ini \
+            /base/ "${RUNNER_TEMP}/cafe24-base-backup/base/"
+          bye
+          LFTP_BACKUP
+          python3 <<'PY'
+          import hashlib, json, os, shutil
+          from pathlib import Path
 
-          # 기본 OFF: 추가/업데이트만. workflow_dispatch에서 delete_remote=true로
-          # 켜야 원격에만 있는 파일이 지워짐. push trigger는 항상 OFF (안전).
-          DELETE_FLAG=""
-          if [ "${DELETE_REMOTE:-false}" = "true" ]; then
-            DELETE_FLAG="--delete"
-            echo "::warning::Delete mode ON — 로컬에 없는 원격 파일은 삭제됨"
-          else
-            echo "::notice::Add/update only — 원격 파일 삭제 안 함"
-          fi
+          temporary = Path(os.environ['RUNNER_TEMP'])
+          backup = temporary / 'cafe24-base-backup'
+          manifest_path = temporary / 'onroad-design-manifest.json'
+          manifest = json.loads(manifest_path.read_text())
+          for entry in manifest:
+              old = backup / 'base' / entry['path']
+              if old.is_symlink():
+                  raise SystemExit(f'Unsafe rollback symlink: {entry["path"]}')
+              if entry['required_before_deploy'] and (not old.is_file() or old.stat().st_size == 0):
+                  raise SystemExit(f'Rollback backup missing required file: {entry["path"]}')
+              entry['existed_before_deploy'] = old.is_file()
+              entry['rollback_sha256'] = hashlib.sha256(old.read_bytes()).hexdigest() if old.is_file() else None
+          (backup / 'DEPLOY_MANIFEST.json').write_text(json.dumps(manifest, indent=2) + '\n')
+          (backup / 'SOURCE_COMMIT.txt').write_text(os.environ['GITHUB_SHA'] + '\n')
+          shutil.copyfile('docs/redesign-deployment.md', backup / 'RESTORE.md')
+          print(f'Rollback verified for {sum(item["existed_before_deploy"] for item in manifest)} existing deployment targets.')
+          PY
 
-          lftp <<LFTP_SCRIPT
+      - name: Save rollback artifact before deployment
+        uses: actions/upload-artifact@v4
+        with:
+          name: cafe24-base-before-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/cafe24-base-backup
+          if-no-files-found: error
+          retention-days: 90
+
+      - name: Dry-run result
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}
+        run: echo '::notice::Dry run completed. The rollback artifact was saved; no remote files or directories were changed.'
+
+      - name: Upload only the staged design files
+        if: ${{ github.event_name != 'workflow_dispatch' || !inputs.dry_run }}
+        env:
+          SFTP_HOST: ${{ secrets.CAFE24_SFTP_HOST }}
+          SFTP_PORT: ${{ secrets.CAFE24_SFTP_PORT }}
+          SFTP_USER: ${{ secrets.CAFE24_SFTP_USER }}
+          SFTP_PASS: ${{ secrets.CAFE24_SFTP_PASS }}
+        run: |
+          set -euo pipefail
+          lftp <<LFTP_DEPLOY
           set cmd:fail-exit yes
           set sftp:auto-confirm yes
           set net:max-retries 3
@@ -74,17 +193,7 @@ jobs:
             --verbose \
             --no-perms \
             --parallel=2 \
-            --exclude-glob .DS_Store \
-            --exclude-glob .git \
-            --exclude-glob .gitkeep \
-            --exclude-glob Thumbs.db \
-            --exclude-glob '*.swp' \
-            $DELETE_FLAG \
-            $DRY_FLAG \
-            cafe24/ /base/
-          # Remove retired templates that add/update-only deploys cannot delete.
-          rm -f /base/myshop/order/list_old.html
-          rm -f /base/myshop/order/detail_old.html
-          rm -f /base/css/module/myshop/orderOldHistoryList.css
+            "${RUNNER_TEMP}/onroad-design-stage/" /base/
           bye
-          LFTP_SCRIPT
+          LFTP_DEPLOY
+          echo '::notice::Scoped Onroad design upload completed. No remote delete commands were run.'

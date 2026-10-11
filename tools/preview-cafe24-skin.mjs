@@ -45,7 +45,9 @@ function expandImports(html) {
 function expandDirectives(html) {
   const output = html
     .replace(/<!--@css\(([^)]+)\)-->/g, '<link rel="stylesheet" href="$1">')
-    .replace(/<!--@js\(([^)]+)\)-->/g, (_, scriptPath) => /onroad-(?:v2|v4-journal)\.js$/.test(scriptPath) ? `<script src="${scriptPath}" defer></script>` : '')
+    // Preview only our standalone design scripts. Cafe24 module scripts require
+    // its live storefront runtime and must not fake cart or checkout behavior.
+    .replace(/<!--@js\(([^)]+)\)-->/g, (_, scriptPath) => /onroad-(?:brand|v2|v4-journal)\.js$/.test(scriptPath) ? `<script src="${scriptPath}" defer></script>` : '')
     .replace(/<!--#ez="[^"]*"-->/g, '');
   return output.replace('</head>', '<style>[module="Layout_multishopShipping"],#progressPaybar,#layoutDimmed,.layer_shadow,.RTMB{display:none!important}</style></head>');
 }
@@ -80,5 +82,5 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(port, '127.0.0.1', () => {
-  console.log(`Cafe24 skin preview: http://127.0.0.1:${port}/journal/index.html`);
+  console.log(`Cafe24 skin preview: http://127.0.0.1:${port}/`);
 });
