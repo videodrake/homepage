@@ -149,6 +149,6 @@ body.onroad-page.or-has-purchase-dock {padding-bottom:82px!important;}
  body.onroad-page .or-purchase-dock__inner {gap:16px;}
  body.onroad-page .or-purchase-dock__info {display:block;min-width:0;font-size:11px;line-height:1.7;}
  body.onroad-page .or-purchase-dock__meta {display:none;}
- body.onroad-page .or-purchase-dock__price {font-size:16px;line-height:1.5;}
+ body.onroad-page .or-purchase-dock__price {display:block;font-size:16px;line-height:1.5;}
  body.onroad-page .or-purchase-dock a {min-width:0;flex:0 0 52%;gap:10px;font-size:12px;padding:12px 15px;}
 }
