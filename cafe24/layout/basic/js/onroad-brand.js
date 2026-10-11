@@ -167,7 +167,17 @@
         };
         var sectionQueued=false;
         window.addEventListener('scroll',function(){if(!sectionQueued){sectionQueued=true;window.requestAnimationFrame(function(){sectionQueued=false;updateSection();});}},{passive:true});
-        sectionNav.addEventListener('click',function(){window.requestAnimationFrame(updateSection);});
+        sectionNav.addEventListener('click',function(event) {
+          var link = event.target.closest('a');
+          if (!link || !sectionNav.contains(link)) return;
+          var target = document.querySelector(link.getAttribute('href'));
+          if (!target || !target.getClientRects().length) return;
+          event.preventDefault();
+          event.stopPropagation();
+          target.scrollIntoView({behavior:reduceMotion.matches ? 'auto' : 'smooth',block:'start'});
+          window.history.replaceState(null,'',link.getAttribute('href'));
+          window.requestAnimationFrame(updateSection);
+        });
         updateSection();
       }
     }

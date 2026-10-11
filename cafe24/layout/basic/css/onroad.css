@@ -692,6 +692,9 @@ body.onroad-page #contents > .pd-section-nav {
 }
 body.onroad-page #contents > .onroad-product-detail-page.pd-minimal { margin-top: 32px !important; margin-bottom: 88px !important; }
 body.onroad-page #contents > .onroad-product-additional-page.pd-minimal-additional { margin-top: 0 !important; padding: 0 !important; }
+/* These are scroll destinations. Only the legacy tab shells are exposed;
+   native board permissions, empty states and displaynone flags stay intact. */
+body.onroad-page #contents .onroad-product-additional-page > :is(#prdDetail, #prdReview, #prdQnA, #prdInfo):not(.displaynone) { display: block !important; }
 body.onroad-page #contents .onroad-product-detail-page.pd-minimal,
 body.onroad-page #contents .onroad-product-additional-page.pd-minimal-additional { color: #142238 !important; font-family: var(--font-sans, sans-serif) !important; }
 body.onroad-page #contents .onroad-product-detail-page.pd-minimal .detailArea {
