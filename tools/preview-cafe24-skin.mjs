@@ -49,7 +49,7 @@ function expandDirectives(html) {
     // its live storefront runtime and must not fake cart or checkout behavior.
     .replace(/<!--@js\(([^)]+)\)-->/g, (_, scriptPath) => /onroad-(?:brand|v2|v4-journal)\.js$/.test(scriptPath) ? `<script src="${scriptPath}" defer></script>` : '')
     .replace(/<!--#ez="[^"]*"-->/g, '');
-  return output.replace('</head>', '<style>[module="Layout_multishopShipping"],#progressPaybar,#layoutDimmed,.layer_shadow,.RTMB{display:none!important}</style></head>');
+  return output.replace('</head>', '<style>[module="Layout_multishopShipping"],#progressPaybar,#layoutDimmed,.layer_shadow,.RTMB,.or-cart .count{display:none!important}</style></head>');
 }
 
 function renderPage(pagePath) {

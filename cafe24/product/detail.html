@@ -62,14 +62,13 @@
         <div class="infoArea" data-ez-role="ez-discount-tag">
             <div class="headingArea">
                 <div class="icon">{$soldout_icon} {$stock_icon} {$recommend_icon} {$new_icon} {$product_icons} {$today_arrival_icon} {$pickup_icon} {$benefit_icons} {$regular_delivery_icon} {$cultural_tax_icon}</div>
-                <div class="pd-eyebrow">ENDURANCE CORE</div>
                 <h1>{$name}</h1>
-                <p class="pd-lede">달리는 일상에, 하루 한 정.<br>옥타코사놀을 담은 지구력 관리 루틴.</p>
+                <p class="pd-lede">옥타코사놀 40 mg 함유 건강기능식품.</p>
                 <span class="delivery {$delvtype_display|display}">(해외배송 가능상품)</span>
             </div>
 
-            <dl class="pd-essential" aria-label="제품 핵심 정보">
-                <div><dt>한 박스</dt><dd>500 mg × 60정</dd></div>
+            <dl class="pd-essential" aria-label="제품 정보">
+                <div><dt>내용량</dt><dd>500 mg × 60정</dd></div>
                 <div><dt>섭취 방법</dt><dd>1일 1회, 1회 1정</dd></div>
                 <div><dt>옥타코사놀</dt><dd>40 mg</dd></div>
             </dl>
@@ -158,9 +157,9 @@
             </div>
 
             <div id="{$total.total_price_id}" class="totalPrice">
-                <strong class="title">총 결제 예정 금액 <span class="qty">(수량)</span></strong><span class="{$total.total_cnt}"><strong><em>0</em></strong> (0개)</span>
+                <strong class="title">상품 합계 <span class="qty">(수량)</span></strong><span class="{$total.total_cnt}"><strong><em>0</em></strong> (0개)</span>
             </div>
-            <p class="ec-base-help {$price_warning_class}">할인 적용 최종 금액은 주문서에서 확인할 수 있습니다.</p>
+            <p class="ec-base-help {$price_warning_class}">할인 적용 금액은 주문서에서 확인해 주세요.</p>
 
             <div module="product_action" id="{$fixed_action_button}" class="productAction">
                 <div id="ec-product-price-info" class="displaynone" ec-data-custom="{$disp_product_custom}" ec-data-price="{$product_price}"></div>
@@ -198,7 +197,6 @@
 
     <section id="prdDetail" class="pd-flow pd-flow--detail">
         <div class="pd-section-heading">
-            <p>매일의 루틴을 위한 선택</p>
             <h2>온로드 지구력코어</h2>
         </div>
         <div class="productDetail"><div>{$product_detail}</div></div>
@@ -274,7 +272,6 @@
     <div id="prdInfo" class="pd-guide">
         <div class="pd-guide__head">
             <h2>배송·교환 안내</h2>
-            <p>주문 전 아래 내용을 확인해 주세요.</p>
         </div>
         <div class="detail_guide">
             <div class="ec-base-fold theme1 selected eToggle pd-guide__item pd-guide__item--payment"><div class="title"><h2>결제 안내</h2></div><div class="contents"><div class="info">{$payment_info}</div></div></div>
