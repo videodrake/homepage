@@ -259,9 +259,9 @@ body.onroad-page #contents .onroad-product-detail-page.pd-minimal .productAction
 }
 body.onroad-page #contents .onroad-product-detail-page.pd-minimal .productAction .action_button > [class*="btn"]::before,
 body.onroad-page #contents .onroad-product-detail-page.pd-minimal .productAction .action_button > [class*="btn"]::after { display: none !important; }
-body.onroad-page #contents .onroad-product-detail-page.pd-minimal .productAction .btnSubmit { border-color: #171b19 !important; background: #171b19 !important; color: #fff !important; }
-body.onroad-page #contents .onroad-product-detail-page.pd-minimal .productAction .btnSubmit:hover { background: #343c36 !important; }
-body.onroad-page #contents .onroad-product-detail-page.pd-minimal .productAction .btnNormal:hover { background: #f5f6f5 !important; }
+body.onroad-page #contents .onroad-product-detail-page.pd-minimal .productAction .action_button > .btnSubmit:not(.disabled):not(:disabled) { border-color: #171b19 !important; background: #171b19 !important; color: #fff !important; }
+body.onroad-page #contents .onroad-product-detail-page.pd-minimal .productAction .action_button > .btnSubmit:not(.disabled):not(:disabled):hover { background: #343c36 !important; }
+body.onroad-page #contents .onroad-product-detail-page.pd-minimal .productAction .action_button > .btnNormal:not(.disabled):not(:disabled):hover { background: #f5f6f5 !important; }
 body.onroad-page #contents .onroad-product-detail-page.pd-minimal .productAction #actionWish::before,
 body.onroad-page #contents .onroad-product-detail-page.pd-minimal .productAction #actionWish::after,
 body.onroad-page #contents .onroad-product-detail-page.pd-minimal .productAction #actionWishSoldout::before,
