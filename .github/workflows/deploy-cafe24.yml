@@ -146,16 +146,35 @@ jobs:
           manifest = json.loads(manifest_path.read_text())
           for entry in manifest:
               old = backup / 'base' / entry['path']
-              if old.is_symlink():
-                  raise SystemExit(f'Unsafe rollback symlink: {entry["path"]}')
+              # Reject links in every component of a deployment target before
+              # reading it; a parent directory link must not escape the backup.
+              component = backup / 'base'
+              for part in Path(entry['path']).parts:
+                  component = component / part
+                  if component.is_symlink():
+                      raise SystemExit(f'Unsafe rollback symlink: {entry["path"]}')
               if entry['required_before_deploy'] and (not old.is_file() or old.stat().st_size == 0):
                   raise SystemExit(f'Rollback backup missing required file: {entry["path"]}')
               entry['existed_before_deploy'] = old.is_file()
               entry['rollback_sha256'] = hashlib.sha256(old.read_bytes()).hexdigest() if old.is_file() else None
+          # Cafe24 may expose platform-managed entries as links to '/'. Record
+          # and remove only downloaded links so artifact upload cannot follow
+          # them into the runner filesystem. Never traverse their targets.
+          symlinks = []
+          for directory, subdirectories, filenames in os.walk(backup / 'base', topdown=True, followlinks=False):
+              for name in subdirectories + filenames:
+                  link = Path(directory) / name
+                  if link.is_symlink():
+                      symlinks.append({'path': link.relative_to(backup).as_posix(), 'target': os.readlink(link)})
+                      link.unlink()
+                      if name in subdirectories:
+                          subdirectories.remove(name)
+          (backup / 'SYMLINKS.json').write_text(json.dumps(symlinks, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
           (backup / 'DEPLOY_MANIFEST.json').write_text(json.dumps(manifest, indent=2) + '\n')
           (backup / 'SOURCE_COMMIT.txt').write_text(os.environ['GITHUB_SHA'] + '\n')
           shutil.copyfile('docs/redesign-deployment.md', backup / 'RESTORE.md')
           print(f'Rollback verified for {sum(item["existed_before_deploy"] for item in manifest)} existing deployment targets.')
+          print(f'Recorded and removed {len(symlinks)} downloaded platform symlinks from the local artifact directory.')
           PY
 
       - name: Save rollback artifact before deployment

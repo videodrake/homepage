@@ -9,6 +9,7 @@ This document supersedes the old whole-directory mirror and deletion instruction
 - A local pre-edit repository archive is kept outside the repository in `D:\온로드\쇼핑몰_리디자인_2026-10-11`.
 - Before each deployment, the workflow downloads the current remote `/base/` design. Five known unreadable Cafe24 managed files are excluded explicitly; none is in the upload scope.
 - Any other download failure stops the job. All 13 existing templates, styles, and scripts that will be overwritten must have nonempty rollback copies.
+- A deployment target or any parent directory that is a symbolic link fails validation. Other downloaded platform symbolic links are recorded as relative paths and original targets in `SYMLINKS.json`, then only those local links are removed. The scan does not follow links; this prevents the artifact uploader from traversing outside the backup into the runner filesystem. Remote links and files are unchanged.
 - `DEPLOY_MANIFEST.json` records every uploaded path, new file hash, whether it existed before deployment, and the old file hash.
 - The backup is stored as the GitHub Actions artifact `cafe24-base-before-<run ID>-<attempt>`, with a requested retention of 90 days. Its upload must succeed before the live upload step can run. Download an enduring local copy before the artifact expires.
 - Uploads come from a staging directory containing only the following paths. There are no remote delete commands, broad whole-skin uploads, or changes to permissions.
@@ -49,7 +50,7 @@ It expands Cafe24 layout/import/CSS directives and runs the standalone Onroad de
 
 ## Restore the previous design
 
-1. Download the artifact from the specific deployment run and extract it into a new local directory. Its `base/` folder contains the pre-deployment design; `DEPLOY_MANIFEST.json` identifies precisely which paths this run touched.
+1. Download the artifact from the specific deployment run and extract it into a new local directory. Its `base/` folder contains the pre-deployment design; `DEPLOY_MANIFEST.json` identifies precisely which paths this run touched. `SYMLINKS.json` inventories platform links omitted from the archive; do not recreate those links when restoring the scoped design files.
 2. Compare the manifest's `rollback_sha256` values with the downloaded files before restore. Stop if an expected file is missing or differs.
 3. Make a separate restore staging directory. Copy **only** entries with `existed_before_deploy: true` from the artifact's `base/` into that directory, preserving their relative paths. Do not upload the artifact metadata or blindly mirror the full backup over current platform files.
 4. Back up the current remote copies of those same files again, then upload the restore staging directory to `/base/` using the existing SFTP credentials and add/update-only mode (`--no-perms`, no `--delete`). Never use `/` or `/skin9/` as the target.
