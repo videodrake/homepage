@@ -114,6 +114,7 @@
         if (name === '상품요약정보' || name === '국내·해외배송' || name === '배송방법') row.classList.add('or-redundant-spec');
         if (name === '소비자가') row.classList.add('or-list-price');
         if (name === '판매가') row.classList.add('or-sale-price');
+        if (name === '소비자가' || name === '판매가' || name === '배송비') row.classList.add('or-commerce-row');
       });
       var total = product.querySelector('.totalPrice');
       function updateTotal() {
@@ -159,12 +160,14 @@
         var links = Array.from(sectionNav.querySelectorAll('a'));
         var sections = links.map(function(link){return document.querySelector(link.getAttribute('href'));}).filter(Boolean);
         var updateSection = function() {
-          var current = sections[0];
-          sections.forEach(function(section){if(section.getBoundingClientRect().top<=180) current=section;});
+          var visibleSections = sections.filter(function(section){return section.getClientRects().length;});
+          var current = visibleSections[0];
+          visibleSections.forEach(function(section){if(section.getBoundingClientRect().top<=180) current=section;});
           links.forEach(function(link){var active=current && link.getAttribute('href')==='#'+current.id;link.classList.toggle('is-active',!!active);if(active) link.setAttribute('aria-current','location');else link.removeAttribute('aria-current');});
         };
         var sectionQueued=false;
         window.addEventListener('scroll',function(){if(!sectionQueued){sectionQueued=true;window.requestAnimationFrame(function(){sectionQueued=false;updateSection();});}},{passive:true});
+        sectionNav.addEventListener('click',function(){window.requestAnimationFrame(updateSection);});
         updateSection();
       }
     }
