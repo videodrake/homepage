@@ -8,14 +8,12 @@
 </div>
 <div class="section titleArea onroad-login-title">
     <h2>로그인</h2>
-    <p>주문 내역과 찜한 제품을 이어서 확인하세요.</p>
 </div>
 
 <!-- Pending purchase context (populated via JS when user came from buy/cart action) -->
 <aside class="onroad-pending-purchase" id="pendingPurchase" hidden>
     <div class="onroad-pending-purchase__head">
-        <span class="k">[ Resume · 구매 진행 중 ]</span>
-        <em>로그인하면 결제로 이어집니다</em>
+        <span class="k">선택한 상품</span>
     </div>
     <a class="onroad-pending-purchase__product" id="ppLink" href="#none">
         <div class="onroad-pending-purchase__thumb"><img id="ppImage" alt="" loading="lazy" hidden></div>
@@ -46,8 +44,7 @@
         <fieldset class="form onroad-auth-card onroad-auth-card--member">
             <legend>회원로그인</legend>
             <div class="onroad-auth-card__head">
-                <strong>회원으로 로그인</strong>
-                <p>주문 내역, 적립금, 찜 목록을 이어서 확인하세요.</p>
+                <strong>회원 로그인</strong>
             </div>
             <div class="login">
                 <label class="id ePlaceholder" title="{$login_id_type_text}">{$form.member_id}</label>
@@ -93,12 +90,10 @@
         <div class="onroad-auth-card onroad-auth-card--guest {$display_nomember|display}">
             <div class="onroad-auth-card__head">
                 <strong>비회원으로 구매</strong>
-                <p>가입 없이 빠르게 결제만 진행합니다.</p>
+                <p>회원가입 없이 주문할 수 있습니다.</p>
             </div>
             <ul class="onroad-auth-card__perks">
-                <li>회원가입 절차 없이 <em>즉시 결제</em></li>
-                <li>주문번호 + 비밀번호로 <em>주문 조회</em></li>
-                <li>적립금·등급 혜택은 <em>회원에게만</em> 제공</li>
+                <li>주문번호와 비밀번호로 주문 내역을 조회합니다.</li>
             </ul>
             <a href="{$returnUrl}" onclick="{$action_nomember_order}" class="btnSubmit gFull sizeL onroad-guest-purchase">비회원으로 결제하기</a>
         </div>
@@ -106,15 +101,9 @@
         <!-- Bottom: signup incentive card (still inside member_login for consistent styling) -->
         <aside class="onroad-auth-switch onroad-auth-incentive">
             <div class="onroad-auth-incentive__head">
-                <span class="onroad-auth-incentive__badge">FIRST · 10% OFF</span>
-                <strong class="onroad-auth-incentive__title">처음이라면,<br>회원으로 시작하세요.</strong>
+                <strong class="onroad-auth-incentive__title">아직 회원이 아니신가요?</strong>
             </div>
-            <ul class="onroad-auth-incentive__perks">
-                <li><em>10%</em><span>첫 구매 즉시 적용되는 <b>할인 쿠폰</b></span></li>
-                <li><em>1%</em><span>모든 주문에 <b>적립금 자동 적립</b></span></li>
-                <li><em>등급</em><span>등급별 추가 혜택 + <b>후기 작성</b> 가능</span></li>
-            </ul>
-            <a href="/member/agreement.html" class="onroad-auth-incentive__cta">회원가입하고 10% 받기 <span class="onroad-auth-incentive__arrow" aria-hidden="true">→</span></a>
+            <a href="/member/agreement.html" class="onroad-auth-incentive__cta">회원가입</a>
         </aside>
     </div>
 </div>
