@@ -15,9 +15,9 @@ for (const file of files) {
   assert.equal(after.split('\n')[0].replace(/\r$/,''),before.split('\n')[0].replace(/\r$/,''),`${file}: layout moved`);
 }
 const parts=['docs/redesign-global.css','docs/ux-editorial.css','docs/redesign-product.css'];
-const expected=parts.map(file=>fs.readFileSync(file,'utf8').trim()).join('\n\n')+'\n';
-const compiled=fs.readFileSync('cafe24/layout/basic/css/onroad.css','utf8');
-assert.equal(compiled,expected,'Generated stylesheet is stale');
+const expected=parts.map(file=>fs.readFileSync(file,'utf8').replace(/\r\n/g,'\n').trim()).join('\n\n')+'\n';
+const compiled=fs.readFileSync('cafe24/layout/basic/css/onroad.css','utf8').replace(/\r\n/g,'\n');
+assert.ok(compiled===expected,'Generated stylesheet is stale; run node tools/build-onroad-design.mjs');
 const css=compiled.replace(/\/\*[\s\S]*?\*\//g,'');
 assert.equal((css.match(/\{/g)||[]).length,(css.match(/\}/g)||[]).length,'CSS braces unbalanced');
 for (const file of files) {
