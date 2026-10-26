@@ -20,8 +20,7 @@
   a{color:inherit;text-decoration:none;-webkit-tap-highlight-color:transparent}
   .wrap{max-width:480px;margin:0 auto;padding:22px 20px 48px}
   .top{display:flex;align-items:center;justify-content:space-between}
-  .wordmark{font-family:Arial,sans-serif;font-weight:800;font-size:26px;letter-spacing:-1.3px;line-height:1}
-  .wordmark span{color:var(--orange)}
+  .logo{display:block;padding:4px 0}.logo img{display:block;height:18px;width:auto}
   .back{font-size:12.5px;font-weight:500;color:var(--meta);padding:8px 0}
   .hero{margin-top:18px;background:var(--navy);color:#fff;border-radius:18px;padding:22px 20px 20px;display:flex;gap:14px;align-items:center;overflow:hidden}
   .hero img{flex:0 0 96px;width:96px;height:136px;object-fit:contain;border-radius:10px;background:#fff}
@@ -67,17 +66,18 @@
   .btn .tx{flex:1}.btn .t{display:block;font-size:14.5px;font-weight:700}.btn .s{display:block;font-size:12px;color:var(--meta)}
   .btn .ar{color:var(--meta);font-size:18px}
   .btn--naver{border-color:#cfeedc}.btn--naver .ic{background:var(--green)}
-  .btn--coupang{border-color:#f8d9c2}.btn--coupang .ic{background:#e2471d}
+  .btn--coupang{border-color:#f8d9c2}
+  .ic--app{background:#fff;border:1px solid var(--line);overflow:hidden;padding:0}.ic--app img{width:100%;height:100%;display:block;object-fit:cover;border-radius:10px}
   .btn--all .ic{background:var(--navy)}
   footer{margin-top:32px;text-align:center;font-size:11px;color:var(--meta);line-height:1.7}
   footer a{text-decoration:underline;text-underline-offset:3px}
-  @media (prefers-color-scheme:dark){ body{background:#0f1726;color:#eef1f5} .tile,.card,.trow,.btn{background:#17233a;border-color:#2a3a56} .tile .n,.btn .t,.trow .t{color:#eef1f5} td.v{color:#c9d3e3} td.f{color:#b7c2d4} th,td{border-color:#2a3a56} .trow .ic{background:#2a2419} .pct div{background:#241c14;border-color:#4a3524} .tile .d,.tile .l,.sub,.note,.back,.trow .s,.btn .s,footer,.btn .ar{color:#9aa6b8} }
+  @media (prefers-color-scheme:dark){ body{background:#0f1726;color:#eef1f5} .logo img{filter:invert(1) brightness(1.6)} .tile,.card,.trow,.btn{background:#17233a;border-color:#2a3a56} .tile .n,.btn .t,.trow .t{color:#eef1f5} td.v{color:#c9d3e3} td.f{color:#b7c2d4} th,td{border-color:#2a3a56} .trow .ic{background:#2a2419} .pct div{background:#241c14;border-color:#4a3524} .tile .d,.tile .l,.sub,.note,.back,.trow .s,.btn .s,footer,.btn .ar{color:#9aa6b8} }
 </style>
 </head>
 <body>
 <main class="wrap">
   <div class="top">
-    <a class="wordmark" href="/" aria-label="온로드 홈">onroad<span aria-hidden="true">.</span></a>
+    <a class="logo" href="/" aria-label="온로드 홈"><img src="/SkinImg/img/onroad-2026/onroad-logo-navy-20261026.png" alt="OnRoad" width="688" height="80"></a>
     <a class="back" href="/shopinfo/links.html">← 모든 링크</a>
   </div>
 
@@ -139,9 +139,9 @@
   </section>
 
   <nav class="buy" aria-label="구매">
-    <a class="btn btn--naver" href="https://smartstore.naver.com/zenera_onroad/products/13361297189?utm_source=instagram&utm_medium=links&utm_campaign=product" target="_blank" rel="noopener"><span class="ic">N</span><span class="tx"><span class="t">네이버 N배송으로 구매</span><span class="s">스마트스토어 · 1박스 2개월분</span></span><span class="ar" aria-hidden="true">›</span></a>
-    <a class="btn btn--coupang" href="https://www.coupang.com/vp/products/9505920715?utm_source=instagram&utm_medium=links&utm_campaign=product" target="_blank" rel="noopener"><span class="ic">C</span><span class="tx"><span class="t">쿠팡 로켓배송으로 구매</span><span class="s">쿠팡 상품 페이지</span></span><span class="ar" aria-hidden="true">›</span></a>
-    <a class="btn btn--all" href="/shopinfo/links.html"><span class="ic">≡</span><span class="tx"><span class="t">모든 링크 보기</span><span class="s">블로그 · 인스타그램</span></span><span class="ar" aria-hidden="true">›</span></a>
+    <a class="btn btn--naver" href="https://smartstore.naver.com/zenera_onroad/products/13361297189?utm_source=instagram&utm_medium=links&utm_campaign=product" target="_blank" rel="noopener"><span class="ic ic--app"><img src="/SkinImg/img/onroad-2026/icon-naver-20261026.png" alt="네이버" width="144" height="144"></span><span class="tx"><span class="t">네이버 N배송으로 구매</span><span class="s">스마트스토어 · 1박스 2개월분</span></span><span class="ar" aria-hidden="true">›</span></a>
+    <a class="btn btn--coupang" href="https://www.coupang.com/vp/products/9505920715?utm_source=instagram&utm_medium=links&utm_campaign=product" target="_blank" rel="noopener"><span class="ic ic--app"><img src="/SkinImg/img/onroad-2026/icon-coupang-20261026.png" alt="쿠팡" width="144" height="144"></span><span class="tx"><span class="t">쿠팡 로켓배송으로 구매</span><span class="s">쿠팡 상품 페이지</span></span><span class="ar" aria-hidden="true">›</span></a>
+    <a class="btn btn--all" href="/shopinfo/links.html"><span class="ic ic--app"><img src="/SkinImg/img/onroad-2026/icon-onroad-20261026.png" alt="온로드" width="144" height="144"></span><span class="tx"><span class="t">모든 링크 보기</span><span class="s">블로그 · 인스타그램</span></span><span class="ar" aria-hidden="true">›</span></a>
   </nav>
 
   <footer>
