@@ -2,111 +2,170 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>온로드 지구력코어 — 구매처·블로그 링크</title>
 <meta name="description" content="온로드 지구력코어 공식 링크 모음. 네이버 스마트스토어·쿠팡 구매, 운동·체력 칼럼 블로그, 제품 정보.">
 <meta name="robots" content="noindex">
+<meta name="theme-color" content="#0b1424">
 <meta property="og:title" content="온로드 지구력코어 — 공식 링크">
 <meta property="og:description" content="옥타코사놀 40mg + 비타민B군 5종. 하루 1정, 1박스 60정(2개월분).">
-<meta property="og:image" content="https://onroad.zenera.kr/SkinImg/img/onroad-2026/links-product-20261026.jpg">
+<meta property="og:image" content="https://onroad.zenera.kr/SkinImg/img/onroad-2026/links-hero-20261026.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
-  :root{--navy:#142238;--navy-2:#253b5b;--orange:#db7b35;--orange-2:#a94813;--paper:#f5f6f4;--line:#e1e4e9;--meta:#707872;--green:#03c75a;}
+  :root{--navy:#142238;--navy-2:#253b5b;--ink:#0b1424;--orange:#db7b35;--orange-2:#f0974f;--orange-3:#a94813;--paper:#f3f4f2;--line:#e3e6ea;--meta:#6f7a86;--green:#03c75a;--coupang:#e2471d;--ease:cubic-bezier(.2,.8,.2,1)}
   *{box-sizing:border-box;margin:0;padding:0}
-  html{-webkit-text-size-adjust:100%}
+  html{-webkit-text-size-adjust:100%;background:var(--ink)}
   body{font-family:'Noto Sans KR',Arial,sans-serif;background:var(--paper);color:var(--navy);line-height:1.5;min-height:100vh}
   a{color:inherit;text-decoration:none;-webkit-tap-highlight-color:transparent}
-  .wrap{max-width:480px;margin:0 auto;padding:28px 20px 48px}
-  .brand{display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px}
-  .wordmark{font-family:Arial,sans-serif;font-weight:800;font-size:30px;letter-spacing:-1.5px;line-height:1}
-  .wordmark span{color:var(--orange)}
-  .pic{width:132px;height:132px;border-radius:50%;background:#fff;border:1px solid var(--line);overflow:hidden;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(20,34,56,.08)}
-  .pic img{width:68%;height:84%;object-fit:contain}
-  h1{font-size:19px;font-weight:700;letter-spacing:-.3px}
-  .lead{font-size:14px;color:var(--meta)}
-  .tags{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-top:4px}
-  .tags span{font-size:12px;font-weight:500;padding:5px 10px;border-radius:999px;background:#fff;border:1px solid var(--line)}
-  .links{display:flex;flex-direction:column;gap:12px;margin-top:26px}
-  .btn{display:flex;align-items:center;gap:14px;min-height:68px;padding:12px 16px;border-radius:14px;background:#fff;border:1px solid var(--line);box-shadow:0 2px 6px rgba(20,34,56,.05);transition:transform .12s ease,box-shadow .12s ease}
-  .btn:active{transform:scale(.985)}
-  .btn .ic{flex:0 0 44px;width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;color:#fff}
-  .btn .tx{flex:1;min-width:0}
-  .btn .t{display:block;font-size:15px;font-weight:700;letter-spacing:-.2px}
-  .btn .s{display:block;font-size:12px;color:var(--meta);margin-top:2px}
-  .btn .ar{flex:0 0 auto;color:var(--meta);font-size:18px}
-  .btn--naver{border-color:#cfeedc}.btn--naver .ic{background:var(--green)}
-  .btn--coupang{border-color:#f8d9c2}.btn--coupang .ic{background:#e2471d}
-  .btn--blog{border-color:#dbe3ee}.btn--blog .ic{background:var(--navy)}
-  .btn--insta .ic{background:linear-gradient(135deg,#f58529,#dd2a7b 55%,#8134af)}
-  .btn--mall .ic{background:var(--orange)}
-  .sec{margin-top:30px}
-  .sec h2{font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--meta);text-transform:uppercase;margin-bottom:10px}
-  .card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px}
-  .card ul{list-style:none;display:flex;flex-direction:column;gap:8px;font-size:13.5px}
-  .card li{display:flex;gap:8px}
-  .card li b{flex:0 0 68px;font-weight:700;color:var(--navy-2)}
-  .note{font-size:11.5px;color:var(--meta);margin-top:10px;line-height:1.55}
-  footer{margin-top:36px;text-align:center;font-size:11px;color:var(--meta);line-height:1.7}
+  .page{max-width:480px;margin:0 auto;background:var(--paper);min-height:100vh;box-shadow:0 0 0 1px rgba(0,0,0,.04)}
+
+  /* hero */
+  .hero{position:relative;color:#fff;background:var(--ink);overflow:hidden;isolation:isolate}
+  .hero::before{content:"";position:absolute;inset:0;background:url(/SkinImg/img/onroad-2026/links-hero-20261026.jpg) center 0%/cover no-repeat;transform:scale(1.04);animation:kb 14s var(--ease) both}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,20,36,.55) 0%,rgba(11,20,36,0) 28%,rgba(11,20,36,.2) 50%,rgba(11,20,36,.93) 74%,var(--ink) 100%)}
+  .hero>*{position:relative;z-index:1}
+  .bar{display:flex;align-items:center;justify-content:space-between;padding:18px 20px 0;padding-top:calc(18px + env(safe-area-inset-top))}
+  .logo{display:block;padding:4px 0}.logo img{display:block;height:20px;width:auto}
+  .handle{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:500;color:#fff;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);padding:6px 10px;border-radius:999px}
+  .handle i{width:6px;height:6px;border-radius:50%;background:var(--orange-2);box-shadow:0 0 0 3px rgba(240,151,79,.25)}
+  .hero-body{padding:318px 22px 22px}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11.5px;font-weight:700;letter-spacing:.14em;color:var(--orange-2);text-transform:uppercase}
+  .eyebrow::before{content:"";width:18px;height:2px;background:var(--orange-2);border-radius:2px}
+  h1{font-size:30px;font-weight:900;letter-spacing:-.9px;line-height:1.2;margin-top:10px;text-wrap:balance}
+  h1 em{font-style:normal;color:var(--orange-2)}
+  .sub{font-size:14px;color:#c9d2e0;margin-top:10px;line-height:1.55}
+  .sub b{color:#fff;font-weight:700}
+
+  /* stats */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);background:var(--ink);padding:0 14px 18px;gap:6px}
+  .stat{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:10px 6px 9px;text-align:center;color:#fff}
+  .stat b{display:block;font-size:19px;font-weight:900;letter-spacing:-.6px;line-height:1}
+  .stat b small{font-size:11px;font-weight:700;letter-spacing:0;margin-left:1px}
+  .stat span{display:block;font-size:10.5px;color:#9fb0c6;margin-top:4px;letter-spacing:-.1px}
+  .stat--hot{background:linear-gradient(160deg,rgba(240,151,79,.28),rgba(219,123,53,.1));border-color:rgba(240,151,79,.45)}
+  .stat--hot b{color:var(--orange-2)}
+
+  /* content */
+  .content{padding:18px 16px 40px;margin-top:-1px}
+  .links{display:flex;flex-direction:column;gap:12px}
+  .cta{position:relative;display:flex;align-items:center;gap:14px;padding:18px 18px;border-radius:18px;color:#fff;overflow:hidden;box-shadow:0 14px 30px -12px rgba(219,123,53,.6);transition:transform .25s var(--ease),box-shadow .25s var(--ease)}
+  .cta--naver{background:linear-gradient(135deg,#ff9a4d 0%,var(--orange) 55%,#c8641f 100%)}
+  .cta--naver::after{content:"";position:absolute;top:-60%;left:-30%;width:40%;height:220%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.35),transparent);transform:rotate(18deg);animation:shine 4.5s ease-in-out 1.2s infinite}
+  .cta .badge{flex:0 0 52px;width:52px;height:52px;border-radius:15px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);display:flex;align-items:center;justify-content:center;font-family:Arial,sans-serif;font-weight:900;font-size:20px}
+  .cta .tx{flex:1;min-width:0;position:relative;z-index:1}
+  .cta .k{display:block;font-size:11px;font-weight:700;letter-spacing:.1em;opacity:.9}
+  .cta .t{display:block;font-size:18px;font-weight:900;letter-spacing:-.4px;line-height:1.2;margin-top:3px}
+  .cta .s{display:block;font-size:12px;opacity:.9;margin-top:4px}
+  .cta .ar{flex:0 0 36px;width:36px;height:36px;border-radius:50%;background:#fff;color:var(--orange-3);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:18px}
+  .cta:hover{transform:translateY(-2px)}.cta:active{transform:scale(.985)}
+  .cta--coupang{background:linear-gradient(135deg,#1e2f4d,var(--navy) 60%,#0f1a2d);box-shadow:0 14px 30px -14px rgba(20,34,56,.7)}
+  .badge--naver{background:#03c75a;border-color:rgba(255,255,255,.25)}.badge--naver svg{width:22px;height:22px;display:block}
+  .cta .badge--coupang{flex:0 0 74px;width:74px;background:#fff;border-color:rgba(255,255,255,.6)}.badge--coupang svg{width:60px;height:auto;display:block}
+  .cta--coupang .ar{color:var(--navy)}
+
+  .list{display:flex;flex-direction:column;gap:10px;margin-top:4px}
+  .row{display:flex;align-items:center;gap:14px;min-height:64px;padding:12px 14px;border-radius:16px;background:#fff;border:1px solid var(--line);box-shadow:0 1px 2px rgba(20,34,56,.04);transition:transform .25s var(--ease),box-shadow .25s var(--ease),border-color .25s}
+  .row:hover{transform:translateY(-2px);box-shadow:0 10px 24px -14px rgba(20,34,56,.35);border-color:#cfd6e0}.row:active{transform:scale(.985)}
+  .row .ic{flex:0 0 42px;width:42px;height:42px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:15px;color:#fff}
+  .row .tx{flex:1;min-width:0}.row .t{display:block;font-size:15px;font-weight:700;letter-spacing:-.2px}.row .s{display:block;font-size:12px;color:var(--meta);margin-top:1px}
+  .row .ar{color:#b2bac5;font-size:18px;transition:transform .25s var(--ease),color .25s}.row:hover .ar{transform:translateX(3px);color:var(--navy)}
+  .ic--blog{background:var(--navy)}.ic--info{background:linear-gradient(135deg,#f0974f,#db7b35)}.ic--insta{background:linear-gradient(135deg,#f58529,#dd2a7b 55%,#8134af)}
+
+  .sec-h{display:flex;align-items:baseline;justify-content:space-between;margin:26px 2px 10px}
+  .sec-h h2{font-size:13px;font-weight:900;letter-spacing:.08em;color:var(--meta);text-transform:uppercase}
+  .card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px}
+  .fn{display:flex;flex-direction:column;gap:10px}
+  .fn div{display:flex;gap:10px;font-size:13.5px;line-height:1.5}
+  .fn div::before{content:"";flex:0 0 8px;width:8px;height:8px;border-radius:50%;background:var(--orange);margin-top:7px}
+  .fn b{font-weight:700;color:var(--navy)}
+  .note{font-size:11.5px;color:var(--meta);margin-top:12px;line-height:1.55}
+
+  footer{margin-top:30px;text-align:center;font-size:11px;color:var(--meta);line-height:1.8}
   footer a{text-decoration:underline;text-underline-offset:3px}
-  @media (prefers-color-scheme:dark){ body{background:#0f1726;color:#eef1f5} .pic,.btn,.card,.tags span{background:#17233a;border-color:#2a3a56} .btn .t{color:#eef1f5} .btn .s,.lead,.note,.sec h2,footer,.btn .ar{color:#9aa6b8} .card li b{color:#c9d3e3} }
+  footer .wm{display:block;height:16px;width:auto;margin:0 auto 8px;opacity:.85}
+
+  /* motion */
+  .js .up{opacity:0;transform:translateY(14px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+  .js .up.in{opacity:1;transform:none}
+  .d1{transition-delay:.05s}.d2{transition-delay:.15s}.d3{transition-delay:.25s}.d4{transition-delay:.35s}.d5{transition-delay:.45s}.d6{transition-delay:.55s}
+  @keyframes kb{from{transform:scale(1.1)}to{transform:scale(1.04)}}
+  @keyframes shine{0%{left:-40%}35%,100%{left:120%}}
+  @media (prefers-reduced-motion:reduce){.js .up{opacity:1;transform:none;transition:none}.hero::before{animation:none;transform:none}.cta--naver::after{animation:none;display:none}}
+  @media (min-width:480px){.page{box-shadow:0 0 0 1px rgba(0,0,0,.06),0 30px 80px -30px rgba(0,0,0,.35)} body{background:#0f1726}}
+  @media (prefers-color-scheme:dark){ .page,body{background:#0f1726} .content{color:#eef1f5} .row,.card{background:#17233a;border-color:#2a3a56} .row .t{color:#eef1f5} .row .s,.note,.sec-h h2,footer,.fn{color:#9aa6b8} .fn b{color:#eef1f5} footer .wm{filter:invert(1) brightness(1.6)} .row:hover{border-color:#3a4d6e} .row:hover .ar{color:#fff} }
 </style>
 </head>
 <body>
-<main class="wrap">
-  <header class="brand">
-    <a class="wordmark" href="/" aria-label="온로드 홈">onroad<span aria-hidden="true">.</span></a>
-    <div class="pic"><img src="/SkinImg/img/onroad-2026/links-product-20261026.jpg" alt="지구력코어 제품 상자" width="600" height="850"></div>
-    <h1>온로드 지구력코어</h1>
-    <p class="lead">운동도, 일상도 끝까지 가는 힘</p>
-    <div class="tags"><span>옥타코사놀 40mg</span><span>비타민B군 5종</span><span>하루 1정 · 60정(2개월분)</span></div>
+<main class="page">
+  <header class="hero">
+    <div class="bar">
+      <a class="logo" href="/" aria-label="온로드 홈"><img src="/SkinImg/img/onroad-2026/onroad-logo-white-20261026.png" alt="OnRoad" width="688" height="80"></a>
+      <a class="handle" href="https://www.instagram.com/onroad_officiai/" target="_blank" rel="noopener"><i aria-hidden="true"></i>@onroad_officiai</a>
+    </div>
+    <div class="hero-body">
+      <div class="eyebrow up d1">건강기능식품 · 하루 1정</div>
+      <h1 class="up d2">운동도, 일상도<br><em>끝까지 가는 힘</em></h1>
+      <p class="sub up d3"><b>옥타코사놀 40mg</b> + 비타민B군 5종을 하루 1정에.<br>1박스 60정, 2개월분 — 온로드 지구력코어</p>
+    </div>
+    <div class="stats up d3" aria-label="제품 요약">
+      <div class="stat"><b>40<small>mg</small></b><span>옥타코사놀</span></div>
+      <div class="stat"><b>5<small>종</small></b><span>비타민B군</span></div>
+      <div class="stat"><b>60<small>일</small></b><span>1박스 분량</span></div>
+      <div class="stat stat--hot"><b>456<small>%</small></b><span>와디즈 달성</span></div>
+    </div>
   </header>
 
-  <nav class="links" aria-label="공식 링크">
-    <a class="btn btn--naver" href="https://smartstore.naver.com/zenera_onroad/products/13361297189?utm_source=instagram&utm_medium=links&utm_campaign=bio" target="_blank" rel="noopener">
-      <span class="ic">N</span>
-      <span class="tx"><span class="t">⚡ 지구력코어 구매하기</span><span class="s">네이버 스마트스토어 · N배송 · 2개월분</span></span>
-      <span class="ar" aria-hidden="true">›</span>
-    </a>
-    <a class="btn btn--coupang" href="https://www.coupang.com/vp/products/9505920715?utm_source=instagram&utm_medium=links&utm_campaign=bio" target="_blank" rel="noopener">
-      <span class="ic">C</span>
-      <span class="tx"><span class="t">🚀 쿠팡 로켓배송으로 빠르게 받기</span><span class="s">쿠팡 상품 페이지</span></span>
-      <span class="ar" aria-hidden="true">›</span>
-    </a>
-    <a class="btn btn--blog" href="https://blog.naver.com/zenera_onroad?utm_source=instagram&utm_medium=links&utm_campaign=bio" target="_blank" rel="noopener">
-      <span class="ic">B</span>
-      <span class="tx"><span class="t">📖 영상 속 연구 출처 · 체력 칼럼</span><span class="s">온로드 공식 블로그 — 운동·수면·식사 루틴</span></span>
-      <span class="ar" aria-hidden="true">›</span>
-    </a>
-    <a class="btn btn--mall" href="/shopinfo/product.html">
-      <span class="ic">i</span>
-      <span class="tx"><span class="t">제품 정보 · 성분 · 섭취 방법</span><span class="s">옥타코사놀 40mg · 성분 함량표 · 와디즈 펀딩 기록</span></span>
-      <span class="ar" aria-hidden="true">›</span>
-    </a>
-    <a class="btn btn--insta" href="https://www.instagram.com/onroad_officiai/" target="_blank" rel="noopener">
-      <span class="ic">IG</span>
-      <span class="tx"><span class="t">인스타그램 @onroad_officiai</span><span class="s">릴스 · 새 소식</span></span>
-      <span class="ar" aria-hidden="true">›</span>
-    </a>
-  </nav>
+  <section class="content">
+    <nav class="links" aria-label="구매">
+      <a class="cta cta--naver up d4" href="https://smartstore.naver.com/zenera_onroad/products/13361297189?utm_source=instagram&utm_medium=links&utm_campaign=bio" target="_blank" rel="noopener">
+        <span class="badge badge--naver"><svg aria-hidden="true" focusable="false" viewBox="0 0 100.5 100"><polygon fill="#fff" points="68.14,53.52 30.88,0 0,0 0,100 32.35,100 32.35,46.48 69.61,100 100.49,100 100.49,0 68.14,0"/></svg></span>
+        <span class="tx"><span class="k">NAVER · N배송</span><span class="t">지구력코어 구매하기</span><span class="s">스마트스토어 공식 · 1박스 2개월분</span></span>
+        <span class="ar" aria-hidden="true">→</span>
+      </a>
+      <a class="cta cta--coupang up d5" href="https://www.coupang.com/vp/products/9505920715?utm_source=instagram&utm_medium=links&utm_campaign=bio" target="_blank" rel="noopener">
+        <span class="badge badge--coupang"><svg aria-hidden="true" focusable="false" viewBox="0 0 86.589935 19.638245" version="1.1" id="svg5" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"><defs id="defs2"><clipPath clipPathUnits="userSpaceOnUse" id="clipPath23"><path d="M 0,40 H 177.773 V 0 H 0 Z" id="path21" /></clipPath></defs><g id="layer1" transform="translate(-14.09273,-113.57014)"><g id="g19" clip-path="url(#clipPath23)" transform="matrix(0.48595701,0,0,-0.48595701,14.192633,133.10842)"><g id="g25" transform="translate(92.0436,21.6379)"><path d="m 0,0 c 0,-1.162 -0.778,-5.221 -5.547,-5.237 -4.77,0.016 -5.548,4.075 -5.548,5.237 v 8.198 c 0,1.162 0.778,5.218 5.548,5.236 C -0.778,13.416 0,9.36 0,8.198 Z M 4.322,13.412 C 3.136,15.7 0.677,18.287 -4.391,18.308 v 0.002 h -0.032 -0.026 v -0.002 c -3.343,-0.013 -5.555,-1.38 -7.008,-2.804 v 1.94 c 0,0.193 -0.156,0.35 -0.35,0.35 h -4.54 c -0.193,0 -0.349,-0.157 -0.349,-0.35 V -20.59 c 0,-0.193 0.156,-0.35 0.349,-0.35 h 4.894 c 0.193,0 0.349,0.157 0.349,0.35 v 12.954 c 1.458,-1.262 3.569,-2.462 6.655,-2.472 h 0.026 0.032 c 5.068,0.018 7.527,2.606 8.713,4.894 1.244,2.401 1.295,4.933 1.295,5.445 v 7.741 c 0,0.508 -0.051,3.041 -1.295,5.44" style="fill:#e94b22;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path27" /></g><g id="g29" transform="translate(28.4157,21.6613)"><path d="m 0,0 c 0,-1.162 0.781,-5.217 5.55,-5.237 4.768,0.02 5.551,4.075 5.551,5.237 v 8.197 c 0,1.161 -0.783,5.223 -5.551,5.24 C 0.781,13.42 0,9.358 0,8.197 Z m -5.596,7.948 c 0,0.509 0.056,3.041 1.43,5.442 1.318,2.287 4.053,4.874 9.683,4.894 v 0.002 H 5.55 5.577 v -0.002 c 5.632,-0.02 8.366,-2.607 9.68,-4.894 1.379,-2.401 1.435,-4.933 1.435,-5.442 v -7.74 c 0,-0.513 -0.056,-3.045 -1.435,-5.445 -1.314,-2.288 -4.048,-4.876 -9.68,-4.895 H 5.55 5.517 c -5.63,0.019 -8.365,2.607 -9.683,4.895 -1.374,2.4 -1.43,4.932 -1.43,5.445 z" style="fill:#894f24;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path31" /></g><g id="g33" transform="translate(71.1051,39.0822)"><path d="m 0,0 c 0,0.189 -0.149,0.35 -0.35,0.35 h -4.886 c -0.201,0 -0.35,-0.161 -0.35,-0.35 l -0.02,-17.444 c 0,-1.16 -0.77,-5.217 -5.537,-5.237 -4.777,0.02 -5.556,4.077 -5.556,5.237 V 0 c 0,0.189 -0.16,0.35 -0.351,0.35 h -4.917 c -0.189,0 -0.349,-0.161 -0.349,-0.35 v -17.214 c 0,-0.511 0.049,-3.049 1.299,-5.447 1.179,-2.289 3.648,-4.877 8.714,-4.887 h 0.031 0.02 c 1.679,0 3.058,0.35 4.217,0.869 1.149,0.52 2.069,1.209 2.799,1.929 v -1.933 c 0,-0.193 0.156,-0.349 0.349,-0.349 h 4.541 c 0.193,0 0.349,0.156 0.349,0.349 z" style="fill:#894f24;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path35" /></g><g id="g37" transform="translate(116.903,21.1877)"><path d="m 0,0 c 0,-1.09 -0.759,-4.907 -5.402,-4.925 -4.645,0.018 -5.403,3.835 -5.403,4.925 v 0.444 c 0,1.092 0.758,4.907 5.403,4.923 C -0.759,5.351 0,1.536 0,0.444 Z m 5.184,8.689 c -0.003,2.181 -1.092,7.29 -6.046,9.322 -4.785,1.962 -11.084,-0.191 -13.134,-1.023 -10e-4,-0.001 -0.375,-0.151 -0.375,-0.151 -0.179,-0.073 -0.265,-0.278 -0.192,-0.457 l 1.397,-3.963 c 0.062,-0.171 0.244,-0.267 0.416,-0.22 0.057,0.015 0.14,0.059 0.164,0.072 1.898,0.96 6.809,2.576 9.829,1.199 2.97,-1.354 2.711,-4.515 2.728,-4.853 V 7.839 c -1.441,1.049 -3.45,2.048 -6.288,2.058 h -0.027 -0.024 c -5.075,-0.019 -7.53,-2.462 -8.721,-4.626 -1.239,-2.266 -1.292,-4.658 -1.292,-5.143 V 0.119 c 0,-0.478 0.053,-2.874 1.292,-5.14 1.191,-2.162 3.646,-4.604 8.721,-4.626 h 0.024 0.027 c 2.955,0.011 5.013,1.074 6.462,2.196 v -1.337 c 0,-0.192 0.156,-0.35 0.349,-0.35 h 4.34 c 0.193,0 0.35,0.158 0.35,0.35 L 5.189,8.503 c 0,0.063 0,0.124 -0.005,0.186" style="fill:#fac000;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path39" /></g><g id="g41" transform="translate(169.0963,29.7932)"><path d="m 0,0 c 0,-1.066 -0.779,-4.943 -5.549,-4.96 -4.773,0.017 -5.549,3.894 -5.549,4.96 v 0.349 c 0,1.069 0.776,4.947 5.549,4.963 C -0.779,5.296 0,1.418 0,0.349 Z M 8.306,10.021 C 5.434,10.102 3.572,8.916 2.374,7.608 0.763,9.01 -1.719,10.14 -5.515,10.152 v 0.002 h -0.034 -0.03 v -0.002 c -5.629,-0.02 -8.363,-2.482 -9.683,-4.666 -1.372,-2.292 -1.434,-4.704 -1.434,-5.189 V 0.033 c 0,-0.489 0.062,-2.903 1.439,-5.188 0.587,-0.98 1.465,-2.011 2.758,-2.858 -2.119,-1.218 -3.99,-3.37 -3.99,-7.255 l -10e-4,-2.092 c 0,-0.194 0.157,-0.35 0.35,-0.35 l 16.127,0.001 c 1.937,0 2.913,-1.276 3.187,-2.476 0.341,-1.504 -0.237,-3.538 -2.751,-4.918 L 0.255,-25.2 c -0.164,-0.095 -0.223,-0.304 -0.132,-0.471 l 2.156,-3.94 c 0.094,-0.172 0.311,-0.233 0.481,-0.136 0,0 1.113,0.681 1.473,0.923 0.363,0.244 0.682,0.525 0.983,0.806 2.766,2.581 3.344,6.133 2.722,8.904 -0.844,3.761 -4.037,6.022 -7.951,6.022 h -11.124 c 0.612,3.361 4.533,3.298 5.003,3.279 0,0 0.607,-0.009 0.619,-0.009 5.628,0.017 8.359,2.482 9.676,4.667 1.375,2.285 1.437,4.699 1.437,5.188 V 0.297 C 5.598,0.712 5.55,2.498 4.703,4.426 5.44,4.937 6.587,5.41 8.272,5.32 L 8.315,5.319 C 8.509,5.316 8.668,5.47 8.672,5.663 l 0.005,3.946 v 0.002 0.018 c 0,0.209 -0.137,0.392 -0.371,0.392" style="fill:#3dacdc;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path43" /></g><g id="g45" transform="translate(20.9752,17.4289)"><path d="M 0,0 -4.332,2.168 C -4.505,2.254 -4.715,2.184 -4.801,2.011 L -4.831,1.952 -4.833,1.951 c -0.671,-1.436 -2.09,-2.943 -4.995,-2.956 -4.768,0.022 -5.55,4.075 -5.55,5.237 v 8.198 c 0,1.16 0.782,5.221 5.55,5.239 2.946,-0.012 4.362,-1.562 5.022,-3.021 0.056,-0.145 0.196,-0.252 0.366,-0.252 0.062,0 0.117,0.019 0.175,0.047 0.004,-0.002 4.246,2.213 4.246,2.213 0.171,0.089 0.238,0.3 0.148,0.472 l -0.004,0.008 c -0.001,0.001 -0.001,0.003 -0.001,0.004 -0.076,0.16 -0.153,0.32 -0.245,0.481 -1.315,2.288 -4.049,4.875 -9.681,4.896 v 0.002 h -0.031 -0.03 v -0.002 c -5.627,-0.021 -8.363,-2.608 -9.676,-4.896 -1.38,-2.399 -1.436,-4.932 -1.436,-5.44 V 4.44 c 0,-0.512 0.056,-3.044 1.436,-5.445 1.313,-2.288 4.049,-4.876 9.676,-4.894 h 0.061 c 5.632,0.018 8.366,2.606 9.681,4.894 0.006,0.009 0.275,0.535 0.275,0.535 C 0.241,-0.297 0.172,-0.087 0,0" style="fill:#894f24;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path47" /></g><g id="g49" transform="translate(147.4489,35.0686)"><path d="m 0,0 c -1.19,2.289 -3.65,4.874 -8.72,4.892 v 0.004 c -0.009,0 -0.013,-0.004 -0.032,-0.004 -0.003,0 -0.012,0.004 -0.025,0.004 V 4.892 C -12.11,4.883 -14.31,3.524 -15.766,2.112 l 0.003,1.902 c 0,0.192 -0.156,0.349 -0.349,0.349 h -4.54 c -0.194,0 -0.35,-0.157 -0.35,-0.349 v -26.682 c 0,-0.193 0.156,-0.351 0.35,-0.351 h 4.89 c 0.194,0 0.35,0.158 0.35,0.351 V -4.93 c 0.117,1.422 1.096,4.937 5.535,4.954 4.773,-0.018 5.55,-4.077 5.55,-5.239 v -17.453 c 0,-0.193 0.157,-0.351 0.35,-0.351 h 4.914 c 0.194,0 0.35,0.158 0.35,0.351 V -5.444 C 1.287,-4.933 1.239,-2.401 0,0" style="fill:#80bc27;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path51" /></g></g></g></svg></span>
+        <span class="tx"><span class="k">COUPANG · 로켓배송</span><span class="t">로켓배송으로 빠르게 받기</span><span class="s">쿠팡 상품 페이지</span></span>
+        <span class="ar" aria-hidden="true">→</span>
+      </a>
+    </nav>
 
-  <section class="sec" aria-labelledby="info">
-    <h2 id="info">제품 한눈에</h2>
-    <div class="card">
-      <ul>
-        <li><b>기능성</b><span>옥타코사놀: 지구력 증진에 도움을 줄 수 있음 · 비타민B군: 체내 에너지 생성에 필요</span></li>
-        <li><b>구성</b><span>500mg × 60정 (1박스 2개월분)</span></li>
-        <li><b>섭취</b><span>1일 1회, 1회 1정을 물과 함께</span></li>
-      </ul>
+    <nav class="list up d6" aria-label="더 보기">
+      <a class="row" href="/shopinfo/product.html">
+        <span class="ic ic--info">i</span>
+        <span class="tx"><span class="t">제품 정보 · 성분 · 섭취 방법</span><span class="s">성분 함량표 · 미국산 옥타코사놀 · 와디즈 펀딩 기록</span></span>
+        <span class="ar" aria-hidden="true">›</span>
+      </a>
+      <a class="row" href="https://blog.naver.com/zenera_onroad?utm_source=instagram&utm_medium=links&utm_campaign=bio" target="_blank" rel="noopener">
+        <span class="ic ic--blog">B</span>
+        <span class="tx"><span class="t">영상 속 연구 출처 · 체력 칼럼</span><span class="s">온로드 공식 블로그 — 운동·수면·식사 루틴</span></span>
+        <span class="ar" aria-hidden="true">›</span>
+      </a>
+      <a class="row" href="https://www.instagram.com/onroad_officiai/" target="_blank" rel="noopener">
+        <span class="ic ic--insta">IG</span>
+        <span class="tx"><span class="t">인스타그램 @onroad_officiai</span><span class="s">릴스 · 새 소식</span></span>
+        <span class="ar" aria-hidden="true">›</span>
+      </a>
+    </nav>
+
+    <div class="sec-h up d6"><h2>제품 한눈에</h2></div>
+    <div class="card up d6">
+      <div class="fn">
+        <div><span><b>옥타코사놀</b> — 지구력 증진에 도움을 줄 수 있음</span></div>
+        <div><span><b>비타민B군</b> — 체내 에너지 생성에 필요</span></div>
+        <div><span><b>구성</b> — 500mg × 60정(1박스 2개월분), 1일 1회 1정</span></div>
+      </div>
       <p class="note">본 제품은 질병의 예방 및 치료를 위한 의약품이 아닙니다. 어린이, 임산부 및 수유부는 섭취를 피하십시오. 특이체질 또는 알레르기 체질인 경우 원재료를 확인한 후 섭취하십시오.</p>
     </div>
-  </section>
 
-  <footer>
-    주식회사 제네라 · 사업자등록번호 492-81-03525<br>
-    문의 <a href="mailto:hello@zenera.kr">hello@zenera.kr</a>
-  </footer>
+    <footer>
+      <img class="wm" src="/SkinImg/img/onroad-2026/onroad-logo-navy-20261026.png" alt="OnRoad" width="688" height="80">
+      주식회사 제네라 · 사업자등록번호 492-81-03525<br>
+      문의 <a href="mailto:hello@zenera.kr">hello@zenera.kr</a>
+    </footer>
+  </section>
 </main>
+<script>document.documentElement.classList.add('js');setTimeout(function(){document.querySelectorAll('.up').forEach(function(e){e.classList.add('in')})},60);</script>
 </body>
 </html>
