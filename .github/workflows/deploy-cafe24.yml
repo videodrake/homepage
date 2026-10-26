@@ -55,7 +55,6 @@ jobs:
               'shopinfo/health-functional.html',
               'shopinfo/endurance-core.html',
               'shopinfo/guide.html',
-              'shopinfo/links.html',
               'journal/post.html',
               'member/login.html',
               'member/agreement.html',
@@ -63,6 +62,11 @@ jobs:
               'member/join_result.html',
               'member/modify.html',
               'myshop/index.html',
+          ]
+          # Pages added after the redesign: deployed, but not expected to exist
+          # on the remote before the first deploy (they fail the rollback check).
+          new_pages = [
+              'shopinfo/links.html',
           ]
           # This image directory is new in this redesign.
           added = []
@@ -80,7 +84,7 @@ jobs:
           if not added:
               raise SystemExit('The new product asset directory is empty')
           manifest = []
-          for relative in required + added:
+          for relative in required + new_pages + added:
               original = source / relative
               if not original.is_file() or original.is_symlink() or not original.resolve().is_relative_to(source):
                   raise SystemExit(f'Missing or unsafe source: {relative}')
