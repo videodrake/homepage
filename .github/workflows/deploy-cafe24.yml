@@ -67,6 +67,7 @@ jobs:
           # on the remote before the first deploy (they fail the rollback check).
           new_pages = [
               'shopinfo/links.html',
+              'shopinfo/product.html',
           ]
           # This image directory is new in this redesign.
           added = []
