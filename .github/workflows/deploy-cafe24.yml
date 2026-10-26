@@ -55,6 +55,7 @@ jobs:
               'shopinfo/health-functional.html',
               'shopinfo/endurance-core.html',
               'shopinfo/guide.html',
+              'shopinfo/links.html',
               'journal/post.html',
               'member/login.html',
               'member/agreement.html',
