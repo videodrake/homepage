@@ -10,7 +10,7 @@
 <meta property="og:title" content="온로드 지구력 코어 — 공식 구매처 · 릴스 칼럼">
 <meta property="og:description" content="옥타코사놀 40mg + 비타민B군 5종, 하루 1정 60일분 건강기능식품. 공식 구매처와 릴스 상세 칼럼을 한곳에서 확인하세요.">
 <meta property="og:url" content="https://onroad.zenera.kr/shopinfo/links.html">
-<meta property="og:image" content="https://onroad.zenera.kr/SkinImg/img/onroad-2026/links-product-20261026.jpg">
+<meta property="og:image" content="https://onroad.zenera.kr/SkinImg/img/onroad-2026/onroad-hero-20261013.jpg">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <style>
@@ -88,35 +88,69 @@
     background: var(--orange);
   }
 
-  /* Hero Product Card */
+  /* Hero Product Card with Dual 1:1 Studio Renders */
   .hero {
-    background: linear-gradient(155deg, var(--navy) 0%, var(--navy-deep) 100%);
+    background: linear-gradient(160deg, var(--navy) 0%, var(--navy-deep) 100%);
     color: #fff;
     border-radius: 22px;
-    padding: 20px 18px 16px;
-    box-shadow: 0 12px 28px rgba(13, 24, 41, 0.16);
+    padding: 14px 14px 16px;
+    box-shadow: 0 14px 32px rgba(13, 24, 41, 0.18);
     position: relative;
     overflow: hidden;
   }
-  .hero::before {
-    content: "";
-    position: absolute;
-    top: -60px;
-    right: -40px;
-    width: 180px;
-    height: 180px;
-    background: radial-gradient(circle, rgba(255, 107, 44, 0.22) 0%, rgba(255, 107, 44, 0) 70%);
-    pointer-events: none;
+  .hero__gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
   }
-  .hero__main {
+  .hero__shot {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #1B2840;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.22);
+  }
+  .hero__shot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .hero__shot--left img {
+    object-position: 50% 58%;
+    transform: scale(1.24);
+  }
+  .hero__shot--right img {
+    object-position: 48% 48%;
+    transform: scale(1.04);
+  }
+  .hero__shot-cap {
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    font-size: 10px;
+    font-weight: 700;
+    color: #F4F7FB;
+    background: rgba(13, 24, 41, 0.68);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    padding: 3px 8px;
+    border-radius: 999px;
+    letter-spacing: -0.2px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+  }
+
+  .hero__copy {
+    margin-top: 14px;
+    padding: 0 4px;
+  }
+  .hero__top-row {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 14px;
-  }
-  .hero__copy {
-    flex: 1;
-    min-width: 0;
+    gap: 8px;
   }
   .hero__badge {
     display: inline-flex;
@@ -131,11 +165,16 @@
     border-radius: 999px;
     letter-spacing: -0.1px;
   }
+  .hero__code {
+    font-size: 10.5px;
+    font-weight: 500;
+    color: #8FA0B8;
+  }
   .hero__title {
-    margin-top: 9px;
+    margin-top: 8px;
     font-size: 21px;
     font-weight: 800;
-    line-height: 1.26;
+    line-height: 1.25;
     letter-spacing: -0.5px;
     color: #FFFFFF;
   }
@@ -144,35 +183,18 @@
     color: var(--orange);
   }
   .hero__desc {
-    margin-top: 6px;
+    margin-top: 4px;
     font-size: 12.5px;
     font-weight: 500;
     color: #C7D1E0;
-    letter-spacing: -0.2px;
-  }
-  .hero__img {
-    flex: 0 0 82px;
-    width: 82px;
-    height: 114px;
-    border-radius: 12px;
-    background: #fff;
-    padding: 4px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.28);
-    overflow: hidden;
-  }
-  .hero__img img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    display: block;
-    border-radius: 8px;
+    letter-spacing: -0.25px;
   }
 
   .hero__specs {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 6px;
-    margin-top: 15px;
+    margin-top: 13px;
   }
   .spec-pill {
     background: rgba(255, 255, 255, 0.07);
@@ -206,7 +228,7 @@
   }
 
   .hero__more {
-    margin-top: 11px;
+    margin-top: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -597,17 +619,26 @@
     </a>
   </div>
 
-  <!-- 히어로 제품 요약 카드 -->
+  <!-- 히어로 제품 요약 카드 (렌더 라이브러리 1:1 듀얼 쇼케이스) -->
   <section class="hero" aria-label="제품 핵심 요약">
-    <div class="hero__main">
-      <div class="hero__copy">
-        <span class="hero__badge">건강기능식품 · 하루 1정 루틴</span>
-        <h1 class="hero__title">에너지 생성과<br>지구력 증진엔 <em>지구력 코어</em></h1>
-        <p class="hero__desc">옥타코사놀 40mg + 비타민B군 5종 배합</p>
+    <div class="hero__gallery">
+      <a class="hero__shot hero__shot--left" href="/shopinfo/product.html" aria-label="지구력 코어 패키지 상세 보기">
+        <img src="/SkinImg/img/onroad-2026/onroad-hero-20261013.jpg" alt="온로드 지구력 코어 패키지" width="1800" height="1800">
+        <span class="hero__shot-cap">온로드 지구력 코어</span>
+      </a>
+      <a class="hero__shot hero__shot--right" href="/shopinfo/product.html" aria-label="하루 1정 PTP 개별포장">
+        <img src="/SkinImg/img/onroad-2026/onroad-daily-20261013.jpg" alt="하루 1정 물과 함께 섭취 및 PTP 포장" width="1600" height="1760">
+        <span class="hero__shot-cap">하루 1정 · 개별 PTP</span>
+      </a>
+    </div>
+
+    <div class="hero__copy">
+      <div class="hero__top-row">
+        <span class="hero__badge">건강기능식품 · 식약처 품목제조신고</span>
+        <span class="hero__code">신고번호 20200016052332</span>
       </div>
-      <div class="hero__img">
-        <img src="/SkinImg/img/onroad-2026/links-product-20261026.jpg" alt="온로드 지구력 코어 패키지" width="600" height="850">
-      </div>
+      <h1 class="hero__title">에너지 생성과 지구력 증진엔 <em>지구력 코어</em></h1>
+      <p class="hero__desc">옥타코사놀 40mg + 비타민B군 5종 · 500mg × 60정 (2개월분)</p>
     </div>
 
     <div class="hero__specs" aria-label="핵심 스펙">
