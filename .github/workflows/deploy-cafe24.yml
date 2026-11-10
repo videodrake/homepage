@@ -171,6 +171,10 @@ jobs:
                   raise SystemExit(f'Rollback backup missing required file: {entry["path"]}')
               entry['existed_before_deploy'] = old.is_file()
               entry['rollback_sha256'] = hashlib.sha256(old.read_bytes()).hexdigest() if old.is_file() else None
+              if entry['existed_before_deploy'] and entry['sha256'] == entry['rollback_sha256']:
+                  staged = temporary / 'onroad-design-stage' / entry['path']
+                  if staged.is_file():
+                      staged.unlink()
           # Cafe24 may expose platform-managed entries as links to '/'. Record
           # and remove only downloaded links so artifact upload cannot follow
           # them into the runner filesystem. Never traverse their targets.
