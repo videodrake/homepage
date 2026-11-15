@@ -365,7 +365,7 @@
     color: var(--ink-muted);
   }
 
-  /* ── 5. 하단 전성분 함량표 단독 안내 바 ── */
+  /* ── 5. 하단 제품 스펙 바로가기 바 ── */
   .spec-link {
     margin-top: 18px;
     display: flex;
@@ -375,18 +375,33 @@
     background: var(--surface);
     border-radius: 16px;
     border: 1px solid var(--card-border);
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--ink-body);
-    letter-spacing: -0.25px;
+    box-shadow: 0 4px 14px rgba(18, 32, 56, 0.03);
+    transition: transform 0.12s ease;
   }
-  .spec-link__cta {
+  .spec-link:active {
+    transform: scale(0.985);
+  }
+  .spec-link__title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: -0.3px;
+  }
+  .spec-link__arr {
+    flex: 0 0 28px;
+    width: 28px;
+    height: 28px;
+    border-radius: 999px;
+    background: var(--surface-subtle);
     display: inline-flex;
     align-items: center;
-    gap: 3px;
-    font-size: 13.5px;
-    font-weight: 600;
-    color: var(--ink-sub);
+    justify-content: center;
+    color: var(--ink);
+  }
+  .spec-link__arr svg {
+    width: 15px;
+    height: 15px;
+    display: block;
   }
 
   /* ── 푸터 (단어 잘림 없는 깔끔한 행 구분) ── */
@@ -450,7 +465,7 @@
         <h2 class="product__name">에너지 생성과<br>지구력 증진엔 지구력 코어</h2>
         <p class="product__dose">하루 1정 · 60일분</p>
       </div>
-      <a class="product__thumb" href="/shopinfo/product.html" aria-label="온로드 지구력 코어 상세 보기">
+      <a class="product__thumb" href="/shopinfo/product.html" aria-label="제품 스펙 보기">
         <img
           src="/SkinImg/img/onroad-2026/links-studio-112w-20261110.png"
           data-mips="/SkinImg/img/onroad-2026/links-studio-112w-20261110.png 112, /SkinImg/img/onroad-2026/links-studio-168w-20261110.png 168, /SkinImg/img/onroad-2026/links-studio-224w-20261110.png 224, /SkinImg/img/onroad-2026/links-studio-336w-20261110.png 336, /SkinImg/img/onroad-2026/links-studio-448w-20261110.jpg 448, /SkinImg/img/onroad-2026/links-studio-672w-20261110.jpg 672, /SkinImg/img/onroad-2026/links-studio-20261110.jpg 1200"
@@ -544,10 +559,12 @@
     <p class="col-note">※ 일반 건강·체력 정보를 다루는 네이버 공식 블로그로 연결됩니다.</p>
   </section>
 
-  <!-- 5. 상세 성분표 바로가기 -->
+  <!-- 5. 제품 스펙 바로가기 -->
   <a class="spec-link" href="/shopinfo/product.html">
-    <span>전성분 함량표 · 섭취 방법 · 신고정보</span>
-    <span class="spec-link__cta">자세히 보기 →</span>
+    <span class="spec-link__title">제품 스펙 보기</span>
+    <span class="spec-link__arr" aria-hidden="true">
+      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 10h10M11 6l4 4-4 4"/></svg>
+    </span>
   </a>
 
   <footer>
